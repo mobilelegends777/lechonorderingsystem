@@ -1,4 +1,4 @@
-@section('title', 'Restaurant system')
+
 
 <!DOCTYPE html>
 <html>
@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('sass/app.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('sass/header.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/slick.css') }}">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 	
 </head>
@@ -74,10 +75,71 @@
 		<div class="sub-container">
 			<div class="bsp">Best Selling Products</div>
 			<div class="items slider">
-				<div class="box slide"><img src="images/siomai.jpg"></div>
-				<div class="box slide"><img src="images/pizza.jpg"></div>
-				<div class="box slide"><img src="images/bread.jpg"></div>
-				<div class="box slide"><img src="images/delisyoso.jpg"></div>
+				<div class="box slide">
+					<div class="item-image">
+						<img src="images/siomai.jpg">
+					</div>
+					<div class="item-details">
+						<div class="item-name">
+							<a href="#"><h4>Siomai sa Tisa</h4></a>
+						</div>
+						<div class="price-tag">
+							₱150.00
+						</div>
+					</div>
+				</div>
+				<div class="box slide">
+					<div class="item-image">
+						<img src="images/pizza.jpg">
+					</div>
+					<div class="item-details">
+						<div class="item-name">
+							<a href="#"><h4>Pepperoni Pizza</h4></a>
+						</div>
+						<div class="price-tag">
+							₱250.00
+						</div>
+					</div>
+				</div>
+				<div class="box slide">
+					<div class="item-image">
+						<img src="images/bread.jpg">
+					</div>
+					<div class="item-details">
+						<div class="item-name">
+							<a href="#"><h4>Pan De Sal</h4></a>
+						</div>
+						<div class="price-tag">
+							₱10.00
+						</div>
+					</div>
+				</div>
+				<div class="box slide">
+					<div class="item-image">
+						<img src="images/delisyoso.jpg">
+					</div>
+					<div class="item-details">
+						<div class="item-name">
+							<a href="#"><h4>Eat All You Can</h4></a>
+						</div>
+						<div class="price-tag">
+							₱300.00
+						</div>
+					</div>
+				</div>
+				<div class="box slide">
+					<div class="item-image">
+						<img src="images/siomai.jpg">
+					</div>
+					<div class="item-details">
+						<div class="item-name">
+							<a href="#"><h4>Siomai sa Tisa</h4></a>
+						</div>
+						<div class="price-tag">
+							₱150.00
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -101,7 +163,8 @@
 			</div>
 		</div>
 	</div>
-
+	 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 </body>
 </html>
 
@@ -126,10 +189,40 @@ function carousel() {
 
 </script>
 <script>
-	$('.slider').slick({
+$('.slider').slick({
+  dots: false,
   infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 3
-});
-</script>
+  speed: 2000,
+  autoplay: true,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});</script>
 

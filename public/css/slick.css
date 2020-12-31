@@ -1,0 +1,23 @@
+.slick-track {
+    display: flex;
+}
+.items.slider.slick-initialized.slick-slider {
+    width: 80%;
+    overflow: hidden;
+    margin: 0 180px;
+    position: absolute;
+    height: 350px;
+}
+ul.slick-dots {
+    display: flex;
+    margin: 21px 49%;
+}
+button.slick-prev.slick-arrow {
+    display: none!important;
+}
+button.slick-next.slick-arrow {
+    display: none!important;
+}
+/*button#slick-slide-control02,button#slick-slide-control01,button#slick-slide-control00,button#slick-slide-control06,button#slick-slide-control05,button#slick-slide-control04 {
+    display: none;
+}*/
