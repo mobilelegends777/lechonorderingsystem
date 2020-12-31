@@ -1,3 +1,5 @@
+@section('title', 'Restaurant system')
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,6 +7,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('sass/app.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('sass/header.css') }}">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 	
 </head>
@@ -43,12 +47,21 @@
 			<button class="btn-search">Search</button>
 		</span>
 		<div class="icons">
+			
 			<span>
+				<img src="images/cart.png" class="icons3" title="Your Cart">
+			</span>
+			<div class="dropdown">
+			<span class="account-c ">
 				<img src="images/user.png" class="icons2">
+
+				<div class="dropdown-content">
+					<a href="{{asset('/login')}}">Login</a>
+   				 	<a href="{{asset('/register')}}">Register</a>
+   
+ 				</div>
 			</span>
-			<span>
-				<img src="images/cart.png" class="icons3">
-			</span>
+			</div>
 		</div>
 	</div>
 	<div class="container">
@@ -91,6 +104,7 @@
 
 </body>
 </html>
+
 
 <script>
 var myIndex = 0;
