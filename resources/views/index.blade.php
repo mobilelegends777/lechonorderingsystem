@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home Page</title>
+	<title>Restaurant System</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
@@ -21,7 +21,9 @@
 		<span class="des1">Karne De Lame</span>
 		<div class="des2">Fresh Meats</div>
 		<span class="sub-menu">
+			<a href="{{asset('frontpage/shop')}}">
 			<span class="des3">Shop</span>
+			</a>
 			<span class="dropdown">
 				<span class="des4">Fish <img src="images/down-arrow.png" class="d-arrow"></span>
 				<div class="dropdown-content">
