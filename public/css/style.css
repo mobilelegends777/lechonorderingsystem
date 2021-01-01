@@ -1,5 +1,6 @@
 html, body {
   padding: 0;
+  /*max-width: 1920px;*/
 }
 
 * {
@@ -165,12 +166,12 @@ a {
     margin-top: 66px;
 }
 .container .sub-container{
-    position: relative;
+    /*position: relative;*/
 }
 
 .container .sub-container .box {
-    width: 80%!important;
-    height: 236px;
+    width: 74%!important;
+    height: 250px;
     float: left;
     margin-left: 73px;
     margin-top: 75px;
@@ -185,11 +186,12 @@ a {
 }
 
 .container .sub-container2 {
-    width: 99%;
+    width: 100%;
     margin-top: 27%;
     background-color: #f6f4f2;
     overflow: auto;
-    padding: 0 10px 109px;
+    /*padding: 0 10px 109px;*/
+    max-width: 1920px;
 }
 
 .container .sub-container2 .sc2 {
@@ -198,37 +200,53 @@ a {
     margin-left: 47px;
 }
 
-.container .sub-container2 .box2 {
+.__item .box2 {
     width: 100%;
-    height: 268px;
-    float: left;
+    height: 290px;
+}
+.box3-details {
+    margin: 13px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.box3-details span {
+    font-family: "Blatant", sans-serif;
+}
+.box3-info {
+    margin: 25px 0;
+}
+.box3-details .items-price{
+    border: solid #ccc;
+    color: #ccc;
+    border-radius: 10px;
+    margin: 0 -67px;
+    padding: 8px 21px;
+}
+.box3-item-info {
+    color: #747070;
+}
+.__item .box2 img {
+    width: 468px;
+    height: 289px;
 }
 
-.container .sub-container2 .box2 img {
-    width: 100%;
-    height: 268px;
+.__item .box3 {
+    width: 400px;
 }
 
-.container .sub-container2 .box3 {
-    /*border: 1px solid black;*/
-    background-color: white;
-    width: 100%;
-    height: auto;
-    /*float: left;*/
-    /*margin-top: 50px;*/
-    /*margin-left: 128px;*/
-}
-
-.container .sub-container2 .box3 span {
+.__item .box3 span {
     font-size: 20px;
     /*margin-top: 20px;*/
 }
 .items-container {
     display: flex;
+    width: 100%;
+    height: 800px;
+    position: relative;
 }
 .__item {
-    width: 467px;
     margin: 77px;
+    height: 486px;
 }
 
 
@@ -279,4 +297,19 @@ span.product-name {
     background-color: #4b3d37;
     height: 500px;
     padding: 1px;
+}
+
+.box2 {
+  /*display: inline-block;*/
+  /*margin: 20px;*/
+  /*border: 1px solid black;*/
+  overflow: hidden;            /* clip the excess when child gets bigger than parent */
+}
+.box2 img {
+  /*display: block;*/
+  transition: transform .4s;   /* smoother zoom */
+}
+.__item:hover img {
+  transform: scale(1.3);
+  transform-origin: 50% 50%;
 }

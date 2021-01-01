@@ -150,24 +150,35 @@
 			<hr style="width: 22%; border: 1px solid #c4a265; margin-left: 68px;">
 			<div class="items-container">
 				<div class="__item">
-					<div class="box2"><img src="images/beefsteak.jpg"></div>
+					<div class="box2">
+						<img src="images/beefsteak.jpg">
+					</div>
 					<div class="box3">
-						<span>Roasted Beef Steak</span>
-						<div>Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</div>
+						<div class="box3-details">
+							<span>Roasted Beef Steak</span>
+							<span class="items-price">150₱</span>
+						</div>
+						<div class="box3-info"><span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</span></div>
 					</div>
 				</div>
 				<div class="__item">
 					<div class="box2"><img src="images/porksteak.jpg"></div>
 					<div class="box3">
-						<span>Roasted Pork Steak</span>
-						<div>Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</div>
+						<div class="box3-details">
+							<span>Roasted Pork Steak</span>
+							<span class="items-price">150₱</span>
+						</div>
+						<div class="box3-info"><span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</span></div>
 					</div>
 				</div>
 				<div class="__item">
 					<div class="box2"><img src="images/chickenamor.jpg"></div>
 					<div class="box3">
-						<span>Roasted Chickenamor</span>
-						<div>Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</div>
+						<div class="box3-details">
+							<span>Roasted Chickenamor</span>
+							<span class="items-price">150₱</span>
+						</div>
+						<div class="box3-info"><span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</span></div>
 					</div>
 				</div>
 			</div>
@@ -207,7 +218,7 @@ $('.slider').slick({
   // customPaging : function(slider, i) {
   //       return '<ul><li role="presentation></li><li role="presentation" class="slick-active"></li></ul>';},
   infinite: true,
-  speed: 2000,
+  speed: 1500,
   autoplay: true,
   slidesToShow: 4,
   slidesToScroll: 1,
@@ -239,5 +250,16 @@ $('.slider').slick({
     // settings: "unslick"
     // instead of a settings object
   ]
-});</script>
+});
+
+// $(document).ready(function(){
+// 	$('.__item').hover(function(){
+// 		// alert(1);
+// 		$(this).hover(function(){
+// 			$('.items-price').css('background-color','#422609');
+// 		});
+// 	});
+// });
+
+</script>
 
