@@ -83,10 +83,10 @@
 					</div>
 					<div class="item-details">
 						<div class="item-name">
-							<a href="#"><h4>Siomai sa Tisa</h4></a>
+							<a href="#"><span class="product-name">Siomai sa Tisa</span></a>
 						</div>
 						<div class="price-tag">
-							₱150.00
+							<span class="prices">₱150.00</span>
 						</div>
 					</div>
 				</div>
@@ -96,10 +96,10 @@
 					</div>
 					<div class="item-details">
 						<div class="item-name">
-							<a href="#"><h4>Pepperoni Pizza</h4></a>
+							<a href="#"><span class="product-name">Pepperoni Pizza</span></a>
 						</div>
 						<div class="price-tag">
-							₱250.00
+							<span class="prices">₱250.00</span>
 						</div>
 					</div>
 				</div>
@@ -109,10 +109,10 @@
 					</div>
 					<div class="item-details">
 						<div class="item-name">
-							<a href="#"><h4>Pan De Sal</h4></a>
+							<a href="#"><span class="product-name">Breads Overload</span></a>
 						</div>
 						<div class="price-tag">
-							₱10.00
+							<span class="prices">₱10.00</span>
 						</div>
 					</div>
 				</div>
@@ -122,10 +122,10 @@
 					</div>
 					<div class="item-details">
 						<div class="item-name">
-							<a href="#"><h4>Eat All You Can</h4></a>
+							<a href="#"><span class="product-name">Eat All You Can</span></a>
 						</div>
 						<div class="price-tag">
-							₱300.00
+							<span class="prices">₱300.00</span>
 						</div>
 					</div>
 				</div>
@@ -135,10 +135,10 @@
 					</div>
 					<div class="item-details">
 						<div class="item-name">
-							<a href="#"><h4>Siomai sa Tisa</h4></a>
+							<a href="#"><span class="product-name">Siomai sa Tisa</span></a>
 						</div>
 						<div class="price-tag">
-							₱150.00
+							<span class="prices">₱150.00</span>
 						</div>
 					</div>
 				</div>
@@ -148,21 +148,32 @@
 		<div class="sub-container2">
 			<div class="sc2">Our most popular menus</div>
 			<hr style="width: 22%; border: 1px solid #c4a265; margin-left: 68px;">
-			<div class="box2"><img src="images/beefsteak.jpg"></div>
-			<div class="box2"><img src="images/porksteak.jpg"></div>
-			<div class="box2"><img src="images/chickenamor.jpg"></div>
-			<div class="box3">
-				<span>Roasted Beef Steak</span>
-				<div>Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</div>
+			<div class="items-container">
+				<div class="__item">
+					<div class="box2"><img src="images/beefsteak.jpg"></div>
+					<div class="box3">
+						<span>Roasted Beef Steak</span>
+						<div>Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</div>
+					</div>
+				</div>
+				<div class="__item">
+					<div class="box2"><img src="images/porksteak.jpg"></div>
+					<div class="box3">
+						<span>Roasted Pork Steak</span>
+						<div>Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</div>
+					</div>
+				</div>
+				<div class="__item">
+					<div class="box2"><img src="images/chickenamor.jpg"></div>
+					<div class="box3">
+						<span>Roasted Chickenamor</span>
+						<div>Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</div>
+					</div>
+				</div>
 			</div>
-			<div class="box3">
-				<span>Roasted Pork Steak</span>
-				<div>Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</div>
-			</div>
-			<div class="box3">
-				<span>Roasted Chickenamor</span>
-				<div>Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</div>
-			</div>
+		</div>
+		<div id="footer" class="footer-section">
+			<p>My footer</p>
 		</div>
 	</div>
 	 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
@@ -192,7 +203,9 @@ function carousel() {
 </script>
 <script>
 $('.slider').slick({
-  dots: false,
+  dots: true,
+  // customPaging : function(slider, i) {
+  //       return '<ul><li role="presentation></li><li role="presentation" class="slick-active"></li></ul>';},
   infinite: true,
   speed: 2000,
   autoplay: true,
