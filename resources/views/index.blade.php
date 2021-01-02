@@ -69,8 +69,26 @@
 	</div>
 	<div class="container">
 		<div id="slide-container">
-		  <img class="slide-image mySlides" src="images/city.jpg" >
+		  <img class="slide-image mySlides " src="images/city.jpg">
+		  <div class="sales1 trans">
+		  	<span class="sales2">MEAT & SEAFOOD</span>
+				<div class="sales3">FROM NORWAY</div>
+				<div class="sales4">We offer a huge variety of exceptionally fresh meat farmed in our personal farm</div>
+			<div class="sales5">
+		  		<button class="bttn1">Shop Now</button>
+		  		<button class="bttn2">About Store</button>
+		  	</div>
+		  </div>
 		  <img class="slide-image mySlides" src="images/city2.jpg" >
+		  <!-- <div class="sales1 trans">
+		  	<span class="sales2">CUTTING & DELIVERY</span>
+				<div class="sales3">FROM NORWAY</div>
+				<div class="sales4">We offer a huge variety of exceptionally fresh meat farmed in our personal farm</div>
+			<div class="sales5">
+		  		<button class="bttn1">Shop Now</button>
+		  		<button class="bttn2">About Store</button>
+		  	</div>
+		  </div> -->
 		  <img class="slide-image mySlides" src="images/city3.jpg">
 		</div>
 
