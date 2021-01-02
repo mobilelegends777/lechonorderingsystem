@@ -1,0 +1,32 @@
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 60px;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: "Times New Roman", Times, serif;
+  border-top: 5px solid #ffffffbf;
+  border-bottom: 5px solid #ffffffbf;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: #ffffffbf;
+}
+
+.f-icon img {
+  width: 75px;
+  display: inline-block;
+}
+
+img.icon1 {
+  margin-left: 220px;
+  position: relative;
+  top: 70px;
+  left: -108px;
+}
+/*# sourceMappingURL=bodystyle.css.map */
