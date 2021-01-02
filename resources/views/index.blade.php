@@ -97,8 +97,14 @@
 			<div class="bsp">Best Selling Products</div>
 			<div class="items slider">
 				<div class="box slide">
+					
 					<div class="item-image">
-						<img src="images/siomai.jpg">
+						<div class="prod-image">
+							<img src="images/siomai.jpg">
+						</div>
+						<div class="cart-icon" >
+							<a href="#"><img src="images/cart1.png"></a>
+						</div>
 					</div>
 					<div class="item-details">
 						<div class="item-name">
@@ -111,7 +117,12 @@
 				</div>
 				<div class="box slide">
 					<div class="item-image">
-						<img src="images/pizza.jpg">
+						<div class="prod-image">
+							<img src="images/pizza.jpg">
+						</div>
+						<div class="cart-icon" >
+							<a href="#"><img src="images/cart1.png"></a>
+						</div>
 					</div>
 					<div class="item-details">
 						<div class="item-name">
@@ -124,7 +135,12 @@
 				</div>
 				<div class="box slide">
 					<div class="item-image">
-						<img src="images/bread.jpg">
+						<div class="prod-image">
+							<img src="images/bread.jpg">
+						</div>
+						<div class="cart-icon" >
+							<a href="#"><img src="images/cart1.png"></a>
+						</div>
 					</div>
 					<div class="item-details">
 						<div class="item-name">
@@ -137,7 +153,12 @@
 				</div>
 				<div class="box slide">
 					<div class="item-image">
-						<img src="images/delisyoso.jpg">
+						<div class="prod-image">
+							<img src="images/delisyoso.jpg">
+						</div>
+						<div class="cart-icon" >
+							<a href="#"><img src="images/cart1.png"></a>
+						</div>
 					</div>
 					<div class="item-details">
 						<div class="item-name">
@@ -150,7 +171,12 @@
 				</div>
 				<div class="box slide">
 					<div class="item-image">
-						<img src="images/siomai.jpg">
+						<div class="prod-image">
+							<img src="images/siomai.jpg">
+						</div>
+						<div class="cart-icon" >
+							<a href="#"><img src="images/cart1.png"></a>
+						</div>
 					</div>
 					<div class="item-details">
 						<div class="item-name">
@@ -174,75 +200,121 @@
 					</div>
 					<div class="box3">
 						<div class="box3-details">
-							<span>Roasted Beef Steak</span>
+							<span class="product-title">Roasted Beef Steak</span>
 							<span class="items-price">150₱</span>
 						</div>
-						<div class="box3-info"><span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</span></div>
+						<div class="box3-info">
+							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
+							<div class="select-more"><span class="more">MORE</span></div>
+						</div>
 					</div>
 				</div>
 				<div class="__item">
 					<div class="box2"><img src="images/porksteak.jpg"></div>
 					<div class="box3">
 						<div class="box3-details">
-							<span>Roasted Pork Steak</span>
+							<span class="product-title">Roasted Pork Steak</span>
 							<span class="items-price">150₱</span>
 						</div>
-						<div class="box3-info"><span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</span></div>
+						<div class="box3-info">
+							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
+							<div class="select-more"><span class="more">MORE</span></div>
+						</div>
 					</div>
 				</div>
 				<div class="__item">
 					<div class="box2"><img src="images/chickenamor.jpg"></div>
 					<div class="box3">
 						<div class="box3-details">
-							<span>Roasted Chickenamor</span>
+							<span class="product-title">Roasted Chickenamor</span>
 							<span class="items-price">150₱</span>
 						</div>
-						<div class="box3-info"><span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</span></div>
+						<div class="box3-info">
+							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
+							<div class="select-more"><span class="more">MORE</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="__item">
+					<div class="box2">
+						<img src="images/beefsteak.jpg">
+					</div>
+					<div class="box3">
+						<div class="box3-details">
+							<span class="product-title">Roasted Beef Steak</span>
+							<span class="items-price">150₱</span>
+						</div>
+						<div class="box3-info">
+							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
+							<div class="select-more"><span class="more">MORE</span></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="__item">
+					<div class="box2"><img src="images/porksteak.jpg"></div>
+					<div class="box3">
+						<div class="box3-details">
+							<span class="product-title">Roasted Pork Steak</span>
+							<span class="items-price">150₱</span>
+						</div>
+						<div class="box3-info">
+							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
+							<div class="select-more"><span class="more">MORE</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="__item">
+					<div class="box2"><img src="images/chickenamor.jpg"></div>
+					<div class="box3">
+						<div class="box3-details">
+							<span class="product-title">Roasted Chickenamor</span>
+							<span class="items-price">150₱</span>
+						</div>
+						<div class="box3-info">
+							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
+							<div class="select-more"><span class="more">MORE</span></div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-
 		<div class="sub-container3">
-		<div class="container">
-    			
-		
-
-		<img src="{{asset('images/bg-image-1.jpg')}} " >
-		<div class="centered">Quality Food Ingredients</div>
-		
-		</div>
-		<div class="f-icon">
-		
-		<span>
-		<img class ="icon1" src="{{asset('images/wine.svg')}} " >
-		Food & Drinks</span>
-		
-
-	
-			
-		<img class ="icon1" src="{{asset('images/oven.svg')}} " >
-
-
-			
-			<img class ="icon1" src="{{asset('images/placeholder.svg')}} " >
-	
-
-			
-			<img class ="icon1" src="{{asset('images/ingredients.svg')}} " >
-	
-
+			<div class="container quality-cont">
+				<img src="{{asset('images/bg-image-1.jpg')}} " >
+				<div class="centered">Quality Food Ingredients</div>
 			</div>
+		
 		</div >
-
-		<div class="sub-container2">
-		
-		
-		
+		<div class="sub-container4">
+			<div class="page-wrapper">
+				<div class="f-icon">
+					<a href="#">
+						<img class ="icon1" src="{{asset('images/wine.svg')}} " >
+					</a>
+						<span>Food & Drinks</span>
+				</div>
+				<div class="f-icon">
+					<a href="#">
+						<img class ="icon1" src="{{asset('images/oven.svg')}} " >
+					</a>
+					<span>Clean Kitchen</span>
+				</div>
+				<div class="f-icon">
+					<a href="#">
+						<img class ="icon1" src="{{asset('images/placeholder.svg')}} " >
+					</a>
+					<span>Awesome Locations</span>
+				</div>
+				<div class="f-icon">
+					<a href="#">
+						<img class ="icon1" src="{{asset('images/ingredients.svg')}} " >
+					</a>
+					<span>Healthy Ingredients</span>
+				</div>
+			</div>
 		</div>
-
-
+		</div>
 		<div id="footer" class="footer-section">
 			<p>My footer</p>
 		</div>
@@ -313,12 +385,23 @@ $('.slider').slick({
 });
 
 // $(document).ready(function(){
-// 	$('.__item').hover(function(){
-// 		// alert(1);
-// 		$(this).hover(function(){
-// 			$('.items-price').css('background-color','#422609');
+// 	$('.item-image').hover(function(){
+// 		$(this).each(function(){
+// 			// alert(1);
+// 			$('.cart-icon').show();
 // 		});
 // 	});
+// });
+
+// $(document).ready(function(){
+//     $(".__item").hover(function(){
+//     	$('.items-price').each(function(){
+//         $(this).css("background", "#a11001");
+//         })
+//     },
+//     function(){
+//         $('.items-price').css("background", "#f6f4f2");
+//     });
 // });
 
 </script>
