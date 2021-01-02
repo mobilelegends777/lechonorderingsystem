@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('sass/app.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('sass/header.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/slick.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('sass/bodystyle.css') }}">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 	
 </head>
@@ -91,7 +92,7 @@
 		  </div> -->
 		  <img class="slide-image mySlides" src="images/city3.jpg">
 		</div>
-
+		
 		<div class="sub-container">
 			<div class="bsp">Best Selling Products</div>
 			<div class="items slider">
@@ -201,6 +202,47 @@
 				</div>
 			</div>
 		</div>
+
+
+		<div class="sub-container3">
+		<div class="container">
+    			
+		
+
+		<img src="{{asset('images/bg-image-1.jpg')}} " >
+		<div class="centered">Quality Food Ingredients</div>
+		
+		</div>
+		<div class="f-icon">
+		
+		<span>
+		<img class ="icon1" src="{{asset('images/wine.svg')}} " >
+		Food & Drinks</span>
+		
+
+	
+			
+		<img class ="icon1" src="{{asset('images/oven.svg')}} " >
+
+
+			
+			<img class ="icon1" src="{{asset('images/placeholder.svg')}} " >
+	
+
+			
+			<img class ="icon1" src="{{asset('images/ingredients.svg')}} " >
+	
+
+			</div>
+		</div >
+
+		<div class="sub-container2">
+		
+		
+		
+		</div>
+
+
 		<div id="footer" class="footer-section">
 			<p>My footer</p>
 		</div>
