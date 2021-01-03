@@ -71,7 +71,7 @@
 				  <li><a href="shop-details.html">Price, High To Low </a></li>
 				  <li><a href="shop-details.html">Alphabetically, A-Z </a></li>
 				  <li><a href="shop-details.html">Alphabetically, Z-A</a></li>
-				  <li><a href="shop-details.html">Dare, New To Old</a></li>
+				  <li><a href="shop-details.html">Date, New To Old</a></li>
 				
 				 </ul>
 				 </div>
