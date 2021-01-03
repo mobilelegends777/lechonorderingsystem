@@ -450,3 +450,66 @@ span.product-title {
     width: 1887px;
     display: flex;
 }
+.footer-logo {
+    display: flex;
+    width: 280px;
+    justify-content: space-evenly;
+    margin-bottom: 29px;
+}
+img.footer-logos {
+    width: 100%;
+}
+.footer-container {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 3% 10%;
+}
+.name-title {
+    color: #fff;
+    font-size: 23px;
+}
+.des2 {
+    font-size: 13px;
+}
+.footer-info {
+    color: #ccc;
+    width: 280px;
+    /*font-family: Blatant, sans-serif;*/
+}
+.footer-company {
+    width: 280px;
+}
+.footer-title-tweets {
+    color: #fff;
+    width: 180px;
+    height: 40px;
+    border-bottom: solid orange;
+}
+.footer-tweet-time {
+    color: #ccc;
+}
+.footer-gallery {
+    color: #fff;
+    width: 180px;
+    height: 40px;
+    border-bottom: solid orange;
+}
+.footer-contact-us {
+    color: #fff;
+    width: 180px;
+    height: 40px;
+    border-bottom: solid orange;
+}
+span.footer-title {
+    font-weight: 700;
+    font-size: 18px;
+    font-family: Blatant, sans-serif;
+}
+.info-paragraph {
+    line-height: 36px;
+}
+.footer-contact {
+    height: inherit;
+}
