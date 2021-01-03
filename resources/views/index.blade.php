@@ -6,12 +6,7 @@
 	<title>Restaurant System</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('sass/app.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('sass/header.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/slick.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('sass/bodystyle.css') }}">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+	@include('layouts.csslinks')
 	
 </head>
 <body>
@@ -272,52 +267,9 @@
 			</div>
 		</div>
 		</div>
-		<div id="footer" class="footer-section">
-			<div class="footer-container">
-				<div class="footer-company">
-					<div class="footer-logo">
-						<span class="des-logo">
-							<img src="images/logo.png" class="footer-logos">
-						</span>
-						<div class="name-title">
-							<span class="des1">Karne De Lame</span>
-							<div class="des2">Fresh Meats</div>
-						</div>
-					</div>
-					<div class="footer-info">
-						<div class="info-paragraph">
-							New to the store are our bags of mixed dried berries. A perfect healthy snack or a nice topping for your cereal in the morning. We are a specialist food retailer and we have
-						</div>
-					</div>
-				</div>
-				<div class="footer-tweets">
-					<div class="footer-title-tweets">
-						<span class="footer-title">Latest Tweets</span>
-					</div>
-					<div class="footer-tweet-time">
-						<span><i>30 minutes ago</i></span>
-					</div>
-				</div>
-				<div class="footer-gallery">
-					<div>
-						<span class="footer-title">Restaurant Gallery</span>
-					</div>					
-				</div>
-				<div class="footer-contact-us">
-					<div class="footer-contact">
-						<span class="footer-title">Contact Us</span>
-					</div>
-					<div class="footer-contact-info">
-						<span><b>Tel :</b>	+123456789</span>
-						<span><b>Phone :</b>	987654321</span>
-						<span><b>Fax :</b>	5455555</span>
-						<span><b>Email :</b>	info@yourdomain.com</span>
-						<span><b>Address :</b>	12453 Avenue NYC, New York City, NYC, 98741</span>
-						<span><b>Website :</b>	http://themexlab.com</span>
-					</div>					
-				</div>
-			</div>
-		</div>
+		@include('headpage.footer')
+		
+	
 	</div>
 	 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>

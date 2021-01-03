@@ -36,7 +36,6 @@
 
 .f-icon span {
   font-family: Blatant, sans-serif;
-  color: #ccc;
 }
 
 .page-wrapper {
@@ -64,5 +63,9 @@
 
 .buttoncat:hover {
   background-color: #b26419;
+}
+
+a.fter {
+  color: orange;
 }
 /*# sourceMappingURL=bodystyle.css.map */
