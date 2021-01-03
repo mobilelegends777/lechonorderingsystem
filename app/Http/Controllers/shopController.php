@@ -8,6 +8,6 @@ class shopController extends Controller
 {
     public function index()
     {
-        return view('shop');
+        return view('frontpage/shop');
     }
 }
