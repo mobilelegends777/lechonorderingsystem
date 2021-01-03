@@ -205,7 +205,7 @@
 						</div>
 						<div class="box3-info">
 							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
-							<div class="select-more"><span class="more">MORE</span></div>
+							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
 				</div>
@@ -218,7 +218,7 @@
 						</div>
 						<div class="box3-info">
 							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
-							<div class="select-more"><span class="more">MORE</span></div>
+							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
 				</div>
@@ -231,7 +231,7 @@
 						</div>
 						<div class="box3-info">
 							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
-							<div class="select-more"><span class="more">MORE</span></div>
+							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
 				</div>
@@ -246,7 +246,7 @@
 						</div>
 						<div class="box3-info">
 							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
-							<div class="select-more"><span class="more">MORE</span></div>
+							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
 				</div>
@@ -260,7 +260,7 @@
 						</div>
 						<div class="box3-info">
 							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
-							<div class="select-more"><span class="more">MORE</span></div>
+							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
 				</div>
@@ -273,7 +273,7 @@
 						</div>
 						<div class="box3-info">
 							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
-							<div class="select-more"><span class="more">MORE</span></div>
+							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
 				</div>

@@ -528,6 +528,7 @@ span.footer-title {
 }
 .info-contacts {
     width: 120px;
+    font-family: Blatant, sans-serif;
 }
 .info-contacts.address {
     height: 44px;
@@ -543,6 +544,7 @@ span.footer-title {
 span.sp {
     width: 150px;
     font-family: Blatant, sans-serif;
+    color: #ccc;
 }
 .image-cont {
     height: auto;
