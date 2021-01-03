@@ -292,25 +292,34 @@
 					<a href="#">
 						<img class ="icon1" src="{{asset('images/wine.svg')}} " >
 					</a>
-						<span>Food & Drinks</span>
+						<span><strong>Food & Drinks</strong></span>
+						<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
+						<button class="buttoncat">See Menu</button>
 				</div>
 				<div class="f-icon">
 					<a href="#">
 						<img class ="icon1" src="{{asset('images/oven.svg')}} " >
 					</a>
-					<span>Clean Kitchen</span>
+					<span><strong>Clean Kitchen</strong>
+					<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
+					<button class="buttoncat">Meet our Team</button>
+					
 				</div>
 				<div class="f-icon">
 					<a href="#">
 						<img class ="icon1" src="{{asset('images/placeholder.svg')}} " >
 					</a>
-					<span>Awesome Locations</span>
+					<span><strong>Awesome Locations</strong></span>
+					<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
+					<button class="buttoncat">Find our Stores</button>
 				</div>
 				<div class="f-icon">
 					<a href="#">
 						<img class ="icon1" src="{{asset('images/ingredients.svg')}} " >
 					</a>
-					<span>Healthy Ingredients</span>
+					<span><strong>Healthy Ingredients</strong></span>
+					<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
+					<button class="buttoncat">See Ingredients</button>
 				</div>
 			</div>
 		</div>
