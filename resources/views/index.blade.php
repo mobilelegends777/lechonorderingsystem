@@ -148,7 +148,7 @@
 						</div>
 						<div class="box3-info">
 							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
-							<div class="select-more"><span class="more">MORE</span></div>
+							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
 				</div>
@@ -161,7 +161,7 @@
 						</div>
 						<div class="box3-info">
 							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
-							<div class="select-more"><span class="more">MORE</span></div>
+							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
 				</div>
@@ -174,7 +174,7 @@
 						</div>
 						<div class="box3-info">
 							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
-							<div class="select-more"><span class="more">MORE</span></div>
+							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
 				</div>
@@ -189,7 +189,7 @@
 						</div>
 						<div class="box3-info">
 							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
-							<div class="select-more"><span class="more">MORE</span></div>
+							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
 				</div>
@@ -203,7 +203,7 @@
 						</div>
 						<div class="box3-info">
 							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
-							<div class="select-more"><span class="more">MORE</span></div>
+							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
 				</div>
@@ -216,7 +216,7 @@
 						</div>
 						<div class="box3-info">
 							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
-							<div class="select-more"><span class="more">MORE</span></div>
+							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
 				</div>
@@ -267,10 +267,14 @@
 			</div>
 		</div>
 		</div>
+
 		@include('headpage.footer')
 		
 	
 	</div>
+
+		
+
 	 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 </body>
@@ -355,6 +359,43 @@ $('.slider').slick({
 //         $('.items-price').css("background", "#f6f4f2");
 //     });
 // });
+
+$(document).ready(function(){
+	for (var i = 1;i<13;i++){
+		$('.image-cont').append(`
+			<div class="gallery-images">
+				<img src="images/image${i}.jpg">
+			</div>
+		`);
+
+
+	}
+	for (var x = 1; x < 5; x++){
+		$('.social-icons').append(`
+			<li class="social-media-icons"><a href="#"><img src="images/social${x}.png"></a></li>
+		`);
+	}
+	setInterval(function(){
+     $(".footer-tweet-time").toggle().slideDown();
+    // $("#box1").toggle();
+},3000);
+
+var btn = $('#Btop');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 600) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+
+});
 
 </script>
 
