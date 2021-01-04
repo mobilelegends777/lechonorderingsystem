@@ -12,29 +12,44 @@
 <body>
 	@include('headpage.header')
 	<div class="container">
-		<div id="slide-container">
-		  <img class="slide-image mySlides " src="images/city.jpg">
-		  <div class="sales1 trans">
-		  	<span class="sales2">MEAT & SEAFOOD</span>
-				<div class="sales3">FROM NORWAY</div>
-				<div class="sales4">We offer a huge variety of exceptionally fresh meat farmed in our personal farm</div>
-			<div class="sales5">
-		  		<button class="bttn1">Shop Now</button>
-		  		<button class="bttn2">About Store</button>
-		  	</div>
-		  </div>
-		  <img class="slide-image mySlides" src="images/city2.jpg" >
-		  <!-- <div class="sales1 trans">
-		  	<span class="sales2">CUTTING & DELIVERY</span>
-				<div class="sales3">FROM NORWAY</div>
-				<div class="sales4">We offer a huge variety of exceptionally fresh meat farmed in our personal farm</div>
-			<div class="sales5">
-		  		<button class="bttn1">Shop Now</button>
-		  		<button class="bttn2">About Store</button>
-		  	</div>
-		  </div> -->
-		  <img class="slide-image mySlides" src="images/city3.jpg">
-		</div>
+			<div id="slide-container">
+			  <img class="slide-image mySlides " src="images/city.jpg">
+			  <div class="sales1 trans">
+			  	<span class="sales2">MEAT & SEAFOOD</span>
+					<div class="sales3">FROM NORWAY</div>
+					<div class="sales4">We offer a huge variety of exceptionally fresh meat farmed in our personal farm</div>
+				<div class="sales5">
+			  		<button class="bttn1">Shop Now</button>
+			  		<button class="bttn2">About Store</button>
+			  	</div>
+			  </div>
+			</div>
+
+			<div id="slide-container">
+			  <img class="slide-image mySlides" src="images/city2.jpg" >
+			  <div class="sales1 trans">
+			  	<span class="sales2">CUTTING & DELIVERY</span>
+					<div class="sales3">QUALITY MONITORING</div>
+					<div class="sales4">We offer a huge variety of exceptionally fresh meat farmed in our personal farm</div>
+				<div class="sales5">
+			  		<button class="bttn1">Shop Now</button>
+			  		<button class="bttn2">About Store</button>
+			  	</div>
+			  </div>
+			</div>
+
+			<div id="slide-container">
+			  <img class="slide-image mySlides" src="images/city3.jpg">
+			  <div class="sales1 trans2">
+			  	<span class="sales2">WILD SALMON</span>
+					<div class="sales3">CUTTING & DELIVERY</div>
+					<div class="sales4">We offer a huge variety of exceptionally fresh meat farmed in our personal farm</div>
+				<div class="sales5">
+			  		<button class="bttn1">Shop Now</button>
+			  		<button class="bttn2">About Store</button>
+			  	</div>
+			  </div>
+			</div>
 		
 		<div class="sub-container">
 			<div class="bsp">Best Selling Products</div>
@@ -282,6 +297,7 @@
 
 
 <script>
+
 var myIndex = 0;
 carousel();
 
@@ -299,8 +315,10 @@ function carousel() {
 
 
 
+
 </script>
 <script>
+
 $('.slider').slick({
   dots: true,
   // customPaging : function(slider, i) {

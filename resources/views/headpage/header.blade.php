@@ -7,9 +7,11 @@
 		<span class="des1">Karne De Lame</span>
 		<div class="des2">Fresh Meats</div>
 		<span class="sub-menu">
-			<a href="{{asset('frontpage/shop')}}">
-			<span class="des3">Shop</span>
-			</a>
+			<div class="dropdown">
+				<a href="{{asset('frontpage/shop')}}">
+					<span class="des3">Shop</span>
+				</a>
+			</div>
 			<span class="dropdown">
 				<span class="des4">Fish <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
 				<div class="dropdown-content">
@@ -28,8 +30,22 @@
 				</div>
 			</span>
 			
-			<span class="des6">About Us <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
-			<span class="des7">Blocks <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
+			<span class="dropdown">
+				<span class="des6">About Us <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
+				<div class="dropdown-content">
+				  <a href="#">Rabbit</a>
+				  <a href="#">Beef</a>
+				</div>
+			</span>
+			<span class="dropdown">
+				<span class="des7">Blocks <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
+				<div class="dropdown-content">
+				  <a href="#">Blocks 1</a>
+				  <a href="#">Blocks 2</a>
+				  <a href="#">Blocks 3</a>
+				  <a href="#">Blocks 4</a>
+				</div>
+			</span>
 		</span>
 		<span class="inputs">
 			<input type="text" name="" placeholder="Search products..." class="inpt-search">

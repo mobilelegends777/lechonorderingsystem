@@ -36,11 +36,12 @@
   text-decoration: none;
   display: block;
   width: 100px;
+  font-weight: 600;
 }
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #c4a265;
+  color: #c4a265;
   max-width: 100%;
 }
 

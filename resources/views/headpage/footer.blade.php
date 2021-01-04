@@ -67,7 +67,7 @@
 			<div class="footers-copyright">
 				<!-- <p>myFooter</p> -->
 				<div class="copyright">
-					<span>Copyright 2021 by Buffalo | All rights reserved</span>
+					<span>Copyright 2021 by MJ Lechon | All rights reserved</span>
 				</div>
 				<div class="social-media-link">
 					<ul class="social-icons">
