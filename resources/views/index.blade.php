@@ -12,9 +12,10 @@
 <body>
 	@include('headpage.header')
 	<div class="container">
+		<div class="slider-conts">
 			<div id="slide-container">
-			  <img class="slide-image mySlides " src="images/city.jpg">
-			  <div class="sales1 trans">
+			  <img class="slide-image mySlides " src="images/city.jpg" style="display: none;">
+			  <div class="sales1 trans1">
 			  	<span class="sales2">MEAT & SEAFOOD</span>
 					<div class="sales3">FROM NORWAY</div>
 					<div class="sales4">We offer a huge variety of exceptionally fresh meat farmed in our personal farm</div>
@@ -26,8 +27,8 @@
 			</div>
 
 			<div id="slide-container">
-			  <img class="slide-image mySlides" src="images/city2.jpg" >
-			  <div class="sales1 trans">
+			  <img class="slide-image mySlides" src="images/city2.jpg" style="display: none;">
+			  <div class="sales1 trans2">
 			  	<span class="sales2">CUTTING & DELIVERY</span>
 					<div class="sales3">QUALITY MONITORING</div>
 					<div class="sales4">We offer a huge variety of exceptionally fresh meat farmed in our personal farm</div>
@@ -39,8 +40,8 @@
 			</div>
 
 			<div id="slide-container">
-			  <img class="slide-image mySlides" src="images/city3.jpg">
-			  <div class="sales1 trans2">
+			  <img class="slide-image mySlides" src="images/city3.jpg" style="display: none;">
+			  <div class="sales1 trans3">
 			  	<span class="sales2">WILD SALMON</span>
 					<div class="sales3">CUTTING & DELIVERY</div>
 					<div class="sales4">We offer a huge variety of exceptionally fresh meat farmed in our personal farm</div>
@@ -50,7 +51,7 @@
 			  	</div>
 			  </div>
 			</div>
-		
+		</div>
 		<div class="sub-container">
 			<div class="bsp">Best Selling Products</div>
 			<div class="items slider">
@@ -304,7 +305,7 @@ carousel();
 function carousel() {
   var i;
   var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
+  for (i = 1; i < x.length; i++) {
     x[i].style.display = "none";  
   }
   myIndex++;
@@ -400,20 +401,23 @@ $(document).ready(function(){
 
 var btn = $('#Btop');
 
-$(window).scroll(function() {
-  if ($(window).scrollTop() > 600) {
-    btn.addClass('show');
-  } else {
-    btn.removeClass('show');
-  }
+		$(window).scroll(function() {
+		  if ($(window).scrollTop() > 600) {
+		    btn.addClass('show');
+		  } else {
+		    btn.removeClass('show');
+		  }
+		});
+
+		btn.on('click', function(e) {
+		  e.preventDefault();
+		  $('html, body').animate({scrollTop:0}, '300');
+		});
+});
+$(document).ready(function(){
+	$('.sales1').toggle().fadeIn(2000);
 });
 
-btn.on('click', function(e) {
-  e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '300');
-});
-
-});
 
 </script>
 

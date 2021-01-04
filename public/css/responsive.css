@@ -1,0 +1,176 @@
+
+@media (max-width: 1400px){
+	/*.sub-menu .dropdown,.inputs {
+		display: none;
+	}
+	.menu-toggle {
+		display: none;
+	}*/
+	
+	.search-icon img{
+		width: 39px;
+	    margin-right: 11px;
+	    height: 47px;
+	}
+	.headmenu {
+		max-width: 1366px;
+	}
+	.slider-conts {
+	    height: 1200px;
+	}
+	.slide-image {
+	    /*height: 500px;*/
+        height: 1200px;
+	}
+	.sales1 {
+	    width: 46%;
+	    top: 33%;
+	 	left: 9%;
+	}
+	.items.slider.slick-initialized.slick-slider {
+    	margin: 0 -28px;
+	    height: 333px;
+	}
+	.container .sub-container .bsp {
+	    width: 32%;
+	}
+	/*bsp -----------------slick slider*/
+	ul.slick-dots {
+	    display: flex;
+	    margin: 21px 43%;
+	    list-style: none;
+	}
+	.slick-dots {
+	   width: 14%;
+	}
+	.slick-track {
+    	width: 1366px;
+	}
+	.items.slider.slick-initialized.slick-slider {
+    	margin: 0 135px;
+	}
+	.slick-list.draggable {
+   	 	width: 1366px;
+	}
+	.container .sub-container .bsp {
+	    margin-top: 29px;
+	}
+	.container .sub-container {
+		height:auto;
+		min-height:30px;
+		height:auto !important;
+		height:30px; 
+	}
+	/*-------------------------------------*/
+	.__item {
+	    width: 274px;
+	}
+	.__item .box3 span {
+    	font-size: 17px;
+	}
+	.sub-container4 {
+	    width: 100%;
+	}
+	.page-wrapper {
+	     margin: 0; 
+	}
+	.f-icon {
+	    margin: 13px 43px;
+	}
+	.footer-container {
+	    padding: 66px 38px;
+	}
+	.headmenu .sub-menu {
+	    left: 22%;
+	}
+}
+@media (max-width: 1220px){
+	.headmenu {
+		display: grid;
+	}
+	html, body {
+    	width: 1348px;
+	}
+}
+@media (max-width: 768px){
+	.sub-menu .dropdown,.inputs {
+		display: none;
+	}
+	.menu-toggle {
+		display: block;
+	}
+	.headmenu {
+   		height: 100px;
+	    display: flex;
+	    width: 95%;
+	}
+	.headmenu .icons {
+	    position: unset; 
+        width: 30%;
+        padding: 25px 39px 22px 10px;
+        display: flex;
+        justify-content: flex-end;
+	}
+	.headmenu .des1{
+		position: unset;
+		font-size: 32px;
+	}
+	.company-logo {
+		width: 60%;
+		display: flex;
+	}
+	span.des-logo {
+    	width: 119px;
+	}
+	.des-logo img {
+		width: 80px;
+	}
+	.headmenu .des2 {
+	    color: white;
+	    position: absolute;
+	     left: unset; 
+	    font-size: 20px;
+	    top: 84px;
+	}
+	.company-title {
+    	padding: 8px 0;
+	}
+	.headmenu .icons .icons2 {
+	    width: 46px;
+	}
+	.headmenu .icons .icons3 {
+   		width: 46px;
+	    padding: 7px;
+	}
+	.search-icon {
+		display: flex;
+	}
+	.search-icon img{
+		width: 39px;
+	    margin-right: 11px;
+	    height: 47px;
+	}
+	span.account-c {
+    	left: 23px;
+	}
+	button.menu-toggle {
+	    width: 13%;
+	    height: 71px;
+	    margin: 14px 0;
+	    font-size: 25px;
+        color: #fff;
+    	border: solid #B89352;
+    	background-color: #2a2c2f;
+	}
+	.topnav {
+		background-color: #2a2c2f;
+		width: 100%;
+	}
+	.topnav a {
+		color: #fff;
+	}
+	.ordinary {
+	    font-size: 44px;
+        padding: 0 20%;
+	}
+}

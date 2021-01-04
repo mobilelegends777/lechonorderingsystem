@@ -11,6 +11,9 @@ html, body {
 a {
     text-decoration: none;
 }
+.menu-toggle, .search-icon {
+    display: none;
+}
 .headmenu {
 	/*border: 1px solid black;*/
 	padding: 34px;
@@ -279,9 +282,9 @@ a {
 /* Slider */
 /* Slideshow container */
 #slide-container {
- position: relative;
+ position: absolute;
  overflow: hidden;
- /*max-width: 800px*/; /* responsiveness */
+ width: 100%;
 }
 
 .slide-image {
@@ -358,7 +361,9 @@ span.product-name {
 span.product-title {
     margin-top: 10px;
 }
-
+.mySlides {
+    filter: brightness(50%);
+}
 .sales1 {
     /*border: 1px solid red;*/
     width: 30%;
@@ -788,3 +793,12 @@ span.sp {
   color: #fff;
   opacity: 1;
 }
+.slider-conts {
+    height: 780px;
+    position: relative;
+}
+
+.topnav{ height : auto; transition: .3s ease-in;}
+.topnav > a { display: block; overflow: hidden;}
+.topnav:not(responsive) > a {max-height: 0;transition: .3s ease-in;}
+.topnav.responsive > a {max-height: 600px; transition: .3s ease-in;}
