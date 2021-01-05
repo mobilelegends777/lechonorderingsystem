@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <title>Restaurant System</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -274,7 +275,7 @@
 	    <div class="logic_1 clearfix">
 		 <div class="grid clearfix">
 					<figure class="effect-jazz">
-						<img src="img/porksteak.jpg" alt="img25">
+						<img src="{{asset('asset/img/porksteak.jpg')}}" alt="img25">
 						<figcaption>
 							<a href="shop-details.html">View more</a>						</figcaption>			
 		  </figure>
@@ -294,7 +295,7 @@
 	    <div class="logic_1 clearfix">
 		 <div class="grid clearfix">
 					<figure class="effect-jazz">
-						<img src="img/delisyoso.jpg" alt="img25">
+						<img src="{{asset('asset/img/delisyoso.jpg')}}" alt="img25">
 						<figcaption>
 							<a href="shop-details.html">View more</a>						</figcaption>			
 		  </figure>
@@ -348,3 +349,5 @@
 </body>
       
 </html>
+
+@include('layouts.scripts')

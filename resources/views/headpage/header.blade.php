@@ -37,8 +37,8 @@
 			<span class="dropdown">
 				<span class="des6">About Us <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
 				<div class="dropdown-content">
-				  <a href="#">Rabbit</a>
-				  <a href="#">Beef</a>
+				  <a href="{{asset('frontpage/contact')}}">Contact</a>
+				  <a href="#">Story</a>
 				</div>
 			</span>
 			<span class="dropdown">
