@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{asset('asset/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('asset/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('asset/css/style_asset.css')}}" rel="stylesheet">
 	 <link rel="stylesheet" type="text/css" href="{{asset('asset/css/font-awesome.min.css')}}" />
 	 <link href="https://fonts.googleapis.com/css?family=Spirax" rel="stylesheet">
 	 <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Londrina+Outline" rel="stylesheet">
@@ -85,7 +85,7 @@
 	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
 	  <div class="center_1_middle_left_1_inner">
 	   <div class="ih-item square effect6 from_top_and_bottom"><a href="shop-details.html">
-                      <div class="img"><img src="{{asset('asset/img/8.jpg')}}" alt="img"></div>
+                      <div class="img"><img src="{{asset('asset/img/beefsteak1.jpg')}}" alt="img"></div>
                       <div class="info">
                         <h3>add to cart</h3>
                       </div></a></div>
@@ -99,7 +99,7 @@
 	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
 	  <div class="center_1_middle_left_1_inner">
 	   <div class="ih-item square effect6 from_top_and_bottom"><a href="shop-details.html">
-                      <div class="img"><img src="{{asset('asset/img/9.jpg')}}" alt="img"></div>
+                      <div class="img"><img src="{{asset('asset/img/bread.jpg')}}" alt="img"></div>
                       <div class="info">
                         <h3>add to cart</h3>
                       </div></a></div>
@@ -113,7 +113,7 @@
 	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
 	  <div class="center_1_middle_left_1_inner">
 	   <div class="ih-item square effect6 from_top_and_bottom"><a href="shop-details.html">
-                      <div class="img"><img src="{{asset('asset/img/10.jpg')}}" alt="img"></div>
+                      <div class="img"><img src="{{asset('asset/img/chickenamor.jpg')}}" alt="img"></div>
                       <div class="info">
                         <h3>add to cart</h3>
                       </div></a></div>
@@ -129,7 +129,7 @@
 	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
 	  <div class="center_1_middle_left_1_inner">
 	   <div class="ih-item square effect6 from_top_and_bottom"><a href="shop-details.html">
-                      <div class="img"><img src="{{asset('asset/img/4.jpg')}}" alt="img"></div>
+                      <div class="img"><img src="{{asset('asset/img/delisyoso.jpg')}}" alt="img"></div>
                       <div class="info">
                         <h3>add to cart</h3>
                       </div></a></div>
@@ -143,7 +143,7 @@
 	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
 	  <div class="center_1_middle_left_1_inner">
 	   <div class="ih-item square effect6 from_top_and_bottom"><a href="shop-details.html">
-                      <div class="img"><img src="{{asset('asset/img/5.jpg')}}" alt="img"></div>
+                      <div class="img"><img src="{{asset('asset/img/pizza.jpg')}}" alt="img"></div>
                       <div class="info">
                         <h3>add to cart</h3>
                       </div></a></div>
@@ -157,7 +157,7 @@
 	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
 	  <div class="center_1_middle_left_1_inner">
 	   <div class="ih-item square effect6 from_top_and_bottom"><a href="shop-details.html">
-                      <div class="img"><img src="{{asset('asset/img/6.jpg')}}" alt="img"></div>
+                      <div class="img"><img src="{{asset('asset/img/porksteak.jpg')}}" alt="img"></div>
                       <div class="info">
                         <h3>add to cart</h3>
                       </div></a></div>
@@ -174,7 +174,7 @@
 	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
 	  <div class="center_1_middle_left_1_inner">
 	   <div class="ih-item square effect6 from_top_and_bottom"><a href="shop-details.html">
-                      <div class="img"><img src="{{asset('asset/img/11.jpg')}}" alt="img"></div>
+                      <div class="img"><img src="{{asset('asset/img/chickenamor.jpg')}}" alt="img"></div>
                       <div class="info">
                         <h3>add to cart</h3>
                       </div></a></div>
@@ -188,7 +188,7 @@
      <div class="col-sm-4 center_1_middle_left_1 clearfix">
 	  <div class="center_1_middle_left_1_inner">
 	   <div class="ih-item square effect6 from_top_and_bottom"><a href="shop-details.html">
-                      <div class="img"><img src="{{asset('asset/img/7.jpg')}}" alt="img"></div>
+                      <div class="img"><img src="{{asset('asset/img/delisyoso.jpg')}}" alt="img"></div>
                       <div class="info">
                         <h3>add to cart</h3>
                       </div></a></div>
@@ -202,7 +202,7 @@
 	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
 	  <div class="center_1_middle_left_1_inner">
 	   <div class="ih-item square effect6 from_top_and_bottom"><a href="shop-details.html">
-                      <div class="img"><img src="{{asset('asset/img/6.jpg')}}" alt="img"></div>
+                      <div class="img"><img src="{{asset('asset/img/porksteak.jpg')}}" alt="img"></div>
                       <div class="info">
                         <h3>add to cart</h3>
                       </div></a></div>
@@ -247,14 +247,14 @@
 	   <h5><a href="#">Snacks (4)</a></h5>
 	    <h5><a href="#">Dinner(6)</a></h5>
 	
-		  <h2>Class Aptent</h2>
+		  <h2>Promo Meals</h2>
 	 </div>
 	  <div class="blog_2_right_top_inner_3 clearfix">
 	   <div class="col-sm-4 blog_2_right_top_inner_3_left clearfix">
 	    <div class="logic_1 clearfix">
 		 <div class="grid clearfix">
 					<figure class="effect-jazz">
-						<img src="{{asset('asset/img/49.jpg')}}" alt="img25">
+						<img src="{{asset('asset/img/image11.jpg')}}" alt="img25">
 						<figcaption>
 							<a href="shop-details.html">View more</a>						</figcaption>			
 		  </figure>
@@ -274,7 +274,7 @@
 	    <div class="logic_1 clearfix">
 		 <div class="grid clearfix">
 					<figure class="effect-jazz">
-						<img src="img/50.jpg" alt="img25">
+						<img src="img/porksteak.jpg" alt="img25">
 						<figcaption>
 							<a href="shop-details.html">View more</a>						</figcaption>			
 		  </figure>
@@ -294,7 +294,7 @@
 	    <div class="logic_1 clearfix">
 		 <div class="grid clearfix">
 					<figure class="effect-jazz">
-						<img src="img/51.jpg" alt="img25">
+						<img src="img/delisyoso.jpg" alt="img25">
 						<figcaption>
 							<a href="shop-details.html">View more</a>						</figcaption>			
 		  </figure>
@@ -310,8 +310,6 @@
 		</div>
 	  </div>
 	  <div class="blog_2_right_top_inner_2 clearfix">
-	  <h2>Duis sagittis ipsum</h2>
-	  <h6><a href="shop-details.html">Nulla, Dolor ,Odio, Massa ,Ipsum</a></h6>
 	  <h2>Share</h2>
 	  <ul>
 	   <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>

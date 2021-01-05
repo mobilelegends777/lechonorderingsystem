@@ -190,7 +190,7 @@ body{
   position: relative;
   width: 100%;
   height: 100%;
-  border: 8px solid rgb(252, 187, 191);
+  border: 8px solid rgb(255 165 0);
   border-radius:10px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
@@ -243,7 +243,7 @@ body{
     -webkit-transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     transition: all 0.35s ease-in-out;
-    margin-top: 50%;
+    margin-top: 20%;
     padding: 15px 25px;
     margin-left: 50px;
     margin-right: 50px;
@@ -373,7 +373,7 @@ body{
   }
 .center_1_middle_left_2_inner h5{
   font-size:15px;
-  color:rgb(252, 187, 191);
+  color: rgb(255 165 0 / 68%);
   }
 .center_1_middle_left_2_inner h5 i{
   margin:2px;
@@ -881,75 +881,7 @@ figure.effect-jazz:hover figcaption::after {
 /*********************center_6_end****************/
 
 
-/*********************footer****************/
-#footer{
-  background:#000000;
-  padding-top:50px;
-  padding-bottom:80px;
- }
-.footer_left_inner h2{
-  font-size:28px;
-  color:#FFFFFF;
-  padding-bottom:20px;
-  }
-.footer_left_inner h5{
- padding-bottom:10px;
- }
-.footer_left_inner h5 a{
-  font-size:16px;
-  text-decoration:none;
-  color:#ccc;
-  }
-.footer_left_inner h5 a:hover{
-  color:#669933;
-  }
-.footer_left_inner h5 a i{
-  font-size:15px;
-  margin-right:10px;
-  }
-.footer_middle_inner h2{
-  font-size:28px;
-  color:#FFFFFF;
-  padding-bottom:20px;
-  }
-.footer_middle_inner p a{
-  font-size:20px;
-  text-decoration:none;
-  color:#ccc; 
-  }
-.footer_middle_inner p a:hover{
-  color:#669933;
-  }
-.footer_right_top h2{
-  font-size:28px;
-  color:#FFFFFF;
-  padding-bottom:20px; 
-  }
-.footer_right_inner_left{
-  padding:0;
-  margin:0;
-  }
-.footer_right_inner_left_bottom .grid figure {
-	position: relative;
-	float: left;
-	overflow: hidden;
-	min-width: 100%;
-	max-width: 100%;
-	max-height: 100%;
-	width: 100%;
-	text-align: center;
-	cursor: pointer;
-	border:2px solid #000000;
-}
 
-.footer_right_inner_left_bottom .grid figure img {
-	position: relative;
-	display: block;
-	min-height: 100%;
-	max-width: 100%;
-	opacity: 0.8;
-	min-width:100%;
-}
 
 .grid figure figcaption {
 	padding: 2em;
@@ -989,96 +921,6 @@ figure.effect-jazz:hover figcaption::after {
 /***** Jazz *****/
 /*---------------*/
 
-figure.effect-jazz {
-	background: -webkit-linear-gradient(-45deg, #f3cf3f 0%,#f33f58 100%);
-	background: linear-gradient(-45deg, #f3cf3f 0%,#f33f58 100%);
-}
-
-figure.effect-jazz img {
-	opacity: 0.9;
-}
-
-figure.effect-jazz figcaption::after,
-figure.effect-jazz img,
-figure.effect-jazz p {
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-}
-
-figure.effect-jazz figcaption::after {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	content: '';
-	opacity: 0;
-	-webkit-transform: rotate3d(0,0,1,45deg) scale3d(1,0,1);
-	transform: rotate3d(0,0,1,45deg) scale3d(1,0,1);
-	-webkit-transform-origin: 50% 50%;
-	transform-origin: 50% 50%;
-}
-
-figure.effect-jazz:hover img {
-	opacity: 0.7;
-	-webkit-transform: scale3d(1.05,1.05,1);
-	transform: scale3d(1.05,1.05,1);
-}
-
-figure.effect-jazz:hover figcaption::after {
-	opacity: 1;
-	-webkit-transform: rotate3d(0,0,1,45deg) scale3d(1,1,1);
-	transform: rotate3d(0,0,1,45deg) scale3d(1,1,1);
-}
-/*********************footer_end****************/
-
-
-
-/*********************footer_last****************/
-#footer_last{
-  background:#000000;
-  border-top:1px solid #333;
-  padding-top:20px;
-  padding-bottom:10px;
-  }
-.footer_last_left p{
-  font-size:18px;
-  color:#999;
-  }
-.footer_last_left p a{
-  font-size:14px;
-  text-decoration:none;
-  color:#FF6699;
-  }
-.footer_last_left p a:hover{
-  color:#669933;
-  }
-.footer_last_middle_inner ul {
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-.footer_last_middle_inner ul li {
-    display: inline-block;
-	margin-right:16px;
-	margin-left:16px;
-}
-.footer_last_middle_inner ul li a {
-    font-size: 18px;
-    font-weight: 600;
-    text-decoration: none;
-    color: #666;
-}
-.footer_last_middle_inner ul li a:hover{
-    color: #999;
-}
-.footer_last_right_inner p{
- font-size:18px;
- color:#999;
- text-align: center;
-  }
-
-/*********************footer_last_end****************/
 
 
 
