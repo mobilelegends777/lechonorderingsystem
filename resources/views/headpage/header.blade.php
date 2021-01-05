@@ -78,21 +78,31 @@
 		</div>
 	</div>
 	<div class="topnav subtop" id="myTopnav">
-		<a href="#"><div class="ordinary">Shop</div></a>
-	    <a href="#">
-	    	<div class="ordinary dropbtn1" onclick="drop_Selc()">Fish <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"> </div>
-	    	<div id="myDropdown" class="dropdown-content">
-			    <a href="#home">Sea Food</a>
-			</div>
-	    </a>
-	    <a href="#">
-	    	<div class="ordinary">Meat <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"> </div>
-	    </a>
-	    <a href="#">
-	    	<div class="ordinary">About Us <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"> </div>
-	    </a>
-	    <a href="#"><div class="ordinary">Blocks
-	    	<img src="{{asset('images/down-arrow.png')}}" class="d-arrow"> </div>
-	    </a>
-	</div>
+		<div class="ordinary">
+			<a href="#">Shop</a>
+		</div>
+    	<div class="ordinary dropbtn1">
+    		<a href="#">Fish <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"> </a>
+    	</div>
+    	<div class="ordinary dropbtn2">
+    		<a href="#">Meat <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></a>
+		 </div>
+    	<div class="ordinary">
+    		<a href="#">About Us <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></a>
+    	</div>
+	    <div class="ordinary"><a href="#">Blocks
+	    	<img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></a>
+	    </div>
 
+	</div>
+	<!-- modals -->
+		<div id="myDropdown" class="drpdwn seafoodDrp" style="display:none;">
+			    <a href="#home">Sea Food</a>
+		</div>
+		<div id="myDropdown" class="drpdwn meatDrp" style="display:none;">
+				  <a href="#">Rabbit</a>
+				  <a href="#">Beef</a>
+				  <a href="#">Pork</a>
+				  <a href="#">Chicken</a>
+				  <a href="#">Lamb</a>
+		</div>

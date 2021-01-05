@@ -261,11 +261,11 @@
 	}
 	.topnav a {
 		color: #fff;
-		margin-left: 152px;
+		padding-left: 152px;
 	}
-	.ordinary {
+	.topnav.responsive .ordinary {
 		font-size: 27px;
-	    padding: 31px 3px;
+	    padding: 31px 0px;
 	}
 	.__item {
     	/*width: 357px;*/
@@ -334,6 +334,26 @@
 	    background-color: #f6f4f2;
 	    max-width: 1920px;
 	    height: 2484px;
+	}
+	div#myDropdown {
+	    position: absolute;
+	    border-radius: 10px;
+	}
+	.drpdwn {
+		color: black;
+		width: 136px;
+    	background: #fff;
+    	font-size: 27px;
+	    padding: 15px;
+	    border-radius: 6px;
+	    margin: left;
+	    margin-left: 335px;
+	}
+	.drpdwn.meatDrp {
+		margin-left: 562px;
+	}
+	#myDropdown {
+		z-index: 99999;
 	}
 	/*.container .sub-container .box {
 	    width: 180%!important;

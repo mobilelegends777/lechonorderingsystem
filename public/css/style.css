@@ -803,7 +803,7 @@ span.sp {
     position: relative;
 }
 
-.topnav{ height : auto; transition: .3s ease-in;}
-.topnav > a { display: block; overflow: hidden;}
-.topnav:not(responsive) > a {max-height: 0;transition: .3s ease-in;}
-.topnav.responsive > a {max-height: 600px; transition: .3s ease-in;}
+.topnav{ height : auto; transition: .2s ease-in;}
+.topnav  a { display: block; overflow: hidden;}
+.topnav:not(responsive)  a {max-height: 0;transition: .2s ease-in;}
+.topnav.responsive  a {max-height: 600px; transition: .2s ease-in;}
