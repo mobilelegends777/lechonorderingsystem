@@ -125,7 +125,9 @@ var btn = $('#Btop');
 		});
 });
 $(document).ready(function(){
-	$('.sales1').toggle().fadeIn(2000);
+  setInterval(function(){
+	  $('.sales1').toggle().fadeIn(3000);
+  }, 5000);
 });
 
 </script>
@@ -144,25 +146,58 @@ $(document).ready(function(){
         x.className = "topnav";
     }
 
-    function drop_Selc() {
-      document.getElementById("myDropdown").classList.toggle("show");
-  }
+  //   function drop_Selc() {
+  //     document.getElementById("myDropdown").classList.toggle('show');
+  // }
 
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn1')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
+  // // Close the dropdown if the user clicks outside of it
+  // window.onclick = function(event) {
+  //   if (!event.target.matches('.dropbtn1')) {
+  //     var dropdowns = document.getElementsByClassName("dropdown-content");
+  //     var i;
+  //     for (i = 0; i < dropdowns.length; i++) {
+  //       var openDropdown = dropdowns[i];
+  //       if (openDropdown.classList.contains('show')) {
+  //         openDropdown.classList.remove('show');
+  //       }
+  //     }
+  //   }
+  // }
 
 } 
+$(document).ready(function(){
+  $('.dropbtn1').on('click',function(){
+      $('.seafoodDrp').toggle();
+  });
+  $('.dropbtn2').on('click',function(){
+      $('.meatDrp').toggle();
+  });
+
+var mouse_is_inside = false;
+
+
+    $('.dropbtn1').hover(function(){ 
+        mouse_is_inside=true; 
+    }, function(){ 
+        mouse_is_inside=false; 
+    });
+
+    $("body").mouseup(function(){ 
+        if(! mouse_is_inside) $('.seafoodDrp').hide();
+    });
+var mouse_is_inside = false;
+
+
+    $('.dropbtn2').hover(function(){ 
+        mouse_is_inside=true; 
+    }, function(){ 
+        mouse_is_inside=false; 
+    });
+
+    $("body").mouseup(function(){ 
+        if(! mouse_is_inside) $('.meatDrp').hide();
+    });
+});
 </script>
 
 <script type="text/javascript">
