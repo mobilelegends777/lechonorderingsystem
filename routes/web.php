@@ -23,3 +23,4 @@ Auth::routes();
 Route::get('/adminpages/admindashboard', 'adminBoardController@index')->name('admindashboard');
 Route::get('/frontpage/shop', 'shopController@index')->name('shop');
 Route::get('/frontpage/contact', 'contactController@index')->name('contact');
+Route::get('/frontpage/shop-details', 'shopdetailsController@index')->name('shop-details');

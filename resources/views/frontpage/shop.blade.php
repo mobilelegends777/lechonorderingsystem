@@ -85,7 +85,7 @@
 	  <div class="center_1_middle clearfix">
 	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
 	  <div class="center_1_middle_left_1_inner">
-	   <div class="ih-item square effect6 from_top_and_bottom"><a href="shop-details.html">
+	   <div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
                       <div class="img"><img src="{{asset('asset/img/beefsteak1.jpg')}}" alt="img"></div>
                       <div class="info">
                         <h3>add to cart</h3>
@@ -331,20 +331,7 @@
 
 @include('headpage.footer')
 
-<script type="text/javascript">
-	$(document).on('click', '.panel-heading span.clickable', function(e){
-    var $this = $(this);
-	if(!$this.hasClass('panel-collapsed')) {
-		$this.parents('.panel').find('.panel-body').slideUp();
-		$this.addClass('panel-collapsed');
-		$this.find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
-	} else {
-		$this.parents('.panel').find('.panel-body').slideDown();
-		$this.removeClass('panel-collapsed');
-		$this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
-	}
-})
-	</script>
+
 
 </body>
       
