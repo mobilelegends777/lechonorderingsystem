@@ -115,6 +115,7 @@
    </section>
 
    @include('headpage.footer')
+   @include('layouts.scripts')
 
 </body>
       
