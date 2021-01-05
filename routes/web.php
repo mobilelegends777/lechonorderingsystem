@@ -22,3 +22,4 @@ Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/adminpages/admindashboard', 'adminBoardController@index')->name('admindashboard');
 Route::get('/frontpage/shop', 'shopController@index')->name('shop');
+Route::get('/frontpage/contact', 'contactController@index')->name('contact');

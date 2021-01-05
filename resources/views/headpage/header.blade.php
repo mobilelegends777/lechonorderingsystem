@@ -37,8 +37,8 @@
 			<span class="dropdown">
 				<span class="des6">About Us <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
 				<div class="dropdown-content">
-				  <a href="#">Rabbit</a>
-				  <a href="#">Beef</a>
+				  <a href="{{asset('frontpage/contact')}}">Contact</a>
+				  <a href="#">Story</a>
 				</div>
 			</span>
 			<span class="dropdown">
@@ -96,32 +96,4 @@
 	    </a>
 	</div>
 
-<script type="text/javascript">
-	function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    }else{
-        x.className = "topnav";
-    }
-
-    function drop_Selc() {
-  		document.getElementById("myDropdown").classList.toggle("show");
-	}
-
-	// Close the dropdown if the user clicks outside of it
-	window.onclick = function(event) {
-	  if (!event.target.matches('.dropbtn1')) {
-	    var dropdowns = document.getElementsByClassName("dropdown-content");
-	    var i;
-	    for (i = 0; i < dropdowns.length; i++) {
-	      var openDropdown = dropdowns[i];
-	      if (openDropdown.classList.contains('show')) {
-	        openDropdown.classList.remove('show');
-	      }
-	    }
-	  }
-	}
-
-} 
-</script>
+@include('layouts.scripts')

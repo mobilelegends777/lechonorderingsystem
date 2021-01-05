@@ -39,7 +39,7 @@
 					<div class="footer-contact-info">
 						<div class="info-tel">
 							<b class="info-contacts">Tel :</b>
-							<span class="sp">+123456789</span>
+							<span class="sp"> (063) 222 0355</span>
 						</div>
 						<div class="info-phone">
 							<b class="info-contacts">Phone :</b>
@@ -55,7 +55,7 @@
 						</div>
 						<div class="info-address">
 							<b class="info-contacts address">Address :</b>
-							<span class="sp">12453 Avenue NYC, New York City, NYC, 98741</span>
+							<span class="sp">Gaisano Mall, Villaverde Rd, Iligan City, Lanao del Norte</span>
 						</div>	
 						<div class="info-web">
 							<b class="info-contacts">Website :</b>
@@ -82,47 +82,4 @@
 			</div>
 		</div>
 	
-		<script>
-
-
-
-$(document).ready(function(){
-	for (var i = 1;i<13;i++){
-		$('.image-cont').append(`
-			<div class="gallery-images">
-				<img src="{{asset('images/image${i}.jpg')}}">
-			</div>
-		`);
-
-
-	}
-	for (var x = 1; x < 5; x++){
-		$('.social-icons').append(`
-			<li class="social-media-icons"><a href="#"><img src="{{asset('images/social${x}.png')}}"></a></li>
-		`);
-	}
-	setInterval(function(){
-     $(".footer-tweet-time").toggle().slideDown();
-    // $("#box1").toggle();
-},3000);
-
-var btn = $('#Btop');
-
-		$(window).scroll(function() {
-		  if ($(window).scrollTop() > 600) {
-		    btn.addClass('show');
-		  } else {
-		    btn.removeClass('show');
-		  }
-		});
-
-		btn.on('click', function(e) {
-		  e.preventDefault();
-		  $('html, body').animate({scrollTop:0}, '300');
-		});
-});
-$(document).ready(function(){
-	$('.sales1').toggle().fadeIn(2000);
-});
-
-		</script>
+	
