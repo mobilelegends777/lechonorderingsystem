@@ -4,22 +4,31 @@
 .items.slider.slick-initialized.slick-slider {
     width: 80%;
     overflow: hidden;
-    margin: 0 180px;
+    margin: 0 10%;
     position: absolute;
     height: 400px;
 }
 ul.slick-dots {
     display: flex;
-    margin: 21px 40%;
+    margin: 21px 0;
     list-style: none;
     transform: translate(43%);
     transform: translateY(150%);
+    justify-content: center;
 }
 button.slick-prev.slick-arrow {
     display: none!important;
 }
 button.slick-next.slick-arrow {
     display: none!important;
+}
+/* the slides */
+.slick-slide {
+margin: 0 27px;
+}
+/* the parent */
+.slick-list {
+margin: 0 -27px;
 }
 /*.slick-dots li img:nth-child(1) {
     display: block;
