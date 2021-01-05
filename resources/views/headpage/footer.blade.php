@@ -3,7 +3,7 @@
 				<div class="footer-desc footer-company">
 					<div class="footer-logo">
 						<span class="des-logo">
-							<img src="images/logo.png" class="footer-logos">
+							<img src="{{asset('images/logo.png')}}" class="footer-logos">
 						</span>
 						<div class="name-title">
 							<span class="des1">Karne De Lame</span>
@@ -21,7 +21,7 @@
 						<span class="footer-title">Latest Tweets</span>
 					</div>
 					<div class="footer-tweet-time">
-						<span><img src="images/twits.png" class="tweets"><i>30 minutes ago</i></span>
+						<span><img src="{{asset('images/twits.png')}}" class="tweets"><i>30 minutes ago</i></span>
 					</div>
 				</div>
 				<div class="footer-desc footer-gallery">
@@ -59,7 +59,7 @@
 						</div>	
 						<div class="info-web">
 							<b class="info-contacts">Website :</b>
-							<span class="sp">http://themexlab.com</span>
+							<span class="sp"></span>
 						</div>
 					</div>					
 				</div>
@@ -76,8 +76,53 @@
 				</div>
 				<div class="back-to-top">
 					<button id="Btop">
-						<img src="images/btop.png">
+						<img src="{{asset('images/btop.png')}}">
 					</button>
 				</div>
 			</div>
 		</div>
+	
+		<script>
+
+
+
+$(document).ready(function(){
+	for (var i = 1;i<13;i++){
+		$('.image-cont').append(`
+			<div class="gallery-images">
+				<img src="{{asset('images/image${i}.jpg')}}">
+			</div>
+		`);
+
+
+	}
+	for (var x = 1; x < 5; x++){
+		$('.social-icons').append(`
+			<li class="social-media-icons"><a href="#"><img src="{{asset('images/social${x}.png')}}"></a></li>
+		`);
+	}
+	setInterval(function(){
+     $(".footer-tweet-time").toggle().slideDown();
+    // $("#box1").toggle();
+},3000);
+
+var btn = $('#Btop');
+
+		$(window).scroll(function() {
+		  if ($(window).scrollTop() > 600) {
+		    btn.addClass('show');
+		  } else {
+		    btn.removeClass('show');
+		  }
+		});
+
+		btn.on('click', function(e) {
+		  e.preventDefault();
+		  $('html, body').animate({scrollTop:0}, '300');
+		});
+});
+$(document).ready(function(){
+	$('.sales1').toggle().fadeIn(2000);
+});
+
+		</script>

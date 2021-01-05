@@ -20,7 +20,9 @@
 					<div class="sales3">FROM NORWAY</div>
 					<div class="sales4">We offer a huge variety of exceptionally fresh meat farmed in our personal farm</div>
 				<div class="sales5">
-			  		<button class="bttn1">Shop Now</button>
+					<a href="{{asset('frontpage/shop')}}">
+					  <button class="bttn1">Shop Now</button>
+					</a>
 			  		<button class="bttn2">About Store</button>
 			  	</div>
 			  </div>
@@ -379,44 +381,6 @@ $('.slider').slick({
 //     });
 // });
 
-$(document).ready(function(){
-	for (var i = 1;i<13;i++){
-		$('.image-cont').append(`
-			<div class="gallery-images">
-				<img src="images/image${i}.jpg">
-			</div>
-		`);
-
-
-	}
-	for (var x = 1; x < 5; x++){
-		$('.social-icons').append(`
-			<li class="social-media-icons"><a href="#"><img src="images/social${x}.png"></a></li>
-		`);
-	}
-	setInterval(function(){
-     $(".footer-tweet-time").toggle().slideDown();
-    // $("#box1").toggle();
-},3000);
-
-var btn = $('#Btop');
-
-		$(window).scroll(function() {
-		  if ($(window).scrollTop() > 600) {
-		    btn.addClass('show');
-		  } else {
-		    btn.removeClass('show');
-		  }
-		});
-
-		btn.on('click', function(e) {
-		  e.preventDefault();
-		  $('html, body').animate({scrollTop:0}, '300');
-		});
-});
-$(document).ready(function(){
-	$('.sales1').toggle().fadeIn(2000);
-});
 
 
 </script>
