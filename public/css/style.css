@@ -807,3 +807,14 @@ span.sp {
 .topnav  a { display: block; overflow: hidden;}
 .topnav:not(responsive)  a {max-height: 0;transition: .2s ease-in;}
 .topnav.responsive  a {max-height: 600px; transition: .2s ease-in;}
+
+.slider-conts img{
+  /*position: absolute;*/
+  /*top: 0%;
+  left: 50%;
+  max-width: 200%;
+  width: 100%;
+  transform: translateX(-50%);*/
+  /* Thanks  @bastian_fiessinger. Use when activating blur effect:
+  will-change: -webkit-filter, filter, transform; */
+}
