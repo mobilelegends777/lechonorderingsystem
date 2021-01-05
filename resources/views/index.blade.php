@@ -17,7 +17,7 @@
 			  <img class="slide-image mySlides " src="images/city.jpg" style="display: none;">
 			  <div class="sales1 trans1">
 			  	<span class="sales2">MEAT & SEAFOOD</span>
-					<div class="sales3">FROM NORWAY</div>
+					<div class="sales3">FROM BAGSAKAN</div>
 					<div class="sales4">We offer a huge variety of exceptionally fresh meat farmed in our personal farm</div>
 				<div class="sales5">
 			  		<button class="bttn1">Shop Now</button>
@@ -56,7 +56,6 @@
 			<div class="bsp">Best Selling Products</div>
 			<div class="items slider">
 				<div class="box slide">
-					
 					<div class="item-image">
 						<div class="prod-image">
 							<img src="images/siomai.jpg">
@@ -151,7 +150,7 @@
 
 		<div class="sub-container2">
 			<div class="sc2">Our most popular menus</div>
-			<hr style="width: 22%; border: 1px solid #c4a265; margin-left: 68px;">
+			<hr class="hr">
 			<div class="items-container">
 				<div class="__item">
 					<div class="box2">
@@ -259,30 +258,30 @@
 					<a href="#">
 						<img class ="icon1" src="{{asset('images/oven.svg')}} " >
 					</a>
-					<span><strong>Clean Kitchen</strong>
-					<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
-					<button class="buttoncat">Meet our Team</button>
+						<span><strong>Clean Kitchen</strong></span>
+						<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
+						<button class="buttoncat">Meet our Team</button>
 					
 				</div>
 				<div class="f-icon">
 					<a href="#">
 						<img class ="icon1" src="{{asset('images/placeholder.svg')}} " >
 					</a>
-					<span><strong>Awesome Locations</strong></span>
-					<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
-					<button class="buttoncat">Find our Stores</button>
+						<span><strong>Awesome Locations</strong></span>
+						<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
+						<button class="buttoncat">Find our Stores</button>
 				</div>
 				<div class="f-icon">
 					<a href="#">
 						<img class ="icon1" src="{{asset('images/ingredients.svg')}} " >
 					</a>
-					<span><strong>Healthy Ingredients</strong></span>
-					<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
-					<button class="buttoncat">See Ingredients</button>
+						<span><strong>Healthy Ingredients</strong></span>
+						<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
+						<button class="buttoncat">See Ingredients</button>
 				</div>
 			</div>
 		</div>
-		</div>
+	</div>
 
 		@include('headpage.footer')
 		
@@ -322,10 +321,13 @@ function carousel() {
 
 $('.slider').slick({
   dots: true,
+  // mobileFirst:true,
   // customPaging : function(slider, i) {
   //       return '<ul><li role="presentation></li><li role="presentation" class="slick-active"></li></ul>';},
   infinite: true,
   speed: 1500,
+  centerMode: true,
+  // centerPadding: '40px',
   autoplay: true,
   slidesToShow: 4,
   slidesToScroll: 1,
@@ -333,17 +335,26 @@ $('.slider').slick({
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 4,
+        slidesToScroll: 1,
         infinite: true,
-        dots: true
+        dots: false
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
       }
     },
     {
       breakpoint: 600,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToScroll: 1
       }
     },
     {

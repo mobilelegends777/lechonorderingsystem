@@ -57,7 +57,7 @@
 		</span>
 		<!-- mobile nav -->
 		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="true" onclick="myFunction()">
-			<span>&#9776;Menu</span>
+			<span>&#9776;&nbsp;Menu</span>
 		</button>
 		<div class="icons">
 			<span class="search-icon">
@@ -77,12 +77,23 @@
 			</div>
 		</div>
 	</div>
-	<div class="topnav" id="myTopnav">
-		    <a href=""><div class="ordinary">Shop</div></a>
-		    <a href=""><div class="ordinary">Fish </div></a>
-		    <a href=""><div class="ordinary">Meat </div></a>
-		    <a href=""> <div class="ordinary">About Us </div></a>
-		    <a href=""><div class="ordinary">Blocks </div></a>
+	<div class="topnav subtop" id="myTopnav">
+		<a href="#"><div class="ordinary">Shop</div></a>
+	    <a href="#">
+	    	<div class="ordinary dropbtn1" onclick="drop_Selc()">Fish <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"> </div>
+	    	<div id="myDropdown" class="dropdown-content">
+			    <a href="#home">Sea Food</a>
+			</div>
+	    </a>
+	    <a href="#">
+	    	<div class="ordinary">Meat <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"> </div>
+	    </a>
+	    <a href="#">
+	    	<div class="ordinary">About Us <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"> </div>
+	    </a>
+	    <a href="#"><div class="ordinary">Blocks
+	    	<img src="{{asset('images/down-arrow.png')}}" class="d-arrow"> </div>
+	    </a>
 	</div>
 
 <script type="text/javascript">
@@ -93,5 +104,24 @@
     }else{
         x.className = "topnav";
     }
+
+    function drop_Selc() {
+  		document.getElementById("myDropdown").classList.toggle("show");
+	}
+
+	// Close the dropdown if the user clicks outside of it
+	window.onclick = function(event) {
+	  if (!event.target.matches('.dropbtn1')) {
+	    var dropdowns = document.getElementsByClassName("dropdown-content");
+	    var i;
+	    for (i = 0; i < dropdowns.length; i++) {
+	      var openDropdown = dropdowns[i];
+	      if (openDropdown.classList.contains('show')) {
+	        openDropdown.classList.remove('show');
+	      }
+	    }
+	  }
+	}
+
 } 
 </script>

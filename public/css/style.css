@@ -19,7 +19,11 @@ a {
 	padding: 34px;
 	background-color: #2a2c2f;
 }
-
+.hr {
+  width: 22%; 
+  border: 1px solid #c4a265; 
+  margin-left: 68px;
+}
 .headmenu .des-logo {
 	/*border: 1px solid red;*/
 }
@@ -190,10 +194,10 @@ a {
 }
 
 .container .sub-container .box {
-    width: 74%!important;
+    width: 80%!important;
     height: 250px;
     float: left;
-    margin-left: 73px;
+    /*margin-left: 73px;*/
     margin-top: 75px;
     position: relative;
 }
