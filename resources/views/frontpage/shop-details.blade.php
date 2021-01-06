@@ -58,22 +58,22 @@
 	</div>
 	<div class="shopping_left_inner_2 clearfix">
 	<ul>
-	 <li><a href="#"><img src="{{asset('asset/img/63.jpg')}}"></a></li>
-	 <li><a href="#"><img src="{{asset('asset/img/63.jpg')}}"></a></li>
-	 <li><a href="#"><img src="{{asset('asset/img/63.jpg')}}"></a></li>
+	 <li><a href="#"><img src="{{asset('asset/img/chicken1.jpg')}}"></a></li>
+	 <li><a href="#"><img src="{{asset('asset/img/chicken2.jpg')}}"></a></li>
+	 <li><a href="#"><img src="{{asset('asset/img/chicken3.jpg')}}"></a></li>
 	</ul>
 	</div>
    </div>
    <div class="col-sm-6 shopping_right clearfix">
     <div class="shopping_right_top clearfix">
 	 <div class="shop_right_inner_1 clearfix">
-	   <h4>TELLUS SED AUGUE</h4>
+	   <h4>Chicken Manok</h4>
 	   <h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i> <a href="#">(1 customer review)</a></h5>
 	   <h3><span class="dollar_tab">Php 74.00</span> Php 73.00</h3>
 	   <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odionec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris nec tellus sed augue semper porta.</h6>
 	   <h6>SKU: 002</h6>
-	   <h6>CATEGORY:<a href="#"> Torquent</a></h6>
-	   <h6>Tag:<a href="#"> Ipsum</a></h6>
+	   <h6>CATEGORY:<a href="#"> Meat</a></h6>
+	   <h6>Tag:<a href="#"> Chicken</a></h6>
 	  </div>
 	 <div class="shop_right_inner_2 clearfix">
 	    <div class="col-sm-3 details_2_right_inner_2_left clearfix">
@@ -100,16 +100,18 @@
 	  </div>
      <div class="shop_right_inner_3 clearfix">
 	   <div class="ziehharmonika">
-			<h3>Description</h3>
+			<h3 data-prefix="★">Description</h3>
+			<div class="arrowDown"></div>
+			<div class="collapseIcon">+</div>
 			<div>
 				<p>Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos C.</p>
 			</div>
-			<h3>Additional information</h3>
+			<h3 data-prefix="★">Additional information</h3>
 			<div>
 				<p class="voter">Weight <span class="wating_1">2 kg</span></p>
 				<p class="voter">Dimention <span class="wating_1">12 x 22 x 20 cm</span></p>
 			</div>
-			<h3>Review (1)</h3>
+			<h3 data-prefix="★">Review (1)</h3>
 			<div>
 				<p class="voter">1 review for dapibus Arcu</p>
 				<div class="ziehharmonika_bottom clearfix">
@@ -158,7 +160,7 @@
 	 <div class="col-sm-3 center_1_middle_left_1 clearfix">
 	  <div class="center_1_middle_left_1_inner">
 	   <div class="ih-item square effect6 from_top_and_bottom"><a href="#">
-                      <div class="img"><img src="{{asset('asset/img/4.jpg')}}" alt="img"></div>
+                      <div class="img"><img src="{{asset('asset/img/chickenamor.jpg')}}" alt="img"></div>
                       <div class="info">
                         <h3>add to cart</h3>
                       </div></a></div>
@@ -172,7 +174,7 @@
 	 <div class="col-sm-3 center_1_middle_left_1 clearfix">
 	  <div class="center_1_middle_left_1_inner">
 	   <div class="ih-item square effect6 from_top_and_bottom"><a href="#">
-                      <div class="img"><img src="{{asset('asset/img/5.jpg')}}" alt="img"></div>
+                      <div class="img"><img src="{{asset('asset/img/delisyoso.jpg')}}" alt="img"></div>
                       <div class="info">
                         <h3>add to cart</h3>
                       </div></a></div>
@@ -186,7 +188,7 @@
 	 <div class="col-sm-3 center_1_middle_left_1 clearfix">
 	  <div class="center_1_middle_left_1_inner">
 	   <div class="ih-item square effect6 from_top_and_bottom"><a href="#">
-                      <div class="img"><img src="{{asset('asset/img/6.jpg')}}" alt="img"></div>
+                      <div class="img"><img src="{{asset('asset/img/pizza.jpg')}}" alt="img"></div>
                       <div class="info">
                         <h3>add to cart</h3>
                       </div></a></div>
@@ -200,7 +202,7 @@
 	 <div class="col-sm-3 center_1_middle_left_1 clearfix">
 	  <div class="center_1_middle_left_1_inner">
 	   <div class="ih-item square effect6 from_top_and_bottom"><a href="#">
-                      <div class="img"><img src="{{asset('asset/img/7.jpg')}}" alt="img"></div>
+                      <div class="img"><img src="{{asset('asset/img/porksteak.jpg')}}" alt="img"></div>
                       <div class="info">
                         <h3>add to cart</h3>
                       </div></a></div>
