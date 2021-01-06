@@ -6,8 +6,8 @@
 							<img src="{{asset('images/logo.png')}}" class="footer-logos">
 						</span>
 						<div class="name-title">
-							<span class="des1">Karne De Lame</span>
-							<div class="des2">Fresh Meats</div>
+							<span class="des1">MJ Lechon</span>
+							<div class="des2">Fresh Lechon's</div>
 						</div>
 					</div>
 					<div class="footer-info">

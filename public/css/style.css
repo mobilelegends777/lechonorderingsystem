@@ -272,7 +272,7 @@ a {
 }
 .items-container {
     display: flex;
-    width: 70%;
+    width: 77%;
     height: 1192px;
     flex-wrap: wrap;
     /*flex-direction: row;*/
@@ -814,7 +814,7 @@ span.sp {
   left: 50%;
   max-width: 200%;
   width: 100%;
-  transform: translateX(-50%);*/
-  /* Thanks  @bastian_fiessinger. Use when activating blur effect:
+  transform: translateX(-50%);
+   Thanks  @bastian_fiessinger. Use when activating blur effect:
   will-change: -webkit-filter, filter, transform; */
 }

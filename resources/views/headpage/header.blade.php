@@ -6,8 +6,8 @@
             </a>
 		</span>
 		<div class="company-title">
-			<span class="des1">Karne De Lame</span>
-			<div class="des2">Fresh Meats</div>
+			<span class="des1">MJ Lechon</span>
+			<div class="des2">Fresh Lechon</div>
 		</div>
 	</div>
 		<span class="sub-menu">
