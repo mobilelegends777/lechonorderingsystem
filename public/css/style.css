@@ -294,7 +294,7 @@ a {
 
 .slide-image {
     width: 100%;
-    height: 780px;
+    height: 850px;
     object-fit: cover;
 }
 .item-details {
@@ -371,7 +371,7 @@ span.product-title {
 }
 .sales1 {
     /*border: 1px solid red;*/
-    width: 30%;
+    width: 615px;
     padding: 5px;
     position: absolute;
     top: 25%;
@@ -799,22 +799,24 @@ span.sp {
   opacity: 1;
 }
 .slider-conts {
-    height: 780px;
+    height: 850px;
     position: relative;
+    /*transition: 0.2s;*/
 }
 
-.topnav{ height : auto; transition: .2s ease-in;}
-.topnav  a { display: block; overflow: hidden;}
-.topnav:not(responsive)  a {max-height: 0;transition: .2s ease-in;}
-.topnav.responsive  a {max-height: 600px; transition: .2s ease-in;}
+.toggle-cart-sidenav {
+    position: fixed;
+    z-index: 100;
+    top: 400px;
+    right: 0;
+    background-color:  #b258078f;
+    border-bottom-left-radius: 35px;
+    border-top-left-radius: 32px;
+    cursor: pointer;
+}
+.toggle-cart-sidenav img{
+    width: 80px;
+    width: 70px;
+    padding: 10px;
 
-.slider-conts img{
-  /*position: absolute;*/
-  /*top: 0%;
-  left: 50%;
-  max-width: 200%;
-  width: 100%;
-  transform: translateX(-50%);
-   Thanks  @bastian_fiessinger. Use when activating blur effect:
-  will-change: -webkit-filter, filter, transform; */
 }

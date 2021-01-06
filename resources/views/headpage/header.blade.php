@@ -60,7 +60,7 @@
 			<span>&#9776;&nbsp;Menu</span>
 		</button>
 		<div class="icons">
-			<span class="search-icon">
+			<span class="search-icon" >
 				<img src="{{asset('images/search-icon.png')}}">
 			</span>
 			<span class="add-to">
@@ -106,3 +106,7 @@
 				  <a href="#">Chicken</a>
 				  <a href="#">Lamb</a>
 		</div>
+		<div class="__search" id="my-searches" style="display:none">
+				<input type="text" name=""><button>Search</button>
+		</div>
+		

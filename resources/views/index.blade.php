@@ -11,6 +11,15 @@
 </head>
 <body>
 	@include('headpage.header')
+	<div class="toggle-cart-sidenav">
+		<div class="cart">
+			<img src="{{ asset('images/sidenav-cart.png') }}">
+		</div>
+		<div class="add-to-cart-items">
+			<div>
+			</div>
+		</div>
+	</div>
 	<div class="container">
 		<div class="slider-conts">
 			<div id="slide-container">

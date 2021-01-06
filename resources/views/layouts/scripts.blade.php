@@ -126,19 +126,25 @@ var btn = $('#Btop');
 });
 $(document).ready(function(){
   setInterval(function(){
-	  $('.sales1').toggle().fadeIn(3000);
+	  $('.sales1').toggle().fadeIn(2500);
   }, 5000);
 });
 
-// onscroll change image size
+
+
+$(window).scroll(function() {
+  var onScrollmargin = $(document).scrollTop();
+  var heightChanged = 850 - $(document).scrollTop();
+    $(".slider-conts").css( { marginLeft : onScrollmargin, marginRight : onScrollmargin } );
+    $('.slider-conts').height(heightChanged);
+    $('.slider-conts img').height(heightChanged);
+    
+});
 // $(window).scroll(function() {
-//   var scroll = $(window).scrollTop();
-//   $(".slider-conts img").css({
-//     transform: 'translate3d(-50%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/5)/100+')',
-    //Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
-    //"-webkit-filter": "blur(" + (scroll/200) + "px)",
-    //filter: "blur(" + (scroll/200) + "px)"
-//   });
+//   var heightChanged = 850 - $(document).scrollTop();
+//     $(".slider-conts").height(heightChanged);
+//     $('.slider-conts img').height(heightChanged);
+
 // });
 </script>
 
@@ -151,29 +157,11 @@ $(document).ready(function(){
   function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
+       $('#my-searches').hide();
         x.className += " responsive";
     }else{
         x.className = "topnav";
     }
-
-  //   function drop_Selc() {
-  //     document.getElementById("myDropdown").classList.toggle('show');
-  // }
-
-  // // Close the dropdown if the user clicks outside of it
-  // window.onclick = function(event) {
-  //   if (!event.target.matches('.dropbtn1')) {
-  //     var dropdowns = document.getElementsByClassName("dropdown-content");
-  //     var i;
-  //     for (i = 0; i < dropdowns.length; i++) {
-  //       var openDropdown = dropdowns[i];
-  //       if (openDropdown.classList.contains('show')) {
-  //         openDropdown.classList.remove('show');
-  //       }
-  //     }
-  //   }
-  // }
-
 } 
 $(document).ready(function(){
   $('.dropbtn1').on('click',function(){
@@ -223,5 +211,15 @@ var mouse_is_inside = false;
 		$this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
 	}
 })
-	</script>
 
+  $('.search-icon').click(function(){
+      $('#my-searches').toggle();
+  });
+
+
+  $('.toggle-cart-sidenav').click(function(){
+      $('.add-to-cart-items').width(300);
+      $('.add-to-cart-items').height(300);
+      $('.add-to-cart-items').css({background: '#fff'});
+  }).addClass('clicked');
+</script>
