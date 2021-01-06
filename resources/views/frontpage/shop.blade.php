@@ -99,7 +99,7 @@
 	 </div>
 	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
 	  <div class="center_1_middle_left_1_inner">
-	   <div class="ih-item square effect6 from_top_and_bottom"><a href="shop-details.html">
+	   <div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
                       <div class="img"><img src="{{asset('asset/img/bread.jpg')}}" alt="img"></div>
                       <div class="info">
                         <h3>add to cart</h3>
@@ -113,7 +113,7 @@
 	 </div>
 	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
 	  <div class="center_1_middle_left_1_inner">
-	   <div class="ih-item square effect6 from_top_and_bottom"><a href="shop-details.html">
+	   <div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
                       <div class="img"><img src="{{asset('asset/img/chickenamor.jpg')}}" alt="img"></div>
                       <div class="info">
                         <h3>add to cart</h3>
@@ -129,7 +129,7 @@
 	  <div class="center_1_middle clearfix">
 	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
 	  <div class="center_1_middle_left_1_inner">
-	   <div class="ih-item square effect6 from_top_and_bottom"><a href="shop-details.html">
+	   <div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
                       <div class="img"><img src="{{asset('asset/img/delisyoso.jpg')}}" alt="img"></div>
                       <div class="info">
                         <h3>add to cart</h3>
@@ -143,7 +143,7 @@
 	 </div>
 	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
 	  <div class="center_1_middle_left_1_inner">
-	   <div class="ih-item square effect6 from_top_and_bottom"><a href="shop-details.html">
+	   <div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
                       <div class="img"><img src="{{asset('asset/img/pizza.jpg')}}" alt="img"></div>
                       <div class="info">
                         <h3>add to cart</h3>
@@ -157,7 +157,7 @@
 	 </div>
 	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
 	  <div class="center_1_middle_left_1_inner">
-	   <div class="ih-item square effect6 from_top_and_bottom"><a href="shop-details.html">
+	   <div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
                       <div class="img"><img src="{{asset('asset/img/porksteak.jpg')}}" alt="img"></div>
                       <div class="info">
                         <h3>add to cart</h3>
@@ -174,7 +174,7 @@
 	  <div class="center_1_middle clearfix">
 	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
 	  <div class="center_1_middle_left_1_inner">
-	   <div class="ih-item square effect6 from_top_and_bottom"><a href="shop-details.html">
+	   <div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
                       <div class="img"><img src="{{asset('asset/img/chickenamor.jpg')}}" alt="img"></div>
                       <div class="info">
                         <h3>add to cart</h3>
@@ -188,7 +188,7 @@
 	 </div>
      <div class="col-sm-4 center_1_middle_left_1 clearfix">
 	  <div class="center_1_middle_left_1_inner">
-	   <div class="ih-item square effect6 from_top_and_bottom"><a href="shop-details.html">
+	   <div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
                       <div class="img"><img src="{{asset('asset/img/delisyoso.jpg')}}" alt="img"></div>
                       <div class="info">
                         <h3>add to cart</h3>
@@ -202,7 +202,7 @@
 	 </div>
 	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
 	  <div class="center_1_middle_left_1_inner">
-	   <div class="ih-item square effect6 from_top_and_bottom"><a href="shop-details.html">
+	   <div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
                       <div class="img"><img src="{{asset('asset/img/porksteak.jpg')}}" alt="img"></div>
                       <div class="info">
                         <h3>add to cart</h3>

@@ -70,7 +70,7 @@
 				<span class="account-c ">
 					<img src="{{asset('images/user.png')}}" class="icons2">
 					<div class="dropdown-content">
-						<a href="{{asset('/login')}}">Login</a>
+						<a href="{{asset('/u-login')}}">Login</a>
 	   				 	<a href="{{asset('/register')}}">Register</a>
 	 				</div>
 				</span>
