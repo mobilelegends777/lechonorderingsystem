@@ -1,18 +1,29 @@
 <script>
 
 var myIndex = 0;
-carousel();
-
+carousel()
 function carousel() {
+  // var x = $('.myslides');
   var i;
   var x = document.getElementsByClassName("mySlides");
   for (i = 1; i < x.length; i++) {
-    x[i].style.display = "none";  
+    x[i].style.display = "none"; 
+    x[i].classList.remove("mystyle"); 
   }
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
+  x[myIndex-1].style.display = "block"; 
+  x[myIndex-1].classList.add("mystyle");
+  $('.mySlides').css({opacity:0.6}).animate({opacity:1});
+  $('.sales1').fadeIn()
+      .css({top:300,opacity: -5})
+      .delay( 1000 )
+      .animate({top:200,opacity: 1}, 1500, function() {
+          //callback
+      });
+
   setTimeout(carousel, 5000);
+
 }
 
 </script>
@@ -126,28 +137,24 @@ var btn = $('#Btop');
 		  $('html, body').animate({scrollTop:0}, '300');
 		});
 });
-$(document).ready(function(){
-  setInterval(function(){
-	  $('.sales1').toggle().fadeIn(2500);
-  }, 5000);
-});
+
 // end back to top
 
 // image resize on scroll
-$(window).scroll(function() {
-  var onScrollmargin = $(document).scrollTop();
-  var heightChanged = 850 - $(document).scrollTop();
-    $(".slider-conts").css( { marginLeft : onScrollmargin, marginRight : onScrollmargin } );
-    $('.slider-conts').height(heightChanged);
-    $('.slider-conts img').height(heightChanged);
-    
-});
 // $(window).scroll(function() {
+//   var onScrollmargin = $(document).scrollTop();
 //   var heightChanged = 850 - $(document).scrollTop();
-//     $(".slider-conts").height(heightChanged);
+//     $(".slider-conts").css( { marginLeft : onScrollmargin, marginRight : onScrollmargin } );
+//     $('.slider-conts').height(heightChanged);
 //     $('.slider-conts img').height(heightChanged);
-
+    
 // });
+$(window).scroll(function() {
+  var heightChanged = 850 - $(document).scrollTop();
+    $(".slider-conts").height(heightChanged);
+    $('.slider-conts img').height(heightChanged);
+
+});
 // end image resize on scroll
 </script>
 

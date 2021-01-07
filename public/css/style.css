@@ -377,6 +377,7 @@ span.product-title {
     position: absolute;
     top: 25%;
     left: 16%;
+    /*opacity: 1; animation-duration: 1500ms; animation-delay: 0ms;*/
 }
 
 .sales2 {
