@@ -88,8 +88,8 @@ $('.slider').slick({
 <script>
 
 
-
 $(document).ready(function(){
+  // footer
 	for (var i = 1;i<13;i++){
 		$('.image-cont').append(`
 			<div class="gallery-images">
@@ -104,11 +104,13 @@ $(document).ready(function(){
 			<li class="social-media-icons"><a href="#"><img src="{{asset('images/social${x}.png')}}"></a></li>
 		`);
 	}
-	setInterval(function(){
+setInterval(function(){
      $(".footer-tweet-time").toggle().slideDown();
     // $("#box1").toggle();
 },3000);
+// end footer
 
+// back to top 
 var btn = $('#Btop');
 
 		$(window).scroll(function() {
@@ -129,7 +131,7 @@ $(document).ready(function(){
 	  $('.sales1').toggle().fadeIn(2500);
   }, 5000);
 });
-
+// end back to top
 
 // image resize on scroll
 $(window).scroll(function() {
@@ -146,6 +148,7 @@ $(window).scroll(function() {
 //     $('.slider-conts img').height(heightChanged);
 
 // });
+// end image resize on scroll
 </script>
 
 
@@ -153,7 +156,8 @@ $(window).scroll(function() {
 
 
 
-<script type="text/javascript">
+<script type="text/javascript"> 
+// topnav show
   function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -163,6 +167,9 @@ $(window).scroll(function() {
         x.className = "topnav";
     }
 } 
+// end topnav show
+
+// mobile topnav dropdown
 $(document).ready(function(){
   $('.dropbtn1').on('click',function(){
       $('.seafoodDrp').toggle();
@@ -196,6 +203,7 @@ var mouse_is_inside = false;
         if(! mouse_is_inside) $('.meatDrp').hide();
     });
 });
+// end mobile topnav dropdown
 </script>
 
 <script type="text/javascript">
@@ -211,15 +219,33 @@ var mouse_is_inside = false;
 		$this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
 	}
 })
-
+// mobile search input
   $('.search-icon').click(function(){
       $('#my-searches').toggle();
   });
-
-
+// end search mobile
+//  add to cart sidenav
   $('.toggle-cart-sidenav').click(function(){
       $('.add-to-cart-items').width(300);
-      $('.add-to-cart-items').height(300);
+      $('.add-to-cart-items').height('auto');
       $('.add-to-cart-items').css({background: '#fff'});
-  }).addClass('clicked');
+      $('.cart-title').show();
+      $('.items-on-cart-container').show();
+  });
+
+  $('.toggle-cart-sidenav').hover(function(){ 
+        mouse_is_inside=true; 
+    }, function(){ 
+        mouse_is_inside=false; 
+    });
+
+    $("body").mouseup(function(){ 
+        if(! mouse_is_inside){ 
+          $('.add-to-cart-items').width(0);
+          $('.add-to-cart-items').height(0);
+          $('.cart-title').hide();
+          $('.items-on-cart-container').hide();
+        }
+    });
+//  end add to cart sidenav
 </script>
