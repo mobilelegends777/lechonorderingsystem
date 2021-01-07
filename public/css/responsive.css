@@ -1,4 +1,50 @@
 
+.topnav{ height : auto; transition: .2s ease-in;}
+.topnav  a { display: block; overflow: hidden;}
+.topnav:not(responsive)  a {max-height: 0;}
+.topnav.responsive  a {max-height: 600px;}
+.topnav.responsive {transition: .2s ease-in;}
+
+.topnav {
+    position: absolute;
+    z-index: 100;
+    width: 1349px;
+}
+
+.slider-conts img{
+  /*transition: 0.8s;*/
+  /*position: absolute;*/
+  /*top: 0%;*/
+  /*left: 50%;*/
+  /*max-width: 200%;*/
+  /*width: 100%;*/
+  /*transform: translateX(-50%);*/
+   /*Thanks  @bastian_fiessinger. Use when activating blur effect:
+  will-change: -webkit-filter, filter, transform; 
+*/}
+#my-searches{
+    /*position: absolute;*/
+    background-color: #2a2c2f;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    text-align: center;
+}
+#my-searches input {
+    height: 52px;
+    width: 502px;
+    border: solid #B89352;
+    background-color: #4a4b4d;
+}
+#my-searches button {
+    height: 58px;
+    border: solid #B89352;
+    background: #B89352;
+}
+div#my-searches {
+    height: auto;
+    padding: 36px 290px;
+}
 @media (max-width: 1400px){
 	/*.sub-menu .dropdown,.inputs {
 		display: none;
@@ -240,7 +286,8 @@
 	.search-icon img{
 		width: 39px;
 	    margin-right: 11px;
-	    height: 47px;
+	    height: 44px;
+	    cursor: pointer;
 	}
 	span.account-c {
     	left: 23px;
@@ -256,7 +303,7 @@
 	}
 	.topnav {
 		background-color: #2a2c2f;
-		width: 100%;
+		/*width: 100%;*/
 		display: flex;
 	}
 	.topnav a {
