@@ -110,3 +110,12 @@
 				<input type="text" name=""><button>Search</button>
 		</div>
 		
+		<div class="toggle-cart-sidenav">
+		<div class="cart">
+			<img src="{{ asset('images/sidenav-cart.png') }}">
+		</div>
+		<div class="add-to-cart-items">
+			<div>
+			</div>
+		</div>
+	</div>

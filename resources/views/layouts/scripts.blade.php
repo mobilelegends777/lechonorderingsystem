@@ -131,7 +131,7 @@ $(document).ready(function(){
 });
 
 
-
+// image resize on scroll
 $(window).scroll(function() {
   var onScrollmargin = $(document).scrollTop();
   var heightChanged = 850 - $(document).scrollTop();
