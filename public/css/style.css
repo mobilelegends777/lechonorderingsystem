@@ -15,6 +15,7 @@ a {
     display: none;
 }
 .headmenu {
+  /*width: 100%;*/
 	/*border: 1px solid black;*/
 	padding: 34px;
 	background-color: #2a2c2f;
@@ -376,6 +377,7 @@ span.product-title {
     position: absolute;
     top: 25%;
     left: 16%;
+    /*opacity: 1; animation-duration: 1500ms; animation-delay: 0ms;*/
 }
 
 .sales2 {
@@ -641,7 +643,7 @@ span.sp {
 }
 #Btop:hover {
   cursor: pointer;
-  background-color: #333;
+  background-color: #b28b19;
 }
 #Btop:active {
   background-color: #555;
@@ -807,12 +809,14 @@ span.sp {
 .toggle-cart-sidenav {
     position: fixed;
     z-index: 100;
-    top: 400px;
+    top: 188px;
     right: 0;
     background-color:  #b258078f;
     border-bottom-left-radius: 35px;
     border-top-left-radius: 32px;
-    cursor: pointer;
+}
+.toggle-cart-sidenav:hover {
+    background-color: #b25807;
 }
 .toggle-cart-sidenav img{
     width: 80px;
@@ -820,3 +824,62 @@ span.sp {
     padding: 10px;
 
 }
+.cart {
+  display: flex;
+  cursor: pointer;
+}
+span.cart-title {
+    color: #fff;
+    font-size: 34px;
+    padding: 24px 0px;
+    width: 100%;
+    text-align: center;
+}
+.items-on-cart-container {
+    padding: 19px;
+}
+.item-on-cart .carted-item {
+    margin: 10px;
+}
+.carted-item {
+    display: inline-grid;
+}
+.carted-item-cont {
+    display: flex;
+    justify-content: space-between;
+}
+.carted-item .item-name {
+    color: #C4A265;
+    cursor: pointer;
+}
+.carted-item .item-name:hover {
+    color: black;
+}
+.check-out-sidbar button {
+    color:#fff;
+    background: #C4A265;
+    border: solid #C4A265;
+    border-radius: 5px;
+    padding: 10px 50px;
+}
+.view-cart-sidebar button {
+    border: solid #C4A265;
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px 50px;
+}
+.check-out-sidbar, .view-cart-sidebar {
+    text-align: center;
+    padding: 5px;
+    height: 50px;
+}
+.item-on-cart {
+    overflow: auto;
+    height: 300px;
+}
+/*.add-to-cart-items {*/
+ /*   border-left: solid #7d35069e 5px;
+}
+.add-to-cart-items:hover {
+    border-left: solid #b25807 5px;
+}*/
