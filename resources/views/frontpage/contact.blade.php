@@ -1,4 +1,4 @@
-panel-heading<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -11,7 +11,6 @@ panel-heading<!DOCTYPE html>
 	 <link href="https://fonts.googleapis.com/css?family=Spirax" rel="stylesheet">
 	 <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Londrina+Outline" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Londrina+Outline|Yanone+Kaffeesatz" rel="stylesheet">
-
     <script src="{{asset('asset/js/jquery-2.1.1.min.js')}}"></script>
 	<script src="{{asset('asset/js/bootstrap.min.js')}}"></script>
 	

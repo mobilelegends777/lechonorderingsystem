@@ -29,6 +29,22 @@
                                 @enderror
                             </div>
                         </div>
+
+                        
+                        <div class="form-group row">
+                            <label for="utype" class="col-md-4 col-form-label text-md-right">{{ __('utype') }}</label>
+
+                            <div class="col-md-6">
+                                
+                                <input id="utype" type="text" class="form-control @error('utype') is-invalid @enderror" name="utype" value="{{ __('user') }}" required autocomplete="utype" readonly="readonly">
+
+                                @error('utype')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
                         
 
                         <div class="form-group row">

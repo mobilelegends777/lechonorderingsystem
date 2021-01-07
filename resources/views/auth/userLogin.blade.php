@@ -12,12 +12,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="{{asset('asset/css/style_asset.css')}}">
     <title>Login</title>
 </head>
 <body>
     <div id="logreg-forms">
-    <form class="form-signin" method="POST" action="{{ route('login') }}">
+    <form class="form-signin" method="POST" action="{{ route('login.custom') }}">
                         @csrf
             <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
             <div class="social-login">
@@ -65,13 +65,13 @@
                 
                 <p style="text-align:center">OR</p>
 
-                <input id="user_type" type="text" class="form-control @error('user_type') is-invalid @enderror" name="user_type" value="{{ old('user_type') }}" required autocomplete="user_type" autofocus>
+                <input id="utype" type="text" class="form-control @error('utype') is-invalid @enderror" name="utype" value="{{ __('User') }}" required autocomplete="utype" readonly="readonly">
 
-                                @error('user_type')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                        @error('utype')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
 
             
                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Full name" required="" autofocus="">
@@ -80,6 +80,10 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+
+                  
+            
+
                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email address" required autofocus="">
                 @error('email')
                                     <span class="invalid-feedback" role="alert">

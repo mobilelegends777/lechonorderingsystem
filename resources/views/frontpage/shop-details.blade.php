@@ -78,13 +78,14 @@
 	 <div class="shop_right_inner_2 clearfix">
 	    <div class="col-sm-3 details_2_right_inner_2_left clearfix">
 		 <div class="details_2_right_inner_2_left_inner">
-		  <div class="input-group spinner">
-    <input type="text" class="form-control form-control_down" value="1" min="0" max="5">
-    <div class="input-group-btn-vertical">
-      <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-      <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-    </div>
-  </div>
+		 <div class="input-group number-spinner">
+				<span class="input-group-btn">
+					<button class="btn btn-default" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+				</span>
+				<input type="text" class="form-control text-center" value="1">
+				<span class="input-group-btn">
+					<button class="btn btn-default" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+				</span>			</div>
 		 </div>
 		</div>
 		<div class="col-sm-2 details_2_right_inner_2_middle clearfix">
@@ -94,7 +95,7 @@
 		</div>
 		<div class="col-sm-5 details_2_right_inner_2_right clearfix">
 		 <div class="shopper_2">
-		  <p><a href="#">Place Order</a></p>
+		  <p><a href="{{asset('frontpage/cartpage')}}">Place Order</a></p>
 		 </div>
 		</div>
 	  </div>
@@ -113,7 +114,7 @@
 			</div>
 			<h3 data-prefix="★">Review (1)</h3>
 			<div>
-				<p class="voter">1 review for dapibus Arcu</p>
+				<p class="voter">1 review for Chicken Manok</p>
 				<div class="ziehharmonika_bottom clearfix">
 				 <div class="col-sm-2 article_2_left clearfix">
 	    <div class="article_2_left_inner">
@@ -123,8 +124,8 @@
 	   <div class="col-sm-10 article_2_right clearfix">
 	    <div class="article_2_right_inner">
 		 <h2><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h2>
-		 <h4>Emily – <span class="dating_1">March 16, 2018</span></h4>
-		  <h5>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos C. Curabitursodales ligula in libero. Sed dignissim lacinia nunc sem at nibh elementum imperdiet.</h5>
+		 <h4>Emily – <span class="dating_1">March 16, 2020</span></h4>
+		  <h5>Good Quality! Nice Customer Service.</h5>
 		</div>
 	   </div>
 				</div>
@@ -221,7 +222,7 @@
  
 
 
-<script src="js/ziehharmonika.js"></script>
+<script src="{{asset('asset/js/ziehharmonika.js')}}"></script>
 <script>
 $(document).ready(function() {
 		$('.ziehharmonika').ziehharmonika({

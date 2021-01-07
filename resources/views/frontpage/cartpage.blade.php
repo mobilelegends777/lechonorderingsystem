@@ -1,68 +1,145 @@
-<div class="fixed-plugin">
-    <div class="dropdown show-dropdown">
-      <a href="#" data-toggle="dropdown">
-        <i class="fa fa-cog fa-2x"> </i>
-      </a>
-      <ul class="dropdown-menu">
-        <li class="header-title"> Sidebar Filters</li>
-        <li class="adjustments-line">
-          <a href="javascript:void(0)" class="switch-trigger active-color">
-            <div class="badge-colors ml-auto mr-auto">
-              <span class="badge filter badge-purple" data-color="purple"></span>
-              <span class="badge filter badge-azure" data-color="azure"></span>
-              <span class="badge filter badge-green" data-color="green"></span>
-              <span class="badge filter badge-warning" data-color="orange"></span>
-              <span class="badge filter badge-danger" data-color="danger"></span>
-              <span class="badge filter badge-rose active" data-color="rose"></span>
-            </div>
-            <div class="clearfix"></div>
-          </a>
-        </li>
-        <li class="header-title">Images</li>
-        <li class="active">
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-1.jpg" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-2.jpg" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-3.jpg" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-4.jpg" alt="">
-          </a>
-        </li>
-        <li class="button-container">
-          <a href="https://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-primary btn-block">Free Download</a>
-        </li>
-        <!-- <li class="header-title">Want more components?</li>
-            <li class="button-container">
-                <a href="https://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-warning btn-block">
-                  Get the pro version
-                </a>
-            </li> -->
-        <li class="button-container">
-          <a href="https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html" target="_blank" class="btn btn-default btn-block">
-            View Documentation
-          </a>
-        </li>
-        <li class="button-container github-star">
-          <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
-        </li>
-        <li class="header-title">Thank you for 95 shares!</li>
-        <li class="button-container text-center">
-          <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45</button>
-          <button id="facebook" class="btn btn-round btn-facebook"><i class="fa fa-facebook-f"></i> &middot; 50</button>
-          <br>
-          <br>
-        </li>
-      </ul>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shop Cart</title>
+	<link href="{{asset('asset/css/bootstrap.min.css')}}" rel="stylesheet">
+	<link href="{{asset('css/global.css')}}" rel="stylesheet">
+	<link href="{{asset('css/cart.css')}}" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{asset('asset/css/font-awesome.min.css')}}" />
+	<link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Farro&display=swap" rel="stylesheet">
+  <script src="{{asset('asset/js/jquery-2.1.1.min.js')}}"></script>
+	<script src="{{asset('asset/js/bootstrap.min.js')}}"></script>
+  </head>
+  @include('layouts.csslinks')
+<body>
+
+@include('headpage.header')
+	
+<section id="center" class="clearfix cart">
+ <div class="container">
+  <div class="row">
+    <div class="cart_1 clearfix">
+	 <div class="col-sm-12">
+	  <p class="mgt"><a href="#">Home</a> / <a href="#">Shopping Cart</a></p>
+	 </div>
+	</div>
+	<div class="cart_2 clearfix">
+	 <div class="col-sm-6">
+	  <h3 class="bold col_1">MY CART</h3>
+	 </div>
+	 <div class="col-sm-6">
+      <h5 class="text-right"><a href="#">Continue Shopping</a></h5>
+	 </div>
+	</div>
+	<div class="cart_3 clearfix">
+	 <div class="col-sm-8">
+	  <div class="cart_3l clearfix">
+	   <h5 class="mgt">PRODUCT</h5>
+	  </div>
+	  <div class="cart_3l1 clearfix">
+	   <div class="col-sm-3 space_left">
+	    <div class="cart_3l1i clearfix">
+		 <a href="#"><img src="{{asset('asset/img/chickenamor.jpg')}}" alt="abc" class="iw"></a>		</div>
+	   </div>
+	   <div class="col-sm-9">
+	    <div class="cart_3l1i1 clearfix">
+		 <h5 class="mgt"><a href="#">Chicken na Manok</a></h5>
+		 <h4>Php 175.00</h4>
+		 <h5>Quantity</h5>
+		</div>
+		<div class="cart_3l1i2 clearfix">
+         <div class="input-group number-spinner">
+				<span class="input-group-btn">
+					<button class="btn btn-default" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+				</span>
+				<input type="text" class="form-control text-center" value="1">
+				<span class="input-group-btn">
+					<button class="btn btn-default" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+				</span>			</div>
+		 <h6 class="mgt"><a class="button_1 mgt" href="#">REMOVE</a></h6>
+         <h6 class="mgt"><a class="button mgt" href="#">UPDATE CART</a></h6>
+		</div>
+	   </div>
+	  </div>
+	  <div class="cart_3l1 clearfix">
+	   <div class="col-sm-3 space_left">
+	    <div class="cart_3l1i clearfix">
+		 <a href="#"><img src="{{asset('asset/img/delisyoso.jpg')}}" alt="abc" class="iw"></a>		</div>
+	   </div>
+	   <div class="col-sm-9">
+	    <div class="cart_3l1i1 clearfix">
+		 <h5 class="mgt"><a href="#">Lechon Pork</a></h5>
+		
+		 <h4>Php 175.00</h4>
+		 <h5>Quantity</h5>
+		</div>
+		<div class="cart_3l1i2 clearfix">
+         <div class="input-group number-spinner">
+				<span class="input-group-btn">
+					<button class="btn btn-default" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+				</span>
+				<input type="text" class="form-control text-center" value="1">
+				<span class="input-group-btn">
+					<button class="btn btn-default" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+				</span>			</div>
+		 <h6 class="mgt"><a class="button_1 mgt" href="#">REMOVE</a></h6>
+         <h6 class="mgt"><a class="button mgt" href="#">UPDATE CART</a></h6>
+		</div>
+	   </div>
+	  </div>
+	  <div class="cart_3l1 border_none clearfix">
+	   <div class="col-sm-3 space_left">
+	    <div class="cart_3l1i clearfix">
+		 <a href="#"><img src="{{asset('asset/img/pizza.jpg')}}" alt="abc" class="iw"></a>		</div>
+	   </div>
+	   <div class="col-sm-9">
+	    <div class="cart_3l1i1 clearfix">
+		 <h5 class="mgt"><a href="#">Small Pizza</a></h5>
+		 <h4>Php 175.00</h4>
+		 <h5>Quantity</h5>
+		</div>
+		<div class="cart_3l1i2 clearfix">
+         <div class="input-group number-spinner">
+				<span class="input-group-btn">
+					<button class="btn btn-default" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+				</span>
+				<input type="text" class="form-control text-center" value="1">
+				<span class="input-group-btn">
+					<button class="btn btn-default" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+				</span>			</div>
+		 <h6 class="mgt"><a class="button_1 mgt" href="#">REMOVE</a></h6>
+         <h6 class="mgt"><a class="button mgt" href="#">UPDATE CART</a></h6>
+		</div>
+	   </div>
+	  </div>
+	 </div>
+	 <div class="col-sm-4">
+	  <div class="cart_3r clearfix">
+	   <h5 class="mgt head_1">SUBTOTAL</h5>
+	   <h3 class="text-center">Php 525.00</h3>
+	   <hr>
+	   <h6>Additional comments</h6>
+	   <textarea class="form-control"></textarea>
+	   <h5 class="text-center"><a class="button" href="checkout.html">PROCEED TO CHECKOUT</a></h5><br>
+	  
+	   <hr>
+	  </div>
+
+	 </div>
+	</div>
   </div>
+ </div>	 
+</section>
+ 
+@include('headpage.footer')
+@include('layouts.scripts')
+	
+
+
+</body>
+ 
+</html>

@@ -6,8 +6,10 @@
             </a>
 		</span>
 		<div class="company-title">
+		<a href="/">
 			<span class="des1">MJ Lechon</span>
 			<div class="des2">Fresh Lechon</div>
+			</a>
 		</div>
 	</div>
 		<span class="sub-menu">
@@ -64,14 +66,17 @@
 				<img src="{{asset('images/search-icon.png')}}">
 			</span>
 			<span class="add-to">
+			<a href="{{asset('frontpage/cartpage')}}">
 				<img src="{{asset('images/cart.png')}}" class="icons3" title="Your Cart">
+				</a>
 			</span>
 			<div class="dropdown">
 				<span class="account-c ">
-					<img src="{{asset('images/user.png')}}" class="icons2">
+					<img src="{{asset('images/user.png')}}" class="icons2">				
+			
 					<div class="dropdown-content">
 						<a href="{{asset('/u-login')}}">Login</a>
-	   				 	<a href="{{asset('/register')}}">Register</a>
+	   				 	<a href="{{asset('/u-login')}}">Register</a>
 	 				</div>
 				</span>
 			</div>
@@ -112,7 +117,9 @@
 		
 		<div class="toggle-cart-sidenav">
 		<div class="cart">
+		
 			<img src="{{ asset('images/sidenav-cart.png') }}">
+	
 		</div>
 		<div class="add-to-cart-items">
 			<div>

@@ -23,7 +23,10 @@ class adminBoardController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
+
     {
+       
+        
         return view('/adminpages/admindashboard');
     }
 }
