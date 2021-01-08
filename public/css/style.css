@@ -837,6 +837,7 @@ span.cart-title {
 }
 .items-on-cart-container {
     padding: 19px;
+    font-family: "Blatant", sans-serif;
 }
 .item-on-cart .carted-item {
     margin: 10px;
@@ -860,13 +861,15 @@ span.cart-title {
     background: #C4A265;
     border: solid #C4A265;
     border-radius: 5px;
-    padding: 10px 50px;
+    padding: 14px 100px;
+    cursor: pointer;
 }
 .view-cart-sidebar button {
     border: solid #C4A265;
-    background: #fff;
+    background: #dedcdc;
     border-radius: 5px;
-    padding: 10px 50px;
+    padding: 14px 100px;
+    cursor: pointer;
 }
 .check-out-sidbar, .view-cart-sidebar {
     text-align: center;
@@ -876,6 +879,13 @@ span.cart-title {
 .item-on-cart {
     overflow: auto;
     height: 300px;
+}
+.check-out-sidbar button:hover {
+    background: #b28b19;
+}
+.view-cart-sidebar button:hover {
+    color: #fff;
+    background: #b28b19;
 }
 /*.add-to-cart-items {*/
  /*   border-left: solid #7d35069e 5px;

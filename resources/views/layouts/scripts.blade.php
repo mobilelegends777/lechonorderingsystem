@@ -233,9 +233,9 @@ var mouse_is_inside = false;
 // end search mobile
 //  add to cart sidenav
   $('.toggle-cart-sidenav').click(function(){
-      $('.add-to-cart-items').width(300);
+      $('.add-to-cart-items').width(400);
       $('.add-to-cart-items').height('auto');
-      $('.add-to-cart-items').css({background: '#fff'});
+      $('.add-to-cart-items').css({background: '#dedcdc'});
       $('.cart-title').show();
       $('.items-on-cart-container').show();
   });
