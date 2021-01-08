@@ -13,12 +13,57 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+
+Route::get('/admin-login', function(){
+
+        return view('adminpages/adminLogin');
+
 });
+
+
+
+//Start of user login
+Route::get('/u-login', function(){
+
+    return view('auth/userLogin');
+
+});
+
+Route::post('/u-login', [ 'as' => 'u-login', 'uses' => 'userLoginController@do']);
+
 
 Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/', 'userLoginController@index');
 Route::get('/adminpages/admindashboard', 'adminBoardController@index')->name('admindashboard');
-Route::get('/frontpages/shop', 'shopController@index')->name('shop');
+Route::get('/frontpage/shop', 'shopController@index')->name('shop');
+Route::get('/frontpage/contact', 'contactController@index')->name('contact');
+Route::get('/frontpage/shop-details', 'shopdetailsController@index')->name('shop-details');
+Route::get('/frontpage/cartpage', 'cartController@index')->name('cartpage');
+Route::get('/frontpage/myprofile', 'myprofileController@index')->name('myprofile');
+
+Route::post('/home','userLoginController@login' )->name('test222');
+// Route::post('/custom', [
+
+// 'uses' => 'userLoginController@login',
+// 'as' =>'login.custom'
+// ]);
+
+// Route::group(['middleware' => 'auth'], function(){
+
+//     Route::get('/', function(){
+
+//         return view('index');
+
+//     })->name('index');
+
+//     Route::get('/u-login', function(){
+
+//         return view('auth/userLogin');
+
+//     })->name('u-login');
+
+
+// });
