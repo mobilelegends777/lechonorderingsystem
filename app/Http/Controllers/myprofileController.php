@@ -7,10 +7,21 @@ use Illuminate\Http\Request;
 class myprofileController extends Controller
 {
     
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
+    
     public function index()
     {
-        return view('frontpage/myprofile');
+
+
+
+       $data = [
+            "utype" => "notlogin"
+        ];
+        return view('frontpage/myprofile', compact('data'));
     }
 
 

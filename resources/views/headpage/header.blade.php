@@ -1,3 +1,4 @@
+
 <div class="headmenu">
 	<div class="company-logo">
 		<span class="des-logo">
@@ -73,11 +74,22 @@
 			<div class="dropdown">
 				<span class="account-c ">
 					<img src="{{asset('images/user.png')}}" class="icons2">				
-			
-					<div class="dropdown-content">
-						<a href="{{asset('/u-login')}}">Login</a>
-	   				 	<a href="{{asset('/u-login')}}">Register</a>
-	 				</div>
+						@if($data["utype"] == "User")
+							<div class="dropdown-content">
+								<a href="{{asset('/frontpage/myprofile')}}">Account</a>
+								<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}</a>
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+							</div>
+						@else
+							<div class="dropdown-content">
+								<a href="{{asset('/u-login')}}">Login</a>
+								<a href="{{asset('/u-login')}}">Register</a>
+							</div>
+						@endif
 				</span>
 			</div>
 		</div>

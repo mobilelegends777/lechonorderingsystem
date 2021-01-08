@@ -29,13 +29,13 @@ Route::get('/u-login', function(){
 
 });
 
-Route::post('u-login', [ 'as' => 'u-login', 'uses' => 'LoginController@do']); //user login alias
+// Route::post('u-login', [ 'as' => 'u-login', 'uses' => 'LoginController@do']); //user login alias
 //End of user login
 
 
- Route::get('/', function () {
-   return view('index'); 
-});
+//  Route::get('/', function () {
+//    return view('index'); 
+// });
 
 
 
@@ -43,7 +43,7 @@ Auth::routes();
 
 
 
-// Route::get('/', 'userLoginController@login');
+Route::get('/', 'userLoginController@index');
 Route::get('/adminpages/admindashboard', 'adminBoardController@index')->name('admindashboard');
 Route::get('/frontpage/shop', 'shopController@index')->name('shop');
 Route::get('/frontpage/contact', 'contactController@index')->name('contact');
@@ -51,13 +51,12 @@ Route::get('/frontpage/shop-details', 'shopdetailsController@index')->name('shop
 Route::get('/frontpage/cartpage', 'cartController@index')->name('cartpage');
 Route::get('/frontpage/myprofile', 'myprofileController@index')->name('myprofile');
 
-Route::post('/custom', [
+Route::post('/homepage','userLoginController@login' )->name('test222');
+// Route::post('/custom', [
 
-'uses' => 'userLoginController@login',
-'as' =>'login.custom'
-
-
-]);
+// 'uses' => 'userLoginController@login',
+// 'as' =>'login.custom'
+// ]);
 
 // Route::group(['middleware' => 'auth'], function(){
 
