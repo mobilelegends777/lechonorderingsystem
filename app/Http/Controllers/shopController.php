@@ -8,6 +8,11 @@ class shopController extends Controller
 {
     public function index()
     {
-        return view('shop');
+
+    	 $data = [
+            "utype" => "notlogin"
+        ];
+        return view('frontpage/shop', compact('data'));
+        
     }
 }
