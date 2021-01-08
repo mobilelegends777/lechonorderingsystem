@@ -1,3 +1,4 @@
+
 <div class="headmenu">
 	<div class="company-logo">
 		<span class="des-logo">
@@ -73,11 +74,23 @@
 			<div class="dropdown">
 				<span class="account-c ">
 					<img src="{{asset('images/user.png')}}" class="icons2">				
-			
-					<div class="dropdown-content">
-						<a href="{{asset('/u-login')}}">Login</a>
-	   				 	<a href="{{asset('/u-login')}}">Register</a>
-	 				</div>
+						@if($data["utype"] == "User")
+							<div class="dropdown-content">
+								<a href="{{asset('/frontpage/myprofile')}}">Account</a>
+								<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}</a>
+                  				<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+							</div>
+						@else
+						
+							<div class="dropdown-content">
+								<a href="{{asset('/u-login')}}">Login</a>
+								<a href="{{asset('/u-login')}}">Register</a>
+							</div>
+							@endif
 				</span>
 			</div>
 		</div>
@@ -194,3 +207,89 @@
 			</div>
 		</div>
 	</div>
+
+
+	<script>
+    var url = window.location.origin;
+    var cur_url = window.location.href;
+	$(document).ready(function(){
+  
+    $.ajax({
+        headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+        type:'POST',
+        url: url+'/homepage',
+        data : {data:''}, 
+        success:function(data){
+            if(data.status == 'online'){
+                isLogin();
+                loggedIn();
+            }
+            if(data.status == 'offline'){
+                notLogin();
+                notIn();
+            }
+        } 
+    });
+function notLogin(){
+    $('.dropdown-content').empty();
+    $('.dropdown-content').append(`
+								<a href="{{asset('/u-login')}}">Login</a>
+								<a href="{{asset('/u-login')}}">Register</a>
+    `);
+    $('#ajax_login').click(function(){
+        var username = $('#email').val()
+        var password = $('#password').val()
+        $.ajax({
+            headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+            type:'POST',
+            url: url+'/u-login',
+            data : {username:username, password:password}, 
+            success:function(data){
+                if(data.error){
+                    $('.dropdown-content').append(`
+
+					<a href="{{asset('/frontpage/myprofile')}}">Account</a>
+								<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}</a>
+                  				<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                            
+                        `);
+                }
+                if(data.success){
+                    // alert(url);
+                    if(window.location.href != url+'/'){
+                        document.location.reload(false);
+                    }else{
+                    isLogin(data.email);
+                    displayCurrentPage();
+                    }
+                }
+            } 
+        });
+    })
+}
+
+
+
+// display_pages
+
+// function displayCurrentPage(){
+//     $.ajax({
+//         headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+//         type:'GET',
+//         url: cur_url,
+//         data : {data:''}, 
+//         success:function(data){
+//             console.log(data)
+//         } 
+//     });
+// }
+
+})
+	
+	
+	
+	</script>

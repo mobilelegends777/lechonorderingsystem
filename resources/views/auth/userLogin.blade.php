@@ -17,8 +17,8 @@
 </head>
 <body>
     <div id="logreg-forms">
-    <form class="form-signin" method="POST" action="{{ route('login.custom') }}">
-                        @csrf
+    <form class="form-signin" method="POST" action="{{ route('test222') }}">
+    @csrf
             <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
             <div class="social-login">
                 <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span> </button>
