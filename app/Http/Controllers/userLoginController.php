@@ -19,7 +19,9 @@ class userLoginController extends Controller
     }
     public function login(Request $request){
 
-       
+    //    $data = $request->input();
+    //    $request->session()->put('email', $data['email']);
+      
         
 
         if(Auth::attempt([
@@ -29,12 +31,13 @@ class userLoginController extends Controller
         {
             
             $user= user::where('email', $request->email)->first();
+          
             $data = [
                 "userid" => $user->id,
                 "name" => $user->name,
                 "utype" => $user->utype
             ];
-           
+        
             if($user->utype=='User')
 
             {   

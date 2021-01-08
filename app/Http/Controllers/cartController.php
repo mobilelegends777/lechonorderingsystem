@@ -22,6 +22,12 @@ class cartController extends Controller
 
     public function index()
     {
-        return view('frontpage/cartpage');
+
+
+         $data = [
+            "utype" => "notlogin"
+        ];
+        return view('frontpage/cartpage', compact('data'));
+        
     }
 }

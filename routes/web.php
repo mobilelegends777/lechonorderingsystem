@@ -29,14 +29,7 @@ Route::get('/u-login', function(){
 
 });
 
-// Route::post('u-login', [ 'as' => 'u-login', 'uses' => 'LoginController@do']); //user login alias
-//End of user login
-
-
-//  Route::get('/', function () {
-//    return view('index'); 
-// });
-
+Route::post('/u-login', [ 'as' => 'u-login', 'uses' => 'userLoginController@do']);
 
 
 Auth::routes();
@@ -51,7 +44,7 @@ Route::get('/frontpage/shop-details', 'shopdetailsController@index')->name('shop
 Route::get('/frontpage/cartpage', 'cartController@index')->name('cartpage');
 Route::get('/frontpage/myprofile', 'myprofileController@index')->name('myprofile');
 
-Route::post('/homepage','userLoginController@login' )->name('test222');
+Route::post('/home','userLoginController@login' )->name('test222');
 // Route::post('/custom', [
 
 // 'uses' => 'userLoginController@login',

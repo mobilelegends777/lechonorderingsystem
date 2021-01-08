@@ -8,6 +8,13 @@ class contactController extends Controller
 {
     public function index()
     {
-        return view('frontpage/contact');
+       
+
+    	  $data = [
+            "utype" => "notlogin"
+        ];
+        return view('frontpage/contact', compact('data'));
+
+       
     }
 }
