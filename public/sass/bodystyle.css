@@ -21,12 +21,10 @@
 
 .f-icon img {
   width: 75px;
-  margin: 50px;
 }
 
 .f-icon {
-  display: -ms-grid;
-  display: grid;
+  display: flex;
   height: 172px;
   margin: 13px 54px;
   width: 250px;

@@ -5,7 +5,7 @@
     width: 80%;
     overflow: hidden;
     margin: 0 10%;
-    position: absolute;
+    /*position: absolute;*/
     height: 400px;
 }
 ul.slick-dots {
@@ -24,11 +24,12 @@ button.slick-next.slick-arrow {
 }
 /* the slides */
 .slick-slide {
-margin: 0 27px;
+    margin: 0 27px;
+    width: 100% !important;
 }
 /* the parent */
 .slick-list {
-margin: 0 -27px;
+    margin: 0 -27px;
 }
 /*.slick-dots li img:nth-child(1) {
     display: block;

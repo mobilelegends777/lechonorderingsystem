@@ -57,98 +57,98 @@
 		</div>
 		<div class="sub-container">
 			<div class="bsp">Best Selling Products</div>
-			<div class="items slider">
-				<div class="box slide">
-					<div class="item-image">
-						<div class="prod-image">
-							<img src="images/siomai.jpg">
+					<div class="items slider">
+						<div class="box slide">
+							<div class="item-image">
+								<div class="prod-image">
+									<img src="images/siomai.jpg">
+								</div>
+								<div class="cart-icon" >
+									<a href="#"><img src="images/cart1.png"></a>
+								</div>
+							</div>
+							<div class="item-details">
+								<div class="item-name">
+									<a href="#"><span class="product-name">Siomai sa Tisa</span></a>
+								</div>
+								<div class="price-tag">
+									<span class="prices">₱150.00</span>
+								</div>
+							</div>
 						</div>
-						<div class="cart-icon" >
-							<a href="#"><img src="images/cart1.png"></a>
+						<div class="box slide">
+							<div class="item-image">
+								<div class="prod-image">
+									<img src="images/pizza.jpg">
+								</div>
+								<div class="cart-icon" >
+									<a href="#"><img src="images/cart1.png"></a>
+								</div>
+							</div>
+							<div class="item-details">
+								<div class="item-name">
+									<a href="#"><span class="product-name">Pepperoni Pizza</span></a>
+								</div>
+								<div class="price-tag">
+									<span class="prices">₱250.00</span>
+								</div>
+							</div>
+						</div>
+						<div class="box slide">
+							<div class="item-image">
+								<div class="prod-image">
+									<img src="images/bread.jpg">
+								</div>
+								<div class="cart-icon" >
+									<a href="#"><img src="images/cart1.png"></a>
+								</div>
+							</div>
+							<div class="item-details">
+								<div class="item-name">
+									<a href="#"><span class="product-name">Breads Overload</span></a>
+								</div>
+								<div class="price-tag">
+									<span class="prices">₱10.00</span>
+								</div>
+							</div>
+						</div>
+						<div class="box slide">
+							<div class="item-image">
+								<div class="prod-image">
+									<img src="images/delisyoso.jpg">
+								</div>
+								<div class="cart-icon" >
+									<a href="#"><img src="images/cart1.png"></a>
+								</div>
+							</div>
+							<div class="item-details">
+								<div class="item-name">
+									<a href="#"><span class="product-name">Eat All You Can</span></a>
+								</div>
+								<div class="price-tag">
+									<span class="prices">₱300.00</span>
+								</div>
+							</div>
+						</div>
+						<div class="box slide">
+							<div class="item-image">
+								<div class="prod-image">
+									<img src="images/siomai.jpg">
+								</div>
+								<div class="cart-icon" >
+									<a href="#"><img src="images/cart1.png"></a>
+								</div>
+							</div>
+							<div class="item-details">
+								<div class="item-name">
+									<a href="#"><span class="product-name">Siomai sa Tisa</span></a>
+								</div>
+								<div class="price-tag">
+									<span class="prices">₱150.00</span>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="item-details">
-						<div class="item-name">
-							<a href="#"><span class="product-name">Siomai sa Tisa</span></a>
-						</div>
-						<div class="price-tag">
-							<span class="prices">₱150.00</span>
-						</div>
-					</div>
-				</div>
-				<div class="box slide">
-					<div class="item-image">
-						<div class="prod-image">
-							<img src="images/pizza.jpg">
-						</div>
-						<div class="cart-icon" >
-							<a href="#"><img src="images/cart1.png"></a>
-						</div>
-					</div>
-					<div class="item-details">
-						<div class="item-name">
-							<a href="#"><span class="product-name">Pepperoni Pizza</span></a>
-						</div>
-						<div class="price-tag">
-							<span class="prices">₱250.00</span>
-						</div>
-					</div>
-				</div>
-				<div class="box slide">
-					<div class="item-image">
-						<div class="prod-image">
-							<img src="images/bread.jpg">
-						</div>
-						<div class="cart-icon" >
-							<a href="#"><img src="images/cart1.png"></a>
-						</div>
-					</div>
-					<div class="item-details">
-						<div class="item-name">
-							<a href="#"><span class="product-name">Breads Overload</span></a>
-						</div>
-						<div class="price-tag">
-							<span class="prices">₱10.00</span>
-						</div>
-					</div>
-				</div>
-				<div class="box slide">
-					<div class="item-image">
-						<div class="prod-image">
-							<img src="images/delisyoso.jpg">
-						</div>
-						<div class="cart-icon" >
-							<a href="#"><img src="images/cart1.png"></a>
-						</div>
-					</div>
-					<div class="item-details">
-						<div class="item-name">
-							<a href="#"><span class="product-name">Eat All You Can</span></a>
-						</div>
-						<div class="price-tag">
-							<span class="prices">₱300.00</span>
-						</div>
-					</div>
-				</div>
-				<div class="box slide">
-					<div class="item-image">
-						<div class="prod-image">
-							<img src="images/siomai.jpg">
-						</div>
-						<div class="cart-icon" >
-							<a href="#"><img src="images/cart1.png"></a>
-						</div>
-					</div>
-					<div class="item-details">
-						<div class="item-name">
-							<a href="#"><span class="product-name">Siomai sa Tisa</span></a>
-						</div>
-						<div class="price-tag">
-							<span class="prices">₱150.00</span>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 
 		<div class="sub-container2">
@@ -241,61 +241,61 @@
 			</div>
 		</div>
 		<div class="sub-container3">
-			<div class="container quality-cont">
+			<div class="quality-cont">
 				<img src="{{asset('images/bg-image-1.jpg')}} " >
 				<div class="centered">Quality Food Ingredients</div>
 			</div>
-		
-		</div >
-		
+		</div>
 		<div class="sub-container4">
 			<div class="page-wrapper">
 				<div class="f-icon">
-					<a href="#">
-						<img class ="icon1" src="{{asset('images/wine.svg')}} " >
-					</a>
-						<span><strong>Food & Drinks</strong></span>
-						<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
-						<button class="buttoncat">See Menu</button>
+					<div class="qual-icon-cont">
+						<a href="#" class ="icon1">
+							<img  src="{{asset('images/wine.svg')}} " >
+						</a>
+							<span><strong>Food & Drinks</strong></span>
+							<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
+							<button class="buttoncat">See Menu</button>
+					</div>
 				</div>
 				<div class="f-icon">
-					<a href="#">
-						<img class ="icon1" src="{{asset('images/oven.svg')}} " >
-					</a>
-						<span><strong>Clean Kitchen</strong></span>
-						<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
-						<button class="buttoncat">Meet our Team</button>
+					<div class="qual-icon-cont">
+						<a href="#" class ="icon1">
+							<img  src="{{asset('images/oven.svg')}} " >
+						</a>
+							<span><strong>Clean Kitchen</strong></span>
+							<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
+							<button class="buttoncat">Meet our Team</button>
+					</div>
 					
 				</div>
 				<div class="f-icon">
-					<a href="#">
-						<img class ="icon1" src="{{asset('images/placeholder.svg')}} " >
-					</a>
-						<span><strong>Awesome Locations</strong></span>
-						<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
-						<button class="buttoncat">Find our Stores</button>
+					<div class="qual-icon-cont">
+						<a href="#" class ="icon1">
+							<img  src="{{asset('images/placeholder.svg')}} " >
+						</a>
+							<span><strong>Awesome Locations</strong></span>
+							<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
+							<button class="buttoncat">Find our Stores</button>
+					</div>
 				</div>
 				<div class="f-icon">
-					<a href="#">
-						<img class ="icon1" src="{{asset('images/ingredients.svg')}} " >
-					</a>
-						<span><strong>Healthy Ingredients</strong></span>
-						<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
-						<button class="buttoncat">See Ingredients</button>
+					<div class="qual-icon-cont">
+						<a href="#" class ="icon1">
+							<img  src="{{asset('images/ingredients.svg')}} " >
+						</a>
+							<span><strong>Healthy Ingredients</strong></span>
+							<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
+							<button class="buttoncat">See Ingredients</button>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
 		@include('headpage.footer')
-		
 	
-	</div>
-
-		
-
-	 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
-    	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	 	
 </body>
 </html>
 

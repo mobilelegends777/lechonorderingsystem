@@ -29,71 +29,95 @@ function carousel() {
 </script>
 <script>
 
-$('.slider').slick({
-  dots: true,
-  mobileFirst:false,
-  // customPaging : function(slider, i) {
-  //       return '<ul><li role="presentation></li><li role="presentation" class="slick-active"></li></ul>';},
-  infinite: true,
-  speed: 1500,
-  centerMode: true,
-  // centerPadding: '40px',
-  autoplay: true,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        mobileFirst:true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
+//this is temporary
+$(window).resize(function(){
+  this.location.reload(false);
 });
+//end reload every resize;
+  var windowWidth = $(window).width();
 
-// $(document).ready(function(){
-// 	$('.item-image').hover(function(){
-// 		$(this).each(function(){
-// 			// alert(1);
-// 			$('.cart-icon').show();
-// 		});
-// 	});
+if(windowWidth <= 768 && windowWidth != 360){
+
+   $('.slider').slick({
+    dots: true,
+    infinite: true,
+    speed: 1500,
+    centerMode: true,
+    autoplay: true,
+    slidesToShow: 2,
+    slidesToScroll: 1
+
+  });
+}
+else if(windowWidth <= 360){
+   $('.slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 1500,
+    centerMode: true,
+    autoplay: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+
+  });
+}
+else {
+
+ $('.slider').slick({
+    dots: true,
+    infinite: true,
+    speed: 1500,
+    centerMode: true,
+    autoplay: true,
+    slidesToShow: 4,
+    slidesToScroll: 1
+  });
+}//end if
+
+// -----------------------------------slick slider original----------------
+// $('.slider').slick({
+//     dots: true,
+//     mobileFirst:false,
+//     // customPaging : function(slider, i) {
+//     //       return '<ul><li role="presentation></li><li role="presentation" class="slick-active"></li></ul>';},
+//     infinite: true,
+//     speed: 1500,
+//     centerMode: true,
+//     // centerPadding: '40px',
+//     autoplay: true,
+//     slidesToShow: 4,
+//     slidesToScroll: 1,
+//   // responsive: [
+//   //   {
+//   //     breakpoint: 768,
+//   //     settings: {
+//   //       // mobileFirst:true,
+//   //       slidesToShow: 2,
+//   //       slidesToScroll: 1,
+//   //       infinite: true,
+//   //       dots: true
+//   //     }
+//   //   },
+//   //   {
+//   //     breakpoint: 600,
+//   //     settings: {
+//   //       slidesToShow: 2,
+//   //       slidesToScroll: 1
+//   //     }
+//   //   },
+//   //   {
+//   //     breakpoint: 480,
+//   //     settings: {
+//   //       slidesToShow: 1,
+//   //       slidesToScroll: 1
+//   //     }
+//   //   }
+//   //   // You can unslick at a given breakpoint now by adding:
+//   //   // settings: "unslick"
+//   //   // instead of a settings object
+//   // ]
 // });
-
-// $(document).ready(function(){
-//     $(".__item").hover(function(){
-//     	$('.items-price').each(function(){
-//         $(this).css("background", "#a11001");
-//         })
-//     },
-//     function(){
-//         $('.items-price').css("background", "#f6f4f2");
-//     });
-// });
-
-
-
+// ------------------------------------------------end slick orig---------------------
 </script>
 
 <script>
@@ -149,13 +173,27 @@ var btn = $('#Btop');
 //     $('.slider-conts img').height(heightChanged);
     
 // });
+ var slideHeight = $('.slider-conts').height();
 $(window).scroll(function() {
-  var heightChanged = 850 - $(document).scrollTop();
+  // alert(slideHeight);
+  var heightChanged = slideHeight - $(document).scrollTop();
     $(".slider-conts").height(heightChanged);
     $('.slider-conts img').height(heightChanged);
-
 });
 // end image resize on scroll
+var currentMousePos = { x: -1, y: -1 };
+  $(document).mousemove(function(event) {
+      currentMousePos.x = event.pageX;
+      currentMousePos.y = event.pageY;
+      // console.log(currentMousePos.y);
+
+  });
+
+  // // ELSEWHERE, your code that needs to know the mouse position without an event
+  // if (currentMousePos.x < 10) {
+  //     // ....
+  // }
+
 </script>
 
 

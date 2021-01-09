@@ -7,7 +7,7 @@
 						</span>
 						<div class="name-title">
 							<span class="des1">MJ Lechon</span>
-							<div class="des2">Fresh Lechon's</div>
+							<div class="des2">Fresh Lechon</div>
 						</div>
 					</div>
 					<div class="footer-info">
