@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use Auth;
+use Session;
+use App\Login;
+use AuthenticatesUsers;
 
 class myprofileController extends Controller
 {
@@ -16,12 +21,9 @@ class myprofileController extends Controller
     public function index()
     {
 
+        $value = Session::get('user');
 
-
-       $data = [
-            "utype" => "notlogin"
-        ];
-        return view('frontpage/myprofile', compact('data'));
+        return view('frontpage/myprofile', compact('value'));
     }
 
 

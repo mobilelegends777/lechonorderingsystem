@@ -102,8 +102,7 @@
 		  </div>
 		  <div class="col-sm-6 contact_bottom_main_right clearfix">
 		   <div class="contact_bottom_main_right_top clearfix">
-		    <iframe src="https://goo.gl/maps/hp5nLQcpZWn4s3hZ6"
-	   width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+		   <iframe width="464" height="431" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=464&amp;height=431&amp;hl=en&amp;q=MJ%20Lechon%20House,%20Villaverde%20Road,%20Iligan%20City,%20Lanao%20del%20Norte%20Iligan%20City+(Map)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <a href='https://embedmap.org/'>embed a google map</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=26110288211da3fbbb554087e25912bccefd9f8f'></script>
 		   </div>
 		  </div>
 		 </div>

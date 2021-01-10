@@ -5,56 +5,65 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Auth;
+use Session;
+use App\Login;
+use AuthenticatesUsers;
+
 
 class userLoginController extends Controller
 {
 
     
+
+
     public function index(){
-        $data = [
-            "utype" => "notlogin"
-        ];
-        return view('index', compact('data'));
+
+        $value = Session::get('user');
+        
+        
+
+        return view('index', compact('value'));
 
     }
     public function login(Request $request){
 
-    //    $data = $request->input();
-    //    $request->session()->put('email', $data['email']);
-      
-        
 
         if(Auth::attempt([
             'email' => $request->email,
             'password' => $request->password
         ]))
         {
-            
-            $user= user::where('email', $request->email)->first();
-          
-            $data = [
-                "userid" => $user->id,
-                "name" => $user->name,
-                "utype" => $user->utype
-            ];
+       
+        $user= user::where('email', $request->email)->first();  
+
+        $data1 = [
+            "userid" => $user->id,
+            "name" => $user->name,
+            "utype" => $user->utype
+        ];
         
-            if($user->utype=='User')
+        $data = Session::put('user', $data1);
+        
+        
+        $value = Session::get('user'); 
+       
+     
+       
 
-            {   
-                
-            
+       if($value['utype']=='User')
 
-                return view('index', compact('data'));
+       {    
 
-            }
+           return view('index', compact('value', $value));
 
-                return redirect()->route('u-login');
+       }
 
-
-        }
-
-        redirect()->back();
+        return redirect()->route('u-login');
+        
+    
+       
 
     }
 
+}
 }

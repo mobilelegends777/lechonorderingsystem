@@ -3,16 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use AuthenticatesUsers;
+use Session;
+use App\User;
+use Auth;
+use App\Login;
+
 
 class shopController extends Controller
 {
     public function index()
     {
-
-    	 $data = [
-            "utype" => "notlogin"
-        ];
-        return view('frontpage/shop', compact('data'));
+        $value = Session::get('user');
+      
+       
+        return view('frontpage/shop', compact('value'));
         
     }
 }

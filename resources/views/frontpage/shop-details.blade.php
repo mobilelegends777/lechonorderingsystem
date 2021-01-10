@@ -95,7 +95,7 @@
 		</div>
 		<div class="col-sm-5 details_2_right_inner_2_right clearfix">
 		 <div class="shopper_2">
-		  <p><a href="{{asset('frontpage/cartpage')}}">Place Order</a></p>
+		  <p><a href="{{asset('frontpage/cartpage')}}">Checkout</a></p>
 		 </div>
 		</div>
 	  </div>
@@ -169,7 +169,7 @@
 	  <div class="center_1_middle_left_2_inner">
 	  <h3><a href="#">Praesent libero</a></h3>
 	  <h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
-	  <h6>€ 12.00</h6>
+	  <h6>Php 12.00</h6>
 	 </div>
 	 </div>
 	 <div class="col-sm-3 center_1_middle_left_1 clearfix">
@@ -183,7 +183,7 @@
 	  <div class="center_1_middle_left_2_inner">
 	  <h3><a href="#">Duis sagittis</a></h3>
 	  <h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
-	  <h6>€ 15.00</h6>
+	  <h6>Php 15.00</h6>
 	 </div>
 	 </div>
 	 <div class="col-sm-3 center_1_middle_left_1 clearfix">
@@ -197,7 +197,7 @@
 	  <div class="center_1_middle_left_2_inner">
 	  <h3><a href="#">Adipiscing</a></h3>
 	  <h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
-	  <h6>€ 15.00</h6>
+	  <h6>Php 15.00</h6>
 	 </div>
 	 </div>
 	 <div class="col-sm-3 center_1_middle_left_1 clearfix">
@@ -211,7 +211,7 @@
 	  <div class="center_1_middle_left_2_inner">
 	  <h3><a href="#">Praesent Mauris</a></h3>
 	  <h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
-	  <h6>€ 32.00</h6>
+	  <h6>Php 32.00</h6>
 	 </div>
 	 </div>
 	</div>

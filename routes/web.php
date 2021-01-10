@@ -44,7 +44,7 @@ Route::get('/frontpage/shop-details', 'shopdetailsController@index')->name('shop
 Route::get('/frontpage/cartpage', 'cartController@index')->name('cartpage');
 Route::get('/frontpage/myprofile', 'myprofileController@index')->name('myprofile');
 
-Route::post('/home','userLoginController@login' )->name('test222');
+Route::post('/','userLoginController@login' )->name('test222');
 // Route::post('/custom', [
 
 // 'uses' => 'userLoginController@login',

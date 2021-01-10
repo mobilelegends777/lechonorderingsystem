@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use Auth;
+use Session;
+use App\Login;
+use AuthenticatesUsers;
 
 class cartController extends Controller
 
@@ -23,11 +28,9 @@ class cartController extends Controller
     public function index()
     {
 
-
-         $data = [
-            "utype" => "notlogin"
-        ];
-        return view('frontpage/cartpage', compact('data'));
+        $value = Session::get('user');
+       
+        return view('frontpage/cartpage', compact('value'));
         
     }
 }
