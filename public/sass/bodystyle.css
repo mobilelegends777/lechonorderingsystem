@@ -40,7 +40,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 12%;
+  margin: 105px 12%;
+  width: 100%;
 }
 
 .buttoncat {

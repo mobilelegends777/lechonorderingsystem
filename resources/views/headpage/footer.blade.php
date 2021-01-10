@@ -1,5 +1,6 @@
-<div id="footer" class="footer-section">
-			<div class="footer-container">
+	<div id="footer" class="footer-section">
+		<div class="footer-container">
+			<div class="footer-1st-cont">
 				<div class="footer-desc footer-company">
 					<div class="footer-logo">
 						<span class="des-logo">
@@ -24,6 +25,8 @@
 						<span><img src="{{asset('images/twits.png')}}" class="tweets"><i>30 minutes ago</i></span>
 					</div>
 				</div>
+			</div>
+			<div class="footer-2nd-cont">
 				<div class="footer-desc footer-gallery">
 					<div class="footer-title-gallery">
 						<span class="footer-title">Restaurant Gallery</span>
@@ -64,6 +67,7 @@
 					</div>					
 				</div>
 			</div>
+		</div>
 			<div class="footers-copyright">
 				<!-- <p>myFooter</p> -->
 				<div class="copyright">
@@ -79,6 +83,6 @@
 						<img src="{{asset('images/btop.png')}}">
 					</button>
 				</div>
-			</div>
 		</div>
+</div>
 	
