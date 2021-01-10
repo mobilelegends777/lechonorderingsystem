@@ -12,7 +12,7 @@
 .dropdown {
   position: relative;
   display: inline-block;
-  height: 57px;
+  padding: 12px 0px;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -25,8 +25,7 @@
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   left: -62px;
-  top: 18px;
-  
+  top: 35px;
 }
 
 /* Links inside the dropdown */

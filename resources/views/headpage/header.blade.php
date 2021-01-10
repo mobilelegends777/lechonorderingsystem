@@ -13,7 +13,7 @@
 			</a>
 		</div>
 	</div>
-		<span class="sub-menu">
+		<div class="sub-menu">
 			<div class="dropdown">
 				<a href="{{asset('frontpage/shop')}}">
 					<span class="des3">Shop</span>
@@ -53,15 +53,18 @@
 				  <a href="#">Blocks 4</a>
 				</div>
 			</span>
-		</span>
-		<span class="inputs">
-			<input type="text" name="" placeholder="Search products..." class="inpt-search">
-			<button class="btn-search">Search</button>
-		</span>
+		</div>
+		<div class="icons-inputs">
+			<span class="inputs">
+				<input type="text" name="" placeholder="Search products..." class="inpt-search">
+				<button class="btn-search">Search</button>
+			</span>
+		</div>
 		<!-- mobile nav -->
 		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="true" onclick="myFunction()">
 			<span>&#9776;&nbsp;Menu</span>
 		</button>
+		
 		<div class="icons">
 			<span class="search-icon" >
 				<img src="{{asset('images/search-icon.png')}}">
@@ -71,14 +74,13 @@
 				<img src="{{asset('images/cart.png')}}" class="icons3" title="Your Cart">
 				</a>
 			</span>
-			<div class="dropdown">
+			<div class="dropdown-account">
 				<span class="account-c ">
-					
-						
-						@if($value['utype']== 'User')
+				@if($value['utype']== 'User')
 
-						<img src="{{asset('images/account.png')}}" class="icons2 d-arrow">	
-							<div class="dropdown-content">
+					<img src="{{asset('images/account.png')}}" class="icons2">	
+						<div class="dropdown-content">
+					
 								<a href="{{asset('/frontpage/myprofile')}}">Account</a>
 								<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -88,8 +90,10 @@
                                     </form>
 							</div>
 						@else
-						<img src="{{asset('images/user.png')}}" class="icons2 d-arrow">	
-							<div class="dropdown-content">
+
+						<img src="{{asset('images/user.png')}}" class="icons2 d-arrow">					
+							<div class="dropdown-content-account">
+
 								<a href="{{asset('/u-login')}}">Login</a>
 								<a href="{{asset('/u-login')}}">Register</a>
 							</div>
@@ -97,7 +101,8 @@
 				</span>
 			</div>
 		</div>
-	</div>
+	
+</div>
 	<div class="topnav subtop" id="myTopnav">
 		<div class="ordinary">
 			<a href="#">Shop</a>
@@ -213,7 +218,9 @@
 						<button class="checkout-button">Checkout</button>
 					</div>
 					<div class="view-cart-sidebar">
+					<a href="{{asset('/frontpage/cartpage')}}">
 						<button class="view-cart-button">View Cart</button>
+						</a>
 					</div>
 				</div>
 			</div>
