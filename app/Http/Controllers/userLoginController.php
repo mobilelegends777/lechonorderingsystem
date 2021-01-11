@@ -17,12 +17,25 @@ class userLoginController extends Controller
 
 
     public function index(){
-
         $value = Session::get('user');
-        
-        
+            if($value == null)
+            {
 
-        return view('index', compact('value'));
+            $value = [
+                "utype" => "notLogin"
+            ];
+
+            return view('index', compact('value'));
+            }
+            else 
+            {
+
+
+            return view('index', compact('value'));
+            }
+
+
+
 
     }
     public function login(Request $request){
@@ -48,13 +61,12 @@ class userLoginController extends Controller
         $value = Session::get('user'); 
        
      
-       
 
        if($value['utype']=='User')
 
        {    
 
-           return view('index', compact('value', $value));
+           return view('index', compact('value'));
 
        }
 

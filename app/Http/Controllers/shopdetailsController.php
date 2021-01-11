@@ -17,7 +17,19 @@ class shopdetailsController extends Controller
 
 
         $value = Session::get('user');
-        return view('frontpage/shop-details', compact('value'));
+        if($value == null)
+        {
+        	$value = [
+        		"utype" => "notLogin"
+        	];
+
+        	return view('frontpage/shop-details', compact('value'));
+        }
+        else 
+        {
+        	return view('frontpage/shop-details', compact('value'));
+        }
+        
         
         
 }

@@ -1,5 +1,6 @@
 
-<div class="headmenu">
+<div class="header-container">
+	<div class="headmenu">
 	<div class="company-logo">
 		<span class="des-logo">
             <a href="/">
@@ -61,9 +62,11 @@
 			</span>
 		</div>
 		<!-- mobile nav -->
-		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="true" onclick="myFunction()">
-			<span>&#9776;&nbsp;Menu</span>
-		</button>
+		<div class="mobile-menu">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="true" onclick="myFunction()">
+				<span>&#9776;&nbsp;Menu</span>
+			</button>
+		</div>
 		
 		<div class="icons">
 			<span class="search-icon" >
@@ -74,13 +77,12 @@
 				<img src="{{asset('images/cart.png')}}" class="icons3" title="Your Cart">
 				</a>
 			</span>
-		
 		</div>
-	
+	</div>
 </div>
 	<div class="topnav subtop" id="myTopnav">
 		<div class="ordinary">
-			<a href="#">Shop</a>
+			<a href="{{asset('frontpage/shop')}}">Shop</a>
 		</div>
     	<div class="ordinary dropbtn1">
     		<a href="#">Fish <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"> </a>
@@ -96,6 +98,7 @@
 	    </div>
 
 	</div>
+<!-- end mobile toggles -->
 	<!-- modals -->
 		<div id="myDropdown" class="drpdwn seafoodDrp" style="display:none;">
 			    <a href="#home">Sea Food</a>
@@ -111,6 +114,5 @@
 				<input type="text" name=""><button>Search</button>
 		</div>
 
-	
 	
 
