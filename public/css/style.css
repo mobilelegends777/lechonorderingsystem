@@ -16,10 +16,11 @@ a {
 }
 .headmenu {
   display: flex;
-  /*width: 100%;*/
+  width: 95%;
 	/*border: 1px solid black;*/
 	padding: 34px;
 	background-color: #2a2c2f;
+  height: auto;
 }
 .company-logo {
     width: 20%;
@@ -247,6 +248,7 @@ a {
     max-width: 1920px;
     /*height: 1420px;*/
     height: auto;
+    padding: 43px 0;
 }
 
 .container .sub-container2 .sc2 {
@@ -617,6 +619,7 @@ span.sp {
 .footers-copyright {
     display: flex;
     width: 100%;
+    height: auto;
 }
 .copyright {
     width: 50%;
@@ -803,8 +806,8 @@ a.icon1 {
   display: inline-block;
   width: 20px;
   height: 20px;
-  margin: 0 5px;
-  padding: 0;
+  /*margin: 0 5px;*/
+  padding: 12px 13px;
   cursor: pointer;
 }
 

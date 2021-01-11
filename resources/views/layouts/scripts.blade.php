@@ -36,7 +36,7 @@ $(window).resize(function(){
 //end reload every resize;
   var windowWidth = $(window).width();
 
-if(windowWidth <= 768 && windowWidth != 360){
+if(windowWidth < 768 && windowWidth != 360){
 
    $('.slider').slick({
     dots: true,
@@ -45,6 +45,18 @@ if(windowWidth <= 768 && windowWidth != 360){
     centerMode: true,
     autoplay: true,
     slidesToShow: 2,
+    slidesToScroll: 1
+
+  });
+}
+else if (windowWidth == 768){
+  $('.slider').slick({
+    dots: true,
+    infinite: true,
+    speed: 1500,
+    centerMode: true,
+    autoplay: true,
+    slidesToShow: 3,
     slidesToScroll: 1
 
   });
