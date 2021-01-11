@@ -28,7 +28,7 @@ class shopController extends Controller
       	{
       		$value = Session::get('user');
 
-        	return view('index', compact('value'));
+        	return view('frontpage/shop', compact('value'));
       	}
        
  	}   
