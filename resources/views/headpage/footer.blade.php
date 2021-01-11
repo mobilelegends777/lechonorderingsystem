@@ -3,7 +3,7 @@
 			<div class="footer-1st-cont">
 				<div class="footer-desc footer-company">
 					<div class="footer-logo">
-						<span class="des-logo">
+						<span class="footer-des-logo">
 							<img src="{{asset('images/logo.png')}}" class="footer-logos">
 						</span>
 						<div class="name-title">

@@ -61,10 +61,11 @@
 			</span>
 		</div>
 		<!-- mobile nav -->
-		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="true" onclick="myFunction()">
-			<span>&#9776;&nbsp;Menu</span>
-		</button>
-		
+		<div class="mobile-menu">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="true" onclick="myFunction()">
+				<span>&#9776;&nbsp;Menu</span>
+			</button>
+		</div>
 		<div class="icons">
 			<span class="search-icon" >
 				<img src="{{asset('images/search-icon.png')}}">
@@ -101,7 +102,7 @@
 </div>
 	<div class="topnav subtop" id="myTopnav">
 		<div class="ordinary">
-			<a href="#">Shop</a>
+			<a href="{{asset('frontpage/shop')}}">Shop</a>
 		</div>
     	<div class="ordinary dropbtn1">
     		<a href="#">Fish <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"> </a>
@@ -117,6 +118,7 @@
 	    </div>
 
 	</div>
+<!-- end mobile toggles -->
 	<!-- modals -->
 		<div id="myDropdown" class="drpdwn seafoodDrp" style="display:none;">
 			    <a href="#home">Sea Food</a>
