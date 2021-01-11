@@ -2817,6 +2817,11 @@ figure.effect-jazz:hover figcaption::after {
 }
 
 
+input#password {
+  position: relative;
+  bottom: -2px;
+}
+
 
 
 

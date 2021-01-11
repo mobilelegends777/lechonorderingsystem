@@ -9,9 +9,10 @@ use Session;
 use App\Login;
 use AuthenticatesUsers;
 
-class myprofileController extends Controller
+class myorderController extends Controller
 {
     
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -23,8 +24,10 @@ class myprofileController extends Controller
 
         $value = Session::get('user');
 
-        return view('userpage/myprofile', compact('value'));
+        return view('userpage/myorder', compact('value'));
     }
+
+
 
 
 }

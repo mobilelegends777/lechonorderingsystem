@@ -54,3 +54,12 @@
   background-color: #3e8e41;
 }
 /*# sourceMappingURL=header.css.map */
+
+
+span.acc-name {
+  position: relative;
+  color: white;
+  font-size: 16px;
+  top: 2px;
+  left: -19px;
+}

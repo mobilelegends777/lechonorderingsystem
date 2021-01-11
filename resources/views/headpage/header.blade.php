@@ -78,10 +78,13 @@
 				<span class="account-c ">
 				@if($value['utype']== 'User')
 
-					<img src="{{asset('images/account.png')}}" class="icons2">	
-						<div class="dropdown-content">
+					<img src="{{asset('images/account.png')}}" class="icons2">
+					<!-- <span class="acc-name">{{$value['name']}}</span> -->
+						<div class="dropdown-content-account">
 					
-								<a href="{{asset('/frontpage/myprofile')}}">Account</a>
+								<a href="{{asset('/userpage/myorder')}}">My Orders</a>
+								<a href="{{asset('/userpage/myprofile')}}">Edit Profile</a>
+								<a href="{{asset('/frontpage/myprofile')}}">Vouchers</a>
 								<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}</a>
@@ -95,7 +98,7 @@
 							<div class="dropdown-content-account">
 
 								<a href="{{asset('/u-login')}}">Login</a>
-								<a href="{{asset('/u-login')}}">Register</a>
+								<a href="{{asset('/u-login')}}">SignUp</a>
 							</div>
 						@endif
 				</span>
@@ -149,7 +152,7 @@
 				<div class="item-on-cart">
 					<!-- append -->
 
-				@if($value>0)
+				@if($value ?? ''>0)
 				<div class="carted-item-cont">
 						<span>
 							<img src="{{ asset('images/loin1.jpg') }}">

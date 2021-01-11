@@ -42,7 +42,9 @@ Route::get('/frontpage/shop', 'shopController@index')->name('shop');
 Route::get('/frontpage/contact', 'contactController@index')->name('contact');
 Route::get('/frontpage/shop-details', 'shopdetailsController@index')->name('shop-details');
 Route::get('/frontpage/cartpage', 'cartController@index')->name('cartpage');
-Route::get('/frontpage/myprofile', 'myprofileController@index')->name('myprofile');
+Route::get('/userpage/myprofile', 'myprofileController@index')->name('myprofile');
+Route::get('/userpage/myorder', 'myorderController@index')->name('myorder');
+
 
 Route::post('/','userLoginController@login' )->name('test222');
 // Route::post('/custom', [

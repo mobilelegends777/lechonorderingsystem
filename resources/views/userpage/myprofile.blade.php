@@ -46,17 +46,12 @@
         
         <form class="form-horizontal" role="form">
           <div class="form-group">
-            <label class="col-lg-3 control-label">First name:</label>
+            <label class="col-lg-3 control-label">Full name:</label>
             <div class="col-lg-8">
               <input class="form-control" type="text" value="">
             </div>
           </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Last name:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="">
-            </div>
-          </div>
+         
           <div class="form-group">
             <label class="col-lg-3 control-label">Contact #:</label>
             <div class="col-lg-8">

@@ -58,7 +58,7 @@ class userLoginController extends Controller
 
        }
 
-        return redirect()->route('u-login');
+        return redirect()->route('u-login', compact('value'));
         
     
        
@@ -66,4 +66,6 @@ class userLoginController extends Controller
     }
 
 }
+
+
 }
