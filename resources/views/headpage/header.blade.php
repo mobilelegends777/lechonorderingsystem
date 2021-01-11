@@ -1,5 +1,6 @@
 
-<div class="headmenu">
+<div class="header-container">
+	<div class="headmenu">
 	<div class="company-logo">
 		<span class="des-logo">
             <a href="/">
@@ -66,6 +67,7 @@
 				<span>&#9776;&nbsp;Menu</span>
 			</button>
 		</div>
+		
 		<div class="icons">
 			<span class="search-icon" >
 				<img src="{{asset('images/search-icon.png')}}">
@@ -80,7 +82,6 @@
 				@if($value['utype']== 'User')
 
 					<img src="{{asset('images/account.png')}}" class="icons2">
-					<!-- <span class="acc-name">{{$value['name']}}</span> -->
 						<div class="dropdown-content-account">
 					
 								<a href="{{asset('/userpage/myorder')}}">My Orders</a>
@@ -93,7 +94,7 @@
                                         @csrf
                                     </form>
 							</div>
-						@else
+				@else
 
 						<img src="{{asset('images/user.png')}}" class="icons2 d-arrow">					
 							<div class="dropdown-content-account">
@@ -101,11 +102,11 @@
 								<a href="{{asset('/u-login')}}">Login</a>
 								<a href="{{asset('/u-login')}}">SignUp</a>
 							</div>
-						@endif
+				@endif
 				</span>
 			</div>
 		</div>
-	
+	</div>
 </div>
 	<div class="topnav subtop" id="myTopnav">
 		<div class="ordinary">
@@ -142,7 +143,7 @@
 		</div>
 
 	
-		
+@if($value['utype'] != 'notLogin')	
 	<div class="toggle-cart-sidenav">
 		<div class="cart">
 
@@ -153,8 +154,7 @@
 			<div class="items-on-cart-container" style="display: none;">
 				<div class="item-on-cart">
 					<!-- append -->
-
-				@if($value ?? ''>0)
+			
 				<div class="carted-item-cont">
 						<span>
 							<img src="{{ asset('images/loin1.jpg') }}">
@@ -207,11 +207,7 @@
 						</span>
 						<span class="delete-item">&times</span>
 					</div>
-				@else
-
-				<h6>Please Login</h6>
-				@endif
-				
+			
 				</div>
 				<div class="subtotal-cont">
 					<div class="sub-numbers" style="color: #666;display: flex;">
@@ -231,5 +227,4 @@
 			</div>
 		</div>
 	</div>
-
-
+@endif

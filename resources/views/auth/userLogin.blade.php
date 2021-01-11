@@ -12,7 +12,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{asset('asset/css/style_asset.css')}}">
   
     <title>Login</title>
 
@@ -20,7 +19,7 @@
 </head>
 <body>
 @include('headpage.headerbackup')
-    <div id="logreg-forms">
+<div id="logreg-forms">
     <form class="form-signin" method="POST" action="{{ route('test222') }}">
     @csrf
             <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
@@ -108,30 +107,13 @@
             <br>
             
     </div>
-    <p style="text-align:center">
-        <a href="http://bit.ly/2RjWFMfunction toggleResetPswd(e){
-    e.preventDefault();
-    $('#logreg-forms .form-signin').toggle() // display:block or none
-    $('#logreg-forms .form-reset').toggle() // display:block or none
-}
+    
+    {{--<div class="login-reg-form">
+        <div class="">
+            
+        </div>
+    </div>--}}
 
-function toggleSignUp(e){
-    e.preventDefault();
-    $('#logreg-forms .form-signin').toggle(); // display:block or none
-    $('#logreg-forms .form-signup').toggle(); // display:block or none
-}
-
-$(()=>{
-    // Login Register Form
-    $('#logreg-forms #forgot_pswd').click(toggleResetPswd);
-    $('#logreg-forms #cancel_reset').click(toggleResetPswd);
-    $('#logreg-forms #btn-signup').click(toggleSignUp);
-    $('#logreg-forms #cancel_signup').click(toggleSignUp);
-})g" target="_blank" style="color:black"></a>
-    </p>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="/script.js"></script>
     @include('headpage.footer')
 </body>
 </html>

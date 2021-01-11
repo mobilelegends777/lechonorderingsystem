@@ -16,14 +16,20 @@ a {
 }
 .headmenu {
   display: flex;
-  width: 95%;
+  /*width: 100%;*/
 	/*border: 1px solid black;*/
-	padding: 34px;
+	padding: 34px 0;
 	background-color: #2a2c2f;
   height: auto;
 }
 .company-logo {
     width: 20%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+.header-container{
+  width: 100%;
 }
 .hr {
   width: 22%; 
@@ -32,28 +38,27 @@ a {
 }
 .headmenu .des-logo {
 	/*border: 1px solid red;*/
+  padding-right: 10px;
 }
 
-.headmenu .des-logo .logos {
-	margin-left: 20px;
+/*.headmenu .des-logo .logos {
+  margin-left: 63px;
 	margin-top: 5px;
-}
+}*/
 
 .headmenu .des1 {
 	color: white;
     /*border: 1px solid red;*/
-    position: absolute;
     top: 39px;
-    left: 120px;
+    /*left: 120px;*/
     font-size: 23px;
 }
 
 .headmenu .des2 {
     color: white;
     /* border: 1px solid red; */
-    position: absolute;
     top: 65px;
-    left: 121px;
+    /*left: 121px;*/
     font-size: 13px;
 }
 
@@ -146,7 +151,6 @@ a {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 118px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 0px 16px;
     z-index: 1;
@@ -154,6 +158,8 @@ a {
     /*margin-left: 60px;
     margin-top: 7px;*/
     font-size: 15px;
+    width: 131px;
+    height: auto;
 }
 .dropdown-account:hover .dropdown-content-account {
     display: block;
@@ -190,9 +196,9 @@ a {
     border-radius: 0px 4px 4px 0px;
 }
 
-.headmenu .icons {
-    
-}
+/*.headmenu .icons {
+    width: 15%;
+}*/
 
 .headmenu .icons .icons2 {
     width: 30px;
@@ -640,6 +646,7 @@ span.sp {
     list-style: none;
     display: flex;
     justify-content: center;
+    margin: 19px 0;
 }
 .social-icons img:hover {
     background: orange;
@@ -842,7 +849,6 @@ a.icon1 {
 .toggle-cart-sidenav {
     position: fixed;
     z-index: 100;
-    top: 188px;
     right: 0;
     background-color:  #b258078f;
     border-bottom-left-radius: 35px;
@@ -911,7 +917,7 @@ span.cart-title {
 }
 .item-on-cart {
     overflow: auto;
-    height: 300px;
+    height: 200px;
 }
 .check-out-sidbar button:hover {
     background: #b28b19;
@@ -928,7 +934,6 @@ span.cart-title {
     display: flex;
     align-items: center;
     width: 19%;
-    justify-content: center;
 }
 .footer-1st-cont {
     display: flex;
@@ -942,3 +947,4 @@ span.cart-title {
 .add-to-cart-items:hover {
     border-left: solid #b25807 5px;
 }*/
+
