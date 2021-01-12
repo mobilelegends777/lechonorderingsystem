@@ -1,18 +1,19 @@
-
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Restaurant System</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	@include('layouts.csslinks')
-	
-</head>
-<body>
-	@include('headpage.header')
-	
-
+<div class="container">
+		<div class="slider-conts">
+			<div id="slide-container">
+			  <img class="slide-image mySlides " src="images/city.jpg" style="display: none;">
+			  <div class="sales1 trans1">
+			  	<span class="sales2">MEAT & SEAFOOD</span>
+					<div class="sales3">FROM BAGSAKAN</div>
+					<div class="sales4">We offer a huge variety of exceptionally fresh meat farmed in our personal farm</div>
+				<div class="sales5">
+					<a href="{{asset('frontpage/shop')}}">
+					  <button class="bttn1">Shop Now</button>
+					</a>
+			  		<button class="bttn2">About Store</button>
+			  	</div>
+			  </div>
+			</div>
 
 			<div id="slide-container">
 			  <img class="slide-image mySlides" src="images/city2.jpg" style="display: none;">
@@ -240,9 +241,7 @@
 						</a>
 							<span><strong>Food & Drinks</strong></span>
 							<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
-							<a href="{{asset('frontpage/shop')}}">
 							<button class="buttoncat">See Menu</button>
-							</a>
 					</div>
 				</div>
 				<div class="f-icon">
@@ -252,9 +251,7 @@
 						</a>
 							<span><strong>Clean Kitchen</strong></span>
 							<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
-							<a href="{{'frontpage/contact'}}">
 							<button class="buttoncat">Meet our Team</button>
-							</a>
 					</div>
 					
 				</div>
@@ -265,9 +262,7 @@
 						</a>
 							<span><strong>Awesome Locations</strong></span>
 							<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
-							<a href="{{'frontpage/contact'}}">
 							<button class="buttoncat">Find our Stores</button>
-							</a>
 					</div>
 				</div>
 				<div class="f-icon">
@@ -277,22 +272,9 @@
 						</a>
 							<span><strong>Healthy Ingredients</strong></span>
 							<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
-							<a href="{{'frontpage/contact'}}">
 							<button class="buttoncat">See Ingredients</button>
-							</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-	@include('headpage.footer')
-
-	
-	 	
-</body>
-</html>
-
-
-@include('layouts.scripts')
-

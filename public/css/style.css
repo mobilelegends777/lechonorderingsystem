@@ -951,17 +951,18 @@ span.cart-title {
 /*login */
 .login-reg-form {
     width: 500px;
-    border: solid rgb(222, 220, 220);
-    margin: 10% 37%;
+    border: solid #2a2c2f;
+    margin: 6% 37%;
     height: auto;
-    background: rgb(222, 220, 220);
+    /*background: rgb(222, 220, 220);*/
+    background: #2a2c2f;
     border-radius: 5px;
 
 }
 .social-log {
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
 }
 .account-log {
     height: 112px;
@@ -985,50 +986,29 @@ span.cart-title {
     width: 358px;
     height: auto;
     /*border: solid red;*/
-    margin: 70px 71px;
+    margin: 35px 70px;
 }
 
 button.btn.facebook-btn.social-btn {
     height: 50px;
-    width: 50%;
+    width: 49%;
     border-radius: 5px;
     background: #4267B2;
     color: #fff;
+    border: none;
 }
 button.btn.google-btn.social-btn {
     height: 50px;
-    width: 50%;
+    width: 49%;
     border-radius: 5px;
     background: #DB4437;
     color: #fff;
-}
-input#email {
-    width: 100%;
-    height: 45px;
-    /*background: black;*/
-    /*color: #fff;*/
-    border-radius: 5px;
-    border: unset;
-    margin: 10px 0;
-}
-input#email:focus {
-    outline-color: #c4a265;
-}
-input#password {
-    outline-color: #c4a265;
-}
-input#password {
-    width: 100%;
-    height: 45px;
-    /*background: black;*/
-    /*color: #fff;*/
-    border-radius: 5px;
-    border: unset;
-    margin: 10px 0;
+    border: none;
+
 }
 button.btn.btn-success.btn-block {
     height: 46px;
-    width: 97px;
+    width: 53%;
     background: #c4a265;
     border: #c4a265;
     color: #fff;
@@ -1036,7 +1016,7 @@ button.btn.btn-success.btn-block {
     border-radius: 4px;
 }
 span.forgot-pass {
-    background: rgb(222, 220, 220);
+    background: #2a2c2f;
     padding: 14px;
     margin-left: 10px;
     border-radius: 5px;

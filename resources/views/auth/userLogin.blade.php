@@ -137,16 +137,71 @@
                 <span class="forgot-pass"><a href="#" id="forgot_pswd">Forgot password?</a></span>
             </div>
             <div class="signup-new">
-                <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Sign up New Account</button>
+                <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Sign Up</button>
             </div>
         </form>
+            <div class="reset-pass" style="display: none;">
+                <form action="/reset/password/" class="form-reset">
+                    <div class="input-button">
+                            <input type="email" id="resetEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+                            <button class="btn btn-primary btn-block reset-btn" type="submit">Reset Password</button>
+                    </div>
+                            <a href="#" id="cancel_reset"><i class="fas fa-angle-left"></i> Back</a>
+                </form>
+            </div>
+            <form class="form-signup" method="POST" action="{{ route('register') }}" style="display: none;">
+                        @csrf
+                <div class="social-log">
+                    <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span> </button>
+                    <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign in with Google+</span> </button>
+                </div>
+                <div class="signup-inputs">
+                        <!-- <p style="text-align:center;color: #fff;">OR</p> -->
+
+                        <input id="utype" type="text" class="form-control @error('utype') is-invalid @enderror" name="utype" value="{{ __('User') }}" required autocomplete="utype" readonly="readonly">
+
+                                @error('utype')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+
+                    
+                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Full name" required="" autofocus="">
+                        @error('name')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+
+                          
+                    
+
+                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email address" required autofocus="">
+                        @error('email')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Password" required autofocus="">
+                        @error('password')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Repeat Password" required autofocus="">
+                </div>
+                <div class="signup-button">
+                        <button class="btn btn-primary btn-block sign-up" type="submit"><i class="fas fa-user-plus"></i>  {{ __('Sign Up') }}</button>
+                        <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
+                </div>
+            </form>
         </div>
     </div>
-
+    
     @include('headpage.footer')
 </body>
 </html>
-
 
 @include('layouts.scripts')
 
