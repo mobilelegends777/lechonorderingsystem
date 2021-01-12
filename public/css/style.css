@@ -10,6 +10,7 @@ html, body {
 }
 a {
     text-decoration: none;
+    color: inherit;
 }
 .menu-toggle, .search-icon {
     display: none;
@@ -488,7 +489,7 @@ span.product-title {
     width: 50px;
     height: 26px;
     top: 10px;
-    margin: 19% 42%;
+    margin: 27% 42%;
     display: none;
 }
 .cart-icon img {

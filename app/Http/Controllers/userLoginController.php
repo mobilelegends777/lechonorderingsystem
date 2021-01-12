@@ -25,13 +25,13 @@ class userLoginController extends Controller
                 "utype" => "notLogin"
             ];
 
-            return view('index', compact('value'));
+            return view('frontpage.front-page', compact('value'));
             }
             else 
             {
 
 
-            return view('index', compact('value'));
+            return view('frontpage.front-page', compact('value'));
             }
 
 
@@ -66,7 +66,7 @@ class userLoginController extends Controller
 
        {    
 
-           return view('index', compact('value'));
+           return view('frontpage.front-page', compact('value'));
 
        }
 

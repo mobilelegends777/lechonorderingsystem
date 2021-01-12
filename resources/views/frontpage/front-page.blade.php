@@ -1,3 +1,5 @@
+@extends('index')
+@section('page_content')
 <div class="container">
 		<div class="slider-conts">
 			<div id="slide-container">
@@ -47,7 +49,7 @@
 						<div class="box slide">
 							<div class="item-image">
 								<div class="prod-image">
-									<img src="images/siomai.jpg">
+									<img src="images/Pansitbihon.jpg">
 								</div>
 								<div class="cart-icon" >
 									<a href="#"><img src="images/cart1.png"></a>
@@ -55,7 +57,7 @@
 							</div>
 							<div class="item-details">
 								<div class="item-name">
-									<a href="#"><span class="product-name">Siomai sa Tisa</span></a>
+									<a href="#"><span class="product-name">Pansit Bihon</span></a>
 								</div>
 								<div class="price-tag">
 									<span class="prices">₱150.00</span>
@@ -65,7 +67,7 @@
 						<div class="box slide">
 							<div class="item-image">
 								<div class="prod-image">
-									<img src="images/pizza.jpg">
+									<img src="images/Lechonmanok.jpg">
 								</div>
 								<div class="cart-icon" >
 									<a href="#"><img src="images/cart1.png"></a>
@@ -73,7 +75,7 @@
 							</div>
 							<div class="item-details">
 								<div class="item-name">
-									<a href="#"><span class="product-name">Pepperoni Pizza</span></a>
+									<a href="#"><span class="product-name">Lechon Chicken</span></a>
 								</div>
 								<div class="price-tag">
 									<span class="prices">₱250.00</span>
@@ -83,7 +85,7 @@
 						<div class="box slide">
 							<div class="item-image">
 								<div class="prod-image">
-									<img src="images/bread.jpg">
+									<img src="images/Porkbbq.jpg">
 								</div>
 								<div class="cart-icon" >
 									<a href="#"><img src="images/cart1.png"></a>
@@ -91,17 +93,17 @@
 							</div>
 							<div class="item-details">
 								<div class="item-name">
-									<a href="#"><span class="product-name">Breads Overload</span></a>
+									<a href="#"><span class="product-name">Pork BBQ</span></a>
 								</div>
 								<div class="price-tag">
-									<span class="prices">₱10.00</span>
+									<span class="prices">₱25.00</span>
 								</div>
 							</div>
 						</div>
 						<div class="box slide">
 							<div class="item-image">
 								<div class="prod-image">
-									<img src="images/delisyoso.jpg">
+									<img src="images/Daingbangus.jpg">
 								</div>
 								<div class="cart-icon" >
 									<a href="#"><img src="images/cart1.png"></a>
@@ -109,17 +111,17 @@
 							</div>
 							<div class="item-details">
 								<div class="item-name">
-									<a href="#"><span class="product-name">Eat All You Can</span></a>
+									<a href="#"><span class="product-name">Daing na Bangus</span></a>
 								</div>
 								<div class="price-tag">
-									<span class="prices">₱300.00</span>
+									<span class="prices">₱75.00</span>
 								</div>
 							</div>
 						</div>
 						<div class="box slide">
 							<div class="item-image">
 								<div class="prod-image">
-									<img src="images/siomai.jpg">
+									<img src="{{ asset('images/Lechonbaboy.jpg') }}">
 								</div>
 								<div class="cart-icon" >
 									<a href="#"><img src="images/cart1.png"></a>
@@ -127,7 +129,25 @@
 							</div>
 							<div class="item-details">
 								<div class="item-name">
-									<a href="#"><span class="product-name">Siomai sa Tisa</span></a>
+									<a href="#"><span class="product-name">Lechon Pig</span></a>
+								</div>
+								<div class="price-tag">
+									<span class="prices">₱450.00</span>
+								</div>
+							</div>
+						</div>
+						<div class="box slide">
+							<div class="item-image">
+								<div class="prod-image">
+									<img src="{{ asset('images/tapioca.jpg') }}">
+								</div>
+								<div class="cart-icon" >
+									<a href="#"><img src="images/cart1.png"></a>
+								</div>
+							</div>
+							<div class="item-details">
+								<div class="item-name">
+									<a href="#"><span class="product-name">Tapioca</span></a>
 								</div>
 								<div class="price-tag">
 									<span class="prices">₱150.00</span>
@@ -278,3 +298,4 @@
 			</div>
 		</div>
 	</div>
+	@endsection
