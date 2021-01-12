@@ -31,6 +31,12 @@ a {
 .header-container{
   width: 100%;
 }
+img.logos {
+    width: 76px;
+    size: 4px;
+    position: relative;
+    top: -7px;
+}
 .hr {
   width: 22%; 
   border: 1px solid #c4a265; 
@@ -955,7 +961,7 @@ span.cart-title {
     margin: 6% 37%;
     height: auto;
     /*background: rgb(222, 220, 220);*/
-    background: #2a2c2f;
+    background: #2a2c2fc7;
     border-radius: 5px;
 
 }
@@ -1008,7 +1014,7 @@ button.btn.google-btn.social-btn {
 }
 button.btn.btn-success.btn-block {
     height: 46px;
-    width: 53%;
+    width: 100%;
     background: #c4a265;
     border: #c4a265;
     color: #fff;
@@ -1028,10 +1034,11 @@ span.forgot-pass {
     background-color: #ff8800fc;
     /* border: #111; */
     border-radius: 5px;
-    height: 54px;
+    height: 50px;
     color: #fff;
     font-size: 18px;
     padding: 18px;
+    width: 100%;
 }
 .login-body {
     background-image: url(../asset/img/599.jpg);

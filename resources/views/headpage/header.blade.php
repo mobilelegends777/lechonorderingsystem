@@ -4,13 +4,13 @@
 	<div class="company-logo">
 		<span class="des-logo">
             <a href="/">
-            <img src="{{asset('images/logo.png')}}" class="logos">
+            <img src="{{asset('images/mjlogo.png')}}" class="logos">
             </a>
 		</span>
 		<div class="company-title">
 		<a href="/">
-			<span class="des1">MJ Lechon</span>
-			<div class="des2">Fresh Lechon</div>
+			<span class="des1">MJ Lechon House</span>
+			<div class="des2">Tasty, Juicy & Crispy</div>
 			</a>
 		</div>
 	</div>
