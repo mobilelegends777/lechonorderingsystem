@@ -43,11 +43,9 @@
 				</div>
 			</span>
 			<span class="dropdown">
-				<span class="des7">About Us <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
-				<div class="dropdown-content">
-				  <a href="{{asset('frontpage/contact')}}">Contact</a>
-				  <a href="#">Story</a>
-				</div>
+				<a href="{{asset('frontpage/contact')}}">
+				<span class="des7">Contact Us </span>
+				</a>
 			</span>
 		</div>
 		<div class="icons-inputs">

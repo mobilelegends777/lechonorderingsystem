@@ -97,7 +97,7 @@ The above copyright notice and this permission notice shall be included in all c
           <li class="nav-item active-pro ">
             <a class="nav-link" href="{{asset('admin/upgrade.html')}}">
               <i class="material-icons">unarchive</i>
-              <p>Upgrade to PRO</p>
+              <p>MJ Lechon</p>
             </a>
           </li>
         </ul>
