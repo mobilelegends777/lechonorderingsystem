@@ -95,7 +95,7 @@
 		</div>
 		<div class="col-sm-5 details_2_right_inner_2_right clearfix">
 		 <div class="shopper_2">
-		  <p><a href="{{asset('frontpage/cartpage')}}">Checkout</a></p>
+		  <p><a href="{{asset('frontpage/cartpage')}}">Vew Your Cart</a></p>
 		 </div>
 		</div>
 	  </div>
@@ -107,39 +107,30 @@
 			<div>
 				<p>Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos C.</p>
 			</div>
-			<h3 data-prefix="★">Additional information</h3>
+			<h3 data-prefix="★">Variation (1 Required)</h3>
 			<div>
-				<p class="voter">Weight <span class="wating_1">2 kg</span></p>
-				<p class="voter">Dimention <span class="wating_1">12 x 22 x 20 cm</span></p>
+			<input type="Radio" id="Kiddie" name="Kiddie" value="">
+			<label for="Kiddie">Kiddie</label><br>			
+			<input type="Radio" id="Small" name="Small" value="">
+			<label for="Small">Small</label><br>
+			<input type="Radio" id="Medium" name="Medium" value="">
+			<label for="Medium">Medium</label><br>
+			<input type="Radio" id="Large" name="Large" value="">
+			<label for="Large">Large</label><br>
 			</div>
-			<h3 data-prefix="★">Review (1)</h3>
+			<h3 data-prefix="★">Special Instructions</h3>
 			<div>
-				<p class="voter">1 review for Chicken Manok</p>
 				<div class="ziehharmonika_bottom clearfix">
 				 <div class="col-sm-2 article_2_left clearfix">
-	    <div class="article_2_left_inner">
-		 <p><a href="#"><img src="{{asset('asset/img/64.jpg')}}" class="img-circle"></a></p>
-		</div>
-	   </div>
-	   <div class="col-sm-10 article_2_right clearfix">
-	    <div class="article_2_right_inner">
-		 <h2><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h2>
-		 <h4>Emily – <span class="dating_1">March 16, 2020</span></h4>
-		  <h5>Good Quality! Nice Customer Service.</h5>
-		</div>
-	   </div>
+	   
+	  
 				</div>
 				<div class="ziehharmonika_last clearfix">
-				 <h5>Add a review</h5>
-				 <h5>Your email address will not be published. Required fields are marked *</h5>
 				 <h5><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></h5>
+				 <h6>Please Let us know if you are allergic to anything or if we need to avoid anything</h6>
 				</div>
 				<div class="details_2_inner_8 clearfix">
-	   <textarea placeholder="Comment..." class="form-control form_1"></textarea>
-	   <input class="form-control form_2" type="text" placeholder="Name*">
-	   <input class="form-control form_2" type="text" placeholder="Email*">
-	   <input class="form-control form_2" type="text" placeholder="Website*">
-	   <h5><a href="#">Post Comment</a></h5>
+	   <textarea placeholder="e.g No mayo..." class="form-control form_1"></textarea>
 	  </div>
 			</div>
 		</div>

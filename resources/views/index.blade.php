@@ -14,7 +14,9 @@
 	
 		 @yield('page_content')
 
+
 	@include('headpage.footer')
+
 	
 	 	
 </body>

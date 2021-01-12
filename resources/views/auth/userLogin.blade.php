@@ -134,8 +134,9 @@
             <div class="signin-forgot"> 
                  <button type="submit" class="btn btn-success btn-block">
                                         <i class="fas fa-sign-in-alt"></i> {{ __('Sign in') }}</button>
-                <span class="forgot-pass"><a href="#" id="forgot_pswd">Forgot password?</a></span>
+               
             </div>
+            <span class="forgot-pass"><a href="#" id="forgot_pswd">Forgot password?</a></span>
             <div class="signup-new">
                 <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Sign Up</button>
             </div>
@@ -158,7 +159,7 @@
                 <div class="signup-inputs">
                         <!-- <p style="text-align:center;color: #fff;">OR</p> -->
 
-                        <input id="utype" type="text" class="form-control @error('utype') is-invalid @enderror" name="utype" value="{{ __('User') }}" required autocomplete="utype" readonly="readonly">
+                        <input id="utype" type="hidden" class="form-control @error('utype') is-invalid @enderror" name="utype" value="{{ __('User') }}" required autocomplete="utype" readonly="readonly" display: none;>
 
                                 @error('utype')
                                     <span class="invalid-feedback" role="alert">
@@ -193,8 +194,9 @@
                 </div>
                 <div class="signup-button">
                         <button class="btn btn-primary btn-block sign-up" type="submit"><i class="fas fa-user-plus"></i>  {{ __('Sign Up') }}</button>
-                        <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
-                </div>
+                        
+                </div><br>
+                <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
             </form>
         </div>
     </div>

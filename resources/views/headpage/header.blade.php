@@ -4,55 +4,48 @@
 	<div class="company-logo">
 		<span class="des-logo">
             <a href="/">
-            <img src="{{asset('images/logo.png')}}" class="logos">
+            <img src="{{asset('images/mjlogo.png')}}" class="logos">
             </a>
 		</span>
 		<div class="company-title">
 		<a href="/">
-			<span class="des1">MJ Lechon</span>
-			<div class="des2">Fresh Lechon</div>
+			<span class="des1">MJ Lechon House</span>
+			<div class="des2">Tasty, Juicy & Crispy</div>
 			</a>
 		</div>
 	</div>
 		<div class="sub-menu">
 			<div class="dropdown">
-				<a href="{{asset('frontpage/shop')}}">
-					<span class="des3">Shop</span>
+				<a href="{{asset('/')}}">
+					<span class="des3">Home</span>
 				</a>
 			</div>
 			<span class="dropdown">
-				<span class="des4">Fish <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
+			<a href="{{asset('frontpage/shop')}}">
+					<span class="des4">Shop</span>
+				</a>
+			</span>
+
+			<span class="dropdown">
+				<span class="des5">Fish <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
 				<div class="dropdown-content">
 				  <a href="#">Sea Food</a>
 				</div>
 			</span>
-
 			<span class="dropdown">
-				<span class="des5">Meat <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
+				<span class="des6">Menu<img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
 				<div class="dropdown-content">
-				  <a href="#">Rabbit</a>
-				  <a href="#">Beef</a>
-				  <a href="#">Pork</a>
-				  <a href="#">Chicken</a>
-				  <a href="#">Lamb</a>
-				</div>
-			</span>
-			
-			<span class="dropdown">
-				<span class="des6">About Us <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
-				<div class="dropdown-content">
-				  <a href="{{asset('frontpage/contact')}}">Contact</a>
-				  <a href="#">Story</a>
+				  <a href="{{asset('frontpage/newproduct')}}">New Products</a>
+				  <a href="{{asset('frontpage/combomeal')}}">Combo Meals</a>
+				  <a href="{{asset('frontpage/dessert')}}">Desserts</a>
+				  <a href="{{asset('frontpage/drinks')}}">Drinks</a>
+				  <a href="{{asset('frontpage/appetizer')}}">Appetizers</a>
 				</div>
 			</span>
 			<span class="dropdown">
-				<span class="des7">Blocks <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
-				<div class="dropdown-content">
-				  <a href="#">Blocks 1</a>
-				  <a href="#">Blocks 2</a>
-				  <a href="#">Blocks 3</a>
-				  <a href="#">Blocks 4</a>
-				</div>
+				<a href="{{asset('frontpage/contact')}}">
+				<span class="des7">Contact Us </span>
+				</a>
 			</span>
 		</div>
 		<div class="icons-inputs">
@@ -86,7 +79,6 @@
 					
 								<a href="{{asset('/userpage/myorder')}}">My Orders</a>
 								<a href="{{asset('/userpage/myprofile')}}">Edit Profile</a>
-								<a href="{{asset('/frontpage/myprofile')}}">Vouchers</a>
 								<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}</a>

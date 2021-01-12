@@ -78,7 +78,7 @@ a.fter {
 .login-reg-form input{
   width: 100%;
   height: 45px;
-  border-radius: 5px;
+  border-radius: 3px;
   border: unset;
   margin: 10px 0;
 }
@@ -92,9 +92,9 @@ a.fter {
 }
 .sign-up {
     height: 42px;
-    width: 110px;
     border-radius: 5px;
     color: #fff;
+    width: 100%;
 }
 a#cancel_signup {
     padding: 13px 5px;

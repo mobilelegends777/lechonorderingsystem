@@ -38,7 +38,19 @@ Auth::routes();
 
 Route::get('/', 'userLoginController@index');
 Route::get('/adminpages/admindashboard', 'adminBoardController@index')->name('admindashboard');
+
+
 Route::get('/frontpage/shop', 'shopController@index')->name('shop');
+Route::get('/frontpage/appetizer', 'shopController@appetizerindex')->name('appetizer');
+Route::get('/frontpage/newproduct', 'shopController@newproductindex')->name('newproduct');
+Route::get('/frontpage/combomeal', 'shopController@combomealindex')->name('combomeal');
+Route::get('/frontpage/dessert', 'shopController@dessertindex')->name('dessert');
+Route::get('/frontpage/drinks', 'shopController@drinksindex')->name('drinks');
+
+
+
+
+
 Route::get('/frontpage/contact', 'contactController@index')->name('contact');
 Route::get('/frontpage/shop-details', 'shopdetailsController@index')->name('shop-details');
 Route::get('/frontpage/cartpage', 'cartController@index')->name('cartpage');

@@ -4,12 +4,9 @@
 				<div class="footer-desc footer-company">
 					<div class="footer-logo">
 						<span class="footer-des-logo">
-							<img src="{{asset('images/logo.png')}}" class="footer-logos">
+							<img src="{{asset('images/mjlogo.png')}}" class="footer-logos">
 						</span>
-						<div class="name-title">
-							<span class="des1">MJ Lechon</span>
-							<div class="des2">Fresh Lechon</div>
-						</div>
+						
 					</div>
 					<div class="footer-info">
 						<div class="info-paragraph">

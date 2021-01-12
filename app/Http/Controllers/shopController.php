@@ -31,6 +31,129 @@ class shopController extends Controller
         	return view('frontpage/shop', compact('value'));
       	}
        
- 	}   
-    
+	 } 
+	 
+
+	 public function appetizerindex(){
+
+
+		$value = Session::get('user');
+      	
+		if($value == null)
+		{
+			$value = [
+				"utype" => "notLogin"
+			];
+
+			return view('frontpage/appetizer', compact('value'));
+		}
+		else 
+		{
+			$value = Session::get('user');
+
+		  return view('frontpage/appetizer', compact('value'));
+		}
+
+
+
+	 }
+
+
+	 public function newproductindex(){
+
+
+		$value = Session::get('user');
+      	
+		if($value == null)
+		{
+			$value = [
+				"utype" => "notLogin"
+			];
+
+			return view('frontpage/newproduct', compact('value'));
+		}
+		else 
+		{
+			$value = Session::get('user');
+
+		  return view('frontpage/newproduct', compact('value'));
+		}
+
+
+
+	 }
+
+	 public function combomealindex(){
+
+
+		$value = Session::get('user');
+      	
+		if($value == null)
+		{
+			$value = [
+				"utype" => "notLogin"
+			];
+
+			return view('frontpage/combomeal', compact('value'));
+		}
+		else 
+		{
+			$value = Session::get('user');
+
+		  return view('frontpage/combomeal', compact('value'));
+		}
+
+
+
+	 }
+	
+	 
+
+	 public function dessertindex(){
+
+
+		$value = Session::get('user');
+      	
+		if($value == null)
+		{
+			$value = [
+				"utype" => "notLogin"
+			];
+
+			return view('frontpage/dessert', compact('value'));
+		}
+		else 
+		{
+			$value = Session::get('user');
+
+		  return view('frontpage/dessert', compact('value'));
+		}
+
+
+
+	 }
+
+	 public function drinksindex(){
+
+
+		$value = Session::get('user');
+      	
+		if($value == null)
+		{
+			$value = [
+				"utype" => "notLogin"
+			];
+
+			return view('frontpage/drinks', compact('value'));
+		}
+		else 
+		{
+			$value = Session::get('user');
+
+		  return view('frontpage/drinks', compact('value'));
+		}
+
+
+
+	 }
 }
