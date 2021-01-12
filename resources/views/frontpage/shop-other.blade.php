@@ -1,4 +1,148 @@
 <!DOCTYPE html>
+<html>
+<head>
+	<title>Restaurant System</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	@include('layouts.csslinks')
+
+</head>
+<body>
+@include('headpage.header')
+	<div class="container">
+		<div class="shop-container">
+			<div class="shop-sub-container">
+				<div class="shop-img">
+					<img src="{{ asset('asset/img/59.jpg') }}">
+				</div>
+				<span class="shop-company">
+					<h2>Shop With MJ Lechon</h2>
+				</span>
+			</div>
+			<div class="shop-sub-conts">
+				<div class="shop-sub-container2">
+					<div class="shop-filters">
+						<span><h3>Categories</h3></span>
+						<div class="filter-cat">
+							<span>Seafood</span>
+							<ul>
+								<li>Daing na Bangus</li>
+								<li>Shrimp Sinigang</li>
+							</ul>
+							<span>Meat</span>
+							<ul>
+								<li>Lechon Baboy</li>
+								<li>Lechon Manok</li>
+								<li>Liempo</li>
+								<li>Pork BBQ</li>
+								<li>Liver BBQ</li>
+							</ul>
+						</div>
+					</div>
+					<!-- <div class="price-filter">
+						<span><h3>Filter by price</h3></span>
+						<div id="price-slider">
+							
+						</div>
+
+					</div>	 -->
+					<div class="rating-filter">
+						<span><h3>Average rating</h3></span>
+						<div class="star-ratings">
+							<a href="#">
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<span>(5)</span>
+							</a>
+						</div>
+						<div class="star-ratings">
+							<a href="#">
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<span>(1)</span>
+							</a>
+						</div>	
+					</div>
+					<div class="some-shop-info">
+						<span><h3>Some Shop Info</h3></span>
+						<div class="shop-info-p">
+							Carni Rosso is an online reliable greengrocery and a fruit store for all to find multiple fresh products which strengthen health and add new interesting and rich tastes to your dinner table. We are happy to serve you!
+						</div>
+					</div>			
+				</div>
+				<div class="shop-sub-container3">
+					<div class="shop-sorting">
+						<div class="sort-row-column">
+							<a href="">
+								<i class="fas fa-th" aria-hidden="true"></i>
+							</a>
+							<a href="">
+								<i class="fa fa-bars" aria-hidden="true"></i>
+							</a>
+						</div>
+						<div class="number-show">
+							<span>Showing 1–16 of 20 results</span>
+						</div>
+						<div class="sort-items">
+							<select>
+								<option>Default sorting</option>
+								<option>Sort by popularity</option>
+								<option>Sort by price: Low to High</option>
+								<option>Sort by price: High to Low</option>
+							</select>
+						</div>
+					</div>
+					<div class="shop-items-conts">
+						<div class="shop-items">
+							<img src="{{ asset('images/liempo.jpg') }}">
+						</div>
+						<div class="shop-items">
+							<img src="{{ asset('images/Lechonbaboy.jpg') }}">
+						</div>
+						<div class="shop-items">
+							<img src="{{ asset('images/Lechonmanok.jpg') }}">
+						</div>
+						<div class="shop-items">
+							<img src="{{ asset('images/Liverbbq.jpg') }}">
+						</div>
+						<div class="shop-items">
+							<img src="{{ asset('images/Porkbbq.jpg') }}">
+						</div>
+						<div class="shop-items">
+							<img src="{{ asset('images/Sinigangshrimp.jpg') }}">
+						</div>
+						<div class="shop-items">
+							<img src="{{ asset('images/Breastbbq.jpg') }}">
+						</div>
+						<div class="shop-items">
+							<img src="{{ asset('images/Lechon rice.jpg') }}">
+						</div>
+						<div class="shop-items">
+							<img src="{{ asset('images/Paabbq.jpg') }}">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+@include('headpage.footer')
+</body>
+</html>
+@include('layouts.scripts')
+
+
+
+
+
+
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
   <title>Restaurant System</title>

@@ -17,6 +17,7 @@
   position: relative;
   /*text-align: center;*/
   /*color: #ffffffbf;*/
+  max-width: 1920px;
 }
 
 .f-icon img {
@@ -67,4 +68,123 @@
 a.fter {
   color: orange;
 }
+
+.login-reg-form input{
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  border: unset;
+  margin: 10px 0;
+}
+.login-reg-form input:focus {
+  outline-color: #c4a265;
+}
+
+.signup-button {
+    display: flex;
+    justify-content: center;
+}
+.sign-up {
+    height: 42px;
+    width: 110px;
+    border-radius: 5px;
+    color: #fff;
+}
+a#cancel_signup {
+    padding: 13px 5px;
+    color: #c4a265;
+}
+#resetEmail {
+    width: 50%;
+    height: 45px;
+    border-radius: 5px;
+    border: unset;
+    margin: 10px 0;
+}
+#resetEmail:focus {
+  outline-color: #c4a265;
+}
+.reset-pass {
+    width: 100%;
+    display: flex;
+    /*margin: 62px 0;*/
+}
+.reset-btn {
+    height: 46px;
+    background: #c4a265;
+    border: #c4a265;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 4px;
+}
+form.form-reset {
+    width: 100%;
+    text-align: center;
+}
+a#cancel_reset {
+  color: #c4a265;
+}
+
+/*.shop-container {
+    width: 100%;
+}
+.shop-sub-container {
+    width: 100%;
+    position: relative;
+    height: 533px;
+}
+.shop-sub-container img {
+    width: 100%;
+    object-fit: cover;
+    height: 533px;
+    filter: brightness(50%);
+}
+.shop-company {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 54px;
+    margin: 100px 0;
+    color: #b89352;
+
+}
+.shop-sub-container2 {
+    height: auto;
+}
+i.fa.fa-star {
+    color: gold;
+}
+.shop-sub-container2 {
+    border: solid;
+    width: 228px;
+    line-height: 42px;
+}
+.shop-sub-conts {
+    display: flex;
+    width: 100%;
+}
+.shop-sorting a {
+  color: #c4a265;
+}
+.shop-sorting {
+  display: flex;
+}
+.shop-sub-container3 {
+  border: solid red;
+  width: 64%;
+  height: auto;
+}
+.shop-items-conts {
+    display: flex;
+    flex-wrap: wrap;
+}
+.shop-sorting {
+    display: flex;
+    justify-content: space-between;
+}
+.some-shop-info {
+    width: 231px;
+    height: auto;
+}*/
 /*# sourceMappingURL=bodystyle.css.map */
