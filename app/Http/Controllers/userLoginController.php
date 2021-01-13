@@ -8,7 +8,7 @@ use Auth;
 use Session;
 use App\Login;
 use AuthenticatesUsers;
-
+use Laravel\Socialite\Facades\Socialite;
 
 class userLoginController extends Controller
 {
@@ -18,6 +18,7 @@ class userLoginController extends Controller
 
     public function index(){
         $value = Session::get('user');
+       
             if($value == null)
             {
 
@@ -78,6 +79,83 @@ class userLoginController extends Controller
     }
 
 }
+
+public function redirectToProvider()
+    {
+
+        return Socialite::driver('google')->redirect();
+
+    }
+
+    /**
+     * Obtain the user information from google.
+     * 
+     * @return Response
+     */
+
+     public function handleProviderCallback(){
+
+
+   try{
+
+       $user = Socialite::driver('google')->user();
+        
+         $finduser =User::where('google_id', $user->id)->first();
+
+
+
+      if($finduser){
+
+           Auth::login($finduser);
+
+        
+
+           return redirect('/');
+
+
+
+       }else {
+
+               $newUser = User::create([
+                
+                    'utype' => 'User', 
+                    'name' => $user->name,                   
+                    'email' => $user->email,
+                   'google_id' => $user->id,
+                    'password' => encrypt('123dummy')
+
+                ]);
+               
+        $data = Session::put('user', $newUser);
+        
+        
+        $value = Session::get('user'); 
+       
+     
+
+       if($value['utype']=='User')
+
+       {    
+
+           return view('frontpage.front-page', compact('value'));
+
+       }
+
+         }
+
+
+   }catch (Exception $e) {
+
+    dd($e->getMessage());
+
+ }
+
+
+        
+     }
+
+
+    
 
 
 }

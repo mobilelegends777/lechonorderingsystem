@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,6 +60,30 @@ Route::get('/userpage/myorder', 'myorderController@index')->name('myorder');
 
 
 Route::post('/','userLoginController@login' )->name('test222');
+
+Route::get('login/google', 'userLoginController@redirectToProvider');
+Route::get('login/google/callback', 'userLoginController@handleProviderCallback');
+
+// Route::get('login/google/callback', function () {
+//     $user = Socialite::driver('google')->user();
+
+//     // OAuth 2.0 providers...
+//     $token = $user->token;
+//     $refreshToken = $user->refreshToken;
+//     $expiresIn = $user->expiresIn;
+
+//     // OAuth 1.0 providers...
+//     $token = $user->token;
+//     $tokenSecret = $user->tokenSecret;
+
+//     // All providers...
+//     $user->getId();
+//     $user->getNickname();
+//     $user->getName();
+//     $user->getEmail();
+//     $user->getAvatar();
+// });
+
 // Route::post('/custom', [
 
 // 'uses' => 'userLoginController@login',
