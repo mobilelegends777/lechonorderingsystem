@@ -55,10 +55,8 @@ img.logos {
 
 .headmenu .des1 {
 	color: white;
-    /*border: 1px solid red;*/
-    top: 39px;
-    /*left: 120px;*/
-    font-size: 23px;
+  top: 39px;
+  font-size: 18px;
 }
 
 .headmenu .des2 {
@@ -116,6 +114,7 @@ img.logos {
     margin-left: 60px;
     margin-top: 7px;
     font-size: 15px;
+    width: auto;
 }
 
 .dropdown-content a {
@@ -165,7 +164,7 @@ img.logos {
     /*margin-left: 60px;
     margin-top: 7px;*/
     font-size: 15px;
-    width: 131px;
+    width: auto;
     height: auto;
 }
 .dropdown-account:hover .dropdown-content-account {
@@ -177,6 +176,7 @@ img.logos {
   text-decoration: none;
   display: block;
   font-weight: 700;
+  width: 137px;
 }
 .dropdown-content-account a:hover {
   color: #C4A265;
@@ -935,7 +935,7 @@ span.cart-title {
 }
 .icons-inputs{
     display: flex;
-    width: 30%;
+    width: 32%;
 }
 .icons {
     display: flex;
@@ -1022,12 +1022,15 @@ button.btn.btn-success.btn-block {
     font-size: 18px;
     border-radius: 4px;
 }
-span.forgot-pass {
+.signup-new {
+    padding: 12px 0;
+}
+/*span.forgot-pass {
     background: #2a2c2f;
     padding: 14px;
     margin-left: 10px;
     border-radius: 5px;
-}
+}*/
 .forgot-pass a{
     color: #c4a265;
 }

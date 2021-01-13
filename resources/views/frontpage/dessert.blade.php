@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-  <title>Restaurant System</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('index')
+@section('page_content')
     <link href="{{asset('asset/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('asset/css/style_asset.css')}}" rel="stylesheet">
 	 <link rel="stylesheet" type="text/css" href="{{asset('asset/css/font-awesome.min.css')}}" />
@@ -17,22 +12,14 @@
 	
 	<script type="text/javascript" src="{{asset('asset/js/jquery.aniview.js')}}"></script>
   
-    @include('layouts.csslinks')
+ 
 	<script>
         $(document).ready(function(){
             $('.aniview').AniView();
         });
     </script>
 	
-	
-  </head>
-  
-  
-  
-  
-<body>
 
-@include('headpage.header')
 
 <section id="shop" class="clearfix">
  <div class="shop_main">
@@ -237,15 +224,5 @@
   </div>
  </div>
 </section>
+@endsection
 
-
-
-@include('headpage.footer')
-
-
-
-</body>
-      
-</html>
-
-@include('layouts.scripts')

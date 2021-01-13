@@ -28,20 +28,32 @@
     z-index: 100;
     text-align: center;
     height: auto;
-    padding: 36px 290px;
+    padding: 36px 0;
+    width: 1348px;
+}
+.search-area {
     width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
 }
 #my-searches input {
-    height: 52px;
-    width: 502px;
+    height: 102px;
+    width: 603px;
     border: solid #B89352;
     background-color: #4a4b4d;
+    font-size: 72px;
+    color: #fff;
 }
 #my-searches button {
-    height: 58px;
+    height: auto;
     border: solid #B89352;
     background: #B89352;
+    width: 177px;
+    font-size: 39px;
+    color: #fff;
 }
+
 @media (max-width: 1400px){
 	/*.sub-menu .dropdown,.inputs {
 		display: none;
@@ -238,10 +250,27 @@
 	.dropdown-content-account {
     	right: 0px;
 	}
-
+	.login-reg-form {
+	    margin: 6% auto;
+	}
+	.company-logo {
+    	padding: 6px 36px;
+	}
+	.headmenu .des1 {
+    	font-size: 20px;
+	}
 
 }
 @media (max-width: 768px){
+	.mobile-menu {
+    	width: 20%;
+	}
+	.dropdown-content-account {
+	    font-size: 31px;
+	}
+	.dropdown-content-account a {
+    	width: 216px;
+	}
 	.headmenu .des-logo .logos {
    		margin-left: 20px;
     	margin-top: 5px;
@@ -286,35 +315,36 @@
         justify-content: end;
 	}
 	span.des-logo {
-	    width: 87px;
+	    width: 32%;
 	}
 	.des-logo img {
-	    width: 66px;
+	 	width: 167px;
 	}
 	.headmenu .des2 {
 	    color: white;
-	    position: absolute;
-	     left: unset; 
+	    /*position: absolute;*/
+     	left: unset; 
 	    font-size: 20px;
 	    top: 84px;
 	}
 	.company-title {
-    	padding: 8px 0;
+	    padding: 25px 0;
+	    /*display: none;*/
 	}
 	.headmenu .icons .icons2 {
-	    width: 46px;
+       width: 62px;
 	}
 	.headmenu .icons .icons3 {
-   		width: 46px;
+	    width: 56px;
 	    padding: 7px;
 	}
 	.search-icon {
 		display: flex;
 	}
 	.search-icon img{
-		width: 39px;
-	    margin-right: 11px;
-	    height: 44px;
+	    width: 50px;
+	    margin-right: 15px;
+	    height: 51px;
 	    cursor: pointer;
 	}
 	span.account-c {
@@ -322,13 +352,23 @@
 	}
 	button.menu-toggle {
 	    /*width: 13%;*/
-        width: auto;
+       /* width: auto;
 	    height: 71px;
 	    margin: 14px 0;
 	    font-size: 25px;
         color: #fff;
     	border: solid #B89352;
-    	background-color: #2a2c2f;
+    	background-color: #2a2c2f;*/
+	}
+	button.menu-toggle {
+   	 /* width: 13%; */
+	    width: 100%;
+	    height: 106px;
+	    margin: 14px 0;
+	    font-size: 39px;
+	    color: #fff;
+	    border: solid #B89352;
+	    background-color: #2a2c2f;
 	}
 	.topnav {
 		background-color: #2a2c2f;
@@ -427,6 +467,7 @@
 	div#myDropdown {
 	    position: absolute;
 	    border-radius: 10px;
+        width: auto;
 	}
 	.drpdwn {
 		color: black;
@@ -440,6 +481,10 @@
 	}
 	.drpdwn.meatDrp {
 		margin-left: 562px;
+	    margin-top: 91px;
+	}
+	.drpdwn.seafoodDrp {
+		margin-top: 91px;
 	}
 	#myDropdown {
 		z-index: 99999;
@@ -515,7 +560,7 @@
     	font-size: 35px;
 	}
 	span.footer-des-logo {
-	    width: 100px;
+    	width: 100%;
 	    padding-right: 25px;
 	}
 	span.des1 {
@@ -577,6 +622,12 @@
 	    padding-bottom: 36px;
 	    padding-top: 36px;
 	}
+	.login-reg-form {
+	    margin: 6% 32%;
+	}
+	.icons {
+    	 align-items: unset; 
+	}
 	
 }
 @media (max-width: 411px) {
@@ -584,7 +635,8 @@
 		font-size: 37px;
 	}
 	.headmenu .des2 {
-		font-size: 25px;
+    	font-size: 25px;
+    	width: 100%;
 	}
 	.slide-image {
 		height: 878px;
@@ -630,6 +682,9 @@
 
 }
 @media (max-width: 375px) {
+	.box3-info p {
+    	font-size: 31px;
+	}
 	.f-icon img {
 		width: 86px;
 	}
@@ -637,7 +692,8 @@
 		font-size: 21px;
 	}
 	.f-icon p {
-		font-size: 18px;
+		/*font-size: 18px;*/
+	    font-size: 31px;
 	}
 	.f-icon .buttoncat {
 		padding: 15px 32px;
@@ -664,10 +720,10 @@
 	    min-height: 30px;
 	}
 	span.product-name {
-		font-size: 27px;
+	    font-size: 40px;
 	}
 	.prices {
-		font-size: 27px;
+	    font-size: 38px;
 	}
 	.slider-conts {
     	height: 889px;
@@ -679,6 +735,15 @@
 	.sales1 {
 	    width: 43%;
 	    top: 24%
+	}
+	.dropdown-content-account {
+	    font-size: 35px;
+	}
+	.dropdown-content-account a {
+    	width: 215px;
+	}
+	.mobile-menu {
+    	width: 20%;
 	}
 }
 @media (max-width: 360px) {
@@ -698,18 +763,37 @@
     	text-align: -webkit-center;
 	}
 	.des-logo img {
-    	width: 142px;
+    	width: 502px;
 	}
 	.headmenu .des1 {
-    	font-size: 88px;
+    	font-size: 66px;
 	}
 	.headmenu .des2 {
    		font-size: 46px;
     	width: 100%;
     	position: unset;
 	}
+	.headmenu .des-logo .logos {
+   		margin-left: 0px;
+    	margin-top: 0px;
+	}
+	.dropdown-content-account {
+    	font-size: 43px;
+	    width: 300px;
+	    right: unset;
+	}
+	.dropdown-content-account a{
+    	padding: 24px 27px;
+	}
+	.company-title {
+    	display: none;
+	}
+	.topnav.responsive .ordinary {
+	    font-size: 47px;
+	}
 	span.des-logo {
-    	width: 173px;
+   		width: 100%;
+    	text-align: center;
 	}
 	button.menu-toggle {
     	width: 24%;
