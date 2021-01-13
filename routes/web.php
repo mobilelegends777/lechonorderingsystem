@@ -61,8 +61,16 @@ Route::get('/userpage/myorder', 'myorderController@index')->name('myorder');
 
 Route::post('/','userLoginController@login' )->name('test222');
 
+//Google Login
 Route::get('login/google', 'userLoginController@redirectToProvider');
 Route::get('login/google/callback', 'userLoginController@handleProviderCallback');
+
+
+//Facebook Login
+
+
+
+
 
 // Route::get('login/google/callback', function () {
 //     $user = Socialite::driver('google')->user();

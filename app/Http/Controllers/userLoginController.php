@@ -18,7 +18,8 @@ class userLoginController extends Controller
 
     public function index(){
         $value = Session::get('user');
-       
+            //dd($value);
+
             if($value == null)
             {
 
@@ -80,6 +81,9 @@ class userLoginController extends Controller
 
 }
 
+
+//Google Sign IN
+
 public function redirectToProvider()
     {
 
@@ -99,18 +103,39 @@ public function redirectToProvider()
    try{
 
        $user = Socialite::driver('google')->user();
+
+      
         
-         $finduser =User::where('google_id', $user->id)->first();
+        $finduser =User::where('google_id', $user->id)->first();
 
 
 
       if($finduser){
+        Auth::login($finduser);
 
-           Auth::login($finduser);
-
+        $data1 = [
+            "userid" => $finduser->id,
+            "name" => $finduser->name,
+            "utype" => $finduser->utype,
+            "google_id" => $finduser->google_id
+        ];
         
+        $data = Session::put('user', $data1);
+        
+        
+        $value = Session::get('user'); 
+  
+        
+       if($value['utype']=='User')
 
-           return redirect('/');
+       {    
+
+           return view('frontpage.front-page', compact('value'));
+
+       }
+
+
+        //return redirect('/');
 
 
 
@@ -131,7 +156,7 @@ public function redirectToProvider()
         
         $value = Session::get('user'); 
        
-     
+        Auth::login($newUser);
 
        if($value['utype']=='User')
 

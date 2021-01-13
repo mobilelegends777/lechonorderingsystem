@@ -245,7 +245,7 @@
 	    <div class="logic_1 clearfix">
 		 <div class="grid clearfix">
 					<figure class="effect-jazz">
-						<img src="{{asset('asset/img/image11.jpg')}}" alt="img25">
+						<img src="{{asset('asset/New/Lechonrice.jpg')}}" alt="img25">
 						<figcaption>
 							<a href="shop-details.html">View more</a>						</figcaption>			
 		  </figure>
@@ -255,7 +255,7 @@
 	   </div>
 	    <div class="col-sm-8 blog_2_right_top_inner_3_right clearfix">
 		 <div class="logic_2 clearfix">
-		  <h2><a href="shop-details.html">Semper Porta</a></h2>
+		  <h2><a href="shop-details.html">Lechon rice</a></h2>
 		  <h5><a href="shop-details.html">April 20, 2018</a></h5>
 		 </div>
 		</div>
@@ -265,7 +265,7 @@
 	    <div class="logic_1 clearfix">
 		 <div class="grid clearfix">
 					<figure class="effect-jazz">
-						<img src="{{asset('asset/img/porksteak.jpg')}}" alt="img25">
+						<img src="{{asset('asset/New/Pansitbihon.jpg')}}" alt="img25">
 						<figcaption>
 							<a href="shop-details.html">View more</a>						</figcaption>			
 		  </figure>
@@ -275,7 +275,7 @@
 	   </div>
 	    <div class="col-sm-8 blog_2_right_top_inner_3_right clearfix">
 		 <div class="logic_2 clearfix">
-		  <h2><a href="shop-details.html">Fusce nec tellus</a></h2>
+		  <h2><a href="shop-details.html">Pancit Guisado</a></h2>
 		  <h5><a href="shop-details.html">April 17, 2018</a></h5>
 		 </div>
 		</div>
@@ -285,7 +285,7 @@
 	    <div class="logic_1 clearfix">
 		 <div class="grid clearfix">
 					<figure class="effect-jazz">
-						<img src="{{asset('asset/img/delisyoso.jpg')}}" alt="img25">
+						<img src="{{asset('asset/New/Porkbbq.jpg')}}" alt="img25">
 						<figcaption>
 							<a href="shop-details.html">View more</a>						</figcaption>			
 		  </figure>
@@ -295,7 +295,7 @@
 	   </div>
 	    <div class="col-sm-8 blog_2_right_top_inner_3_right clearfix">
 		 <div class="logic_2 clearfix">
-		  <h2><a href="shop-details.html">Jump For Juice</a></h2>
+		  <h2><a href="shop-details.html">Pork BBQ</a></h2>
 		  <h5><a href="shop-details.html">April 17, 2018</a></h5>
 		 </div>
 		</div>

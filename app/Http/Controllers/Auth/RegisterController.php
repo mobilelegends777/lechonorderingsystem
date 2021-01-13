@@ -75,7 +75,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-         Session::put('user', $data);
+        Session::put('user', $data);
         return User::create([
             'utype' => $data['utype'],  
             'name' => $data['name'], 
