@@ -57,12 +57,9 @@ class userLoginController extends Controller
             "utype" => $user->utype
         ];
         
-        $data = Session::put('user', $data1);
+        $data = Session::put('user', $data1);   
         
-        
-        $value = Session::get('user'); 
-       
-     
+        $value = Session::get('user');  
 
        if($value['utype']=='User')
 
@@ -72,10 +69,7 @@ class userLoginController extends Controller
 
        }
 
-        return redirect()->route('u-login', compact('value'));
-        
-    
-       
+        return redirect()->route('u-login', compact('value')); 
 
     }
 
@@ -133,11 +127,6 @@ public function redirectToProvider()
            return view('frontpage.front-page', compact('value'));
 
        }
-
-
-        //return redirect('/');
-
-
 
        }else {
 
