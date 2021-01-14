@@ -33,33 +33,65 @@
 	</div><br>
 	<div class="check_lm2 clearfix">
 	 <div class="col-sm-6 space_left">
-	  <h4>Contact information</h4>
+	  <h4>Contact information  <span id="show"class="glyphicon glyphicon-edit"></span></h4>
+      <hr>
+      <div id="contacts"class="bg-w clearfix">
+	  <div class="col-sm-6">
+	   <h5 class="mgt normal">Full Name</h5>
+       <h5 class="normal">Email</h5>
+	   <h5 class="normal">Contact #</h5>
+	  </div>
+	  <div class="col-sm-6">
+	   <h5 class="mgt">Zyra Ongue</h5>
+       <h6>zyra@gmail.com</h6>
+	   <h6>+6390578954</h6>
+	  </div>
 	 </div>
-	 <div class="col-sm-6 space_left">
-	 
+     <hr>
 	 </div>
-	</div>
-	<div class="check_lm3 clearfix">
-	 <input class="form-control" placeholder="Email" type="text">
-	
-	 <h4>Shipping address</h4>
-	</div>
    
-	<div class="check_lm4 clearfix">
-	 <div class="col-sm-6 space_left">
-	   <input class="form-control" placeholder="First Name" type="text">
+
+    <div id="myDIV">
+     <div class="check_lm3 clearfix">
+	 <input class="form-control" placeholder="Full Name" type="text">
+
+     </div>
+     <div class="check_lm3 clearfix">
+	 <input class="form-control" placeholder="Email" type="text">
+
+     </div>
+     <div class="check_lm3 clearfix">
+	 <input class="form-control" placeholder="Contact Number" type="text">
+
+     </div>
+     <div class="col-sm-6">
+      <h5 class="mgt text-right _sbtn"><a class="button mgt">Save</a></h5>
 	 </div>
-	 <div class="col-sm-6 space_right">
-	   <input class="form-control" placeholder="Last Name" type="text">
-	 </div>
+    </div>
 	</div>
-    <div class="check_lm3 clearfix">
-     <input class="form-control" placeholder="Contact Number" type="text">
-	</div>
-	<div class="check_lm4 clearfix">
+	
+
+    <h4>Shipping address  <span id="show2"class="glyphicon glyphicon-edit"></h4>
+  
+
+	<div id ="MyAdd"class="check_lm4 clearfix">
 	 <input class="form-control" placeholder="Address" type="text">
 	 <input class="form-control" placeholder="House No" type="text">
-	 <input class="form-control" placeholder="City" type="text">
+     <div class="check_lm4 clearfix">
+	 <div class="col-sm-4 space_left">
+     <input class="form-control" placeholder="City" type="text">
+	 </div>
+	 <div class="col-sm-4 space_left">
+     <input class="form-control" placeholder="Zip Code" type="text">
+	 </div>
+     <div class="col-sm-4 space_all">
+     <input class="form-control" placeholder="Land Mark" type="text">
+	 </div>
+     <div class="col-sm-6">
+      <h5 class="mgt text-right _sbtn"><a class="button mgt">Save</a></h5>
+	 </div>
+	
+	</div>
 	</div>
 	
 	<div class="check_lm5 clearfix">
@@ -67,6 +99,23 @@
 	</div>
 	<div class="checkout_1l3 clearfix">
 	 <hr>
+     <div id="adds"class="bg-w clearfix">
+	  <div class="col-sm-6">
+	   <h5 class="mgt normal">Address</h5>
+       <h5 class="normal">House No.</h5>
+	   <h5 class="normal">City</h5></h5>
+       <h5 class="normal">Zip Code</h5></h5>
+       <h5 class="normal">Land Mark</h5></h5>
+	  </div>
+	  <div class="col-sm-6">
+	   <h5 class="mgt">Bagong Silang Iligan City</h5>
+       <h6>7458</h6>
+	   <h6>Iligan City</h6>
+       <h6>9200</h6>
+       <h6>Basketballan way Ring</h6>
+	  </div>
+	 </div>
+     <hr>
 	 <div class="col-sm-6">
      <h5 class="mgt"><a href="{{asset('frontpage/cartpage')}}"><i class="fa fa-chevron-left"></i> Return to cart</a></h5>
 	 </div>
@@ -152,7 +201,7 @@
 	   <h5 class="mgt normal"><strong>Total</strong></h5>
 	  </div>
 	  <div class="col-sm-6">
-	   <h4 class="mgt"><span class="normal">PHP</span> ₱700.00</h4>
+	   <h4 class="mgt"><span class="normal">PHP</span></span> 700.00</h4>
 	  </div>
       
 	 </div>
@@ -163,10 +212,10 @@
 	   <h5 class="mgt normal"><strong>Payments</strong</h5>
 	  </div>
 	  <div class="col-sm-6">
-      <input type="radio" id="payment" name="payment" value="cdc">
-      <label for="male">Credt / Debit Card <img id="myBtn" class="debit-icon" src="{{asset('images/adddebit.png')}}"></label><br>
+      <input id="myBtn" type="radio" id="payment" name="payment" value="cdc">
+      <label for="male">Credt / Debit Card <img  class="debit-icon" src="{{asset('images/adddebit.png')}}"></label><br>
       <input type="radio" id="payment" name="payment" value="cod">
-      <label for="male">Cash on Delivery</label><br>
+      <label for="male">Cash on Delivery <img  class="debit-icon" src="{{asset('images/cash.png')}}"></label><br>
 	  </div>
       
 	 </div>
@@ -233,6 +282,38 @@ MJ will not have access to your credit card info."class="info"src="{{asset('imag
 </body>
  
 </html>
+
+
+<script>
+$(document).ready(function(){
+ 
+    $("#myDIV").hide();
+    $("#MyAdd").hide();
+
+ 
+  $("#show").click(function(){
+    $("#myDIV").toggle();
+    
+    $("#contacts").toggle();
+    
+
+
+
+  });
+
+  $("#show2").click(function(){
+    $("#MyAdd").toggle();
+    $("#adds").toggle();
+  
+    
+
+
+
+  });
+
+
+});
+</script>
 	
 <script>
 $(document).ready(function(){
@@ -277,4 +358,7 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
 </script>
+

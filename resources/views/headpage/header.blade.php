@@ -78,7 +78,7 @@
 						<img src="{{asset('images/account.png')}}" class="icons2">
 							<div class="dropdown-content-account">
 						
-									<a href="{{asset('/userpage/myorder')}}">My Orders</a>
+									<a href="{{asset('/userpage/myorder')}}">My Order</a>
 									<a href="{{asset('/userpage/myprofile')}}">Edit Profile</a>
 									<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
 	                                                     document.getElementById('logout-form').submit();">

@@ -186,3 +186,16 @@ img.info {
     bottom: 49px;
     width: 25px;
 }
+
+div#contacts {
+    background-color: #d0650f0a;
+}
+div#adds {
+    background-color: #d0650f0a;
+}
+
+._sbtn {
+    position: relative;
+    top: 10px;
+    left: 60px;
+}
