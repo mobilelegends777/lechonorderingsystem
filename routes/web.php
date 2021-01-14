@@ -54,7 +54,10 @@ Route::get('/frontpage/drinks', 'shopController@drinksindex')->name('drinks');
 
 Route::get('/frontpage/contact', 'contactController@index')->name('contact');
 Route::get('/frontpage/shop-details', 'shopdetailsController@index')->name('shop-details');
+
 Route::get('/frontpage/cartpage', 'cartController@index')->name('cartpage');
+Route::get('/frontpage/checkout', 'checkoutController@index')->name('checkout');
+
 Route::get('/userpage/myprofile', 'myprofileController@index')->name('myprofile');
 Route::get('/userpage/myorder', 'myorderController@index')->name('myorder');
 
@@ -67,6 +70,9 @@ Route::get('login/google/callback', 'userLoginController@handleProviderCallback'
 
 
 //Facebook Login
+
+Route::get('login/facebook', 'userLoginController@redirectToFacebook');
+Route::get('login/facebook/callback', 'userLoginController@handleFacebookCallback');
 
 
 

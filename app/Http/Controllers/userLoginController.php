@@ -172,4 +172,102 @@ public function redirectToProvider()
     
 
 
+
+     
+public function redirectToFacebook()
+{
+
+    return Socialite::driver('facebook')->redirect();
+
+}
+
+/**
+ * Obtain the user information from google.
+ * 
+ * @return Response
+ */
+
+ public function handleFacebookCallback(){
+
+
+try{
+
+   $user = Socialite::driver('facebook')->user();
+
+  
+    
+    $finduser =User::where('facebook_id', $user->id)->first();
+
+
+
+  if($finduser){
+    Auth::login($finduser);
+
+    $data1 = [
+        "userid" => $finduser->id,
+        "name" => $finduser->name,
+        "utype" => $finduser->utype,
+        "facebook_id" => $finduser->facebook_id
+    ];
+    
+    $data = Session::put('user', $data1);
+    
+    
+    $value = Session::get('user'); 
+
+    
+   if($value['utype']=='User')
+
+   {    
+
+       return view('frontpage.front-page', compact('value'));
+
+   }
+
+   }else {
+
+           $newUser = User::create([
+            
+                'utype' => 'User', 
+                'name' => $user->name,                   
+                'email' => $user->email,
+               'facebook_id' => $user->id,
+                'password' => encrypt('123dummy')
+
+            ]);
+           
+    $data = Session::put('user', $newUser);
+    
+    
+    $value = Session::get('user'); 
+   
+    Auth::login($newUser);
+
+   if($value['utype']=='User')
+
+   {    
+
+       return view('frontpage.front-page', compact('value'));
+
+   }
+
+     }
+
+
+}catch (Exception $e) {
+
+dd($e->getMessage());
+
+}
+
+
+    
+ }
+
+
+
+
+    
+
+
 }

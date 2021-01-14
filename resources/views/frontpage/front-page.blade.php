@@ -3,7 +3,7 @@
 <div class="container">
 		<div class="slider-conts">
 			<div id="slide-container">
-			  <img class="slide-image mySlides " src="images/city.jpg" style="display: none;">
+			  <img class="slide-image mySlides " src="asset/home/8.jpg" style="display: none;">
 			  <div class="sales1 trans1">
 			  	<span class="sales2">MEAT & SEAFOOD</span>
 					<div class="sales3">FROM BAGSAKAN</div>
@@ -18,7 +18,7 @@
 			</div>
 
 			<div id="slide-container">
-			  <img class="slide-image mySlides" src="images/city2.jpg" style="display: none;">
+			  <img class="slide-image mySlides" src="asset/home/2.jpg" style="display: none;">
 			  <div class="sales1 trans2">
 			  	<span class="sales2">CUTTING & DELIVERY</span>
 					<div class="sales3">QUALITY MONITORING</div>
@@ -31,12 +31,13 @@
 			</div>
 
 			<div id="slide-container">
-			  <img class="slide-image mySlides" src="images/city3.jpg" style="display: none;">
+			  <img class="slide-image mySlides" src="asset/home/1.jpg" style="display: none;">
 			  <div class="sales1 trans3">
 			  	<span class="sales2">WILD SALMON</span>
 					<div class="sales3">CUTTING & DELIVERY</div>
 					<div class="sales4">We offer a huge variety of exceptionally fresh meat farmed in our personal farm</div>
 				<div class="sales5">
+
 			  		<button class="bttn1">Shop Now</button>
 			  		<button class="bttn2">About Store</button>
 			  	</div>
@@ -163,12 +164,12 @@
 			<div class="items-container">
 				<div class="__item">
 					<div class="box2">
-						<img src="images/beefsteak.jpg">
+						<img src="asset/Combo/A1.jpg">
 					</div>
 					<div class="box3">
 						<div class="box3-details">
-							<span class="product-title">Roasted Beef Steak</span>
-							<span class="items-price">150₱</span>
+							<span class="product-title">A1. 2Pcs Pork BBQ & Rice</span>
+							<span class="items-price">₱77</span>
 						</div>
 						<div class="box3-info">
 							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
@@ -177,11 +178,11 @@
 					</div>
 				</div>
 				<div class="__item">
-					<div class="box2"><img src="images/porksteak.jpg"></div>
+					<div class="box2"><img src="asset/Combo/A2.jpg"></div>
 					<div class="box3">
 						<div class="box3-details">
-							<span class="product-title">Roasted Pork Steak</span>
-							<span class="items-price">150₱</span>
+							<span class="product-title">A2. Chicken BBQ Paa & Rice</span>
+							<span class="items-price">₱116</span>
 						</div>
 						<div class="box3-info">
 							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
@@ -190,11 +191,11 @@
 					</div>
 				</div>
 				<div class="__item">
-					<div class="box2"><img src="images/chickenamor.jpg"></div>
+					<div class="box2"><img src="asset/Combo/A3.jpg"></div>
 					<div class="box3">
 						<div class="box3-details">
-							<span class="product-title">Roasted Chickenamor</span>
-							<span class="items-price">150₱</span>
+							<span class="product-title">A3. Chicken BBQ Breast & Rice</span>
+							<span class="items-price">₱129</span>
 						</div>
 						<div class="box3-info">
 							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
@@ -204,12 +205,12 @@
 				</div>
 				<div class="__item">
 					<div class="box2">
-						<img src="images/beefsteak.jpg">
+						<img src="asset/New/Lechonrice.jpg">
 					</div>
 					<div class="box3">
 						<div class="box3-details">
-							<span class="product-title">Roasted Beef Steak</span>
-							<span class="items-price">150₱</span>
+							<span class="product-title">Lechon Rice</span>
+							<span class="items-price">₱50</span>
 						</div>
 						<div class="box3-info">
 							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
@@ -219,11 +220,11 @@
 				</div>
 
 				<div class="__item">
-					<div class="box2"><img src="images/porksteak.jpg"></div>
+					<div class="box2"><img src="asset/New/Liempo.jpg"></div>
 					<div class="box3">
 						<div class="box3-details">
-							<span class="product-title">Roasted Pork Steak</span>
-							<span class="items-price">150₱</span>
+							<span class="product-title">Liempo</span>
+							<span class="items-price">₱254</span>
 						</div>
 						<div class="box3-info">
 							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
@@ -232,11 +233,11 @@
 					</div>
 				</div>
 				<div class="__item">
-					<div class="box2"><img src="images/chickenamor.jpg"></div>
+					<div class="box2"><img src="asset/New/Lechonbaboy.jpg"></div>
 					<div class="box3">
 						<div class="box3-details">
-							<span class="product-title">Roasted Chickenamor</span>
-							<span class="items-price">150₱</span>
+							<span class="product-title">Lechon</span>
+							<span class="items-price">₱254</span>
 						</div>
 						<div class="box3-info">
 							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
@@ -261,7 +262,9 @@
 						</a>
 							<span><strong>Food & Drinks</strong></span>
 							<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
+							<a href="{{asset('frontpage/shop')}}">
 							<button class="buttoncat">See Menu</button>
+							</a>
 					</div>
 				</div>
 				<div class="f-icon">
@@ -271,7 +274,9 @@
 						</a>
 							<span><strong>Clean Kitchen</strong></span>
 							<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
+							<a href="{{asset('frontpage/contact')}}">
 							<button class="buttoncat">Meet our Team</button>
+							</a>
 					</div>
 					
 				</div>
@@ -282,7 +287,9 @@
 						</a>
 							<span><strong>Awesome Locations</strong></span>
 							<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
+							<a href="{{asset('frontpage/contact')}}">
 							<button class="buttoncat">Find our Stores</button>
+							</a>
 					</div>
 				</div>
 				<div class="f-icon">
@@ -292,7 +299,9 @@
 						</a>
 							<span><strong>Healthy Ingredients</strong></span>
 							<p>If you visit one of our stores during the first week of next month you will see our cashiers taking part in a sponsored juggle</p>
+							<a href="{{asset('frontpage/shop')}}">
 							<button class="buttoncat">See Ingredients</button>
+							</a>
 					</div>
 				</div>
 			</div>

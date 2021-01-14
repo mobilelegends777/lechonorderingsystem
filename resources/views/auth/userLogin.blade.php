@@ -15,7 +15,7 @@
         @csrf
             <h1 class="h3 mb-3 font-weight-normal" style="text-align: center;color:#c4a265;"> Sign in</h1>
             <div class="social-log">
-                <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span> </button>
+                <button class="btn facebook-btn social-btn" type="button"><a href="{{asset('login/facebook')}}"><span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span> </button> </a>
             
                 <button class="btn google-btn social-btn" type="button">  <a href="{{asset('login/google')}}"><span><i class="fab fa-google-plus-g"></i> Sign in with Google+</span> </button>
                 </a>
@@ -56,8 +56,10 @@
             <form class="form-signup" method="POST" action="{{ route('register') }}" style="display: none;">
                         @csrf
                 <div class="social-log">
-                    <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span> </button>
-                    <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign in with Google+</span> </button>
+                <button class="btn facebook-btn social-btn" type="button"><a href="{{asset('login/facebook')}}"><span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span> </button> </a>
+            
+            <button class="btn google-btn social-btn" type="button">  <a href="{{asset('login/google')}}"><span><i class="fab fa-google-plus-g"></i> Sign in with Google+</span> </button>
+            </a>
                 </div>
                 <div class="signup-inputs">
                         <!-- <p style="text-align:center;color: #fff;">OR</p> -->

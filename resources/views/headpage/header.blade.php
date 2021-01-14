@@ -27,9 +27,9 @@
 			</span>
 
 			<span class="dropdown">
-				<span class="des5">Fish <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
+				<span class="des5">Sea Food <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
 				<div class="dropdown-content">
-				  <a href="#">Sea Food</a>
+				  <a href="#">Fish</a>
 				</div>
 			</span>
 			<span class="dropdown">
@@ -223,7 +223,9 @@
 					</div>
 					<div class="__bottons">
 						<div class="check-out-sidbar">
+							<a href="{{asset('frontpage/checkout')}}">
 							<button class="checkout-button">Checkout</button>
+							</a>
 						</div>
 						<div class="view-cart-sidebar">
 						<a href="{{asset('/frontpage/cartpage')}}">

@@ -27,9 +27,9 @@
 			</span>
 
 			<span class="dropdown">
-				<span class="des5">Fish <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
+				<span class="des5">Sea Food <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
 				<div class="dropdown-content">
-				  <a href="#">Sea Food</a>
+				  <a href="#">Fish</a>
 				</div>
 			</span>
 			<span class="dropdown">
@@ -43,10 +43,10 @@
 				</div>
 			</span>
 			<span class="dropdown">
-				<span class="des7">About Us <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
+			<a href="{{asset('frontpage/contact')}}">
+				<span class="des7">Contact Us </span>
+				</a>
 				<div class="dropdown-content">
-				  <a href="{{asset('frontpage/contact')}}">Contact</a>
-				  <a href="#">Story</a>
 				</div>
 			</span>
 		</div>

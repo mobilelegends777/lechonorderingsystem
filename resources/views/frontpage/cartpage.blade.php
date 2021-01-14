@@ -123,7 +123,7 @@
 	   <hr>
 	   <h6>Additional comments</h6>
 	   <textarea class="form-control"></textarea>
-	   <h5 class="text-center"><a class="button" href="checkout.html">PROCEED TO CHECKOUT</a></h5><br>
+	   <h5 class="text-center"><a class="button" href="{{asset('frontpage/checkout')}}">PROCEED TO CHECKOUT</a></h5><br>
 	  
 	   <hr>
 	  </div>

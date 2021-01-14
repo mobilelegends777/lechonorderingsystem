@@ -1,0 +1,188 @@
+/*
+Template Name:Shop Cart
+File: Layout CSS
+Author: Templates On Web
+Author URI: http://templateonweb.com/
+Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152">Website Template Licence</a>
+*/
+/*********************checkout****************/
+.check_rm{
+ padding-top:40px;
+ padding-bottom:40px;
+ background:#fafafa;
+ margin-top:40px;
+ }
+.check_lm{
+ padding-top:40px;
+ padding-bottom:40px;
+ }
+.check_lm1 ul li{
+display:inline-block;
+padding-right:10px; 
+ }
+.check_lm1 ul li i{
+font-size:14px;
+margin-left:5px;
+ }
+.check_lm3{
+ margin-top:15px;
+ }
+.check_lm3 .form-control{
+height:45px;
+ }
+.check_1 {
+vertical-align:bottom;
+}
+.check_lm3 h5 span{
+ margin-left:5px;
+ }
+.check_lm4 .form-control{
+height:45px;
+margin-top:15px;
+ }
+.check_lm5 h5 span{
+ margin-left:5px;
+ }
+/*********************checkout_end****************/
+
+
+
+@media screen and (max-width : 767px){
+.checkout{
+ text-align:center;
+ padding-bottom:40px;
+ }
+.checkout_1l3  h5{
+ text-align:center;
+ margin-top:15px!important; 
+ }
+.check_rm{
+margin-top:0; 
+ }
+.checkout_1l2  p{
+margin-top:15px!important; 
+ } 
+.checkout_1l2  h6{
+margin-bottom:15px; 
+text-align:center;
+ } 
+.checkout_1r1i h5{
+margin-top:15px!important; 
+ }
+.checkout_1r1i  h4{
+ margin-top:15px!important;
+ }
+ 
+}
+
+@media (min-width:768px) and (max-width:991px) {
+
+ }
+@media (min-width:992px) and (max-width:1200px) {
+
+ }
+@media (min-width:1201px) and (max-width:1280px) {
+
+ }
+
+ ._center {
+    position: relative;
+    left: 90px;
+    top: -6px;
+}
+
+img.debit-icon {
+    position: relative;
+    width: 23px;
+    left: 7px;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #e2e1dfa1;
+    color: white;
+  }
+  
+  .modal-body {padding: 2px 16px;}
+  
+  .modal-footer {
+    padding: 2px 16px;
+    background-color:#e2e1dfa1;
+    color: white;
+    height: 80px;
+  }
+
+  .modal_btn {
+    position: relative;
+    top: -6px;
+    right: 35%;
+}
+img.modal-payment {
+    position: relative;
+    left: 113px;
+    top: -10px;
+}
+
+img.info {
+    position: absolute;
+    left: 3%;
+    bottom: 49px;
+    width: 25px;
+}
