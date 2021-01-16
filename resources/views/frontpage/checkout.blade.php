@@ -37,31 +37,35 @@
       <hr>
       <div id="contacts"class="bg-w clearfix">
 	  <div class="col-sm-6">
-	   <h5 class="mgt normal">Full Name</h5>
-       <h5 class="normal">Email</h5>
-	   <h5 class="normal">Contact #</h5>
+	   <h5 class="mgt normal"><img class="check-icon" src="{{asset('images/n.png')}}">Full Name</h5>
+       <h5 class="normal"><img class="check-icon" src="{{asset('images/e.png')}}">Email</h5>
+	   <h5 class="normal"><img class="check-icon" src="{{asset('images/p.png')}}">Contact #</h5>
 	  </div>
 	  <div class="col-sm-6">
-	   <h5 class="mgt">Zyra Ongue</h5>
-       <h6>zyra@gmail.com</h6>
-	   <h6>+6390578954</h6>
+	   <h5 class="mgt">{{$value[0]->name}}</h5>
+       <h5>{{$value[0]->email}}</h5>
+	   <h5>{{$value[0]->phone}}</h5>
 	  </div>
 	 </div>
      <hr>
 	 </div>
    
-
+	 
+	 <form metho="POST" action ="{{ route('profileupdated',$value['0']->id) }}" class="form-horizontal" role="form">
+        {{ csrf_field() }}
+        {{ method_field('PATCH') }}
     <div id="myDIV">
+	<input class="form-control" type="hidden" name="id" value="{{$value['0']->id}}">
      <div class="check_lm3 clearfix">
-	 <input class="form-control" placeholder="Full Name" type="text">
+	 <input class="form-control" placeholder="Full Name" type="text" value="{{$value[0]->name}}">
 
      </div>
      <div class="check_lm3 clearfix">
-	 <input class="form-control" placeholder="Email" type="text">
+	 <input class="form-control" placeholder="Email" type="text"value="{{$value[0]->email}}">
 
      </div>
      <div class="check_lm3 clearfix">
-	 <input class="form-control" placeholder="Contact Number" type="text">
+	 <input class="form-control" placeholder="Contact Number" type="text"value="{{$value[0]->phone}}">
 
      </div>
      <div class="col-sm-6">
@@ -69,23 +73,25 @@
 	 </div>
     </div>
 	</div>
+
+	</form>
 	
 
     <h4>Shipping address  <span id="show2"class="glyphicon glyphicon-edit"></h4>
   
 
 	<div id ="MyAdd"class="check_lm4 clearfix">
-	 <input class="form-control" placeholder="Address" type="text">
-	 <input class="form-control" placeholder="House No" type="text">
+	 <input class="form-control" placeholder="Address" type="text" value="{{$value[0]->address}}">
+	 <input class="form-control" placeholder="House No" type="text"value="{{$value[0]->house_no}}">
      <div class="check_lm4 clearfix">
 	 <div class="col-sm-4 space_left">
-     <input class="form-control" placeholder="City" type="text">
+     <input class="form-control" placeholder="City" type="text"value="{{$value[0]->city}}">
 	 </div>
 	 <div class="col-sm-4 space_left">
-     <input class="form-control" placeholder="Zip Code" type="text">
+     <input class="form-control" placeholder="Zip Code" type="text"value="{{$value[0]->zip_code}}">
 	 </div>
      <div class="col-sm-4 space_all">
-     <input class="form-control" placeholder="Land Mark" type="text">
+     <input class="form-control" placeholder="Land Mark" type="text"value="{{$value[0]->land_mark}}">
 	 </div>
      <div class="col-sm-6">
       <h5 class="mgt text-right _sbtn"><a class="button mgt">Save</a></h5>
@@ -101,18 +107,18 @@
 	 <hr>
      <div id="adds"class="bg-w clearfix">
 	  <div class="col-sm-6">
-	   <h5 class="mgt normal">Address</h5>
-       <h5 class="normal">House No.</h5>
-	   <h5 class="normal">City</h5></h5>
-       <h5 class="normal">Zip Code</h5></h5>
-       <h5 class="normal">Land Mark</h5></h5>
+	   <h5 class="mgt normal"><img class="check-icon" src="{{asset('images/a.png')}}">Full Address</h5>
+       <h5 class="normal"><img class="check-icon" src="{{asset('images/h.png')}}">House No.</h5>
+	   <h5 class="normal"><img class="check-icon" src="{{asset('images/city.png')}}">City</h5></h5>
+       <h5 class="normal"><img class="check-icon" src="{{asset('images/zp.png')}}">Zip Code</h5></h5>
+       <h5 class="normal"><img class="check-icon" src="{{asset('images/land.png')}}">Land Mark</h5></h5>
 	  </div>
 	  <div class="col-sm-6">
-	   <h5 class="mgt">Bagong Silang Iligan City</h5>
-       <h6>7458</h6>
-	   <h6>Iligan City</h6>
-       <h6>9200</h6>
-       <h6>Basketballan way Ring</h6>
+	    <h5 class="mgt">{{$value[0]->address}}</h5> 
+       <h5>{{$value[0]->house_no}}</h5>
+	   <h5>{{$value[0]->city}}</h5>
+       <h5>{{$value[0]->zip_code}}</h5>
+       <h5>{{$value[0]->land_mark}}</h5>
 	  </div>
 	 </div>
      <hr>

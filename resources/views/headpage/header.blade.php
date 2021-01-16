@@ -70,31 +70,53 @@
 				<img src="{{asset('images/cart.png')}}" class="icons3" title="Your Cart">
 				</a>
 			</span>
-			@if(Auth::check())
+
+		 @if(Auth::check())
 				<div class="dropdown-account">
 					<span class="account-c ">
-					@if($value['utype']== 'User')
+				
+						@if($value[0]->utype == 'User')
+					
 
 						<img src="{{asset('images/account.png')}}" class="icons2">
 							<div class="dropdown-content-account">
-						
-									<a href="{{asset('/userpage/myorder')}}">My Order</a>
-									<a href="{{asset('/userpage/myprofile')}}">Edit Profile</a>
-									<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-	                                                     document.getElementById('logout-form').submit();">
-	                                        {{ __('Logout') }}</a>
-	                  				<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-	                                        @csrf
-	                                    </form>
-								</div>
-					@else
 
+									<a href="{{asset('/userpage/myorder')}}">My Order</a>
+									<a href="{{asset('userpage/myprofile')}}">Edit Profile</a>
+									<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+														document.getElementById('logout-form').submit();">
+											{{ __('Logout') }}</a>
+									<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+											@csrf
+										</form>
+								</div>
+				
+						@elseif($value['utype'] = 'User')
+
+							<img src="{{asset('images/account.png')}}" class="icons2">
+								<div class="dropdown-content-account">
+
+										<a href="{{asset('/userpage/myorder')}}">My Order</a>
+										<a href="{{asset('userpage/myprofile/'.$value['0']->id)}}">Edit Profile</a>
+										<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+															document.getElementById('logout-form').submit();">
+												{{ __('Logout') }}</a>
+										<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+												@csrf
+											</form>
+									</div>
+
+							}
+
+						@else
 							<img src="{{asset('images/user.png')}}" class="icons2 d-arrow">					
 								<div class="dropdown-content-account">
 
 									<a href="{{asset('/u-login')}}">Login</a>
 									<a href="{{asset('/u-login')}}">SignUp</a>
 								</div>
+						
+								
 					@endif
 					</span>
 				</div>
@@ -109,7 +131,7 @@
 							</div>
 					</span>
 				</div>
-			@endif
+		@endif
 		</div>
 	</div>
 </div>

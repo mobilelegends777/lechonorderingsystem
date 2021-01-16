@@ -199,3 +199,9 @@ div#adds {
     top: 10px;
     left: 60px;
 }
+
+img.check-icon {
+  position: relative;
+  right: 10px;
+  width: 15px;
+}

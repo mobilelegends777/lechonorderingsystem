@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Auth;
+use DB;
 use Session;
 use App\Login;
 use AuthenticatesUsers;
@@ -17,9 +18,10 @@ class userLoginController extends Controller
 
 
     public function index(){
-        $value = Session::get('user');
-            //dd($value);
 
+        $value = Session::get('user');
+           
+        
             if($value == null)
             {
 
@@ -27,19 +29,21 @@ class userLoginController extends Controller
                 "utype" => "notLogin"
             ];
 
-            return view('frontpage.front-page', compact('value'));
+            return view('frontpage.front-page')->with('value', $value);
             }
             else 
             {
-
-
-            return view('frontpage.front-page', compact('value'));
+            return view('frontpage.front-page')->with('value', $value);
             }
 
 
 
 
     }
+
+
+
+
     public function login(Request $request){
 
 
@@ -51,25 +55,27 @@ class userLoginController extends Controller
        
         $user= user::where('email', $request->email)->first();  
 
+
         $data1 = [
-            "userid" => $user->id,
-            "name" => $user->name,
-            "utype" => $user->utype
+      
+            "0"=>$user
+           
         ];
         
         $data = Session::put('user', $data1);   
         
-        $value = Session::get('user');  
+        $value = Session::get('user');
 
-       if($value['utype']=='User')
+
+       if($value[0]->utype=='User')
 
        {    
 
-           return view('frontpage.front-page', compact('value'));
+           return view('frontpage.front-page')->with('value', $value);
 
        }
 
-        return redirect()->route('u-login', compact('value')); 
+        return redirect()->route('u-login')->with('value', $value); 
 
     }
 
@@ -108,10 +114,7 @@ public function redirectToProvider()
         Auth::login($finduser);
 
         $data1 = [
-            "userid" => $finduser->id,
-            "name" => $finduser->name,
-            "utype" => $finduser->utype,
-            "google_id" => $finduser->google_id
+          "0"=>$finduser
         ];
         
         $data = Session::put('user', $data1);
@@ -120,11 +123,11 @@ public function redirectToProvider()
         $value = Session::get('user'); 
   
         
-       if($value['utype']=='User')
+       if($value[0]->utype=='User')
 
        {    
 
-           return view('frontpage.front-page', compact('value'));
+           return view('frontpage.front-page')->with('value', $value);
 
        }
 
@@ -139,19 +142,25 @@ public function redirectToProvider()
                     'password' => encrypt('123dummy')
 
                 ]);
+
+         $value1 = [
+        
+                    "0"=> $newUser
+        
+                ];
                
-        $data = Session::put('user', $newUser);
+        $data = Session::put('user', $value1);
         
-        
+      
         $value = Session::get('user'); 
        
         Auth::login($newUser);
 
-       if($value['utype']=='User')
+       if($value[0]->utype=='User')
 
        {    
 
-           return view('frontpage.front-page', compact('value'));
+           return view('frontpage.front-page')->with('value', $value);
 
        }
 
@@ -204,10 +213,7 @@ try{
     Auth::login($finduser);
 
     $data1 = [
-        "userid" => $finduser->id,
-        "name" => $finduser->name,
-        "utype" => $finduser->utype,
-        "facebook_id" => $finduser->facebook_id
+        "0"=>$finduser
     ];
     
     $data = Session::put('user', $data1);
@@ -263,7 +269,6 @@ dd($e->getMessage());
 
     
  }
-
 
 
 

@@ -18,3 +18,16 @@ img {
 .text-muted {
     font-weight: 300;
 }
+
+.prof {
+    position: relative;
+    left: 38%;
+    color:black
+}
+
+#show-prof:hover {
+    color: rgb(160, 131, 12);
+  }
+  #show-pass:hover {
+    color: rgb(160, 131, 12);
+  }

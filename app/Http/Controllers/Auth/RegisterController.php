@@ -38,7 +38,11 @@ class RegisterController extends Controller
         return '/u-login';
     }
 
-    return '/';
+    echo "<script>alert('Registered Successfully Please Sign In');
+        
+    window.location.href='/u-login';
+    </script>";
+    
 }
 
     /**
@@ -75,8 +79,8 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        Session::put('user', $data);
-        return User::create([
+    Session::put('user', $data);
+     return User::create([
             'utype' => $data['utype'],  
             'name' => $data['name'], 
             'email' => $data['email'],
@@ -84,6 +88,8 @@ class RegisterController extends Controller
             
         ]);
 
+        
+        
             
     }
 }

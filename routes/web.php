@@ -36,8 +36,11 @@ Route::post('/u-login', [ 'as' => 'u-login', 'uses' => 'userLoginController@do']
 Auth::routes();
 
 
-
+//User Login
 Route::get('/', 'userLoginController@index');
+Route::post('/','userLoginController@login' )->name('test222');
+
+
 Route::get('/adminpages/admindashboard', 'adminBoardController@index')->name('admindashboard');
 
 
@@ -56,13 +59,23 @@ Route::get('/frontpage/contact', 'contactController@index')->name('contact');
 Route::get('/frontpage/shop-details', 'shopdetailsController@index')->name('shop-details');
 
 Route::get('/frontpage/cartpage', 'cartController@index')->name('cartpage');
+
+
 Route::get('/frontpage/checkout', 'checkoutController@index')->name('checkout');
 
-Route::get('/userpage/myprofile', 'myprofileController@index')->name('myprofile');
+
+
+
+//Profile
+Route::get('/userpage/myprofile/', 'myprofileController@index')->name('myprofile');
+Route::get('/userpage/myprofile/{id}','myprofileController@show')->name('myprofile2');
+Route::get('/userpage/myprofile/{id}/success','myprofileController@update')->name('profileupdated');
+
+
+
+
 Route::get('/userpage/myorder', 'myorderController@index')->name('myorder');
 
-
-Route::post('/','userLoginController@login' )->name('test222');
 
 //Google Login
 Route::get('login/google', 'userLoginController@redirectToProvider');
@@ -75,48 +88,3 @@ Route::get('login/facebook', 'userLoginController@redirectToFacebook');
 Route::get('login/facebook/callback', 'userLoginController@handleFacebookCallback');
 
 
-
-
-
-// Route::get('login/google/callback', function () {
-//     $user = Socialite::driver('google')->user();
-
-//     // OAuth 2.0 providers...
-//     $token = $user->token;
-//     $refreshToken = $user->refreshToken;
-//     $expiresIn = $user->expiresIn;
-
-//     // OAuth 1.0 providers...
-//     $token = $user->token;
-//     $tokenSecret = $user->tokenSecret;
-
-//     // All providers...
-//     $user->getId();
-//     $user->getNickname();
-//     $user->getName();
-//     $user->getEmail();
-//     $user->getAvatar();
-// });
-
-// Route::post('/custom', [
-
-// 'uses' => 'userLoginController@login',
-// 'as' =>'login.custom'
-// ]);
-
-// Route::group(['middleware' => 'auth'], function(){
-
-//     Route::get('/', function(){
-
-//         return view('index');
-
-//     })->name('index');
-
-//     Route::get('/u-login', function(){
-
-//         return view('auth/userLogin');
-
-//     })->name('u-login');
-
-
-// });

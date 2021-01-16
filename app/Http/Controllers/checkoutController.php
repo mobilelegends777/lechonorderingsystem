@@ -31,9 +31,14 @@ class checkoutController extends Controller
 
         $value = Session::get('user');
        
+       
         return view('frontpage/checkout', compact('value'));
         
     }
+
+
+
+
 
 
 }
