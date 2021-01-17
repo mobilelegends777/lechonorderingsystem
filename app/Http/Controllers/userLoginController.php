@@ -19,21 +19,24 @@ class userLoginController extends Controller
 
     public function index(){
 
-        $value = Session::get('user');
-           
-        
+        // $value1 = Session::get('user');
+        $data = Auth::user();
+        $value = [
+            '0' => $data
+        ];
+            // dd($arr);
             if($value == null)
             {
 
             $value = [
                 "utype" => "notLogin"
             ];
-
             return view('frontpage.front-page')->with('value', $value);
             }
             else 
-            {
-            return view('frontpage.front-page')->with('value', $value);
+            {   
+
+                return view('frontpage.front-page')->with('value', $value);
             }
 
 
@@ -66,7 +69,7 @@ class userLoginController extends Controller
         
         $value = Session::get('user');
 
-
+        // dd(Auth::user());
        if($value[0]->utype=='User')
 
        {    

@@ -14,8 +14,13 @@ class shopController extends Controller
 {
     public function index()
     {
-        $value = Session::get('user');
-      	
+        // $data = Session::get('user');
+        $data = Auth::user();
+
+      	$value = [
+      		"0" => $data
+      	];
+
       	if($value == null)
       	{
       		$value = [
@@ -26,9 +31,9 @@ class shopController extends Controller
       	}
       	else 
       	{
-      		$value = Session::get('user');
+      			// $value = Session::get('user');
+	        	return view('frontpage/shop', compact('value'));
 
-        	return view('frontpage/shop', compact('value'));
       	}
        
 	 } 
@@ -37,7 +42,12 @@ class shopController extends Controller
 	 public function appetizerindex(){
 
 
-		$value = Session::get('user');
+		// $data = Session::get('user');
+		$data = Auth::user();
+        
+      	$value = [
+      		"0" => $data
+      	];
       	
 		if($value == null)
 		{
@@ -49,7 +59,7 @@ class shopController extends Controller
 		}
 		else 
 		{
-			$value = Session::get('user');
+			// $value = Session::get('user');
 
 		  return view('frontpage/appetizer', compact('value'));
 		}
@@ -62,7 +72,12 @@ class shopController extends Controller
 	 public function newproductindex(){
 
 
-		$value = Session::get('user');
+		// $data = Session::get('user');
+		$data = Auth::user();
+        
+      	$value = [
+      		"0" => $data
+      	];
       	
 		if($value == null)
 		{
@@ -74,7 +89,7 @@ class shopController extends Controller
 		}
 		else 
 		{
-			$value = Session::get('user');
+			// $value = Session::get('user');
 
 		  return view('frontpage/newproduct', compact('value'));
 		}
@@ -86,7 +101,12 @@ class shopController extends Controller
 	 public function combomealindex(){
 
 
-		$value = Session::get('user');
+		// $data = Session::get('user');
+		$data = Auth::user();
+        
+      	$value = [
+      		"0" => $data
+      	];
       	
 		if($value == null)
 		{
@@ -98,7 +118,7 @@ class shopController extends Controller
 		}
 		else 
 		{
-			$value = Session::get('user');
+			// $value = Session::get('user');
 
 		  return view('frontpage/combomeal', compact('value'));
 		}
@@ -112,7 +132,12 @@ class shopController extends Controller
 	 public function dessertindex(){
 
 
-		$value = Session::get('user');
+		// $data = Session::get('user');
+		$data = Auth::user();
+        
+      	$value = [
+      		"0" => $data
+      	];
       	
 		if($value == null)
 		{
@@ -124,7 +149,7 @@ class shopController extends Controller
 		}
 		else 
 		{
-			$value = Session::get('user');
+			// $value = Session::get('user');
 
 		  return view('frontpage/dessert', compact('value'));
 		}
@@ -136,7 +161,12 @@ class shopController extends Controller
 	 public function drinksindex(){
 
 
-		$value = Session::get('user');
+		// $data = Session::get('user');
+		$data = Auth::user();
+        
+      	$value = [
+      		"0" => $data
+      	];
       	
 		if($value == null)
 		{
@@ -148,7 +178,7 @@ class shopController extends Controller
 		}
 		else 
 		{
-			$value = Session::get('user');
+			// $value = Session::get('user');
 
 		  return view('frontpage/drinks', compact('value'));
 		}

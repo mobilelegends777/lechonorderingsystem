@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use App\User;
 use Auth;
 use Session;
+use Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -33,16 +34,11 @@ class RegisterController extends Controller
      */
     protected function redirectTo()
 {
-    if (auth()->user()->role_id == 1) {
+    // if (auth()->user()->role_id == 1) {
 
-        return '/u-login';
-    }
-
-    echo "<script>alert('Registered Successfully Please Sign In');
-        
-    window.location.href='/u-login';
-    </script>";
-    
+    //     return '/u-login';
+    // }
+    return Request::session()->get('url.intended') ?? '/';
 }
 
     /**
@@ -79,8 +75,10 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-    Session::put('user', $data);
-     return User::create([
+            Session::put('user', $data);
+
+     $newUser = User::create([
+        
             'utype' => $data['utype'],  
             'name' => $data['name'], 
             'email' => $data['email'],
@@ -89,7 +87,7 @@ class RegisterController extends Controller
         ]);
 
         
-        
+    return $newUser;
             
     }
 }

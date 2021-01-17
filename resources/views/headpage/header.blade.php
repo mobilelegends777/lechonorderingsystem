@@ -75,23 +75,23 @@
 				<div class="dropdown-account">
 					<span class="account-c ">
 				
-						@if($value[0]->utype == 'User')
+						@if($value[0]['utype'] == 'User')
 					
 
-						<img src="{{asset('images/account.png')}}" class="icons2">
-							<div class="dropdown-content-account">
+							<img src="{{asset('images/account.png')}}" class="icons2">
+								<div class="dropdown-content-account">
 
-									<a href="{{asset('/userpage/myorder')}}">My Order</a>
-									<a href="{{asset('userpage/myprofile')}}">Edit Profile</a>
-									<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-														document.getElementById('logout-form').submit();">
-											{{ __('Logout') }}</a>
-									<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-											@csrf
-										</form>
-								</div>
+										<a href="{{asset('/userpage/myorder')}}">My Order</a>
+										<a href="{{asset('userpage/myprofile')}}">Edit Profile</a>
+										<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+															document.getElementById('logout-form').submit();">
+												{{ __('Logout') }}</a>
+										<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+												@csrf
+											</form>
+									</div>
 				
-						@elseif($value['utype'] = 'User')
+						{{--@elseif($value['utype'] == 'User')
 
 							<img src="{{asset('images/account.png')}}" class="icons2">
 								<div class="dropdown-content-account">
@@ -106,7 +106,7 @@
 											</form>
 									</div>
 
-							}
+							}--}}
 
 						@else
 							<img src="{{asset('images/user.png')}}" class="icons2 d-arrow">					

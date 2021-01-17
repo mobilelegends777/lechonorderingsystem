@@ -16,7 +16,13 @@ class shopdetailsController extends Controller
 
 
 
-        $value = Session::get('user');
+        // $data = Session::get('user');
+        $data = Auth::user();
+        
+        $value = [
+            "0" => $data
+        ];
+
         if($value == null)
         {
         	$value = [

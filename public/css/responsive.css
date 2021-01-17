@@ -174,7 +174,7 @@
 	.headmenu .sub-menu {
    	 	font-size: 20px;
     	padding: 10px;
-    	width: 40%;
+    	width: 50%;
 	}
 	/*.headmenu .inputs {
 		left: 81%;
@@ -257,7 +257,7 @@
     	padding: 6px 36px;
 	}
 	.headmenu .des1 {
-    	font-size: 20px;
+	    font-size: 18px;
 	}
 
 }
@@ -529,7 +529,8 @@
     	width: 63%;
 	}
 	.__item .box3 span {
-	    font-size: 30px;
+	    /*font-size: 30px;*/
+		font-size: 29px;
 	    font-weight: bold;
 	}
 	.box3-info p {
@@ -628,7 +629,21 @@
 	.icons {
     	 align-items: unset; 
 	}
-	
+	.login-reg-form input {
+		 height: 96px;
+	}
+	button.btn.btn-success.btn-block {
+    	 height: 96px;
+	}
+	.btn-primary#btn-signup {
+		 height: 96px;
+    }
+    button.btn.facebook-btn.social-btn {
+		 height: 96px;
+    }
+    button.btn.google-btn.social-btn {
+		 height: 96px;
+    }
 }
 @media (max-width: 411px) {
 	.headmenu .des1 {

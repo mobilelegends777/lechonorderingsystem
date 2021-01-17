@@ -364,17 +364,17 @@ $(()=>{
     $('.login-reg-form #btn-signup').click(toggleSignUp);
     $('.login-reg-form #cancel_signup').click(toggleSignUp);
 })
-$('.arrangeRow').on('click', function(e){
-  // alert(1);
-    e.preventDefault();
-    $('.shop-items-conts').show();
-    $('.shop-items-conts-col').hide();
+// $('.arrangeRow').on('click', function(e){
+//   // alert(1);
+//     e.preventDefault();
+//     $('.shop-items-conts').show();
+//     $('.shop-items-conts-col').hide();
 
-});
-$('.arrangeCol').on('click', function(e){
-    e.preventDefault();
-    $('.shop-items-conts').hide();
-    $('.shop-items-conts-col').show();
-});
+// });
+// $('.arrangeCol').on('click', function(e){
+//     e.preventDefault();
+//     $('.shop-items-conts').hide();
+//     $('.shop-items-conts-col').show();
+// });
 
 </script>

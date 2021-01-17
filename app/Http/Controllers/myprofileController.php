@@ -24,8 +24,12 @@ class myprofileController extends Controller
     public function index()
     {
        
-        $value = Session::get('user'); 
+        $data = Auth::user(); 
+        $value = [
+            '0' => $data
+        ];
         //$data = User::find('$value["userid"]');
+        // dd($value);
         return view('userpage/myprofile', compact('value'));
        
     }
