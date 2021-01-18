@@ -137,19 +137,21 @@
 </div>
 	<div class="topnav subtop" id="myTopnav">
 		<div class="ordinary">
-			<a href="{{asset('frontpage/shop')}}">Shop</a>
+			<a href="{{asset('/')}}">Home</a>
 		</div>
     	<div class="ordinary dropbtn1">
-    		<a href="#">Fish <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"> </a>
+    		<a href="{{asset('frontpage/shop')}}">Shop </a>
     	</div>
+    	<div class="ordinary">
+			
+				  <a href="{{asset('frontpage/special-order')}}">Special Order</a>
+			
+	
+		 </div>
     	<div class="ordinary dropbtn2">
     		<a href="#">Menu <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></a>
-		 </div>
-    	<div class="ordinary">
-    		<a href="#">About Us <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></a>
     	</div>
-	    <div class="ordinary"><a href="#">Blocks
-	    	<img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></a>
+	    <div class="ordinary"><a href="{{asset('frontpage/contact')}}">Contact Us</a>
 	    </div>
 
 	</div>
