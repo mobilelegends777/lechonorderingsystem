@@ -32,7 +32,7 @@
 	  <h3 class="bold col_1">Past Order</h3>
 	 </div>
 	 <div class="col-sm-6">
-      <h5 class="text-right"><a href="#">Continue Shopping</a></h5>
+      <h5 class="text-right"><a href="{{asset('frontpage/shop')}}">Continue Shopping</a></h5>
 	 </div>
 	</div>
 	<div class="cart_3 clearfix">

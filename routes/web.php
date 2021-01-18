@@ -45,6 +45,7 @@ Route::get('/adminpages/admindashboard', 'adminBoardController@index')->name('ad
 
 
 Route::get('/frontpage/shop', 'shopController@index')->name('shop');
+Route::get('/frontpage/special-order', 'shopController@specialorder')->name('special');
 Route::get('/frontpage/appetizer', 'shopController@appetizerindex')->name('appetizer');
 Route::get('/frontpage/newproduct', 'shopController@newproductindex')->name('newproduct');
 Route::get('/frontpage/combomeal', 'shopController@combomealindex')->name('combomeal');

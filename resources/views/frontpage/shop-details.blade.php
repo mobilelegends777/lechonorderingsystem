@@ -56,10 +56,23 @@
 	   <h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i> <a href="#">(1 customer review)</a></h5>
 	   <h3><span class="dollar_tab">Php 74.00</span> Php 73.00</h3>
 	   <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odionec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris nec tellus sed augue semper porta.</h6>
-	   <h6>SKU: 002</h6>
-	   <h6>CATEGORY:<a href="#"> Meat</a></h6>
-	   <h6>Tag:<a href="#"> Chicken</a></h6>
+	   <hr>
+	  
+	   <label id ="selct" class="container-special">Special Order
+		<input id ="selct" type="checkbox">
+		<span class="checkmark"></span>
+		</label>
+		
+		<div id="special" style="display: none">
+		
+		<label for="dateofbirth">Date of Delivery: </label>
+		<input id="date"type="date" name="dateofbirth" id="dateofbirth"><br> <br>
+
+		<label for="appt">Select a time:</label>
+  		<input id="time"type="time" id="appt" name="appt">
+		</div>
 	  </div>
+	  <hr>
 	 <div class="shop_right_inner_2 clearfix">
 	    <div class="col-sm-3 details_2_right_inner_2_left clearfix">
 		 <div class="details_2_right_inner_2_left_inner">
@@ -206,5 +219,22 @@ $(document).ready(function() {
 			prefix: '★'
 		});
 	});
+</script>
+
+<script>
+
+
+$(function () {
+        $("#selct").click(function () {
+            if ($(this).is(":checked")) {
+				$("#special").show();
+               
+            } else {
+                $("#special").show();
+               
+            }
+        });
+		
+    });
 </script>
 @endsection

@@ -70,7 +70,7 @@ class myprofileController extends Controller
        
         echo "<script>alert('Record Updated Successfully');
         
-        window.location.href='/userpage/myprofile/$id';
+        window.location.href='/userpage/myprofile';
         </script>";
         
     }

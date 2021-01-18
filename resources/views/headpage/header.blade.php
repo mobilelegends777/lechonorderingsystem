@@ -27,9 +27,9 @@
 			</span>
 
 			<span class="dropdown">
-				<span class="des5">Sea Food <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
+				<span class="des5">Special Order <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
 				<div class="dropdown-content">
-				  <a href="#">Fish</a>
+				  <a href="{{asset('frontpage/special-order')}}">Lechon</a>
 				</div>
 			</span>
 			<span class="dropdown">

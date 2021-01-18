@@ -29,7 +29,10 @@ class checkoutController extends Controller
     public function index()
     {
 
-        $value = Session::get('user');
+        $data = Auth::user();
+        $value = [
+            '0' => $data
+        ];
        
        
         return view('frontpage/checkout', compact('value'));

@@ -186,4 +186,35 @@ class shopController extends Controller
 
 
 	 }
+
+
+
+	 public function specialorder(){
+
+
+		// $data = Session::get('user');
+		$data = Auth::user();
+        
+      	$value = [
+      		"0" => $data
+      	];
+      	
+		if($value == null)
+		{
+			$value = [
+				"utype" => "notLogin"
+			];
+
+			return view('frontpage/special-order', compact('value'));
+		}
+		else 
+		{
+			// $value = Session::get('user');
+
+		  return view('frontpage/special-order', compact('value'));
+		}
+
+
+
+	 }
 }

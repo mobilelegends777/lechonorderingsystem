@@ -22,7 +22,10 @@ class myorderController extends Controller
     public function index()
     {
 
-        $value = Session::get('user');
+        $data = Auth::user(); 
+        $value = [
+            '0' => $data
+        ];
 
         return view('userpage/myorder', compact('value'));
     }
