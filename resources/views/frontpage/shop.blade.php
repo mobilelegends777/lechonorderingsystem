@@ -3,6 +3,7 @@
 
     <link href="{{asset('asset/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('asset/css/style_asset.css')}}" rel="stylesheet">
+	<link href="{{asset('asset/css/custom.css')}}" rel="stylesheet">
 	 <link rel="stylesheet" type="text/css" href="{{asset('asset/css/font-awesome.min.css')}}" />
 	 <link href="https://fonts.googleapis.com/css?family=Spirax" rel="stylesheet">
 	 <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Londrina+Outline" rel="stylesheet">
@@ -160,50 +161,7 @@
 	 </div>
 	 
 	</div>
-	  <div class="center_1_middle clearfix">
-	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
-	  <div class="center_1_middle_left_1_inner">
-	   <div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
-                      <div class="img"><img src="{{asset('asset/Appetizers/small.jpg')}}" alt="img"></div>
-                      <div class="info">
-                        <h3>add to cart</h3>
-                      </div></a></div>
-	  </div>
-	  <div class="center_1_middle_left_2_inner">
-	  <h3><a href="{{asset('frontpage/shop-details')}}">Atsara Small</a></h3>
-	  <h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
-	  <h6>Php 33.00</h6>
-	 </div>
-	 </div>
-     <div class="col-sm-4 center_1_middle_left_1 clearfix">
-	  <div class="center_1_middle_left_1_inner">
-	   <div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
-                      <div class="img"><img src="{{asset('asset/Appetizers/big.jpg')}}" alt="img"></div>
-                      <div class="info">
-                        <h3>add to cart</h3>
-                      </div></a></div>
-	  </div>
-	  <div class="center_1_middle_left_2_inner">
-	  <h3><a href="{{asset('frontpage/shop-details')}}">Atsara Big</a></h3>
-	  <h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
-	  <h6>Php 85.00</h6>
-	 </div>
-	 </div>
-	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
-	  <div class="center_1_middle_left_1_inner">
-	   <div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
-                      <div class="img"><img src="{{asset('asset/Appetizers/palapa.jpg')}}" alt="img"></div>
-                      <div class="info">
-                        <h3>add to cart</h3>
-                      </div></a></div>
-	  </div>
-	  <div class="center_1_middle_left_2_inner">
-	  <h3><a href="{{asset('frontpage/shop-details')}}">Palapa</a></h3>
-	  <h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
-	  <h6>Php 33.00</h6>
-	 </div>
-	 </div>
-	</div>
+
 	 </div>
 	 <div class="shop_2_left_top_inner_3 clearfix">
 	  <div class="blog_2_left_main_inner_4 clearfix">
@@ -238,68 +196,11 @@
 	   <h5><a href="{{asset('frontpage/drinks')}}">Drinks (4)</a></h5>
 	
 	
-		  <h2>Promo Meals</h2>
+	
 	 </div>
-	  <div class="blog_2_right_top_inner_3 clearfix">
-	   <div class="col-sm-4 blog_2_right_top_inner_3_left clearfix">
-	    <div class="logic_1 clearfix">
-		 <div class="grid clearfix">
-					<figure class="effect-jazz">
-						<img src="{{asset('asset/New/Lechonrice.jpg')}}" alt="img25">
-						<figcaption>
-							<a href="shop-details.html">View more</a>						</figcaption>			
-		  </figure>
-					
-	  </div>
-		</div>
-	   </div>
-	    <div class="col-sm-8 blog_2_right_top_inner_3_right clearfix">
-		 <div class="logic_2 clearfix">
-		  <h2><a href="shop-details.html">Lechon rice</a></h2>
-		  <h5><a href="shop-details.html">April 20, 2018</a></h5>
-		 </div>
-		</div>
-	  </div>
-	  <div class="blog_2_right_top_inner_3 clearfix">
-	   <div class="col-sm-4 blog_2_right_top_inner_3_left clearfix">
-	    <div class="logic_1 clearfix">
-		 <div class="grid clearfix">
-					<figure class="effect-jazz">
-						<img src="{{asset('asset/New/Pansitbihon.jpg')}}" alt="img25">
-						<figcaption>
-							<a href="shop-details.html">View more</a>						</figcaption>			
-		  </figure>
-					
-	  </div>
-		</div>
-	   </div>
-	    <div class="col-sm-8 blog_2_right_top_inner_3_right clearfix">
-		 <div class="logic_2 clearfix">
-		  <h2><a href="shop-details.html">Pancit Guisado</a></h2>
-		  <h5><a href="shop-details.html">April 17, 2018</a></h5>
-		 </div>
-		</div>
-	  </div>
-	  <div class="blog_2_right_top_inner_3 clearfix">
-	   <div class="col-sm-4 blog_2_right_top_inner_3_left clearfix">
-	    <div class="logic_1 clearfix">
-		 <div class="grid clearfix">
-					<figure class="effect-jazz">
-						<img src="{{asset('asset/New/Porkbbq.jpg')}}" alt="img25">
-						<figcaption>
-							<a href="shop-details.html">View more</a>						</figcaption>			
-		  </figure>
-					
-	  </div>
-		</div>
-	   </div>
-	    <div class="col-sm-8 blog_2_right_top_inner_3_right clearfix">
-		 <div class="logic_2 clearfix">
-		  <h2><a href="shop-details.html">Pork BBQ</a></h2>
-		  <h5><a href="shop-details.html">April 17, 2018</a></h5>
-		 </div>
-		</div>
-	  </div>
+
+
+
 	  <div class="blog_2_right_top_inner_2 clearfix">
 
 	 </div>

@@ -8,7 +8,7 @@
 	 <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Londrina+Outline" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Londrina+Outline|Yanone+Kaffeesatz" rel="stylesheet">
     <script src="{{asset('asset/js/jquery-2.1.1.min.js')}}"></script>
-	<script src="{{asset('asset/js/bootstrap.min.js')}}"></script>
+	  <script src="{{asset('asset/js/bootstrap.min.js')}}"></script>
 	
 	<script type="text/javascript" src="{{asset('asset/js/jquery.aniview.js')}}"></script>
 	@include('layouts.csslinks')
@@ -42,6 +42,7 @@
         <div class="prof">
         <a id="show-prof"class="col-lg-3">Edit Profile</a>
         <a id="show-pass"class="">Change Password</a>
+        <a id="show-address"class="">Addressess</a>
         </div>
 
         <hr>
@@ -122,6 +123,55 @@
             </div>
           </div>
           </div>
+
+          <div id="addresses">
+
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Home Address:</label>
+            <div class="col-lg-8">
+              <input class="form-control" name="address"type="text" value="{{$value['0']->address}}">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">City:</label>
+            <div class="col-lg-8">
+              <input class="form-control" name="city"type="text" value="{{$value['0']->city}}">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Zip Code:</label>
+            <div class="col-lg-8">
+              <input class="form-control" name="zip"type="text" value="{{$value['0']->zip_code}}">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Latitude:</label>
+            <div class="col-lg-8">
+            <input class="form-control" id ="latitude" name="lat" type="text" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Longitude:</label>
+            <div class="col-lg-8">
+           <input class="form-control" id ="longitude" name="longi" type="text" value="">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Land Mark:</label>
+            <div class="col-lg-8">
+              <input class="form-control" name="land"type="text" value="">
+            </div>
+          </div>
+
+          <div id="map">
+
+          <iframe width="600" height="400" frameborder="0" style="border:0" src="" allowfullscreen></iframe>
+
+
+          </div>
+
+          </div>
           <div class="form-group">
             <label class="col-md-3 control-label"></label>
             <div class="col-md-8">  
@@ -143,12 +193,15 @@
 $(document).ready(function(){
  
     $("#changess-pass").hide();
+    $("#addresses").hide();
+
 
  
   $("#show-pass").click(function(){
     
     $("#changess-pass").toggle();
     $("#edit-profile").hide();
+    $("#addresses").hide();
    
 
 
@@ -158,6 +211,18 @@ $(document).ready(function(){
   $("#show-prof").click(function(){
     $("#edit-profile").toggle();
     $("#changess-pass").hide();
+    $("#addresses").hide();
+  
+    
+
+
+
+  });
+
+  $("#show-address").click(function(){
+    $("#edit-profile").hide();
+    $("#changess-pass").hide();
+    $("#addresses").toggle();
   
     
 
@@ -167,5 +232,57 @@ $(document).ready(function(){
 
 
 });
+</script>
+
+
+<script>
+  $(document).ready(function(){
+  if ("geolocation" in navigator){
+
+    navigator.geolocation.getCurrentPosition(function (p){
+        showUserDetails(p.coords.latitude, p.coords.longitude);
+    }, function (e) {
+         ipLookup();
+    });
+
+  }else 
+       ipLookup();
+  });
+
+  function showUserDetails(latitude, longitude, additional){
+
+      var position = latitude + " " +longitude;
+
+      // console.log(position);
+
+      $("#latitude").val(latitude);
+      $("#longitude").val(longitude);
+    
+      var url ="https://www.google.com/maps/embed/v1/view?zoom=18&center="+position+"&key=AIzaSyCJT39R2xiBTLho8PChzfmDhgd0frzXLNM";
+      $("iframe").attr('src',url);
+
+      if (typeof additional != "undefined"){
+
+
+      }
+
+  }
+
+  function ipLookup() {
+    $.get('https://api.userinfo.io/userinfos', function (r){
+
+        showUserDetails(r.position.latitude, r.position.longitude);
+
+        
+
+    });
+
+
+  }
+    
+
+  
+
+
 </script>
 @endsection

@@ -359,11 +359,18 @@ body{
 .center_1_middle{
    padding-top:30px;
   }
+
+  /* i add padding top and bottom */
+
 .center_1_middle_left_2_inner{
    text-align:center;
+   padding-top: 2rem;
+   padding-bottom: 3rem;
   }
+  /* i change font size from 22 to 25 */
+  
 .center_1_middle_left_2_inner h3 a{
-  font-size:22px;
+  font-size:18px;
   letter-spacing:2px;
   text-decoration:none;
   color:#333333;
@@ -1572,6 +1579,7 @@ figure.effect-jazz:hover figcaption::after {
 /*********************shop****************/
 #shop{
  background-image:url(../img/59.jpg);
+ background-attachment: fixed;
   background-repeat:no-repeat;
   background-size:cover;
  }
@@ -1607,8 +1615,12 @@ figure.effect-jazz:hover figcaption::after {
     background: none!important;
     border-color: #57595a3b;
 }
+
+/* i add 1rem */
+
 .shower_right .panel-primary {
     border: 2px dotted #67e683!important;
+    padding: 1rem;
 }
 .panel-heading {
    border-bottom: none!important;
@@ -2426,8 +2438,11 @@ figure.effect-jazz:hover figcaption::after {
     padding-top: 10px;
     padding-bottom: 30px;
 }
+
+/* i change fontsize from 22 for 25 */
+
 .shower_left h4 {
-    font-size: 20px;
+    font-size: 25px;       
     text-align: center;
 }
 .shop_2_right_top {

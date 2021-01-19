@@ -169,7 +169,7 @@
 	.headmenu .des2 {
 		top: 65px;
 	    left: 89px;
-	    font-size: 14px;
+	    font-size: 13px;
 	}
 	.headmenu .sub-menu {
    	 	font-size: 20px;
@@ -260,6 +260,14 @@
 	    font-size: 18px;
 	}
 
+	/* new file for 1024px */
+	.company-logo {
+		width: 26%;
+		display: flex;
+		justify-content: center;
+		padding: 10px 0;
+	}
+
 }
 @media (max-width: 768px){
 	.mobile-menu {
@@ -332,7 +340,7 @@
 	    /*display: none;*/
 	}
 	.headmenu .icons .icons2 {
-       width: 62px;
+       width: 52px;
 	}
 	.headmenu .icons .icons3 {
 	    width: 56px;
@@ -643,14 +651,16 @@
     }
     button.btn.google-btn.social-btn {
 		 height: 96px;
-    }
+	}
+
+	
 }
 @media (max-width: 411px) {
 	.headmenu .des1 {
 		font-size: 37px;
 	}
 	.headmenu .des2 {
-    	font-size: 25px;
+    	font-size: 28px;
     	width: 100%;
 	}
 	.slide-image {
@@ -694,7 +704,7 @@
 		/*width: 361px;*/
 	    width: 500px;
 	}
-
+	
 }
 @media (max-width: 375px) {
 	.box3-info p {

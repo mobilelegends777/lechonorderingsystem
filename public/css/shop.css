@@ -1,0 +1,102 @@
+
+/************************** new media file ************/
+@media (max-width: 411px) {
+.center_1_middle_left_2_inner h5 {
+    font-size: 20px;
+    color: rgb(255 165 0 / 68%);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.center_1_middle_left_2_inner h3 a {
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: #333333;
+}
+.center_1_middle_left_2_inner h6 {
+    font-size: 30px;
+    color: #666;
+}
+.blog_2_left_main_inner_4 ul .last_tab a {
+    padding: 12px!important;
+}
+.shower_left h4 {
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.blog_2_left_main_inner_4 .active_3 a {
+    padding: 14px 18px;
+    background: #66CC66;
+    color: #FFFFFF!important;
+    border-radius: 100%;
+}
+.blog_2_left_main_inner_4 ul li a {
+    font-size: 26px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #333333;
+}
+.blog_2_right_top_inner_2 h5 a {
+    font-size: 26px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #999;
+}
+.shop_2_right_top_inner_2 ul li p {
+    font-size: 30px;
+    color: #666666;
+    padding-top: 15px;
+}
+.blog_2_right_top_inner_3 {
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 65px;
+    padding-right: 65px;
+}
+.logic_2 h2 a {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: #333333;
+}
+.blog_2_right_top_inner_3_right.clearfix {
+    position: relative;
+    min-height: 1px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 35px;
+}
+.logic_2 h5 a {
+    font-size: 30px;
+    text-decoration: none;
+    color: #999;
+}
+.shower_right .panel-primary {
+    border: 2px dotted #67e683!important;
+    padding: 1.5rem;
+}
+.shower_right .panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 26px;
+    color: #716b6b;
+}
+.blog_2_right_top_inner_2 h2 {
+    font-size: 36px;
+    color: #333333;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.blog_2_right_top_inner_3_left {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 8px solid rgb(255 165 0);
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+}

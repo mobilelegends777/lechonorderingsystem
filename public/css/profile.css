@@ -21,8 +21,8 @@ img {
 
 .prof {
     position: relative;
-    left: 38%;
-    color:black
+    left: 29%;
+    color: black;
 }
 
 #show-prof:hover {
@@ -31,3 +31,11 @@ img {
   #show-pass:hover {
     color: rgb(160, 131, 12);
   }
+  div#map {
+    position: relative;
+    left: 177px;
+}
+a#show-address {
+    position: relative;
+    left: 90px;
+}
