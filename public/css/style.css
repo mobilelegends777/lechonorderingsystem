@@ -957,45 +957,54 @@ span.cart-title {
 
 /*login */
 .login-reg-form {
-    /*width: 500px;*/
-    width: auto;
-    border: solid #2a2c2f;
-    margin: 6% 37%;
+    width: 100%;
     height: auto;
-    /*background: rgb(222, 220, 220);*/
-    background: #2a2c2fc7;
     border-radius: 5px;
-
+    padding: 10px 0;
+    text-align: -webkit-center;
 }
 .social-log {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+      /* display: flex; */
+    width: 68%;
+    justify-content: center;
+}
+.forgot-pass {
+    text-align: center;
 }
 .account-log {
     /*height: 112px;*/
     height: auto;
     display: block;
-    width: 100%;
-    padding: 23px 0;
+    width: 66%;
+    padding: 9px 0;
     text-align: center;
 }
 .signin-forgot {
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 18px 0;
+    padding: 4px 0;
 }
-
+form.form-signin {
+    width: 600px;
+    background: #2a2c2fc7;
+    padding: 34px 0;
+    margin: 115px 0;
+}
 .signup-new {
     text-align: center;
 }
-
+form.form-signup {
+    width: 37.5rem;
+    background: #2a2c2fc7;
+    padding: 54px 0;
+    margin: 115px 0;
+}
 .login-container {
-    width: 358px;
+    /*width: 358px;*/
     height: auto;
     /*border: solid red;*/
-    margin: 35px 70px;
+    /*margin: 35px 70px;*/
 }
 
 button.btn.facebook-btn.social-btn {
@@ -1017,7 +1026,7 @@ button.btn.google-btn.social-btn {
 }
 button.btn.btn-success.btn-block {
     height: 46px;
-    width: 100%;
+    width: 66%;
     background: #c4a265;
     border: #c4a265;
     color: #fff;
@@ -1044,12 +1053,27 @@ button.btn.btn-success.btn-block {
     color: #fff;
     font-size: 18px;
     padding: 18px;
-    width: 100%;
+    width: 66%;
 }
 .login-body {
     background-image: url(../asset/img/599.jpg);
+    position: relative;
+    height: auto;
 }
-
-
-
 /*end login*/
+
+#slider-range {
+    background: #ccc;
+    width: 72%;
+    height: 6px;
+}
+.ui-slider-range.ui-corner-all.ui-widget-header {
+    background: #c4a256;
+}
+#slider-range span {
+    background: #C4A265;
+    border-radius: 50%;
+    height: 13px;
+    width: 13px;
+    outline: none;
+}

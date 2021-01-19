@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width initia-scale=1">
-    <title>Login</title>
-
-    @include('layouts.csslinks')
-</head>
-<body class="login-body">
-@include('headpage.headerbackup')
+@extends('index')
+@section('page_content')
+<div class="login-body">
     <div class="login-reg-form">
         <div class="login-container">
         <form class="form-signin" method="POST" action="{{ route('test222') }}">
@@ -48,7 +40,7 @@
                 <form action="/reset/password/" class="form-reset">
                     <div class="input-button">
                             <input type="email" id="resetEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-                            <button class="btn btn-primary btn-block reset-btn" type="submit">Reset Password</button>
+                            <button class="btn reset-btn" type="submit">Reset Password</button>
                     </div>
                             <a href="#" id="cancel_reset"><i class="fas fa-angle-left"></i> Back</a>
                 </form>
@@ -105,10 +97,6 @@
             </form>
         </div>
     </div>
-    
-    @include('headpage.footer')
-</body>
-</html>
-
-@include('layouts.scripts')
+</div>
+@endsection
 

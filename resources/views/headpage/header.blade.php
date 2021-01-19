@@ -65,8 +65,8 @@
 			<span class="search-icon" >
 				<img src="{{asset('images/search-icon.png')}}">
 			</span>
-			<span class="add-to">
-			<a href="{{asset('frontpage/cartpage')}}">
+			<span class="add-to" >
+			<a href="{{asset('frontpage/cartpage')}}" >
 				<img src="{{asset('images/cart.png')}}" class="icons3" title="Your Cart">
 				</a>
 			</span>
@@ -91,22 +91,6 @@
 											</form>
 									</div>
 				
-						{{--@elseif($value['utype'] == 'User')
-
-							<img src="{{asset('images/account.png')}}" class="icons2">
-								<div class="dropdown-content-account">
-
-										<a href="{{asset('/userpage/myorder')}}">My Order</a>
-										<a href="{{asset('userpage/myprofile/'.$value['0']->id)}}">Edit Profile</a>
-										<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-															document.getElementById('logout-form').submit();">
-												{{ __('Logout') }}</a>
-										<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-												@csrf
-											</form>
-									</div>
-
-							}--}}
 
 						@else
 							<img src="{{asset('images/user.png')}}" class="icons2 d-arrow">					
@@ -141,9 +125,19 @@
 		</div>
     	<div class="ordinary dropbtn1">
     		<a href="#">Fish <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"> </a>
+	    		<div id="myDropdown" class="drpdwn seafoodDrp" style="display:none;">
+				    <a href="#home">Sea Food</a>
+				</div>
     	</div>
     	<div class="ordinary dropbtn2">
     		<a href="#">Menu <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></a>
+	    		<div id="myDropdown" class="drpdwn meatDrp" style="display:none;">
+					  <a href="{{asset('frontpage/newproduct')}}">New Products</a>
+					  <a href="{{asset('frontpage/combomeal')}}">Combo Meals</a>
+					  <a href="{{asset('frontpage/dessert')}}">Desserts</a>
+					  <a href="{{asset('frontpage/drinks')}}">Drinks</a>
+					  <a href="{{asset('frontpage/appetizer')}}">Appetizers</a>
+				</div>
 		 </div>
     	<div class="ordinary">
     		<a href="#">About Us <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></a>
@@ -155,20 +149,15 @@
 	</div>
 <!-- end mobile toggles -->
 	<!-- modals -->
-		<div id="myDropdown" class="drpdwn seafoodDrp" style="display:none;">
-			    <a href="#home">Sea Food</a>
-		</div>
-		<div id="myDropdown" class="drpdwn meatDrp" style="display:none;">
-				  <a href="{{asset('frontpage/newproduct')}}">New Products</a>
-				  <a href="{{asset('frontpage/combomeal')}}">Combo Meals</a>
-				  <a href="{{asset('frontpage/dessert')}}">Desserts</a>
-				  <a href="{{asset('frontpage/drinks')}}">Drinks</a>
-				  <a href="{{asset('frontpage/appetizer')}}">Appetizers</a>
-		</div>
+		
+		
 		<div class="__search" id="my-searches" style="display:none">
 			<span>
 				<div class="search-area">
 						<input type="text" name=""><button>Search</button>
+				</div>
+				<div class="back-search">
+					<i class="fa fa-arrow-left" aria-hidden="true"></i>
 				</div>
 			</span>
 		</div>
