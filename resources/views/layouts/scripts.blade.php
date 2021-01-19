@@ -228,10 +228,10 @@ var currentMousePos = { x: -1, y: -1 };
 
 // mobile topnav dropdown
 $(document).ready(function(){
-  $('.dropbtn1').on('click',function(){
+  $('.dropbtn1').hover(function(){
       $('.seafoodDrp').toggle();
   });
-  $('.dropbtn2').on('click',function(){
+  $('.dropbtn2').hover(function(){
       $('.meatDrp').toggle();
   });
 
@@ -278,6 +278,9 @@ var mouse_is_inside = false;
 })
 // mobile search input
   $('.search-icon').click(function(){
+      $('#my-searches').toggle();
+  });
+  $('.back-search').on('click', function(){
       $('#my-searches').toggle();
   });
 // end search mobile
@@ -364,17 +367,42 @@ $(()=>{
     $('.login-reg-form #btn-signup').click(toggleSignUp);
     $('.login-reg-form #cancel_signup').click(toggleSignUp);
 })
-// $('.arrangeRow').on('click', function(e){
-//   // alert(1);
-//     e.preventDefault();
-//     $('.shop-items-conts').show();
-//     $('.shop-items-conts-col').hide();
+$('.arrangeRow').on('click', function(e){
+    // alert(1);
+    e.preventDefault();
+    $('.shop-items-conts').show();
+    $('.shop-items-conts-col').hide();
 
-// });
-// $('.arrangeCol').on('click', function(e){
-//     e.preventDefault();
-//     $('.shop-items-conts').hide();
-//     $('.shop-items-conts-col').show();
-// });
+});
+$('.arrangeCol').on('click', function(e){
+    e.preventDefault();
+    $('.shop-items-conts').hide();
+    $('.shop-items-conts-col').show();
+});
 
+    // mobile filters
+    showFilter();
+    function showFilter(){
+      $('.filter-show-btn').on('click', function(){
+          $('.shop-conts').addClass('showing');
+      });
+    }
+    $('.close-btn').on('click', function(){
+        $('.shop-conts').removeClass('showing');
+    });
+    // end mobile filters
+
+</script>
+<script type="text/javascript">
+   $( "#slider-range" ).slider({
+      range: true,
+      min: 1,
+      max: 500,
+      values: [ 75, 300 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( " " + ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( " " + $( "#slider-range" ).slider( "values", 0 ) +
+      " - " + $( "#slider-range" ).slider( "values", 1 ));
 </script>
