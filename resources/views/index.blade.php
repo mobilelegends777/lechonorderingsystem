@@ -3,18 +3,18 @@
 <head>
 	<title>Restaurant System</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width initia-scale=1">
+	<meta name="viewport" content="width=device-width">
 	@include('layouts.csslinks')
 
 </head>
 <body>
+	<div class="container">
+		@include('headpage.header')
+		
+			 @yield('page_content')
 
-	@include('headpage.header')
-	
-		 @yield('page_content')
-
-	@include('headpage.footer')
-
+		@include('headpage.footer')
+	</div>
 </body>
 </html>
 

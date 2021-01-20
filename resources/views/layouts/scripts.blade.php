@@ -1,7 +1,7 @@
 <script>
 
 var myIndex = 0;
-carousel()
+carousel();
 function carousel() {
   // var x = $('.myslides');
   var i;
@@ -29,11 +29,11 @@ function carousel() {
 </script>
 <script>
 
-//this is temporary
-$(window).resize(function(){
-  this.location.reload(false);
+// this is temporary
+$(this).resize(function(){
+  this.location.reload();
 });
-//end reload every resize;
+// end reload every resize;
   var windowWidth = $(window).width();
 
 if(windowWidth < 768 && windowWidth != 360){
@@ -83,6 +83,7 @@ else {
     autoplay: true,
     slidesToShow: 4,
     slidesToScroll: 1
+
   });
 }//end if
 
@@ -217,11 +218,11 @@ var currentMousePos = { x: -1, y: -1 };
 // topnav show
   function myFunction() {
     var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
+    if (x.className === "topnav subtop") {
        $('#my-searches').hide();
         x.className += " responsive";
     }else{
-        x.className = "topnav";
+        x.className = "topnav subtop";
     }
 } 
 // end topnav show
@@ -311,20 +312,20 @@ var mouse_is_inside = false;
 </script>
 
 <script>
-$(document).ready(function(){
+// $(document).ready(function(){
 
-/*****Fixed Menu******/
-var secondaryNav = $('.cd-secondary-nav'),
-   secondaryNavTopPosition = secondaryNav.offset().top;
-	$(window).on('scroll', function(){
-		if($(window).scrollTop() > secondaryNavTopPosition ) {
-			secondaryNav.addClass('is-fixed');	
-		} else {
-			secondaryNav.removeClass('is-fixed');
-		}
-	});	
+// /*****Fixed Menu******/
+// var secondaryNav = $('.cd-secondary-nav'),
+//    secondaryNavTopPosition = secondaryNav.offset().top;
+// 	$(window).on('scroll', function(){
+// 		if($(window).scrollTop() > secondaryNavTopPosition ) {
+// 			secondaryNav.addClass('is-fixed');	
+// 		} else {
+// 			secondaryNav.removeClass('is-fixed');
+// 		}
+// 	});	
 	
-});
+// });
 </script>
 
 <script>
@@ -400,9 +401,9 @@ $('.arrangeCol').on('click', function(e){
       max: 500,
       values: [ 75, 300 ],
       slide: function( event, ui ) {
-        $( "#amount" ).val( " " + ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+        $( "#amount" ).text( " " + ui.values[ 0 ] + " - " + ui.values[ 1 ] );
       }
     });
-    $( "#amount" ).val( " " + $( "#slider-range" ).slider( "values", 0 ) +
+    $( "#amount" ).text( " " + $( "#slider-range" ).slider( "values", 0 ) +
       " - " + $( "#slider-range" ).slider( "values", 1 ));
 </script>

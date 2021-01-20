@@ -3,8 +3,7 @@
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<div class="container">
-		<div class="shop-container">
+	<div class="shop-container">
 			<div class="shop-sub-container">
 				<div class="shop-img">
 					<img src="{{ asset('asset/img/59.jpg') }}">
@@ -46,7 +45,10 @@
   							</div>
   							<div id="slider-range"></div>
   							<div class="price-range">
-  								<input type="text" id="amount" readonly style="border:0; color: black; font-weight:bold;">
+  								<label for="amount">Price: </label>
+  								<span id="amount"></span>
+  								<br>
+  								<button class="filter-by-price">Filter</button>
   							</div>
 							<span>Menu</span>
 							<ul>
@@ -418,7 +420,4 @@
 				</div>
 				</div>
 			</div>
-		</div>
-
-	</div>
 	@endsection

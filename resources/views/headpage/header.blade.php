@@ -124,19 +124,11 @@
 			<a href="{{asset('/')}}">Home</a>
 		</div>
     	<div class="ordinary dropbtn1">
-
-    		<a href="#">Fish <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"> </a>
-	    		<div id="myDropdown" class="drpdwn seafoodDrp" style="display:none;">
-				    <a href="#home">Sea Food</a>
-				</div>
-
+    		<a href="{{asset('frontpage/shop')}}">Shop 
     	</div>
     	<div class="ordinary">
-			
-				  <a href="{{asset('frontpage/special-order')}}">Special Order</a>
-			
-	
-		 </div>
+		  	<a href="{{asset('frontpage/special-order')}}">Special Order</a>
+	 	</div>
     	<div class="ordinary dropbtn2">
     		<a href="#">Menu <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></a>
 	    		<div id="myDropdown" class="drpdwn meatDrp" style="display:none;">

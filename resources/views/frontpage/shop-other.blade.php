@@ -80,151 +80,183 @@
 	   </div>
 	  </div>
 	 </div>
-	 <div class="shop_2_left_top_inner_2 clearfix">
-	  <div class="center_1_middle clearfix">
-	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
-	  <div class="center_1_middle_left_1_inner">
-	   <div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
-                      <div class="img"><img src="{{asset('asset/New/slicebread.jpg')}}" alt="img"></div>
-                      <div class="info">
-                        <h3>add to cart</h3>
-                      </div></a></div>
-	  </div>
-	  <div class="center_1_middle_left_2_inner">
-	  <h3><a href="{{asset('frontpage/shop-details')}}">Slice Bread</a></h3>
-	  <h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
-	  <h6>Php 72.00</h6>
-	 </div>
-	 </div>
-	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
-	  <div class="center_1_middle_left_1_inner">
-	   <div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
-                      <div class="img"><img src="{{asset('asset/New/Breastbbq.jpg')}}" alt="img"></div>
-                      <div class="info">
-                        <h3>add to cart</h3>
-                      </div></a></div>
-	  </div>
-	  <div class="center_1_middle_left_2_inner">
-	  <h3><a href="{{asset('frontpage/shop-details')}}">Breast Chicken BBQ</a></h3>
-	  <h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
-	  <h6>Php 97.00</h6>
-	 </div>
-	 </div>
-	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
-	  <div class="center_1_middle_left_1_inner">
-	   <div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
-                      <div class="img"><img src="{{asset('asset/New/Porkbbq.jpg')}}" alt="img"></div>
-                      <div class="info">
-                        <h3>add to cart</h3>
-                      </div></a></div>
-	  </div>
-	  <div class="center_1_middle_left_2_inner">
-	  <h3><a href="{{asset('frontpage/shop-details')}}">Pork BBQ</a></h3>
-	  <h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
-	  <h6>Php 23.00</h6>
-	 </div>
-	 </div>
+<div class="shop_2_left_top_inner_2 clearfix">
+	<div class="center_1_middle clearfix">
+
+		<div class="col-sm-4 center_1_middle_left_1 clearfix">
+
+			<div class="center_1_middle_left_1_inner">
+				<div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
+				  <div class="img"><img src="{{asset('asset/New/slicebread.jpg')}}" alt="img"></div>
+					<div class="info">
+						<h3>add to cart</h3>
+					</div></a>
+				</div>
+			</div>
+			<div class="center_1_middle_left_2_inner">
+				<h3><a href="{{asset('frontpage/shop-details')}}">Slice Bread</a></h3>
+				<h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
+				<h6>Php 72.00</h6>
+			</div>
+
+		</div>
+
+		<div class="col-sm-4 center_1_middle_left_1 clearfix">
+
+			<div class="center_1_middle_left_1_inner">
+				<div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
+				  <div class="img"><img src="{{asset('asset/New/Breastbbq.jpg')}}" alt="img"></div>
+				  <div class="info">
+				    <h3>add to cart</h3>
+				  </div></a>
+				</div>
+			</div>
+			<div class="center_1_middle_left_2_inner">
+				<h3><a href="{{asset('frontpage/shop-details')}}">Breast Chicken BBQ</a></h3>
+				<h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
+				<h6>Php 97.00</h6>
+			</div>
+
+		</div>
+
+		<div class="col-sm-4 center_1_middle_left_1 clearfix">
+
+			<div class="center_1_middle_left_1_inner">
+				<div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
+				  <div class="img"><img src="{{asset('asset/New/Porkbbq.jpg')}}" alt="img"></div>
+				  <div class="info">
+				    <h3>add to cart</h3>
+				  </div></a>
+				</div>
+			</div>
+			<div class="center_1_middle_left_2_inner">
+				<h3><a href="{{asset('frontpage/shop-details')}}">Pork BBQ</a></h3>
+				<h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
+				<h6>Php 23.00</h6>
+			</div>
+
+		</div>
+
 	</div>
-	  <div class="center_1_middle clearfix">
-	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
-	  <div class="center_1_middle_left_1_inner">
-	   <div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
-                      <div class="img"><img src="{{asset('asset/Combo/A1.jpg')}}" alt="img"></div>
-                      <div class="info">
-                        <h3>add to cart</h3>
-                      </div></a></div>
-	  </div>
-	  <div class="center_1_middle_left_2_inner">
-	  <h3><a href="{{asset('frontpage/shop-details')}}">A1. 2Pcs Pork BBQ & Rice</a></h3>
-	  <h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
-	  <h6>Php 77.00</h6>
-	 </div>
-	 </div>
-	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
-	  <div class="center_1_middle_left_1_inner">
-	   <div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
-                      <div class="img"><img src="{{asset('asset/Combo/A2.jpg')}}" alt="img"></div>
-                      <div class="info">
-                        <h3>add to cart</h3>
-                      </div></a></div>
-	  </div>
-	  <div class="center_1_middle_left_2_inner">
-	  <h3><a href="{{asset('frontpage/shop-details')}}">A2. Chicken BBQ Paa & Rice</a></h3>
-	  <h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
-	  <h6>Php 116.00</h6>
-	 </div>
-	 </div>
-	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
-	  <div class="center_1_middle_left_1_inner">
-	   <div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
-                      <div class="img"><img src="{{asset('asset/Combo/A3.jpg')}}" alt="img"></div>
-                      <div class="info">
-                        <h3>add to cart</h3>
-                      </div></a></div>
-	  </div>
-	  <div class="center_1_middle_left_2_inner">
-	  <h3><a href="{{asset('frontpage/shop-details')}}">A3. Chicken BBQ Breast & Rice</a></h3>
-	  <h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
-	  <h6>Php 129.00</h6>
-	 </div>
-	 </div>
-	 
+	<div class="center_1_middle clearfix">
+
+		<div class="col-sm-4 center_1_middle_left_1 clearfix">
+
+			<div class="center_1_middle_left_1_inner">
+				<div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
+				  <div class="img"><img src="{{asset('asset/Combo/A1.jpg')}}" alt="img"></div>
+					<div class="info">
+						<h3>add to cart</h3>
+					</div></a>
+				</div>
+			</div>
+			<div class="center_1_middle_left_2_inner">
+				<h3><a href="{{asset('frontpage/shop-details')}}">A1. 2Pcs Pork BBQ & Rice</a></h3>
+				<h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
+				<h6>Php 77.00</h6>
+			</div>
+
+		</div>
+
+		<div class="col-sm-4 center_1_middle_left_1 clearfix">
+
+			<div class="center_1_middle_left_1_inner">
+				<div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
+				  <div class="img"><img src="{{asset('asset/Combo/A2.jpg')}}" alt="img"></div>
+					<div class="info">
+						<h3>add to cart</h3>
+					</div></a>
+				</div>
+			</div>
+			<div class="center_1_middle_left_2_inner">
+				<h3><a href="{{asset('frontpage/shop-details')}}">A2. Chicken BBQ Paa & Rice</a></h3>
+				<h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
+				<h6>Php 116.00</h6>
+			</div>
+
+		</div>
+
+		<div class="col-sm-4 center_1_middle_left_1 clearfix">
+
+			<div class="center_1_middle_left_1_inner">
+				<div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
+					<div class="img"><img src="{{asset('asset/Combo/A3.jpg')}}" alt="img"></div>
+						<div class="info">
+							<h3>add to cart</h3>
+						</div></a>
+				</div>
+			</div>
+			<div class="center_1_middle_left_2_inner">
+				<h3><a href="{{asset('frontpage/shop-details')}}">A3. Chicken BBQ Breast & Rice</a></h3>
+				<h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
+				<h6>Php 129.00</h6>
+			</div>
+
+		</div>
+
 	</div>
-	  <div class="center_1_middle clearfix">
-	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
-	  <div class="center_1_middle_left_1_inner">
-	   <div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
-                      <div class="img"><img src="{{asset('asset/Appetizers/small.jpg')}}" alt="img"></div>
-                      <div class="info">
-                        <h3>add to cart</h3>
-                      </div></a></div>
-	  </div>
-	  <div class="center_1_middle_left_2_inner">
-	  <h3><a href="{{asset('frontpage/shop-details')}}">Atsara Small</a></h3>
-	  <h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
-	  <h6>Php 33.00</h6>
-	 </div>
-	 </div>
-     <div class="col-sm-4 center_1_middle_left_1 clearfix">
-	  <div class="center_1_middle_left_1_inner">
-	   <div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
-                      <div class="img"><img src="{{asset('asset/Appetizers/big.jpg')}}" alt="img"></div>
-                      <div class="info">
-                        <h3>add to cart</h3>
-                      </div></a></div>
-	  </div>
-	  <div class="center_1_middle_left_2_inner">
-	  <h3><a href="{{asset('frontpage/shop-details')}}">Atsara Big</a></h3>
-	  <h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
-	  <h6>Php 85.00</h6>
-	 </div>
-	 </div>
-	 <div class="col-sm-4 center_1_middle_left_1 clearfix">
-	  <div class="center_1_middle_left_1_inner">
-	   <div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
-                      <div class="img"><img src="{{asset('asset/Appetizers/palapa.jpg')}}" alt="img"></div>
-                      <div class="info">
-                        <h3>add to cart</h3>
-                      </div></a></div>
-	  </div>
-	  <div class="center_1_middle_left_2_inner">
-	  <h3><a href="{{asset('frontpage/shop-details')}}">Palapa</a></h3>
-	  <h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
-	  <h6>Php 33.00</h6>
-	 </div>
-	 </div>
+	<div class="center_1_middle clearfix">
+
+		<div class="col-sm-4 center_1_middle_left_1 clearfix">
+			<div class="center_1_middle_left_1_inner">
+				<div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
+				  <div class="img"><img src="{{asset('asset/Appetizers/small.jpg')}}" alt="img"></div>
+					  <div class="info">
+					    <h3>add to cart</h3>
+					  </div></a>
+				</div>
+			</div>
+			<div class="center_1_middle_left_2_inner">
+				<h3><a href="{{asset('frontpage/shop-details')}}">Atsara Small</a></h3>
+				<h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
+				<h6>Php 33.00</h6>
+			</div>
+		</div>
+
+		<div class="col-sm-4 center_1_middle_left_1 clearfix">
+			<div class="center_1_middle_left_1_inner">
+				<div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
+				  <div class="img"><img src="{{asset('asset/Appetizers/big.jpg')}}" alt="img"></div>
+					  <div class="info">
+					    <h3>add to cart</h3>
+					  </div></a>
+				</div>
+			</div>
+			<div class="center_1_middle_left_2_inner">
+				<h3><a href="{{asset('frontpage/shop-details')}}">Atsara Big</a></h3>
+				<h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
+				<h6>Php 85.00</h6>
+			</div>
+		</div>
+
+		<div class="col-sm-4 center_1_middle_left_1 clearfix">
+			<div class="center_1_middle_left_1_inner">
+				<div class="ih-item square effect6 from_top_and_bottom"><a href="{{asset('frontpage/shop-details')}}">
+				  <div class="img"><img src="{{asset('asset/Appetizers/palapa.jpg')}}" alt="img"></div>
+					  <div class="info">
+					    <h3>add to cart</h3>
+					  </div></a>
+				</div>
+			</div>
+			<div class="center_1_middle_left_2_inner">
+				<h3><a href="{{asset('frontpage/shop-details')}}">Palapa</a></h3>
+				<h5><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></h5>
+				<h6>Php 33.00</h6>
+			</div>
+		</div>
+
 	</div>
-	 </div>
-	 <div class="shop_2_left_top_inner_3 clearfix">
-	  <div class="blog_2_left_main_inner_4 clearfix">
-	  <ul>
-	   <li class="active_3"><a href="#">1</a></li>
-	    <li><a href="shop-details.html">2</a></li>
-		 <li class="last_tab"><a href="shop-details.html"><i class="fa fa-chevron-right"></i></a></li>
-	  </ul>
-	 </div>
-	 </div>
-	</div>
+</div>
+			<div class="shop_2_left_top_inner_3 clearfix">
+				<div class="blog_2_left_main_inner_4 clearfix">
+					<ul>
+						<li class="active_3"><a href="#">1</a></li>
+						<li><a href="shop-details.html">2</a></li>
+						<li class="last_tab"><a href="shop-details.html"><i class="fa fa-chevron-right"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
    </div>
    <div class="col-sm-3 shop_2_right clearfix">
     <div class="shop_2_right_top clearfix">
@@ -247,18 +279,18 @@
 	  <h5><a href="{{asset('frontpage/dessert')}}"> Desserts (3)</a></h5>
 	   <h5><a href="{{asset('frontpage/drinks')}}">Drinks (4)</a></h5>
 	
-	
-		  <h2>Promo Meals</h2>
+	<h2>Promo Meals</h2>
 	 </div>
 	  <div class="blog_2_right_top_inner_3 clearfix">
 	   <div class="col-sm-4 blog_2_right_top_inner_3_left clearfix">
 	    <div class="logic_1 clearfix">
 		 <div class="grid clearfix">
-					<figure class="effect-jazz">
-						<img src="{{asset('asset/img/image11.jpg')}}" alt="img25">
-						<figcaption>
-							<a href="shop-details.html">View more</a>						</figcaption>			
-		  </figure>
+			<figure class="effect-jazz">
+				<img src="{{asset('asset/img/image11.jpg')}}" alt="img25">
+				<figcaption>
+					<a href="shop-details.html">View more</a>
+				</figcaption>			
+			</figure>
 					
 	  </div>
 		</div>
@@ -274,11 +306,12 @@
 	   <div class="col-sm-4 blog_2_right_top_inner_3_left clearfix">
 	    <div class="logic_1 clearfix">
 		 <div class="grid clearfix">
-					<figure class="effect-jazz">
-						<img src="{{asset('asset/img/porksteak.jpg')}}" alt="img25">
-						<figcaption>
-							<a href="shop-details.html">View more</a>						</figcaption>			
-		  </figure>
+			<figure class="effect-jazz">
+				<img src="{{asset('asset/img/porksteak.jpg')}}" alt="img25">
+				<figcaption>
+					<a href="shop-details.html">View more</a>						
+				</figcaption>			
+			</figure>
 					
 	  </div>
 		</div>
@@ -294,11 +327,12 @@
 	   <div class="col-sm-4 blog_2_right_top_inner_3_left clearfix">
 	    <div class="logic_1 clearfix">
 		 <div class="grid clearfix">
-					<figure class="effect-jazz">
-						<img src="{{asset('asset/img/delisyoso.jpg')}}" alt="img25">
-						<figcaption>
-							<a href="shop-details.html">View more</a>						</figcaption>			
-		  </figure>
+				<figure class="effect-jazz">
+					<img src="{{asset('asset/img/delisyoso.jpg')}}" alt="img25">
+					<figcaption>
+						<a href="shop-details.html">View more</a>						
+					</figcaption>			
+				</figure>
 					
 	  </div>
 		</div>

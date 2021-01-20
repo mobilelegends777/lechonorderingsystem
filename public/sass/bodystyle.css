@@ -451,8 +451,9 @@ button.addcart {
       font-size: 34px;
     }
     .sort-items select {
-      font-size: 25px;
+      font-size: 48px;
       border: unset;
+      width: 23.3125rem;
     }
     .shop-images img {
       height: 18.5625rem;

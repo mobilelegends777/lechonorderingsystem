@@ -8,7 +8,7 @@
 .topnav {
     position: absolute;
     z-index: 100;
-    width: 1349px;
+	width: 100%;
 }
 
 .slider-conts img{
@@ -29,7 +29,7 @@
     text-align: center;
     height: auto;
     padding: 36px 0;
-    width: 1348px;
+    width: 100%;
 }
 #my-searches span {
     display: inline-flex;
@@ -62,7 +62,17 @@
     font-size: 39px;
     color: #fff;
 }
-
+@media (max-width: 1920px){
+	.footer-container {
+    	padding: 66px 91px;
+	}
+	.icons {
+    	width: 8%;
+	}
+	.page-wrapper {
+	    margin: 105px 0%;
+	}
+}
 @media (max-width: 1400px){
 	/*.sub-menu .dropdown,.inputs {
 		display: none;
@@ -70,15 +80,17 @@
 	.menu-toggle {
 		display: none;
 	}*/
-	
+	.container {
+    	width: 1440px;
+	}
 	.search-icon img{
 		width: 39px;
 	    margin-right: 11px;
 	    height: 47px;
 	}
-	.headmenu {
+	/*.headmenu {
 		max-width: 1366px;
-	}
+	}*/
 	.slider-conts {
 	    height: 1200px;
 	}
@@ -161,10 +173,11 @@
 @media (max-width: 1220px){
 	.headmenu {
 		display: flex;
+		width: 100%;
 	}
-	html, body {
-    	width: 1348px;
-	}
+	/*html, body {
+	    width: 1440px;
+	}*/
 }
 @media (max-width: 1024px){
 	.headmenu .des-logo .logos {
@@ -305,6 +318,16 @@
 	.menu-toggle {
 		display: block;
 	}
+	#my-searches input {
+	    height: 47px;
+		border-radius: 19px 0px 0px 19px;
+		font-size: 37px;
+		padding: 29px;
+	}
+	#my-searches button {
+		font-size: 39px;
+		border-radius: 0px 19px 19px 0px;
+	}
 	.headmenu {
    		/*height: 100px;*/
 	    height: auto;
@@ -313,14 +336,17 @@
 	}
 	.headmenu .icons {
 	    position: unset; 
-        width: 30%;
+        width: 25%;
         padding: 25px 39px 22px 10px;
         display: flex;
         justify-content: flex-end;
+        margin-top: 56px;
+        margin-left: 65px;
 	}
 	.headmenu .des1{
 		position: unset;
 		font-size: 32px;
+		display: none;
 	}
 	.company-logo {
 	    width: 50%;
@@ -329,51 +355,46 @@
         justify-content: end;
 	}
 	span.des-logo {
-	    width: 32%;
+        width: 60%;
+	    text-align: center;
 	}
 	.des-logo img {
-	 	width: 167px;
+	 	width: 309px;
 	}
 	.headmenu .des2 {
-	    color: white;
+	    color: #c4a265;
 	    /*position: absolute;*/
      	left: unset; 
-	    font-size: 20px;
+	    font-size: 36px;
 	    top: 84px;
+	    /*margin-left: 152px;*/
+	    width: 32%;
+	    font-weight: bold;
 	}
 	.company-title {
 	    padding: 25px 0;
 	    /*display: none;*/
 	}
 	.headmenu .icons .icons2 {
-       width: 52px;
+       width: 4.125rem;
 	}
 	.headmenu .icons .icons3 {
-	    width: 56px;
+	    width: 4.1875rem;
 	    padding: 7px;
 	}
 	.search-icon {
 		display: flex;
 	}
 	.search-icon img{
-	    width: 50px;
+        width: 3.8125rem;
 	    margin-right: 15px;
-	    height: 51px;
+	    height: 3.8125rem;
 	    cursor: pointer;
 	}
 	span.account-c {
     	left: 23px;
 	}
-	button.menu-toggle {
-	    /*width: 13%;*/
-       /* width: auto;
-	    height: 71px;
-	    margin: 14px 0;
-	    font-size: 25px;
-        color: #fff;
-    	border: solid #B89352;
-    	background-color: #2a2c2f;*/
-	}
+	
 	button.menu-toggle {
    	 /* width: 13%; */
 	    width: 100%;
@@ -386,15 +407,18 @@
 	    background-color: #c4a265;
         border-radius: 16px;
         outline: none;
+        margin-top: 60px
 	}
 	.topnav {
 		background-color: #2a2c2f;
 		/*width: 100%;*/
 		display: flex;
+	    overflow: auto;
 	}
 	.topnav a {
 		color: #fff;
 		/*padding-left: 152px;*/
+	    width: 310px;
 	}
 	.topnav.responsive .ordinary {
 	    font-size: 35px;
@@ -481,10 +505,20 @@
 	    height: 2484px;
         height: auto;
 	}
+	.shower_right .panel-title {
+		font-size: 30px;
+	}
+	.shower_right .panel-heading span {
+		margin-top: -31px;
+    	font-size: 27px;
+	}
+	.shower_right .panel-body ul li a {
+		font-size: 31px;
+	}
 	div#myDropdown {
 	    position: absolute;
 	    border-radius: 10px;
-        width: 15.9375rem;
+        width: 23.9375rem;
         text-align: left;
 	}
 	.drpdwn {
@@ -554,9 +588,11 @@
     	justify-content: space-between;
 	    width: 100%;
         padding-bottom: 100px;
+        display: none;
 	}
 	.footer-2nd-cont {
     	justify-content: space-between;
+    	display: block;
 	}
 	.footer-info {
 	    width: auto;
@@ -583,7 +619,7 @@
 	    font-size: 25px;
 	}
 	span.footer-title {
-	    font-size: 35px;
+	    font-size: 40px;
 	}
 	.footer-title-tweets {
 	    width: 60%;
@@ -605,16 +641,16 @@
         line-height: 55px;
 	}
 	span.sp {
-	    width: 60%;
-    	font-size: 26px;
+	    width: 63%;
+    	font-size: 32px;
 	}
 	.info-contacts {
-    	font-size: 26px;
-	    width: 30%;
+    	font-size: 34px;
+    	width: 21%;
 	}
 	.image-cont img {
-   		margin: 3px;
-    	width: 132px;
+   		margin: 5px;
+    	width: 196px;
 	}
 	.copyright {
     	font-size: 35px;
@@ -693,7 +729,7 @@
 	    margin-top: 172px;
 	}
 	.container {
-	    width: 100%;
+	    width: 1440px;
 	}
 	.col-sm-9 {
 	    width: 100%;
@@ -738,13 +774,26 @@
 	}
 
 }
-@media (max-width: 411px) {
+@media (max-width: 500px) {
+	button.menu-toggle {
+		margin-top: 70px;
+		font-size: 44px;
+	}
+	.des-logo img {
+	    width: 399px;
+	}
+	.headmenu .des-logo .logos {
+		margin-left: 57px;
+	}
 	.headmenu .des1 {
 		font-size: 37px;
 	}
 	.headmenu .des2 {
-    	font-size: 28px;
-    	width: 100%;
+    	font-size: 39px;
+	    width: 33%;
+	    line-height: 61px;
+	    margin-left: 160px;
+	    display: none;
 	}
 	.slide-image {
 		height: 878px;
@@ -753,23 +802,23 @@
 		width: 59%;
 	}
 	.sales2 {
-	    font-size: 60px;
+	    font-size: 80px;
 	}
 	.sales3 {
-	    font-size: 89px;
+	    font-size: 104px;
 	}
 	.sales4 {
-	    font-size: 35px;
+	    font-size: 45px;
 	}
 	.bttn1 {
-		padding: 18px;
-        width: 31%;
-	    font-size: 24px;
+		padding: 23px;
+	    width: 31%;
+	    font-size: 35px;
 	}
 	.bttn2 {
-		padding: 18px;
-	    width: 31%;
-	    font-size: 24px;
+		padding: 23px;
+	    width: 38%;
+	    font-size: 35px;
 	}
 	.slider-conts {
 	    height: 996px;
@@ -778,25 +827,40 @@
 	    width: 100%;
 	}
 	span.product-name {
-		font-size: 26px;
+		font-size: 62px;
 	}
 	.prices {
-		font-size: 26px;
+		font-size: 46px;
 	}
 	.__item {
-		/*width: 361px;*/
-	    width: 500px;
+	    width: 582px;
+	}
+	.__item .box2 {
+	    height: 430px;
+	}
+	.__item .box3 .box3-details .product-title {
+		font-size: 46px;
+	}
+	.__item .box3 .box3-details .items-price {
+		font-size: 52px;
+	}
+	.__item .box3 .box3-info .box3-item-info {
+		line-height: 64px;
+		font-size: 43px;
+	}
+	.__item .box3 .box3-info .more {
+		font-size: 50px;
 	}
 	div#myDropdown {
-	    width: 25%;
+	    width: 24%;
     	font-weight: bold;
 	}
 	.topnav {
 		/*height: 142px;*/
 	}
 	.topnav.responsive .ordinary {
-		font-size: 44px;
-    	padding: 46px 0px;
+		font-size: 36px;
+	    padding: 46px 17px;
 	}
 	.drpdwn {
 		font-size: 34px;
@@ -875,6 +939,93 @@
 	#Btop img {
 	    height: 90px;
 	}
+	#myDropdown a {
+		padding: 10px 43px;
+	}
+	.container .sub-container .bsp {
+	    font-size: 61px;
+	    width: 50%;
+	}
+	.container .sub-container2 .sc2 {
+	    font-size: 64px;
+	}
+	.hr {
+	    width: 56%;
+	}
+	.centered {
+		width: 64%;
+		font-size: 73px;
+	}
+	button.buttoncat {
+	    font-size: 39px;
+	    width: 65%;
+	    height: 92px;
+	}
+	.f-icon {
+		width: 561px;
+	}
+	.f-icon img {
+	    width: 164px;
+	}
+	.qual-icon-cont p, .qual-icon-cont span {
+	    font-size: 40px;
+	    line-height: 48px;
+	}
+	#my-searches input {
+		height: 46px;
+		/*width: 762px;*/
+	}
+	.shop-items-conts {
+	    width: 95%;
+	    margin: 0 auto;
+	}
+	.shop-items {
+	    width: 48%;
+	}
+	.shop-images img {
+		height: 26.5625rem;
+	    width: 100%;
+	    object-fit: cover;
+	}
+	.shop-info-price {
+	    font-size: 51px;
+	}
+	.shop-anchors {
+		font-size: 56px;
+	}
+	span.filter-show {
+	    font-size: 41px;
+	}
+	.shop-sorting {
+	    font-size: 49px;
+	}
+	.shop-sorting a {
+		font-size: 69px;
+	}
+	#slider-range span {
+    	height: 44px;
+    	width: 44px;
+	}
+	#slider-range {
+    	height: 15px;
+	}
+	button.filter-by-price {
+	    padding: 35px 83px;
+    	font-size: 48px;
+    	margin: 16px 0;
+	}
+	.title-header {
+    	font-size: 43px;
+	}
+	.shop-filters {
+	    	line-height: 97px;
+		}
+	.filter-cat {
+	        font-size: 57px;
+		}
+	.showing {
+	    width: 46.4375rem;
+	}
 
 }
 @media (max-width: 375px) {
@@ -941,8 +1092,37 @@
 	.mobile-menu {
     	width: 20%;
 	}
+	.headmenu {
+	    height: 277px;
+	}
+	.headmenu .des-logo .logos {
+	    margin-left: 0;
+	    margin-top: 0;
+	}
+	.des-logo img {
+	    width: 368px;
+	    margin-top: 75px;
+	}
+	button.menu-toggle {
+	    font-size: 46px;
+	    margin-top: 75px;	
+	}
+	.col-sm-4 {
+		width: 50%;
+    	float: left;
+	}
+	.headmenu .des2 {
+	    font-size: 41px;
+	    width: 109%;
+	    position: absolute;
+	    top: 32%;
+	    left: -90px;
+	}
 }
 @media (max-width: 360px) {
+	.container {
+		width: 1440px;
+	}
 	.headmenu {
     	display: block;
     	height: auto;
@@ -953,6 +1133,7 @@
 	    display: flex;
 	    justify-content: center; 
 	    padding: 0;
+	    margin: 0;
 	}
 	.mobile-menu {
    		width: 100%;
@@ -970,8 +1151,8 @@
     	position: unset;
 	}
 	.headmenu .des-logo .logos {
-   		margin-left: 0px;
-    	margin-top: 0px;
+	    margin-left: 98px;
+	    margin-top: -30px;
 	}
 	.dropdown-content-account {
     	font-size: 43px;

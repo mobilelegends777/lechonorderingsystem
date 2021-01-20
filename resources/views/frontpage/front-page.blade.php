@@ -1,6 +1,6 @@
 @extends('index')
 @section('page_content')
-<div class="container">
+
 		<div class="slider-conts">
 			<div id="slide-container">
 			  <img class="slide-image mySlides " src="asset/home/8.jpg" style="display: none;">
@@ -172,7 +172,7 @@
 							<span class="items-price">₱77</span>
 						</div>
 						<div class="box3-info">
-							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
+							<span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</span>
 							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
@@ -185,7 +185,7 @@
 							<span class="items-price">₱116</span>
 						</div>
 						<div class="box3-info">
-							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
+							<span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</p></span>
 							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
@@ -198,7 +198,7 @@
 							<span class="items-price">₱129</span>
 						</div>
 						<div class="box3-info">
-							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
+							<span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</p></span>
 							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
@@ -213,7 +213,7 @@
 							<span class="items-price">₱50</span>
 						</div>
 						<div class="box3-info">
-							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
+							<span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</p></span>
 							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
@@ -227,7 +227,7 @@
 							<span class="items-price">₱254</span>
 						</div>
 						<div class="box3-info">
-							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
+							<span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</p></span>
 							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
@@ -240,7 +240,7 @@
 							<span class="items-price">₱254</span>
 						</div>
 						<div class="box3-info">
-							<span class="box3-item-info"><p>Get half price delivery this</p><p> month on shops over or recommend</p><p> a friend and if they mention your</p><p> account number at the checkout</p><p>get one free delivery!</p></span>
+							<span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</p></span>
 							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
@@ -306,5 +306,5 @@
 				</div>
 			</div>
 		</div>
-	</div>
+
 	@endsection
