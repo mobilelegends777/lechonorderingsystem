@@ -19,11 +19,13 @@
 }
 .blog_2_left_main_inner_4 ul .last_tab a {
     padding: 12px!important;
+    font-size: 18px!important;
 }
 .shower_left h4 {
     font-size: 30px;
     text-align: center;
     padding-bottom: 2rem;
+    margin: auto;
 }
 .blog_2_left_main_inner_4 .active_3 a {
     padding: 14px 18px;
@@ -32,7 +34,7 @@
     border-radius: 100%;
 }
 .blog_2_left_main_inner_4 ul li a {
-    font-size: 26px;
+    font-size: 30px;
     text-decoration: none;
     font-weight: 600;
     color: #333333;
@@ -78,8 +80,8 @@
     padding: 1.5rem;
 }
 .shower_right .panel-title {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 2rem;
+    margin-left: .5rem;
     font-size: 26px;
     color: #716b6b;
 }

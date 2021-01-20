@@ -240,23 +240,24 @@ $(document).ready(function(){
   if ("geolocation" in navigator){
 
     navigator.geolocation.getCurrentPosition(function (p){
+      
         showUserDetails(p.coords.latitude, p.coords.longitude);
     }, function (e) {
          ipLookup();
-    });
 
+        
+    });
+    
   }else 
        ipLookup();
   });
 
   function showUserDetails(latitude, longitude, additional){
-
-      var position = latitude + " " +longitude;
-
-      // console.log(position);
-
+      
       $("#latitude").val(latitude);
       $("#longitude").val(longitude);
+      var position = latitude + " " +longitude;
+     
     
       var url ="https://www.google.com/maps/embed/v1/view?zoom=18&center="+position+"&key=AIzaSyCJT39R2xiBTLho8PChzfmDhgd0frzXLNM";
       $("iframe").attr('src',url);
@@ -273,15 +274,15 @@ $(document).ready(function(){
 
         showUserDetails(r.position.latitude, r.position.longitude);
 
-        
+        //console.log(ipLookup);
 
     });
+
+    
 
 
   }
     
-
-  
 
 
 </script>

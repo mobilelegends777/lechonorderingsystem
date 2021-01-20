@@ -207,6 +207,7 @@ body{
 
 .ih-item.square.effect6 {
   overflow: hidden;
+  /* height: 173px; */
 }
 .ih-item.square.effect6.colored .info {
   background: #1a4a72;
@@ -370,7 +371,7 @@ body{
   /* i change font size from 22 to 25 */
   
 .center_1_middle_left_2_inner h3 a{
-  font-size:18px;
+  /* font-size:18px; */
   letter-spacing:2px;
   text-decoration:none;
   color:#333333;
@@ -385,10 +386,10 @@ body{
 .center_1_middle_left_2_inner h5 i{
   margin:2px;
   }
-.center_1_middle_left_2_inner h6{
+/* .center_1_middle_left_2_inner h6{
   font-size:18px;
   color:#666;
-  }
+  } */
 /*********************center_1_end****************/
 
 /*********************center_2****************/
@@ -1257,7 +1258,7 @@ background-image:url(../img/34.jpg);
  margin-left:20px;
  }
 .blog_2_left_main_inner_4 ul li a{
- font-size:16px;
+ /* font-size:16px; */
  text-decoration:none;
  font-weight:600;
  color:#333333;
@@ -1276,7 +1277,7 @@ background-image:url(../img/34.jpg);
   }
 .blog_2_left_main_inner_4 ul .last_tab a{
    padding: 12px!important;
-   font-size:12px!important;
+   /* font-size:12px!important; */
   }
 .courses_inner .form-control_course{
   height:50px;
@@ -1606,7 +1607,7 @@ figure.effect-jazz:hover figcaption::after {
   padding-bottom:60px;
  }
 .shower_left h4{
-  font-size:24px;
+  /* font-size:24px; */
   color:#666666;
   letter-spacing:2px;
   }
@@ -1625,12 +1626,12 @@ figure.effect-jazz:hover figcaption::after {
 .panel-heading {
    border-bottom: none!important;
 }
-.shower_right .panel-title {
+/* .shower_right .panel-title {
     margin-top: 0;
     margin-bottom: 0;
     font-size: 22px;
     color: #716b6b;
-}
+} */
 .shower_right .panel-body{
   overflow-y:scroll!important;
   height:130px;
@@ -1654,11 +1655,11 @@ figure.effect-jazz:hover figcaption::after {
     cursor: pointer;   
 }
 
-.shower_right .panel-heading span {
+/* .shower_right .panel-heading span {
 	margin-top: -20px;
 	font-size: 13px;
 	color: #716b6b;
-}
+} */
 .shower_right .panel-body {
     padding: 0px;
 	margin:0;
@@ -2442,7 +2443,7 @@ figure.effect-jazz:hover figcaption::after {
 /* i change fontsize from 22 for 25 */
 
 .shower_left h4 {
-    font-size: 25px;       
+    /* font-size: 25px;        */
     text-align: center;
 }
 .shop_2_right_top {

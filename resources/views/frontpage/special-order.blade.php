@@ -54,7 +54,7 @@
 	 <div class="shop_2_left_top_inner_1 clearfix">
 	  <div class="col-sm-8 shop_2_left_top_inner_1_left clearfix">
 	   <div class="shower_left clearfix">
-	    <h4>Showing 1–9 of 15 resultss</h4>
+	    <h4>Showing 1–9 of 15 results</h4>
 	   </div>
        <div class="shower_left clearfix">
        <h4><strong>Special Order</h4></strong>
