@@ -1,0 +1,56 @@
+@media (max-width: 768px) {
+    /* .ih-item.square.effect6 {
+        overflow: hidden;
+        height: 98px;
+}
+} */
+    /* .shop_2 {
+        display: flex;
+    } */
+    /* .panel {
+        margin-bottom: 20px;
+        margin-top: -13rem;
+        background-color: #fff;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    }     */
+
+}
+@media (max-width: 411px) {
+    .shower_right .panel-title {
+    margin-top: 22px;
+    margin-left: .5rem;
+    font-size: 24px;
+}
+
+
+    .shower_right .panel-heading span {
+    margin-top: 0;
+    font-size: 50px;
+    color: #716b6b;
+}
+
+    .shower_left h4 {
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 2rem;
+    margin: auto;
+}
+    .shower_left h4 strong {
+    font-size: 42px;
+    text-align: center;
+    padding-bottom: 2rem;
+    margin: auto;
+}
+    .blog_2_left_main_inner_4 ul .last_tab a {
+    padding: 12px!important;
+    font-size: 20px!important;
+}
+
+    #myDropdown a {
+        font-size: 30px;
+    }
+    
+}

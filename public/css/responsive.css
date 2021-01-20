@@ -391,6 +391,7 @@
 		background-color: #2a2c2f;
 		/*width: 100%;*/
 		display: flex;
+		padding-right: 3rem;
 	}
 	.topnav a {
 		color: #fff;
@@ -485,7 +486,8 @@
 	    position: absolute;
 	    border-radius: 10px;
         width: 15.9375rem;
-        text-align: left;
+		text-align: left;
+		font-weight: bold;
 	}
 	.drpdwn {
 		color: black;
@@ -496,7 +498,8 @@
 	}
 	#myDropdown a {
     	color: black;
-    	padding: 10px 0;
+		padding: 10px 0;
+		font-size: 16px;
 	}
 	#myDropdown {
 		z-index: 99999;
@@ -828,7 +831,7 @@
 	}
 	.shower_right .panel-heading span {
 		margin-top: -1px;
-	    margin-left: 79%;
+	    margin-left: 88%;
 	    font-size: 50px;
 	}
 	.center_1_middle_left_2_inner h3 a {

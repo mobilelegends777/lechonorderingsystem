@@ -2,3 +2,14 @@
     padding-left: 7rem;
     padding-right: 7rem;
 }
+
+/* .ih-item.square.effect6 {
+    height: 173px;
+    overflow: hidden;
+} */
+
+@media (min-width: 768px) {
+    .container {
+    width: 100%;
+}
+}
