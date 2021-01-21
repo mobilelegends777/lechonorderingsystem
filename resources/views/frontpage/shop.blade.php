@@ -199,210 +199,210 @@
 						</div><!-- end items show -->
 
 						<div class="shop-items-conts-col" style="display: none;">
-							<div class="shop-items shop-item-col">
+							<div class="shop-items shop-item-col shop-cols">
 								<div class="shop-item-image">
 									<a href="#">
-										<img src="{{ asset('images/liempo.jpg') }}">
+										<img class="shop-imgs" src="{{ asset('images/liempo.jpg') }}">
 									</a>
 								</div>
-								<div class="shop-info-price shop-price-col">
-									<div class="shop-item-name-info">
-										<div class="shop-item-name-col shop-name-col">
-											<span class="col-item-title">Liempo</span>
-											<div class="parag">
+								<div class="shop-info-price shop-price-col shop-info-prices">
+									<div class="shop-item-name-info shop-items-names">
+										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
+											<span class="col-item-title col-names">Liempo</span>
+											<div class="parag col-parags">
 												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
 											</div>
 										</div>
-										<div class="shop-item-info">
-											<div class="col-price">
-												<div class="shop-item-price">250.00</div>
-												<div><button class="addcart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
+										<div class="shop-item-info shop-carts">
+											<div class="col-price carts-price">
+												<div class="shop-item-price prod-price">250.00</div>
+												<div><button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
 											</div>
 										</div>
 									</div>
 
 								</div>
 							</div>
-							<div class="shop-items shop-item-col">
+							<div class="shop-items shop-item-col shop-cols">
 								<div class="shop-item-image">
 									<a href="#">
-										<img src="{{ asset('images/Lechonbaboy.jpg') }}">
+										<img class="shop-imgs" src="{{ asset('images/Lechonbaboy.jpg') }}">
 									</a>
 								</div>
-								<div class="shop-info-price shop-price-col">
-									<div class="shop-item-name-info">
-										<div class="shop-item-name-col shop-name-col">
-											<span class="col-item-title">Lechon Pig</span>
-											<div class="parag">
+								<div class="shop-info-price shop-price-col shop-info-prices">
+									<div class="shop-item-name-info shop-items-names">
+										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
+											<span class="col-item-title col-names">Lechon Pig</span>
+											<div class="parag col-parags">
 												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
 											</div>
 										</div>
-										<div class="shop-item-info">
-											<div class="col-price">
-												<div class="shop-item-price">450.00</div>
-												<div><button class="addcart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
+										<div class="shop-item-info shop-carts">
+											<div class="col-price carts-price">
+												<div class="shop-item-price prod-price">450.00</div>
+												<div><button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="shop-items shop-item-col">
+							<div class="shop-items shop-item-col shop-cols">
 								<div class="shop-item-image">
 									<a href="#">
-										<img src="{{ asset('images/Lechonmanok.jpg') }}">
+										<img class="shop-imgs" src="{{ asset('images/Lechonmanok.jpg') }}">
 									</a>
 								</div>
-								<div class="shop-info-price shop-price-col">
-									<div class="shop-item-name-info">
-										<div class="shop-item-name-col shop-name-col">
-											<span class="col-item-title">Lechon Chicken</span>
-											<div class="parag">
+								<div class="shop-info-price shop-price-col shop-info-prices">
+									<div class="shop-item-name-info shop-items-names">
+										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
+											<span class="col-item-title col-names">Lechon Chicken</span>
+											<div class="parag col-parags">
 												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
 											</div>
 										</div>
-										<div class="shop-item-info">
-											<div class="col-price">
-												<div class="shop-item-price">250.00</div>
-												<div><button class="addcart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
+										<div class="shop-item-info shop-carts">
+											<div class="col-price carts-price">
+												<div class="shop-item-price prod-price">250.00</div>
+												<div><button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
 											</div>
 										</div>
 									</div>
 
 								</div>
 							</div>
-							<div class="shop-items shop-item-col">
+							<div class="shop-items shop-item-col shop-cols">
 								<div class="shop-item-image">
 									<a href="#">
-										<img src="{{ asset('images/Liverbbq.jpg') }}">
+										<img class="shop-imgs" src="{{ asset('images/Liverbbq.jpg') }}">
 									</a>
 								</div>
-								<div class="shop-info-price shop-price-col">
-									<div class="shop-item-name-info">
-										<div class="shop-item-name-col shop-name-col">
-											<span class="col-item-title">Liver BBQ</span>
-											<div class="parag">
+								<div class="shop-info-price shop-price-col shop-info-prices">
+									<div class="shop-item-name-info shop-items-names">
+										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
+											<span class="col-item-title col-names">Liver BBQ</span>
+											<div class="parag col-parags">
 												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
 											</div>
 										</div>
-										<div class="shop-item-info">
-											<div class="col-price">
-												<div class="shop-item-price">70.00</div>
-												<div><button class="addcart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
+										<div class="shop-item-info shop-carts">
+											<div class="col-price carts-price">
+												<div class="shop-item-price prod-price">70.00</div>
+												<div><button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="shop-items shop-item-col">
+							<div class="shop-items shop-item-col shop-cols">
 								<div class="shop-item-image">
 									<a href="#">
-										<img src="{{ asset('images/Porkbbq.jpg') }}">
+										<img class="shop-imgs" src="{{ asset('images/Porkbbq.jpg') }}">
 									</a>
 								</div>
-								<div class="shop-info-price shop-price-col">
-									<div class="shop-item-name-info">
-										<div class="shop-item-name-col shop-name-col">
-											<span class="col-item-title">Pork BBQ</span>
-											<div class="parag">
+								<div class="shop-info-price shop-price-col shop-info-prices">
+									<div class="shop-item-name-info shop-items-names">
+										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
+											<span class="col-item-title col-names">Pork BBQ</span>
+											<div class="parag col-parags">
 												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
 											</div>
 										</div>
-										<div class="shop-item-info">
-											<div class="col-price">
-												<div class="shop-item-price">15.00</div>
-												<div><button class="addcart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
+										<div class="shop-item-info shop-carts">
+											<div class="col-price carts-price">
+												<div class="shop-item-price prod-price">15.00</div>
+												<div><button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="shop-items shop-item-col">
+							<div class="shop-items shop-item-col shop-cols">
 								<div class="shop-item-image">
 									<a href="#">
-										<img src="{{ asset('images/Sinigangshrimp.jpg') }}">
+										<img class="shop-imgs" src="{{ asset('images/Sinigangshrimp.jpg') }}">
 									</a>
 								</div>
-								<div class="shop-info-price shop-price-col">
-									<div class="shop-item-name-info">
-										<div class="shop-item-name-col shop-name-col">
-											<span class="col-item-title">Sinigang Shrimp</span>
-											<div class="parag">
+								<div class="shop-info-price shop-price-col shop-info-prices">
+									<div class="shop-item-name-info shop-items-names">
+										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
+											<span class="col-item-title col-names">Sinigang Shrimp</span>
+											<div class="parag col-parags">
 												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
 											</div>
 										</div>
-										<div class="shop-item-info">
-											<div class="col-price">
-												<div class="shop-item-price">170.00</div>
-												<div><button class="addcart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
+										<div class="shop-item-info shop-carts">
+											<div class="col-price carts-price">
+												<div class="shop-item-price prod-price">170.00</div>
+												<div><button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="shop-items shop-item-col">
+							<div class="shop-items shop-item-col shop-cols">
 								<div class="shop-item-image">
 									<a href="#">
-										<img src="{{ asset('images/Breastbbq.jpg') }}">
+										<img class="shop-imgs" src="{{ asset('images/Breastbbq.jpg') }}">
 									</a>
 								</div>
-								<div class="shop-info-price shop-price-col">
-									<div class="shop-item-name-info">
-										<div class="shop-item-name-col shop-name-col">
-											<span class="col-item-title">Breast BBQ</span>
-											<div class="parag">
+								<div class="shop-info-price shop-price-col shop-info-prices">
+									<div class="shop-item-name-info shop-items-names">
+										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
+											<span class="col-item-title col-names">Breast BBQ</span>
+											<div class="parag col-parags">
 												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
 											</div>
 										</div>
-										<div class="shop-item-info">
-											<div class="col-price">
-												<div class="shop-item-price">150.00</div>
-												<div><button class="addcart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
+										<div class="shop-item-info shop-carts">
+											<div class="col-price carts-price">
+												<div class="shop-item-price prod-price">150.00</div>
+												<div><button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="shop-items shop-item-col">
+							<div class="shop-items shop-item-col shop-cols">
 								<div class="shop-item-image">
 									<a href="#">
-										<img src="{{ asset('images/Lechon rice.jpg') }}">
+										<img class="shop-imgs" src="{{ asset('images/Lechon rice.jpg') }}">
 									</a>
 								</div>
-								<div class="shop-info-price shop-price-col">
-									<div class="shop-item-name-info">
-										<div class="shop-item-name-col shop-name-col">
-											<span class="col-item-title">Lechon Rice</span>
-											<div class="parag">
+								<div class="shop-info-price shop-price-col shop-info-prices">
+									<div class="shop-item-name-info shop-items-names">
+										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
+											<span class="col-item-title col-names">Lechon Rice</span>
+											<div class="parag col-parags">
 												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
 											</div>
 										</div>
-										<div class="shop-item-info">
-											<div class="col-price">
-												<div class="shop-item-price">50.00</div>
-												<div><button class="addcart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
+										<div class="shop-item-info shop-carts">
+											<div class="col-price carts-price">
+												<div class="shop-item-price prod-price">50.00</div>
+												<div><button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="shop-items shop-item-col">
+							<div class="shop-items shop-item-col shop-cols">
 								<div class="shop-item-image">
 									<a href="#">
-										<img src="{{ asset('images/Paabbq.jpg') }}">
+										<img class="shop-imgs" src="{{ asset('images/Paabbq.jpg') }}">
 									</a>
 								</div>
-								<div class="shop-info-price shop-price-col">
-									<div class="shop-item-name-info">
-										<div class="shop-item-name-col shop-name-col">
-											<span class="col-item-title">Leg BBQ</span>
-											<div class="parag">
+								<div class="shop-info-price shop-price-col shop-info-prices">
+									<div class="shop-item-name-info shop-items-names">
+										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
+											<span class="col-item-title col-names">Leg BBQ</span>
+											<div class="parag col-parags">
 											<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
 											</div>
 										</div>
-										<div class="shop-item-info">
-											<div class="col-price">
-												<div class="shop-item-price">150.00</div>
-												<div><button class="addcart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
+										<div class="shop-item-info shop-carts">
+											<div class="col-price carts-price">
+												<div class="shop-item-price prod-price">150.00</div>
+												<div><button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
 											</div>
 										</div>
 									</div>

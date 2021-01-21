@@ -69,9 +69,9 @@
 	.icons {
     	width: 8%;
 	}
-	.page-wrapper {
+	/*.page-wrapper {
 	    margin: 105px 0%;
-	}
+	}*/
 }
 @media (max-width: 1400px){
 	/*.sub-menu .dropdown,.inputs {
@@ -414,7 +414,6 @@
 		/*width: 100%;*/
 		display: flex;
 	    overflow: auto;
-		padding-right: 3rem;
 	}
 	.topnav a {
 		color: #fff;
@@ -519,14 +518,9 @@
 	div#myDropdown {
 	    position: absolute;
 	    border-radius: 10px;
-<<<<<<< HEAD
-        width: 23.9375rem;
-        text-align: left;
-=======
         width: 15.9375rem;
 		text-align: left;
 		font-weight: bold;
->>>>>>> 45be753432f46f5e706572f143a5c84b6379a870
 	}
 	.drpdwn {
 		color: black;
@@ -867,7 +861,7 @@
 		/*height: 142px;*/
 	}
 	.topnav.responsive .ordinary {
-		font-size: 36px;
+		font-size: 50px;
 	    padding: 46px 17px;
 	}
 	.drpdwn {
@@ -1034,6 +1028,15 @@
 	.showing {
 	    width: 46.4375rem;
 	}
+	.shop-cols {
+		/*width: 46%;*/
+	    display: inline-block;
+	    margin: 9px 24px;
+	}
+	.shop-imgs {
+		width: 100%;
+	}
+
 
 }
 @media (max-width: 375px) {

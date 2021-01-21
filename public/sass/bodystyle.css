@@ -491,7 +491,6 @@ button.addcart {
   display: flex;
 }
 
-/*<<<<<<< HEAD
 @media (max-width: 768px){
     span.close-btn {
       display: block;
@@ -597,8 +596,7 @@ button.addcart {
     }
 }
 /*# sourceMappingURL=bodystyle.css.map */
-=======
-*/@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   span.close-btn {
     display: block;
   }
@@ -682,7 +680,7 @@ button.addcart {
   .shop-sub-container2 {
     width: 100%;
     /*background: #2a2c2f;*/
-  }
+/*  }
   .sort-items select option {
     font-size: 10px;
   }
@@ -705,5 +703,5 @@ button.addcart {
     padding: 9px 16px;
     z-index: 200;
   }
-}
+}*/
 /*# sourceMappingURL=bodystyle.css.map */
