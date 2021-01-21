@@ -54,12 +54,7 @@
 				<button class="btn-search">Search</button>
 			</span>
 		</div>
-		<!-- mobile nav -->
-		<div class="mobile-menu">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="true" onclick="myFunction()">
-				<span>&#9776;&nbsp;Menu</span>
-			</button>
-		</div>
+		
 		
 		<div class="icons">
 			<span class="search-icon" >
@@ -116,6 +111,12 @@
 					</span>
 				</div>
 		@endif
+		<!-- mobile nav -->
+				<div class="mobile-menu">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="true" onclick="myFunction()">
+						<span>&#9776;</span>
+					</button>
+				</div>
 		</div>
 	</div>
 </div>

@@ -30,9 +30,9 @@ function carousel() {
 <script>
 
 // this is temporary
-// $(this).resize(function(){
-//   this.location.reload();
-// });
+$(this).resize(function(){
+  this.location.reload();
+});
 // end reload every resize;
   var windowWidth = $(window).width();
 
@@ -61,7 +61,7 @@ else if (windowWidth == 768){
 
   });
 }
-else if(windowWidth <= 360){
+else if(windowWidth <= 375){
    $('.slider').slick({
     dots: false,
     infinite: true,

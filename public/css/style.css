@@ -542,8 +542,8 @@ img.footer-logos {
     height: 50%;
     /*width: 100%;*/
     display: flex;
-    /*justify-content: space-evenly;*/
-    padding: 66px 291px;
+    justify-content: center;
+    padding: 66px 91px;
 }
 .name-title {
     color: #fff;
@@ -1095,3 +1095,142 @@ button.filter-by-price:hover {
 
 
 /*end login*/
+
+/*cartpage*/
+.page-container{
+  height: auto;
+  padding: 43px 0;
+  margin: 0;
+  width: 100%;
+}
+.page-sub-container h1 {
+  color: #1D1E21;
+  text-align: center;
+}
+
+.cart-input input{
+  width: 20px;
+  width: 58px;
+  height: 30px;
+}
+.cartpage-title form {
+  width:  100%;
+}
+.cartpage-item {
+  text-align: -webkit-center;
+}
+thead{
+  border: 1px solid black;
+  border-collapse: unset;;
+}
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 43%;
+}
+.librebais img {
+  width: 139px;
+}
+.librebais td{
+     padding: 17px 0px;
+    text-align: center;
+}
+.librebais a {
+  color:  #c4a256;
+  font-size: 22px;
+}
+thead td {
+      padding: 10px 35px;
+}
+.coupon-submit {
+  display:  flex;
+  justify-content: space-between;
+  width: 43%;
+  margin: 43px 0;
+}
+.apply-coupon input {
+  height: 3.125rem;
+  width: 17.4375rem;
+  font-size: 20px;
+  }
+.apply-coupon button{
+  background:   #C4A265;
+  color:  #fff;
+}
+.apply-coupon button, .update-cart button {
+   height: 3.5rem;
+   width: 12.6875rem;
+   border-radius:  5px;
+   outline:  none;
+   border: 0;
+   font-size: 20px;
+   cursor:  pointer;
+}
+.update-cart button:hover {
+  background:   #c4a256;
+  color:  #fff;
+}.apply-coupon button:hover {
+   background:  #8a6e3c;
+}
+span.cancel-cart {
+    font-size: 32px;
+}
+.summary-conts {
+    width: 43%;
+    text-align: end;
+}
+.summary-sub-cont {
+  display:  flex;
+  width: 32%;
+  justify-content: space-between;
+}
+.sub-total span{
+  color: #C4A265;
+  font-weight:  700;
+  font-size: 22px;
+}
+.shipping_ {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    width: 46%;
+}
+.shipping-info {
+    line-height: 2.75rem;
+}
+.edit-address {
+    color: #c2a256;
+    font-size: 20px;
+}
+.page-sub-container {
+    margin: 6.75rem 0;
+}
+
+.summary-total {
+    display: flex;
+    width: 32%;
+    justify-content: space-between;
+}
+.proceed__ {
+    text-align: left;
+}
+.__proceed-to {
+    height: 71px;
+    width: 241px;
+    background: #c4a256;
+    color: #fff;
+    font-size: 21px;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 60px 0;
+}
+.__proceed-to:hover {
+  background:   #8a6e3c;
+}
+.__total {
+    color: #c4a256;
+    font-weight: 700;
+    font-size: 23px;
+}
