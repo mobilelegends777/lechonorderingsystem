@@ -2,6 +2,7 @@
 @section('page_content')
 	<link href="{{asset('asset/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('asset/css/style_asset.css')}}" rel="stylesheet">
+    <link href="{{asset('css/style.css')}}" rel="stylesheet">
 	 <link rel="stylesheet" type="text/css" href="{{asset('asset/css/font-awesome.min.css')}}" />
 	 <link href="https://fonts.googleapis.com/css?family=Spirax" rel="stylesheet">
 	 <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Londrina+Outline" rel="stylesheet">

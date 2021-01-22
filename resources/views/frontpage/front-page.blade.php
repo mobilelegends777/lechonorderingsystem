@@ -250,7 +250,7 @@
 		<div class="sub-container3">
 			<div class="quality-cont">
 				<img src="{{asset('images/bg-image-1.jpg')}} " >
-				<div class="centered">Quality Food Ingredients</div>
+				<div class="centered"><span>Quality Food Ingredients</span></div>
 			</div>
 		</div>
 		<div class="sub-container4">

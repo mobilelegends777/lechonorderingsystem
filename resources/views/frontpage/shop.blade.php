@@ -214,7 +214,7 @@
 											</div>
 										</div>
 										<div class="shop-item-info shop-carts">
-											<div class="col-price carts-price">
+											<div class="col-price carts-price1">
 												<div class="shop-item-price prod-price">250.00</div>
 												<div><button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
 											</div>
@@ -285,7 +285,7 @@
 											</div>
 										</div>
 										<div class="shop-item-info shop-carts">
-											<div class="col-price carts-price">
+											<div class="col-price carts-price4">
 												<div class="shop-item-price prod-price">70.00</div>
 												<div><button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
 											</div>
@@ -308,7 +308,7 @@
 											</div>
 										</div>
 										<div class="shop-item-info shop-carts">
-											<div class="col-price carts-price">
+											<div class="col-price carts-price5">
 												<div class="shop-item-price prod-price">15.00</div>
 												<div><button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
 											</div>
@@ -331,7 +331,7 @@
 											</div>
 										</div>
 										<div class="shop-item-info shop-carts">
-											<div class="col-price carts-price">
+											<div class="col-price carts-price6">
 												<div class="shop-item-price prod-price">170.00</div>
 												<div><button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
 											</div>
@@ -354,7 +354,7 @@
 											</div>
 										</div>
 										<div class="shop-item-info shop-carts">
-											<div class="col-price carts-price">
+											<div class="col-price carts-price7">
 												<div class="shop-item-price prod-price">150.00</div>
 												<div><button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
 											</div>
@@ -377,7 +377,7 @@
 											</div>
 										</div>
 										<div class="shop-item-info shop-carts">
-											<div class="col-price carts-price">
+											<div class="col-price carts-price8">
 												<div class="shop-item-price prod-price">50.00</div>
 												<div><button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
 											</div>
@@ -400,7 +400,7 @@
 											</div>
 										</div>
 										<div class="shop-item-info shop-carts">
-											<div class="col-price carts-price">
+											<div class="col-price carts-price9">
 												<div class="shop-item-price prod-price">150.00</div>
 												<div><button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button></div>
 											</div>
