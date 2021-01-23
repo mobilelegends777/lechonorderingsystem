@@ -13,25 +13,29 @@
 	<script type="text/javascript" src="{{asset('asset/js/jquery.aniview.js')}}"></script>
 	@include('layouts.csslinks')
 
+  <div id="map " class="move-rights">
 
-<div class="container">
-    <h1>Edit Profile</h1>
+<iframe width="100%" height="400" frameborder="0" style="border:0" src="" allowfullscreen></iframe>
+
+
+</div>
+<div class="container_profile">
   	<hr>
-	<div class="row">
+	<div class="row rows2">
       <!-- left column -->
-      <div class="col-md-3">
-        <div class="text-center">
+      <div class="col-md-prof">
+        <div class="text-center moves-center">
           <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
           <h6>Upload a different photo...</h6>
           
           <input type="file" class="form-control">
         </div>
-        <button class="btn btn-primary" type="submit">File Upload</button>
+        <button class="btn btn-primary moves-center" type="submit">File Upload</button>
       </div>
       
       
       <!-- edit form column -->
-      <div class="col-md-9 personal-info">
+      <div class="col-md-9 personal-info move-lefts">
         <div class="alert alert-info alert-dismissable">
           <a class="panel-close close" data-dismiss="alert">×</a> 
           <i class="fa fa-coffee"></i>
@@ -40,9 +44,11 @@
       
         <h3>Personal info</h3> 
         <div class="prof">
+          <div class="move-left">
         <a id="show-prof"class="col-lg-3">Edit Profile</a>
         <a id="show-pass"class="">Change Password</a>
         <a id="show-address"class="">Addressess</a>
+        
         </div>
 
         <hr>
@@ -164,18 +170,11 @@
             </div>
           </div>
 
-          <div id="map">
-
-          <iframe width="600" height="400" frameborder="0" style="border:0" src="" allowfullscreen></iframe>
-
-
-          </div>
-
           </div>
           <div class="form-group">
             <label class="col-md-3 control-label"></label>
             <div class="col-md-8">  
-            <button class="btn btn-primary" type="submit">Save Changes</button>
+            <button class="btn btn-primary moves-center-b" type="submit">Save Changes</button>
             
               <span></span>
               <input type="reset" class="btn btn-default" value="Cancel">

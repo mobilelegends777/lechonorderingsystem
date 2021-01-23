@@ -21,7 +21,6 @@ img {
 
 .prof {
     position: relative;
-    left: 29%;
     color: black;
 }
 
@@ -38,4 +37,74 @@ img {
 a#show-address {
     position: relative;
     left: 90px;
+}
+
+div#edit-profile {
+    width: 684px;
+    position: relative;
+    left: 183px;
+}
+a#show-address {
+    position: relative;
+    left: 18%;
+}
+a#show-prof {
+    position: relative;
+    left: 27%;
+}
+
+a#show-pass {
+    position: relative;
+    left: 14%;
+}
+
+.col-md-prof {
+
+    
+        width: 15%;
+    
+}
+
+.rows2 {
+    margin-left: 25%;
+    /* margin-right: -15px; */
+}
+
+.move-lefts{width: 100%;}
+
+.moves-center {
+    text-align: center;
+    position: relative;
+    left: 234%;
+}
+
+.moves-center-b {
+    position: relative;
+    left: 21%;
+}
+div#changess-pass {
+    width: 684px;
+    position: relative;
+    left: 183px;
+}
+div#addresses {
+    width: 684px;
+    position: relative;
+    left: 183px;
+}
+
+.container_profile{
+
+    position: relative;
+    max-width: 1920px;
+
+}
+
+.container_profile{
+
+    position: relative;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  
 }
