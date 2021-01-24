@@ -19,7 +19,7 @@
 }
 
 .container {
-  position: relative;
+  /*position: relative;*/
 }
 
 .f-icon img {
@@ -487,7 +487,7 @@ button.addcart {
   display: flex;
 }
 
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
     span.close-btn {
       display: block;
     }
@@ -592,7 +592,7 @@ button.addcart {
     }
 }
 /*# sourceMappingURL=bodystyle.css.map */
-/*@media (max-width: 768px) {
+/*@media screen and (max-width: 768px) {
   span.close-btn {
     display: block;
   }

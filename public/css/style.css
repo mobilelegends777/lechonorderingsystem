@@ -1,12 +1,12 @@
 html, body {
   padding: 0;
   margin: 0;
-  /*max-width: 1920px;*/
+  max-width: 1920px;
+  /*width: 1440px;*/
 }
 .container {
   max-width: 1920px;
   /*width: 100%;*/
-  width: 100%;
   padding: 0;
 }
 input {
@@ -954,7 +954,7 @@ span.cart-title {
 }
 .icons-inputs{
     display: flex;
-    width: 32%;
+    width: 26%;
 }
 .icons {
     display: flex;
@@ -1264,4 +1264,24 @@ span.cancel-cart {
 div#myDropdown {
   -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 8px 16px 0px #c4a265;
+}
+.radio-buttons {
+  display: flex;
+}
+.form-container {
+    width: 100%;
+    text-align: -webkit-center;
+}
+.order-conts {
+    border: solid 1px;
+    width: 921px;
+    height: auto;
+    /* align-content: flex-end; */
+    text-align: left;
+    line-height: 38px;
+    padding: 37px;
+    margin: 66px 0;
+}
+.date-time {
+    display: flex;
 }

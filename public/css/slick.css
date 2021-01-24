@@ -61,7 +61,7 @@ button.slick-next.slick-arrow {
     background-color:#cdb68e;
     /* more CSS */
 }
-@media (max-width: 1440px){
+@media screen and (max-width: 1440px){
     .items.slider.slick-initialized.slick-slider {
         width: 100%;
         margin: 0;

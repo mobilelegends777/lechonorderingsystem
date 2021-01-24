@@ -63,7 +63,7 @@
     font-size: 39px;
     color: #fff;
 }
-@media (max-width: 1920px){
+@media screen and (max-width: 1920px){
 	.footer-container {
     	padding: 66px 91px;
 	}
@@ -74,15 +74,19 @@
 	    margin: 105px 0%;
 	}*/
 }
-@media (max-width: 1400px){
+@media screen and (max-width: 1440px){
 	/*.sub-menu .dropdown,.inputs {
 		display: none;
 	}
 	.menu-toggle {
 		display: none;
 	}*/
+	.coupon-submit {
+	    width: 53%;
+	}
 	.container {
-    	/*width: 1440px;*/
+	    max-width: 1440px;
+	    width: 1440px;
 	}
 	.search-icon img{
 		width: 39px;
@@ -187,7 +191,7 @@
 	    width: 221px;
 	}
 }
-@media (max-width: 1220px){
+@media screen and (max-width: 1220px){
 	.headmenu {
 		display: flex;
 		width: 100%;
@@ -196,7 +200,7 @@
 	    width: 1440px;
 	}*/
 }
-@media (max-width: 1024px){
+@media screen and (max-width: 1024px){
 	.headmenu .des-logo .logos {
 	    margin-left: 0px;
 	    margin-top: 0px;
@@ -310,7 +314,7 @@
 	}
 
 }
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
 	.shop-sub-container3 {
 		width: 76%;
 	}
@@ -371,7 +375,7 @@
 	}
 	/*end*/
 }
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
 	/*cart*/
 	.product-on-cart td {
 		font-size: 22px;
@@ -1027,7 +1031,7 @@
     	font-size: 54px;
 	}
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
 	.shop-sub-container3 {
 		width: 100%;
 	}
@@ -1355,7 +1359,7 @@
 	    font-size: 41px;
 	}
 }
-@media (max-width: 414px) {
+@media screen and (max-width: 414px) {
 	.info-contacts {
 	    font-size: 50px;
 	}
@@ -1434,7 +1438,7 @@
 	}
 	/*end*/
 }
-@media (max-width: 375px) {
+@media screen and (max-width: 375px) {
 	/*cart*/
 	.page-sub-container h1 {
 		font-size: 59px;
@@ -1620,7 +1624,7 @@
 	    position: relative;
 	}
 }
-@media (max-width: 360px) {
+@media screen and (max-width: 360px) {
 	.container {
 		width: 1440px;
 	}
@@ -2044,9 +2048,12 @@
 	.topnav {
 		position: relative;
 	}
+	.slick-list {
+    	 margin: 0 0; 
+	}
 
 }
-@media (max-width: 320px) {
+@media screen and (max-width: 320px) {
 	.container {
 	    width: 1280px;
 	}
@@ -2074,5 +2081,8 @@
 	.f-icon strong {
 	    font-size: 54px;
 	    margin-left: 0px;
+	}
+	.filter-cat {
+    	line-height: 4.9375rem;
 	}
 }
