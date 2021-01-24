@@ -161,9 +161,8 @@ a#cancel_reset {
 
 .shop-img img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 31.25rem;
+   object-fit: cover;
+  height: 22.25rem;
   -webkit-filter: brightness(0.5);
           filter: brightness(0.5);
 }

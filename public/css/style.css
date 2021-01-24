@@ -6,7 +6,7 @@ html, body {
 .container {
   max-width: 1920px;
   /*width: 100%;*/
-  width: 1440px;
+  width: 100%;
   padding: 0;
 }
 input {

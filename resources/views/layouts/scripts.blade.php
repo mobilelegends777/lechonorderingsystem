@@ -406,4 +406,16 @@ $('.arrangeCol').on('click', function(e){
     });
     $( "#amount" ).text( " " + $( "#slider-range" ).slider( "values", 0 ) +
       " - " + $( "#slider-range" ).slider( "values", 1 ));
+
+    var inp = $('.cart-input').length;
+function inc(element, id) {
+      var number = $('.cartQty__'+id).val();
+      $('.cartQty__'+id).val(parseInt(number)+1);
+}
+function dec(element, id) {
+  var number = $('.cartQty__'+id).val();
+  if (parseInt(number) > 1) {
+    $('.cartQty__'+id).val(parseInt(number)-1);
+  }
+}
 </script>
