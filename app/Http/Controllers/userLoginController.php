@@ -21,10 +21,11 @@ class userLoginController extends Controller
 
         // $value1 = Session::get('user');
         $data = Auth::user();
+      
         $value = [
             '0' => $data
         ];
-            // dd($arr);
+            
             if($value == null)
             {
 

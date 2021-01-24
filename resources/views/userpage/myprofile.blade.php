@@ -53,60 +53,45 @@
 
         <hr>
         
-        <form metho="POST" action ="{{ route('profileupdated',$value['0']->id) }}" class="form-horizontal" role="form">
+        <form metho="POST" action ="{{ route('profileupdated',$value[0]->id) }}" class="form-horizontal" role="form">
         {{ csrf_field() }}
         {{ method_field('PATCH') }}
         <div id="edit-profile">
-        <input class="form-control" type="hidden" name="id" value="{{$value['0']->id}}">
+        <input class="form-control" type="hidden" name="id" value="{{$value[0]->id}}">
           <div class="form-group">
-            <label class="col-lg-3 control-label">Full name:</label>
+            <label class="col-lg-3 control-label">Firstname:</label>
             <div class="col-lg-8">
-              <input class="form-control" name="name" type="text" value="{{$value['0']->name}}">
+              <input class="form-control" name="fname" type="text" value="{{$value['0']->firstname}}">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Middlename:</label>
+            <div class="col-lg-8">
+              <input class="form-control" name="mname" type="text" value="{{$value['0']->middlename}}">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Lastname:</label>
+            <div class="col-lg-8">
+              <input class="form-control" name="lname" type="text" value="{{$value['0']->lastname}}">
             </div>
           </div>
          
           <div class="form-group">
-            <label class="col-lg-3 control-label">Contact #:</label>
+            <label class="col-lg-3 control-label">Phone #:</label>
             <div class="col-lg-8">
               <input class="form-control" name="phone"type="text" value="{{$value['0']->phone}}" maxlength="11">
             </div>
           </div>
+
+                 
           <div class="form-group">
-            <label class="col-lg-3 control-label">Home Address:</label>
+            <label class="col-lg-3 control-label">Tel #:</label>
             <div class="col-lg-8">
-              <input class="form-control" name="address"type="text" value="{{$value['0']->address}}">
+              <input class="form-control" name="tel"type="text" value="{{$value['0']->tel}}" maxlength="11">
             </div>
           </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Work Address:</label>
-            <div class="col-lg-8">
-              <input class="form-control" name="address1"type="text" value="{{$value['0']->address1}}">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Hose No.:</label>
-            <div class="col-lg-8">
-              <input class="form-control" name="house"type="text" value="{{$value['0']->house_no}}">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">City:</label>
-            <div class="col-lg-8">
-              <input class="form-control" name="city"type="text" value="{{$value['0']->city}}">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Zip Code:</label>
-            <div class="col-lg-8">
-              <input class="form-control" name="zip"type="text" value="{{$value['0']->zip_code}}">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Land Mark:</label>
-            <div class="col-lg-8">
-              <input class="form-control" name="land"type="text" value="{{$value['0']->land_mark}}">
-            </div>
-          </div>
+    
 
           </div>
           <div id="changess-pass">
@@ -133,40 +118,47 @@
           <div id="addresses">
 
           <div class="form-group">
-            <label class="col-lg-3 control-label">Home Address:</label>
+            <label class="col-lg-3 control-label">House #:</label>
             <div class="col-lg-8">
-              <input class="form-control" name="address"type="text" value="{{$value['0']->address}}">
+              <input class="form-control" name="house"type="text" value="{{$value['0']->house_number}}">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Zone:</label>
+            <div class="col-lg-8">
+              <input class="form-control" name="zone"type="text" value="{{$value['0']->purok_zone}}">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Street:</label>
+            <div class="col-lg-8">
+              <input class="form-control" name="street"type="text" value="{{$value['0']->street}}">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Barangay:</label>
+            <div class="col-lg-8">
+              <input class="form-control" name="brngy"type="text" value="{{$value['0']->barangay}}">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Coordinate:</label>
+            <div class="col-lg-8">
+            <input class="form-control" id ="coordinate" name="lat" type="text" value="">
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label">City:</label>
             <div class="col-lg-8">
-              <input class="form-control" name="city"type="text" value="{{$value['0']->city}}">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Zip Code:</label>
-            <div class="col-lg-8">
-              <input class="form-control" name="zip"type="text" value="{{$value['0']->zip_code}}">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Latitude:</label>
-            <div class="col-lg-8">
-            <input class="form-control" id ="latitude" name="lat" type="text" value="">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Longitude:</label>
-            <div class="col-lg-8">
-           <input class="form-control" id ="longitude" name="longi" type="text" value="">
+           <input class="form-control" name="city" type="text" value="{{$value['0']->city}}">
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-lg-3 control-label">Land Mark:</label>
             <div class="col-lg-8">
-              <input class="form-control" name="land"type="text" value="">
+              <input class="form-control" name="land"type="text" value="{{$value['0']->landmark}}">
             </div>
           </div>
 
@@ -256,6 +248,8 @@ $(document).ready(function(){
       $("#latitude").val(latitude);
       $("#longitude").val(longitude);
       var position = latitude + " " +longitude;
+
+      $("#coordinate").val(position);
      
     
       var url ="https://www.google.com/maps/embed/v1/view?zoom=18&center="+position+"&key=AIzaSyCJT39R2xiBTLho8PChzfmDhgd0frzXLNM";

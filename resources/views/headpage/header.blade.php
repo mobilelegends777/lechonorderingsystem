@@ -70,7 +70,7 @@
 				<div class="dropdown-account">
 					<span class="account-c ">
 				
-						@if($value[0]['utype'] == 'User')
+						@if($value[0]->utype == 'User')
 					
 
 							<img src="{{asset('images/account.png')}}" class="icons2">
