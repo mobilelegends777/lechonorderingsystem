@@ -545,6 +545,7 @@
 		background-color: #2a2c2f;
 		/*width: 100%;*/
 		display: flex;
+		position: relative;
 	    /*overflow: auto;*/
 	}
 	.topnav a {
@@ -1312,10 +1313,10 @@
 	    width: 69%;
 	}
 	.col-price {
-	    width: 20%;
+		width: 71%;
 	    position: absolute;
 	    margin-left: 55px;
-	    margin-top: -460px;
+	    margin-top: -602px;
 	}
 	button.addcart {
 		width: 119%;
@@ -1614,7 +1615,7 @@
 	    font-size: 44px;
 	}
 	.col-price {
-		width: 84%;
+		width: 22%;
 		margin-left: 40px;
 	}
 	.prod-price {
@@ -2050,6 +2051,11 @@
 	}
 	.slick-list {
     	 margin: 0 0; 
+	}
+	.col-price {
+	    width: 22%;
+	    margin-top: -600px;
+	    margin-left: 40px;
 	}
 
 }

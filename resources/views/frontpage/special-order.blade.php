@@ -13,7 +13,7 @@
 				<div class="order-conts">
 						<span><h4>ORDER NOW</h4></span>	
 							<div>
-								<span>How do you want your order?</span>
+								<span><span class="asterisk">*</span> How do you want your order?</span>
 							</div>
 							<div class="radio-buttons">
 								<div class="radio1">
@@ -24,13 +24,13 @@
 								</div>
 							</div>
 							<div>
-								<span>Date/Time</span>
+								<span><span class="asterisk">*</span> Date/Time</span>
 							</div>
 							<div class="date-time">
 								<div class="date-when">
-									<input type="date" name="">
+									<input type="datetime-local" data-date="" data-date-format="DD MMMM YYYY" value="2015-08-09" class="datestime">
 								</div>
-								<div class="oras">
+								<!-- <div class="oras">
 									<select class="hour-when">
 										<option>1</option>
 										<option>2</option>
@@ -59,17 +59,17 @@
 										<option>AM</option>
 										<option>PM</option>
 									</select>
-								</div>
+								</div> -->
 							</div>
 							<div class="pick-up-add">
 								<div>
-									<span>Address</span>
+									<span><span class="asterisk">*</span>Address</span>
 								</div>
 								<div class="pickup-deliv">
-									<input type="addresses" name="">
+									<input type="addresses" name="" class="inpt-address">
 								</div>
 								<div class="proceed-to">
-									<button><i class="fa fa-arrow-right">PROCEED</i></button>
+									<button><i class="fa fa-arrow-right"></i><span>PROCEED</span></button>
 								</div>
 							</div>
 				</div>
