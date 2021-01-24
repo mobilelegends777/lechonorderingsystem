@@ -16,6 +16,9 @@ input {
 	font-family: "Blatant", sans-serif;
 
 }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 a {
     text-decoration: none;
     color: inherit;
@@ -192,15 +195,19 @@ img.logos {
   color: #C4A265;
 }
 .headmenu .inputs .inpt-search {
-    padding: 13px;
+    /*padding: 13px;*/
     display: inline-block;
     color: white;
     background-color: #161414;
     border: none;
     border-radius: 4px 0px 0px 4px;
     width: 272px;
-    height: 41px;
+    height: 100%;
     font-size: 17px;
+    padding: 0px 11px;
+}
+span.inputs {
+  height: 100%
 }
 
 .headmenu .inputs .btn-search {
@@ -211,6 +218,7 @@ img.logos {
     color: white;
     font-size: 18px;
     border-radius: 0px 4px 4px 0px;
+    height: 100%;
 }
 
 /*.headmenu .icons {
@@ -876,7 +884,7 @@ a.icon1 {
     background-color: #b25807;
 }
 .toggle-cart-sidenav img{
-    width: 80px;
+    /*width: 80px;*/
     width: 70px;
     padding: 10px;
 
@@ -1097,7 +1105,7 @@ button.filter-by-price:hover {
 /*cartpage*/
 .page-container{
   height: auto;
-  padding: 43px 0;
+  /*padding: 43px 0;*/
   margin: 0;
   width: 100%;
 }
@@ -1105,12 +1113,33 @@ button.filter-by-price:hover {
   color: #1D1E21;
   text-align: center;
 }
-
+.cart-input {
+  display: inline-flex;
+  align-items: center;
+}
 .cart-input input{
   width: 20px;
   width: 58px;
   height: 30px;
 }
+.cart-input button{
+  height: 1.875rem;
+  width: 2.4375rem;
+  border: none;
+  color: #fff;
+  font-size: 23px;
+  background: #c4a256;
+  outline: none;
+}
+.cart-input input::-webkit-outer-spin-button,
+.cart-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.cart-input button:active {
+  background: olive;
+}
+
 .cartpage-title form {
   width:  100%;
 }
@@ -1121,7 +1150,7 @@ thead{
   border: 1px solid black;
   border-collapse: unset;;
 }
-table {
+table.product-on-cart {
   border: 1px solid black;
   border-collapse: collapse;
   width: 43%;
@@ -1147,7 +1176,7 @@ thead td {
   margin: 43px 0;
 }
 .apply-coupon input {
-  height: 3.125rem;
+  height: 3.5rem;
   width: 17.4375rem;
   font-size: 20px;
   }
@@ -1231,4 +1260,8 @@ span.cancel-cart {
     color: #c4a256;
     font-weight: 700;
     font-size: 23px;
+}
+div#myDropdown {
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px #c4a265;
 }

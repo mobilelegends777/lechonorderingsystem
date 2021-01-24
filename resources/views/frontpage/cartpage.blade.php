@@ -27,8 +27,7 @@
 						<td>5,000</td>
 						<td><div  class="cart-input"><button  type="button" onclick="dec('qty',{{$i}})">-</button><input class="cartQty__{{$i}}" type="number" value="1" name="qty"><button type="button" onclick="inc('qty',{{$i}})">+</button></div></td>
 						<td>20,000</td>
-					</tr>
-				@endfor	
+				@endfor
 					</tbody>	
 				</table>
 				<div class="coupon-submit">	
@@ -47,7 +46,7 @@
 							<span>Subtotal</span>
 					</div>
 					<div class="sub-total">	
-							<span>5,000</span>
+							<span>20,000</span>
 					</div>
 				</div>
 				<hr>
@@ -75,7 +74,7 @@
 						<span>Total</span>
 					</div>
 					<div class="__total">	
-						<span style="color: #c4a256;">5,029</span>
+						<span style="color: #c4a256;">20,029</span>
 					</div>
 				</div>	
 				<div class="proceed__">	

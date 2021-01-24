@@ -1,6 +1,6 @@
 
 .topnav{ height : auto; transition: .2s ease-in;}
-.topnav  a { display: block; overflow: hidden;}
+.topnav  a { display: block; }
 .topnav:not(responsive)  a {max-height: 0;}
 .topnav.responsive  a {max-height: 600px;}
 .topnav.responsive {transition: .2s ease-in;}
@@ -9,6 +9,7 @@
     position: absolute;
     z-index: 100;
 	width: 100%;
+    overflow-y: hidden;
 }
 
 .slider-conts img{
@@ -103,15 +104,21 @@
 	    top: 33%;
 	 	left: 9%;
 	}
-	.items.slider.slick-initialized.slick-slider {
+	/*---------------------------------------------------- conflict 012421*/
+	/*.items.slider.slick-initialized.slick-slider {
     	margin: 0 -21px;
-	    /*height: 333px;*/
         height: 372px;
 	}
 	.items.slider.slick-initialized.slick-slider {
 		width: 100%;
 	    margin: 0;
-	}
+	}*/
+	/*---------------------------------------------------*/
+
+	/*.items.slider.slick-initialized.slick-slider {
+    	margin: 0 -28px;
+        height: 372px;
+	}*/
 	.container .sub-container .bsp {
 	    width: 32%;
 	}
@@ -130,10 +137,15 @@
 	/*.items.slider.slick-initialized.slick-slider {
     	margin: 0 135px;
 	}*/
-	.slick-list.draggable {
+	/*__________---------------------------------*/
+	/*.slick-list.draggable {
  	    width: 100%;
         margin: 0 -52px;
-	}
+	}*/
+	/*--------------------------------------*/
+	/*.slick-list.draggable {
+ 	    width: 100%;
+	}*/
 	.container .sub-container .bsp {
 	    margin-top: 29px;
 	}
@@ -209,14 +221,13 @@
 	    width: 39%;
 	}*/
 	.headmenu .inputs .inpt-search {
-		padding: 13px;
-		width: 219px;
-    	height: 30px;
+		/*padding: 13px;*/
+		width: 12.25rem;
+		height: 100%;
 	}
 	.headmenu .inputs .btn-search {
 		padding: 12px;
 		font-size: 16px;
-		height: 55px;
 	}
 	.headmenu .icons {
 		left: 118%;
@@ -232,6 +243,7 @@
 		/*border: 1px solid red;*/
 	    width: 85%;
 	    margin: 0 auto;
+        justify-content: center;
 	}
 	.slide-image {
     	height: 800px;
@@ -291,6 +303,11 @@
 		justify-content: center;
 		padding: 10px 0;
 	}
+	
+	#slider-range span {
+	    height: 15px;
+    	width: 15px;
+	}
 
 }
 @media (max-width: 1024px) {
@@ -315,6 +332,7 @@
 	}
 	.filter-cat {
 		font-size: 24px;
+	    line-height: 49px;
 	}
 	button.filter-by-price {
 		font-size: 27px;
@@ -423,14 +441,14 @@
 		display: block;
 	}
 	#my-searches input {
-	    height: 47px;
-		border-radius: 19px 0px 0px 19px;
+        height: 100%;
+		border-radius: 50px 0px 0px 50px;
 		font-size: 37px;
 		padding: 29px;
 	}
 	#my-searches button {
 		font-size: 39px;
-		border-radius: 0px 19px 19px 0px;
+	    border-radius: 0px 50px 50px 0px;
 	}
 	.headmenu {
    		/*height: 100px;*/
@@ -488,7 +506,7 @@
        width: 4.125rem;
 	}
 	.headmenu .icons .icons3 {
-	    width: 4.1875rem;
+        width: 5.1875rem;
 	    padding: 7px;
 	}
 	.search-icon {
@@ -523,7 +541,7 @@
 		background-color: #2a2c2f;
 		/*width: 100%;*/
 		display: flex;
-	    overflow: auto;
+	    /*overflow: auto;*/
 	}
 	.topnav a {
 		color: #fff;
@@ -626,7 +644,7 @@
 		font-size: 31px;
 	}
 	div#myDropdown {
-	    position: absolute;
+	    position: fixed;
 	    border-radius: 10px;
         width: 15.9375rem;
 		text-align: left;
@@ -640,12 +658,12 @@
 	    border-radius: 6px;
 	}
 	#myDropdown a {
-    	color: black;
-		padding: 10px 0;
-		font-size: 16px;
+	    color: black;
+	    padding: 17px 0;
+	    font-size: 28px;
 	}
 	#myDropdown {
-		z-index: 99999;
+		/*z-index: 99999;*/
 	}
 	.slick-list {
     	margin: 0 -50px;
@@ -938,7 +956,76 @@
 	#Btop img {
 	    height: 67px;
 	}
-
+	.filter-cat {
+    	font-size: 32px;
+    	line-height: 55px;
+	}
+	#slider-range {
+    	height: 7px;
+	}
+	#slider-range span {
+    	height: 24px;
+    	width: 24px;
+	}
+	.dropdown-content-account {
+    	line-height: 46px;
+	}
+	.toggle-cart-sidenav img {
+	    width: 118px;
+	}
+	.toggle-cart-sidenav {
+	    top: 25.6875rem;
+	}
+	table.product-on-cart {
+    	width: 90%;
+	}
+	.coupon-submit {
+	    width: 90%;
+	}
+	.cartpage-item {
+	    font-size: 33px;
+	}
+	.summary-conts {
+	    width: 90%;
+	}
+	.librebais img {
+    	width: 195px;
+	}
+	.librebais a {
+    	font-size: 33px;
+	}
+	.cart-input input {
+    	height: 71px;
+	}
+	.cart-input button {
+    	height: 3.875rem;
+	    width: 3.4375rem;
+	}
+	.apply-coupon input {
+    	height: 6.5rem;
+    	width: 27.4375rem;
+    	font-size: 36px;
+	}
+	.apply-coupon button, .update-cart button {
+    	height: 6.5rem;
+	    width: 18.6875rem;
+	    font-size: 36px;
+	}
+	.sub-total span,.__total,.edit-address {
+    	font-size: 36px;
+	}
+	.shipping-info {
+    	line-height: 4.75rem;
+	}
+	.__proceed-to {
+    	height: 109px;
+	    width: 386px;
+    	margin: 60px 0;
+	    font-size: 37px;
+	}
+	.page-sub-container h1 {
+    	font-size: 54px;
+	}
 }
 @media (max-width: 500px) {
 	.shop-sub-container3 {
@@ -1023,8 +1110,9 @@
 		font-size: 50px;
 	}
 	div#myDropdown {
-	    width: 24%;
+        width: 100%;
     	font-weight: bold;
+	    line-height: 62px;
 	}
 	.topnav {
 		/*height: 142px;*/
@@ -1112,6 +1200,8 @@
 	}
 	#myDropdown a {
 		padding: 10px 43px;
+		font-size: 39px;
+		width: 100%;
 	}
 	.container .sub-container .bsp {
 	    font-size: 61px;
@@ -1148,8 +1238,7 @@
 	    line-height: 48px;
 	}
 	#my-searches input {
-		height: 46px;
-		/*width: 762px;*/
+	    height: auto;
 	}
 	.shop-items-conts {
 	    width: 95%;
@@ -1481,9 +1570,6 @@
 	.mobile-menu {
     	width: 20%;
 	}
-	.headmenu {
-	    height: 277px;
-	}
 	.headmenu .des-logo .logos {
 	    margin-left: 0;
 	    margin-top: 0;
@@ -1509,7 +1595,7 @@
 	    /*left: -90px;*/
 	}
 	.container {
-		position: unset;
+		position: relative;
 	}
 	.company-title {
 	    margin-top: -26px;

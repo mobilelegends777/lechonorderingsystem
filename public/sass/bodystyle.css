@@ -222,7 +222,7 @@ i.fa.fa-star {
   width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: space-evenly;
 }
 
 .shop-sorting a {
@@ -415,7 +415,7 @@ i.fa.fa-star {
   text-align: center;
   padding: 34px 0;
   font-size: 25px;
-  height: 50px;
+  height: auto;
 }
 
 .paginate span {

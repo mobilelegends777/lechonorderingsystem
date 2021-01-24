@@ -30,9 +30,9 @@ function carousel() {
 <script>
 
 // this is temporary
-// $(this).resize(function(){
-//   this.location.reload();
-// });
+$(this).resize(function(){
+  this.location.reload();
+});
 // end reload every resize;
   var windowWidth = $(window).width();
 
@@ -229,25 +229,19 @@ var currentMousePos = { x: -1, y: -1 };
 
 // mobile topnav dropdown
 $(document).ready(function(){
-  $('.dropbtn1').hover(function(){
+  $('.dropbtn1').click(function(){
       $('.seafoodDrp').toggle();
   });
-  $('.dropbtn2').hover(function(){
+  $('.dropbtn2').click(function(){
       $('.meatDrp').toggle();
   });
 
-var mouse_is_inside = false;
-
-
-    $('.dropbtn1').hover(function(){ 
-        mouse_is_inside=true; 
-    }, function(){ 
-        mouse_is_inside=false; 
+  $(document).scroll(function(){
+      $('#myDropdown').css({'display':'none'});
     });
 
-    $("body").mouseup(function(){ 
-        if(! mouse_is_inside) $('.seafoodDrp').hide();
-    });
+
+
 var mouse_is_inside = false;
 
 
@@ -257,8 +251,8 @@ var mouse_is_inside = false;
         mouse_is_inside=false; 
     });
 
-    $("body").mouseup(function(){ 
-        if(! mouse_is_inside) $('.meatDrp').hide();
+    $("body").click(function(){ 
+        if(! mouse_is_inside) $('.meatDrp').css({'display': 'none'});
     });
 });
 // end mobile topnav dropdown
@@ -393,6 +387,7 @@ $('.arrangeCol').on('click', function(e){
     });
     // end mobile filters
 
+
 </script>
 <script type="text/javascript">
    $( "#slider-range" ).slider({
@@ -407,7 +402,9 @@ $('.arrangeCol').on('click', function(e){
     $( "#amount" ).text( " " + $( "#slider-range" ).slider( "values", 0 ) +
       " - " + $( "#slider-range" ).slider( "values", 1 ));
 
-    var inp = $('.cart-input').length;
+
+
+var inp = $('.cart-input').length;
 function inc(element, id) {
       var number = $('.cartQty__'+id).val();
       $('.cartQty__'+id).val(parseInt(number)+1);
@@ -418,4 +415,5 @@ function dec(element, id) {
     $('.cartQty__'+id).val(parseInt(number)-1);
   }
 }
+
 </script>
