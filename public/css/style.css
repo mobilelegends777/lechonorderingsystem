@@ -1,12 +1,13 @@
 html, body {
   padding: 0;
   margin: 0;
+}
+body {
   max-width: 1920px;
-  /*width: 1440px;*/
 }
 .container {
-  max-width: 1920px;
-  /*width: 100%;*/
+  max-width: 100%;
+  width: 1920px;
   padding: 0;
 }
 input {
@@ -685,7 +686,7 @@ span.sp {
 
 #Btop {
   display: inline-block;
-  background-color: orange;
+  background-color: red;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -699,6 +700,8 @@ span.sp {
   visibility: hidden;
   z-index: 1000;
   border: unset;
+  color: #fff;
+  font-size: 25px;
 }
 #Btop::after {
   content: "\f077";
@@ -711,7 +714,7 @@ span.sp {
 }
 #Btop:hover {
   cursor: pointer;
-  background-color: #b28b19;
+  background-color: #2a2c2f;
 }
 #Btop:active {
   background-color: #555;
@@ -1070,6 +1073,7 @@ button.btn.btn-success.btn-block {
     background: #ccc;
     width: 72%;
     height: 3px;
+    margin-left: 10px;
 }
 .ui-slider-range.ui-corner-all.ui-widget-header {
     background: #c4a256;
@@ -1264,19 +1268,18 @@ div#myDropdown {
 .radio-buttons {
   display: flex;
 }
-.form-container {
+/*.form-container {
     width: 100%;
     text-align: -webkit-center;
-}
+}*/
 .order-conts {
     /*border: solid 1px;*/
-    width: 921px;
+    width: 68%;
     height: auto;
     /* align-content: flex-end; */
     text-align: left;
-    line-height: 38px;
-    padding: 37px;
-    margin: 66px 0;
+    line-height: 35px;
+    padding: 28px 32px;
     /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
     -webkit-box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.75);
@@ -1284,9 +1287,11 @@ div#myDropdown {
     border-radius: 4px;
     background-color: #fcfcfc;
 }
-.date-time {
+.form-container {
+    height: 100%;
     display: flex;
 }
+
 .datestime {
     height: 46px;
     padding: 6px;
@@ -1294,16 +1299,58 @@ div#myDropdown {
     background-color: #efefef;
 }
 .inpt-address {
-  height: 30px;
+    height: 45px;
+    /*width: 123%;*/
 }
 .asterisk {
   color: red;
 }
 .proceed-to button {
     height: 29px;
-    width: 124px;
-    border: 2px solid #b89352;
+    width: 161px;
+    border: solid #c4a256;
+    border-radius: 5px;
+    height: 52px;
+    cursor: pointer;
+    outline: none;
+}
+.proceed-to button:hover {
+    background: #c4a256;
+    color: #fff;
 }
 .proceed-to span {
   margin-left: 13px;
+}
+.shop-images-lechon img{
+  height: 220px;
+  width: 238px;
+}
+.proceed-add {
+    display: flex;
+    justify-content: space-between;
+}
+.lechon-img img {
+  height: 202px;
+  width: 202px;
+}
+.lechon-info {
+  display: flex;
+}
+.lechon-info div {
+  margin: 10px;
+}
+.payment-mehods {
+    display: flex;
+}
+.pay-conts {
+    margin: 16px;
+}
+.delivery-details {
+    display: flex;
+}
+.delivery-details div{
+  margin: 8px;
+}
+.proceed-to {
+    text-align: right;
 }

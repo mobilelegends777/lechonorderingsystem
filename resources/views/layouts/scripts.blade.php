@@ -162,7 +162,7 @@ setInterval(function(){
 var btn = $('#Btop');
 
 		$(window).scroll(function() {
-		  if ($(window).scrollTop() > 600) {
+		  if ($(window).scrollTop() > 800) {
 		    btn.addClass('show');
 		  } else {
 		    btn.removeClass('show');
@@ -392,9 +392,9 @@ $('.arrangeCol').on('click', function(e){
 <script type="text/javascript">
    $( "#slider-range" ).slider({
       range: true,
-      min: 1,
-      max: 500,
-      values: [ 75, 300 ],
+      min: 20,
+      max: 30000,
+      values: [ 20, 30000 ],
       slide: function( event, ui ) {
         $( "#amount" ).text( " " + ui.values[ 0 ] + " - " + ui.values[ 1 ] );
       }
@@ -415,5 +415,7 @@ function dec(element, id) {
     $('.cartQty__'+id).val(parseInt(number)-1);
   }
 }
+
+
 
 </script>

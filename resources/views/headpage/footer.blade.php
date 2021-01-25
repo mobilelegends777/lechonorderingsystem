@@ -77,7 +77,7 @@
 				</div>
 				<div class="back-to-top">
 					<button id="Btop">
-						<img src="{{asset('images/btop.png')}}">
+						<i class="fa fa-arrow-up"></i>
 					</button>
 				</div>
 		</div>
