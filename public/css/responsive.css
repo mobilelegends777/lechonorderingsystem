@@ -1361,6 +1361,21 @@
 	}
 }
 @media screen and (max-width: 414px) {
+	/*special order*/
+	.cart-shop-button {
+	    left: 246%;
+	    top: -131%;
+	    position: relative;
+	}
+	button.addcart {
+		width: 218%;
+	}
+	.col-price {
+	    position: relative;
+	    margin-left: -984px;
+	    margin-top: 100px;
+	}
+	/*end*/
 	.info-contacts {
 	    font-size: 50px;
 	}
@@ -1508,6 +1523,14 @@
 	.edit-address {
 	    font-size: 35px;
 	}
+	.cart-shop-button {
+	    position: relative;
+	    left: 246%;
+	    top: -131%;
+	}
+	button.addcart {
+		width: 218%;
+	}
 	/*end*/
 	div#myDropdown {
 	    position: fixed;
@@ -1615,8 +1638,10 @@
 	    font-size: 44px;
 	}
 	.col-price {
-		width: 22%;
-		margin-left: 40px;
+		/*width: 22%;*/
+		position: relative;
+		margin-top: 100px;
+    	margin-left: -984px;
 	}
 	.prod-price {
 	    font-size: 74px;
@@ -2053,13 +2078,27 @@
     	 margin: 0 0; 
 	}
 	.col-price {
-	    width: 22%;
-	    margin-top: -600px;
-	    margin-left: 40px;
+	    width: 71%;
 	}
 
 }
 @media screen and (max-width: 320px) {
+	/*special order*/
+	.prod-price {
+	    margin-left: 162px;
+	    margin-top: 33%;
+	}
+	button.addcart {
+	    margin-left: -12px;
+	}
+	.col-price {
+    	width: 23%;
+	}
+	.cart-shop-button {
+	    width: 155%;
+	    margin-left: 610px;
+	}
+	/*end*/
 	.container {
 	    width: 1280px;
 	}

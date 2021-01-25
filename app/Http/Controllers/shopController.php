@@ -198,7 +198,6 @@ class shopController extends Controller
       	$value = [
       		"0" => $data
       	];
-      	
 		if($value == null)
 		{
 			$value = [
