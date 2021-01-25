@@ -74,9 +74,11 @@
 						@for($i = 7;$i <= 22; $i++)
 							<div class="shop-items">
 								<div class="shop-item-image">
+									<input type="hidden" name="" class="add-ress" value="{{$value[0]->address}}&nbsp;{{$value[0]->city}}">
 									<a href="#" class="shop-images-lechon" data-value="{{$i}}">
 										<img src="{{asset('images/lechon'.$i.'.png')}}">
 									</a>
+									<a href="#" class="orderNow" data-value="{{$i}}">Order now</a>
 								</div>
 								<div class="shop-info-price">
 									<div class="shop-item-name">Lechon {{$i}}kg</div>
@@ -173,11 +175,12 @@
 			</div>
 	</div>--}}
 	<script type="text/javascript">
-		$('.shop-images-lechon').each(function(){
-  
+
+     var address = $('.add-ress').val();
+
+$('.orderNow').each(function(){
   $(this).on('click',function(e){
     e.preventDefault();
-    
       var lechVal = $(this).data('value');
       // alert(lechVal);
       $('.shop-sub-container3').empty();
@@ -188,6 +191,7 @@
 								<div class="lechon-img">
 									<img src="{{ asset('images/lechon${lechVal}.png') }}">
 								</div>
+
 								<div class="lechon-details">
 									 <span><h4>Lechon Baboy ${lechVal}kg(Good for ${lechVal-6}0 pax)</h4></span>
 						                <span><h3>₱ ${lechVal},000.00</h3></span> 
@@ -241,7 +245,7 @@
 									<span><span class="asterisk">*</span>Address</span>
 								</div>
 								<div class="pickup-deliv">
-									<input type="addresses" name="" class="inpt-address">
+									<input type="addresses" name="" class="inpt-address" value="${address}">
 								</div>
 								
 							</div>
@@ -256,6 +260,87 @@
   });
 });
 
+$('.shop-images-lechon').each(function(){
+  $(this).on('click',function(e){
+    e.preventDefault();
+      var lechVal = $(this).data('value');
+      // alert(lechVal);
+      $('.shop-sub-container3').empty();
+      $('.shop-sub-container3').append(`
+      		<div class="form-container">
+				<div class="order-conts">
+							<div class="lechon-info">
+								<div class="lechon-img">
+									<img src="{{ asset('images/lechon${lechVal}.png') }}">
+								</div>
+
+								<div class="lechon-details">
+									 <span><h4>Lechon Baboy ${lechVal}kg(Good for ${lechVal-6}0 pax)</h4></span>
+						                <span><h3>₱ ${lechVal},000.00</h3></span> 
+						              <div>
+						                <ul>
+						                	<li>Approximate No. of Person : ${lechVal-6}0</li>
+						                	<li>Approximate Live Weight : ${lechVal} Kilos</li>
+						                </ul>
+						              </div>
+					              </div>
+							</div>
+							<div class="payment-mehods">
+								<div class="pay-conts">
+									<div>
+						                <span><span class="asterisk">*</span><b>Minimum Partial Payment is 50% per item</b></span>
+					              	</div>
+					               	<div class="radio-buttons">
+						                <div class="radio1">
+						                  <input type="radio" name="pay-amount"><b> 50% Partial Payment</b>
+						                </div>
+						                <div class="radio2">
+						                  <input type="radio" name="pay-amount"><b> Full Amount </b>
+					                	</div>
+					                </div>
+				                </div>
+				                <div class="pay-conts">
+									<div>
+										<span><span class="asterisk">*</span> How do you want your order?</span>
+									</div>
+									<div class="radio-buttons">
+										<div class="radio1">
+											<input type="radio" name="orderType"> Pick-up
+										</div>
+										<div class="radio2">
+											<input type="radio" name="orderType"> Delivery
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="delivery-details">
+							<div class="date-time">
+								<div>
+									<span><span class="asterisk">*</span> Date/Time</span>
+								</div>
+								<div class="date-when">
+									<input type="datetime-local" data-date="" data-date-format="DD MMMM YYYY" value="2015-08-09" class="datestime">
+								</div>
+							</div>
+							<div class="pick-up-add">
+								<div>
+									<span><span class="asterisk">*</span>Address</span>
+								</div>
+								<div class="pickup-deliv">
+									<input type="addresses" name="" class="inpt-address" value="${address}">
+								</div>
+								
+							</div>
+						</div>
+						<div class="proceed-to">
+									<button><i class="fa fa-arrow-right"></i><span>PROCEED</span></button>
+						</div>
+				</div>
+			</div>
+      	
+      `);
+  });
+});
 $(function() {
 
 $(window).scroll(function() {
@@ -281,5 +366,6 @@ $(window).scroll(function() {
 		  }
 		});
 });
+
 	</script>
 	@endsection	

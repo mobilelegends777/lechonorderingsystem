@@ -238,7 +238,7 @@ i.fa.fa-star {
 .shop-sub-container3 {
   width: 53%;
   height: auto;
-  padding: 31px 0;
+  padding: 2px 0;
 }
 
 .shop-items-conts {
@@ -368,7 +368,21 @@ i.fa.fa-star {
   color: #fff;
   background: #c4a265;
 }
-
+.orderNow {
+    position: absolute;
+    top: 0;
+    margin: 77px 38px;
+    display: none;
+    color: #fff;
+    background: #c4a256;
+    font-size: 27px;
+    padding: 18px;
+    /* border-radius: 50%; */
+    width: 163px;
+}
+.shop-item-image:hover .orderNow {
+  display: block;
+}
 /*.shop-cart-icon i:hover*/
 .shop-item-image {
   position: relative;
