@@ -22,7 +22,7 @@
   background-color: #f9f9f9;
   /* min-width: 160px; */
   -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px #c4a265;
   z-index: 1;
   left: -62px;
   top: 35px;
