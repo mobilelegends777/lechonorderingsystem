@@ -19,7 +19,7 @@
 }
 
 .container {
-  /*position: relative;*/
+  position: relative;
 }
 
 .f-icon img {
@@ -103,7 +103,7 @@ a.fter {
   height: 42px;
   border-radius: 5px;
   color: #fff;
-  width: 67%;
+  width: 100%;
 }
 
 a#cancel_signup {
@@ -183,8 +183,6 @@ a#cancel_reset {
 
 .shop-item-image img:hover {
   /*width: 100%;*/
-  -o-object-fit: cover;
-     object-fit: cover;
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
   -webkit-transition: 500ms;
@@ -211,7 +209,7 @@ i.fa.fa-star {
 
 .shop-sub-container2 {
   /*border: solid;*/
-  width: 228px;
+  width: 281px;
   line-height: 42px;
 }
 
@@ -223,6 +221,7 @@ i.fa.fa-star {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
   justify-content: space-evenly;
+  margin-bottom: 67px;
 }
 
 .shop-sorting a {
@@ -279,8 +278,14 @@ i.fa.fa-star {
 }
 
 .shop-items {
-  padding: 23px 0;
+  padding: 11px 0;
   position: relative;
+}
+.shop-filters {
+    width: 450px;
+    border-radius: 5px;
+    padding: 14px 28px;
+    border: solid #c4a256;
 }
 
 .filter-cat ul {
@@ -306,7 +311,9 @@ i.fa.fa-star {
   font-size: 21px;
   line-height: 1;
   letter-spacing: 0.01em;
+  align-items: center;
   text-align: center;
+  width: 100%;
 }
 
 .shop-item-name {
@@ -327,6 +334,9 @@ i.fa.fa-star {
 
 .shop-item-price {
   color: #c4a265;
+  width: 100%;
+  text-align: center;
+  align-self: center;
 }
 
 /*.shop-item-image:hover .shop-cart-icon img{
@@ -374,6 +384,7 @@ i.fa.fa-star {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
 }
 
 .shop-item-info span {
@@ -397,6 +408,7 @@ i.fa.fa-star {
 .shop-name-col {
   padding: 10px 21px;
   text-align: left;
+  width: 100%;
 }
 
 .shop-col-addcart {
@@ -454,7 +466,7 @@ span.close-btn {
 }
 
 .parag span {
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .parag {
@@ -466,10 +478,15 @@ span.close-btn {
 
 .col-price {
   width: 100%;
+  text-align: end;
+  display: flex;
+}
+.cart-shop-button {
+    width: 100%;
 }
 
 button.addcart {
-  width: 100%;
+  width: 50%;
   height: 56px;
   color: #fff;
   background: #c4a256;
@@ -485,11 +502,22 @@ button.addcart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px){
     span.close-btn {
       display: block;
+    }
+    .shop-items {
+      width: 31%;
+    }
+    .shop-images-lechon img {
+      height: 100%;
+      width: 100%;
+    }
+    .shop-item-col {
+      width: 100%;
     }
     .shop-conts {
       display: none;
@@ -565,15 +593,22 @@ button.addcart {
       font-size: 29px;
     }
     .shop-sub-container2 {
+      position: absolute;
       width: 100%;
       /*background: #2a2c2f;*/
     }
     .sort-items select option {
       font-size: 10px;
     }
-    .shop-filters {
+    /*.shop-filters {
       padding: 57px;
       line-height: 73px;
+    }*/
+    .shop-filters {
+      width: unset;
+      padding: 57px;
+      line-height: 73px;
+      background: #fff;
     }
     .shop-filters .close-btn{
       font-size: 69px;

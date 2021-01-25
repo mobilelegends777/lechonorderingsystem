@@ -14,7 +14,7 @@
 			</div>
 			<div class="shop-anchors-filter">
 				<div class="shop-anchors">
-					<a href="#"><span class="active">Home</span></a>&nbsp;/&nbsp;<a href="#"><span>Shop</span></a>
+					<a href="#"><span class="active">Home</span></a>&nbsp;/&nbsp;<a href="#"><span>Menu</span></a>
 				</div>
 				<div class="filter-btn">
 					<button class="filter-show-btn"><span class="filter-show">Filters</span></button>
@@ -34,8 +34,9 @@
 							</ul>
 							<span>Meat</span>
 							<ul>
-								<li><a href="">Lechon Baboy</a></li>
-								<li><a href="">Lechon Manok</a></li>
+								<li><a href="{{asset('frontpage/special-order')}}">Lechon Baboy</a></li>
+								<li><a href="{{asset('frontpage/special-order')}}">Lechon Manok</a></li>
+								<li><a href="{{asset('frontpage/special-order')}}">Lechon Baka</a></li>
 								<li><a href="">Liempo</a></li>
 								<li><a href="">Pork BBQ</a></li>
 								<li><a href="">Liver BBQ</a></li>

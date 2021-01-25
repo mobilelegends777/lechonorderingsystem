@@ -86,7 +86,7 @@
 	}
 	.container {
 	    max-width: 1440px;
-	    width: 1440px;
+	    /*width: 1440px;*/
 	}
 	.search-icon img{
 		width: 39px;

@@ -1,6 +1,6 @@
 
 <div class="header-container">
-	<div class="headmenu">
+	<div class="headmenu" id="headers">
 	<div class="company-logo">
 		<span class="des-logo">
             <a href="/">
@@ -21,18 +21,17 @@
 				</a>
 			</div>
 			<span class="dropdown">
-			<a href="{{asset('frontpage/shop')}}">
-					<span class="des4">Shop</span>
-				</a>
-			</span>
-
-			<span class="dropdown">
 				<span class="des5">Special Order <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
 				<div class="dropdown-content">
 				  <a href="{{asset('frontpage/special-order')}}">Lechon</a>
 				</div>
 			</span>
 			<span class="dropdown">
+				<a href="{{asset('frontpage/shop')}}">
+					<span class="des4">Menu</span>
+				</a>
+			</span>
+			{{--<span class="dropdown">
 				<span class="des6">Menu<img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
 				<div class="dropdown-content">
 				  <a href="{{asset('frontpage/newproduct')}}">New Products</a>
@@ -41,7 +40,7 @@
 				  <a href="{{asset('frontpage/drinks')}}">Drinks</a>
 				  <a href="{{asset('frontpage/appetizer')}}">Appetizers</a>
 				</div>
-			</span>
+			</span>--}}
 			<span class="dropdown">
 				<a href="{{asset('frontpage/contact')}}">
 				<span class="des7">Contact Us </span>
