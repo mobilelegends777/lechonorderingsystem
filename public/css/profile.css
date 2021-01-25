@@ -46,16 +46,16 @@ div#edit-profile {
 }
 a#show-address {
     position: relative;
-    left: 18%;
+    left: 35%;
 }
 a#show-prof {
     position: relative;
-    left: 27%;
+    left: 20%;
 }
 
 a#show-pass {
     position: relative;
-    left: 14%;
+    left: 27%;
 }
 
 .col-md-prof {
@@ -75,7 +75,7 @@ a#show-pass {
 .moves-center {
     text-align: center;
     position: relative;
-    left: 234%;
+    left: 204%;
 }
 
 .moves-center-b {
@@ -107,4 +107,356 @@ div#addresses {
     margin-right: auto;
     margin-left: auto;
   
+}
+
+
+input.form-control {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #cf9d71;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button.btn.btn-primary.moves-center-b {
+    background-color: #ff8800fc;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    left: 37%;
+}
+button.btn.btn-primary.moves-center-b:hover {
+    background-color: #ec8915;
+}
+
+input.btn.btn-default {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    left: 19%;
+}
+
+input.btn.btn-default:hover {
+    background-color: #45a049;
+}
+button.btn.btn-primary.moves-center {
+    width: 100%;
+    background-color: #0f6898;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.btn.btn-primary.moves-center:hover{
+
+    background-color: #3e96c5;
+
+}
+a#show-address:hover {
+    color: rgb(160, 131, 12);
+}
+
+
+@media only screen 
+and (max-width: 1024px)
+and (min-width: 768px)
+and (orientation: portrait)
+{
+
+    div#edit-profile {
+        width: 684px;
+        position: relative;
+        left: 82px;
+    }
+    input.btn.btn-default {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 15%;
+    }
+
+    div#changess-pass {
+        width: 684px;
+        position: relative;
+        left: 90px;
+    }
+    div#addresses {
+        width: 684px;
+        position: relative;
+        left: 90px;
+    }
+
+}
+
+@media only screen 
+and (max-width: 1024px)
+and (min-width: 768px)
+and (orientation: landscape)
+{
+
+    div#edit-profile {
+        width: 684px;
+        position: relative;
+        left: 82px;
+    }
+    input.btn.btn-default {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 15%;
+    }
+
+    div#changess-pass {
+        width: 684px;
+        position: relative;
+        left: 90px;
+    }
+    div#addresses {
+        width: 684px;
+        position: relative;
+        left: 90px;
+    }
+
+}
+
+@media only screen 
+and (max-width: 1366px)
+and (min-width: 1024px)
+and (orientation: landscape)
+{
+
+    div#edit-profile {
+        width: 684px;
+        position: relative;
+        left: 82px;
+    }
+    input.btn.btn-default {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 15%;
+    }
+
+    div#changess-pass {
+        width: 684px;
+        position: relative;
+        left: 90px;
+    }
+    div#addresses {
+        width: 684px;
+        position: relative;
+        left: 90px;
+    }
+
+}
+
+@media only screen 
+and (max-width: 640px)
+and (min-width: 360px)
+and (orientation: portrait)
+{
+
+    div#edit-profile {
+        width: 684px;
+        position: relative;
+        left: 82px;
+    }
+    input.btn.btn-default {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 15%;
+    }
+
+    div#changess-pass {
+        width: 684px;
+        position: relative;
+        left: 90px;
+    }
+    div#addresses {
+        width: 684px;
+        position: relative;
+        left: 90px;
+    }
+
+}
+
+@media only screen 
+and (max-width: 640px)
+and (min-width: 360px)
+and (orientation: landscape)
+{
+
+    div#edit-profile {
+        width: 684px;
+        position: relative;
+        left: 82px;
+    }
+    input.btn.btn-default {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 15%;
+    }
+
+    div#changess-pass {
+        width: 684px;
+        position: relative;
+        left: 90px;
+    }
+    div#addresses {
+        width: 684px;
+        position: relative;
+        left: 90px;
+    }
+
+}
+
+
+@media only screen 
+and (max-width: 731px)
+and (min-width: 411px)
+and (orientation: landscape)
+{
+
+    div#edit-profile {
+        width: 684px;
+        position: relative;
+        left: 82px;
+    }
+    input.btn.btn-default {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 15%;
+    }
+
+    div#changess-pass {
+        width: 684px;
+        position: relative;
+        left: 90px;
+    }
+    div#addresses {
+        width: 684px;
+        position: relative;
+        left: 90px;
+    }
+
+}
+
+@media only screen 
+and (max-width: 568px)
+and (min-width: 320px)
+and (orientation: portrait)
+{
+
+    div#edit-profile {
+        width: 684px;
+        position: relative;
+        left: 82px;
+    }
+    input.btn.btn-default {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 15%;
+    }
+
+    div#changess-pass {
+        width: 684px;
+        position: relative;
+        left: 90px;
+    }
+    div#addresses {
+        width: 684px;
+        position: relative;
+        left: 90px;
+    }
+
+}
+
+
+@media only screen 
+and (max-width: 300px)
+and (min-width: 280px)
+and (orientation: portrait)
+{
+
+    div#edit-profile {
+        width: 684px;
+        position: relative;
+        left: 82px;
+    }
+    input.btn.btn-default {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 15%;
+    }
+
+    div#changess-pass {
+        width: 684px;
+        position: relative;
+        left: 90px;
+    }
+    div#addresses {
+        width: 684px;
+        position: relative;
+        left: 90px;
+    }
+
 }

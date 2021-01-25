@@ -30,30 +30,11 @@ class myprofileController extends Controller
         inner join customer_address ON address_id ="'.$id.'"
         inner join contact_info ON contact_id ="'.$id.'"where id = ?',[$id]);
 
-        //dd($id);
         return view('userpage/myprofile', compact('value'));
        
     }
 
 
-    // public function show($id){
-
-    //    //$data=Login::all();
-    //     $value = Session::get('user'); 
-    //     $users = DB::select('SELECT * from users inner join customer_info ON customer_id
-    //     inner join customer_address ON address_id
-    //     inner join contact_info ON contact_id where id = ?',[$id]);
-    //      $value1 = [
-    //         '0' => $users
-    //     ];
-    //     $data = Session::put('user', $value1);
-        
-    //     $value = Session::get('user'); 
-    //     return view('userpage/myprofile',['users'=>$users])->with(compact('value'));
-
-
-        
-    // }
 
 
     function update(Request $request,$id)
@@ -74,9 +55,29 @@ class myprofileController extends Controller
         $land = $request->input('land');
         $email = $request->input('email');
 
-        DB::update('update users,customer_info,customer_address,contact_info set name = ?,phone=?,address=?,address1=?,house_no=?,city=?,zip_code=?,land_mark=?,email=? where id = ?',[$full_name,$phone,$address,$address1,$house,$city,$zip,$land,$email,$id]);
-       
-       
+        DB::update('UPDATE users, customer_info, customer_address, contact_info SET customer_info.lastname = "'.$lname.'",
+        customer_info.middlename ="'.$mname.'",
+        customer_info.firstname ="'.$fname.'",
+          customer_address.customer_id="'.$id.'",
+          customer_address.house_number="'.$house.'",
+          customer_address.purok_zone="'.$zone.'",
+          customer_address.street ="'.$street.'",
+          customer_address.barangay="'.$brngy.'",
+          customer_address.city="'.$city.'",
+          customer_address.coordinate="'.$coordinate.'",
+          customer_address.landmark="'.$land.'",
+          contact_info.customer_id="'.$id.'",
+          contact_info.phone="'.$phone.'",
+            users.email = "'.$email.'"
+      WHERE users.id = customer_info.customer_id AND users.id = customer_address.address_id AND users.id=contact_info.contact_id
+      AND customer_info.customer_id = "'.$id.'" AND customer_info.customer_id ="'.$id.'" AND customer_address.address_id= "'.$id.'" AND contact_info.contact_id ="'.$id.'"
+      
+      
+      ');
+
+      
+        
+        
         
        
         echo "<script>alert('Record Updated Successfully');

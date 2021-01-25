@@ -496,4 +496,22 @@ button.addcart {
       z-index: 200;
     }
 }
+.signup-inputs {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #cf9d71;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #cf9d71;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 /*# sourceMappingURL=bodystyle.css.map */
