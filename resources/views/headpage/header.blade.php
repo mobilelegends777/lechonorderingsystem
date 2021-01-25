@@ -49,7 +49,8 @@
 		</div>
 		<div class="icons-inputs">
 			<span class="inputs">
-				<input type="text" name="" placeholder="Search products..." class="inpt-search">
+			
+				<input type="text" name="" placeholder="Search products..." class="inpt-search"> 
 				<button class="btn-search">Search</button>
 			</span>
 		</div>

@@ -821,12 +821,12 @@
 	}
 	button.btn.btn-success.btn-block {
     	 height: 96px;
-	     width: 90%;
+	     width: 100%;
          font-size: 33px;
 	}
 	.btn-primary#btn-signup {
 		 height: 96px;
- 		 width: 90%;
+ 		 /* width: 90%; */
 	     font-size: 31px;
     }
     button.btn.facebook-btn.social-btn {

@@ -1,6 +1,6 @@
 .container-left {
     position: relative;
-    left: 25%;
+    left: 21%;
 }
 
 .col-sm-12 {
@@ -13,7 +13,7 @@
 }
 .move-to-right {
     position: relative;
-    left: 106%;
+    left: 110%;
     bottom: 20%;
 }
 
@@ -34,22 +34,25 @@ textarea.form-control.form_1 {
 
 h1.text-center {
     position: relative;
-    left: 62%;
+    left: 57%;
 }
 
 .contact_1.text-center {
     position: relative;
-    right: -61%;
+    left: 25%;
+    text-align: center;
 }
 
 .contact_1.text-right {
     position: relative;
-    left: 146%;
+    left: 120%;
+    text-align: center;
 }
 
 .contact_1.text-left {
     position: relative;
-    right: 43%;
+    right: 55%;
+    text-align: center;
 }
 
 @media only screen 
@@ -126,6 +129,25 @@ and (orientation: portrait)
         position: relative;
         left: 8%;
     }
+    h1.text-center {
+        /* position: relative; */
+        left: 65%;
+    }
+    .contact_1.text-left {
+        position: relative;
+        right: 5%;
+    }        
+    .contact_1.text-center {
+        position: relative;
+        left: 50%;
+        text-align: center;
+    }
+    
+    .contact_1.text-right {
+        position: relative;
+        left: 120%;
+        text-align: center;
+    }    
 
 }
 
@@ -137,8 +159,9 @@ and (orientation: portrait)
 
     .container-left {
         position: relative;
-        left: 11%;
+        left: 12%;
     }
+    
 
     /* .col-sm-12 {
         display: table-header-group;
@@ -193,5 +216,14 @@ and (orientation: portrait)
         position: relative;
         left: 12%;
     }
-
+    .contact_3 a {
+        border-radius: 6px;
+}
+    .move-to-right {
+        left: 110%;
+    }
+    .col-sm-12 .sub-button a {
+        padding-left: -20px;
+        padding-top: 50px;
+    }
 }

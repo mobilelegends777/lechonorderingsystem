@@ -1803,7 +1803,8 @@ figure.effect-jazz:hover figcaption::after {
        letter-spacing:2px;
 	   background:#000;
 	   color:#ffffff;
-	   padding:15px 40px 15px 40px;  
+     padding:15px 40px 15px 40px;
+     border-radius: 6px;  
 			}
 .contact_3 a:hover {
 	   background: #fcbbbf;
