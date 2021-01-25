@@ -75,6 +75,7 @@ Route::get('/userpage/myprofile/{id}/success','myprofileController@update')->nam
 
 
 
+
 Route::get('/userpage/myorder', 'myorderController@index')->name('myorder');
 
 
@@ -89,3 +90,4 @@ Route::get('login/facebook', 'userLoginController@redirectToFacebook');
 Route::get('login/facebook/callback', 'userLoginController@handleFacebookCallback');
 
 
+Route::get('/frontpage/special-order','lechonController@index');
