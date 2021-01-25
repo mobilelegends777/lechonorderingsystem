@@ -21,51 +21,63 @@ class myprofileController extends Controller
     }
 
     
-    public function index()
+    public function index(Request $request)
     {
-       
-        $data = Auth::user(); 
-        $value = [
-            '0' => $data
-        ];
-        //$data = User::find('$value["userid"]');
-        // dd($value);
+        
+        $data = Auth::user();
+        $id = $data->id;
+        $value = DB::select('SELECT * from users inner join customer_info ON customer_id= "'.$id.'"
+        inner join customer_address ON address_id ="'.$id.'"
+        inner join contact_info ON contact_id ="'.$id.'"where id = ?',[$id]);
+
         return view('userpage/myprofile', compact('value'));
        
     }
 
 
-    public function show($id){
-
-       //$data=Login::all();
-        $value = Session::get('user'); 
-        $users = DB::select('SELECT * from users where id = ?',[$id]);
-        $data = Session::put('user', $users);
-        $value = Session::get('user'); 
-        return view('userpage/myprofile',['users'=>$users])->with(compact('value'));
-
-
-        
-    }
 
 
     function update(Request $request,$id)
 
      {
         //dd($request->all());
-        $full_name = $request->input('name');
+        $fname = $request->input('fname');
+        $mname = $request->input('mname');
+        $lname = $request->input('lname');
         $phone = $request->input('phone');
-        $address = $request->input('address');
-        $address1 = $request->input('address1');
+        $tel = $request->input('tel');
         $house = $request->input('house');
+        $zone = $request->input('zone');
+        $street = $request->input('street');
+        $brngy = $request->input('brngy');
+        $coordinate = $request->input('coordinate');
         $city = $request->input('city');
-        $zip = $request->input('zip');
         $land = $request->input('land');
         $email = $request->input('email');
 
-        DB::update('update users set name = ?,phone=?,address=?,address1=?,house_no=?,city=?,zip_code=?,land_mark=?,email=? where id = ?',[$full_name,$phone,$address,$address1,$house,$city,$zip,$land,$email,$id]);
-       
-       
+        DB::update('UPDATE users, customer_info, customer_address, contact_info SET customer_info.lastname = "'.$lname.'",
+        customer_info.middlename ="'.$mname.'",
+        customer_info.firstname ="'.$fname.'",
+          customer_address.customer_id="'.$id.'",
+          customer_address.house_number="'.$house.'",
+          customer_address.purok_zone="'.$zone.'",
+          customer_address.street ="'.$street.'",
+          customer_address.barangay="'.$brngy.'",
+          customer_address.city="'.$city.'",
+          customer_address.coordinate="'.$coordinate.'",
+          customer_address.landmark="'.$land.'",
+          contact_info.customer_id="'.$id.'",
+          contact_info.phone="'.$phone.'",
+            users.email = "'.$email.'"
+      WHERE users.id = customer_info.customer_id AND users.id = customer_address.address_id AND users.id=contact_info.contact_id
+      AND customer_info.customer_id = "'.$id.'" AND customer_info.customer_id ="'.$id.'" AND customer_address.address_id= "'.$id.'" AND contact_info.contact_id ="'.$id.'"
+      
+      
+      ');
+
+      
+        
+        
         
        
         echo "<script>alert('Record Updated Successfully');

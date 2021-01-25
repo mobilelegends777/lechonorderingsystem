@@ -1982,7 +1982,7 @@ figure.effect-jazz:hover figcaption::after {
   letter-spacing:1px;
   }
 .shopper_2 p a:hover{
-  background:#fbaeb4s;
+  background:#fbae;
   }
   
 .ziehharmonika h3 {
@@ -2507,9 +2507,7 @@ figure.effect-jazz:hover figcaption::after {
 .head_contact h2 {
     font-size: 55px;
 }
-#contact .container {
-    width: auto;
-}
+
 .contact_3 {
     text-align: center;
 }
@@ -2691,9 +2689,7 @@ figure.effect-jazz:hover figcaption::after {
     padding-top: 100px;
     padding-bottom: 100px;
 }
-#contact .container {
-    width: auto;
-}
+
 #footer {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -2813,9 +2809,7 @@ figure.effect-jazz:hover figcaption::after {
     padding-top: 100px;
     padding-bottom: 100px;
 }
-#contact .container {
-    width: auto;
-}
+
 #blog_2 {
    padding-bottom: 0px;
 }

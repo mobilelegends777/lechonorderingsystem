@@ -980,14 +980,10 @@ span.cart-title {
 /*login */
 .login-reg-form {
     width: 500px;
-    /* width: auto; */
     border: solid #2a2c2f;
-    margin: 6% 37%;
-    height: auto;
-    /*background: rgb(222, 220, 220);*/
+    margin: 0% 37%;
     background: #2a2c2fc7;
     border-radius: 5px;
-
 }
 .social-log {
     display: flex;

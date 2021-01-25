@@ -69,7 +69,7 @@ Route::get('/frontpage/checkout', 'checkoutController@index')->name('checkout');
 
 //Profile
 Route::get('/userpage/myprofile/', 'myprofileController@index')->name('myprofile');
-Route::get('/userpage/myprofile/{id}','myprofileController@show')->name('myprofile2');
+// Route::get('/userpage/myprofile/{id}','myprofileController@show')->name('myprofile2');
 Route::get('/userpage/myprofile/{id}/success','myprofileController@update')->name('profileupdated');
 
 
