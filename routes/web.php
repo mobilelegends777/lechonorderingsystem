@@ -89,3 +89,4 @@ Route::get('login/facebook', 'userLoginController@redirectToFacebook');
 Route::get('login/facebook/callback', 'userLoginController@handleFacebookCallback');
 
 
+Route::get('/frontpage/special-order','lechonController@index');

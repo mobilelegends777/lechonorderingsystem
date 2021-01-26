@@ -33,7 +33,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 172px;
   margin: 13px 54px;
   width: 250px;
   position: relative;
@@ -48,8 +47,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 105px 12%;
-  width: 100%;
+  /* margin: 105px 12%; */
+  /* width: 100%; */
   line-height: 29px;
 }
 
@@ -166,7 +165,7 @@ a#cancel_reset {
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  height: 31.25rem;
+  height: 21.25rem;
   -webkit-filter: brightness(0.5);
   filter: brightness(0.5);
 }
@@ -242,7 +241,7 @@ i.fa.fa-star {
 .shop-sub-container3 {
   width: 53%;
   height: auto;
-  padding: 31px 0;
+  /* padding: 31px 0; */
 }
 
 .shop-items-conts {
@@ -361,7 +360,6 @@ i.fa.fa-star {
 .shop-item-image:hover .shop-cart-icon i {
   display: block;
 }
-
 .shop-cart-icon i {
   position: absolute;
   top: 0;
@@ -372,7 +370,22 @@ i.fa.fa-star {
   padding: 18px;
   border-radius: 50%;
 }
-
+.orderNow {
+  position: absolute;
+  top: 0;
+  margin: 77px 38px;
+  display: none;
+  color: #fff;
+  background: red;
+  font-size: 27px;
+  padding: 18px;
+  /* border-radius: 50%; */
+  width: 163px;
+  border-radius: 5px;
+}
+.shop-item-image:hover .orderNow {
+display: block;
+}
 .shop-cart-icon i:hover {
   color: #fff;
   background: #c4a265;
@@ -535,17 +548,7 @@ button.addcart {
     display: none;
     border: solid #c4a256;
   }
-  .showing {
-    display: block;
-    position: fixed;
-    background: #fff;
-    z-index: 100;
-    top: 0;
-    right: 0;
-    width: 29.4375rem;
-    -webkit-transition: 2s;
-    transition: 2s;
-  }
+  
   .shop-sub-container3 {
     width: 100%;
     padding: 31px 32px;
@@ -621,12 +624,7 @@ button.addcart {
       padding: 57px;
       line-height: 73px;
     }*/
-  .shop-filters {
-    width: unset;
-    padding: 57px;
-    line-height: 73px;
-    background: #fff;
-  }
+  
   .shop-filters .close-btn {
     font-size: 69px;
     float: right;
@@ -644,10 +642,6 @@ button.addcart {
   }
   .sort-items select option {
     font-size: 10px;
-  }
-  .shop-filters {
-    padding: 57px;
-    line-height: 73px;
   }
   .shop-filters .close-btn {
     font-size: 69px;
@@ -679,7 +673,7 @@ button.addcart {
 
 input {
   padding: 12px 20px;
-  margin: 8px 0;
+  /* margin: 8px 0; */
   display: inline-block;
   border: 1px solid #cf9d71;
   border-radius: 4px;
