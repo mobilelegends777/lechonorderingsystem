@@ -20,18 +20,20 @@
 					<span class="des3">Home</span>
 				</a>
 			</div>
-			<span class="dropdown">
+			<div class="dropdown">
 				<span class="des5">Special Order <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
 				<div class="dropdown-content">
-				  <a href="{{asset('frontpage/special-order')}}">Lechon</a>
+				  <a href="{{asset('frontpage/special-order')}}">Whole Lechon</a>
+				  <a href="{{asset('frontpage/special-order')}}">Lechon Belly</a>
+				  <a href="{{asset('frontpage/special-order')}}">Available per Kilo</a>
 				</div>
-			</span>
-			<span class="dropdown">
+			</div>
+			<div class="dropdown">
 				<a href="{{asset('frontpage/shop')}}">
 					<span class="des4">Menu</span>
 				</a>
-			</span>
-			{{--<span class="dropdown">
+			</div>
+			{{--<div class="dropdown">
 				<span class="des6">Menu<img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
 				<div class="dropdown-content">
 				  <a href="{{asset('frontpage/newproduct')}}">New Products</a>
@@ -40,12 +42,12 @@
 				  <a href="{{asset('frontpage/drinks')}}">Drinks</a>
 				  <a href="{{asset('frontpage/appetizer')}}">Appetizers</a>
 				</div>
-			</span>--}}
-			<span class="dropdown">
+			</div>--}}
+			<div class="dropdown">
 				<a href="{{asset('frontpage/contact')}}">
 				<span class="des7">Contact Us </span>
 				</a>
-			</span>
+			</div>
 		</div>
 		<div class="icons-inputs">
 			<span class="inputs">

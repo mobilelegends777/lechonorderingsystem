@@ -29,7 +29,9 @@
 						<div class="filter-cat">
 							<span><h4>Lechon</h4></span>
 							<ul>
-								<li><a href="{{asset('frontpage/special-order')}}">Lechon Baboy</a></li>
+								<li><a href="{{asset('frontpage/special-order')}}">Whole Lechon Baboy</a></li>
+								<li><a href="{{asset('frontpage/special-order')}}">Available per Kilo</a></li>
+								<li><a href="{{asset('frontpage/special-order')}}">Lechon Belly</a></li>
 								<li><a href="{{asset('frontpage/special-order')}}">Lechon Manok</a></li>
 								<li><a href="{{asset('frontpage/special-order')}}">Lechon Baka</a></li>
 							</ul>
@@ -74,7 +76,13 @@
 						@for($i = 7;$i <= 22; $i++)
 							<div class="shop-items">
 								<div class="shop-item-image">
-									<input type="hidden" name="" class="add-ress" value="{{$value[0]->address}}&nbsp;{{$value[0]->city}}">
+
+									@if($value[0] == 'Input Address')
+										<input type="hidden" name="" class="add-ress" value="{{$value[0]}}">
+									@else
+										<input type="hidden" name="" class="add-ress" value="{{$value[0]->address}}&nbsp;{{$value[0]->city}}">
+									@endif
+
 									<a href="#" class="shop-images-lechon" data-value="{{$i}}">
 										<img src="{{asset('images/lechon'.$i.'.png')}}">
 									</a>
@@ -250,8 +258,13 @@ $('.orderNow').each(function(){
 								
 							</div>
 						</div>
-						<div class="proceed-to">
-									<button><i class="fa fa-arrow-right"></i><span>PROCEED</span></button>
+						<div class="qty-proceed-to">
+							<div class="quantities">
+								<input type="number" name="" class="inpt-qty" value="1">
+							</div>
+							<div class="proceed-to">
+								<button><i class="fa fa-arrow-right"></i><span>PROCEED</span></button>
+							</div>
 						</div>
 				</div>
 			</div>
@@ -332,8 +345,18 @@ $('.shop-images-lechon').each(function(){
 								
 							</div>
 						</div>
+<<<<<<< HEAD
 						<div class="proceed-to">
 									<button><i class="fa fa-arrow-right"></i><span>PROCEED</span></button>
+=======
+						<div class="qty-proceed-to">
+							<div class="quantities">
+								<input type="number" name="" class="inpt-qty" value="1">
+							</div>
+							<div class="proceed-to">
+								<button><i class="fa fa-arrow-right"></i><span>PROCEED</span></button>
+							</div>
+>>>>>>> 7679aaded7abdf6915a3f4d2f24e071122c0ade5
 						</div>
 				</div>
 			</div>
@@ -351,7 +374,7 @@ $(window).scroll(function() {
 		    	'background':'#fff',
 		    });
 		  }
-		  else if($(window).width() <= 800){
+		  else if($(window).width() <= 900){
 		  	$('.shop-filters').css({
 		    	'position':'relative',
 		    	'top':'initial',

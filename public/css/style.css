@@ -6,9 +6,9 @@ body {
   max-width: 1920px;
 }
 .container {
-  max-width: 100%;
-  width: 1920px;
   padding: 0;
+  width: 100%;
+  max-width: 1920px;
 }
 input {
   font-size: 16px;
@@ -35,12 +35,14 @@ a {
 	background-color: #2a2c2f;
   height: auto;
   width: 100%;
+  justify-content: space-evenly;
 }
 .company-logo {
-    width: 23%;
+    /* width: 23%; */
     display: flex;
     justify-content: center;
     padding: 10px 0;
+    align-items: center;
 }
 .header-container{
     width: 100%;
@@ -49,7 +51,7 @@ img.logos {
     width: 76px;
     size: 4px;
     position: relative;
-    top: -7px;
+    top: 0px;
 }
 .hr {
   width: 22%; 
@@ -81,17 +83,17 @@ img.logos {
 }
 
 .headmenu .sub-menu {
-    font-size: 19px;
-    padding: 10px;
-    display: inline-block;
+    display: flex;
     width: 30%;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.headmenu .sub-menu .des3 {
+.headmenu .sub-menu {
 	color: white;
 }
 
-.headmenu .sub-menu .des4 {
+/* .headmenu .sub-menu .des4 {
 	color: white;
 	margin-left: 30px;
 }
@@ -104,12 +106,12 @@ img.logos {
 .headmenu .sub-menu .des6 {
 	color: white;
 	margin-left: 30px;
-}
+} */
 
-.headmenu .sub-menu .des7 {
+/* .headmenu .sub-menu .des7 {
 	color: white;
 	margin-left: 30px;
-}
+} */
 
 .headmenu .sub-menu .d-arrow {
     width: 10px;
@@ -535,9 +537,11 @@ span.product-title {
     position:relative;
 }
 .sub-container4{
-    height: 500px;
+    height: auto;
     width: 100%;
     display: flex;
+    justify-content: center;
+    padding: 71px 0;
 }
 .footer-logo {
     display: flex;
@@ -637,7 +641,7 @@ span.sp {
 }
 .image-cont {
     height: auto;
-    padding-top: 29px;
+    margin-top: 29px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -957,7 +961,7 @@ span.cart-title {
 }
 .icons-inputs{
     display: flex;
-    width: 26%;
+    /* width: 26%; */
 }
 .icons {
     display: flex;
@@ -981,7 +985,6 @@ span.cart-title {
 .login-reg-form {
     width: 500px;
     border: solid #2a2c2f;
-    margin: 0% 37%;
     background: #2a2c2fc7;
     border-radius: 5px;
 }
@@ -1066,6 +1069,8 @@ button.btn.btn-success.btn-block {
 }
 .login-body {
     background-image: url(../asset/img/599.jpg);
+    padding: 102px 0;
+    text-align: -webkit-center;
 }
 
 
@@ -1088,7 +1093,7 @@ button.btn.btn-success.btn-block {
 button.filter-by-price {
     padding: 10px 25px;
     background: none;
-    border-colo: #c4a256;
+    border-color: #c4a256;
     border: solid #c4a256;
     border-radius: 5px;
     cursor: pointer;
@@ -1351,13 +1356,20 @@ div#myDropdown {
 .delivery-details div{
   margin: 8px;
 }
-.proceed-to {
-    text-align: right;
+.qty-proceed-to {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 17px;
+}
+input.inpt-qty {
+    height: 100%;
 }
 
 input.btn.btn-default {
     background-color: #ff8a05;
     color: white;
+
+
 }
 
 input.btn.btn-default:hover{
