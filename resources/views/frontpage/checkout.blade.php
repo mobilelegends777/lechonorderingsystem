@@ -1,25 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width initial-scale=1">
-    <title>Checkout</title>
-	<link href="{{asset('asset/css/bootstrap.min.css')}}" rel="stylesheet">
+@extends('index')
+@section('page_content')
+
+
 	<link href="{{asset('css/global.css')}}" rel="stylesheet">
 	<link href="{{asset('css/checkout.css')}}" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="{{asset('asset/css/font-awesome.min.css')}}" />
-	<link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Farro&display=swap" rel="stylesheet">
-  <script src="{{asset('asset/js/jquery-2.1.1.min.js')}}"></script>
-	<script src="{{asset('asset/js/bootstrap.min.js')}}"></script>
-  </head>
-  @include('layouts.csslinks')
+	
+
 <body>
 
-@include('headpage.header')	
+	
 <section id="center" class="clearfix checkout">
- <div class="container">
+ <div class="container1">
   <div class="row">
+
   <div class="checkout_1 clearfix">
    <div class="col-sm-6">
     <div class="check_lm clearfix">
@@ -33,21 +26,31 @@
 	</div><br>
 	<div class="check_lm2 clearfix">
 	 <div class="col-sm-6 space_left">
-	  <h4>Contact information  <span id="show"class="glyphicon glyphicon-edit"></span></h4>
+	  <h4 class="check-title">Contact information  <span id="show"class="glyphicon glyphicon-edit"><img src="{{asset('images/edit-icon.png')}}"><h6 class="size-color1">Edit</span></h4></h6>
       <hr>
       <div id="contacts"class="bg-w clearfix">
 	  <div class="col-sm-6">
-	   <h5 class="mgt normal"><img class="check-icon" src="{{asset('images/n.png')}}">Full Name</h5>
+	   <h5 class="mgt normal"><img class="check-icon" src="{{asset('images/n.png')}}">Firstname</h5>
+	   <h5 class="normal"><img class="check-icon" src="{{asset('images/n.png')}}">Middlename</h5>
+	   <h5 class="normal"><img class="check-icon" src="{{asset('images/n.png')}}">Lastname</h5>
        <h5 class="normal"><img class="check-icon" src="{{asset('images/e.png')}}">Email</h5>
 	   <h5 class="normal"><img class="check-icon" src="{{asset('images/p.png')}}">Contact #</h5>
+	  
+	
+	
 	  </div>
-	  <div class="col-sm-6">
-	   <h5 class="mgt">{{$value[0]->name}}</h5>
-       <h5>{{$value[0]->email}}</h5>
-	   <h5>{{$value[0]->phone}}</h5>
+	  <div class="size-height">
+
+	  <h5 class="mgt"></h5>
+	   <h5 class="move-free-data">{{$value['0']->firstname}}</h5>
+	   <h5 class="move-free-data">{{$value['0']->middlename}}</h5>
+	   <h5 class="move-free-data">{{$value['0']->lastname}}</h5>
+	   <h5 class="move-free-data">{{$value['0']->email}}</h5>
+	   <h5 class="move-free-data">{{$value['0']->phone}}</h5>
 	  </div>
+	
 	 </div>
-     <hr>
+    
 	 </div>
    
 	 
@@ -57,7 +60,7 @@
     <div id="myDIV">
 	<input class="form-control" type="hidden" name="id" value="{{$value['0']->id}}">
      <div class="check_lm3 clearfix">
-	 <input class="form-control" placeholder="Full Name" type="text" value="{{$value[0]->name}}">
+	 <input class="form-control" placeholder="Full Name" type="text" value="{{$value[0]->firstname}}">
 
      </div>
      <div class="check_lm3 clearfix">
@@ -76,22 +79,24 @@
 
 	</form>
 	
-
-    <h4>Shipping address  <span id="show2"class="glyphicon glyphicon-edit"></h4>
+	<div class="move-to-top-rem">
+    <h4 class="check-title">Shipping address  <span id="show2"class="glyphicon glyphicon-edit"><img src="{{asset('images/edit-icon.png')}}"><h6 class="size-color">Edit</span></h4></h6>
   
 
 	<div id ="MyAdd"class="check_lm4 clearfix">
-	 <input class="form-control" placeholder="Address" type="text" value="{{$value[0]->address}}">
-	 <input class="form-control" placeholder="House No" type="text"value="{{$value[0]->house_no}}">
+	 <input class="form-control" placeholder="House #" type="text" value="{{$value[0]->house_number}}">
+	 <input class="form-control" placeholder="Zone" type="text"value="{{$value[0]->purok_zone}}">
      <div class="check_lm4 clearfix">
 	 <div class="col-sm-4 space_left">
-     <input class="form-control" placeholder="City" type="text"value="{{$value[0]->city}}">
+	 <input class="form-control" placeholder="Street" type="text"value="{{$value[0]->street}}">
+	 <input class="form-control" placeholder="Barangay" type="text"value="{{$value[0]->barangay}}">
 	 </div>
 	 <div class="col-sm-4 space_left">
-     <input class="form-control" placeholder="Zip Code" type="text"value="{{$value[0]->zip_code}}">
+	 <input class="form-control" placeholder="City" type="text"value="{{$value[0]->city}}">
+	 <input class="form-control" placeholder="Coordinate" type="text"value="{{$value[0]->coordinate}}">
 	 </div>
      <div class="col-sm-4 space_all">
-     <input class="form-control" placeholder="Land Mark" type="text"value="{{$value[0]->land_mark}}">
+     <input class="form-control" placeholder="Land Mark" type="text"value="{{$value[0]->landmark}}">
 	 </div>
      <div class="col-sm-6">
       <h5 class="mgt text-right _sbtn"><a class="button mgt">Save</a></h5>
@@ -102,39 +107,51 @@
 	
 	<div class="check_lm5 clearfix">
 	 
-	</div>
+	</div >
 	<div class="checkout_1l3 clearfix">
 	 <hr>
      <div id="adds"class="bg-w clearfix">
-	  <div class="col-sm-6">
-	   <h5 class="mgt normal"><img class="check-icon" src="{{asset('images/a.png')}}">Full Address</h5>
-       <h5 class="normal"><img class="check-icon" src="{{asset('images/h.png')}}">House No.</h5>
-	   <h5 class="normal"><img class="check-icon" src="{{asset('images/city.png')}}">City</h5></h5>
-       <h5 class="normal"><img class="check-icon" src="{{asset('images/zp.png')}}">Zip Code</h5></h5>
-       <h5 class="normal"><img class="check-icon" src="{{asset('images/land.png')}}">Land Mark</h5></h5>
+	  <div class="col-sm-6 move-to-bot">
+	   <h5 class="mgt normal"><img class="check-icon" src="{{asset('images/a.png')}}">House #</h5>
+       <h5 class="normal"><img class="check-icon" src="{{asset('images/h.png')}}">Zone/Prk.</h5>
+	   <h5 class="normal"><img class="check-icon" src="{{asset('images/city.png')}}">Street</h5>
+       <h5 class="normal"><img class="check-icon" src="{{asset('images/zp.png')}}">Barangay</h5>
+	   <h5 class="normal"><img class="check-icon" src="{{asset('images/land.png')}}">City</h5>
+	   <h5 class="normal"><img class="check-icon" src="{{asset('images/land.png')}}">Coordinate</h5>
+	   <h5 class="normal"><img class="check-icon" src="{{asset('images/land.png')}}">Landmark</h5>
+	   
+		
+	
+	   
 	  </div>
-	  <div class="col-sm-6">
-	    <h5 class="mgt">{{$value[0]->address}}</h5> 
-       <h5>{{$value[0]->house_no}}</h5>
-	   <h5>{{$value[0]->city}}</h5>
-       <h5>{{$value[0]->zip_code}}</h5>
-       <h5>{{$value[0]->land_mark}}</h5>
+	  <div class="size-height">
+	  <h5 class="move-free-data1">{{$value['0']->house_number}}</h5> 
+       <h5 class="move-free-data1">{{$value['0']->purok_zone}}</h5>
+	   <h5 class="move-free-data1">{{$value[0]->street}}</h5>
+       <h5 class="move-free-data1">{{$value[0]->barangay}}</h5>
+	   <h5 class="move-free-data1">{{$value[0]->city}}</h5>
+	   <h5 class="move-free-data1">{{$value[0]->coordinate}}</h5>
+	   <h5 class="move-free-data1">{{$value[0]->landmark}}</h5>
 	  </div>
+
 	 </div>
-     <hr>
+	 </div>
+	 
 	 <div class="col-sm-6">
      <h5 class="mgt"><a href="{{asset('frontpage/cartpage')}}"><i class="fa fa-chevron-left"></i> Return to cart</a></h5>
 	 </div>
+	 
 
 	</div>
 	</div>
    </div>
-   <div class="col-sm-6">
+   <div class="move-flex">
    <div class="check_rm clearfix">
     <div class="checkout_1r clearfix">
 	  <div class="checkout_1l2 mgt clearfix">
-	 <div class="col-sm-2">
-	  <img src="{{asset('asset/img/delisyoso.jpg')}}" alt="abc" class="iw">	 </div>
+	 <div class="move-to-center">
+		 <h4>Order Summary</h4>
+	  </div>
 	 <div class="col-sm-7">
 	  <p class="mgt">Lechon Pork</p>
 	  <h6></h6>
@@ -147,7 +164,7 @@
 	<div class="checkout_1r clearfix">
 	  <div class="checkout_1l2 clearfix">
 	 <div class="col-sm-2">
-	  <img src="{{asset('asset/img/chickenamor.jpg')}}" alt="abc" class="iw">	 </div>
+	   </div>
 	 <div class="col-sm-7">
 	  <p class="mgt">Chicken na Manok</p>
 	  <h6></h6>
@@ -160,7 +177,7 @@
 	<div class="checkout_1r clearfix">
 	  <div class="checkout_1l2 clearfix">
 	 <div class="col-sm-2">
-	  <img src="{{asset('asset/img/pizza.jpg')}}" alt="abc" class="iw">	 </div>
+	  </div>
 	 <div class="col-sm-7">
 	  <p class="mgt">Small Pizza</p>
 	  <h6></h6>
@@ -173,7 +190,7 @@
 	<div class="checkout_1r clearfix">
 	  <div class="checkout_1l2 clearfix">
 	 <div class="col-sm-2">
-	  <img src="{{asset('asset/img/pizza.jpg')}}" alt="abc" class="iw">	 </div>
+	  </div>
 	 <div class="col-sm-7">
 	  <p class="mgt">Small Pizza</p>
 	  <h6></h6>
@@ -185,8 +202,8 @@
 	</div>
 	<div class="checkout_1r1 clearfix">
     <hr>
-	   <h6>Comments</h6>
-	   <textarea class="form-control" readonly></textarea>
+	   <h6>Comment</h6>
+	   <textarea class="form-control txt-size" ></textarea>
 	 <hr>
     
 	 <div class="checkout_1r1i clearfix">
@@ -195,8 +212,8 @@
 	   <h5 class="normal">Shipping</h5>
 	  </div>
 	  <div class="col-sm-6">
-	   <h5 class="mgt">Php 700.00</h5>
-	   <h6>Free</h6>
+	   <h5 class="mgt move-right move-to-top move-to-free">Php 700.00</h5>
+	   <h5 class="mgt move-right move-to-top margin-top">Free</h5>
 	  </div>
 	 </div>
 	</div>
@@ -207,7 +224,7 @@
 	   <h5 class="mgt normal"><strong>Total</strong></h5>
 	  </div>
 	  <div class="col-sm-6">
-	   <h4 class="mgt"><span class="normal">PHP</span></span> 700.00</h4>
+	   <h4 class="mgt move-right"><span class="normal ">PHP</span></span> 700.00</h4>
 	  </div>
       
 	 </div>
@@ -242,8 +259,6 @@
  
 
 
-@include('headpage.footer')
-   @include('layouts.scripts')
 
 
  <!-- The Modal -->
@@ -275,7 +290,7 @@
 
 </div>
 <div class="modal-footer">
-<h5><img mousetitle="We partner with BPI to ensure that your credit card details are kept safe and secure. 
+<h5><img title="We partner with BPI to ensure that your credit card details are kept safe and secure. 
 MJ will not have access to your credit card info."class="info"src="{{asset('images/info.png')}}"></h5>
   <h5 class="mgt text-right modal_btn"><a class="button mgt">Place Order</a></h5>
   </div>
@@ -287,84 +302,5 @@ MJ will not have access to your credit card info."class="info"src="{{asset('imag
 
 </body>
  
-</html>
-
-
-<script>
-$(document).ready(function(){
- 
-    $("#myDIV").hide();
-    $("#MyAdd").hide();
-
- 
-  $("#show").click(function(){
-    $("#myDIV").toggle();
-    
-    $("#contacts").toggle();
-    
-
-
-
-  });
-
-  $("#show2").click(function(){
-    $("#MyAdd").toggle();
-    $("#adds").toggle();
-  
-    
-
-
-
-  });
-
-
-});
-</script>
-	
-<script>
-$(document).ready(function(){
-
-/*****Fixed Menu******/
-var secondaryNav = $('.cd-secondary-nav'),
-   secondaryNavTopPosition = secondaryNav.offset().top;
-	$(window).on('scroll', function(){
-		if($(window).scrollTop() > secondaryNavTopPosition ) {
-			secondaryNav.addClass('is-fixed');	
-		} else {
-			secondaryNav.removeClass('is-fixed');
-		}
-	});	
-	
-});
-</script>
-
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-
-</script>
+@endsection
 

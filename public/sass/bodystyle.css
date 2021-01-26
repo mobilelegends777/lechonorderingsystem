@@ -242,7 +242,7 @@ i.fa.fa-star {
 .shop-sub-container3 {
   width: 53%;
   height: auto;
-  padding: 2px 0;
+  padding: 31px 0;
 }
 
 .shop-items-conts {
@@ -377,21 +377,7 @@ i.fa.fa-star {
   color: #fff;
   background: #c4a265;
 }
-.orderNow {
-    position: absolute;
-    top: 0;
-    margin: 77px 38px;
-    display: none;
-    color: #fff;
-    background: #c4a256;
-    font-size: 27px;
-    padding: 18px;
-    /* border-radius: 50%; */
-    width: 163px;
-}
-.shop-item-image:hover .orderNow {
-  display: block;
-}
+
 /*.shop-cart-icon i:hover*/
 .shop-item-image {
   position: relative;
@@ -702,70 +688,14 @@ input {
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: portrait) {
-  .login-container {
-    width: 650px;
-  }
   .login-reg-form {
     width: 800px;
-    border: solid #2a2c2f;
+    border: solid #cf9d71;
     margin: 0% 37%;
     background: #2a2c2fc7;
     border-radius: 5px;
     position: relative;
-    right: 15%;
-  }
-  .login-reg-form .login-container .form-signin .social-log {
-    width: 655px;
-}
-  .signin-forgot {   
-    width: 650px;
-  }
-  .btn-primary#btn-signup {
-   
-    width: 650px;
-}
-  .form-signin h1 {
-    text-align: right;
-  }
-  .login-reg-form input {
-    width: 650px;
-    height: 45px;
-    border-radius: 3px;
-    border: unset;
-    margin: 10px 0;
-  }
-}
-@media only screen and (max-width: 411px) {
-  .login-container {
-    width: 650px;
-  }
-  .login-reg-form {
-    width: 800px;
-    border: solid #2a2c2f;
-    margin: 0% 37%;
-    background: #2a2c2fc7;
-    border-radius: 5px;
-    position: relative;
-    right: 15%;
-  }
-  .signin-forgot {
-    width: 650px;
-  }
-  .btn-primary#btn-signup {
-    width: 650px;
-  }
-  .form-signin h1 {
-    text-align: right;
-  }
-  .login-reg-form input {
-    width: 650px;
-    height: 45px;
-    border-radius: 3px;
-    border: unset;
-    margin: 10px 0;
-  }
-  .login-reg-form .login-container .form-signin .social-log {
-    width: 655px;
+    right: 17%;
   }
 }
 /*# sourceMappingURL=bodystyle.css.map */
