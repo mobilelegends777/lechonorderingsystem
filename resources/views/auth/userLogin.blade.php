@@ -73,7 +73,8 @@
                                         @enderror
                                        
 
-                          
+                        <input id="lastname" type="text" class="form-control" name="lastname" value="" placeholder="lastname">
+                        <input id="contact" type="text" class="form-control" name="contact" value="" placeholder="phone">
                     
 
                         <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email address" required autofocus="">
@@ -88,8 +89,11 @@
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
+                                
                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Repeat Password" required autofocus="">
-                </div>
+                        <input id="address" type="text" class="form-control" name="address" value="{{ old('address') }}" >
+                        <input id="address" type="text" class="form-control" name="purok" value="" >
+                    </div>
                 <div class="signup-button">
                         <button class="btn btn-primary btn-block sign-up" type="submit"><i class="fas fa-user-plus"></i>  {{ __('Sign Up') }}</button>
                         

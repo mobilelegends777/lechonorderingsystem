@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use App\Address;
+use App\Customer;
+use App\Contact;
 use Auth;
 use Session;
 use Request;
@@ -83,9 +86,22 @@ class RegisterController extends Controller
             'name' => $data['name'], 
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            
-        ]);
-
+            'address' => $data['address'],
+     ]);
+    Customer::create([
+        'customer_id' => $newUser->id,
+        'firstname' => $data['name'],
+        'lastname' => $data['lastname'],
+    ]);
+    Address::create([
+        'customer_id' => $newUser->id,
+        'purok_zone' => $data['purok'],
+        'street' => $data['address'],
+    ]);
+    Contact::create([
+        'customer_id' => $newUser->id,
+        'phone' => $data['contact'],
+    ]);
         
     return $newUser;
             

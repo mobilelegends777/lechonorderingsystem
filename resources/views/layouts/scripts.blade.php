@@ -30,9 +30,9 @@ function carousel() {
 <script>
 
 // this is temporary
-// $(this).resize(function(){
-//   this.location.reload();
-// });
+$(this).resize(function(){
+  this.location.reload();
+});
 // end reload every resize;
   var windowWidth = $(window).width();
 
