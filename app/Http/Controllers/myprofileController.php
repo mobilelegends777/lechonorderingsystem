@@ -68,8 +68,8 @@ class myprofileController extends Controller
           contact_info.customer_id="'.$id.'",
           contact_info.phone="'.$phone.'",
             users.email = "'.$email.'"
-      WHERE users.id = customer_info.customer_id AND users.id = customer_address.address_id AND users.id=contact_info.contact_id
-      AND customer_info.customer_id = "'.$id.'" AND customer_info.customer_id ="'.$id.'" AND customer_address.address_id= "'.$id.'" AND contact_info.contact_id ="'.$id.'"
+      WHERE users.id = customer_info.customer_id AND users.id = customer_address.customer_id AND users.id=contact_info.customer_id
+      AND customer_info.customer_id = "'.$id.'" AND customer_info.customer_id ="'.$id.'" AND customer_address.customer_id= "'.$id.'" AND contact_info.contact_id ="'.$id.'"
       
       
       ');

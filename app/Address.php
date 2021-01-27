@@ -10,6 +10,6 @@ class Address extends Model
     protected $table='customer_address';
 
     protected $fillable = [
-        'customer_id','purok_zone', 'street'
+        'customer_id','purok_zone',
     ];
 }

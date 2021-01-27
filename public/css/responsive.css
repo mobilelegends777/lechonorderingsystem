@@ -947,10 +947,21 @@
  		font-size: 29px;
 	}
 	.account-log {
-	    width: 90%;
+	    width: 100%;
 	}
-	.social-log {
-    	width: 90%;
+	form.form-signin {
+		width: 151%;
+		position: relative;
+		left: -6rem;
+	}
+	.social-log-reg {
+		width: 100%;
+		position: relative;
+		
+	}
+	.scl-reg {
+		position: relative;
+		right: 6rem;
 	}
 	button.btn.btn-success.btn-block {
     	 height: 96px;
@@ -976,7 +987,7 @@
     	padding: 25px;
 	}
 	.signup-inputs {
-    	width: 88%;
+    	width: 100%;
 	}
 	.sign-up {
     	height: 72px;

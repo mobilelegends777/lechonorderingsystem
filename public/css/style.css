@@ -982,12 +982,18 @@ span.cart-title {
 }*/
 
 /*login */
+
+.for-flex {
+    display: inline-flex;
+    gap: 12px;
+  }
 .login-reg-form {
-    width: 500px;
+    width: 600px;
     border: solid #2a2c2f;
     background: #2a2c2fc7;
     border-radius: 5px;
-}
+  }
+  
 .social-log {
     display: flex;
     width: 100%;

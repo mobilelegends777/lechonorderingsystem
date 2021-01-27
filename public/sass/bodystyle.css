@@ -47,8 +47,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* margin: 105px 12%; */
-  /* width: 100%; */
+  margin: 105px 12%;
+  width: 100%;
   line-height: 29px;
 }
 
@@ -105,7 +105,7 @@ a.fter {
   height: 42px;
   border-radius: 5px;
   color: #fff;
-  width: 100%;
+  width: 129%;
 }
 
 a#cancel_signup {
@@ -165,7 +165,7 @@ a#cancel_reset {
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  height: 21.25rem;
+  height: 31.25rem;
   -webkit-filter: brightness(0.5);
   filter: brightness(0.5);
 }
@@ -241,7 +241,7 @@ i.fa.fa-star {
 .shop-sub-container3 {
   width: 53%;
   height: auto;
-  /* padding: 31px 0; */
+  padding: 31px 0;
 }
 
 .shop-items-conts {
@@ -316,8 +316,8 @@ i.fa.fa-star {
   line-height: 1;
   letter-spacing: 0.01em;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
   width: 100%;
 }
@@ -343,8 +343,8 @@ i.fa.fa-star {
   width: 100%;
   text-align: center;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 /*.shop-item-image:hover .shop-cart-icon img{
@@ -360,6 +360,7 @@ i.fa.fa-star {
 .shop-item-image:hover .shop-cart-icon i {
   display: block;
 }
+
 .shop-cart-icon i {
   position: absolute;
   top: 0;
@@ -370,22 +371,7 @@ i.fa.fa-star {
   padding: 18px;
   border-radius: 50%;
 }
-.orderNow {
-  position: absolute;
-  top: 0;
-  margin: 77px 38px;
-  display: none;
-  color: #fff;
-  background: red;
-  font-size: 27px;
-  padding: 18px;
-  /* border-radius: 50%; */
-  width: 163px;
-  border-radius: 5px;
-}
-.shop-item-image:hover .orderNow {
-display: block;
-}
+
 .shop-cart-icon i:hover {
   color: #fff;
   background: #c4a265;
@@ -548,7 +534,17 @@ button.addcart {
     display: none;
     border: solid #c4a256;
   }
-  
+  .showing {
+    display: block;
+    position: fixed;
+    background: #fff;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    width: 29.4375rem;
+    -webkit-transition: 2s;
+    transition: 2s;
+  }
   .shop-sub-container3 {
     width: 100%;
     padding: 31px 32px;
@@ -571,8 +567,8 @@ button.addcart {
     display: flex;
     margin: 2.5625rem 1.8rem;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     height: auto;
   }
   span.filter-show {
@@ -624,7 +620,12 @@ button.addcart {
       padding: 57px;
       line-height: 73px;
     }*/
-  
+  .shop-filters {
+    width: unset;
+    padding: 57px;
+    line-height: 73px;
+    background: #fff;
+  }
   .shop-filters .close-btn {
     font-size: 69px;
     float: right;
@@ -642,6 +643,10 @@ button.addcart {
   }
   .sort-items select option {
     font-size: 10px;
+  }
+  .shop-filters {
+    padding: 57px;
+    line-height: 73px;
   }
   .shop-filters .close-btn {
     font-size: 69px;
@@ -661,19 +666,21 @@ button.addcart {
 }
 
 .signup-inputs {
-  width: 100%;
+  width: 130%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #cf9d71;
+  border: 1px solid #e2dbd424;
   border-radius: 4px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  position: relative;
+  right: 3rem;
 }
 
 input {
   padding: 12px 20px;
-  /* margin: 8px 0; */
+  margin: 8px 0;
   display: inline-block;
   border: 1px solid #cf9d71;
   border-radius: 4px;
@@ -689,7 +696,59 @@ input {
     background: #2a2c2fc7;
     border-radius: 5px;
     position: relative;
-    right: 17%;
+    right: 16%;
+  }
+  .signup-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    right: 6rem;
+  }
+  .social-log-reg {
+    width: 108%;
+    position: relative;
+  }
+  form.form-signup {
+    width: 157%;
+  }
+  .signup-inputs {
+    width: 113%;
+    position: relative;
+    left: -6rem;
+  }
+}
+
+@media only screen and (max-width: 1366px) and (min-width: 1024px) and (orientation: portrait) {
+  .login-reg-form {
+    width: 800px;
+    border: solid #cf9d71;
+    margin: 0% 37%;
+    background: #2a2c2fc7;
+    border-radius: 5px;
+    position: relative;
+    right: 26%;
+  }
+  form.form-signup {
+    width: 100%;
+  }
+  .signup-inputs {
+    width: 113%;
+    position: relative;
+    left: -2rem;
+  }
+  .signup-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    right: 0rem;
   }
 }
 /*# sourceMappingURL=bodystyle.css.map */
