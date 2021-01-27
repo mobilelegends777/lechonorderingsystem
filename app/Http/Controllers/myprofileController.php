@@ -54,28 +54,24 @@ class myprofileController extends Controller
         $land = $request->input('land');
         $email = $request->input('email');
 
-        DB::update('UPDATE users, customer_info, customer_address, contact_info SET customer_info.lastname = "'.$lname.'",
+        DB::update('UPDATE users, customer_info, customer_address, contact_info
+        SET
+        users.email = "'.$email.'",
         customer_info.middlename ="'.$mname.'",
         customer_info.firstname ="'.$fname.'",
-          customer_address.customer_id="'.$id.'",
-          customer_address.house_number="'.$house.'",
-          customer_address.purok_zone="'.$zone.'",
-          customer_address.street ="'.$street.'",
-          customer_address.barangay="'.$brngy.'",
-          customer_address.city="'.$city.'",
-          customer_address.coordinate="'.$coordinate.'",
-          customer_address.landmark="'.$land.'",
-          contact_info.customer_id="'.$id.'",
-          contact_info.phone="'.$phone.'",
-            users.email = "'.$email.'"
-      WHERE users.id = customer_info.customer_id AND users.id = customer_address.customer_id AND users.id=contact_info.customer_id
-      AND customer_info.customer_id = "'.$id.'" AND customer_info.customer_id ="'.$id.'" AND customer_address.customer_id= "'.$id.'" AND contact_info.contact_id ="'.$id.'"
+        customer_info.lastname ="'.$lname.'",
+        customer_address.house_number = "'.$house.'",
+        customer_address.purok_zone="'.$zone.'",
+        customer_address.street ="'.$street.'",
+        customer_address.barangay="'.$brngy.'",
+        customer_address.city="'.$city.'",
+        customer_address.coordinate="'.$coordinate.'",
+        customer_address.landmark="'.$land.'",
+        contact_info.phone="'.$phone.'"
+        WHERE users.id = "'.$id.'" AND customer_info.customer_id = "'.$id.'" AND customer_address.customer_id = "'.$id.'"
+        AND contact_info.customer_id="'.$id.'"
+     ');
       
-      
-      ');
-
-      
-        
         
         
        
