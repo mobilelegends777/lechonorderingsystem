@@ -78,8 +78,9 @@
 					</div>
 				</div>	
 				<div class="proceed__">	
-					<div>	
+					<div>	<a href="{{asset('frontpage/checkout')}}">
 							<button class="__proceed-to">Proceed to Checkout</button>
+							</a>
 					</div>
 				</div>
 			</div>

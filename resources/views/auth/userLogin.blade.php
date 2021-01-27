@@ -6,7 +6,7 @@
         <form class="form-signin" method="POST" action="{{ route('test222') }}">
         @csrf
             <h1 class="h3 mb-3 font-weight-normal" style="text-align: center;color:#c4a265;"> Sign in</h1>
-            <div class="social-log">
+            <div class="social-log ">
                 <button class="btn facebook-btn social-btn" type="button"><a href="{{asset('login/facebook')}}"><span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span> </button> </a>
             
                 <button class="btn google-btn social-btn" type="button">  <a href="{{asset('login/google')}}"><span><i class="fab fa-google-plus-g"></i> Sign in with Google+</span> </button>
@@ -47,7 +47,7 @@
             </div>
             <form class="form-signup" method="POST" action="{{ route('register') }}" style="display: none;">
                         @csrf
-                <div class="social-log">
+                <div class="social-log scl-reg">
                 <button class="btn facebook-btn social-btn" type="button"><a href="{{asset('login/facebook')}}"><span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span> </button> </a>
             
             <button class="btn google-btn social-btn" type="button">  <a href="{{asset('login/google')}}"><span><i class="fab fa-google-plus-g"></i> Sign in with Google+</span> </button>
@@ -64,18 +64,37 @@
                                     </span>
                                 @enderror
 
-                    
-                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Full name" required="" autofocus="">
+                    <div class="for-flex">
+                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="First name" required="" autofocus="">
                         @error('name')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+
+                        <input id="lastname" type="text" class="form-control @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" required autocomplete="lastname" autofocus placeholder="Last name" required="" autofocus="">
+                        @error('lastname')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                       
+                    </div>
+                     <input id="contact" type="text" class="form-control @error('contact') is-invalid @enderror" name="contact" value="{{ old('contact') }}" required autocomplete="name" autofocus placeholder="Phone#"  maxlength="11"required="" autofocus="">
+                        @error('contact')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
                                        
 
-                        <input id="lastname" type="text" class="form-control" name="lastname" value="" placeholder="lastname">
-                        <input id="contact" type="text" class="form-control" name="contact" value="" placeholder="phone">
                     
+                        <input id="purok" type="text" class="form-control @error('contact') is-invalid @enderror" name="purok" value="{{ old('purok') }}" required autocomplete="purok" autofocus placeholder="Address" required="" autofocus="">
+                        @error('contact')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
 
                         <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email address" required autofocus="">
                         @error('email')
@@ -83,6 +102,7 @@
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
+                        <div class="for-flex">              
                         <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Password" required autofocus="">
                         @error('password')
                                             <span class="invalid-feedback" role="alert">
@@ -91,8 +111,7 @@
                                         @enderror
                                 
                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Repeat Password" required autofocus="">
-                        <input id="address" type="text" class="form-control" name="address" value="{{ old('address') }}" >
-                        <input id="address" type="text" class="form-control" name="purok" value="" >
+                        </div> 
                     </div>
                 <div class="signup-button">
                         <button class="btn btn-primary btn-block sign-up" type="submit"><i class="fas fa-user-plus"></i>  {{ __('Sign Up') }}</button>

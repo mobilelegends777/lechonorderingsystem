@@ -79,14 +79,12 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
             Session::put('user', $data);
-
      $newUser = User::create([
         
             'utype' => $data['utype'],  
             'name' => $data['name'], 
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'address' => $data['address'],
      ]);
     Customer::create([
         'customer_id' => $newUser->id,
@@ -96,7 +94,7 @@ class RegisterController extends Controller
     Address::create([
         'customer_id' => $newUser->id,
         'purok_zone' => $data['purok'],
-        'street' => $data['address'],
+      
     ]);
     Contact::create([
         'customer_id' => $newUser->id,

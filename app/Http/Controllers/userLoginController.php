@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Address;
+use App\Customer;
+use App\Contact;
 use Auth;
 use DB;
 use Session;
@@ -146,6 +149,23 @@ public function redirectToProvider()
                     'password' => encrypt('123dummy')
 
                 ]);
+                
+                Customer::create([
+                    'customer_id' => $newUser->id,
+                    'firstname'=> $user->name, 
+                    
+                ]);
+                Address::create([
+                    'customer_id' => $newUser->id,
+                    'purok_zone' => 'Iligan City',
+                  
+                ]);
+                Contact::create([
+                    'customer_id' => $newUser->id,
+                    'phone' => '09*********',
+                ]);
+
+
 
          $value1 = [
         
@@ -245,6 +265,23 @@ try{
                 'password' => encrypt('123dummy')
 
             ]);
+
+                    
+            Customer::create([
+                'customer_id' => $newUser->id,
+                'firstname'=> $user->name, 
+                
+            ]);
+            Address::create([
+                'customer_id' => $newUser->id,
+                'purok_zone' => $user->address,
+              
+            ]);
+            Contact::create([
+                'customer_id' => $newUser->id,
+                'phone' => $user->phone,
+            ]);
+
            
     $data = Session::put('user', $newUser);
     

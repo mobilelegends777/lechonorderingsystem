@@ -22,8 +22,6 @@
         </div>
         <button class="btn btn-primary moves-center" type="submit">File Upload</button>
       </div>
-      
-      
       <!-- edit form column -->
       <div class="col-md-9 personal-info move-lefts">
         <div class="alert alert-info alert-dismissable">
