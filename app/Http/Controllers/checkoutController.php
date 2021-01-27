@@ -8,6 +8,7 @@ use Auth;
 use Session;
 use App\Login;
 use AuthenticatesUsers;
+use DB;
 
 class checkoutController extends Controller
 {
@@ -30,11 +31,11 @@ class checkoutController extends Controller
     {
 
         $data = Auth::user();
-        $value = [
-            '0' => $data
-        ];
-       
-       
+        $id = $data->id;
+        $value = DB::select('SELECT * from users inner join customer_info ON customer_id= "'.$id.'"
+        inner join customer_address ON address_id ="'.$id.'"
+        inner join contact_info ON contact_id ="'.$id.'"where id = ?',[$id]);
+        // dd($value);
         return view('frontpage/checkout', compact('value'));
         
     }

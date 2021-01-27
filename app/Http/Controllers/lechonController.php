@@ -18,6 +18,7 @@ class lechonController extends Controller
         $value = [
             '0' => $data
         ];
+
         if($value[0] == null){
             $value = [
                 '0' => 'Input Address',
@@ -28,5 +29,6 @@ class lechonController extends Controller
         else{
         return view('frontpage/special-order', compact('value'));
         }   
+
     }
 }

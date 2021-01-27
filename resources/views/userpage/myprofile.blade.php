@@ -5,12 +5,9 @@
 	
 	<script type="text/javascript" src="{{asset('asset/js/jquery.aniview.js')}}"></script>
 
-
   <div id="map " class="move-rights">
 
 <iframe width="100%" height="400" frameborder="0" style="border:0" src="" allowfullscreen></iframe>
-
-
 </div>
 <div class="container_profile">
   	<hr>

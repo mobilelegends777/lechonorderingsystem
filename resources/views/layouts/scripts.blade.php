@@ -30,9 +30,9 @@ function carousel() {
 <script>
 
 // this is temporary
-// $(this).resize(function(){
-//   this.location.reload();
-// });
+$(this).resize(function(){
+  this.location.reload();
+});
 // end reload every resize;
   var windowWidth = $(window).width();
 
@@ -396,11 +396,11 @@ $('.arrangeCol').on('click', function(e){
       max: 30000,
       values: [ 20, 30000 ],
       slide: function( event, ui ) {
-        $( "#amount" ).text( " " + ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+        $( "#amount" ).text( " ₱" + ui.values[ 0 ] + " - ₱" + ui.values[ 1 ] );
       }
     });
-    $( "#amount" ).text( " " + $( "#slider-range" ).slider( "values", 0 ) +
-      " - " + $( "#slider-range" ).slider( "values", 1 ));
+    $( "#amount" ).text( " ₱" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - ₱" + $( "#slider-range" ).slider( "values", 1 ));
 
 
 
@@ -416,6 +416,84 @@ function dec(element, id) {
   }
 }
 
+
+
+</script>
+
+<script>
+$(document).ready(function(){
+ 
+    $("#myDIV").hide();
+    $("#MyAdd").hide();
+
+ 
+  $("#show").click(function(){
+    $("#myDIV").toggle();
+    
+    $("#contacts").toggle();
+    
+
+
+
+  });
+
+  $("#show2").click(function(){
+    $("#MyAdd").toggle();
+    $("#adds").toggle();
+  
+    
+
+
+
+  });
+
+
+});
+</script>
+	
+<script>
+$(document).ready(function(){
+
+/*****Fixed Menu******/
+var secondaryNav = $('.cd-secondary-nav'),
+   secondaryNavTopPosition = secondaryNav.offset().top;
+	$(window).on('scroll', function(){
+		if($(window).scrollTop() > secondaryNavTopPosition ) {
+			secondaryNav.addClass('is-fixed');	
+		} else {
+			secondaryNav.removeClass('is-fixed');
+		}
+	});	
+	
+});
+</script>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 
 
 </script>

@@ -76,11 +76,13 @@
 						@for($i = 7;$i <= 22; $i++)
 							<div class="shop-items">
 								<div class="shop-item-image">
+
 									@if($value[0] == 'Input Address')
 										<input type="hidden" name="" class="add-ress" value="{{$value[0]}}">
 									@else
 										<input type="hidden" name="" class="add-ress" value="{{$value[0]->address}}&nbsp;{{$value[0]->city}}">
 									@endif
+
 									<a href="#" class="shop-images-lechon" data-value="{{$i}}">
 										<img src="{{asset('images/lechon'.$i.'.png')}}">
 									</a>
@@ -343,6 +345,10 @@ $('.shop-images-lechon').each(function(){
 								
 							</div>
 						</div>
+<<<<<<< HEAD
+						<div class="proceed-to">
+									<button><i class="fa fa-arrow-right"></i><span>PROCEED</span></button>
+=======
 						<div class="qty-proceed-to">
 							<div class="quantities">
 								<input type="number" name="" class="inpt-qty" value="1">
@@ -350,6 +356,7 @@ $('.shop-images-lechon').each(function(){
 							<div class="proceed-to">
 								<button><i class="fa fa-arrow-right"></i><span>PROCEED</span></button>
 							</div>
+>>>>>>> 7679aaded7abdf6915a3f4d2f24e071122c0ade5
 						</div>
 				</div>
 			</div>

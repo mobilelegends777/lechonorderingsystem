@@ -75,6 +75,7 @@ Route::get('/userpage/myprofile/{id}/success','myprofileController@update')->nam
 
 
 
+
 Route::get('/userpage/myorder', 'myorderController@index')->name('myorder');
 
 

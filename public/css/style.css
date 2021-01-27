@@ -1365,28 +1365,14 @@ input.inpt-qty {
     height: 100%;
 }
 
-/* span.inputs {
-    width: 290px;
-    height: 70px;
-    background-color: white;
-    border-radius: 4px;
-    align-items: center;
-    display: flex;
-} */
-/* button.btn-search {
-    width: 76px;
-    height: 70px;
+input.btn.btn-default {
+    background-color: #ff8a05;
+    color: white;
+
 
 }
-span .inputs i {
-    font-size: 20px;
-    color: #777;
 
-}  */
-/* span .inputs .btn-search {
-    flex: 1;
-    height: 40px;
-    border: none;
-    outline: none;
-    font-size: 18px;
-} */
+input.btn.btn-default:hover{
+
+    background-color: #e67d06;
+}
