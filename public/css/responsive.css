@@ -571,6 +571,14 @@
 	
 }
 @media screen and (max-width: 768px){
+	.shop-name-col {
+		width: unset;
+	}
+	.prod-price {
+		position: absolute;
+		left: 3px;
+		top: 125px;
+	}
 	.company-title {
 		display: block;
 	}
@@ -1164,11 +1172,11 @@
 	    font-size: 43px;
 	}
 	.shop-item-info {
-		margin-top: 117px;
+		/* margin-top: 117px; */
 	}
 	.col-price {
 	    /*width: 100%;*/
-	    /*position: absolute;*/
+	    position: relative;
 	    width: 100%;
 	    /*left: 1191px;*/
 	    /*top: 179px;*/
@@ -1177,7 +1185,10 @@
 	    height: 79px;
 	    font-size: 30px;
 	    border-radius: 4px;
-	    margin-top: 20px;
+		margin-top: 20px;
+		width: 199px;
+		position: relative;
+		top: 178px;
 	}
 	.shop-images img {
 	    height: 19.5625rem;
@@ -1630,6 +1641,9 @@
 		left: 73%;
 		top: -76%;
 	}
+	.image-cont {
+		height: 685px;
+	}
 }
 @media screen and (max-width: 414px) {
 	/*special order*/
@@ -1658,6 +1672,9 @@
 	}
 	.image-cont img {
 	    width: 322px;
+	}
+	.image-cont {
+		height: 650px;
 	}
 	/*cart*/
 	.page-sub-container h1 {
@@ -1915,11 +1932,12 @@
 	.col-price {
 		/*width: 22%;*/
 		position: relative;
-		margin-top: 100px;
-    	margin-left: -984px;
+		margin-top: -10px;
+    	/* margin-left: -984px; */
 	}
 	.prod-price {
-	    font-size: 74px;
+		font-size: 74px;
+		margin-top: 94px;
 	}
 	.topnav {
 	    position: relative;
@@ -2111,9 +2129,13 @@
 		font-size: 112px;
 		width: 79%;
 	}
-	/*.page-wrapper {
-		overflow-x: auto;
-	}*/
+	.centered span {
+		margin-left: 11px;
+	}
+	.page-wrapper {
+		overflow: auto;
+    	height: 1500px;
+	}
 	.f-icon {
 		margin: 13px 43px;
         width: 81%!important;
@@ -2372,10 +2394,11 @@
 	    margin-top: 33%;
 	}
 	button.addcart {
-	    margin-left: -12px;
+		margin-left: -10px;
+		width: 332px;
 	}
 	.col-price {
-    	width: 23%;
+    	width: 99%;
 	}
 	.cart-shop-button {
 	    width: 155%;
@@ -2398,7 +2421,8 @@
 	    width: 379px;
 	}
 	.centered {
-	    width: 88%;
+		width: 88%;
+		font-size: 110px;
 	}
 	.f-icon .buttoncat {
 		height: 139px;
@@ -2412,5 +2436,9 @@
 	}
 	.filter-cat {
     	line-height: 4.9375rem;
+	}
+	.shop-left {
+		margin-left: -41px;
+    	margin-top: 62px;
 	}
 }

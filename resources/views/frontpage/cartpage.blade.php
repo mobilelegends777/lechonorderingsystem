@@ -19,7 +19,7 @@
 					</tr>
 					</thead>
 					<tbody>
-				@for($i = 1; $i <5; $i++)
+				@for($i = 1; $i <=2; $i++)
 					<tr class="librebais">
 						<td><span class="cancel-cart" style="cursor:pointer;">&times;</span></td>
 						<td><a href=""><img src="{{ asset('asset/New/Lechonbaboy.jpg') }}"></a></td>
@@ -27,6 +27,7 @@
 						<td>5,000</td>
 						<td><div  class="cart-input"><button  type="button" onclick="dec('qty',{{$i}})">-</button><input class="cartQty__{{$i}}" type="number" value="1" name="qty"><button type="button" onclick="inc('qty',{{$i}})">+</button></div></td>
 						<td>20,000</td>
+					</tr>
 				@endfor
 					</tbody>	
 				</table>

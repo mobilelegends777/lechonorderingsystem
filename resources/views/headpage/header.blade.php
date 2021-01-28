@@ -132,7 +132,7 @@
     	<div class="ordinary">
 		  	<a href="{{asset('frontpage/special-order')}}">Special Order</a>
 	 	</div>
-    	<div class="ordinary dropbtn2">
+    	<!-- <div class="ordinary dropbtn2">
     		<a href="#">Menu <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></a>
 	    		<div id="myDropdown" class="drpdwn meatDrp" style="display:none;">
 					  <a href="{{asset('frontpage/newproduct')}}">New Products</a>
@@ -141,11 +141,11 @@
 					  <a href="{{asset('frontpage/drinks')}}">Drinks</a>
 					  <a href="{{asset('frontpage/appetizer')}}">Appetizers</a>
 				</div>
-		 </div>
-    	<div class="ordinary">
+		 </div> -->
+    	<!-- <div class="ordinary">
     		<a href="#">About Us <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></a>
 
-    	</div>
+    	</div> -->
 	    <div class="ordinary"><a href="{{asset('frontpage/contact')}}">Contact Us</a>
 	    </div>
 
