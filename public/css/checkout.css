@@ -243,7 +243,7 @@ textarea.txt-size {
 
 .move-right {
   position: relative;
-  bottom: 20px;
+  bottom: 44px;
   margin-left: 47%;
 }
 h5.mgt.move-right.move-to-top.move-to-free {
@@ -262,7 +262,7 @@ h5.move-free-data {
 }
 h5.move-free-data1 {
   position: relative;
-  bottom: 17rem;
+  bottom: 7.2rem;
   left: 15rem;
 }
 /* .move-to-top-rem {
@@ -308,6 +308,23 @@ h4.check-title {
 
 
 
+img.cod-icon {
+  width: 26px;
+  position: relative;
+  left: 4px;
+  top: 5px;
+}
+img.debit-icon {
+  position: relative;
+  width: 23px;
+  left: 7px;
+  top: 5px;
+}
+.glyphicon img {
+    width: 18px;
+}
+
+
 /* @Media Queries */
 
 
@@ -325,5 +342,280 @@ and (orientation: portrait){
   display: none;
 }
 
+
+
+
+
+.container1 {
+  padding-left: 100px;
+  position: relative;
+  width: 50%;
+  left: 13rem;
 }
 
+.check_lm1 ul li {
+  font-size: 32px;
+}
+
+h4.check-title {
+  font-size: 28px;
+}
+.col-sm-6 h5{
+  font-size: 26px;
+}
+.size-height .move-free-data {
+  position: relative;
+  bottom: 16rem;
+  left: 15rem;
+}
+.size-height .move-free-data1 {
+  position: relative;
+  bottom: 22.4rem;
+  left: 15rem;
+}
+h6.size-color1 {
+  position: relative;
+  font-size: 26px;
+  bottom: 50px;
+  left: 325px;
+}
+h6.size-color {
+  position: relative;
+  font-size: 26px;
+  bottom: 50px;
+  left: 325px;
+}  
+.check_lm {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 600px;
+}
+.checkout_1.clearfix {
+  display: flex;
+  position: relative;
+  left: 0rem;
+}
+
+
+.move-to-center h4 {
+  font-size: 32px;
+  position: relative;
+  bottom: .5rem;
+  left: 1.6rem;
+}
+.col-sm-7 p{
+  font-size: 26px;
+}
+.checkout_1r1.clearfix h6 {
+  font-size: 26px;
+}
+.col-sm-6 input {
+  padding: 12px 20px;
+  position: relative;
+  top: 1.5rem;
+  margin: 20px 0;
+  display: inline-block;
+  border: 1px solid #cf9d71;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.col-sm-6 label {
+  font-size: 26px;
+  position: relative;
+  top: 1.5rem;
+}
+.col-sm-6 h4 {
+  font-size: 28px;
+}
+.col-sm-6 .mgt1 {
+  font-size: 28px;
+  position: relative;
+  top:.7rem;
+}
+.col-sm-6 .mgt2 {
+  font-size: 28px;
+  position: relative;
+  top:-2.6rem;
+}
+img.debit-icon {
+  position: relative;
+  width: 28px;
+  left: 7px;
+  top: 5px;
+}
+img.cod-icon {
+  position: relative;
+  width: 28px;
+  left: 7px;
+  top: 5px;
+}
+._center {
+  position: relative;
+  left: 26rem;
+  bottom: 5rem;
+  width: 88%;
+}
+.ship h5 {
+  position: relative;
+  top: 24px;
+}
+img.check-icon {
+  position: relative;
+  right: 10px;
+  width: 20px;
+}
+textarea.txt-size {
+  width: 100%;
+  height: 150px;
+}
+}
+
+
+
+
+
+@media only screen 
+and (max-width: 731px)
+and (min-width: 411px)
+and (orientation: portrait) {
+
+  .container {
+    max-width: 100%;
+    width: 1650px;
+    padding: 0;
+    position: relative;
+    max-width: 1920px;
+}
+.container1 {
+  padding-left: 100px;
+  position: relative;
+  width: 41%;
+  left: 1rem;
+}
+.check_lm {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 650px;
+}
+
+.col-sm-6 h5 {
+  font-size: 32px;
+  text-align: left;
+}
+
+.check_lm1 ul li {
+  display: inline-block;
+  padding-right: 10px;
+  font-size: 32px;
+}
+.image-cont {
+  height: auto;
+  display: none;
+}
+.footer-title-gallery {
+  width: 60%;
+  height: 75px;
+  display: none;
+}
+.footer-title-contact {
+  width: 60%;
+  height: 75px;
+}
+.checkout {
+  text-align: left;
+  padding-bottom: 40px;
+}
+h6.size-color1 {
+  position: relative;
+  color: #f6610a7a;
+  bottom: 53px;
+  left: 315px;
+  font-size: 26px;
+}
+h6.size-color {
+  position: relative;
+  color: #f6610a7a;
+  bottom: 54px;
+  left: 285px;
+  font-size: 26px;
+}
+h4.check-title {
+  color: #f6740a;
+  font-size: 28px;
+}
+.glyphicon img {
+  width: 22px;
+}
+h5.move-free-data {
+  position: relative;
+  bottom: 18rem;
+  left: 15rem;
+}
+h5.move-free-data1 {
+  position: relative;
+  bottom: 10rem;
+  left: 15rem;
+}
+.move-to-center h4 {
+  /* position: relative;
+  bottom: 2rem;
+  left: 9rem; */
+  font-size: 32px;
+}
+.checkout_1l2 p {
+  font-size: 28px;
+}
+.checkout_1r1 h6 {
+  font-size: 30px;
+}
+.col-sm-6 input {
+  padding: 12px 20px;
+  position: relative;
+  top: 1.5rem;
+  margin: 20px 0;
+  display: inline-block;
+  border: 1px solid #cf9d71;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.col-sm-6 label {
+  font-size: 26px;
+  position: relative;
+  top: 1.5rem;
+}
+a.button.mgt {
+  height: 75px;
+  font-size: 28px;
+  width: 220px;
+  text-align: center;
+  position: relative;
+  left: 28px;
+}
+.ship h5 {
+  font-size: 32px;
+  text-align: left;
+  position: relative;
+  top: 55px;
+}
+.footer-title-contact {
+  width: 60%;
+  height: 75px;
+  text-align: left;
+}
+.footer-contact-info {
+  /* line-height: 36px;
+  width: 100%;
+  padding-top: 29px; */
+  text-align: left;
+}
+.social-media-link {
+  width: 43%;
+}
+.info-contacts {
+  font-size: 44px;
+}
+}

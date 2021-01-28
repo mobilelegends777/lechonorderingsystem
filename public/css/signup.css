@@ -1,0 +1,30 @@
+@media only screen 
+and (max-width: 731px)
+and (min-width: 411px)
+and (orientation: portrait) {
+    .social-log.scl-reg {
+        width: 157%;
+    }
+}
+
+
+@media only screen 
+and (max-width: 731px)
+and (min-width: 411px)
+and (orientation: portrait) {
+
+    .signup-inputs {
+        width: 163%;
+        position: relative;
+        left: -7rem;
+    }
+    .scl-reg {
+        position: relative;
+        right: 6rem;
+
+    }
+    .social-log.scl-reg {
+        width: 155%;
+    }
+    
+}    

@@ -207,7 +207,7 @@
 	 <hr>
     
 	 <div class="checkout_1r1i clearfix">
-	  <div class="col-sm-6">
+	  <div class="ship col-sm-6">
 	   <h5 class="mgt normal">Subtotal</h5>
 	   <h5 class="normal">Shipping</h5>
 	  </div>
@@ -221,10 +221,10 @@
 	 <hr>
 	 <div class="checkout_1r1i clearfix">
 	  <div class="col-sm-6">
-	   <h5 class="mgt normal"><strong>Total</strong></h5>
+	   <h5 class="mgt1 normal"><strong>Total</strong></h5>
 	  </div>
 	  <div class="col-sm-6">
-	   <h4 class="mgt move-right"><span class="normal ">PHP</span></span> 700.00</h4>
+	   <h4 class="mgt2 move-right"><span class="normal ">PHP</span></span> 700.00</h4>
 	  </div>
       
 	 </div>
@@ -238,7 +238,7 @@
       <input id="myBtn" type="radio" id="payment" name="payment" value="cdc">
       <label for="male">Credt / Debit Card <img  class="debit-icon" src="{{asset('images/adddebit.png')}}"></label><br>
       <input type="radio" id="payment" name="payment" value="cod">
-      <label for="male">Cash on Delivery <img  class="debit-icon" src="{{asset('images/cash.png')}}"></label><br>
+      <label for="male">Cash on Delivery <img  class="cod-icon" src="{{asset('images/cash.png')}}"></label><br>
 	  </div>
       
 	 </div>
