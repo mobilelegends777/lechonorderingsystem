@@ -211,7 +211,7 @@
 										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
 											<span class="col-item-title col-names">Liempo</span>
 											<div class="parag col-parags">
-												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
+											
 											</div>
 										</div>
 										<div class="shop-item-info shop-carts">
@@ -235,7 +235,7 @@
 										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
 											<span class="col-item-title col-names">Lechon Pig</span>
 											<div class="parag col-parags">
-												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
+											
 											</div>
 										</div>
 										<div class="shop-item-info shop-carts">
@@ -258,7 +258,7 @@
 										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
 											<span class="col-item-title col-names">Lechon Chicken</span>
 											<div class="parag col-parags">
-												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
+											
 											</div>
 										</div>
 										<div class="shop-item-info shop-carts">
@@ -282,7 +282,7 @@
 										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
 											<span class="col-item-title col-names">Liver BBQ</span>
 											<div class="parag col-parags">
-												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
+											
 											</div>
 										</div>
 										<div class="shop-item-info shop-carts">
@@ -305,7 +305,7 @@
 										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
 											<span class="col-item-title col-names">Pork BBQ</span>
 											<div class="parag col-parags">
-												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
+											
 											</div>
 										</div>
 										<div class="shop-item-info shop-carts">
@@ -328,7 +328,7 @@
 										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
 											<span class="col-item-title col-names">Sinigang Shrimp</span>
 											<div class="parag col-parags">
-												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
+											
 											</div>
 										</div>
 										<div class="shop-item-info shop-carts">
@@ -351,7 +351,7 @@
 										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
 											<span class="col-item-title col-names">Breast BBQ</span>
 											<div class="parag col-parags">
-												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
+											
 											</div>
 										</div>
 										<div class="shop-item-info shop-carts">
@@ -374,7 +374,7 @@
 										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
 											<span class="col-item-title col-names">Lechon Rice</span>
 											<div class="parag col-parags">
-												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
+											
 											</div>
 										</div>
 										<div class="shop-item-info shop-carts">
@@ -397,7 +397,7 @@
 										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
 											<span class="col-item-title col-names">Leg BBQ</span>
 											<div class="parag col-parags">
-											<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
+
 											</div>
 										</div>
 										<div class="shop-item-info shop-carts">
@@ -421,4 +421,32 @@
 				</div>
 				</div>
 			</div>
+<script>
+// $(function() {
+
+// $(window).scroll(function() {
+// 		  if ($(window).scrollTop() > 600) {
+// 		    $('.shop-filters').css({
+// 		    	'position':'fixed',
+// 		    	'top':0,
+// 		    	'background':'#fff',
+// 		    });
+// 		  }
+// 		  else if($(window).width() <= 900){
+// 		  	$('.shop-filters').css({
+// 		    	'position':'relative',
+// 		    	'top':'initial',
+// 		    	'width':'450px'
+// 		    });
+// 		  } 
+// 		  else {
+// 		    $('.shop-filters').css({
+// 		    	'position':'relative',
+// 		    	'top':'initial'
+// 		    });
+// 		  }
+// 		});
+// });
+
+</script>
 	@endsection

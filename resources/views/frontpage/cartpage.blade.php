@@ -5,11 +5,11 @@
 		<h1>Cart</h1>
 		<div class="cartpage-item">
 			<div class="cartpage-title">
-			<form>
-				@csrf
+				<form>
+					@csrf
 				<table class="product-on-cart">
 					<thead class="product-title">
-					<tr>
+					<tr class="title-carted">
 							<td></td>
 							<td></td>
 							<td>Product</td>
@@ -18,7 +18,8 @@
 							<td>Subtotal</td>
 					</tr>
 					</thead>
-					<tbody>
+					
+					<tbody class="cart-table-conts">
 				@for($i = 1; $i <5; $i++)
 					<tr class="librebais">
 						<td><span class="cancel-cart" style="cursor:pointer;">&times;</span></td>
@@ -27,6 +28,7 @@
 						<td>5,000</td>
 						<td><div  class="cart-input"><button  type="button" onclick="dec('qty',{{$i}})">-</button><input class="cartQty__{{$i}}" type="number" value="1" name="qty"><button type="button" onclick="inc('qty',{{$i}})">+</button></div></td>
 						<td>20,000</td>
+					</tr>
 				@endfor
 					</tbody>	
 				</table>
@@ -39,7 +41,8 @@
 							<button>Update cart</button>
 						</div>
 				</div>	
-			</form>
+				</form>
+			</div>
 			<div class="summary-conts">	
 				<div class="summary-sub-cont">
 					<div>	

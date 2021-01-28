@@ -10,7 +10,7 @@ class Customer extends Model
     protected $table='customer_info';
 
     protected $fillable = [
-        'customer_id','firstname',
+        'customer_id','firstname','lastname',
     ];
 }
 

@@ -1164,7 +1164,7 @@ thead{
 table.product-on-cart {
   border: 1px solid black;
   border-collapse: collapse;
-  width: 43%;
+  width: 57%;
 }
 .librebais img {
   width: 139px;
@@ -1178,13 +1178,13 @@ table.product-on-cart {
   font-size: 22px;
 }
 thead td {
-      padding: 10px 35px;
+  padding: 10px 72px;
 }
 .coupon-submit {
   display:  flex;
-  justify-content: space-between;
-  width: 43%;
-  margin: 43px 0;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 56px 0px;
 }
 .apply-coupon input {
   height: 3.5rem;
@@ -1382,3 +1382,32 @@ input.btn.btn-default:hover{
 
     background-color: #e67d06;
 }
+.orderNow {
+    position: absolute;
+    top: 0;
+    margin: 77px 38px;
+    display: none;
+    color: #fff;
+    background: red;
+    font-size: 27px;
+    padding: 18px;
+    /* border-radius: 50%; */
+    width: 163px;
+    border-radius: 5px;
+  }
+  .shop-item-image:hover .orderNow {
+    display: block;
+  }
+  tbody.cart-table-conts {
+    display: block;
+    overflow:auto;
+    height: 500px;
+  }
+  tr.librebais {
+    display: table;
+    width: 100%;
+  }
+  tr.title-carted{
+    display:block;
+  }
+  

@@ -127,12 +127,17 @@
 			<a href="{{asset('/')}}">Home</a>
 		</div>
     	<div class="ordinary dropbtn1">
-    		<a href="{{asset('frontpage/shop')}}">Shop 
+    		<a href="{{asset('frontpage/shop')}}">Menu</a>
     	</div>
-    	<div class="ordinary">
-		  	<a href="{{asset('frontpage/special-order')}}">Special Order</a>
-	 	</div>
     	<div class="ordinary dropbtn2">
+			  <a href="#">Special Order <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></a>
+			  <div id="myDropdown" class="drpdwn meatDrp" style="display:none;">
+					  <a href="{{asset('frontpage/special-order')}}">Whole Lechon</a>
+					  <a href="{{asset('frontpage/special-order')}}">Lechon Belly</a>
+					  <a href="{{asset('frontpage/special-order')}}">Available per Kilo</a>
+				</div>
+	 	</div>
+    	<!-- <div class="ordinary dropbtn2">
     		<a href="#">Menu <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></a>
 	    		<div id="myDropdown" class="drpdwn meatDrp" style="display:none;">
 					  <a href="{{asset('frontpage/newproduct')}}">New Products</a>
@@ -141,7 +146,7 @@
 					  <a href="{{asset('frontpage/drinks')}}">Drinks</a>
 					  <a href="{{asset('frontpage/appetizer')}}">Appetizers</a>
 				</div>
-		 </div>
+		</div> -->
     	<div class="ordinary">
     		<a href="#">About Us <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></a>
 
@@ -155,14 +160,14 @@
 		
 		
 		<div class="__search" id="my-searches" style="display:none">
-			<span>
+			<div class="search-bar-cont">
 				<div class="search-area">
 						<input type="text" name=""><button>Search</button>
 				</div>
 				<div class="back-search">
 					<i class="fa fa-arrow-left" aria-hidden="true"></i>
 				</div>
-			</span>
+			</div>
 		</div>
 @if(Auth::check())	
 		<div class="toggle-cart-sidenav">
