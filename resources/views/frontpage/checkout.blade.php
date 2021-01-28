@@ -51,7 +51,7 @@
 	
 	 </div>
     
-	 </div>
+	
    
 	 
 	 <form metho="POST" action ="{{ route('profileupdated',$value['0']->id) }}" class="form-horizontal" role="form">
@@ -78,6 +78,7 @@
 	</div>
 
 	</form>
+	</div>
 	
 	<div class="move-to-top-rem">
     <h4 class="check-title">Shipping address  <span id="show2"class="glyphicon glyphicon-edit"><img src="{{asset('images/edit-icon.png')}}"><h6 class="size-color">Edit</span></h4></h6>
@@ -124,7 +125,7 @@
 	
 	   
 	  </div>
-	  <div class="size-height">
+	  <div class="size-height move-to-top-d2">
 	  <h5 class="move-free-data1">{{$value['0']->house_number}}</h5> 
        <h5 class="move-free-data1">{{$value['0']->purok_zone}}</h5>
 	   <h5 class="move-free-data1">{{$value[0]->street}}</h5>
@@ -137,20 +138,21 @@
 	 </div>
 	 </div>
 	 
-	 <div class="col-sm-6">
-     <h5 class="mgt"><a href="{{asset('frontpage/cartpage')}}"><i class="fa fa-chevron-left"></i> Return to cart</a></h5>
-	 </div>
+	
 	 
 
 	</div>
 	</div>
+	<div class="col-sm-6 move-top">
+     <h5 class="mgt"><a href="{{asset('frontpage/cartpage')}}"><i class="fa fa-chevron-left"></i> Return to cart</a></h5>
+	 </div>
    </div>
    <div class="move-flex">
    <div class="check_rm clearfix">
     <div class="checkout_1r clearfix">
 	  <div class="checkout_1l2 mgt clearfix">
 	 <div class="move-to-center">
-		 <h4>Order Summary</h4>
+		 <h4 class="check-title-size">Order Summary</h4>
 	  </div>
 	 <div class="col-sm-7">
 	  <p class="mgt">Lechon Pork</p>
@@ -202,14 +204,14 @@
 	</div>
 	<div class="checkout_1r1 clearfix">
     <hr>
-	   <h6>Comment</h6>
-	   <textarea class="form-control txt-size" ></textarea>
+	   <h6 class="c-size">Comment</h6>
+	   <textarea class="form-control txt-size" placeholder="e.g No Mayo " ></textarea>
 	 <hr>
     
 	 <div class="checkout_1r1i clearfix">
 	  <div class="ship col-sm-6">
 	   <h5 class="mgt normal">Subtotal</h5>
-	   <h5 class="normal">Shipping</h5>
+	   <h5 class="normal ship-bot">Shipping</h5>
 	  </div>
 	  <div class="col-sm-6">
 	   <h5 class="mgt move-right move-to-top move-to-free">Php 700.00</h5>
@@ -234,11 +236,11 @@
 	  <div class="col-sm-6">
 	   <h5 class="mgt normal"><strong>Payments</strong</h5>
 	  </div>
-	  <div class="col-sm-6">
+	  <div class="col-sm-6 move-free-pay">
       <input id="myBtn" type="radio" id="payment" name="payment" value="cdc">
-      <label for="male">Credt / Debit Card <img  class="debit-icon" src="{{asset('images/adddebit.png')}}"></label><br>
+      <label class="free-move-debit">Credt / Debit Card <img  class="debit-icon" src="{{asset('images/adddebit.png')}}"></label><br>
       <input type="radio" id="payment" name="payment" value="cod">
-      <label for="male">Cash on Delivery <img  class="cod-icon" src="{{asset('images/cash.png')}}"></label><br>
+      <label class="free-move-debit">Cash on Delivery <img  class="cod-icon" src="{{asset('images/cash.png')}}"></label><br>
 	  </div>
       
 	 </div>
