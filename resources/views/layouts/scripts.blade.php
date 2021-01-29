@@ -61,7 +61,7 @@ else if (windowWidth == 768){
 
   });
 }
-else if(windowWidth <= 375){
+else if(windowWidth <= 360){
    $('.slider').slick({
     dots: false,
     infinite: true,

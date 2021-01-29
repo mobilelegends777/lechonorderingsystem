@@ -339,7 +339,7 @@ i.fa.fa-star {
 
 .shop-item-price {
   color: #c4a265;
-  width: 100%;
+  width: 50%;
   text-align: center;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
@@ -496,7 +496,7 @@ span.close-btn {
 }
 
 button.addcart {
-  width: 50%;
+  width: 100%;
   height: 56px;
   color: #fff;
   background: #c4a256;
