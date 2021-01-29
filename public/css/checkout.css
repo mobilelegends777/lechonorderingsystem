@@ -275,7 +275,7 @@ h5.move-free-data1 {
 
 
 .check_rm.clearfix {
-    background-color: #efefef87;
+    background-color: #ffffff;
     border-style: dotted;
     border-color: #c4a2659c;
 }
@@ -504,6 +504,28 @@ textarea.txt-size {
   width: 100%;
   height: 150px;
 }
+.check_lm4 .form-control {
+  height: 75px;
+  margin-top: 15px;
+  width: 97%;
+  margin-left: 13px;
+  margin-right: 10px;
+  font-size: 22px;
+}
+.modal-content {
+  width: 40%;
+}
+.modal_btn {
+  position: relative;
+  top: -6px;
+  left: 17.5rem;
+  font-size: 20px;
+}  
+img.modal-payment {
+  position: relative;
+  left: 200px;
+  top: -10px;
+}
 }
 
 
@@ -630,6 +652,70 @@ h5.normal.ship-bot {
   bottom: -1em;
 }
 
+
+/* new files */
+.check_lm4 .form-control {
+  height: 110px;
+  margin-top: 15px;
+  width: 96%;
+  margin-left: 12px;
+  margin-right: 10px;
+  border-style: solid;
+  border-color: black;
+  font-size: 40px;
+}
+.col-sm-4 {
+  width: 33.3%;
+  float: left;
+  position: relative;
+  left: -8px;
+}
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 70%;
+  height: 28%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+.modal_btn {
+  position: relative;
+  top: 44px;
+  left: 27.6rem;
+  width: 27%;
+  font-size: 30px;
+}
+/* .check_lm4 .form-control {
+  height: 110px;
+  margin-top: 15px;
+  width: 96%;
+  margin-left: 12px;
+  margin-right: 10px;
+  border-style: solid;
+  border-color: black;
+  font-size: 26px;
+} */
+img.modal-payment {
+  position: relative;
+  left: 390px;
+  top: -10px;
+}
+.check_lm4 .form-control {
+  height: 110px;
+  margin-top: 15px;
+  width: 98%;
+  margin-left: 12px;
+  margin-right: 10px;
+  border-style: solid;
+  border-color: black;
+  font-size: 40px;
+}
 }
 
 @media only screen 
@@ -798,8 +884,8 @@ h4.check-title-size {
 }
 ._center {
   position: relative;
-  left: -5rem;
-  bottom: 7rem;
+  left: -5rem!important;
+  bottom: 7rem!important;
   width: 88%;
   font-size: 44px;
 }
@@ -875,6 +961,62 @@ h5.normal.ship-bot {
 .shower_left h4 b, strong {
    margin-left: 0px; 
 }
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 70%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  height: 30%;
+  top: 23em;
+}
+.modal-header {
+  padding: 2px 16px;
+  background-color: #e2e1dfa1;
+  color: white;
+  height: 13%;
+}
+.space_left {
+  padding-left: 3px;
+  width: 33%;
+  float: left;
+}
+.col-sm-4 {
+  float: left;
+  width: 316px;
+}
+img.modal-payment {
+  position: relative;
+  left: 157px;
+  top: -10px;
+  width: 70%;
+}
+.check_lm4 .form-control {
+  height: 83px;
+  margin-top: 15px;
+  width: 94%;
+  margin-left: 13px;
+  margin-right: 10px;
+  border-style: solid;
+  border-color: black;
+ 
+}
+.modal_btn {
+  position: relative;
+  top: 50px;
+  left: 22rem;
+  font-size: 33px;
+}
+input.form-control::placeholder {
+  font-size: 30px;
+}
 }
 
 
@@ -927,9 +1069,9 @@ h4.check-title-size {
   font-size: 44px;
 }
 
-h6.c-size {
+/* h6.c-size {
   font-size: 27px;
-}
+} */
 textarea.txt-size {
   width: 100%;
   height: 230px;
@@ -997,6 +1139,74 @@ h5.normal.ship-bot {
 }
 
 
+/* new files here */
+.container {
+  max-width: 100%;
+  width: 1645px;
+  padding: 0;
+  position: relative;
+  max-width: 1920px;
+}
+.check_rm.clearfix {
+  height: 1900px;
+  width: 1000px;
+  margin-top: 7rem;
+  position: relative;
+  left: -8rem;
+  border-style: solid;
+}
+.checkout_1r1.clearfix .c-size {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.footer-title-contact {
+  width: 60%;
+  height: 75px;
+  text-align: left;
+}
+span.sp {
+  font-size: 43px;
+  text-align: left;
+}
+.info-contacts {
+  font-size: 50px;
+  text-align: left;
+}
+h4.check-title-size {
+  font-size: 40px;
+  position: relative;
+  left: -135px;
+}
+.check_rm.clearfix {
+  height: 1965px;
+  width: 1000px;
+  margin-top: 7rem;
+  position: relative;
+  /* left: -13rem; */
+  border-style: solid;
+}
+._center {
+  position: relative;
+  left: -5rem;
+  bottom: 7rem;
+  width: 88%;
+  font-size: 44px;
+}
+.check_rm.clearfix {
+  height: 1950px;
+  width: 1000px;
+  margin-top: 7rem;
+  position: relative;
+  /* left: -13rem; */
+  border-style: solid;
+}
+h4.check-title-size {
+  font-size: 40px;
+  position: relative;
+  left: -136px;
+}
+
+
 }
 
 @media only screen 
@@ -1013,11 +1223,11 @@ section#center {
   height: 2150px;
 }
 .check_rm.clearfix {
-  height: 1900px;
+  /* height: 1900px; */
   width: 1000px;
   margin-top: 7rem;
   position: relative;
-  left: -9rem;
+  /* left: -13rem; */
   border-style: solid;
 }
 
@@ -1039,12 +1249,12 @@ h6.text-right {
 h4.check-title-size {
   font-size: 40px;
   position: relative;
-  left: -109px;
+  /* left: -109px; */
 }
 ._center {
   position: relative;
-  left: -5rem;
-  bottom: 7rem;
+  left: 7rem;
+  bottom: -2rem;
   width: 88%;
   font-size: 44px;
 }
@@ -1120,6 +1330,49 @@ h5.normal.ship-bot {
 .shower_left h4 b, strong {
    margin-left: 0px;
 }
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 74%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  height: 32%;
+}
+.check_lm4 .form-control {
+  height: 84px;
+  margin-top: 15px;
+  width: 94%;
+  margin-left: 13px;
+  margin-right: 10px;
+  border-style: solid;
+  border-color: black;
+}
+.check_lm4 .form-control::placeholder{
+
+  font-size:35px;
+}
+.col-sm-4 {
+ 
+  float: left;
+  width: 349px;
+}
+.space_left {
+  padding-left: 0;
+}
+.modal_btn {
+  position: relative;
+  top: 71px;
+  left: 20rem;
+  font-size: 30px;
+}
+
 }
 
 @media only screen 
@@ -1243,6 +1496,121 @@ h5.normal.ship-bot {
 }
 .shower_left h4 b, strong {
    margin-left: 0px;
+}
+
+}
+
+
+@media only screen 
+and (max-width:540px)
+and (min-width:330px)
+and (orientation:portrait)
+{
+
+
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 74%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    height: 45%;
+    
+
+}
+.modal-header {
+  padding: 2px 16px;
+  background-color: #e2e1dfa1;
+  color: white;
+  height: 20%;
+}
+
+.col-sm-4 {
+  float: left;
+  width: 342px;
+}
+.modal_btn {
+  position: relative;
+  top: 71px;
+  left: 23rem;
+  font-size: 30px;
+}
+}
+
+
+@media only screen 
+and (max-width:300px)
+and (min-width:280px)
+and (orientation:portrait)
+{
+
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 87%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    height: 40%;
+}
+.check_lm4 .form-control {
+  height: 86px;
+  margin-top: 15px;
+  width: 94%;
+  margin-left: 13px;
+  margin-right: 10px;
+  border-style: solid;
+  border-color: black;
+}
+
+.check_lm4 .form-control {
+  height: 120px;
+  margin-top: 15px;
+  width: 94%;
+  margin-left: 13px;
+  margin-right: 10px;
+  border-style: solid;
+  border-color: black;
+}
+.space_left {
+  padding-left: 0;
+}
+.col-sm-4 {
+  width: 304px;
+  float: left;
+}
+input.form-control::placeholder {
+  font-size: 30px;
+}
+.modal_btn {
+  position: relative;
+  top: 128px;
+  left: 19rem;
+  font-size: 39px;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #e2e1dfa1;
+  color: white;
+  height: 13%;
+}
+img.modal-payment {
+  position: relative;
+  left: 181px;
+  top: 2px;
+  width: 566px;
 }
 
 }

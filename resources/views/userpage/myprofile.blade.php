@@ -18,7 +18,7 @@
           <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
           <h6>Upload a different photo...</h6>
           
-          <input type="file" class="form-control">
+          <input type="file" class="form-control file-size">
         </div>
         <button class="btn btn-primary moves-center" type="submit">File Upload</button>
       </div>
@@ -29,7 +29,7 @@
          
         </div>
       
-        <h3>Personal info</h3> 
+        <h3 class="p-info-size">Personal info</h3> 
         <div class="prof">
           <div class="move-left">
         <a id="show-prof"class="col-lg-3">Edit Profile</a>

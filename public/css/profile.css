@@ -312,7 +312,95 @@ and (orientation: portrait)
         position: relative;
         left: 90px;
     }
+    .footer-desc.footer-gallery {
+        display: none;
+    }
+    .rows2 {
+        margin-left: 25%;
+        /* margin-right: -15px; */
+        height: 2000px;
+    }
+    input.form-control {
+        width: 137%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #cf9d71;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 111px;
+        position: relative;
+        right: 122px;
+        border-style: solid;
+        border-color: black;
+    }
+    .move-left {
+        font-size: 40px;
+        position: relative;
+        right: 239px;
+    }
+    .form-group {
+        font-size: 45px;
+    }
+    input.btn.btn-default {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: -14%;
+        font-size: 45px;
+    }
+    button.btn.btn-primary.moves-center-b {
+        background-color: #ff8800fc;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 39%;
+        font-size: 40px;
+    }
+    label.col-lg-3.control-label {
+        position: relative;
+        right: 100px;
+    }
+    input.form-control::placeholder {
+        font-size: 40px;
+    }
+    input[type="text"]
+{
+    font-size:50px;
 
+
+}
+h3.p-info-size {
+    font-size: 40px;
+}
+button.btn.btn-primary.moves-center {
+    width: 139%;
+    background-color: #0f6898;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 34px;
+}
+input.form-control.file-size {
+    width: 431px;
+    height: 69px;
+    font-size: 30px;
+}
+img.avatar.img-circle {
+    width: 180px;
+}
 }
 
 @media only screen 
@@ -348,6 +436,7 @@ and (orientation: landscape)
         position: relative;
         left: 90px;
     }
+  
 
 }
 
@@ -408,7 +497,8 @@ and (orientation: portrait)
         border-radius: 4px;
         cursor: pointer;
         position: relative;
-        left: 15%;
+        left: -22%;
+        width: 26%;
     }
 
     div#changess-pass {
@@ -426,10 +516,11 @@ and (orientation: portrait)
 
 
 @media only screen 
-and (max-width: 300px)
+and (max-width: 320px)
 and (min-width: 280px)
 and (orientation: portrait)
 {
+
 
     div#edit-profile {
         width: 684px;
@@ -458,5 +549,97 @@ and (orientation: portrait)
         position: relative;
         left: 90px;
     }
+    .footer-desc.footer-gallery {
+        display: none;
+    }
+    .rows2 {
+        margin-left: 25%;
+        /* margin-right: -15px; */
+        height: 2000px;
+    }
+    input.form-control {
+        width: 137%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #cf9d71;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 111px;
+        position: relative;
+        right: 122px;
+        border-style: solid;
+        border-color: black;
+    }
+    .move-left {
+        font-size: 40px;
+        position: relative;
+        right: 239px;
+    }
+    .form-group {
+        font-size: 45px;
+    }
+    input.btn.btn-default {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: -20%;
+        font-size: 45px;
+    }
+    button.btn.btn-primary.moves-center-b {
+        background-color: #ff8800fc;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 39%;
+        font-size: 40px;
+    }
+    label.col-lg-3.control-label {
+        position: relative;
+        right: 100px;
+    }
+    input.form-control::placeholder {
+        font-size: 40px;
+    }
+    input[type="text"]
+{
+    font-size:50px;
+
+
+}
+h3.p-info-size {
+    font-size: 40px;
+}
+button.btn.btn-primary.moves-center {
+    width: 139%;
+    background-color: #0f6898;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 34px;
+}
+input.form-control.file-size {
+    width: 431px;
+    height: 69px;
+    font-size: 30px;
+}
+img.avatar.img-circle {
+    width: 180px;
+}
+.footer-desc.footer-gallery {
+    display: none;
+}
 
 }
