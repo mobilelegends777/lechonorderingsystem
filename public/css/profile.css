@@ -227,7 +227,7 @@ and (orientation: landscape)
         border-radius: 4px;
         cursor: pointer;
         position: relative;
-        left: 15%;
+        left: 24%!important;
     }
 
     div#changess-pass {
@@ -240,7 +240,74 @@ and (orientation: landscape)
         position: relative;
         left: 90px;
     }
+    form.form-horizontal {
+        position: relative;
+        left: 0em!important;
+    }
+    button.btn.btn-primary.moves-center-b {
+        background-color: #ff8800fc;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 58%!important;
+    }
+    .move-left {
+        position: relative;
+        left: 5em!important;
+    }
 
+}
+
+@media only screen 
+and (max-width:1366px)
+and (min-width:1024px)
+and (orientation:portrait)
+{
+
+    .prof {
+        position: relative;
+        color: black;
+        right: 9em;
+    }
+    .move-left {
+        position: relative;
+        left: 5em;
+    }
+    h3.p-info-size {
+        position: relative;
+        right: 3em;
+    }
+    button.btn.btn-primary.moves-center-b {
+        background-color: #ff8800fc;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 54%;
+    }
+    input.btn.btn-default {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 23%;
+    }
+    input.form-control.file-size {
+        width: 257px;
+        position: relative;
+        right: 70px;
+    }
 }
 
 @media only screen 
@@ -263,7 +330,7 @@ and (orientation: landscape)
         border-radius: 4px;
         cursor: pointer;
         position: relative;
-        left: 15%;
+        left: 17%;
     }
 
     div#changess-pass {
@@ -276,6 +343,41 @@ and (orientation: landscape)
         position: relative;
         left: 90px;
     }
+    .prof {
+        position: relative;
+        right: 10rem;
+    }
+    button.btn.btn-primary.moves-center-b {
+        background-color: #ff8800fc;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 41%;
+    
+
+}
+.move-left {
+    position: relative;
+    left: 8em;
+}
+h3.p-info-size {
+    position: relative;
+    right: 4em;
+}
+input.form-control.file-size {
+    width: 217%;
+    position: relative;
+    right: 4em;
+}
+
+form.form-horizontal {
+    position: relative;
+    left: 8em;
+}
 
 }
 
@@ -290,17 +392,6 @@ and (orientation: portrait)
         position: relative;
         left: 82px;
     }
-    input.btn.btn-default {
-        background-color: #4CAF50;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        position: relative;
-        left: 15%;
-    }
 
     div#changess-pass {
         width: 684px;
@@ -312,7 +403,99 @@ and (orientation: portrait)
         position: relative;
         left: 90px;
     }
+    .footer-desc.footer-gallery {
+        display: none;
+    }
+    .rows2 {
+        margin-left: 25%;
+        /* margin-right: -15px; */
+        height: 2000px;
+    }
+    input.form-control {
+        width: 137%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #cf9d71;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 111px;
+        position: relative;
+        right: 122px;
+        border-style: solid;
+        border-color: black;
+    }
+    .move-left {
+        font-size: 40px;
+        position: relative;
+        right: 290px;
+    }
+    .form-group {
+        font-size: 45px;
+    }
+    input.btn.btn-default {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: -16%!important;
+        font-size: 45px;
+    }
+    button.btn.btn-primary.moves-center-b {
+        background-color: #ff8800fc;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 42%;
+        font-size: 40px;
+    }
+    label.col-lg-3.control-label {
+        position: relative;
+        right: 100px;
+    }
+    input.form-control::placeholder {
+        font-size: 40px;
+    }
+    input[type="text"]
+{
+    font-size:50px;
 
+
+}
+h3.p-info-size {
+    font-size: 40px;
+}
+button.btn.btn-primary.moves-center {
+    width: 139%;
+    background-color: #0f6898;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 34px;
+}
+input.form-control.file-size {
+    width: 431px;
+    height: 69px;
+    font-size: 30px;
+}
+img.avatar.img-circle {
+    width: 180px;
+}
+form.form-horizontal {
+    position: relative;
+    right: 3em;
+}
 }
 
 @media only screen 
@@ -324,7 +507,17 @@ and (orientation: landscape)
     div#edit-profile {
         width: 684px;
         position: relative;
-        left: 82px;
+        left: 82px!important;
+    }
+    div#changess-pass {
+        width: 684px;
+        position: relative;
+        left: 40px!important;
+    }
+    div#addresses {
+        width: 684px;
+        position: relative;
+        left: 40px!important;
     }
     input.btn.btn-default {
         background-color: #4CAF50;
@@ -348,9 +541,73 @@ and (orientation: landscape)
         position: relative;
         left: 90px;
     }
+    .rows2 {
+        margin-left: 25%;
+        height: 1500px;
+    }
+
+    input.form-control {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 2px solid #0a0806;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 68px;
+        font-size: 30px;
+    }
+    button.btn.btn-primary.moves-center-b {
+        background-color: #ff8800fc;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 39%!important;
+        font-size: 25px;
+    }
+    input.btn.btn-default {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: -1%!important;
+        font-size: 25px;
+        width: 196px;
+    }
+    .form-group {
+        font-size: 25px;
+    }
+    .move-left {
+        font-size: 20px;
+        position: relative;
+        right: 45px;
+    }
+    input.form-control.file-size {
+        width: 422px!important;
+        position: relative;
+        right: 110px!important;
+    }
+    button.btn.btn-primary.moves-center {
+        width: 104%;
+        background-color: #0f6898;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 25px;
+    }    
 
 }
-
 
 @media only screen 
 and (max-width: 731px)
@@ -361,8 +618,18 @@ and (orientation: landscape)
     div#edit-profile {
         width: 684px;
         position: relative;
-        left: 82px;
+        left: -100px!important;
     }
+    div#addresses {
+        width: 684px;
+        position: relative;
+        left: -100px!important;
+    } 
+    div#changess-pass {
+        width: 684px;
+        position: relative;
+        left: -100px!important;
+    }   
     input.btn.btn-default {
         background-color: #4CAF50;
         color: white;
@@ -372,7 +639,9 @@ and (orientation: landscape)
         border-radius: 4px;
         cursor: pointer;
         position: relative;
-        left: 15%;
+        left: 3%;
+        font-size: 22px;
+        width: 167px;
     }
 
     div#changess-pass {
@@ -385,8 +654,143 @@ and (orientation: landscape)
         position: relative;
         left: 90px;
     }
+    form.form-horizontal {
+        height: 1100px;
+    }
+
+    input.form-control {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #020202;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 76px;
+        font-size: 25px;
+    }
+    .move-left {
+        font-size: 22px;
+        position: relative;
+        right: 66px;
+    }
+    
+    .form-group {
+        font-size: 22px;
+    }
+    
+    h3.p-info-size {
+        font-size: 25px;
+    }
+    button.btn.btn-primary.moves-center-b {
+        background-color: #ff8800fc;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 38%;
+        font-size: 23px;
+    }
+    input.form-control.file-size {
+        width: 360px!important;
+        position: relative;
+        right: 87px!important;
+        height: 60px;
+        font-size: 20px;
+    }
+    button.btn.btn-primary.moves-center {
+        width: 100%;
+        background-color: #0f6898;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 20px;
+    }
 
 }
+
+
+@media only screen 
+and (max-width:823px)
+and (min-width:732px)
+and (orientation:landscape)
+{
+
+
+    div#edit-profile {
+        width: 684px;
+        position: relative;
+        left: -130px;
+    }
+    .move-left {
+        position: relative;
+        left: -5em!important;
+    }
+    hr {
+        position: relative;
+        right: 5rem;
+    }
+    button.btn.btn-primary.moves-center-b {
+        background-color: #ff8800fc;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 37%!important;
+    }
+    input.btn.btn-default {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: -4%!important;
+    }
+    button.btn.btn-primary.moves-center {
+        width: 118%;
+        background-color: #0f6898;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    input.form-control.file-size {
+        width: 254px;
+        position: relative;
+        right: 4em;
+    }
+    h3.p-info-size {
+        position: relative;
+        right: 7em;
+    }
+    div#addresses {
+        width: 684px;
+        position: relative;
+        left: -130px;
+    }
+    div#changess-pass {
+        width: 684px;
+        position: relative;
+        left: -129px;
+    }
+
+}
+
+
 
 @media only screen 
 and (max-width: 568px)
@@ -408,7 +812,8 @@ and (orientation: portrait)
         border-radius: 4px;
         cursor: pointer;
         position: relative;
-        left: 15%;
+        left: -22%;
+        width: 26%;
     }
 
     div#changess-pass {
@@ -426,15 +831,21 @@ and (orientation: portrait)
 
 
 @media only screen 
-and (max-width: 300px)
+and (max-width: 320px)
 and (min-width: 280px)
 and (orientation: portrait)
 {
 
+    form.form-horizontal {
+        position: relative;
+        right: 5em;
+    }
+
     div#edit-profile {
         width: 684px;
         position: relative;
-        left: 82px;
+        left: 135px;
+    
     }
     input.btn.btn-default {
         background-color: #4CAF50;
@@ -451,12 +862,492 @@ and (orientation: portrait)
     div#changess-pass {
         width: 684px;
         position: relative;
-        left: 90px;
+        left: 135px;
     }
     div#addresses {
         width: 684px;
         position: relative;
-        left: 90px;
+        left: 135px;
     }
+    .footer-desc.footer-gallery {
+        display: none;
+    }
+    .rows2 {
+        margin-left: 25%;
+        /* margin-right: -15px; */
+        height: 2000px;
+    }
+    input.form-control {
+        width: 137%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #cf9d71;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 111px;
+        position: relative;
+        right: 122px;
+        border-style: solid;
+        border-color: black;
+    }
+    .move-left {
+        font-size: 40px;
+        position: relative;
+        right: 239px;
+    }
+    .form-group {
+        font-size: 45px;
+    }
+    input.btn.btn-default {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: -13%;
+        font-size: 45px;
+        width: 251px;
+    }
+    button.btn.btn-primary.moves-center-b {
+        background-color: #ff8800fc;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 48%;
+        font-size: 40px;
+    }
+    label.col-lg-3.control-label {
+        position: relative;
+        right: 100px;
+    }
+    input.form-control::placeholder {
+        font-size: 40px;
+    }
+    input[type="text"]
+{
+    font-size:50px;
+
+
+}
+h3.p-info-size {
+    font-size: 40px;
+}
+button.btn.btn-primary.moves-center {
+    width: 139%;
+    background-color: #0f6898;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 34px;
+}
+input.form-control.file-size {
+    width: 431px;
+    height: 69px;
+    font-size: 30px;
+}
+img.avatar.img-circle {
+    width: 180px;
+}
+.footer-desc.footer-gallery {
+    display: none;
+}
+
+}
+
+@media only screen 
+and (max-width:736px)
+and (min-width:650px)
+and (orientation:landscape)
+{
+
+    form.form-horizontal {
+        height: 1000px;
+        font-size: 24px;
+    }
+    input.form-control {
+        width: 143%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #cf9d71;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 88px;
+        font-size: 23px;
+    } 
+    
+    button.btn.btn-primary.moves-center-b {
+        background-color: #ff8800fc;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 37%!important;
+        font-size: 25px;
+    }
+    input.btn.btn-default {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: -3%!important;
+        font-size: 25px;
+        width: 167px;
+    }
+    input.form-control.file-size {
+        width: 373px;
+        position: relative;
+        right: 4em;
+        height: 59px;
+    }
+
+    button.btn.btn-primary.moves-center {
+        width: 118%;
+        background-color: #0f6898;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 22px;
+    }
+    .move-left {
+        position: relative;
+        left: -6em!important;
+        font-size: 22px;
+    }
+    hr {
+        position: relative;
+        right: 11rem;
+    }
+    h3.p-info-size {
+        position: relative;
+        right: 7em;
+        font-size: 23px;
+    }
+    img.avatar.img-circle {
+        width: 130px;
+    }    
+
+
+}
+
+@media only screen 
+and (max-width: 653px)
+and (min-width: 280px)
+and (orientation:landscape)
+{
+
+    form.form-horizontal {
+        height: 1000px;
+        font-size: 24px;
+    }
+    input.form-control {
+        width: 143%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #cf9d71;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 88px;
+        font-size: 23px;
+    } 
+    
+    button.btn.btn-primary.moves-center-b {
+        background-color: #ff8800fc;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 37%!important;
+        font-size: 25px;
+    }
+    input.btn.btn-default {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: -3%!important;
+        font-size: 25px;
+        width: 167px;
+    }
+    input.form-control.file-size {
+        width: 373px;
+        position: relative;
+        right: 4em;
+        height: 59px;
+    }
+
+    button.btn.btn-primary.moves-center {
+        width: 118%;
+        background-color: #0f6898;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 22px;
+    }
+    .move-left {
+        position: relative;
+        left: -6em!important;
+        font-size: 22px;
+    }
+    hr {
+        position: relative;
+        right: 11rem;
+    }
+    h3.p-info-size {
+        position: relative;
+        right: 7em;
+        font-size: 23px;
+    }
+    img.avatar.img-circle {
+        width: 130px;
+    } 
+    div#edit-profile {
+        width: 684px;
+        position: relative;
+        left: -82px!important;
+    }
+    div#changess-pass {
+        width: 684px;
+        position: relative;
+        left: -82px!important;
+    }
+    div#addresses {
+        width: 684px;
+        position: relative;
+        left: -82px!important;
+    }   
+
+}
+
+@media only screen 
+and (max-width: 667px)
+and (min-width: 375px)
+and (orientation:landscape)
+{
+
+    form.form-horizontal {
+        height: 1000px;
+        font-size: 24px;
+    }
+    input.form-control {
+        width: 143%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #cf9d71;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 88px;
+        font-size: 23px;
+    } 
+    
+    button.btn.btn-primary.moves-center-b {
+        background-color: #ff8800fc;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 37%!important;
+        font-size: 25px;
+    }
+    input.btn.btn-default {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: -3%!important;
+        font-size: 25px;
+        width: 167px;
+    }
+    input.form-control.file-size {
+        width: 373px;
+        position: relative;
+        right: 4em;
+        height: 59px;
+    }
+
+    button.btn.btn-primary.moves-center {
+        width: 118%;
+        background-color: #0f6898;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 22px;
+    }
+    .move-left {
+        position: relative;
+        left: -6em!important;
+        font-size: 22px;
+    }
+    hr {
+        position: relative;
+        right: 11rem;
+    }
+    h3.p-info-size {
+        position: relative;
+        right: 7em;
+        font-size: 23px;
+    }
+    img.avatar.img-circle {
+        width: 130px;
+    } 
+    div#edit-profile {
+        width: 684px;
+        position: relative;
+        left: -82px!important;
+    }
+    div#changess-pass {
+        width: 684px;
+        position: relative;
+        left: -82px!important;
+    }
+    div#addresses {
+        width: 684px;
+        position: relative;
+        left: -82px!important;
+    }   
+
+}
+
+
+@media only screen 
+and (max-width: 720px)
+and (min-width: 540px)
+and (orientation:landscape)
+{
+
+    form.form-horizontal {
+        height: 1000px;
+        font-size: 24px;
+    }
+    input.form-control {
+        width: 143%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #cf9d71;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 88px;
+        font-size: 23px;
+    } 
+    
+    button.btn.btn-primary.moves-center-b {
+        background-color: #ff8800fc;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 37%!important;
+        font-size: 25px;
+    }
+    input.btn.btn-default {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: -3%!important;
+        font-size: 25px;
+        width: 167px;
+    }
+    input.form-control.file-size {
+        width: 373px;
+        position: relative;
+        right: 4em;
+        height: 59px;
+    }
+
+    button.btn.btn-primary.moves-center {
+        width: 118%;
+        background-color: #0f6898;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 22px;
+    }
+    .move-left {
+        position: relative;
+        left: -6em!important;
+        font-size: 22px;
+    }
+    hr {
+        position: relative;
+        right: 11rem;
+    }
+    h3.p-info-size {
+        position: relative;
+        right: 7em;
+        font-size: 23px;
+    }
+    img.avatar.img-circle {
+        width: 130px;
+    } 
+    div#edit-profile {
+        width: 684px;
+        position: relative;
+        left: -82px!important;
+    }
+    div#changess-pass {
+        width: 684px;
+        position: relative;
+        left: -82px!important;
+    }
+    div#addresses {
+        width: 684px;
+        position: relative;
+        left: -82px!important;
+    }   
 
 }

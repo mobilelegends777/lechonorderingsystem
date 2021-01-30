@@ -146,9 +146,10 @@
 					  <a href="{{asset('frontpage/drinks')}}">Drinks</a>
 					  <a href="{{asset('frontpage/appetizer')}}">Appetizers</a>
 				</div>
-		</div> -->
+		 </div> -->
     	<!-- <div class="ordinary">
     		<a href="#">About Us <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></a>
+
     	</div> -->
 	    <div class="ordinary"><a href="{{asset('frontpage/contact')}}">Contact Us</a>
 	    </div>

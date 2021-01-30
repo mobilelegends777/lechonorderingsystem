@@ -19,8 +19,7 @@
 							<td>Subtotal</td>
 					</tr>
 					</thead>
-					
-					<tbody class="cart-table-conts">
+				<tbody class="cart-table-conts">
 				@for($i = 1; $i <5; $i++)
 					<tr class="librebais">
 						<td><span class="cancel-cart" style="cursor:pointer;">&times;</span></td>

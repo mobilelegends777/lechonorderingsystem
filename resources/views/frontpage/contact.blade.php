@@ -31,7 +31,7 @@
     <div class="container container-left">
 	  <div class="row">
 	  <div class="contact clearfix">
-	    <div class="col-sm-12">
+	    <div class="col-sm-12 move-t0-right">
 		   <h1 class="text-center">Contact Us</h1>
 		   <div class="col-sm-4">
 		    <div class="contact_1 text-left c-size">
@@ -63,22 +63,22 @@
 		    <h3 class="text-center touch">Get In Connect With Our Company</h3>
 		   <div class="">
 		   <div class="contact_2">
-		    <input class="form-control" type="text" placeholder="Name">
+		    <input class="form-control place-font" type="text" placeholder="Name">
 		   </div>
 		  </div>
 		   <div class="">
 		   <div class="contact_2">
-		    <input class="form-control" type="text" placeholder="Email">
+		    <input class="form-control place-font" type="text" placeholder="Email">
 		   </div>
 		  </div>
 		   <div class="">
 		   <div class="contact_2">
-		    <input class="form-control" type="text" placeholder="Telephone">
+		    <input class="form-control place-font" type="text" placeholder="Telephone">
 		   </div>
 		  </div>
 		   <div class="col-sm-12 contact_3 clearfix">
 		    <div class="contact_3_top">
-			  <textarea placeholder="Message..." class="form-control form_1"></textarea>
+			  <textarea placeholder="Message..." class="form-control form_1 place-font"></textarea>
 			   <a href="detail.html">Submit</a>
 			</div>
 		  </div>
