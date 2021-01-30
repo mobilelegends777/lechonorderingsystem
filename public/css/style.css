@@ -1178,7 +1178,7 @@ table.product-on-cart {
   font-size: 22px;
 }
 thead td {
-  padding: 10px 72px;
+  padding: 10px 63px;
 }
 .coupon-submit {
   display:  flex;
@@ -1409,5 +1409,12 @@ input.btn.btn-default:hover{
   }
   tr.title-carted{
     display:block;
+  }
+  td.carted-items {
+    display: flex;
+    justify-content: space-around;
+  }
+.carted-item-name {
+    align-self: center;
   }
   
