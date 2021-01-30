@@ -24,10 +24,6 @@
       </div>
       <!-- edit form column -->
       <div class="col-md-9 personal-info move-lefts">
-        <div class="alert alert-info alert-dismissable">
-         
-         
-        </div>
       
         <h3 class="p-info-size">Personal info</h3> 
         <div class="prof">
