@@ -91,3 +91,5 @@ Route::get('login/facebook/callback', 'userLoginController@handleFacebookCallbac
 
 
 Route::get('/frontpage/special-order','lechonController@index');
+
+Route::post('/user-photo','myprofileController@uploadImage')->name('user-update-photo');

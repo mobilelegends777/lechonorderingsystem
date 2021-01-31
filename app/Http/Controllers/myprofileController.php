@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\User;
 use Auth;
 use Session;
+use File;
 use App\Login;
 use DB;
 use App\Http\Controllers\Controller;
@@ -29,7 +30,6 @@ class myprofileController extends Controller
         $value = DB::select('SELECT * from users inner join customer_info ON customer_id = users.id 
         inner join customer_address ON customer_address.customer_id = users.id 
         inner join contact_info ON contact_info.customer_id = users.id where users.id = '.$id.'');
-        
             return view('userpage/myprofile', compact('value'));
     }
 
@@ -77,13 +77,30 @@ class myprofileController extends Controller
         DB::update('UPDATE users SET email = \''.$email.'\'
             WHERE users.id = '.$id.'');
         
-        
        
         echo "<script>alert('Record Updated Successfully');
         
         window.location.href='/userpage/myprofile';
         </script>";
         
+    }
+    public function uploadImage(Request $req){
+        // dd($req->all());
+        $data = Auth::user();
+        $image = $req->file('image');
+        $cName = $data->name;
+        $newName = $cName.'.'.$image->getClientOriginalExtension();
+        $path = public_path().'/images/profile/';
+        File::makeDirectory($path, $mode = 0777, true, true);
+        $img = '/images/profile/'.$newName;
+        $image->move($path,$newName);
+
+        $update = DB::table('users')->where('id','=',$data->id)
+            ->update([
+                'images' => $img
+            ]);
+
+        return back()->with('success','Profile Updated');
     }
 
 

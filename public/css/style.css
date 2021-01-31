@@ -340,8 +340,9 @@ span.inputs {
     height: auto;
     flex-wrap: wrap;
     /*flex-direction: row;*/
-    margin: 0 15%;
+    margin: 0 13%;
     padding: 10px 0;
+    justify-content: space-evenly;
 }
 .__item {
     margin: 17px 19px;

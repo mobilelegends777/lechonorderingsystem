@@ -1717,13 +1717,14 @@
 		font-size: 20px;
 	}
 	.__item {
-		width: 171px;
+		width: 44%;
+		margin: 17px 11px;
 	}
 	.__item .box2 {
 		height: 155px;
 	}
 	.__item .box3 .box3-details .product-title {
-		font-size: 13px;
+		font-size: 14px;
 	}
 	.__item .box3 .box3-details .items-price {
 		font-size: 13px;
@@ -1740,7 +1741,7 @@
 		right: 6px;
 	}
 	.topnav.responsive .ordinary {
-		font-size: 18px;
+		font-size: 14px;
 		padding: 21px 0px;
 	}
 	.drpdwn {
@@ -1798,7 +1799,7 @@
 		font-size: 25px;
 	}
 	.image-cont img {
-		width: 80px;
+		width: 109px;
 	}
 	.info-contacts {
 		font-size: 18px;
@@ -1830,13 +1831,15 @@
 	}
 	.container .sub-container2 .sc2 {
 		font-size: 23px;
+		margin-left: -3px;
 	}
 	.hr {
-	    width: 56%;
+		width: 74%;
+		margin-left: 18px;
 	}
 	.centered {
 		width: 65%;
-		font-size: 26px;
+		font-size: 28px;
 		text-align: center;
 	}
 	.centered span {
@@ -1845,20 +1848,21 @@
 		/* margin-left: 77px; */
 	}
 	button.buttoncat {
-		font-size: 16px;
-		width: 57%;
-		height: 54px;
+		font-size: 12px;
+		width: 51%;
+		height: 35px;
+    	padding: 11px 5px;
 	}
 	.f-icon {
-		width: 311px;
+		width: 189px;
 		margin-top: 0px;
 	}
 	.f-icon img {
 		width: 67px;
 	}
 	.qual-icon-cont p, .qual-icon-cont span {
-		font-size: 13px;
-		line-height: 24px;
+		font-size: 14px;
+		line-height: 18px;
 	}
 	#my-searches input {
 	    height: auto;
@@ -2033,7 +2037,7 @@
 		margin: 0;
 	}
 	thead td {
-		padding: 10px 20px;
+		padding: 10px 17px;
 	}
 	.apply-coupon input {
 		height: 3.5rem;
@@ -2051,7 +2055,7 @@
 	    height: 112px;
 	}
 	.shop-items {
-		width: 205px;
+		width: 185px;
 	}
 	.shop-images-lechon img {
 		height: 173px;
@@ -2061,7 +2065,10 @@
 		margin: 29px;
 	}
 	.image-cont {
-		height: 685px;
+		height: 195px;
+	}
+	.headmenu .des-logo .logos {
+		margin-left: 34px;
 	}
 }
 
@@ -2091,10 +2098,17 @@
 		font-size: 16px;
 	}
 	.image-cont img {
-		width: 77px;
+		width: 88px;
 	}
 	.image-cont {
-		height: 650px;
+		height: 216px;
+	}
+	.copyright {
+		font-size: 13px;
+		width: 30%;
+	}
+	.centered {
+		font-size: 25px;
 	}
 	/*cart*/
 	.page-sub-container h1 {
@@ -2183,7 +2197,8 @@
     	width: 30%;
 	}
 	.__item {
-		width: 163px;
+		width: 179px;
+		margin: 17px 7px;
 	}
 	.shop-items {
 		width: 172px;
@@ -2194,9 +2209,21 @@
 	.social-media-icons a img {
 		height: 24px;
 	}
+	.image-cont {
+		height: 182px;
+	}
+	.image-cont img {
+		width: 80px;
+	}
+	.__item .box3 .box3-details .product-title {
+		font-size: 15px;
+	}
 	.copyright {
-		font-size: 13px;
-		width: 36%;
+		font-size: 12px;
+		width: 30%;
+	}
+	.centered {
+		font-size: 25px;
 	}
 	.bttn2 {
 		font-size: 14px;
@@ -2205,7 +2232,7 @@
 		font-size: 14px;
 	}
 	.__item .box2 {
-		height: 105px;
+		height: 132px;
 	}
 	.sort-items select {
 		width: 129px;
@@ -2217,7 +2244,7 @@
 		display: none;
 	}
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 385px) {
 	/*cart*/
 	.page-sub-container h1 {
 		font-size: 35px;
@@ -2312,17 +2339,17 @@
     	font-size: 31px;
 	}
 	.f-icon img {
-		width: 38px;
+		width: 55px;
 	}
 	.f-icon strong {
-		font-size: 18px;
+		font-size: 16px;
 	}
 	.f-icon p {
-		font-size: 18px;
+		font-size: 15px;
 	}
 	.f-icon .buttoncat {
-		padding: 15px 32px;
-		font-size: 16px;
+		/* padding: 15px 32px; */
+		font-size: 12px;
 	}
 	.container .sub-container2 {
 	    height: auto;
@@ -2331,7 +2358,16 @@
 		width: 100%;
 	}
 	.__item {
-		width: 146px;
+		width: 90%;
+	}
+	.__item .box2 {
+		height: 228px;
+	}
+	.__item .box3 .box3-details .product-title {
+		font-size: 16px;
+	}
+	.__item .box3 .box3-info .box3-item-info {
+		font-size: 15px;
 	}
 	.items.slider.slick-initialized.slick-slider {
    		width: 100%;
@@ -2358,7 +2394,7 @@
 	    margin-top: 16px;
 	}
 	.sales1 {
-        width: 71%;
+        width: 84%;
 	    top: 24%
 	}
 	.dropdown-content-account {
@@ -2371,7 +2407,7 @@
     	width: 20%;
 	}
 	.headmenu .des-logo .logos {
-	    margin-left: 0;
+	    margin-left: 16px;
 	    margin-top: 0;
 	}
 	
@@ -2398,8 +2434,18 @@
 		margin-top: -25px;
 		margin-left: -64px;
 	}
+	.image-cont {
+		height: 182px;
+	}
+	.copyright {
+		font-size: 12px;
+		width: 31%;
+	}
+	.centered {
+		font-size: 24px;
+	}
 	.image-cont img {
-		width: 73px;
+		width: 78px;
 	}
 	.info-contacts {
 		font-size: 16px;
@@ -2429,7 +2475,7 @@
 }
 @media screen and (max-width: 360px) {
 	.image-cont {
-		height: 215px;
+		height: 193px;
 		overflow: auto;
 	}
 	.headmenu {
@@ -2439,6 +2485,7 @@
 	}
 	span.account-c {
 		left: 16px;
+		top: 3px;
 	}	
 	.headmenu .icons {
     	width: 100%;
@@ -2451,7 +2498,7 @@
 		margin: 0;
 	}
 	.mobile-menu {
-        width: 22%;
+        width: 26%;
     	text-align: -webkit-center;
 	}
 	.shop-items {
@@ -2466,12 +2513,40 @@
     	position: unset;
 	}
 	.dropdown-content-account {
-    	font-size: 43px;
-	    width: 300px;
-	    right: unset;
+    	font-size: 12px;
+		width: 98px;
+		/* right: 15px; */
+		left: -11px;
+		top: 30px;
+		position: fixed;
+		line-height: 31px;
+		position: absolute;
+	}
+	.dropdown-content-account:before {
+		content: "";
+		position: absolute;
+		border: solid transparent;
+		border-bottom-color: white;
+		border-width: 11px;
+		top: -21px;
+
+	}
+	.dropdown-content-account:after {
+		content: "";
+		position: absolute;
+		top: -20px;
+		border: solid transparent;
+		border-width: 10px;
+		border-bottom-color: white;
 	}
 	.dropdown-content-account a{
-    	padding: 24px 27px;
+		/* padding: 24px 27px; */
+		width: 67px;
+		padding: 0px 0px;
+	}
+	#my-searches {
+		height: 83px;
+		padding: 16px 0;
 	}
 	.company-title {
     	display: none;
@@ -2490,11 +2565,14 @@
 		border-radius: 7px;
 	}
 	.search-icon img {
-		width: 1.9375rem;
-		height: 1.9375rem;
+		width: 27px;
+		height: 27px;
+		margin-right: 10px;
 	}
 	.headmenu .icons .icons3 {
-		width: 2.6875rem;
+		margin-top: 7px;
+		width: 31px;
+		height: 27px;
 	}
 	.headmenu .icons .icons2 {
 		width: 2.4375rem;
@@ -2503,7 +2581,7 @@
 		width: 3.4375rem;
 	}
 	.company-logo {
-	    width: 100%;
+	    width: 87%;
     	justify-content: center;
 	    padding: 10px 0px;
 	}
@@ -2527,7 +2605,7 @@
 		height: auto;
 	}
 	.__item {
-		width: 100%;
+		width: 90%;
 	}
 	.__item .box2 {
 		height: 249px;
@@ -2560,14 +2638,14 @@
 	}
 	.bttn1 {
 		padding: 18px;
-	    width: 33%;
-		font-size: 14px;
+	    width: 35%;
+		font-size: 13px;
 	}
 	.bttn2 {
 		margin-left: 15px;
 	    padding: 18px;
 	    width: 40%;
-		font-size: 14px;
+		font-size: 13px;
 	}
 	.f-icon strong {
 		font-size: 21px;
@@ -2591,7 +2669,10 @@
 		font-size: 19px;
 	}
 	.copyright {
-		font-size: 16px;
+		font-size: 12px;
+	}
+	.search-icon {
+		margin-top: 7px;
 	}
 	.container .sub-container2 .sc2 {
 		font-size: 22px;
@@ -2611,20 +2692,25 @@
     	object-fit: cover;
 	}
 	.centered {
-		font-size: 28px;
+		font-size: 25px;
 		width: 79%;
 	}
-	.centered span {
+	/* .centered span {
 		margin-left: 11px;
+	} */
+	.qual-icon-cont {
+		margin-top: 5px;
+		margin: 34px 0px;
+
 	}
 	.page-wrapper {
 		overflow: auto;
-    	height: 1500px;
+    	height: 750px;
 	}
 	.f-icon {
 		margin: 13px 43px;
-        width: 81%!important;
-    	padding-bottom: 87px;
+        width: 72%!important;
+    	/* padding-bottom: 87px; */
 	}
 	.f-icon img {
 		width: 48px;
@@ -2632,8 +2718,8 @@
 	.f-icon .buttoncat {
 		/* padding: 39px 32px; */
 		font-size: 14px;
-		width: 189px;
-		height: 49px;
+		width: 116px;
+		height: 39px;
 	}
 	.sub-container4 {
 	    width: 100%;
@@ -2685,7 +2771,8 @@
     	height: auto;
 	}
 	.footer-container {
-    	display: block;
+		display: block;
+		padding: 1px 10px;
 	}
 	.footer-1st-cont {
     	width: auto;
@@ -2736,23 +2823,27 @@
 	.footer-title-contact {
 	    width: 60%;
 	    height: auto;
-	    padding-bottom: 56px;
+	    padding-bottom: 0;
 	}
 	.footer-gallery {
 		width: 100%;
-		padding: 72px 0;
+		padding: 31px 0;
+	}
+	.headmenu .des-logo .logos {
+		margin-left: 0px;
 	}
 	.image-cont img {
-		width: 113px;
+		width: 87px;
 	}
 	.gallery-images {
     	width: auto;
 	}
 	.info-contacts {
 		font-size: 14px;
+		width: 29%;
 	}
 	span.sp {
-		width: 55%;
+		width: 65%;
 		font-size: 14px;
 		line-height: 27px;
 	}
@@ -2892,7 +2983,7 @@
 		width: 100%;
 	}
 	span.footer-title {
-		font-size: 21px;
+		font-size: 19px;
 	}
 	
 }
@@ -2950,4 +3041,188 @@
 		margin-left: -41px;
     	margin-top: 62px;
 	}
+	.headmenu .des-logo .logos {
+		width: 454px;
+	}
+	.search-icon {
+		margin-top: 23px;
+	}
+	.search-icon img {
+		width: 96px;
+		height: 96px;
+		margin-right: 32px;
+	}
+	.headmenu .icons .icons3 {
+		margin-top: 22px;
+		width: 106px;
+		margin-right: 28px;
+		height: 95px;
+	}
+	.headmenu .icons .icons2 {
+		width: 137px;
+	}
+	.dropdown-account {
+		width: 25%;
+	}
+	.mobile-menu {
+		width: 26%;
+	}
+	button.menu-toggle {
+		width: 90%;
+		height: 8.6875rem;
+		font-size: 89px;
+		border-radius: 18px;
+	}
+	.dropdown-content-account {
+		font-size: 47px;
+		width: 356px;
+		left: -40px;
+		top: 70px;
+		line-height: 52px;
+		border-radius: 27px;
+	}
+	.dropdown-content-account:before {
+		border-width: 53px;
+		top: -104px;
+    	left: 56px;
+	}
+	.dropdown-content-account:after {
+		top: -104px;
+		left: 56px;
+		border-width: 53px;
+	}
+	.dropdown-content-account a {
+		padding: 17px 28px;
+		width: 312px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	#my-searches {
+		height: 200px;
+		padding: 22px 0;
+	}
+	#my-searches input {
+		font-size: 69px;
+		width: 90%;
+		padding: 0 45px;
+	}
+	#my-searches button {
+		width: 274px;
+		font-size: 55px;
+	}
+	.back-search {
+		font-size: 95px;
+	}
+	.sales1 {
+		width: 87%;
+		margin-left: 50px;
+	}
+	.sales2 {
+		font-size: 103px;
+	}
+	.sales3 {
+		font-size: 142px;
+	}
+	.sales4 {
+		font-size: 70px;
+	}
+	.bttn1 {
+		padding: 33px;
+		width: 42%;
+		font-size: 60px;
+	}
+	.bttn2 {
+		margin-left: 29px;
+		padding: 33px;
+		width: 46%;
+		font-size: 60px;
+	}
+	.container .sub-container .bsp {
+		font-size: 70px;
+	}
+	.container .sub-container2 .sc2 {
+		font-size: 79px;
+	}
+	.hr {
+		width: 76%;
+		border: 2px solid #c4a256;
+	}
+	.__item .box2 {
+		height: 823px;
+	}
+	.__item .box3 .box3-details .product-title {
+		font-size: 68px;
+	}
+	.__item .box3 .box3-info .box3-item-info {
+		line-height: 103px;
+		font-size: 64px;
+	}
+	.box3-details {
+		margin: 71px 0;
+	}
+	.select-more {
+		margin: 128px 0px;
+	}
+	.__item .box3 .box3-info .more {
+		font-size: 77px;
+	}
+	.quality-cont img {
+		height: 700px;
+	}
+	.f-icon img {
+		width: 217px;
+	}
+	.f-icon strong {
+		font-size: 57px;
+	}
+	.qual-icon-cont p, .qual-icon-cont span {
+		font-size: 50px;
+		line-height: 71px;
+	}
+	.f-icon .buttoncat {
+		height: 146px;
+		font-size: 46px;
+		width: 389px;
+	}
+	span.footer-title {
+		font-size: 73px;
+	}
+	.image-cont {
+		height: 855px;
+	}
+	.footer-contact-info {
+		line-height: 87px;
+	}
+	.info-contacts {
+		width: 29%;
+		font-size: 56px;
+	}
+	span.sp {
+		width: 55%;
+		font-size: 49px;
+		line-height: 90px;
+	}
+	.copyright {
+		font-size: 48px;
+		width: 50%;
+	}
+	.social-media-link {
+		width: 37%;
+	}
+	.social-media-icons a img {
+		width: 100px;
+		height: 100px;
+	}
+	#Btop {
+		width: 145px;
+		height: 132px;
+		font-size: 53px;
+	}
+	.page-wrapper {
+		height: 1936px;
+	}
+	.topnav {
+		position: relative;
+	}
+	
 }
