@@ -34,7 +34,7 @@
         
         </div>
 
-        <hr>
+        <hr class="hr-pr">
         
         <form metho="POST" action ="{{ route('profileupdated',$value[0]->id) }}" class="form-horizontal" role="form">
         {{ csrf_field() }}

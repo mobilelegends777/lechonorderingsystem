@@ -18,6 +18,10 @@ img {
 .text-muted {
     font-weight: 300;
 }
+hr.hr-pr {
+    position: relative;
+    right: 13em;
+}
 
 .prof {
     position: relative;
