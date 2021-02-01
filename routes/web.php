@@ -33,7 +33,7 @@ Route::get('/u-login', function(){
 Route::post('/u-login', [ 'as' => 'u-login', 'uses' => 'userLoginController@do']);
 
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 
 //User Login
@@ -91,3 +91,5 @@ Route::get('login/facebook/callback', 'userLoginController@handleFacebookCallbac
 
 
 Route::get('/frontpage/special-order','lechonController@index');
+
+Route::get('/verify', 'Auth\RegisterController@verifyUser')->name('verify.user');

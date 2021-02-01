@@ -17,8 +17,13 @@ use Laravel\Socialite\Facades\Socialite;
 class userLoginController extends Controller
 {
 
-    
 
+    public function __construct()
+    {
+
+            $this->middleware(['auth', 'verified']);
+
+    }
 
     public function index(){
 
