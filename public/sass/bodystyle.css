@@ -212,7 +212,7 @@ i.fa.fa-star {
 .shop-sub-container2 {
   /*border: solid;*/
   width: 281px;
-  line-height: 42px;
+  line-height: 28px;
 }
 
 .shop-sub-conts {
@@ -340,6 +340,7 @@ i.fa.fa-star {
 .shop-item-price {
   color: #c4a265;
   width: 50%;
+  margin: 0 auto;
   text-align: center;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;

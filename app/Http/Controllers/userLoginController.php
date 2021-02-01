@@ -23,12 +23,13 @@ class userLoginController extends Controller
     public function index(){
 
         // $value1 = Session::get('user');
-        $data = Auth::user();
-      
-        $value = [
-            '0' => $data
-        ];
-            
+            $data = Auth::user();
+            $query = DB::select("SELECT * FROM product WHERE type = 'Combo' OR type = 'Lechon'");
+        
+            $value = [
+                '0' => $data,
+                '1' => $query
+            ];
             if($value == null)
             {
 
@@ -39,7 +40,7 @@ class userLoginController extends Controller
             }
             else 
             {   
-
+                // dd($bestSelling);
                 return view('frontpage.front-page')->with('value', $value);
             }
 
@@ -60,18 +61,19 @@ class userLoginController extends Controller
         ]))
         {
        
-        $user= user::where('email', $request->email)->first();  
-
-
-        $data1 = [
+        $user= Auth::user();
+        $query = DB::select("SELECT * FROM product WHERE type = 'Combo' OR type = 'Lechon'");
+        
+        $value = [
       
-            "0"=>$user
+            "0"=>$user,
+            "1"=>$query
            
         ];
         
-        $data = Session::put('user', $data1);   
+        // $data = Session::put('user', $data1);   
         
-        $value = Session::get('user');
+        // $value = Session::get('user');
 
         // dd(Auth::user());
        if($value[0]->utype=='User')
