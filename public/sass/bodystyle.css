@@ -238,7 +238,7 @@ i.fa.fa-star {
 }
 
 .shop-sub-container3 {
-  width: 53%;
+  width: 60%;
   height: auto;
   padding: 31px 0;
 }
@@ -252,7 +252,7 @@ i.fa.fa-star {
   /*width: 85%;*/
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .shop-sorting {
@@ -280,7 +280,7 @@ i.fa.fa-star {
 }
 
 .shop-items {
-  padding: 11px 0;
+  padding: 11px 10px;
   position: relative;
 }
 
@@ -311,7 +311,7 @@ i.fa.fa-star {
 
 .shop-info-price {
   font-weight: normal;
-  font-size: 21px;
+  font-size: 16px;
   line-height: 1;
   letter-spacing: 0.01em;
   -webkit-box-align: center;

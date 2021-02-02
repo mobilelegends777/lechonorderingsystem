@@ -95,3 +95,6 @@ Route::get('/frontpage/special-order','lechonController@index');
 Route::post('/user-photo','myprofileController@uploadImage')->name('user-update-photo');
 
 Route::post('/filter-foods','shopController@filterProd');
+
+Route::post('/add-to-cart-item','cartController@addCart');
+Route::post('/view-carted','cartController@viewCart');

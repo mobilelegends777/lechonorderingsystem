@@ -172,7 +172,9 @@
 @if(Auth::check())	
 		<div class="toggle-cart-sidenav">
 			<div class="cart">
-
+			<a href="#" class="notification-cart">
+				<span class="badge">3</span>
+			</a>
 				<img src="{{ asset('images/sidenav-cart.png') }}"><span class="cart-title" style="display: none;">Your Cart</span>
 
 			</div>
@@ -180,60 +182,9 @@
 				<div class="items-on-cart-container" style="display: none;">
 					<div class="item-on-cart">
 						<!-- append -->
-				
-					<div class="carted-item-cont">
-							<span>
-								<img src="{{ asset('images/loin1.jpg') }}">
-							</span>
-							<span class="carted-item">
-								<span class="item-name"><h4 style="margin: 0;padding:0;">ITEM-1</h4></span>
-								<span class="item-subtotal">
-									<span class="quantity">1 x</span>
-									<span class="sub-price">5.00</span>
-								</span>
-							</span>
-							<span class="delete-item">&times</span>
-						</div>
-						<div class="carted-item-cont">
-							<span>
-								<img src="{{ asset('images/loin2.jpg') }}">
-							</span>
-							<span class="carted-item">
-								<span class="item-name"><h4 style="margin: 0;padding:0;">ITEM-2</h4></span>
-								<span class="item-subtotal">
-									<span class="quantity">1 x</span>
-									<span class="sub-price">5.00</span>
-								</span>
-							</span>
-							<span class="delete-item">&times</span>
-						</div>
-						<div class="carted-item-cont">
-							<span>
-								<img src="{{ asset('images/loin3.jpg') }}">
-							</span>
-							<span class="carted-item">
-								<span class="item-name"><h4 style="margin: 0;padding:0;">ITEM-3</h4></span>
-								<span class="item-subtotal">
-									<span class="quantity">1 x</span>
-									<span class="sub-price">5.00</span>
-								</span>
-							</span>
-							<span class="delete-item">&times</span>
-						</div>
-						<div class="carted-item-cont">
-							<span>
-								<img src="{{ asset('images/loin1.jpg') }}">
-							</span>
-							<span class="carted-item">
-								<span class="item-name">ITEM-4</span>
-								<span class="item-subtotal">
-									<span class="quantity">1 x</span>
-									<span class="sub-price">5.00</span>
-								</span>
-							</span>
-							<span class="delete-item">&times</span>
-						</div>
-				
+						
+							<!-- append item here -->
+						
 					</div>
 					<div class="subtotal-cont">
 						<div class="sub-numbers" style="color: #666;display: flex;">
@@ -256,3 +207,37 @@
 			</div>
 		</div>
 @endif
+<script>
+
+	$(document).ready(function(){
+		var url = window.location.origin;
+		$.ajax({
+				headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+				type:'POST',
+				url: url+'/view-carted',
+				data:{data:''},
+				success:function(data)
+					{
+						console.log(data);
+						$.each(data, function(i, item){
+							$('.item-on-cart').append(`
+							<div class="carted-item-cont">
+								<span>
+									<img src="${item.images}">
+								</span>
+								<span class="carted-item">
+									<span class="item-name"><h4 style="margin: 0;padding:0;">${item.name}</h4></span>
+									<span class="item-subtotal">
+										<span class="quantity">${item.quantity} x</span>
+										<span class="sub-price">${item.price}</span>
+									</span>
+								</span>
+								<span class="delete-item">&times</span>
+							</div>
+							`);
+						});
+					}
+			});
+	});
+
+</script>

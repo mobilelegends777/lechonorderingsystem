@@ -45,11 +45,15 @@ class shopController extends Controller
 	public function filterProd(Request $request)
 	{
 		$category = $request->category;
-		$query = DB::select('SELECT * FROM product WHERE category_type = '.$category.'');
+		if($category == 9){
+			$query = DB::select('SELECT * FROM product WHERE category_type != 8');
+		}else {
+			$query = DB::select('SELECT * FROM product WHERE category_type = '.$category.'');
+		}
 		// $data = [
 		// 	'data' => $query
 		// ];
-		// dd($query);
+		
 		return response()->json($query);
 	}
 	 

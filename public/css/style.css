@@ -899,6 +899,7 @@ a.icon1 {
 .cart {
   display: flex;
   cursor: pointer;
+  position: relative;
 }
 span.cart-title {
     color: #fff;
@@ -913,6 +914,7 @@ span.cart-title {
 }
 .item-on-cart .carted-item {
     margin: 10px;
+    width: 51%;
 }
 .carted-item {
     display: inline-grid;
@@ -1420,3 +1422,12 @@ input.btn.btn-default:hover{
   .filter-price {
     line-height: 50px;
   }
+  .notification-cart .badge {
+    background: red;
+    color: white;
+    padding: 7px 13px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  
