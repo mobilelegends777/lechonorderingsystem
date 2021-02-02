@@ -14,13 +14,13 @@ use App\Login;
 use AuthenticatesUsers;
 use Laravel\Socialite\Facades\Socialite;
 
+
 class userLoginController extends Controller
 {
 
-    
-
 
     public function index(){
+
 
         // $value1 = Session::get('user');
             $data = Auth::user();

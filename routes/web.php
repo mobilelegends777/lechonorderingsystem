@@ -33,11 +33,27 @@ Route::get('/u-login', function(){
 Route::post('/u-login', [ 'as' => 'u-login', 'uses' => 'userLoginController@do']);
 
 
-Auth::routes();
+Auth::routes(['verify' => true]);
+
 
 
 //User Login
-Route::get('/', 'userLoginController@index');
+Route::get('/', 'userLoginController@index')->name('loginsuccess');
+
+Route::get('/userpage/myprofile/', function (){
+
+    return view('userpage/myprofile');
+
+})->middleware('verified');
+
+
+Route::get('/frontpage/checkout', function (){
+
+    return view('frontpage/checkout');
+
+})->middleware('verified');
+
+
 Route::post('/','userLoginController@login' )->name('test222');
 
 
