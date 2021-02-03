@@ -8,6 +8,7 @@ use Session;
 use App\User;
 use Auth;
 use App\Login;
+use DB;
 
 
 class shopController extends Controller
@@ -15,205 +16,45 @@ class shopController extends Controller
     public function index()
     {
         // $data = Session::get('user');
-        $data = Auth::user();
-
+		$data = Auth::user();
+		$category = DB::select("SELECT * FROM category");
+		$query = DB::select("SELECT * FROM product");
       	$value = [
-      		"0" => $data
+			  "0" => $data,
+			  "1" => $query,
+			  "2" => $category
       	];
-
       	if($value == null)
       	{
       		$value = [
-      			"utype" => "notLogin"
+				  "utype" => "notLogin"
       		];
 
-  			return view('frontpage/shop', compact('value'));
+  			return view('frontpage/shop')->with('value',$value);
       	}
       	else 
       	{
-      			// $value = Session::get('user');
-	        	return view('frontpage/shop', compact('value'));
+				//   $value = Session::get('user');
+				// dd($value);
+				// return response()->json($value);
+	        	return view('frontpage/shop')->with('value',$value);
 
       	}
        
-	 } 
+	 }
+	public function filterProd(Request $request)
+	{
+		$category = $request->category;
+		if($category == 9){
+			$query = DB::select('SELECT * FROM product WHERE category_type != 8');
+		}else {
+			$query = DB::select('SELECT * FROM product WHERE category_type = '.$category.'');
+		}
+		// $data = [
+		// 	'data' => $query
+		// ];
+		
+		return response()->json($query);
+	}
 	 
-
-	 public function appetizerindex(){
-
-
-		// $data = Session::get('user');
-		$data = Auth::user();
-        
-      	$value = [
-      		"0" => $data
-      	];
-      	
-		if($value == null)
-		{
-			$value = [
-				"utype" => "notLogin"
-			];
-
-			return view('frontpage/appetizer', compact('value'));
-		}
-		else 
-		{
-			// $value = Session::get('user');
-
-		  return view('frontpage/appetizer', compact('value'));
-		}
-
-
-
-	 }
-
-
-	 public function newproductindex(){
-
-
-		// $data = Session::get('user');
-		$data = Auth::user();
-        
-      	$value = [
-      		"0" => $data
-      	];
-      	
-		if($value == null)
-		{
-			$value = [
-				"utype" => "notLogin"
-			];
-
-			return view('frontpage/newproduct', compact('value'));
-		}
-		else 
-		{
-			// $value = Session::get('user');
-
-		  return view('frontpage/newproduct', compact('value'));
-		}
-
-
-
-	 }
-
-	 public function combomealindex(){
-
-
-		// $data = Session::get('user');
-		$data = Auth::user();
-        
-      	$value = [
-      		"0" => $data
-      	];
-      	
-		if($value == null)
-		{
-			$value = [
-				"utype" => "notLogin"
-			];
-
-			return view('frontpage/combomeal', compact('value'));
-		}
-		else 
-		{
-			// $value = Session::get('user');
-
-		  return view('frontpage/combomeal', compact('value'));
-		}
-
-
-
-	 }
-	
-	 
-
-	 public function dessertindex(){
-
-
-		// $data = Session::get('user');
-		$data = Auth::user();
-        
-      	$value = [
-      		"0" => $data
-      	];
-      	
-		if($value == null)
-		{
-			$value = [
-				"utype" => "notLogin"
-			];
-
-			return view('frontpage/dessert', compact('value'));
-		}
-		else 
-		{
-			// $value = Session::get('user');
-
-		  return view('frontpage/dessert', compact('value'));
-		}
-
-
-
-	 }
-
-	 public function drinksindex(){
-
-
-		// $data = Session::get('user');
-		$data = Auth::user();
-        
-      	$value = [
-      		"0" => $data
-      	];
-      	
-		if($value == null)
-		{
-			$value = [
-				"utype" => "notLogin"
-			];
-
-			return view('frontpage/drinks', compact('value'));
-		}
-		else 
-		{
-			// $value = Session::get('user');
-
-		  return view('frontpage/drinks', compact('value'));
-		}
-
-
-
-	 }
-
-
-
-	 public function specialorder(){
-
-
-		// $data = Session::get('user');
-		$data = Auth::user();
-        
-      	$value = [
-      		"0" => $data
-      	];
-		if($value == null)
-		{
-			$value = [
-				"utype" => "notLogin"
-			];
-
-			return view('frontpage/special-order', compact('value'));
-		}
-		else 
-		{
-			// $value = Session::get('user');
-
-		  return view('frontpage/special-order', compact('value'));
-		}
-
-
-
-	 }
 }

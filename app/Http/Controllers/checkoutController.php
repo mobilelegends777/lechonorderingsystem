@@ -32,9 +32,9 @@ class checkoutController extends Controller
 
         $data = Auth::user();
         $id = $data->id;
-        $value = DB::select('SELECT * from users inner join customer_info ON customer_id= "'.$id.'"
-        inner join customer_address ON customer_address.customer_id ="'.$id.'"
-        inner join contact_info ON contact_info.customer_id ="'.$id.'"where id = ?',[$id]);
+        $value = DB::select('SELECT * from users inner join customer_info ON customer_id= users.id
+        inner join customer_address ON customer_address.customer_id = users.id
+        inner join contact_info ON contact_info.customer_id = users.id where users.id = '.$id.'');
         // dd($value);
         return view('frontpage/checkout', compact('value'));
         

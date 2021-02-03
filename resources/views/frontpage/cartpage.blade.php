@@ -5,25 +5,31 @@
 		<h1>Cart</h1>
 		<div class="cartpage-item">
 			<div class="cartpage-title">
-			<form>
-				@csrf
+				<form>
+					@csrf
 				<table class="product-on-cart">
 					<thead class="product-title">
-					<tr>
-							<td></td>
-							<td></td>
+					<tr class="title-carted">
+							<td class="td1"></td>
+							<td class="td2"></td>
+							<td class="td3"></td>
 							<td>Product</td>
 							<td>Price</td>
 							<td>Quantity</td>
 							<td>Subtotal</td>
 					</tr>
 					</thead>
-					<tbody>
-				@for($i = 1; $i <=2; $i++)
+				<tbody class="cart-table-conts">
+				@for($i = 1; $i <5; $i++)
 					<tr class="librebais">
 						<td><span class="cancel-cart" style="cursor:pointer;">&times;</span></td>
-						<td><a href=""><img src="{{ asset('asset/New/Lechonbaboy.jpg') }}"></a></td>
-						<td><a href="">Lechon Pig</a></td>
+						<td class="carted-items">
+						<div class="carted-item-image">
+							<a href=""><img src="{{ asset('asset/New/Lechonbaboy.jpg') }}"></a>
+						</div>
+						<div class="carted-item-name">
+							<a href="">Lechon Pig</a></td>
+						</div>
 						<td>5,000</td>
 						<td><div  class="cart-input"><button  type="button" onclick="dec('qty',{{$i}})">-</button><input class="cartQty__{{$i}}" type="number" value="1" name="qty"><button type="button" onclick="inc('qty',{{$i}})">+</button></div></td>
 						<td>20,000</td>
@@ -40,7 +46,8 @@
 							<button>Update cart</button>
 						</div>
 				</div>	
-			</form>
+				</form>
+			</div>
 			<div class="summary-conts">	
 				<div class="summary-sub-cont">
 					<div>	

@@ -345,10 +345,7 @@ $('.shop-images-lechon').each(function(){
 								
 							</div>
 						</div>
-<<<<<<< HEAD
-						<div class="proceed-to">
-									<button><i class="fa fa-arrow-right"></i><span>PROCEED</span></button>
-=======
+
 						<div class="qty-proceed-to">
 							<div class="quantities">
 								<input type="number" name="" class="inpt-qty" value="1">
@@ -356,7 +353,6 @@ $('.shop-images-lechon').each(function(){
 							<div class="proceed-to">
 								<button><i class="fa fa-arrow-right"></i><span>PROCEED</span></button>
 							</div>
->>>>>>> 7679aaded7abdf6915a3f4d2f24e071122c0ade5
 						</div>
 				</div>
 			</div>

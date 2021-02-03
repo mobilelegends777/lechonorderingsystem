@@ -47,114 +47,27 @@
 		<div class="sub-container">
 			<div class="bsp">Best Selling Products</div>
 					<div class="items slider">
+					@foreach($value[1] as $item)
 						<div class="box slide">
 							<div class="item-image">
 								<div class="prod-image">
-									<img src="images/Pansitbihon.jpg">
+									<img src="{{$item->images}}">
 								</div>
 								<div class="cart-icon" >
+									<input type="hidden" name="product" id="" value="{{$item->product_id}}">
 									<a href="#"><img src="images/cart1.png"></a>
 								</div>
 							</div>
 							<div class="item-details">
 								<div class="item-name">
-									<a href="#"><span class="product-name">Pansit Bihon</span></a>
+									<a href="#"><span class="product-name">{{$item->name}}</span></a>
 								</div>
 								<div class="price-tag">
-									<span class="prices">₱150.00</span>
+									<span class="prices">₱{{ number_format($item->price,2)}}</span>
 								</div>
 							</div>
 						</div>
-						<div class="box slide">
-							<div class="item-image">
-								<div class="prod-image">
-									<img src="images/Lechonmanok.jpg">
-								</div>
-								<div class="cart-icon" >
-									<a href="#"><img src="images/cart1.png"></a>
-								</div>
-							</div>
-							<div class="item-details">
-								<div class="item-name">
-									<a href="#"><span class="product-name">Lechon Chicken</span></a>
-								</div>
-								<div class="price-tag">
-									<span class="prices">₱250.00</span>
-								</div>
-							</div>
-						</div>
-						<div class="box slide">
-							<div class="item-image">
-								<div class="prod-image">
-									<img src="images/Porkbbq.jpg">
-								</div>
-								<div class="cart-icon" >
-									<a href="#"><img src="images/cart1.png"></a>
-								</div>
-							</div>
-							<div class="item-details">
-								<div class="item-name">
-									<a href="#"><span class="product-name">Pork BBQ</span></a>
-								</div>
-								<div class="price-tag">
-									<span class="prices">₱25.00</span>
-								</div>
-							</div>
-						</div>
-						<div class="box slide">
-							<div class="item-image">
-								<div class="prod-image">
-									<img src="images/Daingbangus.jpg">
-								</div>
-								<div class="cart-icon" >
-									<a href="#"><img src="images/cart1.png"></a>
-								</div>
-							</div>
-							<div class="item-details">
-								<div class="item-name">
-									<a href="#"><span class="product-name">Daing na Bangus</span></a>
-								</div>
-								<div class="price-tag">
-									<span class="prices">₱75.00</span>
-								</div>
-							</div>
-						</div>
-						<div class="box slide">
-							<div class="item-image">
-								<div class="prod-image">
-									<img src="{{ asset('images/Lechonbaboy.jpg') }}">
-								</div>
-								<div class="cart-icon" >
-									<a href="#"><img src="images/cart1.png"></a>
-								</div>
-							</div>
-							<div class="item-details">
-								<div class="item-name">
-									<a href="#"><span class="product-name">Lechon Pig</span></a>
-								</div>
-								<div class="price-tag">
-									<span class="prices">₱450.00</span>
-								</div>
-							</div>
-						</div>
-						<div class="box slide">
-							<div class="item-image">
-								<div class="prod-image">
-									<img src="{{ asset('images/tapioca.jpg') }}">
-								</div>
-								<div class="cart-icon" >
-									<a href="#"><img src="images/cart1.png"></a>
-								</div>
-							</div>
-							<div class="item-details">
-								<div class="item-name">
-									<a href="#"><span class="product-name">Tapioca</span></a>
-								</div>
-								<div class="price-tag">
-									<span class="prices">₱150.00</span>
-								</div>
-							</div>
-						</div>
+						@endforeach
 					</div>
 		</div>
 
