@@ -8,13 +8,15 @@
 
 </head>
 <body>
-	<div class="container">
-		@include('headpage.header')
-		
-			 @yield('page_content')
+<div class="loader"></div>
 
-		@include('headpage.footer')
-	</div>
+<div class="container">
+	@include('headpage.header')
+	
+		 @yield('page_content')
+
+	@include('headpage.footer')
+</div>
 </body>
 </html>
 
