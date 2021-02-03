@@ -157,33 +157,8 @@
 // });
 $(document).ready(function(){
 
-	$('.addToCart').each(function(){
-		var carted = $(this).data('value');
-		var url = window.location.origin;
-			$(this).on('click', function(e){
-				e.preventDefault();
-				// alert(carted);
-
-				$.ajax({
-				headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
-				type:'POST',
-				url: url+'/add-to-cart-item',
-				data:{carted:carted},
-				success:function(data)
-					{
-						if(data == true){
-							$('.cartIcon'+carted).empty();
-							$('.cartIcon'+carted).append(`
-									<div class="cartIcon">
-										<a href="" class="shop-cart-icon"><i id="cart-icons" class="fas fa-check" aria-hidden="true"></i></a>
-									</div>
-							`)
-						}
-					}
-				});
-			});
-	});
-		
+	
+	Carting();	
 	$('.filter-by-price').on('click', function(){
 		alert("unya pa nako ni buhatun"+"mao ni ang minimum "+$( "#slider-range" ).slider( "values", 0 )+" "+"mao ni ang max "+$( "#slider-range" ).slider( "values", 1 ));
 	});
@@ -201,6 +176,7 @@ $(document).ready(function(){
 				data:{category:cat},
 				success:function(data)
 				{
+					
 					$('.shop-items-conts').empty();
 					// console.log(data);
 					$.each(data, function(i, item){
@@ -211,7 +187,9 @@ $(document).ready(function(){
 										<a href="{{asset('frontpage/shop-details')}}" class="shop-images">
 											<img src="${item.images}">
 										</a>
-										<a href="#" class="shop-cart-icon"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
+										<div class="cartIcon${item.product_id}">
+											<a href="" id="addToCart" class="shop-cart-icon addToCart" data-value="${item.product_id}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a href="">
+										</div>
 									</div>
 									<div class="shop-info-price">
 										<div class="shop-item-name">${item.name}</div>
@@ -220,8 +198,8 @@ $(document).ready(function(){
 								</div>
 							`);
 					});
-					$('.shop-items-conts-col').empty();
-
+					Carting();
+					
 					$.each(data, function(i, item){
 							
 							$('.shop-items-conts-col').append(`
@@ -251,12 +229,48 @@ $(document).ready(function(){
 								</div>
 							</div>
 							`);
+	
 					});
-
+					
 				}
 			});
 		});
 	});
+@if(Auth::check())	
+	function Carting(){ 
+		
+		$('.addToCart').each(function(){
+		var carted = $(this).data('value');
+		var url = window.location.origin;
+			$(this).on('click', function(e){
+				e.preventDefault();
+				// alert(carted);
+				addCart();
+			});	
+			
+		function addCart(){
+				$.ajax({
+				headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+				type:'POST',
+				url: url+'/add-to-cart-item',
+				data:{carted:carted},
+				success:function(data)
+					{	
+						console.log(data)
+						if(data == true){
+							$('.cartIcon'+carted).empty();
+							$('.cartIcon'+carted).append(`
+									<div class="cartIcon">
+										<span class="shop-cart-icon"><i id="cart-icons " class="fas fa-check" aria-hidden="true"></i></span>
+									</div>
+							`)
+						}
+					}
+				});
+		}
+	});
+}
+@endif
 });
 </script>
 @endsection

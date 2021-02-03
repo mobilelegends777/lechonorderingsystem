@@ -211,33 +211,45 @@
 
 	$(document).ready(function(){
 		var url = window.location.origin;
-		$.ajax({
+		cartedItems();
+		$('.addToCart').click(function(e){
+			e.preventDefault();
+				cartedItems();
+		});
+	function cartedItems(){
+		
+			$.ajax({
 				headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
 				type:'POST',
 				url: url+'/view-carted',
 				data:{data:''},
 				success:function(data)
 					{
-						console.log(data);
+						// console.log(data);
+						
+						$('.item-on-cart').empty();
 						$.each(data, function(i, item){
-							$('.item-on-cart').append(`
-							<div class="carted-item-cont">
-								<span>
-									<img src="${item.images}">
-								</span>
-								<span class="carted-item">
-									<span class="item-name"><h4 style="margin: 0;padding:0;">${item.name}</h4></span>
-									<span class="item-subtotal">
-										<span class="quantity">${item.quantity} x</span>
-										<span class="sub-price">${item.price}</span>
+							
+								$('.item-on-cart').append(`
+								<div class="carted-item-cont" id="cart-item-cont${item.cart_id}">
+									<span>
+										<img src="${item.images}">
 									</span>
-								</span>
-								<span class="delete-item">&times</span>
-							</div>
-							`);
+									<span class="carted-item">
+										<span class="item-name"><h4 style="margin: 0;padding:0;">${item.name}</h4></span>
+										<span class="item-subtotal">
+											<span class="quantity">${item.quantity} x</span>
+											<span class="sub-price">${item.price}</span>
+										</span>
+									</span>
+									<span class="delete-item" onclick="al.deleteItemCart(${item.cart_id})">&times</span>
+								</div>
+								`);
 						});
+						
 					}
 			});
+		}
 	});
 
 </script>

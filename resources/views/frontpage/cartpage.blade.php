@@ -5,7 +5,7 @@
 		<h1>Cart</h1>
 		<div class="cartpage-item">
 			<div class="cartpage-title">
-				<form>
+			<form  method="POST" action="{{ route('cart-update') }}">
 					@csrf
 				<table class="product-on-cart">
 					<thead class="product-title">
@@ -19,23 +19,33 @@
 							<td>Subtotal</td>
 					</tr>
 					</thead>
+				@if($value[1] == null)
 				<tbody class="cart-table-conts">
-				@for($i = 1; $i <5; $i++)
 					<tr class="librebais">
-						<td><span class="cancel-cart" style="cursor:pointer;">&times;</span></td>
+						<td>Cart is Empty!!</td>
+					</tr>
+				</tbody>
+				@else
+				<tbody class="cart-table-conts">
+				@foreach($value[1] as $item)
+					<tr class="librebais" id="cart-cont-item{{$item->cart_id}}">
+						<input type="hidden" name="cart-id" value="{{$item->cart_id}}">
+						<td><span class="cancel-cart" onclick="al.deleteItemCart({{$item->cart_id}})" style="cursor:pointer;">&times;</span></td>
 						<td class="carted-items">
 						<div class="carted-item-image">
-							<a href=""><img src="{{ asset('asset/New/Lechonbaboy.jpg') }}"></a>
+							<a href=""><img src="{{ $item->images }}"></a>
 						</div>
 						<div class="carted-item-name">
-							<a href="">Lechon Pig</a></td>
+							<a href="">{{ $item->name }}</a></td>
 						</div>
 						<td>5,000</td>
-						<td><div  class="cart-input"><button  type="button" onclick="dec('qty',{{$i}})">-</button><input class="cartQty__{{$i}}" type="number" value="1" name="qty"><button type="button" onclick="inc('qty',{{$i}})">+</button></div></td>
+						<td><div  class="cart-input"><button  type="button" onclick="dec('qty',{{$item->id}})">-</button><input class="cartQty__{{$item->id}}" type="number" value="1" name="qty"><button type="button" onclick="inc('qty',{{$item->id}})">+</button></div></td>
 						<td>20,000</td>
 					</tr>
-				@endfor
-					</tbody>	
+				@endforeach
+				</tbody>
+				@endif
+						
 				</table>
 				<div class="coupon-submit">	
 						<div class="apply-coupon">
