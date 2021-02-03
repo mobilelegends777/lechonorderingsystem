@@ -509,7 +509,7 @@ window.onclick = function(event) {
 
 			container.style.display = 'block';
 			setTimeout(() => (container.style.opacity = 1), 50);
-		}, 1000);
+		}, 2000);
 		}
 
 		init();

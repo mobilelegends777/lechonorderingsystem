@@ -17,7 +17,7 @@
       <!-- left column -->
       <div class="col-md-prof">
         <div class="text-center moves-center">
-          <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+          <img src="{{$value[0]->images}}" class="avatar img-circle" alt="avatar">
           <h6>Upload a different photo...</h6>
           
           <input type="file" name="image" class="form-control file-size">

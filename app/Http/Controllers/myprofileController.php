@@ -87,6 +87,7 @@ class myprofileController extends Controller
     public function uploadImage(Request $req){
         // dd($req->all());
         $data = Auth::user();
+     
         $image = $req->file('image');
         $cName = $data->name;
         $newName = $cName.'.'.$image->getClientOriginalExtension();
