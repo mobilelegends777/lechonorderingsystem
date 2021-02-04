@@ -12,16 +12,19 @@
 <div class="container_profile">
   	<hr>
 	<div class="row rows2">
+  <form action="{{ route('user-update-photo') }}" method="post" enctype="multipart/form-data">
+    @csrf
       <!-- left column -->
       <div class="col-md-prof">
         <div class="text-center moves-center">
-          <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+          <img src="{{$value[0]->images}}" class="avatar img-circle" alt="avatar">
           <h6>Upload a different photo...</h6>
           
-          <input type="file" class="form-control file-size">
+          <input type="file" name="image" class="form-control file-size">
         </div>
         <button class="btn btn-primary moves-center" type="submit">File Upload</button>
       </div>
+    </form>
       <!-- edit form column -->
       <div class="col-md-9 personal-info move-lefts">
       

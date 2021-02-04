@@ -27,23 +27,14 @@
 						<span class="close-btn">&times;</span>
 						<span class="title-header"><h3>Categories</h3></span>
 						<div class="filter-cat">
-							<span>Seafood</span>
+							<span>Menu</span>
 							<ul>
-								<li><a href="">Daing na Bangus</a></li>
-								<li><a href="">Shrimp Sinigang</a></li>
+								@foreach($value[2] as $item)
+									<li class="menu-category"><a href="" class="catType" data-value="{{$item->id}}">{{$item->description}}</a></li>
+								@endforeach
 							</ul>
-							<span>Meat</span>
-							<ul>
-								<li><a href="{{asset('frontpage/special-order')}}">Lechon Baboy</a></li>
-								<li><a href="{{asset('frontpage/special-order')}}">Lechon Manok</a></li>
-								<li><a href="{{asset('frontpage/special-order')}}">Lechon Baka</a></li>
-								<li><a href="">Liempo</a></li>
-								<li><a href="">Pork BBQ</a></li>
-								<li><a href="">Liver BBQ</a></li>
-							</ul>
-							<div>
+							<div class="filter-price">
 								<label for="amount">Filter by price</label>
-  							</div>
   							<div id="slider-range"></div>
   							<div class="price-range">
   								<label for="amount">Price: </label>
@@ -51,14 +42,7 @@
   								<br>
   								<button class="filter-by-price">Filter</button>
   							</div>
-							<span>Menu</span>
-							<ul>
-								<li><a href="{{asset('frontpage/newproduct')}}">New Products</a></li>
-								<li><a href="{{asset('frontpage/combomeal')}}">Combo Meals</a></li>
-								<li><a href="{{asset('frontpage/dessert')}}">Desserts</a></li>
-								<li><a href="{{asset('frontpage/drinks')}}">Drinks</a></li>
-								<li><a href="{{asset('frontpage/appetizer')}}">Appetizers</a></li>
-							</ul>
+							</div>
 						</div>
 					</div>
 					</div>			
@@ -87,162 +71,43 @@
 							</div>
 						</div>
 						<div class="shop-items-conts">
+						@foreach($value[1] as $item)
 							<div class="shop-items">
 								<div class="shop-item-image">
 									<a href="{{asset('frontpage/shop-details')}}" class="shop-images">
-										<img src="{{asset('asset/Combo/A1.jpg')}}">
+										<img src="{{ $item->images }}">
 									</a>
-									<a href="#" class="shop-cart-icon"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
+									<div class="cartIcon{{ $item->product_id }}">
+										<a href="" id="addToCart" class="shop-cart-icon addToCart" data-value="{{ $item->product_id }}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a>
+									</div>
 								</div>
 								<div class="shop-info-price">
-									<div class="shop-item-name">Pork BBQ</div>
-									<div class="shop-item-price">250.00</div>
+									<div class="shop-item-name">{{ $item->name }}</div>
+									<div class="shop-item-price">₱{{ number_format($item->price,2)}}</div>
 								</div>
 							</div>
-							<div class="shop-items">
-								<div class="shop-item-image">
-									<a href="{{asset('frontpage/shop-details')}}" class="shop-images">
-										<img src="{{asset('asset/Combo/A2.jpg')}}">
-									</a>
-									<a href="#" class="shop-cart-icon"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-								</div>
-								<div class="shop-info-price">
-									<div class="shop-item-name">Chicken Paa</div>
-									<div class="shop-item-price">450.00</div>
-								</div>
-							</div>
-							<div class="shop-items">
-								<div class="shop-item-image">
-									<a href="{{asset('frontpage/shop-details')}}" class="shop-images">
-										<img src="{{asset('asset/Combo/A3.jpg')}}">
-									</a>
-									<a href="#" class="shop-cart-icon"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-								</div>
-								<div class="shop-info-price">
-									<div class="shop-item-name">Chicken Breast</div>
-									<div class="shop-item-price">250.00</div>
-								</div>
-							</div>
-							<div class="shop-items">
-								<div class="shop-item-image">
-									<a href="{{asset('frontpage/shop-details')}}" class="shop-images">
-										<img src="{{ asset('images/Liverbbq.jpg') }}">
-									</a>
-									<a href="#" class="shop-cart-icon"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-								</div>
-								<div class="shop-info-price">
-									<div class="shop-item-name">Liver BBQ</div>
-									<div class="shop-item-price">70.00</div>
-								</div>
-							</div>
-							<div class="shop-items">
-								<div class="shop-item-image">
-									<a href="{{asset('frontpage/shop-details')}}" class="shop-images">
-										<img src="{{ asset('images/Porkbbq.jpg') }}">
-									</a>
-									<a href="#" class="shop-cart-icon"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-								</div>
-								<div class="shop-info-price">
-									<div class="shop-item-name">Pork BBQ</div>
-									<div class="shop-item-price">50.00</div>
-								</div>
-							</div>
-							<div class="shop-items">
-								<div class="shop-item-image">
-									<a href="{{asset('frontpage/shop-details')}}" class="shop-images">
-										<img src="{{ asset('images/Sinigangshrimp.jpg') }}">
-									</a>
-									<a href="#" class="shop-cart-icon"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-								</div>
-								<div class="shop-info-price">
-									<div class="shop-item-name">Sinigang Shrimp</div>
-									<div class="shop-item-price">170.00</div>
-								</div>
-							</div>
-							<div class="shop-items">
-								<div class="shop-item-image">
-									<a href="{{asset('frontpage/shop-details')}}" class="shop-images">
-										<img src="{{asset('asset/New/Breastbbq.jpg')}}">
-									</a>
-									<a href="#" class="shop-cart-icon"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-								</div>
-								<div class="shop-info-price">
-									<div class="shop-item-name">Breast BBQ</div>
-									<div class="shop-item-price">150.00</div>
-								</div>
-							</div>
-							<div class="shop-items">
-								<div class="shop-item-image">
-									<a href="{{asset('frontpage/shop-details')}}" class="shop-images">
-										<img src="{{ asset('images/Lechon rice.jpg') }}">
-									</a>
-									<a href="#" class="shop-cart-icon"><i class="fa fa-cart-plus" aria-hidden="true" ></i></a>
-								</div>
-								<div class="shop-info-price">
-									<div class="shop-item-name">Lechon Rice</div>
-									<div class="shop-item-price">50.00</div>
-								</div>
-							</div>
-							<div class="shop-items">
-								<div class="shop-item-image">
-									<a href="{{asset('frontpage/shop-details')}}" class="shop-images">
-										<img src="{{ asset('images/Paabbq.jpg') }}">
-									</a>
-									<a href="#" class="shop-cart-icon">
-										<i class="fa fa-cart-plus" aria-hidden="true"></i>
-									</a>
-								</div>
-								<div class="shop-info-price">
-									<div class="shop-item-name">Leg BBQ</div>
-									<div class="shop-item-price">150.00</div>
-								</div>
-							</div>
+						@endforeach
 						</div><!-- end items show -->
 
 						<div class="shop-items-conts-col" style="display: none;">
+						@foreach($value[1] as $item)
 							<div class="shop-items shop-item-col shop-cols">
 								<div class="shop-item-image">
 									<a href="#">
-										<img class="shop-imgs" src="{{ asset('images/liempo.jpg') }}">
+										<img class="shop-imgs" src="{{ $item->images }}">
 									</a>
 								</div>
 								<div class="shop-info-price shop-price-col shop-info-prices">
 									<div class="shop-item-name-info shop-items-names">
 										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
-											<span class="col-item-title col-names">Liempo</span>
+											<span class="col-item-title col-names">{{ $item->name }}</span>
 											<div class="parag col-parags">
-												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
+												<div>{{ $item->description }}</div>
 											</div>
 										</div>
 										<div class="shop-item-info shop-carts">
 											<div class="col-price carts-price1">
-												<div class="shop-item-price prod-price">250.00</div>
-												<div class="shop-left">
-													<button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button>
-												</div>
-											</div>
-										</div>
-									</div>
-
-								</div>
-							</div>
-							<div class="shop-items shop-item-col shop-cols">
-								<div class="shop-item-image">
-									<a href="#">
-										<img class="shop-imgs" src="{{ asset('images/Lechonbaboy.jpg') }}">
-									</a>
-								</div>
-								<div class="shop-info-price shop-price-col shop-info-prices">
-									<div class="shop-item-name-info shop-items-names">
-										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
-											<span class="col-item-title col-names">Lechon Pig</span>
-											<div class="parag col-parags">
-												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
-											</div>
-										</div>
-										<div class="shop-item-info shop-carts">
-											<div class="col-price carts-price">
-												<div class="shop-item-price prod-price">450.00</div>
+												<div class="shop-item-price prod-price">₱{{ number_format($item->price,2)}}</div>
 												<div class="shop-left">
 													<button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button>
 												</div>
@@ -251,182 +116,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="shop-items shop-item-col shop-cols">
-								<div class="shop-item-image">
-									<a href="#">
-										<img class="shop-imgs" src="{{ asset('images/Lechonmanok.jpg') }}">
-									</a>
-								</div>
-								<div class="shop-info-price shop-price-col shop-info-prices">
-									<div class="shop-item-name-info shop-items-names">
-										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
-											<span class="col-item-title col-names">Lechon Chicken</span>
-											<div class="parag col-parags">
-												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
-											</div>
-										</div>
-										<div class="shop-item-info shop-carts">
-											<div class="col-price carts-price">
-												<div class="shop-item-price prod-price">250.00</div>
-												<div class="shop-left">
-													<button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button>
-												</div>
-											</div>
-										</div>
-									</div>
-
-								</div>
-							</div>
-							<div class="shop-items shop-item-col shop-cols">
-								<div class="shop-item-image">
-									<a href="#">
-										<img class="shop-imgs" src="{{ asset('images/Liverbbq.jpg') }}">
-									</a>
-								</div>
-								<div class="shop-info-price shop-price-col shop-info-prices">
-									<div class="shop-item-name-info shop-items-names">
-										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
-											<span class="col-item-title col-names">Liver BBQ</span>
-											<div class="parag col-parags">
-												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
-											</div>
-										</div>
-										<div class="shop-item-info shop-carts">
-											<div class="col-price carts-price4">
-												<div class="shop-item-price prod-price">70.00</div>
-												<div class="shop-left">
-													<button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="shop-items shop-item-col shop-cols">
-								<div class="shop-item-image">
-									<a href="#">
-										<img class="shop-imgs" src="{{ asset('images/Porkbbq.jpg') }}">
-									</a>
-								</div>
-								<div class="shop-info-price shop-price-col shop-info-prices">
-									<div class="shop-item-name-info shop-items-names">
-										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
-											<span class="col-item-title col-names">Pork BBQ</span>
-											<div class="parag col-parags">
-												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
-											</div>
-										</div>
-										<div class="shop-item-info shop-carts">
-											<div class="col-price carts-price5">
-												<div class="shop-item-price prod-price">15.00</div>
-												<div class="shop-left">
-													<button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="shop-items shop-item-col shop-cols">
-								<div class="shop-item-image">
-									<a href="#">
-										<img class="shop-imgs" src="{{ asset('images/Sinigangshrimp.jpg') }}">
-									</a>
-								</div>
-								<div class="shop-info-price shop-price-col shop-info-prices">
-									<div class="shop-item-name-info shop-items-names">
-										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
-											<span class="col-item-title col-names">Sinigang Shrimp</span>
-											<div class="parag col-parags">
-												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
-											</div>
-										</div>
-										<div class="shop-item-info shop-carts">
-											<div class="col-price carts-price6">
-												<div class="shop-item-price prod-price">170.00</div>
-												<div class="shop-left">
-													<button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="shop-items shop-item-col shop-cols">
-								<div class="shop-item-image">
-									<a href="#">
-										<img class="shop-imgs" src="{{ asset('images/Breastbbq.jpg') }}">
-									</a>
-								</div>
-								<div class="shop-info-price shop-price-col shop-info-prices">
-									<div class="shop-item-name-info shop-items-names">
-										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
-											<span class="col-item-title col-names">Breast BBQ</span>
-											<div class="parag col-parags">
-												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
-											</div>
-										</div>
-										<div class="shop-item-info shop-carts">
-											<div class="col-price carts-price7">
-												<div class="shop-item-price prod-price">150.00</div>
-												<div class="shop-left">
-													<button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="shop-items shop-item-col shop-cols">
-								<div class="shop-item-image">
-									<a href="#">
-										<img class="shop-imgs" src="{{ asset('images/Lechon rice.jpg') }}">
-									</a>
-								</div>
-								<div class="shop-info-price shop-price-col shop-info-prices">
-									<div class="shop-item-name-info shop-items-names">
-										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
-											<span class="col-item-title col-names">Lechon Rice</span>
-											<div class="parag col-parags">
-												<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
-											</div>
-										</div>
-										<div class="shop-item-info shop-carts">
-											<div class="col-price carts-price8">
-												<div class="shop-item-price prod-price">50.00</div>
-												<div class="shop-left">
-													<button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="shop-items shop-item-col shop-cols">
-								<div class="shop-item-image">
-									<a href="#">
-										<img class="shop-imgs" src="{{ asset('images/Paabbq.jpg') }}">
-									</a>
-								</div>
-								<div class="shop-info-price shop-price-col shop-info-prices">
-									<div class="shop-item-name-info shop-items-names">
-										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
-											<span class="col-item-title col-names">Leg BBQ</span>
-											<div class="parag col-parags">
-											<span>Onions help to improve the digestive system, normalize water-salt metabolism and increase the tone of the body and also have an antiseptic and antimicrobial effect. As a result, onions should be consumed during an increased risk of catching a viral infection (usually autumn-winter-spring).</span>
-											</div>
-										</div>
-										<div class="shop-item-info shop-carts">
-											<div class="col-price carts-price9">
-												<div class="shop-item-price prod-price">150.00</div>
-												<div class="shop-left">
-													<button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+						@endforeach
 						</div><!-- end item display col-->
 
 						<div class="paginate">
@@ -439,4 +129,134 @@
 				</div>
 				</div>
 			</div>
-	@endsection
+<script>
+// $(function() {
+
+// $(window).scroll(function() {
+// 		  if ($(window).scrollTop() > 600) {
+// 		    $('.shop-filters').css({
+// 		    	'position':'fixed',
+// 		    	'top':0,
+// 		    	'background':'#fff',
+// 		    });
+// 		  }
+// 		  else if($(window).width() <= 900){
+// 		  	$('.shop-filters').css({
+// 		    	'position':'relative',
+// 		    	'top':'initial',
+// 		    	'width':'450px'
+// 		    });
+// 		  } 
+// 		  else {
+// 		    $('.shop-filters').css({
+// 		    	'position':'relative',
+// 		    	'top':'initial'
+// 		    });
+// 		  }
+// 		});
+// });
+$(document).ready(function(){
+
+	$('.addToCart').each(function(){
+		var carted = $(this).data('value');
+		var url = window.location.origin;
+			$(this).on('click', function(e){
+				e.preventDefault();
+				// alert(carted);
+
+				$.ajax({
+				headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+				type:'POST',
+				url: url+'/add-to-cart-item',
+				data:{carted:carted},
+				success:function(data)
+					{
+						if(data == true){
+							$('.cartIcon'+carted).empty();
+							$('.cartIcon'+carted).append(`
+									<div class="cartIcon">
+										<a href="" class="shop-cart-icon"><i id="cart-icons" class="fas fa-check" aria-hidden="true"></i></a>
+									</div>
+							`)
+						}
+					}
+				});
+			});
+	});
+		
+	$('.filter-by-price').on('click', function(){
+		alert("unya pa nako ni buhatun"+"mao ni ang minimum "+$( "#slider-range" ).slider( "values", 0 )+" "+"mao ni ang max "+$( "#slider-range" ).slider( "values", 1 ));
+	});
+
+	$('.catType').each(function(){
+		var cat = $(this).data('value');
+		var url = window.location.origin;
+		
+		$(this).on('click', function(e){
+			e.preventDefault();
+			$.ajax({
+				headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+				type:'POST',
+				url: url+'/filter-foods',
+				data:{category:cat},
+				success:function(data)
+				{
+					$('.shop-items-conts').empty();
+					// console.log(data);
+					$.each(data, function(i, item){
+							
+							$('.shop-items-conts').append(`
+								<div class="shop-items">
+									<div class="shop-item-image">
+										<a href="{{asset('frontpage/shop-details')}}" class="shop-images">
+											<img src="${item.images}">
+										</a>
+										<a href="#" class="shop-cart-icon"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
+									</div>
+									<div class="shop-info-price">
+										<div class="shop-item-name">${item.name}</div>
+										<div class="shop-item-price">₱${item.price}</div>
+									</div>
+								</div>
+							`);
+					});
+					$('.shop-items-conts-col').empty();
+
+					$.each(data, function(i, item){
+							
+							$('.shop-items-conts-col').append(`
+							<div class="shop-items shop-item-col shop-cols">
+								<div class="shop-item-image">
+									<a href="#">
+										<img class="shop-imgs" src="${item.images}">
+									</a>
+								</div>
+								<div class="shop-info-price shop-price-col shop-info-prices">
+									<div class="shop-item-name-info shop-items-names">
+										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
+											<span class="col-item-title col-names">${item.name}</span>
+											<div class="parag col-parags">
+												<div>${item.description}</div>
+											</div>
+										</div>
+										<div class="shop-item-info shop-carts">
+											<div class="col-price carts-price1">
+												<div class="shop-item-price prod-price">₱${item.price}</div>
+												<div class="shop-left">
+													<button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							`);
+					});
+
+				}
+			});
+		});
+	});
+});
+</script>
+@endsection

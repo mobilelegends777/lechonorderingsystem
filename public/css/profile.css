@@ -28,6 +28,10 @@ hr.hr-pr {
     color: black;
 }
 
+img.avatar.img-circle {
+    width: 50%;
+}
+
 #show-prof:hover {
     color: rgb(160, 131, 12);
   }

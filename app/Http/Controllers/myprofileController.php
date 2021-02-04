@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\User;
 use Auth;
 use Session;
+use File;
 use App\Login;
 use DB;
 use App\Http\Controllers\Controller;
@@ -26,10 +27,9 @@ class myprofileController extends Controller
         
         $data = Auth::user();
         $id = $data->id;
-        $value = DB::select('SELECT * from users inner join customer_info ON customer_id= "'.$id.'"
-        inner join customer_address ON customer_address.customer_id ="'.$id.'"
-        inner join contact_info ON contact_info.customer_id ="'.$id.'"where id = ?',[$id]);
-        
+        $value = DB::select('SELECT * from users inner join customer_info ON customer_id = users.id 
+        inner join customer_address ON customer_address.customer_id = users.id 
+        inner join contact_info ON contact_info.customer_id = users.id where users.id = '.$id.'');
             return view('userpage/myprofile', compact('value'));
     }
 
@@ -40,39 +40,42 @@ class myprofileController extends Controller
 
      {
         //dd($request->all());
-        $fname = $request->input('fname');
-        $mname = $request->input('mname');
-        $lname = $request->input('lname');
-        $phone = $request->input('phone');
-        $tel = $request->input('tel');
-        $house = $request->input('house');
-        $zone = $request->input('zone');
-        $street = $request->input('street');
-        $brngy = $request->input('brngy');
-        $coordinate = $request->input('coordinate');
-        $city = $request->input('city');
-        $land = $request->input('land');
-        $email = $request->input('email');
+        $fname = $request->input("fname");
+        $mname = $request->input("mname");
+        $lname = $request->input("lname");
+        $phone = $request->input("phone");
+        $tel = $request->input("tel");
+        $house = $request->input("house");
+        $zone = $request->input("zone");
+        $street = $request->input("street");
+        $brngy = $request->input("brngy");
+        $coordinate = $request->input("coordinate");
+        $city = $request->input("city");
+        $land = $request->input("land");
+        $email = $request->input("email");
 
-        DB::update('UPDATE users, customer_info, customer_address, contact_info
-        SET
-        users.email = "'.$email.'",
-        customer_info.middlename ="'.$mname.'",
-        customer_info.firstname ="'.$fname.'",
-        customer_info.lastname ="'.$lname.'",
-        customer_address.house_number = "'.$house.'",
-        customer_address.purok_zone="'.$zone.'",
-        customer_address.street ="'.$street.'",
-        customer_address.barangay="'.$brngy.'",
-        customer_address.city="'.$city.'",
-        customer_address.coordinate="'.$coordinate.'",
-        customer_address.landmark="'.$land.'",
-        contact_info.phone="'.$phone.'"
-        WHERE users.id = "'.$id.'" AND customer_info.customer_id = "'.$id.'" AND customer_address.customer_id = "'.$id.'"
-        AND contact_info.customer_id="'.$id.'"
-     ');
-      
-        
+        DB::update('UPDATE customer_info SET
+            middlename = \''.$mname.'\',
+            firstname = \''.$fname.'\',
+            lastname = \''.$lname.'\'
+            WHERE customer_info.customer_id = '.$id.'
+            ');
+        DB::update('UPDATE customer_address SET
+            house_number = \''.$house.'\',
+            purok_zone=\''.$zone.'\',
+            street =\''.$street.'\',
+            barangay=\''.$brngy.'\',
+            city=\''.$city.'\',
+            coordinate=\''.$coordinate.'\',
+            landmark=\''.$land.'\'
+            WHERE customer_address.customer_id = '.$id.'
+            ');
+        DB::update('UPDATE contact_info SET
+            phone = \''.$phone.'\'
+            WHERE contact_info.customer_id = '.$id.'
+        ');
+        DB::update('UPDATE users SET email = \''.$email.'\'
+            WHERE users.id = '.$id.'');
         
        
         echo "<script>alert('Record Updated Successfully');
@@ -80,6 +83,25 @@ class myprofileController extends Controller
         window.location.href='/userpage/myprofile';
         </script>";
         
+    }
+    public function uploadImage(Request $req){
+        // dd($req->all());
+        $data = Auth::user();
+     
+        $image = $req->file('image');
+        $cName = $data->name;
+        $newName = $cName.'.'.$image->getClientOriginalExtension();
+        $path = public_path().'/images/profile/';
+        File::makeDirectory($path, $mode = 0777, true, true);
+        $img = '/images/profile/'.$newName;
+        $image->move($path,$newName);
+
+        $update = DB::table('users')->where('id','=',$data->id)
+            ->update([
+                'images' => $img
+            ]);
+
+        return back()->with('success','Profile Updated');
     }
 
 
