@@ -22,14 +22,12 @@ hr.hr-pr {
     position: relative;
     right: 13em;
 }
-
+img.avatar.img-circle {
+    width: 100px;
+}
 .prof {
     position: relative;
     color: black;
-}
-
-img.avatar.img-circle {
-    width: 50%;
 }
 
 #show-prof:hover {

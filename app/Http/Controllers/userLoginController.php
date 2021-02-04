@@ -13,6 +13,9 @@ use Session;
 use App\Login;
 use AuthenticatesUsers;
 use Laravel\Socialite\Facades\Socialite;
+use Redirect;
+use Illuminate\Support\MessageBag;
+use Input;
 
 
 class userLoginController extends Controller
@@ -86,6 +89,10 @@ class userLoginController extends Controller
 
         return redirect()->route('u-login')->with('value', $value); 
 
+    }else {
+
+        $errors = new MessageBag(['password' => ['Email and/or password invalid.']]);
+    return Redirect::back()->withErrors($errors)->withInput(Input::except('password'));
     }
 
 }
