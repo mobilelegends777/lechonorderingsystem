@@ -58,11 +58,15 @@ class cartController extends Controller
 
     public function deleteItemCart(Request $request) {
         $data = Auth::user();
-        $query = DB::select('DELETE FROM cart WHERE cart_id = '.$request->item_cart_id.' ');
+        $query = DB::select('DELETE FROM cart WHERE cart_id = '.$request->item_cart_id.' AND customer_id = '.$data->id.' ');
         return $request->item_cart_id;
     }
-    // public function updateCart(Request $request) {
-    //     $data = Auth::user();
-    //     $query = DB::select('UPDATE cart SET quantity = '.$request->qty.' WHERE cart_id = '.$request->cart-id.' ');
-    // }
+    public function updateCart(Request $request) {
+        $data = Auth::user();
+        $qty =  $request->qty;
+        $cartID = $request->cartID;
+        $query = DB::select('UPDATE cart SET quantity = '.$qty.' WHERE cart_id = '.$cartID.' ');
+       return "Update Successfull";
+    }
+    
 }

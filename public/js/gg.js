@@ -27,6 +27,7 @@ var al = (()=> {
              }
           })
         },
+        
         init: function() {
             // alert('dsdsdd');
           // al.getMarkers();

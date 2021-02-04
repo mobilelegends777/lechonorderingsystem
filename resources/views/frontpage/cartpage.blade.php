@@ -5,8 +5,7 @@
 		<h1>Cart</h1>
 		<div class="cartpage-item">
 			<div class="cartpage-title">
-			<form  method="POST" action="{{ route('cart-update') }}">
-					@csrf
+			
 				<table class="product-on-cart">
 					<thead class="product-title">
 					<tr class="title-carted">
@@ -22,15 +21,19 @@
 				@if($value[1] == null)
 				<tbody class="cart-table-conts">
 					<tr class="librebais">
-						<td>Cart is Empty!!</td>
+						<td>Your Cart is currently empty!!</td>
 					</tr>
 				</tbody>
 				@else
 				<tbody class="cart-table-conts">
+			<form  method="POST" action="{{ route('cart-update') }}">
+				@csrf
 				@foreach($value[1] as $item)
 					<tr class="librebais" id="cart-cont-item{{$item->cart_id}}">
-						<input type="hidden" name="cart-id" value="{{$item->cart_id}}">
-						<td><span class="cancel-cart" onclick="al.deleteItemCart({{$item->cart_id}})" style="cursor:pointer;">&times;</span></td>
+						<input type="hidden" name="cartID" value="{{$item->cart_id}}">
+						<td>
+							<span class="cancel-cart" onclick="al.deleteItemCart({{$item->cart_id}})" style="cursor:pointer;">&times;</span>
+						</td>
 						<td class="carted-items">
 						<div class="carted-item-image">
 							<a href=""><img src="{{ $item->images }}"></a>
@@ -38,9 +41,20 @@
 						<div class="carted-item-name">
 							<a href="">{{ $item->name }}</a></td>
 						</div>
-						<td>5,000</td>
-						<td><div  class="cart-input"><button  type="button" onclick="dec('qty',{{$item->id}})">-</button><input class="cartQty__{{$item->id}}" type="number" value="1" name="qty"><button type="button" onclick="inc('qty',{{$item->id}})">+</button></div></td>
-						<td>20,000</td>
+						<td>{{ $item->price }}
+							<input type="hidden" class="cart-price{{ $item->cart_id }}" value="{{ $item->price }}">
+						</td>
+						<td>
+							<div  class="cart-input">
+								<button  type="button" onclick="dec('qty',{{$item->cart_id}})">-</button>
+									<input class="cartQty__{{$item->cart_id}}" type="number" value="{{$item->quantity}}" name="qty">
+								<button type="button" onclick="inc('qty',{{$item->cart_id}})">+</button>
+							</div>
+						</td>
+						<td>
+							<input type="hidden" class="sub-subtotal{{ $item->price }}">
+							<span class="subtotal{{ $item->cart_id }}">{{ $item->price }}</span>
+						</td>
 					</tr>
 				@endforeach
 				</tbody>
@@ -53,7 +67,7 @@
 							<button>Apply coupon</button>
 						</div>
 						<div class="update-cart">	
-							<button>Update cart</button>
+							<button type="submit">Update cart</button>
 						</div>
 				</div>	
 				</form>

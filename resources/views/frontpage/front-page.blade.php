@@ -53,9 +53,8 @@
 								<div class="prod-image">
 									<img src="{{$item->images}}">
 								</div>
-								<div class="cart-icon" >
-									<input type="hidden" name="product" id="" value="{{$item->product_id}}">
-									<a href="#"><img src="images/cart1.png"></a>
+								<div class="cartIcon{{ $item->product_id }} cart-icon">
+									<a href="" class="addToCart" data-value="{{$item->product_id}}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a>
 								</div>
 							</div>
 							<div class="item-details">
@@ -219,5 +218,9 @@
 				</div>
 			</div>
 		</div>
-
+	<script>
+		$(document).ready(function(){
+			Carting();
+		});
+	</script>
 	@endsection
