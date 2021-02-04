@@ -963,5 +963,27 @@ form.form-signup {
   right: 24px;
 }
 }
-
+.move-to-center-verify {
+  margin-left: 30rem;
+  margin-right: 30rem;
+  font-size: 23px;
+}
+.move-to.left-verify {
+  margin-left: 50rem;
+  margin-right: 50rem;
+  font-size: 27px;
+  color: #d40707;
+}
+button.btn.btn-link.p-0.m-0.align-baseline {
+  background-color: orange;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+  left: 21rem;
+}
 /*# sourceMappingURL=bodystyle.css.map */
