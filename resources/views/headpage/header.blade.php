@@ -75,9 +75,11 @@
 						@if($value[0]->utype == 'User')
 					
 
-							<img src="{{asset('images/account.png')}}" class="icons2">
+							<img src="{{$value[0]->images}}" class="icons2">
 								<div class="dropdown-content-account">
-
+									<h6>Signed in as <br></h6>
+									<h5><strong>{{$value[0]->email}}</strong></h5>
+									<hr>
 										<a href="{{asset('/userpage/myorder')}}">My Order</a>
 										<a href="{{asset('userpage/myprofile')}}">Edit Profile</a>
 										<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
