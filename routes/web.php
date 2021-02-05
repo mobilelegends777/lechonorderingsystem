@@ -117,4 +117,3 @@ Route::post('/view-carted','cartController@viewCart');
 
 Route::post('/delete-items-cart','cartController@deleteItemCart');
 Route::post('/update-cart-items','cartController@updateCart')->name('cart-update');
-

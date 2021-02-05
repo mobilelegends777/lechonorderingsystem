@@ -172,8 +172,8 @@
 @if(Auth::check())	
 		<div class="toggle-cart-sidenav">
 			<div class="cart">
-			<a href="#" class="notification-cart">
-					<span class="badge">3</span>
+			<a href="#" class="notification-cart" id="numb-item">
+				
 			</a>
 				<img src="{{ asset('images/sidenav-cart.png') }}"><span class="cart-title" style="display: none;">Your Cart</span>
 
@@ -208,6 +208,7 @@
 		</div>
 @endif
 <script>
+
 
 	$(document).ready(function(){
 		var url = window.location.origin;
@@ -346,6 +347,15 @@ Carting();
 		});
 	});
 @if(Auth::check())	
+function countItem(){
+	var num_item = $('.carted-item-cont').length;
+	console.log(num_item);
+		$('#numb-item').empty();
+		$('#numb-item').append(`
+			<span class="badge" >${ num_item+1 }</span>
+		`)
+}
+countItem();
 	function Carting(){ 
 		
 		$('.addToCart').each(function(){
@@ -355,7 +365,9 @@ Carting();
 				e.preventDefault();
 				// alert(carted);
 				addCart();
-			});	
+				countItem();
+			});
+		
 			
 		function addCart(){
 				$.ajax({
@@ -368,7 +380,7 @@ Carting();
 						if(data == true){
 							$('.cartIcon'+carted).empty();
 							$('.cartIcon'+carted).append(`
-										<span class="shop-cart-icon"><i id="cart-icons " class="fas fa-check" aria-hidden="true"></i></span>
+								<span class="shop-cart-icon"><i id="cart-icons " class="fas fa-check" aria-hidden="true"></i></span>
 							`)
 						}
 					}

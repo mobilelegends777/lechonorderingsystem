@@ -21,6 +21,7 @@ var al = (()=> {
                 // console.log(data);
                 $('#cart-item-cont'+item_cart_id).remove();
                 $('#cart-cont-item'+item_cart_id).remove();
+                // countItem();
              },
              error:function(){
                 // _helper.buttonAnimation(2,'deposit_submit');
