@@ -406,14 +406,27 @@ $('.arrangeCol').on('click', function(e){
 
 var inp = $('.cart-input').length;
 function inc(element, id) {
+      // alert(id);
+      var cart_price= $('.cart-price'+id).val();
+      // console.log(cart_price);
       var number = $('.cartQty__'+id).val();
       $('.cartQty__'+id).val(parseInt(number)+1);
+      // console.log(number);
+      var qty = $('.cartQty__'+id).val();
+      // console.log(qty);
+      // console.log(qty*cart_price);
+      $('.subtotal'+id).empty();
+      $('.subtotal'+id).append(`<span>${ qty * cart_price}</span>`);
 }
 function dec(element, id) {
   var number = $('.cartQty__'+id).val();
   if (parseInt(number) > 1) {
     $('.cartQty__'+id).val(parseInt(number)-1);
   }
+  var qty = $('.cartQty__'+id).val();
+  var cart_price= $('.cart-price'+id).val();
+  $('.subtotal'+id).empty();
+  $('.subtotal'+id).append(`<span>${cart_price*qty}</span>`);
 }
 
 

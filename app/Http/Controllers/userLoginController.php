@@ -29,10 +29,16 @@ class userLoginController extends Controller
         // $value1 = Session::get('user');
             $data = Auth::user();
             $query = DB::select("SELECT * FROM product WHERE type = 'Combo' OR type = 'Lechon'");
-        
+            // if($data != null){
+            //     $query2 = DB::select("SELECT count(cart_id) FROM cart WHERE customer_id = '.$data->id.'");
+            // }
+            // else{
+            //     $query2 = "no data";
+            // }
             $value = [
                 '0' => $data,
-                '1' => $query
+                '1' => $query,
+                // '2' => $query2
             ];
             if($value == null)
             {
@@ -40,11 +46,11 @@ class userLoginController extends Controller
             $value = [
                 "utype" => "notLogin"
             ];
-            return view('frontpage.front-page')->with('value', $value);
+                return view('frontpage.front-page')->with('value', $value);
             }
             else 
             {   
-                // dd($bestSelling);
+                // dd($value[1]);
                 return view('frontpage.front-page')->with('value', $value);
             }
 

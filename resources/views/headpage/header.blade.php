@@ -172,8 +172,8 @@
 @if(Auth::check())	
 		<div class="toggle-cart-sidenav">
 			<div class="cart">
-			<a href="#" class="notification-cart">
-				<span class="badge">3</span>
+			<a href="#" class="notification-cart" id="numb-item">
+				
 			</a>
 				<img src="{{ asset('images/sidenav-cart.png') }}"><span class="cart-title" style="display: none;">Your Cart</span>
 
@@ -209,35 +209,186 @@
 @endif
 <script>
 
+
 	$(document).ready(function(){
 		var url = window.location.origin;
-		$.ajax({
+		cartedItems();
+		$('.cart').click(function(e){
+			e.preventDefault();
+				cartedItems();
+		});
+	function cartedItems(){
+		
+			$.ajax({
 				headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
 				type:'POST',
 				url: url+'/view-carted',
 				data:{data:''},
 				success:function(data)
 					{
-						console.log(data);
-						$.each(data, function(i, item){
+						// console.log(data);
+						if(data == false){
+							$('.item-on-cart').empty();
 							$('.item-on-cart').append(`
-							<div class="carted-item-cont">
-								<span>
-									<img src="${item.images}">
-								</span>
-								<span class="carted-item">
-									<span class="item-name"><h4 style="margin: 0;padding:0;">${item.name}</h4></span>
-									<span class="item-subtotal">
-										<span class="quantity">${item.quantity} x</span>
-										<span class="sub-price">${item.price}</span>
-									</span>
-								</span>
-								<span class="delete-item">&times</span>
-							</div>
+								<div class="cart-empty">
+									<h3>Your Cart is empty!!</h3>
+								</div>
 							`);
+						}else{
+
+						
+						$('.item-on-cart').empty();
+						$.each(data, function(i, item){
+							
+								$('.item-on-cart').append(`
+								<div class="carted-item-cont" id="cart-item-cont${item.cart_id}">
+									<span>
+										<img src="${item.images}">
+									</span>
+									<span class="carted-item">
+										<span class="item-name"><h4 style="margin: 0;padding:0;">${item.name}</h4></span>
+										<span class="item-subtotal">
+											<span class="quantity">${item.quantity} x</span>
+											<span class="sub-price">${item.price}</span>
+										</span>
+									</span>
+									<span class="delete-item" onclick="al.deleteItemCart(${item.cart_id})">&times</span>
+								</div>
+								`);
 						});
 					}
+					}
 			});
+		}
 	});
 
+
+	$(document).ready(function(){
+
+
+	
+Carting();	
+	$('.filter-by-price').on('click', function(){
+		alert("unya pa nako ni buhatun"+"mao ni ang minimum "+$( "#slider-range" ).slider( "values", 0 )+" "+"mao ni ang max "+$( "#slider-range" ).slider( "values", 1 ));
+	});
+
+	$('.catType').each(function(){
+		var cat = $(this).data('value');
+		var url = window.location.origin;
+		
+		$(this).on('click', function(e){
+			e.preventDefault();
+			$.ajax({
+				headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+				type:'POST',
+				url: url+'/filter-foods',
+				data:{category:cat},
+				success:function(data)
+				{
+					
+					$('.shop-items-conts').empty();
+					// console.log(data);
+					$.each(data, function(i, item){
+							
+							$('.shop-items-conts').append(`
+								<div class="shop-items">
+									<div class="shop-item-image">
+										<a href="{{asset('frontpage/shop-details')}}" class="shop-images">
+											<img src="${item.images}">
+										</a>
+										<div class="cartIcon${item.product_id} cart-icon">
+											<a href="" id="addToCart" class="shop-cart-icon addToCart" data-value="${item.product_id}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a href="">
+										</div>
+									</div>
+									<div class="shop-info-price">
+										<div class="shop-item-name">${item.name}</div>
+										<div class="shop-item-price">₱${item.price}</div>
+									</div>
+								</div>
+							`);
+					});
+					Carting();
+					
+					$.each(data, function(i, item){
+							
+							$('.shop-items-conts-col').append(`
+							<div class="shop-items shop-item-col shop-cols">
+								<div class="shop-item-image">
+									<a href="#">
+										<img class="shop-imgs" src="${item.images}">
+									</a>
+								</div>
+								<div class="shop-info-price shop-price-col shop-info-prices">
+									<div class="shop-item-name-info shop-items-names">
+										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
+											<span class="col-item-title col-names">${item.name}</span>
+											<div class="parag col-parags">
+												<div>${item.description}</div>
+											</div>
+										</div>
+										<div class="shop-item-info shop-carts">
+											<div class="col-price carts-price1">
+												<div class="shop-item-price prod-price">₱${item.price}</div>
+												<div class="shop-left">
+													<button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							`);
+	
+					});
+					
+				}
+			});
+			
+		});
+	});
+@if(Auth::check())	
+function countItem(){
+	var num_item = $('.carted-item-cont').length;
+	console.log(num_item);
+		$('#numb-item').empty();
+		$('#numb-item').append(`
+			<span class="badge" >${ num_item+1 }</span>
+		`)
+}
+countItem();
+	function Carting(){ 
+		
+		$('.addToCart').each(function(){
+		var carted = $(this).data('value');
+		var url = window.location.origin;
+			$(this).on('click', function(e){
+				e.preventDefault();
+				// alert(carted);
+				addCart();
+				countItem();
+			});
+		
+			
+		function addCart(){
+				$.ajax({
+				headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+				type:'POST',
+				url: url+'/add-to-cart-item',
+				data:{carted:carted},
+				success:function(data)
+					{	
+						if(data == true){
+							$('.cartIcon'+carted).empty();
+							$('.cartIcon'+carted).append(`
+								<span class="shop-cart-icon"><i id="cart-icons " class="fas fa-check" aria-hidden="true"></i></span>
+							`)
+						}
+					}
+				});
+		}
+	});
+}
+		
+@endif
+});
 </script>

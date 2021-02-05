@@ -29,10 +29,14 @@ class cartController extends Controller
     {
 
         $data = Auth::user(); 
+        $query = DB::select('SELECT * FROM cart
+        INNER JOIN product ON product.product_id = cart.product_id
+        WHERE customer_id = '.$data->id.'');
         $value = [
-            '0' => $data
+            '0' => $data,
+            '1' => $query
         ];
-       
+        // dd($value[1]);
         return view('frontpage/cartpage', compact('value'));
         
     }
@@ -41,13 +45,29 @@ class cartController extends Controller
         $data = Auth::user(); 
         // dd($data);
         $query = DB::insert('INSERT INTO cart (product_id,customer_id)values('.$carted.','.$data->id.')');
-       return response()->json($query);
+        return response()->json($query);
     }
     public function viewCart(){
         $data = Auth::user(); 
         $query = DB::select('SELECT * FROM cart
          INNER JOIN product ON product.product_id = cart.product_id
          WHERE customer_id = '.$data->id.'');
+        
         return response()->json($query);
     }
+
+    public function deleteItemCart(Request $request) {
+        $data = Auth::user();
+        $query = DB::select('DELETE FROM cart WHERE cart_id = '.$request->item_cart_id.' AND customer_id = '.$data->id.' ');
+        return $request->item_cart_id;
+    }
+    public function updateCart(Request $request) {
+        $data = Auth::user();
+        $qty =  $request->qty;
+        $cartID = $request->cartID;
+        $query = DB::select('UPDATE cart SET quantity = '.$qty.' WHERE cart_id = '.$cartID.' ');
+       return "Update Successfull";
+    }
+
+    
 }
