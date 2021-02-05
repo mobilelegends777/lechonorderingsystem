@@ -16,6 +16,7 @@ use Laravel\Socialite\Facades\Socialite;
 use Redirect;
 use Illuminate\Support\MessageBag;
 use Input;
+use Alert;
 
 
 class userLoginController extends Controller
@@ -86,13 +87,14 @@ class userLoginController extends Controller
            return view('frontpage.front-page')->with('value', $value);
 
        }
-
-        return redirect()->route('u-login')->with('value', $value); 
+       return redirect('u-login')->with('success', 'Login Successfully!');
+        // return redirect()->route('u-login')->with('value', $value); 
 
     }else {
 
-        $errors = new MessageBag(['password' => ['Email and/or password invalid.']]);
-    return Redirect::back()->withErrors($errors)->withInput(Input::except('password'));
+        Alert::error('Login Failed', 'Please Try Again!');
+    return Redirect::back()->withInput(Input::except('password'));
+    
     }
 
 }

@@ -12,6 +12,7 @@ use App\Login;
 use DB;
 use App\Http\Controllers\Controller;
 use AuthenticatesUsers;
+use Alert;
 
 class myprofileController extends Controller
 {
@@ -78,10 +79,8 @@ class myprofileController extends Controller
             WHERE users.id = '.$id.'');
         
        
-        echo "<script>alert('Record Updated Successfully');
-        
-        window.location.href='/userpage/myprofile';
-        </script>";
+            Alert::success('Success', 'Record Updated');
+            return back();
         
     }
     public function uploadImage(Request $req){
@@ -101,7 +100,8 @@ class myprofileController extends Controller
                 'images' => $img
             ]);
 
-        return back()->with('success','Profile Updated');
+            Alert::success('Success', 'File Uploaded');
+        return back();
     }
 
 

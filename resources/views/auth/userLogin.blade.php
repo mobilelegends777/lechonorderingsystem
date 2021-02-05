@@ -30,7 +30,7 @@
             <div class="signin-forgot"> 
                  <button type="submit" class="btn btn-success btn-block">
                                         <i class="fas fa-sign-in-alt"></i> {{ __('Sign in') }}</button>
-               
+                                        
             </div>
             <div class="forgot-pass"><a href="#" id="forgot_pswd">Forgot password?</a></div>
             <div class="signup-new">
@@ -120,6 +120,8 @@
                 </div><br>
                 <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
             </form>
+
+            @include('sweetalert::alert')
         </div>
     </div>
 </div>

@@ -805,6 +805,56 @@ input {
     position: relative;
     right: 4rem;
   }
+  .login-body {
+  background-image: url(../asset/img/599.jpg);
+  padding: 102px 0;
+  text-align: -webkit-center;
+  height: 1254px;
+}
+.login-reg-form {
+  width: 1260px;
+  border: solid #2a2c2f;
+  background: #2a2c2fc7;
+  border-radius: 5px;
+  height: 1100px;
+
+}
+form.form-signin {
+  width: 316% !important;
+  position: relative;
+  left: -24rem !important;
+  /* height: 168px; */
+  font-size: 27px !important;
+}
+button.btn.facebook-btn.social-btn {
+  height: 135px !important;
+  font-size: 50px !important;
+}
+button.btn.google-btn.social-btn {
+  height: 135px !important;
+  font-size: 50px !important;
+}
+.login-reg-form input::placeholder{
+
+  font-size:40px !important;
+}
+.login-reg-form input {
+  height: 128px !important;
+  font-size: 47px !important;
+}
+.btn-primary#btn-signup {
+  height: 135px !important;
+  /* width: 90%; */
+  font-size: 60px !important;
+}
+button.btn.btn-success.btn-block {
+  height: 135px !important;
+  width: 100% !important;
+  font-size: 60px !important;
+}
+.forgot-pass a {
+  font-size: 46px !important;
+}
 }
 
 @media only screen and (max-width: 360px) and (min-width: 320px) and (orientation: portrait) {
@@ -814,10 +864,15 @@ input {
     background: #2a2c2fc7;
     border-radius: 5px;
   }
+  a#cancel_signup {
+    padding: 13px 5px;
+    color: #c4a265;
+    font-size: 35px;
+}
   form.form-signup {
-    width: 200%;
+    width: 300%;
     position: relative;
-    right: 9em;
+    right: 21em;
   }
   .scl-reg {
     position: relative;
@@ -825,8 +880,68 @@ input {
   }
   .signup-button {
     position: relative;
-    right: 30px;
+    right: 9px;
   }
+  .sign-up {
+    height: 130px !important;
+    width: 100% !important;
+    font-size: 50px !important;
+
+  }
+  .footer-desc.footer-gallery {
+    display: none;
+}
+.login-body {
+  background-image: url(../asset/img/599.jpg);
+  padding: 102px 0;
+  text-align: -webkit-center;
+  height: 1304px;
+}
+.login-reg-form {
+  width: 1260px;
+  border: solid #2a2c2f;
+  background: #2a2c2fc7;
+  border-radius: 5px;
+  height: 1145px;
+
+}
+form.form-signin {
+  width: 316% !important;
+  position: relative;
+  left: -24rem !important;
+  /* height: 168px; */
+  font-size: 27px !important;
+}
+button.btn.facebook-btn.social-btn {
+  height: 135px !important;
+  font-size: 50px !important;
+}
+button.btn.google-btn.social-btn {
+  height: 135px !important;
+  font-size: 50px !important;
+}
+.login-reg-form input::placeholder{
+
+  font-size:40px !important;
+}
+.login-reg-form input {
+  height: 128px !important;
+  font-size: 47px !important;
+}
+.btn-primary#btn-signup {
+  height: 135px !important;
+  /* width: 90%; */
+  font-size: 60px !important;
+}
+button.btn.btn-success.btn-block {
+  height: 135px !important;
+  width: 100% !important;
+  font-size: 60px !important;
+}
+.forgot-pass a {
+  font-size: 46px !important;
+}
+
 }
 
 @media only screen and (max-width: 540px) and (min-width: 411px) and (orientation: portrait) {
@@ -849,6 +964,62 @@ input {
     position: relative;
     right: 30px;
   }
+
+.login-body {
+  background-image: url(../asset/img/599.jpg);
+  padding: 102px 0;
+  text-align: -webkit-center;
+  height: 1254px;
+}
+.login-reg-form {
+  width: 1360px;
+  border: solid #2a2c2f;
+  background: #2a2c2fc7;
+  border-radius: 5px;
+  height: 1100px;
+
+}
+form.form-signin {
+  width: 316% !important;
+  position: relative;
+  left: -24rem !important;
+  /* height: 168px; */
+  font-size: 27px !important;
+}
+button.btn.facebook-btn.social-btn {
+  height: 135px !important;
+  font-size: 50px !important;
+}
+button.btn.google-btn.social-btn {
+  height: 135px !important;
+  font-size: 50px !important;
+}
+.login-reg-form input::placeholder{
+
+  font-size:40px !important;
+}
+.login-reg-form input {
+  height: 128px !important;
+  font-size: 47px !important;
+}
+.btn-primary#btn-signup {
+  height: 135px !important;
+  /* width: 90%; */
+  font-size: 60px !important;
+}
+button.btn.btn-success.btn-block {
+  height: 135px !important;
+  width: 100% !important;
+  font-size: 60px !important;
+}
+.forgot-pass a {
+  font-size: 46px !important;
+}
+.sign-up {
+  height: 130px !important;
+  width: 100% !important;
+  font-size: 50px !important;
+}
 }
 
 @media only screen and (max-width: 300px) and (min-width: 280px) {
