@@ -38,7 +38,7 @@ Auth::routes(['verify' => true]);
 
 
 //User Login
-Route::get('/', 'userLoginController@index')->name('loginsuccess');
+// Route::get('/', 'userLoginController@index')->name('loginsuccess');
 
 Route::get('/userpage/myprofile/', function (){
 
@@ -80,7 +80,7 @@ Route::get('/frontpage/cartpage', 'cartController@index')->name('cartpage');
 
 Route::get('/frontpage/checkout', 'checkoutController@index')->name('checkout');
 
-
+Route::get('/','frontpageController@index');
 
 
 //Profile
@@ -117,3 +117,5 @@ Route::post('/view-carted','cartController@viewCart');
 
 Route::post('/delete-items-cart','cartController@deleteItemCart');
 Route::post('/update-cart-items','cartController@updateCart')->name('cart-update');
+
+Route::post('/display-error','userLoginController@login');

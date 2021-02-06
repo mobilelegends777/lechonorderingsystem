@@ -23,41 +23,41 @@ class userLoginController extends Controller
 {
 
 
-    public function index(){
+    // public function index(){
 
 
-        // $value1 = Session::get('user');
-            $data = Auth::user();
-            $query = DB::select("SELECT * FROM product WHERE type = 'Combo' OR type = 'Lechon'");
-            // if($data != null){
-            //     $query2 = DB::select("SELECT count(cart_id) FROM cart WHERE customer_id = '.$data->id.'");
-            // }
-            // else{
-            //     $query2 = "no data";
-            // }
-            $value = [
-                '0' => $data,
-                '1' => $query,
-                // '2' => $query2
-            ];
-            if($value == null)
-            {
+    //     // $value1 = Session::get('user');
+    //         $data = Auth::user();
+    //         $query = DB::select("SELECT * FROM product WHERE type = 'Combo' OR type = 'Lechon'");
+    //         // if($data != null){
+    //         //     $query2 = DB::select("SELECT count(cart_id) FROM cart WHERE customer_id = '.$data->id.'");
+    //         // }
+    //         // else{
+    //         //     $query2 = "no data";
+    //         // }
+    //         $value = [
+    //             '0' => $data,
+    //             '1' => $query,
+    //             // '2' => $query2
+    //         ];
+    //         if($value == null)
+    //         {
 
-            $value = [
-                "utype" => "notLogin"
-            ];
-                return view('frontpage.front-page')->with('value', $value);
-            }
-            else 
-            {   
-                // dd($value[1]);
-                return view('frontpage.front-page')->with('value', $value);
-            }
-
-
+    //         $value = [
+    //             "utype" => "notLogin"
+    //         ];
+    //             return view('frontpage.front-page')->with('value', $value);
+    //         }
+    //         else 
+    //         {   
+    //             // dd($value[1]);
+    //             return view('frontpage.front-page')->with('value', $value);
+    //         }
 
 
-    }
+
+
+    // }
 
 
 
@@ -65,11 +65,11 @@ class userLoginController extends Controller
     public function login(Request $request){
 
 
-        if(Auth::attempt([
+    if(Auth::attempt([
             'email' => $request->email,
             'password' => $request->password
         ]))
-        {
+    {
        
         $user= Auth::user();
         $query = DB::select("SELECT * FROM product WHERE type = 'Combo' OR type = 'Lechon'");
@@ -80,18 +80,14 @@ class userLoginController extends Controller
             "1"=>$query
            
         ];
-        
-        // $data = Session::put('user', $data1);   
-        
-        // $value = Session::get('user');
-
         // dd(Auth::user());
+        
        if($value[0]->utype=='User')
 
        {    
-
+        //    dd($value);
            return view('frontpage.front-page')->with('value', $value);
-
+        //    return response()->json($value);
        }
        return redirect('u-login')->with('success', 'Login Successfully!');
         // return redirect()->route('u-login')->with('value', $value); 
@@ -101,6 +97,7 @@ class userLoginController extends Controller
         Alert::error('Login Failed', 'Please Try Again!');
     return Redirect::back()->withInput(Input::except('password'));
     
+
     }
 
 }
