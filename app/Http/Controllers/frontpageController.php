@@ -13,11 +13,19 @@ class frontpageController extends Controller
 {
     public function index() {
         $data = Auth::user();
-        $query = DB::select("SELECT * FROM product WHERE type = 'Combo' OR type = 'Lechon'");
-        $value = [
-            '0' => $data,
-            '1' => $query
-        ];
+        // $query = DB::select("SELECT * FROM product WHERE type = 'Combo' OR type = 'Lechon'");
+        if($data != null){
+			$id = $data->id;
+			$query = DB::select("SELECT p.*, coalesce((
+				select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id),'0') 
+				as order_exist FROM  product p WHERE type = 'Combo' OR type = 'Lechon'");
+		}else{
+			$query = DB::select("SELECT * FROM product WHERE type = 'Combo' OR type = 'Lechon'");
+		}
+      	$value = [
+			  "0" => $data,
+			  "1" => $query,
+      	];
         // dd($value);
         return view('frontpage.front-page')->with('value', $value);
     }

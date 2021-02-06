@@ -168,9 +168,9 @@
 // 		});
 // });
 $(document).ready(function(){
-	$('.filter-by-price').on('click', function(){
-		alert("unya pa nako ni buhatun"+"mao ni ang minimum "+$( "#slider-range" ).slider( "values", 0 )+" "+"mao ni ang max "+$( "#slider-range" ).slider( "values", 1 ));
-	});
+	// $('.filter-by-price').on('click', function(){
+	// 	alert("unya pa nako ni buhatun"+"mao ni ang minimum "+$( "#slider-range" ).slider( "values", 0 )+" "+"mao ni ang max "+$( "#slider-range" ).slider( "values", 1 ));
+	// });
 
 	$('.catType').each(function(){
 		var cat = $(this).data('value');
@@ -244,6 +244,43 @@ $(document).ready(function(){
 				}
 			});
 			
+		});
+	});
+});
+$(document).ready(function(){
+	var url = window.location.origin;
+	$('.filter-by-price').on('click',function(){
+		// alert(min);
+		$.ajax({
+			headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+			type:'POST',
+			url: url+'/filter-price',
+			data:{min:$( "#slider-range" ).slider( "values", 0 ),max:$( "#slider-range" ).slider( "values", 1 )},
+			success:function(data)
+			{
+				$('.shop-items-conts').empty();
+				console.log(data);
+				$.each(data, function(i, item){
+					$('.shop-items-conts').append(`
+
+					<div class="shop-items">
+									<div class="shop-item-image">
+										<a href="{{asset('frontpage/shop-details')}}" class="shop-images">
+											<img src="${item.images}">
+										</a>
+										<div class="cartIcon${item.product_id} cart-icon">
+											<a href="" id="addToCart" class="shop-cart-icon addToCart" data-value="${item.product_id}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a href="">
+										</div>
+									</div>
+									<div class="shop-info-price">
+										<div class="shop-item-name">${item.name}</div>
+										<div class="shop-item-price">₱${item.price}</div>
+									</div>
+								</div>
+					
+					`);
+				});
+			}
 		});
 	});
 });

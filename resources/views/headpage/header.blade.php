@@ -263,14 +263,9 @@
 	});
 
 
-	$(document).ready(function(){
+$(document).ready(function(){
 
-
-	
 Carting();	
-	$('.filter-by-price').on('click', function(){
-		alert("unya pa nako ni buhatun"+"mao ni ang minimum "+$( "#slider-range" ).slider( "values", 0 )+" "+"mao ni ang max "+$( "#slider-range" ).slider( "values", 1 ));
-	});
 
 	$('.catType').each(function(){
 		var cat = $(this).data('value');

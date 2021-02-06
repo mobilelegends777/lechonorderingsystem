@@ -393,8 +393,8 @@ $('.arrangeCol').on('click', function(e){
    $( "#slider-range" ).slider({
       range: true,
       min: 20,
-      max: 10000,
-      values: [ 20, 10000 ],
+      max: 5000,
+      values: [ 20, 5000 ],
       slide: function( event, ui ) {
         $( "#amount" ).text( " ₱" + ui.values[ 0 ] + " - ₱" + ui.values[ 1 ] );
       }
