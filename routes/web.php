@@ -21,6 +21,7 @@ Route::get('/admin-login', function(){
 
 });
 
+// Route::get('/getusers','userLoginController@getusers');
 
 
 //Start of user login
