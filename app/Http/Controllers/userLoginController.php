@@ -89,17 +89,17 @@ class userLoginController extends Controller
        if($value[0]->utype=='User')
 
        {    
-
-           return view('frontpage.front-page')->with('value', $value);
-
+            
+           return view('frontpage.front-page')->with('value', $value); 
+               
        }
-       return redirect('u-login')->with('success', 'Login Successfully!');
-        // return redirect()->route('u-login')->with('value', $value); 
-
+    //    return redirect('u-login')->with('success', 'Login Successfully!');
+        return redirect()->route('u-login')->with('value', $value); 
     }else {
 
-        Alert::error('Login Failed', 'Please Try Again!');
-    return Redirect::back()->withInput(Input::except('password'));
+        Alert::error('Login Failed', 'Please Try Again!');       
+
+        return Redirect::back()->withInput(Input::except('password'));
     
     }
 
