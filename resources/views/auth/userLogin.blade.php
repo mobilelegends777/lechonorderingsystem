@@ -27,7 +27,7 @@
                                     @enderror
             </div>
             <div class="signin-forgot"> 
-                 <button type="submit" class="btn btn-success btn-block">
+                 <button type="submit" class="btn btn-success btn-block log-in-btn">
                                         <i class="fas fa-sign-in-alt"></i> {{ __('Sign in') }}</button>
                
             </div>
@@ -120,7 +120,10 @@
                 <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
             </form>
         </div>
+        
+    
     </div>
 </div>
+
 @endsection
 
