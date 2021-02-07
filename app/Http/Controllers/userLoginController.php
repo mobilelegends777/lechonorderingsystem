@@ -72,16 +72,18 @@ class userLoginController extends Controller
     {
        
         $user= Auth::user();
-        $query = DB::select("SELECT * FROM product WHERE type = 'Combo' OR type = 'Lechon'");
-        
-        $value = [
-      
-            "0"=>$user,
-            "1"=>$query
-           
-        ];
-        // dd(Auth::user());
-        
+        if($user != null){
+			$id = $user->id;
+			$query = DB::select("SELECT p.*, coalesce((
+				select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id),'0') 
+				as order_exist FROM  product p WHERE type = 'Combo' OR type = 'Lechon'");
+		}else{
+			$query = DB::select("SELECT * FROM product WHERE type = 'Combo' OR type = 'Lechon'");
+		}
+      	$value = [
+			  "0" => $user,
+			  "1" => $query,
+      	];
        if($value[0]->utype=='User')
 
        {    
@@ -99,7 +101,6 @@ class userLoginController extends Controller
     
 
     }
-
 }
 
 

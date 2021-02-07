@@ -176,23 +176,20 @@
 @if(Auth::check())	
 		<div class="toggle-cart-sidenav">
 			<div class="cart">
-			<a href="#" class="notification-cart" id="numb-item">
-				<!-- append notification numb -->
+			<a href="#" class="notification-cart" id="numb-item" style="display:none;">
+				<span class="badge" id="badge">0</span>
 			</a>
 				<img src="{{ asset('images/sidenav-cart.png') }}"><span class="cart-title" style="display: none;">Your Cart</span>
-
 			</div>
 			<div class="add-to-cart-items">
 				<div class="items-on-cart-container" style="display: none;">
 					<div class="item-on-cart">
 						<!-- append -->
-						
 							<!-- append item here -->
-						
 					</div>
 					<div class="subtotal-cont">
 						<div class="sub-numbers" style="color: #666;display: flex;">
-							<span><h3>Subtotal :</h3></span><span><h3>15.00</h3></span>
+							<span><h3>Subtotal :</h3></span><span><h3 class="sub_tot"></h3></span>
 						</div>
 					</div>
 					<div class="__bottons">
@@ -211,15 +208,25 @@
 			</div>
 		</div>
 @endif
+
 <script>
 
-
 	$(document).ready(function(){
+		subTotal();
+		function subTotal(){
+				var sum = 0;
+			$('.sub-price').each(function(){
+				sum += Number($(this).text());
+			});
+			$('.sub_tot').text(sum);
+		}
+
 		var url = window.location.origin;
 		cartedItems();
 		$('.cart').click(function(e){
 			e.preventDefault();
 				cartedItems();
+				subTotal();
 		});
 	function cartedItems(){
 		
@@ -242,8 +249,9 @@
 
 						
 						$('.item-on-cart').empty();
+						var count_item=0;
 						$.each(data, function(i, item){
-							
+						count_item++
 								$('.item-on-cart').append(`
 								<div class="carted-item-cont" id="cart-item-cont${item.cart_id}">
 									<span>
@@ -260,6 +268,8 @@
 								</div>
 								`);
 						});
+						$( "#badge" ).text( count_item );
+						// Carting();
 					}
 					}
 			});
@@ -267,14 +277,9 @@
 	});
 
 
-	$(document).ready(function(){
-
-
+$(document).ready(function(){
 	
 Carting();	
-	$('.filter-by-price').on('click', function(){
-		alert("unya pa nako ni buhatun"+"mao ni ang minimum "+$( "#slider-range" ).slider( "values", 0 )+" "+"mao ni ang max "+$( "#slider-range" ).slider( "values", 1 ));
-	});
 
 	$('.catType').each(function(){
 		var cat = $(this).data('value');
@@ -313,9 +318,8 @@ Carting();
 							`);
 					});
 					
-					
 					$.each(data, function(i, item){
-							
+					
 							$('.shop-items-conts-col').append(`
 							<div class="shop-items shop-item-col shop-cols">
 								<div class="shop-item-image">
@@ -343,24 +347,16 @@ Carting();
 								</div>
 							</div>
 							`);
-	
+						
 					});
 					Carting();
+					
 				}
 			});
 			
 		});
 	});
 @if(Auth::check())	
-function countItem(){
-	var num_item = $('.carted-item-cont').length;
-	console.log(num_item);
-		$('#numb-item').empty();
-		$('#numb-item').append(`
-			<span class="badge" >${ num_item+1 }</span>
-		`)
-}
-countItem();
 	function Carting(){ 
 		
 		$('.addToCart').each(function(){
@@ -370,11 +366,15 @@ countItem();
 				e.preventDefault();
 				// alert(carted);
 				addCart();
-				countItem();
+				subTotal();
 			});
 		
 			
 		function addCart(){
+			$( ".notification-cart" ).show();
+			var text = $( "#badge" ).text();
+			text++;
+			$( "#badge" ).text( text );
 				$.ajax({
 				headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
 				type:'POST',
@@ -387,6 +387,8 @@ countItem();
 							$('.cartIcon'+carted).append(`
 								<span class="shop-cart-icon"><i id="cart-icons " class="fas fa-check" aria-hidden="true"></i></span>
 							`)
+						// $( "#badge" ).text( text );
+							
 						}
 					}
 				});
@@ -395,5 +397,10 @@ countItem();
 }
 		
 @endif
+});
+$(document).ready(function(){
+  $('.btn-search').on('click',function(){
+    alert('search');
+  });
 });
 </script>

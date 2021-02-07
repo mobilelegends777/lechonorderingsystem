@@ -53,9 +53,21 @@
 								<div class="prod-image">
 									<img src="{{$item->images}}">
 								</div>
+								@if(Auth::check())
+									@if($item->order_exist == 1)
+										<div class="cartIcon{{ $item->product_id }} cart-icon">
+											<span class="shop-cart-icon"><i id="cart-icons " class="fas fa-check" aria-hidden="true"></i></span>
+										</div>
+									@else
+										<div class="cartIcon{{ $item->product_id }} cart-icon">
+											<a href="" class="addToCart" data-value="{{$item->product_id}}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a>
+										</div>
+									@endif
+								@else
 								<div class="cartIcon{{ $item->product_id }} cart-icon">
 									<a href="" class="addToCart" data-value="{{$item->product_id}}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a>
 								</div>
+								@endif
 							</div>
 							<div class="item-details">
 								<div class="item-name">
