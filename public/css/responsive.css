@@ -88,9 +88,7 @@
 	.shop-filters {
 		width: 313px;
 	}
-	.shop-sub-container3 {
-		width: 70%;
-	}
+	
 }
 @media screen and (max-width: 1440px){
 	.items-container {
@@ -323,7 +321,7 @@
 }
 @media screen and (max-width: 1150px) {
 	.shop-items-conts {
-		width: 106%;
+		width: 100%;
 	}
 }
 @media screen and (max-width: 1066px) {
@@ -473,7 +471,7 @@
 	    font-size: 32px;
 	}
 	.shop-sorting {
-		font-size: 27px;
+		font-size: 18px;
 	}
 	.shop-sorting a {
 		font-size: 44px;
@@ -1327,10 +1325,10 @@
     	border-radius: 16px;
 	}
 	.shop-anchors {
-		font-size: 23px;
+		font-size: 19px;
 	}
 	span.filter-show {
-		font-size: 20px;
+		font-size: 18px;
 	}
 	button.filter-show-btn {
 		padding: 19px 40px;
@@ -1342,10 +1340,10 @@
 		font-size: 26px;
 	}
 	.shop-info-price {
-		font-size: 22px;
+		font-size: 13px;
 	}
 	.sort-items select {
-		font-size: 20px;
+		font-size: 15px;
 	}
 	.shop-item-info {
 		justify-content: space-between;
@@ -1353,6 +1351,7 @@
 	}
 	.col-price {
 	    /*width: 100%;*/
+		display: block;
 	    position: relative;
 	    width: 100%;
 	    /*left: 1191px;*/
@@ -1363,21 +1362,19 @@
 	}
 	button.addcart {
 		width: 100%;
-	    height: 79px;
-		font-size: 20px;
+		font-size: 14px;
 	    border-radius: 4px;
 	    margin: 0;
 	}
 	.shop-images img {
 		height: 10.5625rem;
 		border-radius: 12px;
-		width: 204px;
+		width: 200px;
 	}
 	#Btop {
 		width: 45px;
 		height: 45px;
 		bottom: 5px;
-    	right: 13px;
 	}
 	#Btop img {
 	    height: 67px;
@@ -1387,7 +1384,7 @@
     	line-height: 31px;
 	}
 	.shop-company {
-		font-size: 36px;
+		font-size: 31px;
 	}
 	.shop-img img {
 		height: 17.25rem;
@@ -1514,7 +1511,7 @@
 	}
 	.shop-images img {
 		height: 8.5625rem;
-		width: 174px;
+		width: 157px;
 	}
 	.headmenu .des1 {
 		font-size: 18px;
@@ -1588,7 +1585,7 @@
 		width: 49%;
 	}
 	.bttn1 {
-		width: 42%;
+		width: 45%;
 	}
 	.container .sub-container2 .sc2 {
 		margin-left: 24px;
@@ -1658,7 +1655,7 @@
 	.shop-images img {
 		height: 9.5625rem;
 		border-radius: 12px;
-		width: 226px;
+		width: 209px;
 	}
 	.shop-images-lechon img {
 		height: 199px;
@@ -2316,12 +2313,16 @@
 		height: 132px;
 	}
 	.sort-items select {
-		width: 129px;
+		width: 150px;
 	}
 	.topnav.responsive .ordinary {
 		font-size: 15px;
 	}
 	.td2 {
+		display: none;
+	}
+	
+	.shop-sorting {
 		display: none;
 	}
 }
@@ -2583,7 +2584,7 @@
     	text-align: -webkit-center;
 	}
 	.shop-items {
-		width: 163px;
+		width: 152px;
 	}
 	.headmenu .des1 {
     	font-size: 66px;

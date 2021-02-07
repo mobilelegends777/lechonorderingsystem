@@ -78,5 +78,6 @@ class shopController extends Controller
 
 		return response()->json($query);
 	}
+	
 	 
 }
