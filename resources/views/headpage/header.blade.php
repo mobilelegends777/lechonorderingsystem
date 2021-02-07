@@ -175,7 +175,7 @@
 		<div class="toggle-cart-sidenav">
 			<div class="cart">
 			<a href="#" class="notification-cart" id="numb-item">
-				
+				<!-- append notification numb -->
 			</a>
 				<img src="{{ asset('images/sidenav-cart.png') }}"><span class="cart-title" style="display: none;">Your Cart</span>
 
@@ -265,14 +265,9 @@
 	});
 
 
-	$(document).ready(function(){
+$(document).ready(function(){
 
-
-	
 Carting();	
-	$('.filter-by-price').on('click', function(){
-		alert("unya pa nako ni buhatun"+"mao ni ang minimum "+$( "#slider-range" ).slider( "values", 0 )+" "+"mao ni ang max "+$( "#slider-range" ).slider( "values", 1 ));
-	});
 
 	$('.catType').each(function(){
 		var cat = $(this).data('value');
@@ -289,7 +284,8 @@ Carting();
 				{
 					
 					$('.shop-items-conts').empty();
-					// console.log(data);
+					$('.shop-items-conts-col').empty();
+					console.log(data);
 					$.each(data, function(i, item){
 							
 							$('.shop-items-conts').append(`
@@ -309,7 +305,7 @@ Carting();
 								</div>
 							`);
 					});
-					Carting();
+					
 					
 					$.each(data, function(i, item){
 							
@@ -342,7 +338,7 @@ Carting();
 							`);
 	
 					});
-					
+					Carting();
 				}
 			});
 			

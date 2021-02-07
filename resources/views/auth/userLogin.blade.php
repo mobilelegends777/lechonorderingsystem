@@ -28,7 +28,7 @@
                                     @enderror
             </div>
             <div class="signin-forgot"> 
-                 <button type="submit" class="btn btn-success btn-block">
+                 <button type="submit" class="btn btn-success btn-block log-in-btn">
                                         <i class="fas fa-sign-in-alt"></i> {{ __('Sign in') }}</button>
                                         
             </div>
@@ -123,7 +123,10 @@
 
             @include('sweetalert::alert')
         </div>
+        
+    
     </div>
 </div>
+
 @endsection
 

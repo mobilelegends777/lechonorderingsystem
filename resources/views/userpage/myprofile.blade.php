@@ -131,7 +131,7 @@
           <div class="form-group">
             <label class="col-lg-3 control-label">Coordinate:</label>
             <div class="col-lg-8">
-            <input class="form-control" id ="coordinate" name="lat" type="text" value="">
+            <input class="form-control" id ="coordinate" name="coordinate" type="text" value="">
             </div>
           </div>
           <div class="form-group">

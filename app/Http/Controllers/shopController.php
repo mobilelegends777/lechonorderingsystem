@@ -18,7 +18,15 @@ class shopController extends Controller
         // $data = Session::get('user');
 		$data = Auth::user();
 		$category = DB::select("SELECT * FROM category");
-		$query = DB::select("SELECT * FROM product");
+		// dd($data->id);
+		if($data != null){
+			$id = $data->id;
+			$query = DB::select("SELECT p.*, coalesce((
+				select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id),'0') 
+				as order_exist FROM  product p");
+		}else{
+			$query = DB::select("SELECT * FROM product");
+		}
       	$value = [
 			  "0" => $data,
 			  "1" => $query,
@@ -35,8 +43,9 @@ class shopController extends Controller
       	else 
       	{
 				//   $value = Session::get('user');
-				// dd($value);
 				// return response()->json($value);
+				// dd($value[1][0]->order_exist);
+				// dd($value);
 	        	return view('frontpage/shop')->with('value',$value);
 
       	}
@@ -54,6 +63,19 @@ class shopController extends Controller
 		// 	'data' => $query
 		// ];
 		
+		return response()->json($query);
+	}
+	public function filterPrice(Request $request)
+	{
+		$min = $request->min;
+		$max = $request->max;
+
+		$query = DB::select('SELECT * FROM product WHERE price BETWEEN '.$min.' AND '.$max.'');
+
+		// $data = [
+		// 	'data' => $query
+		// ];
+
 		return response()->json($query);
 	}
 	 
