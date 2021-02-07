@@ -71,6 +71,40 @@
 							</div>
 						</div>
 						<div class="shop-items-conts">
+						@if(array_key_exists('3',$value))
+							@if(count($value[3]) > 0)
+								@foreach($value[3] as $item)
+								<div class="shop-items">
+									<div class="shop-item-image">
+										<a href="{{asset('frontpage/shop-details')}}" class="shop-images">
+											<img src="{{ $item->images }}">
+										</a>
+										@if(Auth::check())
+											@if($item->order_exist == 1)
+											<div class="cartIcon{{ $item->product_id }} cart-icon">
+												<span class="shop-cart-icon"><i id="cart-icons " class="fas fa-check" aria-hidden="true"></i></span>
+											</div>
+											@else
+											<div class="cartIcon{{ $item->product_id }} cart-icon">
+												<a href="" id="addToCart" class="shop-cart-icon addToCart" data-value="{{ $item->product_id }}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a>
+											</div>
+											@endif
+										@else
+											<div class="cartIcon{{ $item->product_id }} cart-icon">
+												<a href="" id="addToCart" class="shop-cart-icon addToCart" data-value="{{ $item->product_id }}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a>
+											</div>
+										@endif
+									</div>
+									<div class="shop-info-price">
+										<div class="shop-item-name">{{ $item->name }}</div>
+										<div class="shop-item-price">₱{{ number_format($item->price,2)}}</div>
+									</div>
+								</div>
+								@endforeach
+							@else
+							<span class="messages"> <strong>{{$value[4]}}</strong> not found.</span>
+							@endif
+						@else
 						@foreach($value[1] as $item)
 							<div class="shop-items">
 								<div class="shop-item-image">
@@ -99,6 +133,7 @@
 								</div>
 							</div>
 						@endforeach
+						@endif
 						</div><!-- end items show -->
 
 						<div class="shop-items-conts-col" style="display: none;">
