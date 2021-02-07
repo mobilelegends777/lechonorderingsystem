@@ -43,6 +43,10 @@ vertical-align:bottom;
   position: relative;
   bottom: 154px;
 }
+.onscroll {
+  overflow: scroll;
+
+}
 /*********************checkout_end****************/
 
 
@@ -77,12 +81,13 @@ margin-top:15px!important;
 }
 
 
- ._center {
+._center {
   position: relative;
-  left: 24rem;
-  bottom: 5rem;
-  width: 88%;
+  left: 12em;
+  bottom: -2rem;
+  width: 30%;
 }
+
 
 img.debit-icon {
     position: relative;
@@ -849,7 +854,10 @@ and (orientation: portrait)
   .check_lm.clearfix {
     display: none;
 }
-
+.cod-moves {
+  position: relative;
+  bottom: 1em;
+}
 section#center {
   height: 2150px;
 }

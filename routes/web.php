@@ -79,6 +79,7 @@ Route::get('/frontpage/cartpage', 'cartController@index')->name('cartpage');
 
 
 Route::get('/frontpage/checkout', 'checkoutController@index')->name('checkout');
+Route::get('/userpage/checkout/{id}/success','myprofileController@update')->name('profupdated');
 
 Route::get('/','frontpageController@index');
 
@@ -86,7 +87,7 @@ Route::get('/','frontpageController@index');
 //Profile
 Route::get('/userpage/myprofile/', 'myprofileController@index')->name('myprofile');
 // Route::get('/userpage/myprofile/{id}','myprofileController@show')->name('myprofile2');
-Route::get('/userpage/myprofile/{id}/success','myprofileController@update')->name('profileupdated');
+Route::get('/userpage/myprofile/{id}/success','checkoutController@update')->name('profileupdated');
 
 
 

@@ -54,58 +54,67 @@
 	
    
 	 
-	 <form metho="POST" action ="{{ route('profileupdated',$value['0']->id) }}" class="form-horizontal" role="form">
+	 <form metho="POST" action ="{{ route('profupdated',$value['0']->id) }}" class="form-horizontal" role="form">
         {{ csrf_field() }}
         {{ method_field('PATCH') }}
     <div id="myDIV">
 	<input class="form-control" type="hidden" name="id" value="{{$value['0']->id}}">
      <div class="check_lm3 clearfix">
-	 <input class="form-control" placeholder="Full Name" type="text" value="{{$value[0]->firstname}}">
+	 <input class="form-control" placeholder="Firstname" name="fname"type="text" value="{{$value[0]->firstname}}">
+
+     </div>
+	 <div class="check_lm3 clearfix">
+	 <input class="form-control" placeholder="Middlename" name="mname"type="text" value="{{$value[0]->middlename}}">
+
+     </div>
+	 <div class="check_lm3 clearfix">
+	 <input class="form-control" placeholder="Lastname" name="lname"type="text" value="{{$value[0]->lastname}}">
 
      </div>
      <div class="check_lm3 clearfix">
-	 <input class="form-control" placeholder="Email" type="text"value="{{$value[0]->email}}">
+	 <input class="form-control" placeholder="Email" name="email"type="text"value="{{$value[0]->email}}">
 
      </div>
      <div class="check_lm3 clearfix">
-	 <input class="form-control" placeholder="Contact Number" type="text"value="{{$value[0]->phone}}">
+	 <input class="form-control" placeholder="Contact Number" name="phone"type="text"value="{{$value[0]->phone}}">
 
      </div>
      <div class="col-sm-6">
-      <h5 class="mgt text-right _sbtn"><a class="button mgt">Save</a></h5>
+	  <button class="mgt text-right _sbtn button mgt" type="submit">Save Changes</button>
+            
 	 </div>
     </div>
 	</div>
 
-	</form>
+
 	</div>
 	
 	<div class="move-to-top-rem">
     <h4 class="check-title">Shipping address  <span id="show2"class="glyphicon glyphicon-edit"><img src="{{asset('images/edit-icon.png')}}"><h6 class="size-color">Edit</span></h4></h6>
   
-
+	
 	<div id ="MyAdd"class="check_lm4 clearfix">
-	 <input class="form-control" placeholder="House #" type="text" value="{{$value[0]->house_number}}">
-	 <input class="form-control" placeholder="Zone" type="text"value="{{$value[0]->purok_zone}}">
+	 <input class="form-control" placeholder="House #" name ="house"type="text" value="{{$value[0]->house_number}}">
+	 <input class="form-control" placeholder="Zone" name ="zone"type="text"value="{{$value[0]->purok_zone}}">
      <div class="check_lm4 clearfix">
 	 <div class="col-sm-4 space_left">
-	 <input class="form-control" placeholder="Street" type="text"value="{{$value[0]->street}}">
-	 <input class="form-control" placeholder="Barangay" type="text"value="{{$value[0]->barangay}}">
+	 <input class="form-control" placeholder="Street" name="street"type="text"value="{{$value[0]->street}}">
+	 <input class="form-control" placeholder="Barangay" name="brngy" type="text"value="{{$value[0]->barangay}}">
 	 </div>
 	 <div class="col-sm-4 space_left">
-	 <input class="form-control" placeholder="City" type="text"value="{{$value[0]->city}}">
-	 <input class="form-control" placeholder="Coordinate" type="text"value="{{$value[0]->coordinate}}">
+	 <input class="form-control" placeholder="City" name="city" type="text"value="{{$value[0]->city}}">
+	 <input class="form-control" placeholder="Coordinate" name="coordinate"type="text"value="{{$value[0]->coordinate}}">
 	 </div>
      <div class="col-sm-4 space_all">
-     <input class="form-control" placeholder="Land Mark" type="text"value="{{$value[0]->landmark}}">
+     <input class="form-control" placeholder="Land Mark" name="land"type="text"value="{{$value[0]->landmark}}">
 	 </div>
      <div class="col-sm-6">
-      <h5 class="mgt text-right _sbtn"><a class="button mgt">Save</a></h5>
+	 <button class="mgt text-right _sbtn button mgt" type="submit">Save Changes</button>
 	 </div>
 	
 	</div>
 	</div>
-	
+	</form>
 	<div class="check_lm5 clearfix">
 	 
 	</div >
@@ -146,7 +155,7 @@
 	<div class="col-sm-6 move-top">
      <h5 class="mgt"><a href="{{asset('frontpage/cartpage')}}"><i class="fa fa-chevron-left"></i> Return to cart</a></h5>
 	 </div>
-   </div>
+   </div >
    <div class="move-flex">
    <div class="check_rm clearfix">
     <div class="checkout_1r clearfix">
@@ -154,53 +163,33 @@
 	 <div class="move-to-center">
 		 <h4 class="check-title-size">Order Summary</h4>
 	  </div>
-	 <div class="col-sm-7">
-	  <p class="mgt">Lechon Pork</p>
-	  <h6></h6>
-	 </div>
-	 <div class="col-sm-3">
-	  <h6 class="text-right">Php 175.00</h6>
-	 </div>
-	</div>
-	</div>
-	<div class="checkout_1r clearfix">
-	  <div class="checkout_1l2 clearfix">
-	 <div class="col-sm-2">
-	   </div>
-	 <div class="col-sm-7">
-	  <p class="mgt">Chicken na Manok</p>
-	  <h6></h6>
-	 </div>
-	 <div class="col-sm-3">
-	  <h6 class="text-right">Php 175.00</h6>
-	 </div>
-	</div>
-	</div>
-	<div class="checkout_1r clearfix">
-	  <div class="checkout_1l2 clearfix">
-	 <div class="col-sm-2">
-	  </div>
-	 <div class="col-sm-7">
-	  <p class="mgt">Small Pizza</p>
-	  <h6></h6>
-	 </div>
-	 <div class="col-sm-3">
-	  <h6 class="text-right">Php 175.00</h6>
-	 </div>
-	</div>
-	</div>
-	<div class="checkout_1r clearfix">
-	  <div class="checkout_1l2 clearfix">
-	 <div class="col-sm-2">
-	  </div>
-	 <div class="col-sm-7">
-	  <p class="mgt">Small Pizza</p>
-	  <h6></h6>
-	 </div>
-	 <div class="col-sm-3">
-	  <h6 class="text-right">Php 175.00</h6>
-	 </div>
-	</div>
+	  <div class="onscroll">
+		  <table>
+		<tr>
+			<th class="checkoutv">
+		<div class="check-pname">
+			Product Name
+		</div>
+		</th>
+			<th class="checkoutv">
+		<div class="check-price">
+			Price</th>
+
+		</div>	
+		</tr>
+		<tr>
+
+			<td class="check-data">
+		<div class="check-dpname">
+			sasas</td>
+        </div>
+			<td class="check-price">
+			<div class="check-dprice">
+					12
+				</div>
+			</td>
+		</tr>
+		</table>
 	</div>
 	<div class="checkout_1r1 clearfix">
     <hr>
@@ -239,8 +228,10 @@
 	  <div class="col-sm-6 move-free-pay">
       <input id="myBtn" type="radio" id="payment" name="payment" value="cdc">
       <label class="free-move-debit">Credt / Debit Card <img  class="debit-icon" src="{{asset('images/adddebit.png')}}"></label><br>
+	  <div class="cod-moves">
       <input type="radio" id="payment" name="payment" value="cod">
       <label class="free-move-debit">Cash on Delivery <img  class="cod-icon" src="{{asset('images/cash.png')}}"></label><br>
+	  </div>
 	  </div>
       
 	 </div>
@@ -249,7 +240,7 @@
     
    </div>
    <div class="col-sm-6">
-      <h5 class="mgt text-right _center"><a class="button mgt">Place Order</a></h5>
+	  <button class="mgt text-right _center button mgt" type="submit">Place Order</button>
 	 </div>
    </div>
   
@@ -301,7 +292,7 @@ MJ will not have access to your credit card info."class="info"src="{{asset('imag
 
 </div>
 
-
+@include('sweetalert::alert')
 </body>
  
 @endsection
