@@ -121,3 +121,6 @@ Route::post('/delete-items-cart','cartController@deleteItemCart');
 Route::post('/update-cart-items','cartController@updateCart')->name('cart-update');
 
 Route::post('/display-error','userLoginController@login');
+
+Route::get('/search','searchController@searchData')->name('search');
+Route::post('/search-products','searchController@searchProduct');

@@ -50,13 +50,18 @@
 			</div>
 		</div>
 		<div class="icons-inputs">
+		<form action="{{route('search')}}" method="GET">
 			<span class="inputs">
-			
-				<input type="text" name="" placeholder="Search products..." class="inpt-search"> 
-				<button class="btn-search">Search</button>
+					<input autocomplete="off" type="text" onkeyup="mySearchFunction(this.id)" name="query" id="query" placeholder="Search products..." class="inpt-search"> 
+					<button class="btn-search">Search</button>
+
+					<ul id="myUL">
+						
+					</ul>
 			</span>
+		</form>
+
 		</div>
-		
 		
 		<div class="icons">
 			<span class="search-icon" >
@@ -297,7 +302,7 @@ Carting();
 					
 					$('.shop-items-conts').empty();
 					$('.shop-items-conts-col').empty();
-					console.log(data);
+					// console.log(data);
 					$.each(data, function(i, item){
 							
 							$('.shop-items-conts').append(`
@@ -398,9 +403,44 @@ Carting();
 		
 @endif
 });
-$(document).ready(function(){
-  $('.btn-search').on('click',function(){
-    alert('search');
-  });
-});
+// $(document).ready(function(){
+//   $('.btn-search').on('click',function(){
+//     alert('search');
+//   });
+// });
+function mySearchFunction(id) {
+	var input = $('#'+id).val();
+	// console.log(input);
+	var url = window.location.origin;
+	var n = input.length;
+	if(n > 0 ) {
+
+		$.ajax({
+		headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+		type:'POST',
+		url: url+'/search-products',
+		data:{item:input},
+		success:function(data)
+			{	
+				// console.log(data);
+				$('#myUL').empty();
+				if(data==false) {
+					$('#myUL').append(`
+							<li><a href="">No record found...</a></li>
+						`);
+				}else{
+					$.each(data, function(i, item){
+						$('#myUL').append(`
+							<li><a href="${url+'/search?query='+item.name}">${item.name}</a></li>
+						`);
+					});
+				}
+			}
+		});
+
+	} else {
+		$('#myUL').empty();
+	}
+	
+}
 </script>

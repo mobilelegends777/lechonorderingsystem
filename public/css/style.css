@@ -218,6 +218,7 @@ img.logos {
     height: 75%;
     font-size: 17px;
     padding: 0px 11px;
+    outline: none;
 }
 span.inputs {
   height: 100%
@@ -1466,5 +1467,36 @@ input.btn.btn-default:hover{
 }
 .close {
   margin: 0px 0px 0px 8px;
+}
+.messages {
+  width: 25%; 
+  padding: 10px; 
+  font-size: 22px; 
+  margin: 39px auto;
+}
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  z-index: 1;
+  width: 14%;
+}
+
+#myUL li a {
+	border-top: 1px solid #ddd;
+    margin-top: -1px;
+    background-color: #f6f6f6;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    background: #161414;
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #2a2c2f;
+  border: 1px solid #ddd;
 }
   
