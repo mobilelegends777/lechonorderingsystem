@@ -21,7 +21,7 @@
 				@if($value[1] == null)
 				<tbody class="cart-table-conts">
 					<tr class="librebais">
-						<td>Your Cart is currently empty!!</td>
+						<td colspan="7">Your Cart is currently empty!!</td>
 					</tr>
 				</tbody>
 				@else
@@ -34,13 +34,14 @@
 						<td>
 							<span class="cancel-cart" onclick="al.deleteItemCart({{$item->cart_id}})" style="cursor:pointer;">&times;</span>
 						</td>
-						<td class="carted-items">
+						<td class="carted-items" colspan="2">
 						<div class="carted-item-image">
 							<a href=""><img src="{{ $item->images }}"></a>
 						</div>
 						<div class="carted-item-name">
-							<a href="">{{ $item->name }}</a></td>
+							<a href="">{{ $item->name }}</a>
 						</div>
+						</td>
 						<td>₱ {{ number_format($item->price,2) }}
 							<input type="hidden" class="cart-price{{ $item->cart_id }}" value="{{ $item->price }}">
 						</td>
