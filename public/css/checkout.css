@@ -46,17 +46,28 @@ vertical-align:bottom;
 .onscroll {
   overflow-y: scroll;
   margin-left: 30px;
-  line-height: 0.9em;
+  line-height: 1.3em;
   max-height: 100px;
 }
 .onscroll .check-price {
   position: relative;
-  left: 5rem;
+  left: 8rem;
   text-align: left;
 }
 .onscroll .check-pname {
   text-align: left;
-}  
+}
+.check-dquantity {
+  position: relative;
+  left: 4rem;
+} 
+a.return-c {
+  color: black;
+}
+a.return-c:hover{
+
+  color:#f6740a;
+}
 /*********************checkout_end****************/
 
 @media screen and (max-width : 1366px){
@@ -319,7 +330,7 @@ h6.text-right {
 .move-to-center {
   position: relative;
   bottom: 2rem;
-  left: 11rem;
+  left: 153px;
 }
 .check-dquantity {
   text-align: center;
@@ -782,6 +793,7 @@ img.modal-payment {
   left: 22rem;
   text-align: left;
 }
+
 .container {
   width: 1458px;
 }
@@ -922,19 +934,31 @@ and (orientation: portrait)
   .check_lm.clearfix {
     display: none;
 }
+section#center {
+  background-color: #c4a265cc;
+}
+.onscroll {
+  overflow-y: scroll;
+  margin-left: 30px;
+  line-height: 3.3em;
+  max-height: 170px;
+}
 .cod-moves {
   position: relative;
   bottom: 1em;
+}
+a.return-c {
+  color: black;
+  display: none;
 }
 section#center {
   height: 2150px;
 }
 .check_rm.clearfix {
-  height: 1900px;
-  width: 1000px;
+  width: 1131px;
   margin-top: 7rem;
   position: relative;
-  left: -13rem;
+  left: -20rem!important;
   border-style: solid;
 }
 
@@ -1092,6 +1116,17 @@ img.modal-payment {
 }
 input.form-control::placeholder {
   font-size: 30px;
+}
+.check-dquantity {
+  text-align: center;
+  font-size: 42px;
+  position: relative;
+  left: 11rem;
+}
+.check-pname {
+  font-size: 34px;
+  position: relative;
+  left: 4rem;
 }
 }
 
@@ -1317,16 +1352,33 @@ and (orientation: portrait)
   .check_lm.clearfix {
     display: none;
 }
-
+section#center {
+  background-color: #c4a265cc;
+}
+.check-dquantity {
+  text-align: center;
+  font-size: 42px;
+  position: relative;
+  left: 11rem;
+}
+.onscroll {
+  overflow-y: scroll;
+  margin-left: 30px;
+  line-height: 3.3em;
+  max-height: 200px;
+}
+a.return-c {
+  color: black;
+  display: none;
+}
 section#center {
   height: 2150px;
 }
 .check_rm.clearfix {
-  /* height: 1900px; */
-  width: 1000px;
+  width: 1131px;
   margin-top: 7rem;
   position: relative;
-  left: -20rem;
+  left: -21rem;
   border-style: solid;
 }
 
@@ -1346,9 +1398,10 @@ h6.text-right {
 }
 
 h4.check-title-size {
-  font-size: 40px;
+  font-size: 50px;
   position: relative;
-  /* left: -109px; */
+  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 ._center {
   position: relative;
@@ -1361,7 +1414,7 @@ h4.check-title-size {
 }
 
 h6.c-size {
-  font-size: 27px;
+  font-size: 40px;
 }
 textarea.txt-size {
   width: 100%;
@@ -1369,9 +1422,12 @@ textarea.txt-size {
   border-color: black;
 }
 h5.normal {
-  font-size: 45px;
+  font-size: 50px;
   position: relative;
   right: 19rem;
+}
+strong.p-method {
+  margin-left: 36rem;
 }
 .txt-size::placeholder {
   font-size: 40px;
@@ -1480,9 +1536,10 @@ h5.normal.ship-bot {
   width: 1280px;
 }
 .check-pname {
-  font-size: 32px;
+  font-size: 42px;
   position: relative;
   left: 4rem;
+  margin-top: 1rem;
 }
 .check-price {
   font-size: 32px;
@@ -1496,6 +1553,7 @@ h5.normal.ship-bot {
   position: relative;
   left: 22rem;
   text-align: left;
+  font-size: 42px;
 }
 .move-to-center {
   position: relative;
@@ -1516,11 +1574,20 @@ and (orientation: landscape)
   h4.check-title-size {
     left: -150px;
 }
+section#center {
+  background-color: #c4a265cc;
+}
 ._center {
   position: relative;
   top: 2rem;
   width: 40%;
   font-size: 44px;
+}
+.onscroll {
+  overflow-y: scroll;
+  margin-left: 30px;
+  line-height: 3.3em;
+  max-height: 100px;
 }
 
 }

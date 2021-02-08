@@ -115,6 +115,8 @@
 							</a>
 					</div>
 				</div>
+
+				@include('sweetalert::alert')
 			</div>
 		</div>
 	</div>

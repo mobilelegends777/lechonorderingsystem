@@ -9,6 +9,7 @@ use Session;
 use App\Login;
 use AuthenticatesUsers;
 use DB;
+use Alert;
 class cartController extends Controller
 
 {
@@ -66,7 +67,10 @@ class cartController extends Controller
         $qty =  $request->qty;
         $cartID = $request->cartID;
         $query = DB::select('UPDATE cart SET quantity = '.$qty.' WHERE cart_id = '.$cartID.' ');
-       return "Update Successfull";
+
+        Alert::success('Success', 'Record Updated');
+        return back();
+       
     }
     
     

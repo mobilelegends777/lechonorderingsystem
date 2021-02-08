@@ -153,7 +153,7 @@
 	</div>
 	</div>
 	<div class="col-sm-6 move-top">
-     <h5 class="mgt"><a href="{{asset('frontpage/cartpage')}}"><i class="fa fa-chevron-left"></i> Return to cart</a></h5>
+     <h5 class="mgt"><a class="return-c"href="{{asset('frontpage/cartpage')}}"><i class="fa fa-chevron-left"></i> Return to cart</a></h5>
 	 </div>
    </div >
    <div class="move-flex">
@@ -199,8 +199,8 @@
 			</div>
 			</td>
 			<td class="check-price">
-			<div class="check-dprice">
-			{{ $item->price }}
+			<div class="check-dprice">₱
+			{{ $item->price }}.00
 			</div>
 			</td>
 		</tr>
@@ -243,9 +243,12 @@
 
      <hr>
 	 <div class="checkout_1r1i clearfix">
-	  <div class="col-sm-6">
-	   <h5 class="mgt normal"><strong>Payment Method</strong</h5>
+	  <div class="col-sm-6 method" >
+	   <h5 class="mgt normal"><strong class="p-method">Payment Method</strong</h5>
 	  </div>
+	  <form metho="POST" action ="" class="form-horizontal" role="form">
+        {{ csrf_field() }}
+        {{ method_field('PATCH') }}
 	  <div class="col-sm-6 move-free-pay">
       <input id="myBtn" type="radio" id="payment" name="payment" value="cdc">
       <label class="free-move-debit">Credt / Debit Card <img  class="debit-icon" src="{{asset('images/adddebit.png')}}"></label><br>
@@ -266,7 +269,7 @@
    </div>
   
   </div>
- 
+</form>
   </div>
  </div>	 
 </section>
