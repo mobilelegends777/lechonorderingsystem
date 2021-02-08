@@ -80,7 +80,6 @@ Route::get('/frontpage/cartpage', 'cartController@index')->name('cartpage');
 
 Route::get('/frontpage/checkout', 'checkoutController@index')->name('checkout');
 Route::get('/userpage/checkout/{id}/success','myprofileController@update')->name('profupdated');
-Route::get('/frontpage/checkout','checkoutController@viewCart');
 
 Route::get('/','frontpageController@index');
 

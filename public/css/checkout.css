@@ -6,7 +6,7 @@
   padding-bottom: 40px;
   width: 500px;
 }
-*
+
 .check_lm1 ul li{
 display:inline-block;
 padding-right:10px; 
@@ -44,13 +44,14 @@ vertical-align:bottom;
   bottom: 154px;
 }
 .onscroll {
-  overflow: scroll;
+  overflow-y: scroll;
   margin-left: 30px;
-
+  line-height: 0.9em;
+  max-height: 100px;
 }
 .onscroll .check-price {
   position: relative;
-  left: 11rem;
+  left: 5rem;
   text-align: left;
 }
 .onscroll .check-pname {
@@ -108,7 +109,7 @@ margin-top:15px!important;
 
 ._center {
   position: relative;
-  left: 12em;
+  left: 13em;
   bottom: -2rem;
   width: 30%;
 }
@@ -245,7 +246,7 @@ img.check-icon {
 .check_rm {
   padding-top: 40px;
   padding-bottom: 40px;
-  width: 263%;
+  width: 176%;
   position: relative;
   left: 5rem;
   top: 1rem;
@@ -318,7 +319,10 @@ h6.text-right {
 .move-to-center {
   position: relative;
   bottom: 2rem;
-  left: 10rem;
+  left: 11rem;
+}
+.check-dquantity {
+  text-align: center;
 }
 .size-height {
   height: 10px;

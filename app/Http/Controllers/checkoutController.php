@@ -36,8 +36,18 @@ class checkoutController extends Controller
         $value = DB::select('SELECT * from users inner join customer_info ON customer_id= users.id
         inner join customer_address ON customer_address.customer_id = users.id
         inner join contact_info ON contact_info.customer_id = users.id where users.id = '.$id.'');
-        // dd($value);
-        return view('frontpage/checkout', compact('value'));
+         $query = DB::select('SELECT * FROM cart
+         INNER JOIN product ON product.product_id = cart.product_id
+         WHERE customer_id = '.$data->id.'');
+         $raw =DB::selecT('SELECT SUM ( (quantity) * (price)) as total
+         FROM cart INNER JOIN product ON product.product_id = cart.product_id
+           WHERE customer_id = '.$data->id.'');
+             $value1 = [
+                 
+                '1' => $query,
+                '2' =>$raw
+            ];
+        return view('frontpage/checkout', compact(['value','value1']));
         
     }
 
@@ -89,16 +99,6 @@ class checkoutController extends Controller
 
     }
 
-    public function viewCart(){
-        $data = Auth::user(); 
-        $query = DB::select('SELECT * FROM cart
-         INNER JOIN product ON product.product_id = cart.product_id
-         WHERE customer_id = '.$data->id.'');
-
-         dd($query);
-        
-        return response()->json($query);
-    }
 
 
 

@@ -165,15 +165,21 @@
 	  </div>
 	  <div class="onscroll pname">
 		  <table>
+		
 		<tr>
 			<th class="checkoutv">
 		<div class="check-pname">
 			Product Name
 		</div>
 		</th>
+		<th class="checkoutv">
+		<div class="check-dquantity">
+			Quantity
+		</th>
 			<th class="checkoutv">
 		<div class="check-price">
-			Price</th>
+			Price
+		</th>
 
 		</div>	
 		</tr>
@@ -181,18 +187,24 @@
 		
 
 		<tr>
-
+		@foreach($value1[1] as $item)
 			<td class="check-data">
 		<div class="check-dpname">
-				ssass
+		{{ $item->name }}
+		</div>
 			</td>
-        </div>
+		<td class="check-quantz">
+			<div class="check-dquantity">
+			{{ $item->quantity }}
+			</div>
+			</td>
 			<td class="check-price">
 			<div class="check-dprice">
-				12
+			{{ $item->price }}
 			</div>
 			</td>
 		</tr>
+		@endforeach
 		</table>
 	</div>
 
@@ -202,7 +214,7 @@
 
 	<div class="checkout_1r1 clearfix">
     <hr>
-	   <h6 class="c-size">Comment</h6>
+	   <h6 class="c-size">Special Instruction <br></h6><br>
 	   <textarea class="form-control txt-size" placeholder="e.g No Mayo " ></textarea>
 	 <hr>
     
@@ -212,7 +224,7 @@
 	   <h5 class="normal ship-bot">Shipping</h5>
 	  </div>
 	  <div class="col-sm-6">
-	   <h5 class="mgt move-right move-to-top move-to-free">Php 700.00</h5>
+	   <h5 class="mgt move-right move-to-top move-to-free">₱ {{$value1[2][0]->total}}.00</h5>
 	   <h5 class="mgt move-right move-to-top margin-top">Free</h5>
 	  </div>
 	 </div>
@@ -224,7 +236,7 @@
 	   <h5 class="mgt1 normal"><strong>Total</strong></h5>
 	  </div>
 	  <div class="col-sm-6">
-	   <h4 class="mgt2 move-right"><span class="normal ">PHP</span></span> 700.00</h4>
+	   <h4 class="mgt2 move-right"><span class="normal ">₱ </span></span>{{$value1[2][0]->total}}.00</h4>
 	  </div>
       
 	 </div>
@@ -232,7 +244,7 @@
      <hr>
 	 <div class="checkout_1r1i clearfix">
 	  <div class="col-sm-6">
-	   <h5 class="mgt normal"><strong>Payments</strong</h5>
+	   <h5 class="mgt normal"><strong>Payment Method</strong</h5>
 	  </div>
 	  <div class="col-sm-6 move-free-pay">
       <input id="myBtn" type="radio" id="payment" name="payment" value="cdc">

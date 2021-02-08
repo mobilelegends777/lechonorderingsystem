@@ -46,14 +46,14 @@
 						</td>
 						<td>
 							<div  class="cart-input">
-								<button  type="button" onclick="dec('qty',{{$item->cart_id}})">-</button>
+								<button  type="button" class="qty-dec" onclick="dec('qty',{{$item->cart_id}})">-</button>
 									<input class="cartQty__{{$item->cart_id}}" type="number" value="{{$item->quantity}}" name="qty">
-								<button type="button" onclick="inc('qty',{{$item->cart_id}})">+</button>
+								<button type="button" class="qty-inc" onclick="inc('qty',{{$item->cart_id}})">+</button>
 							</div>
 						</td>
 						<td>
 							<input type="hidden" class="sub-subtotal{{ $item->price }}">
-							<span class="subtotal{{ $item->cart_id }}">{{ $item->price }}</span>
+							<span class="sub-totals subtotal{{ $item->cart_id }}">{{ $item->price }}</span>
 						</td>
 					</tr>
 				@endforeach
@@ -78,7 +78,7 @@
 							<span>Subtotal</span>
 					</div>
 					<div class="sub-total">	
-							<span>20,000</span>
+							<span class="cart-page-subtotal"></span>
 					</div>
 				</div>
 				<hr>
@@ -89,7 +89,7 @@
 						<div class="address__">	
 							<div class="shipping-info">
 								<div>	
-										<span class="rate__">Flat rate: <b style="color: #c4a256;">29.00</b></span>
+										<span class="rate__">Flat rate: <b style="color: #c4a256;" class="flat-rate">29</b></span>
 								<div>	
 										<span>Shipping to <b>Phillipines.</b></span>
 								</div>
@@ -106,7 +106,7 @@
 						<span>Total</span>
 					</div>
 					<div class="__total">	
-						<span style="color: #c4a256;">20,029</span>
+						<span class="Totals" style="color: #c4a256;"></span>
 					</div>
 				</div>	
 				<div class="proceed__">	
@@ -119,4 +119,38 @@
 		</div>
 	</div>
 </div>
+<script>
+$(document).ready(function(){
+	subTot();
+	addedTotal();
+	function addedTotal(){
+		var total = 0;
+		flat = Number($('.flat-rate').text());
+		subT = Number($('.cart-page-subtotal').text());
+		total = flat + subT;
+		$('.Totals').text(total);
+	}
+	// $('.cancel-cart').each(function(){
+	// 	$(this).on('click', function(){
+	// 		subTot();
+	// 		addedTotal();
+	// 	});
+	// });
+	$('.qty-inc').on('click',function(){
+		subTot();
+		addedTotal();
+	});
+	$('.qty-dec').on('click',function(){
+		subTot();
+		addedTotal();
+	});
+	function subTot(){
+		var sums = 0;
+	$('.sub-totals').each(function(){
+		sums += Number($(this).text());
+	});
+	$('.cart-page-subtotal').text(sums);
+}
+});
+</script>
 @endsection
