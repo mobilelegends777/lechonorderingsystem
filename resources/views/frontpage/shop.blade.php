@@ -307,6 +307,7 @@ $(document).ready(function(){
 											<a href="" id="addToCart" class="shop-cart-icon addToCart" data-value="${item.product_id}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a href="">
 										</div>
 									</div>
+									
 									<div class="shop-info-price">
 										<div class="shop-item-name">${item.name}</div>
 										<div class="shop-item-price">₱${item.price}</div>

@@ -17,8 +17,7 @@ class searchController extends Controller
     
     public function searchData(Request $request) {
 
-        $item = $request['query'];
-
+        $item = ucfirst($request['query']);
         $data = Auth::user();
 		$category = DB::select("SELECT * FROM category");
 		if($data != null){
