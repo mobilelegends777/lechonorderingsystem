@@ -8,11 +8,11 @@ $.ajaxSetup({
 var al = (()=> {
 
     var api_url = 'http://localhost:8000'; 
-
+    var url = window.location.origin;
     return {
         deleteItemCart: (item_cart_id)=>{
           $.ajax({
-             url:api_url+"/delete-items-cart",
+             url:url+"/delete-items-cart",
              method:"POST",
              data:{item_cart_id:item_cart_id},
              beforeSend:function(){

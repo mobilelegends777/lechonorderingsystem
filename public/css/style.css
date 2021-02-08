@@ -528,13 +528,13 @@ span.product-title {
     width: 60px;
     height: 60px;
     top: 10px;
-    margin: 19% 36%;
     display: none;
     color: #fff;
     font-size: 33px;
     text-align: center;
     border-radius: 50%;
     padding: 12px 0;
+    margin: 76px 129px;
 }
 .cart-icon img {
     transition: transform .6s;

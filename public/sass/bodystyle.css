@@ -363,11 +363,11 @@ i.fa.fa-star {
     margin: 100px 122px;
     display: none;
 }*/
-.shop-item-image:hover .shop-cart-icon i {
+/*.shop-item-image:hover .shop-cart-icon i {
   display: block;
-}
+}*/
 
-.shop-cart-icon i {
+/*.shop-cart-icon i {
   position: absolute;
   top: 0;
   margin: 74px 113px;
@@ -376,7 +376,7 @@ i.fa.fa-star {
   font-size: 36px;
   padding: 18px;
   border-radius: 50%;
-}
+}*/
 
 .shop-cart-icon i:hover {
   color: #fff;
