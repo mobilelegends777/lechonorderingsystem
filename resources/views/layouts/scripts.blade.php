@@ -43,7 +43,7 @@ if(windowWidth < 768 && windowWidth != 360){
     infinite: true,
     speed: 1500,
     centerMode: true,
-    autoplay: true,
+    autoplay: false,
     slidesToShow: 2,
     slidesToScroll: 1
 
@@ -281,7 +281,7 @@ var mouse_is_inside = false;
 // end search mobile
 //  add to cart sidenav
   $('.toggle-cart-sidenav').click(function(){
-      $('.add-to-cart-items').width(400);
+      $('.add-to-cart-items').width(500);
       $('.add-to-cart-items').height('auto');
       $('.add-to-cart-items').css({background: '#dedcdc'});
       $('.cart-title').show();
@@ -406,17 +406,16 @@ $('.arrangeCol').on('click', function(e){
 
 var inp = $('.cart-input').length;
 function inc(element, id) {
-      // alert(id);
       var cart_price= $('.cart-price'+id).val();
-      // console.log(cart_price);
       var number = $('.cartQty__'+id).val();
       $('.cartQty__'+id).val(parseInt(number)+1);
-      // console.log(number);
       var qty = $('.cartQty__'+id).val();
-      // console.log(qty);
-      // console.log(qty*cart_price);
+      
       $('.subtotal'+id).empty();
       $('.subtotal'+id).append(`<span>${ qty * cart_price}</span>`);
+      var cartSub = $('.cart-tot-price'+id).val();
+      $('.substotal'+id).empty();
+      $('.substotal'+id).append(`<span>Total: ${ qty * cartSub}</span>`);
 }
 function dec(element, id) {
   var number = $('.cartQty__'+id).val();
@@ -427,6 +426,9 @@ function dec(element, id) {
   var cart_price= $('.cart-price'+id).val();
   $('.subtotal'+id).empty();
   $('.subtotal'+id).append(`<span>${cart_price*qty}</span>`);
+  var cartSub = $('.cart-tot-price'+id).val();
+  $('.substotal'+id).empty();
+  $('.substotal'+id).append(`<span>Total: ${ qty * cartSub}</span>`);
 }
 
 

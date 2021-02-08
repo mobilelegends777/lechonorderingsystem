@@ -67,11 +67,14 @@
 			<span class="search-icon" >
 				<img src="{{asset('images/search-icon.png')}}">
 			</span>
-			<span class="add-to" >
-			<a href="{{asset('frontpage/cartpage')}}" >
-				<img src="{{asset('images/cart.png')}}" class="icons3" title="Your Cart">
+			<div class="add-to" >
+				<a href="{{asset('frontpage/cartpage')}}" >
+					<img src="{{asset('images/cart.png')}}" class="icons3" title="Your Cart">
+					<a href="#" class="notification-cart" id="numb-item" style="display:none;">
+						<span class="badge2" id="badge2">0</span>
+					</a>
 				</a>
-			</span>
+			</div>
 
 		 @if(Auth::check())
 				<div class="dropdown-account">
@@ -219,19 +222,18 @@
 	$(document).ready(function(){
 		subTotal();
 		function subTotal(){
-				var sum = 0;
-			$('.sub-price').each(function(){
+				var sum = Number($(this).text());
+			$('.substotals').each(function(){
 				sum += Number($(this).text());
 			});
 			$('.sub_tot').text(sum);
 		}
-
 		var url = window.location.origin;
 		cartedItems();
 		$('.cart').click(function(e){
 			e.preventDefault();
+				subTotal();	
 				cartedItems();
-				subTotal();
 		});
 	function cartedItems(){
 		
@@ -257,23 +259,35 @@
 						var count_item=0;
 						$.each(data, function(i, item){
 						count_item++
+							var numb = parseFloat(item.price).toFixed(2);
 								$('.item-on-cart').append(`
 								<div class="carted-item-cont" id="cart-item-cont${item.cart_id}">
-									<span>
+									<div class="cart-product-cont">
 										<img src="${item.images}">
-									</span>
-									<span class="carted-item">
-										<span class="item-name"><h4 style="margin: 0;padding:0;">${item.name}</h4></span>
-										<span class="item-subtotal">
-											<span class="quantity">${item.quantity} x</span>
-											<span class="sub-price">${item.price}</span>
-										</span>
-									</span>
+										<span class="item-name"><p style="margin: 0;padding:0;">${item.name}</p></span>
+									</div>
+									<div class="carted-item">
+										<div class="item-subtotal">
+											<div class="sub-price">
+												<input type="hidden" class="cart-tot-price${item.cart_id}" value="${item.price}">
+												₱ <span class="cart-sub-price${item.cart_id}">${numb}</span> x
+											</div>
+											<div  class="cart-input">
+												<button  type="button" class="qty-dec" onclick="dec('qty',${item.cart_id})">-</button>
+													<input class="cartQty__${item.cart_id}" type="number" value="${item.quantity}" name="qty">
+												<button type="button" class="qty-inc" onclick="inc('qty',${item.cart_id})">+</button>
+											</div>
+											<div class="item-sub">
+												<span class="substotal${item.cart_id}">Total:<span class="substotals">${item.price}</span></span>
+											</div>
+										</div>
+									</div>
 									<span class="delete-item" onclick="al.deleteItemCart(${item.cart_id})">&times</span>
 								</div>
 								`);
 						});
 						$( "#badge" ).text( count_item );
+						$('#badge2').text( count_item );
 						// Carting();
 					}
 					}
@@ -372,14 +386,18 @@ Carting();
 				// alert(carted);
 				addCart();
 				subTotal();
+				
 			});
 		
 			
 		function addCart(){
 			$( ".notification-cart" ).show();
 			var text = $( "#badge" ).text();
+			var text2 = $( "#badge2" ).text();
 			text++;
+			text2++;
 			$( "#badge" ).text( text );
+			$( "#badge2" ).text( text2 );
 				$.ajax({
 				headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
 				type:'POST',

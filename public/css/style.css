@@ -528,6 +528,7 @@ span.product-title {
     width: 60px;
     height: 60px;
     top: 10px;
+    /*margin: 19% 40%;*/
     display: none;
     color: #fff;
     font-size: 33px;
@@ -550,7 +551,7 @@ span.product-title {
 }
 .cart-icon:hover {
   display:block;
-  background: #c4a256;
+  background: #2a2c2f;
 }
 
 .quality-cont img{
@@ -915,10 +916,19 @@ a.icon1 {
     background-color: #b25807;
 }
 .toggle-cart-sidenav img{
-    /*width: 80px;*/
-    width: 86px;
+    width: 93px;
     padding: 10px;
 
+}
+.sub-price {
+  width: 29%;
+  align-self: center;
+}
+.item-sub {
+  align-self: center;
+}
+.item-subtotal {
+  display: flex;
 }
 .item-image:hover .shop-cart-icon i {
   display: block;
@@ -942,9 +952,13 @@ span.cart-title {
     padding: 19px;
     font-family: "Blatant", sans-serif;
 }
+input._qty {
+  width: 25%;
+}
 .item-on-cart .carted-item {
     margin: 10px;
-    width: 51%;
+    /* width: 51%; */
+    width: 100%;
 }
 .carted-item {
     display: inline-grid;
@@ -952,6 +966,7 @@ span.cart-title {
 .carted-item-cont {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 24px;
 }
 .carted-item .item-name {
     color: #C4A265;
@@ -982,7 +997,7 @@ span.cart-title {
 }
 .item-on-cart {
     overflow: auto;
-    height: 200px;
+    height: 250px;
 }
 .check-out-sidbar button:hover {
     background: #b28b19;
@@ -1159,15 +1174,15 @@ button.filter-by-price:hover {
 .cart-input {
   display: inline-flex;
   align-items: center;
+  padding: 0 16px;
 }
 .cart-input input{
-  width: 20px;
-  width: 58px;
+  width: 29px;
   height: 30px;
 }
 .cart-input button{
   height: 1.875rem;
-  width: 2.4375rem;
+  width: 1.4375rem;
   border: none;
   color: #fff;
   font-size: 23px;
@@ -1204,6 +1219,7 @@ table.product-on-cart {
 .librebais td{
      padding: 17px 0px;
     text-align: center;
+    width: 10%;
 }
 .librebais a {
   color:  #c4a256;
@@ -1244,6 +1260,7 @@ thead td {
 }
 span.cancel-cart {
     font-size: 32px;
+    margin: 0 10px;
 }
 .summary-conts {
     width: 43%;
@@ -1445,9 +1462,12 @@ input.btn.btn-default:hover{
   td.carted-items {
     display: flex;
     justify-content: space-around;
+    width: 100%;
   }
-.carted-item-name {
+  .carted-item-name {
     align-self: center;
+    width: 44%;
+    text-align: start;
   }
   .filter-price {
     line-height: 50px;
@@ -1500,3 +1520,10 @@ input.btn.btn-default:hover{
   border: 1px solid #ddd;
 }
   
+.cart-product-cont {
+  text-align: center;
+  font-size: 18px;
+  color: #c4a256;
+  /* width: 100%; */
+  width: 51%;
+}

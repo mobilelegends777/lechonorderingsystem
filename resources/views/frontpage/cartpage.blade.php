@@ -41,7 +41,7 @@
 						<div class="carted-item-name">
 							<a href="">{{ $item->name }}</a></td>
 						</div>
-						<td>{{ $item->price }}
+						<td>₱ {{ number_format($item->price,2) }}
 							<input type="hidden" class="cart-price{{ $item->cart_id }}" value="{{ $item->price }}">
 						</td>
 						<td>
@@ -53,7 +53,7 @@
 						</td>
 						<td>
 							<input type="hidden" class="sub-subtotal{{ $item->price }}">
-							<span class="sub-totals subtotal{{ $item->cart_id }}">{{ $item->price }}</span>
+							<span class="sub-totals subtotal{{ $item->cart_id }}">{{ $item->price,2 }}</span>
 						</td>
 					</tr>
 				@endforeach
@@ -128,7 +128,7 @@ $(document).ready(function(){
 		flat = Number($('.flat-rate').text());
 		subT = Number($('.cart-page-subtotal').text());
 		total = flat + subT;
-		$('.Totals').text(total);
+		$('.Totals').text(total.toFixed(2));
 	}
 	// $('.cancel-cart').each(function(){
 	// 	$(this).on('click', function(){
@@ -149,7 +149,7 @@ $(document).ready(function(){
 	$('.sub-totals').each(function(){
 		sums += Number($(this).text());
 	});
-	$('.cart-page-subtotal').text(sums);
+	$('.cart-page-subtotal').text(sums.toFixed(2));
 }
 });
 </script>

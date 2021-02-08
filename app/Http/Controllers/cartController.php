@@ -51,7 +51,7 @@ class cartController extends Controller
         $data = Auth::user(); 
         $query = DB::select('SELECT * FROM cart
          INNER JOIN product ON product.product_id = cart.product_id
-         WHERE customer_id = '.$data->id.'');
+         WHERE customer_id = '.$data->id.' AND checkout = false');
         
         return response()->json($query);
     }
@@ -66,7 +66,7 @@ class cartController extends Controller
         $qty =  $request->qty;
         $cartID = $request->cartID;
         $query = DB::select('UPDATE cart SET quantity = '.$qty.' WHERE cart_id = '.$cartID.' ');
-       return "Update Successfull";
+        return redirect()->back();
     }
 
     
