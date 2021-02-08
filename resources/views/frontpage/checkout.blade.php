@@ -163,7 +163,7 @@
 	 <div class="move-to-center">
 		 <h4 class="check-title-size">Order Summary</h4>
 	  </div>
-	  <div class="onscroll">
+	  <div class="onscroll pname">
 		  <table>
 		<tr>
 			<th class="checkoutv">
@@ -177,20 +177,29 @@
 
 		</div>	
 		</tr>
+
+		
+
 		<tr>
 
 			<td class="check-data">
 		<div class="check-dpname">
-			sasas</td>
+				ssass
+			</td>
         </div>
 			<td class="check-price">
 			<div class="check-dprice">
-					12
-				</div>
+				12
+			</div>
 			</td>
 		</tr>
 		</table>
 	</div>
+
+
+
+	
+
 	<div class="checkout_1r1 clearfix">
     <hr>
 	   <h6 class="c-size">Comment</h6>

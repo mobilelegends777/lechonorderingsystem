@@ -68,6 +68,6 @@ class cartController extends Controller
         $query = DB::select('UPDATE cart SET quantity = '.$qty.' WHERE cart_id = '.$cartID.' ');
        return "Update Successfull";
     }
-
+    
     
 }

@@ -86,9 +86,22 @@ class checkoutController extends Controller
       
            Alert::success('Success', 'Record Updated');
            return back();
-       
-   }
-   
+
+    }
+
+    public function viewCart(){
+        $data = Auth::user(); 
+        $query = DB::select('SELECT * FROM cart
+         INNER JOIN product ON product.product_id = cart.product_id
+         WHERE customer_id = '.$data->id.'');
+
+         dd($query);
+        
+        return response()->json($query);
+    }
+
+
 
 
 }
+        
