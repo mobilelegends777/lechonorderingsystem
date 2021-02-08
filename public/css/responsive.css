@@ -189,8 +189,17 @@
 		padding: 14px 28px;
 		border: solid #c4a256;
 	}
+	.shop-items {
+		padding: 11px 4px;
+	}
 	
 }
+@media screen and (max-width: 1404px) {
+	.shop-item-image img {
+		width: 260px;
+	}
+}
+
 @media screen and (max-width: 1220px){
 	.headmenu {
 		display: flex;
@@ -281,13 +290,12 @@
 	.image-cont::-webkit-scrollbar {
 		display:none;
 	}
-<<<<<<< HEAD
-=======
+
 	.shop-sub-conts {
 		justify-content: space-around;
 	}
 	.shop-item-image img {
-		width: 200px;
+		width: 240px;
 	}
 	.shop-anchors-filter {
 		margin: 2.5625rem 3.8rem;
@@ -315,6 +323,9 @@
 	.shop-items-conts {
 		width: 100%;
 	}
+	.shop-item-image img {
+		width: 197px;
+	}
 }
 @media screen and (max-width: 1066px) {
 	.__item {
@@ -327,7 +338,6 @@
 	.box3-details {
 		margin: 2px 0;
 	}
->>>>>>> 169bcf5d6f49131087b0cb068afeb0867f3af234
 }
 @media screen and (max-width: 1024px){
 	.headmenu .des-logo .logos {
@@ -452,7 +462,7 @@
 }
 @media screen and (max-width: 1024px) {
 	.shop-sub-container3 {
-		width: 76%;
+		width: 85%;
 	}
 	.shop-anchors {
 	    font-size: 32px;
@@ -467,7 +477,7 @@
 		font-size: 22px;
 	}
 	.shop-images img {
-		width: 232px;
+		width: 275px;
 		border-radius: 6px;
 	}
 	/* .shop-conts {
@@ -669,7 +679,8 @@
 		/* width: 50px;
 		height: 26px; */
 		top: unset;
-		bottom: 92px;
+		bottom: 59px;
+		left: 86px;
 		display: block;
 		margin: 0;
 		background: #2a2c2f;
