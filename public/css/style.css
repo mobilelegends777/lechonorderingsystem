@@ -1516,3 +1516,23 @@ input.btn.btn-default:hover{
   /* width: 100%; */
   width: 51%;
 }
+.subtotal-cont {
+  display: flex;
+  justify-content: space-between;
+}
+button.cartUpdate {
+  height: 43px;
+  width: 129px;
+  background: #c4a256;
+  color: #fff;
+  border-radius: 5px;
+  border: unset;
+  cursor: pointer;
+  outline: unset;
+}
+button.cartUpdate:hover {
+  background:#b28b19; 
+}
+.alertify-notifier {
+  color: #fff;
+}

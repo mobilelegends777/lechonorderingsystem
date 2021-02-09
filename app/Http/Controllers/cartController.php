@@ -29,9 +29,9 @@ class cartController extends Controller
     {
 
         $data = Auth::user(); 
-        $query = DB::select('SELECT * FROM cart
-        INNER JOIN product ON product.product_id = cart.product_id
-        WHERE customer_id = '.$data->id.'');
+        $query = DB::select('SELECT *,quantity * price as total FROM cart 
+        INNER JOIN product using (product_id)
+        WHERE customer_id = '.$data->id.' AND checkout = false');
         $value = [
             '0' => $data,
             '1' => $query
@@ -49,10 +49,9 @@ class cartController extends Controller
     }
     public function viewCart(){
         $data = Auth::user(); 
-        $query = DB::select('SELECT * FROM cart
-         INNER JOIN product ON product.product_id = cart.product_id
-         WHERE customer_id = '.$data->id.' AND checkout = false');
-        
+        $query = DB::select('SELECT *,quantity * price as total FROM cart 
+        INNER JOIN product using (product_id)
+        WHERE customer_id = '.$data->id.' AND checkout = false');
         return response()->json($query);
     }
 
@@ -61,11 +60,37 @@ class cartController extends Controller
         $query = DB::select('DELETE FROM cart WHERE cart_id = '.$request->item_cart_id.' AND customer_id = '.$data->id.' ');
         return $request->item_cart_id;
     }
-    public function updateCart(Request $request) {
+    public function updateCartSideNav(Request $request){
         $data = Auth::user();
+        $userID = $data->id;
+        // dd($request->all());
+        $id = $request->id;
+        $qty = $request->qty;
+        for($x = 0;$x < count($id);$x++){
+            $query = DB::select('UPDATE cart SET quantity = '.$qty[$x].' WHERE cart_id = '.$id[$x].' AND customer_id = '.$userID.' ');
+        }
+        $sumQry = DB::select('SELECT sum(quantity * price) as total FROM cart 
+                    INNER JOIN product using (product_id)
+                    WHERE customer_id = '.$userID.'');
+        $msg = "Update Successful!!!";
+
+        $values = [
+            '1' => $sumQry,
+            '2' => $msg
+        ];
+        // dd($values[1][0]);
+        return response()->json($values); 
+    }
+    public function updateCart(Request $request) {
+        // dd($request->all());
+        $data = Auth::user();
+        $userID = $data->id;
         $qty =  $request->qty;
         $cartID = $request->cartID;
-        $query = DB::select('UPDATE cart SET quantity = '.$qty.' WHERE cart_id = '.$cartID.' ');
+        $len = count($cartID);
+        for($i = 0;$i<$len;$i++){
+            $query = DB::select('UPDATE cart SET quantity = '.$qty[$i].' WHERE cart_id = '.$cartID[$i].' AND customer_id = '.$userID.' ');
+        }
         return redirect()->back();
     }
 

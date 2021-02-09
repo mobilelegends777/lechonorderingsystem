@@ -115,6 +115,7 @@ Route::post('/filter-price','shopController@filterPrice');
 
 Route::post('/add-to-cart-item','cartController@addCart');
 Route::post('/view-carted','cartController@viewCart');
+Route::post('/update-cart-nav','cartController@updateCartSideNav');
 
 Route::post('/delete-items-cart','cartController@deleteItemCart');
 Route::post('/update-cart-items','cartController@updateCart')->name('cart-update');
@@ -123,3 +124,4 @@ Route::post('/display-error','userLoginController@login');
 
 Route::get('/search','searchController@searchData')->name('search');
 Route::post('/search-products','searchController@searchProduct');
+
