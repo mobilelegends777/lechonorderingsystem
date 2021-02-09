@@ -980,15 +980,16 @@ input._qty {
     background: #C4A265;
     border: solid #C4A265;
     border-radius: 5px;
-    padding: 14px 100px;
+    padding: 14px 59px;
     cursor: pointer;
 }
 .view-cart-sidebar button {
     border: solid #C4A265;
     background: #dedcdc;
     border-radius: 5px;
-    padding: 14px 100px;
+    padding: 14px 59px;
     cursor: pointer;
+    display: none;
 }
 .check-out-sidbar, .view-cart-sidebar {
     text-align: center;
@@ -1526,4 +1527,30 @@ input.btn.btn-default:hover{
   color: #c4a256;
   /* width: 100%; */
   width: 51%;
+}
+.subtotal-cont {
+  display: flex;
+  justify-content: space-between;
+}
+button.cartUpdate {
+  height: 43px;
+  width: 129px;
+  background: #c4a256;
+  color: #fff;
+  border-radius: 5px;
+  border: unset;
+  cursor: pointer;
+  outline: unset;
+}
+button.cartUpdate:hover {
+  background:#b28b19; 
+}
+.alertify-notifier {
+  color: #fff;
+}
+.__bottons {
+  display: flex;
+  margin: 0 auto;
+  width: 84%;
+  justify-content: center;
 }

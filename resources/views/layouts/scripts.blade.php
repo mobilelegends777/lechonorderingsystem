@@ -403,7 +403,7 @@ $('.arrangeCol').on('click', function(e){
       " - ₱" + $( "#slider-range" ).slider( "values", 1 ));
 
 
-
+      
 var inp = $('.cart-input').length;
 function inc(element, id) {
       var cart_price= $('.cart-price'+id).val();

@@ -26,11 +26,11 @@
 				</tbody>
 				@else
 				<tbody class="cart-table-conts">
-			<form  method="POST" action="{{ route('cart-update') }}">
-				@csrf
+				<form  method="POST" action="{{ route('cart-update') }}">
+					@csrf
 				@foreach($value[1] as $item)
 					<tr class="librebais" id="cart-cont-item{{$item->cart_id}}">
-						<input type="hidden" name="cartID" value="{{$item->cart_id}}">
+						<input type="hidden" class="cart-id" name="cartID[]" value="{{$item->cart_id}}">
 						<td>
 							<span class="cancel-cart" onclick="al.deleteItemCart({{$item->cart_id}})" style="cursor:pointer;">&times;</span>
 						</td>
@@ -43,18 +43,18 @@
 						</div>
 						</td>
 						<td>₱ {{ number_format($item->price,2) }}
-							<input type="hidden" class="cart-price{{ $item->cart_id }}" value="{{ $item->price }}">
+							<input type="hidden" class="cartPrice cart-price{{ $item->cart_id }}" value="{{ $item->price }}">
 						</td>
 						<td>
 							<div  class="cart-input">
 								<button  type="button" class="qty-dec" onclick="dec('qty',{{$item->cart_id}})">-</button>
-									<input class="cartQty__{{$item->cart_id}}" type="number" value="{{$item->quantity}}" name="qty">
+									<input class="cartQ cartQty__{{$item->cart_id}}" type="number" value="{{$item->quantity}}" name="qty[]">
 								<button type="button" class="qty-inc" onclick="inc('qty',{{$item->cart_id}})">+</button>
 							</div>
 						</td>
 						<td>
 							<input type="hidden" class="sub-subtotal{{ $item->price }}">
-							<span class="sub-totals subtotal{{ $item->cart_id }}">{{ $item->price,2 }}</span>
+							<span class="sub-totals subtotal{{ $item->cart_id }}">{{$item->total}}</span>
 						</td>
 					</tr>
 				@endforeach
@@ -151,7 +151,8 @@ $(document).ready(function(){
 		sums += Number($(this).text());
 	});
 	$('.cart-page-subtotal').text(sums.toFixed(2));
-}
+	}
+	
 });
 </script>
 @endsection
