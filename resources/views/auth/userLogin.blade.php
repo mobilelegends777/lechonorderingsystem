@@ -139,9 +139,6 @@
     
     </div>
 </div>
-
-<<<<<<< HEAD
-=======
 <!-- <script>
     $(function(){
         
@@ -172,8 +169,7 @@
         });
     });
 </script> -->
->>>>>>> c8d64c32742e1c745278bb2a404c59c878e51199
-@endsection
+
 
 <!-- <script>
     function users() {
@@ -195,4 +191,7 @@
         )
     }
 </script> -->
+@endsection
+
+
 
