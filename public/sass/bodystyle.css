@@ -238,7 +238,7 @@ i.fa.fa-star {
 }
 
 .shop-sub-container3 {
-  width: 60%;
+  width: 50%;
   height: auto;
   padding: 31px 0;
 }
@@ -249,7 +249,7 @@ i.fa.fa-star {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 111%;
+  /* width: 111%; */
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   /* justify-content: space-between; */
