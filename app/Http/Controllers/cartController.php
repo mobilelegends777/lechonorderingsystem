@@ -66,7 +66,8 @@ class cartController extends Controller
         // dd($request->all());
         $id = $request->id;
         $qty = $request->qty;
-        for($x = 0;$x < count($id);$x++){
+        $len = count($id);
+        for($x = 0;$x < $len;$x++){
             $query = DB::select('UPDATE cart SET quantity = '.$qty[$x].' WHERE cart_id = '.$id[$x].' AND customer_id = '.$userID.' ');
         }
         $sumQry = DB::select('SELECT sum(quantity * price) as total FROM cart 

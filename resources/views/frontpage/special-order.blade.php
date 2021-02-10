@@ -260,7 +260,7 @@ $('.orderNow').each(function(){
 						</div>
 						<div class="qty-proceed-to">
 							<div class="quantities">
-								<input type="number" name="" class="inpt-qty" value="1">
+								<input type="number" name="" class="inpt-qty" value="1" min="1">
 							</div>
 							<div class="proceed-to">
 								<button><i class="fa fa-arrow-right"></i><span>PROCEED</span></button>

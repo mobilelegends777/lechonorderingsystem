@@ -50,16 +50,17 @@
 			</div>
 		</div>
 		<div class="icons-inputs">
-			<form action="{{route('search')}}" method="GET">
-				<span class="inputs">
-						<input autocomplete="off" type="text" onkeyup="mySearchFunction(this.id)" name="query" id="query" placeholder="Search products..." class="inpt-search"> 
-						<button class="btn-search">Search</button>
+		<form action="{{route('search')}}" method="GET">
+			<span class="inputs">
+					<input autocomplete="off" type="text" onkeyup="mySearchFunction(this.id)" name="query" id="query" placeholder="Search products..." class="inpt-search"> 
+					<button class="btn-search">Search</button>
 
-						<ul id="myUL">
-							
-						</ul>
-				</span>
-			</form>
+					<ul id="myUL">
+						
+					</ul>
+			</span>
+		</form>
+
 		</div>
 		
 		<div class="icons">
@@ -188,7 +189,8 @@
 			</a>
 				<img src="{{ asset('images/sidenav-cart.png') }}"><span class="cart-title" style="display: none;">Your Cart</span>
 			</div>
-			
+			{{--<form  method="POST" class="updateForm" action="{{ route('cart-update') }}">
+					@csrf--}}
 			<div class="add-to-cart-items">
 				<div class="items-on-cart-container" style="display: none;">
 					<div class="item-on-cart">
@@ -203,6 +205,7 @@
 							<button type="submit" class="cartUpdate">Update</button>
 						</div>
 					</div>
+			<!-- </form> -->
 					<div class="__bottons">
 						<div class="check-out-sidbar">
 							<a href="{{asset('frontpage/checkout')}}">
@@ -226,6 +229,12 @@
 <script>
 
 $(document).ready(function(){
+	$('.cart').click(function(e){
+		e.preventDefault();
+			subTotal();	
+			cartedItems();
+			updateCart();
+	});
 		// alert(1);
 	
 	// var len = $('.cart-id').length;
@@ -237,6 +246,8 @@ $(document).ready(function(){
 		$('.cart_id').each(function() { arrid.push($(this).val()); });
 		$('.cartQ').each(function() { arrQ.push($(this).val()); });
 		// alert(id);
+		updateCart();
+	function updateCart(){
 			$.ajax({
 				headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
 				type:'POST',
@@ -246,16 +257,23 @@ $(document).ready(function(){
 				{
 					// console.log(data);
 					alertify.success(data[2]);
+					if(data[1][0].total != null){
 					$('.sub_tot').empty();
 					$('.sub_tot').append(`
-						<span>${data[1][0]}</span>
+						<span>${data[1][0].total}</span>
 					`);
-					subTotal();
-					cartedItems();
+					}
+					else{
+					$('.sub_tot').empty();
+					$('.sub_tot').append(`
+						<span>0</span>	`);
+					}
+					
 				}
 			});
+			subTotal();
+		}
 	});
-
 		subTotal();
 		function subTotal(){
 				var sum = Number($(this).text());
@@ -266,10 +284,7 @@ $(document).ready(function(){
 		}
 		var url = window.location.origin;
 		cartedItems();
-		$('.cart').click(function(e){
-			e.preventDefault();
-				cartedItems();
-		});
+	
 	function cartedItems(){
 		
 			$.ajax({
@@ -333,45 +348,10 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
-	
-Carting();	
 $('.filter-by-price').on('click',function(){
-	var url = window.location.origin;
-		// alert(min);
-		$.ajax({
-			headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
-			type:'POST',
-			url: url+'/filter-price',
-			data:{min:$( "#slider-range" ).slider( "values", 0 ),max:$( "#slider-range" ).slider( "values", 1 )},
-			success:function(data)
-			{
-				$('.shop-items-conts').empty();
-				console.log(data);
-				$.each(data, function(i, item){
-					$('.shop-items-conts').append(`
+	filterPrice();
+});
 
-					<div class="shop-items">
-									<div class="shop-item-image">
-										<a href="{{asset('frontpage/shop-details')}}" class="shop-images">
-											<img src="${item.images}">
-										</a>
-										<div class="cartIcon${item.product_id} cart-icon">
-											<a href="" id="addToCart" class="shop-cart-icon addToCart" data-value="${item.product_id}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a href="">
-										</div>
-									</div>
-									
-									<div class="shop-info-price">
-										<div class="shop-item-name">${item.name}</div>
-										<div class="shop-item-price">₱${item.price}</div>
-									</div>
-								</div>
-					
-					`);
-				});
-				Carting();
-			}
-		});
-	});
 	$('.catType').each(function(){
 		var cat = $(this).data('value');
 		var url = window.location.origin;
@@ -391,6 +371,7 @@ $('.filter-by-price').on('click',function(){
 					// console.log(data);
 					$.each(data, function(i, item){
 							
+						if(item.order_exist == 0){
 							$('.shop-items-conts').append(`
 								<div class="shop-items">
 									<div class="shop-item-image">
@@ -407,6 +388,24 @@ $('.filter-by-price').on('click',function(){
 									</div>
 								</div>
 							`);
+						}else if(item.order_exist == 1){
+							$('.shop-items-conts').append(`
+								<div class="shop-items">
+									<div class="shop-item-image">
+										<a href="{{asset('frontpage/shop-details')}}" class="shop-images">
+											<img src="${item.images}">
+										</a>
+										<div class="cartIcon${item.product_id} cart-icon">
+											<span class="shop-cart-icon"><i id="cart-icons " class="fas fa-check" aria-hidden="true"></i></span>
+										</div>
+									</div>
+									<div class="shop-info-price">
+										<div class="shop-item-name">${item.name}</div>
+										<div class="shop-item-price">₱${item.price}</div>
+									</div>
+								</div>
+							`);
+						}
 					});
 					
 					$.each(data, function(i, item){
@@ -448,49 +447,7 @@ $('.filter-by-price').on('click',function(){
 		});
 	});
 @if(Auth::check())	
-	function Carting(){ 
-		
-		$('.addToCart').each(function(){
-		var carted = $(this).data('value');
-		var url = window.location.origin;
-			$(this).on('click', function(e){
-				e.preventDefault();
-				// alert(carted);
-				addCart();
-				subTotal();
-				
-			});
-		
-			
-		function addCart(){
-			$( ".notification-cart" ).show();
-			var text = $( "#badge" ).text();
-			var text2 = $( "#badge2" ).text();
-			text++;
-			text2++;
-			$( "#badge" ).text( text );
-			$( "#badge2" ).text( text2 );
-				$.ajax({
-				headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
-				type:'POST',
-				url: url+'/add-to-cart-item',
-				data:{carted:carted},
-				success:function(data)
-					{	
-						if(data == true){
-							$('.cartIcon'+carted).empty();
-							$('.cartIcon'+carted).append(`
-								<span class="shop-cart-icon"><i id="cart-icons " class="fas fa-check" aria-hidden="true"></i></span>
-							`)
-						// $( "#badge" ).text( text );
-							
-						}
-					}
-				});
-		}
-	});
-}
-		
+	Carting();
 @endif
 });
 // $(document).ready(function(){
@@ -498,39 +455,6 @@ $('.filter-by-price').on('click',function(){
 //     alert('search');
 //   });
 // });
-function mySearchFunction(id) {
-	var input = $('#'+id).val();
-	// console.log(input);
-	var url = window.location.origin;
-	var n = input.length;
-	if(n > 0 ) {
+mySearchFunction(id);
 
-		$.ajax({
-		headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
-		type:'POST',
-		url: url+'/search-products',
-		data:{item:input},
-		success:function(data)
-			{	
-				// console.log(data);
-				$('#myUL').empty();
-				if(data==false) {
-					$('#myUL').append(`
-							<li><a href="">No record found...</a></li>
-						`);
-				}else{
-					$.each(data, function(i, item){
-						$('#myUL').append(`
-							<li><a href="${url+'/search?query='+item.name}">${item.name}</a></li>
-						`);
-					});
-				}
-			}
-		});
-
-	} else {
-		$('#myUL').empty();
-	}
-	
-}
 </script>

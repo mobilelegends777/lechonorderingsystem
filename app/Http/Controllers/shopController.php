@@ -53,29 +53,50 @@ class shopController extends Controller
 	 }
 	public function filterProd(Request $request)
 	{
+		$user = Auth::user();
+		// dd($user);
 		$category = $request->category;
-		if($category == 9){
-			$query = DB::select('SELECT * FROM product WHERE category_type != 8');
-		}else {
-			$query = DB::select('SELECT * FROM product WHERE category_type = '.$category.'');
+		if($user != null){
+			$id = $user->id;
+			if($category == 9){
+				$query = DB::select("SELECT p.*, coalesce((
+					select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id),'0') 
+					as order_exist FROM  product p WHERE category_type != 8");
+			}else {
+				$query = DB::select("SELECT p.*, coalesce((
+					select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id),'0') 
+					as order_exist FROM  product p WHERE category_type = $category");
+			}
+		}else{
+			if($category == 9){
+				$query = DB::select('SELECT * FROM product WHERE category_type != 8');
+			}else {
+				$query = DB::select('SELECT * FROM product WHERE category_type = '.$category.'');
+			}
 		}
 		// $data = [
 		// 	'data' => $query
 		// ];
-		
+		// dd($query);
 		return response()->json($query);
 	}
 	public function filterPrice(Request $request)
 	{
+		$user = Auth::user();
+		$id = $user->id;
 		$min = $request->min;
 		$max = $request->max;
-
-		$query = DB::select('SELECT * FROM product WHERE price BETWEEN '.$min.' AND '.$max.'');
-
+		if($user != null){
+			$query = DB::select("SELECT p.*, coalesce((
+				select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id),'0') 
+				as order_exist FROM  product p WHERE price BETWEEN $min AND $max");
+		}else{
+			$query = DB::select('SELECT * FROM product WHERE price BETWEEN '.$min.' AND '.$max.'');
+		}
 		// $data = [
 		// 	'data' => $query
 		// ];
-
+		// dd($query);
 		return response()->json($query);
 	}
 	
