@@ -1,0 +1,31 @@
+.order-container {
+    height: 700px;
+}
+
+.container-form {
+    width: 800px;
+    height: 600px;
+    background-color: #f8f7f7;
+    margin: 0;
+    position: absolute;
+    top: 33%;
+    transform: translateY(-51%);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   
+    transform: translate(-50%, -90%);
+    border: 1px solid #00000075;
+}
+
+.Order.Title {
+    font-size: 50px;
+    position: relative;
+    left: 3em;
+}
+img.avatar.img-circle {
+    width: 320px;
+    position: relative;
+    left: 2em;
+}

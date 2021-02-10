@@ -8,6 +8,10 @@ use Auth;
 use Session;
 use App\Login;
 use AuthenticatesUsers;
+use DB;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Collection;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class myorderController extends Controller
 {
@@ -23,11 +27,19 @@ class myorderController extends Controller
     {
 
         $data = Auth::user(); 
-        $value = [
-            '0' => $data
-        ];
+      
 
-        return view('userpage/myorder', compact('value'));
+        $query = DB::select('SELECT * FROM cart
+        INNER JOIN product ON product.product_id = cart.product_id
+        WHERE customer_id = '.$data->id.' AND checkout =true');
+
+            $value = [
+                '0' => $data,
+                '1' => $query
+            ];
+            
+            
+        return view('userpage/myorder', compact('value','data'));
     }
 
 

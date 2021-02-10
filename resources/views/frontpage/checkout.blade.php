@@ -200,7 +200,7 @@
 			</td>
 			<td class="check-price">
 			<div class="check-dprice">₱
-			{{ $item->price }}.00
+			{{ $item->price,2 }}
 			</div>
 			</td>
 		</tr>
@@ -224,7 +224,7 @@
 	   <h5 class="normal ship-bot">Shipping</h5>
 	  </div>
 	  <div class="col-sm-6">
-	   <h5 class="mgt move-right move-to-top move-to-free">₱ {{$value1[2][0]->total}}.00</h5>
+	   <h5 class="mgt move-right move-to-top move-to-free">₱ {{$value1[2][0]->total,2}}</h5>
 	   <h5 class="mgt move-right move-to-top margin-top">Free</h5>
 	  </div>
 	 </div>
@@ -236,7 +236,7 @@
 	   <h5 class="mgt1 normal"><strong>Total</strong></h5>
 	  </div>
 	  <div class="col-sm-6">
-	   <h4 class="mgt2 move-right"><span class="normal ">₱ </span></span>{{$value1[2][0]->total}}.00</h4>
+	   <h4 class="mgt2 move-right"><span class="normal ">₱ </span></span>{{$value1[2][0]->total,2}}</h4>
 	  </div>
       
 	 </div>
@@ -246,30 +246,30 @@
 	  <div class="col-sm-6 method" >
 	   <h5 class="mgt normal"><strong class="p-method">Payment Method</strong</h5>
 	  </div>
-	  <form metho="POST" action ="" class="form-horizontal" role="form">
-        {{ csrf_field() }}
+	  <form metho="POST" action ="{{ route('order') }}" class="form-horizontal" role="form">
+    {{ csrf_field() }}
         {{ method_field('PATCH') }}
 	  <div class="col-sm-6 move-free-pay">
-      <input id="myBtn" type="radio" id="payment" name="payment" value="cdc">
+      <input type="radio" id="myBtn" name="payment1" value="cdc">
       <label class="free-move-debit">Credt / Debit Card <img  class="debit-icon" src="{{asset('images/adddebit.png')}}"></label><br>
 	  <div class="cod-moves">
-      <input type="radio" id="payment" name="payment" value="cod">
+      <input type="radio" id="payment" name="payment1" value='cod'>
       <label class="free-move-debit">Cash on Delivery <img  class="cod-icon" src="{{asset('images/cash.png')}}"></label><br>
 	  </div>
 	  </div>
       
 	 </div>
   
-	</div>
-    
+		</div>
+
    </div>
    <div class="col-sm-6">
-	  <button class="mgt text-right _center button mgt" type="submit">Place Order</button>
+	  <button id="place-order"class="mgt text-right _center button mgt" type="submit">Place Order</button>
 	 </div>
    </div>
   
   </div>
-</form>
+  </form>
   </div>
  </div>	 
 </section>
@@ -321,3 +321,12 @@ MJ will not have access to your credit card info."class="info"src="{{asset('imag
  
 @endsection
 
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("input[type='radio']").click(function(){
+            var radioValue = $("input[name='payment1']:checked").val();
+			//alert(radioValue);
+        });
+    });
+</script>
