@@ -32,6 +32,7 @@
 								@foreach($value[2] as $item)
 									<li class="menu-category"><a href="" class="catType" data-value="{{$item->id}}">{{$item->description}}</a></li>
 								@endforeach
+									<li class="menu-category"><a href="{{asset('frontpage/special-order')}}" class="" data-value="">Special Order</a></li>
 							</ul>
 							<div class="filter-price">
 								<label for="amount">Filter by price</label>
@@ -156,7 +157,15 @@
 											<div class="col-price carts-price1">
 												<div class="shop-item-price prod-price">₱{{ number_format($item->price,2)}}</div>
 												<div class="shop-left">
-													<button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button>
+											@if(Auth::check())
+												@if($item->order_exist == 1)
+													<span><i class="fas fa-check"></i>On cart</span>
+												@else
+													<button class="addcart cols-cart{{$item->product_id}}" onclick="addC.addInCart({{$item->product_id}})"><i class="fa fa-cart-plus"></i>Add to cart</button>
+												@endif
+											@else
+													<button class="addcart cols-cart{{$item->product_id}}" onclick="addC.addInCart({{$item->product_id}})"><i class="fa fa-cart-plus"></i>Add to cart</button>
+											@endif
 												</div>
 											</div>
 										</div>
@@ -203,10 +212,6 @@
 // 		});
 // });
 $(document).ready(function(){
-	// $('.filter-by-price').on('click', function(){
-	// 	alert("unya pa nako ni buhatun"+"mao ni ang minimum "+$( "#slider-range" ).slider( "values", 0 )+" "+"mao ni ang max "+$( "#slider-range" ).slider( "values", 1 ));
-	// });
-
 	$('.catType').each(function(){
 		var cat = $(this).data('value');
 		var url = window.location.origin;
@@ -223,9 +228,10 @@ $(document).ready(function(){
 					
 					$('.shop-items-conts').empty();
 					$('.shop-items-conts-col').empty();
-					console.log(data);
+					// console.log(data);
 					$.each(data, function(i, item){
-							
+							// console.log(item.order_exist);
+						if(item.order_exist == 0){
 							$('.shop-items-conts').append(`
 								<div class="shop-items">
 									<div class="shop-item-image">
@@ -242,6 +248,24 @@ $(document).ready(function(){
 									</div>
 								</div>
 							`);
+						}else if(item.order_exist == 1){
+							$('.shop-items-conts').append(`
+								<div class="shop-items">
+									<div class="shop-item-image">
+										<a href="{{asset('frontpage/shop-details')}}" class="shop-images">
+											<img src="${item.images}">
+										</a>
+										<div class="cartIcon${item.product_id} cart-icon">
+											<span class="shop-cart-icon"><i id="cart-icons " class="fas fa-check" aria-hidden="true"></i></span>
+										</div>
+									</div>
+									<div class="shop-info-price">
+										<div class="shop-item-name">${item.name}</div>
+										<div class="shop-item-price">₱${item.price}</div>
+									</div>
+								</div>
+							`);
+						}
 					});
 					
 					
@@ -266,7 +290,7 @@ $(document).ready(function(){
 											<div class="col-price carts-price1">
 												<div class="shop-item-price prod-price">₱${item.price}</div>
 												<div class="shop-left">
-													<button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button>
+													<button class="addcart cols-cart" onclick="addC.addInCart(${item.product_id})"><i class="fa fa-cart-plus"></i>Add to cart</button>
 												</div>
 											</div>
 										</div>
@@ -276,6 +300,7 @@ $(document).ready(function(){
 							`);
 	
 					});
+					
 				}
 			});
 			
