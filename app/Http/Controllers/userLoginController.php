@@ -13,6 +13,10 @@ use Session;
 use App\Login;
 use AuthenticatesUsers;
 use Laravel\Socialite\Facades\Socialite;
+use Redirect;
+use Illuminate\Support\MessageBag;
+use Input;
+use Alert;
 
 
 class userLoginController extends Controller
@@ -85,11 +89,18 @@ class userLoginController extends Controller
        {    
         //    dd($value);
            return view('frontpage.front-page')->with('value', $value);
-        //    return response()->json($value);
        }
+
+       return redirect('u-login')->with('success', 'Login Successfully!');
+
+    }else {
+
+        Alert::error('Login Failed', 'Please Try Again!');
+    return Redirect::back()->withInput(Input::except('password'));
+    
+
        
-         return redirect()->route('u-login')->with('value', $value);
-            // return response()->json($value);
+    
     }
 }
 

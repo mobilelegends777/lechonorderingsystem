@@ -17,6 +17,12 @@
   padding-top: 20px;
   color: rgba(255, 255, 255, 0.8);
 }
+span.invalid-feedback {
+  position: relative;
+  top: -9em;
+  background-color: white;
+}
+
 
 .container {
   position: relative;
@@ -752,238 +758,334 @@ input {
   }
 }
 
-
-@media only screen 
-and (max-width: 400px)
-and (min-width: 375px)
-and (orientation: portrait)
-{
-
-
+@media only screen and (max-width: 400px) and (min-width: 375px) and (orientation: portrait) {
   .login-body {
     background-image: url(../asset/img/599.jpg);
     padding: 102px 0;
     text-align: -webkit-center;
     height: 1250px;
+  }
+  .login-reg-form {
+    width: 800px;
+    border: solid #2a2c2f;
+    background: #2a2c2fc7;
+    border-radius: 5px;
+  }
+  form.form-signup {
+    width: 700px;
+    position: relative;
+    right: 8em;
+  }
+  .scl-reg {
+    position: relative;
+    right: 40px !important;
+  }
+  .signup-button {
+    position: relative;
+    right: 3em;
+  }
+  .social-log {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 101%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .signup-inputs {
+    width: 130%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #e2dbd424;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    right: 4rem;
+  }
+  .login-body {
+  background-image: url(../asset/img/599.jpg);
+  padding: 102px 0;
+  text-align: -webkit-center;
+  height: 1254px;
 }
 .login-reg-form {
-  width: 800px;
+  width: 1260px;
   border: solid #2a2c2f;
   background: #2a2c2fc7;
   border-radius: 5px;
+  height: 1100px;
+
 }
-form.form-signup {
-  width: 700px;
+form.form-signin {
+  width: 316% !important;
   position: relative;
-  right: 8em;
+  left: -24rem !important;
+  /* height: 168px; */
+  font-size: 27px !important;
 }
-.scl-reg {
-  position: relative;
-  right: 40px !important;
+button.btn.facebook-btn.social-btn {
+  height: 135px !important;
+  font-size: 50px !important;
 }
-.signup-button {
-  position: relative;
-  right: 3em;
+button.btn.google-btn.social-btn {
+  height: 135px !important;
+  font-size: 50px !important;
+}
+.login-reg-form input::placeholder{
+
+  font-size:40px !important;
+}
+.login-reg-form input {
+  height: 128px !important;
+  font-size: 47px !important;
+}
+.btn-primary#btn-signup {
+  height: 135px !important;
+  /* width: 90%; */
+  font-size: 60px !important;
+}
+button.btn.btn-success.btn-block {
+  height: 135px !important;
+  width: 100% !important;
+  font-size: 60px !important;
+}
+.forgot-pass a {
+  font-size: 46px !important;
+}
 }
 
-.social-log {
-  display: flex;
-  width: 101%;
-  justify-content: space-between;
-}
-.signup-inputs {
-  width: 130%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #e2dbd424;
-  border-radius: 4px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  position: relative;
-  right: 4rem;
-}
-
-
-
-}
-
-// @media only screen 
-// and (max-width:736px)
-// and (min-width:414px)
-// and (orientation:portrait)
-// {
-
-//   .signup-inputs {
-//     width: 106%;
-//     position: relative;
-//     left: -4rem;
-// }
-
-
-// }
-
-@media only screen 
-and (max-width:360px)
-and (min-width:320px)
-and (orientation:portrait)
-{
-
+@media only screen and (max-width: 360px) and (min-width: 320px) and (orientation: portrait) {
   .login-reg-form {
     width: 950px;
     border: solid #2a2c2f;
     background: #2a2c2fc7;
     border-radius: 5px;
+  }
+  a#cancel_signup {
+    padding: 13px 5px;
+    color: #c4a265;
+    font-size: 35px;
 }
-form.form-signup {
-  width: 200%;
-  position: relative;
-  right: 9em;
+  form.form-signup {
+    width: 300%;
+    position: relative;
+    right: 21em;
+  }
+  .scl-reg {
+    position: relative;
+    right: 20px !important;
+  }
+  .signup-button {
+    position: relative;
+    right: 9px;
+  }
+  .sign-up {
+    height: 130px !important;
+    width: 100% !important;
+    font-size: 50px !important;
+
+  }
+  .footer-desc.footer-gallery {
+    display: none;
 }
-.scl-reg {
+.login-body {
+  background-image: url(../asset/img/599.jpg);
+  padding: 102px 0;
+  text-align: -webkit-center;
+  height: 1304px;
+}
+.login-reg-form {
+  width: 1260px;
+  border: solid #2a2c2f;
+  background: #2a2c2fc7;
+  border-radius: 5px;
+  height: 1145px;
+
+}
+form.form-signin {
+  width: 316% !important;
   position: relative;
-  right: 20px!important;
+  left: -24rem !important;
+  /* height: 168px; */
+  font-size: 27px !important;
+}
+button.btn.facebook-btn.social-btn {
+  height: 135px !important;
+  font-size: 50px !important;
+}
+button.btn.google-btn.social-btn {
+  height: 135px !important;
+  font-size: 50px !important;
+}
+.login-reg-form input::placeholder{
+
+  font-size:40px !important;
+}
+.login-reg-form input {
+  height: 128px !important;
+  font-size: 47px !important;
+}
+.btn-primary#btn-signup {
+  height: 135px !important;
+  /* width: 90%; */
+  font-size: 60px !important;
+}
+button.btn.btn-success.btn-block {
+  height: 135px !important;
+  width: 100% !important;
+  font-size: 60px !important;
+}
+.forgot-pass a {
+  font-size: 46px !important;
 }
 
-.signup-button {
-  position: relative;
-  right: 30px;
 }
 
-}
-
-@media only screen 
-and (max-width:540px)
-and (min-width:411px)
-and (orientation:portrait)
-{
+@media only screen and (max-width: 540px) and (min-width: 411px) and (orientation: portrait) {
   .login-reg-form {
     width: 1000px;
     border: solid #2a2c2f;
     background: #2a2c2fc7;
     border-radius: 5px;
-}
+  }
+  form.form-signup {
+    width: 220%;
+    position: relative;
+    right: 12rem;
+  }
+  .scl-reg {
+    position: relative;
+    right: 1rem !important;
+  }
+  .signup-button {
+    position: relative;
+    right: 30px;
+  }
 
-form.form-signup {
-  width: 220%;
+.login-body {
+  background-image: url(../asset/img/599.jpg);
+  padding: 102px 0;
+  text-align: -webkit-center;
+  height: 1254px;
+}
+.login-reg-form {
+  width: 1360px;
+  border: solid #2a2c2f;
+  background: #2a2c2fc7;
+  border-radius: 5px;
+  height: 1100px;
+
+}
+form.form-signin {
+  width: 316% !important;
   position: relative;
-  right: 12rem;
+  left: -24rem !important;
+  /* height: 168px; */
+  font-size: 27px !important;
 }
-.scl-reg {
-  position: relative;
-  right: 1rem!important;
+button.btn.facebook-btn.social-btn {
+  height: 135px !important;
+  font-size: 50px !important;
+}
+button.btn.google-btn.social-btn {
+  height: 135px !important;
+  font-size: 50px !important;
+}
+.login-reg-form input::placeholder{
+
+  font-size:40px !important;
+}
+.login-reg-form input {
+  height: 128px !important;
+  font-size: 47px !important;
+}
+.btn-primary#btn-signup {
+  height: 135px !important;
+  /* width: 90%; */
+  font-size: 60px !important;
+}
+button.btn.btn-success.btn-block {
+  height: 135px !important;
+  width: 100% !important;
+  font-size: 60px !important;
+}
+.forgot-pass a {
+  font-size: 46px !important;
+}
+.sign-up {
+  height: 130px !important;
+  width: 100% !important;
+  font-size: 50px !important;
+}
 }
 
-.signup-button {
-  position: relative;
-  right: 30px;
-}
-
-}
-
-@media only screen 
-and (max-width: 300px)
-and (min-width: 280px){
-
-
+@media only screen and (max-width: 300px) and (min-width: 280px) {
   .login-reg-form {
     width: 759px;
     border: solid #2a2c2f;
     background: #2a2c2fc7;
     border-radius: 5px;
-}
-form.form-signup {
-  width: 155%;
-  position: relative;
-  right: 4rem;
-}
-.scl-reg {
-  position: relative;
-  right: 23px!important;
-}
-.signup-button {
-  position: relative;
-  right: 35px;
+  }
+  form.form-signup {
+    width: 155%;
+    position: relative;
+    right: 4rem;
+  }
+  .scl-reg {
+    position: relative;
+    right: 23px !important;
+  }
+  .signup-button {
+    position: relative;
+    right: 35px;
+  }
 }
 
-}
-
-@media only screen 
-and (max-width: 640px)
-and (min-width: 360px)
-and (orientation:landscape){
-
+@media only screen and (max-width: 640px) and (min-width: 360px) and (orientation: landscape) {
   .login-reg-form {
     width: 900px;
     border: solid #2a2c2f;
     background: #2a2c2fc7;
     border-radius: 5px;
-}
-form.form-signup {
-  width: 200%;
-  position: relative;
-  right: 9rem;
-}
-.scl-reg {
-  position: relative;
-  right: 1rem!important;
-}
-
-.signup-button {
-  position: relative;
-  right: 32px;
-}
-
+  }
+  form.form-signup {
+    width: 200%;
+    position: relative;
+    right: 9rem;
+  }
+  .scl-reg {
+    position: relative;
+    right: 1rem !important;
+  }
+  .signup-button {
+    position: relative;
+    right: 32px;
+  }
 }
 
-@media only screen 
-and (max-width: 736px)
-and (min-width: 411px)
-and (orientation: landscape)
-{
-
+@media only screen and (max-width: 736px) and (min-width: 411px) and (orientation: landscape) {
   .login-reg-form {
     width: 900px;
     border: solid #2a2c2f;
     background: #2a2c2fc7;
     border-radius: 5px;
-}
-form.form-signup {
-  width: 200%;
-  position: relative;
-  right: 10rem;
-}
-.scl-reg {
-  position: relative;
-  right: 1rem!important;
+  }
+  form.form-signup {
+    width: 200%;
+    position: relative;
+    right: 10rem;
+  }
+  .scl-reg {
+    position: relative;
+    right: 1rem !important;
+  }
+  .signup-button {
+    position: relative;
+    right: 24px;
+  }
 }
 
-.signup-button {
-  position: relative;
-  right: 24px;
-}
-}
-.move-to-center-verify {
-  margin-left: 30rem;
-  margin-right: 30rem;
-  font-size: 23px;
-}
-.move-to.left-verify {
-  margin-left: 50rem;
-  margin-right: 50rem;
-  font-size: 27px;
-  color: #d40707;
-}
-button.btn.btn-link.p-0.m-0.align-baseline {
-  background-color: orange;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  position: relative;
-  left: 21rem;
-}
 /*# sourceMappingURL=bodystyle.css.map */

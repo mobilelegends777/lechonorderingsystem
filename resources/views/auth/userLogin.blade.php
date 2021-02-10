@@ -20,16 +20,17 @@
                                         </span>
                                     @enderror
                 <input id="password" type="password" class="form-control input_pass @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password" required="">
-                @error('password')
+                @error('password')  <div class="Error-Msg">
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
+                                    </div>
                                     @enderror
             </div>
             <div class="signin-forgot"> 
                  <button type="submit" class="btn btn-success btn-block log-in-btn">
                                         <i class="fas fa-sign-in-alt"></i> {{ __('Sign in') }}</button>
-               
+                                        
             </div>
             <div class="forgot-pass"><a href="#" id="forgot_pswd">Forgot password?</a></div>
             <div class="signup-new">
@@ -119,6 +120,8 @@
                 </div><br>
                 <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
             </form>
+
+            @include('sweetalert::alert')
         </div>
         
     

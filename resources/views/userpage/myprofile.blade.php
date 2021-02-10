@@ -17,7 +17,7 @@
       <!-- left column -->
       <div class="col-md-prof">
         <div class="text-center moves-center">
-          <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+          <img src="{{$value[0]->images}}" class="avatar img-circle" alt="avatar">
           <h6>Upload a different photo...</h6>
           
           <input type="file" name="image" class="form-control file-size">
@@ -131,7 +131,7 @@
           <div class="form-group">
             <label class="col-lg-3 control-label">Coordinate:</label>
             <div class="col-lg-8">
-            <input class="form-control" id ="coordinate" name="lat" type="text" value="">
+            <input class="form-control" id ="coordinate" name="coordinate" type="text" value="">
             </div>
           </div>
           <div class="form-group">
@@ -159,6 +159,7 @@
             </div>
           </div>
         </form>
+        @include('sweetalert::alert')
       </div>
   </div>
 </div>
