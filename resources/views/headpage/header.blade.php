@@ -50,16 +50,17 @@
 			</div>
 		</div>
 		<div class="icons-inputs">
-			<form action="{{route('search')}}" method="GET">
-				<span class="inputs">
-						<input autocomplete="off" type="text" onkeyup="mySearchFunction(this.id)" name="query" id="query" placeholder="Search products..." class="inpt-search"> 
-						<button class="btn-search">Search</button>
+		<form action="{{route('search')}}" method="GET">
+			<span class="inputs">
+					<input autocomplete="off" type="text" onkeyup="mySearchFunction(this.id)" name="query" id="query" placeholder="Search products..." class="inpt-search"> 
+					<button class="btn-search">Search</button>
 
-						<ul id="myUL">
-							
-						</ul>
-				</span>
-			</form>
+					<ul id="myUL">
+						
+					</ul>
+			</span>
+		</form>
+
 		</div>
 		
 		<div class="icons">
@@ -184,7 +185,8 @@
 			</a>
 				<img src="{{ asset('images/sidenav-cart.png') }}"><span class="cart-title" style="display: none;">Your Cart</span>
 			</div>
-			
+			{{--<form  method="POST" class="updateForm" action="{{ route('cart-update') }}">
+					@csrf--}}
 			<div class="add-to-cart-items">
 				<div class="items-on-cart-container" style="display: none;">
 					<div class="item-on-cart">
@@ -199,6 +201,7 @@
 							<button type="submit" class="cartUpdate">Update</button>
 						</div>
 					</div>
+			<!-- </form> -->
 					<div class="__bottons">
 						<div class="check-out-sidbar">
 							<a href="{{asset('frontpage/checkout')}}">
@@ -240,16 +243,23 @@ $(document).ready(function(){
 				{
 					// console.log(data);
 					alertify.success(data[2]);
+					if(data[1][0].total != null){
 					$('.sub_tot').empty();
 					$('.sub_tot').append(`
-						<span>${data[1][0]}</span>
+						<span>${data[1][0].total}</span>
 					`);
-					subTotal();
-					cartedItems();
+					}
+					else{
+					$('.sub_tot').empty();
+					$('.sub_tot').append(`
+						<span>0</span>	`);
+					}
+					
 				}
 			});
+			subTotal();
+			cartedItems();
 	});
-
 		subTotal();
 		function subTotal(){
 				var sum = Number($(this).text());
@@ -262,6 +272,7 @@ $(document).ready(function(){
 		cartedItems();
 		$('.cart').click(function(e){
 			e.preventDefault();
+				subTotal();	
 				cartedItems();
 		});
 	function cartedItems(){
@@ -328,7 +339,6 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	
-Carting();	
 $('.filter-by-price').on('click',function(){
 	var url = window.location.origin;
 		// alert(min);
@@ -366,6 +376,7 @@ $('.filter-by-price').on('click',function(){
 			}
 		});
 	});
+Carting();	
 	$('.catType').each(function(){
 		var cat = $(this).data('value');
 		var url = window.location.origin;
@@ -527,4 +538,9 @@ function mySearchFunction(id) {
 	}
 	
 }
+$(document).ready(function(){
+	
+	
+
+});
 </script>
