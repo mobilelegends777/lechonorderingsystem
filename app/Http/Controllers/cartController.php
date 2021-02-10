@@ -9,6 +9,7 @@ use Session;
 use App\Login;
 use AuthenticatesUsers;
 use DB;
+use Alert;
 class cartController extends Controller
 
 {
@@ -37,6 +38,7 @@ class cartController extends Controller
             '1' => $query
         ];
         // dd($value[1]);
+        
         return view('frontpage/cartpage', compact('value'));
         
     }
@@ -45,6 +47,7 @@ class cartController extends Controller
         $data = Auth::user(); 
         // dd($data);
         $query = DB::insert('INSERT INTO cart (product_id,customer_id,checkout)values('.$carted.','.$data->id.',false)');
+        
         return response()->json($query);
     }
     public function viewCart(){
@@ -52,6 +55,7 @@ class cartController extends Controller
         $query = DB::select('SELECT *,quantity * price as total FROM cart 
         INNER JOIN product using (product_id)
         WHERE customer_id = '.$data->id.' AND checkout = false');
+       
         return response()->json($query);
     }
 
@@ -88,12 +92,13 @@ class cartController extends Controller
         $userID = $data->id;
         $qty =  $request->qty;
         $cartID = $request->cartID;
-        $len = count($cartID);
-        for($i = 0;$i<$len;$i++){
-            $query = DB::select('UPDATE cart SET quantity = '.$qty[$i].' WHERE cart_id = '.$cartID[$i].' AND customer_id = '.$userID.' ');
-        }
-        return redirect()->back();
-    }
+        $query = DB::select('UPDATE cart SET quantity = '.$qty.' WHERE cart_id = '.$cartID.' ');
+     
 
+        Alert::success('Success', 'Record Updated');
+        return back();
+       
+    }
+    
     
 }

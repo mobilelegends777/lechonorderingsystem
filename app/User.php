@@ -58,5 +58,5 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 
-    
+    public $timestamps = true;
 }

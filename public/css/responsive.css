@@ -60,7 +60,13 @@
 	.icons {
     	width: 8%;
 	}
+<<<<<<< HEAD
 	
+=======
+	/*.page-wrapper {
+	    margin: 105px 0%;
+	}*/
+>>>>>>> 7b8d5369e26e87180e9c9e496a283dbbe956fed0
 
 	.shop-filters {
 		width: 390px;
@@ -102,6 +108,7 @@
 		width: 249px;
 	}
 	
+
 }
 @media screen and (max-width: 1565px) {
 	.shop-item-image img {
@@ -112,7 +119,6 @@
 	}
 }
 @media screen and (max-width: 1440px){
-
 	.items-container {
 		width: 90%;
 		margin: 0 5%;
@@ -216,7 +222,6 @@
 	.shop-items {
 		padding: 11px 4px;
 	}
-	
 }
 @media screen and (max-width: 1404px) {
 	.shop-item-image img {
@@ -373,6 +378,7 @@
 	.box3-details {
 		margin: 2px 0;
 	}
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -385,6 +391,8 @@
 	.container .sub-container .bsp {
 		font-size: 27px;
 	}
+@media screen and (max-width: 1024px){
+
 	.headmenu .des-logo .logos {
 	    margin-left: 0px;
 	    margin-top: 0px;
@@ -629,6 +637,7 @@
 		margin-top: 28px;
 	}
 	
+
 }
 @media screen and (max-width: 1000px){
 	.icons-inputs {
@@ -709,7 +718,6 @@
 	.__item .box3 span {
 		font-size: 15px;
 	}  */
-	
 }
 @media screen and (max-width: 768px){
 	.shop-name-col {
@@ -845,6 +853,7 @@
 	.librebais td {
 		width: 15%;
 		text-align: center;
+
 	}
 	.apply-coupon button, .update-cart button {
 		font-size: 22px;
@@ -1389,14 +1398,16 @@
     	border-radius: 16px;
 	}
 	.shop-anchors {
-		font-size: 47px;
+
+
+		font-size: 19px;
 	}
-	
 	span.filter-show {
 		font-size: 18px;
 	}
 	button.filter-show-btn {
 		padding: 19px 40px;
+
 	}
 	.shop-sorting {
 	    font-size: 53px;
@@ -1405,15 +1416,13 @@
 	    font-size: 59px;
 	}
 	.shop-info-price {
-	    font-size: 44px;
+
+		font-size: 13px;
 	}
-	
 	.sort-items select {
 		font-size: 15px;
 	}
-	.shop-item-info {
-		/* margin-top: 117px; */
-	}
+	
 	.col-price {
 	    /*width: 100%;*/
 		display: block;
@@ -1423,7 +1432,7 @@
 	    /*top: 179px;*/
 	}
 	button.addcart {
-	    height: 79px;
+		font-size: 30px;
 		width: 100%;
 		font-size: 14px;
 	    border-radius: 4px;
@@ -1433,9 +1442,9 @@
 		top: 178px;
 	}
 	.shop-images img {
-	    height: 19.5625rem;
-	    border-radius: 12px;
-	    width: 419px;
+		height: 10.5625rem;
+		border-radius: 12px;
+		width: 224px;
 	}
 	#Btop {
 		width: 45px;
@@ -1519,9 +1528,11 @@
 	    font-size: 37px;
 	}
 	.page-sub-container h1 {
+
     	font-size: 54px;
+
 	}
-}
+}	
 @media screen and (max-width:540px) {
 	/*.container .sub-container .bsp {
 		margin-top: 58px;
@@ -1534,6 +1545,7 @@
 	}
 	.page-sub-container {
 		margin: 2.75rem 0;
+		width: 35%;
 	}
 	.container .sub-container2 .sc2 {
 		font-size: 50px;
@@ -1554,6 +1566,11 @@
 		padding: 11px;
 		border-radius: 50%;
 	}
+	.hr {
+		width: 41%;
+
+
+	}
 	.__item {
 		width: 609px;
 	}
@@ -1567,6 +1584,11 @@
 	td.carted-items {
 		display: block;
 		width: 100%;
+}
+	.f-icon {
+		width: 571px;
+		margin-top: 36px;
+
 	}
 	.sales1 {
 		margin-top: 63px;
@@ -1584,13 +1606,17 @@
 		height: 8.5625rem;
 		width: 157px;
 	}
+	.shop-images img {
+		height: 8.5625rem;
+		width: 157px;
+
+	}
 	.des-logo img {
 	    width: 330px;
 	}
 	.headmenu .des-logo .logos {
 		margin-left: 25px;
 	}
-
 	.librebais img {
 		width: 82px;
 	}
@@ -1890,9 +1916,7 @@
     	font-weight: bold;
 	    line-height: 62px;
 	}
-	.topnav {
-		/*height: 142px;*/
-	}
+
 	.topnav.responsive .ordinary {
 		font-size: 50px;
 	    padding: 46px 17px;
@@ -2542,8 +2566,10 @@
 	}
 	/*.des-logo img {
     	width: 502px;*/
+
 	.shop-items {
 		width: 152px;
+
 	}
 	.headmenu .des1 {
     	font-size: 66px;
@@ -2886,9 +2912,6 @@
 	.shower_left h4 {
 	    font-size: 88px;
 	    margin-left: -145px;
-	}
-	.shower_left h4 b, strong {
-	    margin-left: -492px;
 	}
 	.shower_right .panel-primary>.panel-heading {
 		display: flex;

@@ -77,7 +77,7 @@
 								@foreach($value[3] as $item)
 								<div class="shop-items">
 									<div class="shop-item-image">
-										<a href="{{asset('frontpage/shop-details')}}" class="shop-images">
+										<a class="shop-images">
 											<img src="{{ $item->images }}">
 										</a>
 										@if(Auth::check())
@@ -109,7 +109,7 @@
 						@foreach($value[1] as $item)
 							<div class="shop-items">
 								<div class="shop-item-image">
-									<a href="{{asset('frontpage/shop-details')}}" class="shop-images">
+									<a class="shop-images">
 										<img src="{{ $item->images }}">
 									</a>
 									@if(Auth::check())

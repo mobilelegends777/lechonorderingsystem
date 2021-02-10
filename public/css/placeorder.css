@@ -1,0 +1,149 @@
+
+
+.order-container {
+    height: 750px;
+}
+.order-container h5 {
+    font-family: 'Parisienne', cursive;
+    margin: 0;
+    padding: 0;
+}
+.order-container h6 {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container-form {
+    width: 800px;
+    height: 655px;
+    background-color: #f8f7f7;
+    margin: 0;
+    transform: translateY(-51%);
+    position: absolute;
+    top: 52%;
+    left: 50%;
+   
+    transform: translate(-50%, -90%);
+    border: 1px solid #00000075;
+}
+.Order.Title {
+    text-align: center;
+}
+.Order.Title h5{
+    font-size: 45px;
+    position: relative;
+    margin-top: 30px;
+}
+.Order.Title .order-success h6{
+    font-size: 28px;
+    margin: 10px;
+}    
+.Order.Title .order-success i {
+    font-size: 50px;
+    color: darkgreen;
+}
+.Order.Title .success-msg {
+    margin-top: 10px;
+    padding-top: 10px;
+    /* position: relative;
+    top: 20px; */
+}
+.Order.Title .success-msg h6 {
+    font-size: 16px;
+    margin: 2.5px;
+}
+.Order.Title .success-msg .art1 {
+    margin: 10px;
+}    
+.Order.Title .success-msg .art2 {
+    margin: 5px;
+}    
+.Order.Title .success-msg .art3 {
+    margin: 10px;
+}    
+.art-btn {
+    margin-top: 20px;
+    padding: 5px;
+    background-color: #2a2c2f;
+    color: whitesmoke;
+    border-radius: 3px;
+}
+.art-btn:hover {
+    color: #C4A265;
+}
+img.avatar.img-circle {
+    width: 207px;
+    position: relative;
+}
+
+
+
+@media screen and (max-width : 1000px){
+    .container-form {
+        position: relative;
+        top: 85%;
+        width: 750px;
+    }
+    img.avatar.img-circle {
+        width: 195px;
+    }
+}    
+
+@media screen and (max-width : 768px){
+
+    .order-container {
+        height: 850px;
+    }
+    .container-form {
+        position: relative;
+        top: 85%;
+        width: 1000px;
+        height: 735px;
+    }
+    .Order.Title .success-msg h6 {
+        font-size: 22px;
+    }
+    img.avatar.img-circle {
+        width: 250px;
+    }    
+    .Order.Title .success-msg .art1 {
+        margin: 10px;
+    }    
+    .Order.Title .success-msg .art2 {
+        margin: 5px;
+    }    
+    .Order.Title .success-msg .art3 {
+        margin: 10px;
+    } 
+    .art-btn {
+        font-style: 16px;
+        padding: 5px;
+    }
+}    
+@media screen and (max-width : 568px) {
+    .order-container {
+        height: 1000px;
+    }
+    .container-form {
+        width: 950px;
+        height: 850px;
+    }
+    .Order.Title h5 {
+        font-size: 60px;
+        margin-top: 30px;
+    }
+    .Order.Title .order-success h6 {
+        font-size: 34px;
+    }
+    .Order.Title .success-msg h6 {
+        font-size: 28px;
+    }
+    .art-btn {
+        padding: 10px;
+        font-size: 26px;
+    }
+    img.avatar.img-circle {
+        width: 248px;
+    }
+}    

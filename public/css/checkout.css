@@ -6,7 +6,7 @@
   padding-bottom: 40px;
   width: 500px;
 }
-*
+
 .check_lm1 ul li{
 display:inline-block;
 padding-right:10px; 
@@ -43,8 +43,76 @@ vertical-align:bottom;
   position: relative;
   bottom: 154px;
 }
+.onscroll {
+  overflow-y: scroll;
+  margin-left: 30px;
+  line-height: 1.3em;
+  max-height: 100px;
+}
+.onscroll .check-price {
+  position: relative;
+  left: 8rem;
+  text-align: left;
+}
+.onscroll .check-pname {
+  text-align: left;
+}
+.check-dquantity {
+  position: relative;
+  left: 4rem;
+} 
+a.return-c {
+  color: black;
+}
+a.return-c:hover{
+
+  color:#f6740a;
+}
 /*********************checkout_end****************/
 
+@media screen and (max-width : 1366px){
+  .check-pname {
+    font-size: 16px;
+  }
+  .check-price {
+    font-size: 16px;
+  }
+  /* .check-dpname {
+    font-size: 16px;
+  } */
+  .onscroll .check-price {
+    position: relative;
+    left: 9.4rem;
+    text-align: left;
+  }
+  .check-dquantity {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: .5rem;
+}
+  .check-pname {
+    font-size: 26px;
+  }
+  .check-dpname {
+    font-size: 22px;
+}
+
+}
+@media screen and (max-width : 1366px)and (orientation: landscape)
+    { 
+      .onscroll .check-pname {
+        font-size: 24px;
+    }
+    .onscroll .checkoutv .check-price {
+        font-size: 24px;
+        left: 7.4rem;
+  }
+  .check-price .check-dprice {
+        font-size: 21px;
+        position: relative;
+        left: -2rem;
+  }      
+}
 
 
 @media screen and (max-width : 767px){
@@ -62,27 +130,28 @@ margin-top:0;
 .checkout_1l2  p{
 margin-top:15px!important; 
  } 
-.checkout_1l2  h6{
+/* .checkout_1l2  h6{
 margin-bottom:15px; 
 text-align:center;
- } 
+ }  */
 .checkout_1r1i h5{
 margin-top:15px!important; 
  }
 .checkout_1r1i  h4{
  margin-top:15px!important;
- }
+}
  
  
 }
 
 
- ._center {
+._center {
   position: relative;
-  left: 24rem;
-  bottom: 5rem;
-  width: 88%;
+  left: 13em;
+  bottom: -2rem;
+  width: 30%;
 }
+
 
 img.debit-icon {
     position: relative;
@@ -157,7 +226,7 @@ img.debit-icon {
   
   .modal-footer {
     padding: 2px 16px;
-    background-color:#e2e1dfa1;
+    /* background-color:#e2e1dfa1; */
     color: white;
     height: 80px;
   }
@@ -175,9 +244,9 @@ img.modal-payment {
 
 img.info {
     position: absolute;
-    left: 3%;
-    bottom: 49px;
-    width: 25px;
+    left: 5%;
+    bottom: 15px;
+    width: 30px;
 }
 
 div#contacts {
@@ -215,7 +284,7 @@ img.check-icon {
 .check_rm {
   padding-top: 40px;
   padding-bottom: 40px;
-  width: 263%;
+  width: 176%;
   position: relative;
   left: 5rem;
   top: 1rem;
@@ -259,7 +328,7 @@ h5.mgt.move-right.move-to-top.margin-top {
 
 h5.move-free-data {
   position: relative;
-  bottom: 12rem;
+  bottom: 12em;
   left: 15rem;
 }
 h5.move-free-data1 {
@@ -288,7 +357,10 @@ h6.text-right {
 .move-to-center {
   position: relative;
   bottom: 2rem;
-  left: 9rem;
+  left: 153px;
+}
+.check-dquantity {
+  text-align: center;
 }
 .size-height {
   height: 10px;
@@ -489,7 +561,7 @@ img.cod-icon {
   position: relative;
   left: 26rem;
   bottom: 5rem;
-  width: 88%;
+  width: 24%;
 }
 .ship h5 {
   position: relative;
@@ -526,6 +598,20 @@ img.modal-payment {
   left: 200px;
   top: -10px;
 }
+.check-pname {
+  font-size: 25px;
+}
+.check-price {
+  font-size: 25px;
+}
+.check-dpname {
+  font-size: 25px;
+}
+.onscroll .check-price {
+  position: relative;
+  left: 7rem;
+  text-align: left;
+}
 }
 
 
@@ -539,6 +625,9 @@ and (max-width:767px)
 and (min-width: 375px)
 and (orientation:portrait){
 
+  .modal-content {
+    height: 30px;
+  }    
   .check_lm.clearfix {
     display: none;
 }
@@ -551,7 +640,7 @@ section#center {
   width: 1000px;
   margin-top: 7rem;
   position: relative;
-  left: -9rem;
+  left: -13rem;
   border-style: solid;
 }
 
@@ -573,12 +662,12 @@ h6.text-right {
 h4.check-title-size {
   font-size: 40px;
   position: relative;
-  left: -109px;
+  left: 0px;
 }
 ._center {
   position: relative;
-  left: -5rem;
-  bottom: 7rem;
+  left: 0rem;
+  bottom: 0rem;
   width: 88%;
   font-size: 44px;
 }
@@ -716,6 +805,41 @@ img.modal-payment {
   border-color: black;
   font-size: 40px;
 }
+.check-pname {
+  font-size: 32px;
+  position: relative;
+  left: 4rem;
+}
+.check-price {
+  font-size: 32px;
+}
+.check-dpname {
+  font-size: 32px;
+  position: relative;
+  left: 4rem;
+}
+.onscroll .check-price {
+  position: relative;
+  left: 22rem;
+  text-align: left;
+}
+
+.container {
+  width: 1458px;
+}
+.des-logo img {
+  width: 320px;
+  /* margin-top: 75px; */
+}
+span.footer-title {
+  font-size: 54px;
+  position: relative;
+  left: 0rem;
+}
+.info-contacts {
+  font-size: 49px;
+  text-align: left;
+}
 }
 
 @media only screen 
@@ -723,7 +847,7 @@ and (max-width: 414px)
 and (min-width: 736px)
 and (orientation: portrait)
 {
-
+  
   .check_lm.clearfix {
     display: none;
 }
@@ -849,16 +973,31 @@ and (orientation: portrait)
   .check_lm.clearfix {
     display: none;
 }
-
+section#center {
+  background-color: #c4a265cc;
+}
+.onscroll {
+  overflow-y: scroll;
+  margin-left: 30px;
+  line-height: 3.3em;
+  max-height: 170px;
+}
+.cod-moves {
+  position: relative;
+  bottom: 1em;
+}
+a.return-c {
+  color: black;
+  display: none;
+}
 section#center {
   height: 2150px;
 }
 .check_rm.clearfix {
-  height: 1900px;
-  width: 1000px;
+  width: 1131px;
   margin-top: 7rem;
   position: relative;
-  left: -9rem;
+  left: -20rem!important;
   border-style: solid;
 }
 
@@ -880,12 +1019,12 @@ h6.text-right {
 h4.check-title-size {
   font-size: 40px;
   position: relative;
-  left: -109px;
+  /* left: -109px; */
 }
 ._center {
-  position: relative;
+  /* position: relative;
   left: -5rem!important;
-  bottom: 7rem!important;
+  bottom: 7rem!important; */
   width: 88%;
   font-size: 44px;
 }
@@ -1017,14 +1156,36 @@ img.modal-payment {
 input.form-control::placeholder {
   font-size: 30px;
 }
+.check-dquantity {
+  text-align: center;
+  font-size: 42px;
+  position: relative;
+  left: 11rem;
+}
+.check-pname {
+  font-size: 34px;
+  position: relative;
+  left: 4rem;
+}
 }
 
 
 @media only screen 
 and (max-width: 731px)
-and (min-width: 411px)
+and (min-width: 411px) and (orientation: portrait)
 {
-
+  img.modal-payment {
+    position: relative;
+    left: 150px;
+}
+  .topnav a {
+    width: 270px;
+}
+  span.footer-title {
+    font-size: 54px;
+    position: relative;
+    left: 0rem;
+}
   .check_lm.clearfix {
     display: none;
 }
@@ -1063,8 +1224,8 @@ h4.check-title-size {
 }
 ._center {
   position: relative;
-  left: -5rem;
-  bottom: 7rem;
+  left: 0rem;
+  bottom: 0rem;
   width: 88%;
   font-size: 44px;
 }
@@ -1165,11 +1326,11 @@ h5.normal.ship-bot {
   text-align: left;
 }
 span.sp {
-  font-size: 43px;
+  font-size: 34px;
   text-align: left;
 }
 .info-contacts {
-  font-size: 50px;
+  font-size: 34px;
   text-align: left;
 }
 h4.check-title-size {
@@ -1186,9 +1347,9 @@ h4.check-title-size {
   border-style: solid;
 }
 ._center {
-  position: relative;
+  /* position: relative;
   left: -5rem;
-  bottom: 7rem;
+  bottom: 7rem; */
   width: 88%;
   font-size: 44px;
 }
@@ -1203,9 +1364,47 @@ h4.check-title-size {
 h4.check-title-size {
   font-size: 40px;
   position: relative;
-  left: -136px;
+  left: 0px;
 }
-
+.check-pname {
+  font-size: 32px;
+  position: relative;
+  left: 0rem;
+}
+.check-price {
+  font-size: 32px;
+}
+.check-dpname {
+  font-size: 32px;
+  position: relative;
+  left: 0rem;
+  text-align: left;
+  margin: 0.3rem;
+}
+.onscroll .check-price {
+  position: relative;
+  left: 22rem;
+  text-align: left;
+}
+.headmenu .des-logo .logos {
+  margin-left: 50px;
+}
+.check-dquantity {
+  text-align: center;
+  font-size: 42px;
+  position: relative;
+  left: 7rem;
+}
+button.menu-toggle {
+  width: 75%;
+  font-size: 50px;
+}
+.headmenu .icons .icons2 {
+  width: 6rem;
+}
+/* .mgt a {
+  display: none;
+} */
 
 }
 
@@ -1214,20 +1413,43 @@ and (max-width: 568px)
 and (min-width: 320px)
 and (orientation: portrait)
 {
-
+  img.modal-payment {
+    position: relative;
+    left: 150px;
+  }    
+  .space_left {
+    padding-left: 0px;
+}
   .check_lm.clearfix {
     display: none;
 }
-
+section#center {
+  background-color: #c4a265cc;
+}
+.check-dquantity {
+  text-align: center;
+  font-size: 42px;
+  position: relative;
+  left: 7rem;
+}
+.onscroll {
+  overflow-y: scroll;
+  margin-left: 30px;
+  line-height: 3.3em;
+  max-height: 200px;
+}
+a.return-c {
+  color: black;
+  display: none;
+}
 section#center {
   height: 2150px;
 }
 .check_rm.clearfix {
-  /* height: 1900px; */
-  width: 1000px;
+  width: 1131px;
   margin-top: 7rem;
   position: relative;
-  /* left: -13rem; */
+  left: -20.5rem;
   border-style: solid;
 }
 
@@ -1247,20 +1469,23 @@ h6.text-right {
 }
 
 h4.check-title-size {
-  font-size: 40px;
+  font-size: 50px;
   position: relative;
-  /* left: -109px; */
+  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 ._center {
   position: relative;
-  left: 7rem;
-  bottom: -2rem;
-  width: 88%;
+  left: 0rem;
+  /* bottom: 0rem; */
+  width: 45%;
   font-size: 44px;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
 }
 
 h6.c-size {
-  font-size: 27px;
+  font-size: 40px;
 }
 textarea.txt-size {
   width: 100%;
@@ -1268,9 +1493,12 @@ textarea.txt-size {
   border-color: black;
 }
 h5.normal {
-  font-size: 45px;
+  font-size: 50px;
   position: relative;
   right: 19rem;
+}
+strong.p-method {
+  margin-left: 36rem;
 }
 .txt-size::placeholder {
   font-size: 40px;
@@ -1361,7 +1589,7 @@ h5.normal.ship-bot {
 .col-sm-4 {
  
   float: left;
-  width: 349px;
+  width: 303px;
 }
 .space_left {
   padding-left: 0;
@@ -1369,12 +1597,417 @@ h5.normal.ship-bot {
 .modal_btn {
   position: relative;
   top: 71px;
-  left: 20rem;
+  left: 21.6rem;
   font-size: 30px;
 }
+.move-flex {
+  width: 100%;
+}
+.container {
+  width: 1280px;
+}
+.check-pname {
+  font-size: 42px;
+  position: relative;
+  left: 4rem;
+  margin-top: 1rem;
+}
+.check-price {
+  font-size: 32px;
+}
+.check-dpname {
+  font-size: 36px;
+  position: relative;
+  left: 4rem;
+  text-align: left;
+}
+.onscroll .check-price {
+  position: relative;
+  left: 16rem;
+  text-align: left;
+  font-size: 42px;
+}
+.move-to-center {
+  position: relative;
+  bottom: 2rem;
+  left: 0rem;
+}
+a.return-c {
+  color: black;
+  display: none;
+}
+button.menu-toggle {
+  width: 90%;
+  height: 5.6875rem;
+}
+.footer-contact-us {
+  text-align: left;
+}
+.social-media-link {
+  width: 60%;
+}
+.copyright {
+  font-size: 36px;
+}
+.topnav a {
+  width: 230px;
+  font-size: 36px;
+}
+/* .des-logo img {
+  width: 400px;
+} */
 
 }
 
+@media only screen 
+and (max-width: 568px)
+and (min-width: 320px)
+and (orientation: landscape)
+{
+ .checkout-1r1 h6 {
+    position: relative;
+    left: 0;
+  }
+  li {
+    font-size: 30px;
+}
+  .check_rm.clearfix {
+    height: 1700px;
+}    
+  .method .mgt .p-method {
+    position: relative;
+    left: 18rem;
+}
+  .space_left {
+    padding-left: 0px;
+}
+  a.return-c {
+    display: none;
+}
+  h4.check-title-size {
+    left: -150px;
+    font-size: 36px;
+}
+/* section#center {
+  background-color: #c4a265cc;
+} */
+._center {
+  position: relative;
+  /* left: 10em; */
+  bottom: -2rem;
+  width: 30%;
+  font-size: 22px;
+}
+.onscroll {
+  overflow-y: scroll;
+  margin-left: 30px;
+  line-height: 3.3em;
+  max-height: 100px;
+}
+.check_rm.clearfix {
+  position: relative;
+  left: 95px;
+  height: 950px;
+}
+#footer {
+  text-align: left;
+}
+button.mgt.text-right._center.button.mgt {
+  position: relative;
+  left: 14rem;
+}
+
+}
+@media only screen 
+and (max-width: 731px)
+and (min-width: 411px)
+and (orientation: portrait)
+{
+  .social-media-icons a img {
+    height: 55px;
+}
+  .copyright {
+    font-size: 26px;
+    width: 30%;
+}
+button.menu-toggle {
+  width: 80%;
+  height: 4.6875rem;
+}
+.mgt .button.mgt {
+  position: relative;
+  left: 1rem;
+}
+.check_lm4.clearfix {
+  position: relative;
+  left: 1rem;
+}
+.check_lm2.clearfix {
+  width: 100%;
+  text-align: left;
+}
+}
+
+@media only screen 
+and (max-width: 731px)
+and (min-width: 411px)
+and (orientation: landscape)
+{
+  .check-price .check-dprice {
+    font-size: 22px;
+    position: relative;
+    left: -2.5rem;
+}
+  h5.mgt.move-right.move-to-top.margin-top {
+    position: relative;
+    top: -90px;
+}
+  h5.mgt.move-right.move-to-top.move-to-free {
+    position: relative;
+    top: -95px;
+}
+  .col-sm-6.move-free-pay {
+    font-size: 26px;
+    margin-top: 2rem;
+}
+  h6 {
+    font-size: 26px;
+  }
+  .onscroll .check-pname {
+    font-size: 26px;
+}
+  .container1 {
+    padding-left: 100px;
+    position: relative;
+    width: 41%;
+    left: 12rem;
+}
+  .check_lm {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 600px;
+}
+  h5 {
+    font-size: 26px;
+  }
+  h5.move-free-data {
+    position: relative;
+    bottom: 12.5rem;
+    left: 15rem;
+}
+  h4 {
+    font-size: 30px;
+  }
+  .checkout {
+    text-align: left;
+  }
+  li {
+    font-size: 26px;
+  }
+  h4.check-title {
+    text-align: left;
+  }
+  h5.move-free-data1 {
+    position: relative;
+    bottom: 1.8rem;
+    /* left: 15rem; */
+}    
+  .checkout_1l3 h5 {
+    text-align: left;
+}    
+  .space_left {
+    padding-left: 0px;
+    text-align: left;
+}
+  
+  span.sp {
+    font-size: 32px;
+    text-align: left;
+}
+  .info-contacts {
+    font-size: 32px;
+    text-align: left;
+  }
+  .check_lm4.clearfix {
+    position: relative;
+    left: 0rem;
+}
+  .mgt .button.mgt {
+    position: relative;
+    left: -2rem;
+}
+  .space_right {
+    padding-right: 0px;
+}
+  .space_all {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+  .space_left {
+    padding-left: 0px;
+}
+  .method .mgt .p-method {
+    position: relative;
+    left: 11rem;
+}
+  a.return-c {
+    color: black;
+    display: none;
+}
+  h4.check-title-size {
+    position: relative;
+    left: 55px;;
+}
+._center {
+  width: 40%;
+  position: relative;
+  top: 2rem;
+}
+/* .mgt a {
+  display: none;
+} */
+.check_rm.clearfix {
+  position: relative;
+  left: 75px;
+} 
+.check-dquantity {
+  position: relative;
+  left: 0rem;
+  font-size: 26px;
+}
+.onscroll .check-price {
+  position: relative;
+  left: 10rem;
+  text-align: left;
+  font-size: 26;
+}
+.check-pname {
+  font-size: 32px;
+  position: relative;
+  left: 0rem;
+  margin-bottom: 1rem;
+}
+
+}
+
+@media only screen 
+and (max-width: 812px)
+and (min-width: 375px)
+and (orientation: landscape)
+{
+  /* .footer-1st-cont {
+    justify-content: space-evenly;
+    display: none;
+} */
+.footer-desc {
+  margin: 10px 8px;
+  width: 30%;
+  position: relative;
+  left: 5rem;
+}
+.footer-container {
+  display: block;
+  justify-content: space-evenly;
+  display: flex;
+}
+/* .footer-desc {
+  margin: 10px 8px;
+  width: 30%;
+} */
+.footer-desc {
+  margin: 10px 8px;
+  width: 50%;
+}
+  h6.size-color1 {
+    position: relative;
+    color: #f6610a7a;
+    bottom: 50px;
+    left: 280px;
+}
+  h6.size-color {
+    position: relative;
+    color: #f6610a7a;
+    bottom: 50px;
+    left: 250px;
+  }
+  li {
+      font-size: 26px;
+  }
+  h4 {
+    font-size: 26px;
+  }
+  h5 {
+    font-size: 26px;
+  }
+  h5.move-free-data {
+    position: relative;
+    bottom: 13rem;
+    left: 15rem;
+}
+  h5.move-free-data1 {
+    position: relative;
+    bottom: 2.2rem;
+    left: 15rem;
+  }
+  .check_lm {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 600px;
+}
+  .checkout_1.clearfix {
+    display: flex;
+    position: relative;
+    left: -1rem;
+  }
+  .method .mgt .p-method {
+    position: relative;
+    left: 11rem;
+}
+.move-to-center {
+  position: relative;
+  bottom: 2rem;
+  left: 200px;
+}
+.ship.col-sm-6 {
+  position: relative;
+  top: 19px;
+}
+h6 {
+  font-size: 26px;
+  margin-top: 20px;
+  position: relative;
+  left: 10rem;
+}
+._center {
+  position: relative;
+  left: 16em;
+  bottom: -2rem;
+  width: 30%;
+}
+.col-sm-6.move-free-pay {
+  margin-top: 2rem;
+  font-size: 24px;
+}
+}      
+
+
+
+  /* img.footer-logos {
+    display: none;
+
+}
+.footer-title-tweets {
+  display: none;
+}
+.footer-tweet-time{
+  display: none;
+}
+.footer-gallery {
+  display: none;
+}
+.footer-desc {
+  font-size: 26px;
+} */
 @media only screen 
 and (max-width: 300px)
 and (min-width: 280px)
@@ -1520,7 +2153,7 @@ and (orientation:portrait)
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s;
-    height: 45%;
+    height: 35%;
     
 
 }
@@ -1528,17 +2161,17 @@ and (orientation:portrait)
   padding: 2px 16px;
   background-color: #e2e1dfa1;
   color: white;
-  height: 20%;
+  height: 11%;
 }
 
 .col-sm-4 {
   float: left;
-  width: 342px;
+  width: 296px;
 }
 .modal_btn {
   position: relative;
   top: 71px;
-  left: 23rem;
+  left: 20.5rem;
   font-size: 30px;
 }
 }

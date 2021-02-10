@@ -88,7 +88,6 @@ class userLoginController extends Controller
 
        {    
 
-            
            return view('frontpage.front-page')->with('value', $value); 
        }
     //    return redirect('u-login')->with('success', 'Login Successfully!');
