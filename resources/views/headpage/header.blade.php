@@ -227,11 +227,13 @@
 
 $(document).ready(function(){
 		// alert(1);
-	var url = window.location.origin;
+	
 	// var len = $('.cart-id').length;
-	var arrid = [];
-	var arrQ = [];
+	
 	$('.cartUpdate').on('click', function(){
+		var url = window.location.origin;
+		var arrid = [];
+		var arrQ = [];
 		$('.cart_id').each(function() { arrid.push($(this).val()); });
 		$('.cartQ').each(function() { arrQ.push($(this).val()); });
 		// alert(id);
