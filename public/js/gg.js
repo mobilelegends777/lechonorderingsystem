@@ -283,3 +283,37 @@ function filterPrice() {
 		});
 	}
   // end price filter
+  // checkout item functions
+  var Chck = (()=> {
+
+  // var api_url = 'http://localhost:8000';
+  var url = window.location.origin;
+  return {
+      checkoutCart: ()=>{
+        $.ajax({
+          headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          },
+           url:url+"/checkout-item",
+           method:"POST",
+           data:{data:''},
+           beforeSend:function(){
+           },
+           success:function(data){
+             // console.log(data[0]);
+                location.href = '/frontpage/checkout';
+           },
+           error:function(){
+              // _helper.buttonAnimation(2,'deposit_submit');
+           }
+        })
+      },
+      
+      init: function() {
+          // alert('dsdsdd');
+        // al.getMarkers();
+      }
+  }
+
+})(addC);
+// end checkout item

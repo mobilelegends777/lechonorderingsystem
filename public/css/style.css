@@ -1543,7 +1543,8 @@ input.btn.btn-default:hover{
   font-size: 18px;
   color: #c4a256;
   /* width: 100%; */
-  width: 51%;
+  /*width: 51%;*/
+  width: 45%;
 }
 .subtotal-cont {
   display: flex;
