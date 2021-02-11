@@ -108,14 +108,16 @@ class checkoutController extends Controller
         $data = Auth::user();
         $userID = $data->id;
         $pm =  $request->input('payment1');
-        //dd($pm);
+        $instruction = $request->input('instruction');
+        //dd($instruction);
         $timestamp = new \DateTime();
+
+        $query = DB::update('UPDATE cart SET payment_method = \''.$pm.'\', instruction = \''.$instruction.'\', checkoutdate =current_timestamp, checkout = true  WHERE customer_id = '.$userID.' AND checkout = false');
+
         $value = DB::select('SELECT * from users inner join customer_info ON customer_id= users.id
         inner join customer_address ON customer_address.customer_id = users.id
         inner join contact_info ON contact_info.customer_id = users.id where users.id = '.$userID.'');
 
-                
-            Alert::success('Success', 'Thank You for Ordering');
             return view('frontpage/placedorder', compact('value'));
 
         

@@ -214,8 +214,11 @@
 
 	<div class="checkout_1r1 clearfix">
     <hr>
+	<form metho="POST" action ="{{ route('order') }}" class="form-horizontal" role="form">
+    {{ csrf_field() }}
+        {{ method_field('PATCH') }}
 	   <h6 class="c-size">Special Instruction <br></h6><br>
-	   <textarea class="form-control txt-size" placeholder="e.g No Mayo " ></textarea>
+	   <textarea class="form-control txt-size" name="instruction" value=""placeholder="e.g No Mayo " ></textarea>
 	 <hr>
     
 	 <div class="checkout_1r1i clearfix">
@@ -246,9 +249,7 @@
 	  <div class="col-sm-6 method" >
 	   <h5 class="mgt normal"><strong class="p-method">Payment Method</strong</h5>
 	  </div>
-	  <form metho="POST" action ="{{ route('order') }}" class="form-horizontal" role="form">
-    {{ csrf_field() }}
-        {{ method_field('PATCH') }}
+
 	  <div class="col-sm-6 move-free-pay">
       <input type="radio" id="myBtn" name="payment1" value="cdc">
       <label class="free-move-debit">Credt / Debit Card <img  class="debit-icon" src="{{asset('images/adddebit.png')}}"></label><br>
