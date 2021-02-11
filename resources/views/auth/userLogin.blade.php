@@ -26,10 +26,21 @@
                                         </span>
                                     </div>
                                     @enderror
+
+                                    <div>
+                                        @if(isset(Auth::user()->email))
+                                        <div class="alert alert-success success-block">
+                                            <strong>Welcome {{Auth::user()->email}} 
+
+                                            </strong>
+                                        </div>
+                                        @endif
+                                    </div>
             </div>
             <div class="signin-forgot"> 
-                 <button type="submit" class="btn btn-success btn-block log-in-btn">
-                                        <i class="fas fa-sign-in-alt"></i> {{ __('Sign in') }}</button>
+
+                 <button type="submit" class="btn btn-success btn-block">
+                                        <i class="fas fa-sign-in-alt" onclick="users()"></i> {{ __('Sign in') }}</button>
                                         
             </div>
             <div class="forgot-pass"><a href="#" id="forgot_pswd">Forgot password?</a></div>
@@ -120,13 +131,67 @@
                 </div><br>
                 <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
             </form>
-
+    <div id="try">
             @include('sweetalert::alert')
+            </div>
         </div>
         
     
     </div>
 </div>
+<!-- <script>
+    $(function(){
+        
+        $("#form-signin").on('submit', function(e){
+            e.preventDefault();
 
+            $.ajax({
+                url:$(this).attr('action'),
+                method:$(this).attr('method'),
+                data:new FormData(this),
+                processData:false,
+                dataType:'json',
+                contentType:false,
+                beforeSend:function(){
+                    $(document).find('span.error-text').text('');
+                },
+                success:function(data){
+                    if(data.status == 0){
+                        $.each(data.error, function(prefix, val){
+                            $('span.'+prefix+'_error').text(val[0]);
+                        });
+                    }else{
+                        $('#form-signin')[0].reset();
+                        alert(data.msg);
+                    }
+                }
+            });
+        });
+    });
+</script> -->
+
+
+<!-- <script>
+    function users() {
+        event.preventDefault();
+        const CSRF_TOKEN = $('meta=[name="csrf-token"]').attr('content');
+
+        $.ajax({
+
+            url:"/getusers",
+            type:'get',
+            data:{
+                CSRF_token
+            },
+            success:function (data) {
+                console.log(data)
+                $("#try").html(data)    
+            }
+        }
+        )
+    }
+</script> -->
 @endsection
+
+
 

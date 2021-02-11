@@ -218,7 +218,7 @@
     {{ csrf_field() }}
         {{ method_field('PATCH') }}
 	   <h6 class="c-size">Special Instruction <br></h6><br>
-	   <textarea class="form-control txt-size" name="instruction" value=""placeholder="e.g No Mayo " ></textarea>
+	   <textarea class="form-control txt-size" name="instruction" value=""placeholder="e.g no mayo" ></textarea>
 	 <hr>
     
 	 <div class="checkout_1r1i clearfix">

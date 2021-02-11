@@ -83,7 +83,6 @@ class cartController extends Controller
             '1' => $sumQry,
             '2' => $msg
         ];
-        // dd($values[1][0]);
         return response()->json($values); 
     }
     public function updateCart(Request $request) {
@@ -92,12 +91,11 @@ class cartController extends Controller
         $userID = $data->id;
         $qty =  $request->qty;
         $cartID = $request->cartID;
-        $query = DB::select('UPDATE cart SET quantity = '.$qty.' WHERE cart_id = '.$cartID.' ');
-     
-
-        Alert::success('Success', 'Record Updated');
-        return back();
-       
+        $len = count($cartID);
+        for($i = 0;$i<$len;$i++){
+            $query = DB::select('UPDATE cart SET quantity = '.$qty[$i].' WHERE cart_id = '.$cartID[$i].' AND customer_id = '.$userID.' ');
+        }
+        return redirect()->back();
     }
     
     

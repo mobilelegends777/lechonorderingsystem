@@ -287,7 +287,7 @@ img.check-icon {
   width: 176%;
   position: relative;
   left: 5rem;
-  top: 1rem;
+  top: 4rem;
 }
 .checkout_1r.clearfix {
   margin-left: 30px;
@@ -345,7 +345,7 @@ h5.move-free-data1 {
 
 .check_rm.clearfix {
     background-color: #ffffff;
-    border-style: dotted;
+    border-style: solid;
     border-color: #c4a2659c;
 }
 h6.text-right {

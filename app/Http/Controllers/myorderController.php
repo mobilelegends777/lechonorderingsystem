@@ -29,9 +29,9 @@ class myorderController extends Controller
         $data = Auth::user(); 
       
 
-        $query = DB::select('SELECT * FROM cart
-        INNER JOIN product ON product.product_id = cart.product_id
-        WHERE customer_id = '.$data->id.' AND checkout =true');
+        $query = DB::select('SELECT * FROM order_inventory
+        INNER JOIN product ON product.product_id = order_inventory.product_id
+        WHERE customer_id = '.$data->id.' ORDER BY date_ordered DESC LIMIT 10');
 
             $value = [
                 '0' => $data,

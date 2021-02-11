@@ -21,6 +21,7 @@ Route::get('/admin-login', function(){
 
 });
 
+// Route::get('/getusers','userLoginController@getusers');
 
 
 //Start of user login
@@ -91,7 +92,7 @@ Route::get('/','frontpageController@index');
 Route::get('/userpage/myprofile/', 'myprofileController@index')->name('myprofile');
 // Route::get('/userpage/myprofile/{id}','myprofileController@show')->name('myprofile2');
 Route::get('/userpage/myprofile/{id}/success','checkoutController@update')->name('profileupdated');
-
+Route::post('/checkout-item','checkoutController@checkOutItem');
 
 
 

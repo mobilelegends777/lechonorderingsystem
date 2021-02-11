@@ -11,7 +11,7 @@ use AuthenticatesUsers;
 use DB;
 use Alert;
 use DateTime;
-
+use Carbon\Carbon;
 class checkoutController extends Controller
 {
     //
@@ -101,26 +101,38 @@ class checkoutController extends Controller
 
     }
 
+        public function checkOutItem(){
+            $userData = Auth::user();
+            // dd($userData);
+            $id = $userData->id;
+            $query = DB::select('UPDATE cart SET checkout_date = current_timestamp WHERE customer_id = '.$id.'');
 
+            return response()->json($query); 
+        }
 
       public function placeorder(Request $request){
-         
+        // dd($request->all());
         $data = Auth::user();
         $userID = $data->id;
         $pm =  $request->input('payment1');
-        $instruction = $request->input('instruction');
-        //dd($instruction);
-        $timestamp = new \DateTime();
+        $instruction =  $request->input('instruction');
 
-        $query = DB::update('UPDATE cart SET payment_method = \''.$pm.'\', instruction = \''.$instruction.'\', checkoutdate =current_timestamp, checkout = true  WHERE customer_id = '.$userID.' AND checkout = false');
-
+        // dd($pm);
+        $date = now()->timestamp;
+        $cartData = DB::select('SELECT * FROM cart WHERE customer_id = '.$userID.'');
         $value = DB::select('SELECT * from users inner join customer_info ON customer_id= users.id
         inner join customer_address ON customer_address.customer_id = users.id
         inner join contact_info ON contact_info.customer_id = users.id where users.id = '.$userID.'');
+            if($cartData > 0){
+                foreach ($cartData as $items){
+                  //dd($items);
+                    DB::select('INSERT INTO order_inventory(product_id,qty,date_ordered,cart_id,customer_id,payment_method,instruction)
+                      VALUES('.$items->product_id.', '.$items->quantity.', \''.$items->checkout_date.'\', '.$items->cart_id.', '.$items->customer_id.',\''.$pm.'\',\''.$instruction.'\') ');
 
+                }
+                $upDate = DB::select('DELETE FROM cart WHERE customer_id = '.$userID.'');
+            }     
             return view('frontpage/placedorder', compact('value'));
-
-        
     }
 
 }

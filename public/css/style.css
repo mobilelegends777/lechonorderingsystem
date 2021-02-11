@@ -543,13 +543,14 @@ span.product-title {
     width: 60px;
     height: 60px;
     top: 10px;
-    margin: 19% 40%;
+    /*margin: 19% 40%;*/
     display: none;
     color: #fff;
     font-size: 33px;
     text-align: center;
     border-radius: 50%;
     padding: 12px 0;
+    margin: 76px 129px;
 }
 .cart-icon img {
     transition: transform .6s;
@@ -1542,7 +1543,8 @@ input.btn.btn-default:hover{
   font-size: 18px;
   color: #c4a256;
   /* width: 100%; */
-  width: 51%;
+  /*width: 51%;*/
+  width: 45%;
 }
 .subtotal-cont {
   display: flex;

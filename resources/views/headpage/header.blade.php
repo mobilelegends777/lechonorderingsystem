@@ -54,10 +54,11 @@
 			<span class="inputs">
 					<input autocomplete="off" type="text" onkeyup="mySearchFunction(this.id)" name="query" id="query" placeholder="Search products..." class="inpt-search"> 
 					<button class="btn-search">Search</button>
-
 					<ul id="myUL">
 						
 					</ul>
+
+					
 			</span>
 		</form>
 
@@ -82,13 +83,15 @@
 				
 						@if($value[0]->utype == 'User')
 					
-
-							<img src="{{$value[0]->images}}" class="icons2">
-								<div class="dropdown-content-account">
-									<h6>Signed in as <br></h6>
+						<div class="dropdown">
+							<span class="des5"><img src="{{$value[0]->images}}" class="icons2"><img src="{{asset('images/down-arrow.png')}}" class="d-arrow dar"></span>
+						</div>
+							
+									
+									<div class="dropdown-content-account">
 									<h5><strong>{{$value[0]->email}}</strong></h5>
 									<hr>
-										<a href="{{asset('/userpage/myorder')}}">My Order</a>
+										<a href="{{asset('/userpage/myorder')}}">My Orders</a>
 										<a href="{{asset('userpage/myprofile')}}">Edit Profile</a>
 										<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
 															document.getElementById('logout-form').submit();">
@@ -112,7 +115,7 @@
 					</span>
 				</div>
 			@else
-				<div class="dropdown-account">
+			<div class="dropdown-account">
 					<span class="account-c ">
 							<img src="{{asset('images/user.png')}}" class="icons2 d-arrow">					
 									<div class="dropdown-content-account">
@@ -206,8 +209,8 @@
 			<!-- </form> -->
 					<div class="__bottons">
 						<div class="check-out-sidbar">
-							<a href="{{asset('frontpage/checkout')}}">
-							<button class="checkout-button">Checkout</button>
+							<a>
+								<button class="checkout-button" onclick="Chck.checkoutCart()">Checkout</button>
 							</a>
 						</div>
 						<div class="view-cart-sidebar">
@@ -227,13 +230,8 @@
 <script>
 
 $(document).ready(function(){
-	$('.cart').click(function(e){
-		e.preventDefault();
-			subTotal();	
-			cartedItems();
-			updateCart();
-	});
 		// alert(1);
+		
 	var url = window.location.origin;
 	// var len = $('.cart-id').length;
 	var arrid = [];
@@ -256,18 +254,19 @@ $(document).ready(function(){
 					if(data[1][0].total != null){
 					$('.sub_tot').empty();
 					$('.sub_tot').append(`
-						<span>${data[1][0].total}</span>
+						<span>₱ ${data[1][0].total}</span>
 					`);
 					}
 					else{
 					$('.sub_tot').empty();
 					$('.sub_tot').append(`
-						<span>0</span>	`);
+						<span>₱ 0</span>	`);
 					}
 					
 				}
 			});
 			subTotal();
+			cartedItems();
 		}
 	});
 		subTotal();
@@ -280,7 +279,11 @@ $(document).ready(function(){
 		}
 		var url = window.location.origin;
 		cartedItems();
-	
+	$('.cart').click(function(e){
+		e.preventDefault();
+			subTotal();	
+			cartedItems();
+	});
 	function cartedItems(){
 		
 			$.ajax({
@@ -325,7 +328,7 @@ $(document).ready(function(){
 												<button type="button" class="qty-inc" onclick="inc('qty',${item.cart_id})">+</button>
 											</div>
 											<div class="item-sub">
-												<span class="substotal${item.cart_id}">Total:<span class="substotals">${item.total}</span></span>
+												<span class="substotal${item.cart_id}">Total: ₱<span class="substotals">${item.total}</span></span>
 											</div>
 										</div>
 									</div>

@@ -12,6 +12,11 @@ img {
     vertical-align: middle;
     border-style: none;
 }
+input.form-control.file-size {
+    width: 18%;
+    position: relative;
+    right: 10em;
+}
 .text-muted {
     color: #aeb0b4 !important;
 }
@@ -24,6 +29,8 @@ hr.hr-pr {
 }
 img.avatar.img-circle {
     width: 100px;
+    position: relative;
+    right: 9rem;
 }
 .prof {
     position: relative;
@@ -63,13 +70,13 @@ a#show-pass {
     position: relative;
     left: 27%;
 }
-
+/* 
 .col-md-prof {
 
     
         width: 15%;
     
-}
+} */
 
 .rows2 {
     margin-left: 25%;
@@ -81,7 +88,6 @@ a#show-pass {
 .moves-center {
     text-align: center;
     position: relative;
-    left: 204%;
 }
 
 .moves-center-b {
@@ -157,7 +163,7 @@ input.btn.btn-default:hover {
     background-color: #45a049;
 }
 button.btn.btn-primary.moves-center {
-    width: 100%;
+    width: 10%;
     background-color: #0f6898;
     color: white;
     padding: 14px 20px;
@@ -165,6 +171,8 @@ button.btn.btn-primary.moves-center {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    position: relative;
+    left: 30rem;
 }
 
 button.btn.btn-primary.moves-center:hover{
@@ -197,7 +205,68 @@ and (orientation: portrait)
         border-radius: 4px;
         cursor: pointer;
         position: relative;
-        left: 15%;
+        left: -5%;
+        font-size: 30px;
+        width: 203px;
+    }
+    button.btn.btn-primary.moves-center {
+        width: 20%;
+        background-color: #0f6898;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        font-size: 25px;
+        left: 21rem;
+    }
+    button.btn.btn-primary.moves-center-b {
+        background-color: #ff8800fc;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        left: 38%;
+        font-size: 30px;
+    }
+    input.form-control.file-size {
+        width: 40%;
+        position: relative;
+        right: 3em;
+        font-size: 30px;
+    }
+
+    h3.p-info-size {
+        font-size: 30px;
+    }
+    .move-left {
+        font-size: 30px;
+        position: relative;
+        right: 5em;
+    }
+    .form-group {
+        font-size: 36px;
+    }
+    input.form-control {
+        width: 105%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #cf9d71;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 74px;
+        font-size: 32px;
+    }    
+    img.avatar.img-circle {
+        width: 120px;
+        position: relative;
+        right: 6rem;
     }
 
     div#changess-pass {
@@ -281,7 +350,21 @@ and (orientation:portrait)
     }
     .move-left {
         position: relative;
-        left: 5em;
+        left: -3em;
+        font-size: 36px;
+    }
+    button.btn.btn-primary.moves-center {
+        width: 27%;
+        background-color: #0f6898;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        font-size: 25px;
+        left: 14rem;
     }
     h3.p-info-size {
         position: relative;
@@ -307,10 +390,10 @@ and (orientation:portrait)
         border-radius: 4px;
         cursor: pointer;
         position: relative;
-        left: 23%;
+        left: -6%;
     }
     input.form-control.file-size {
-        width: 257px;
+        width: 426px;
         position: relative;
         right: 70px;
     }
@@ -415,29 +498,29 @@ and (orientation: portrait)
     .rows2 {
         margin-left: 25%;
         /* margin-right: -15px; */
-        height: 2000px;
+        height: 2400px;
     }
     input.form-control {
-        width: 137%;
+        width: 160%;
         padding: 12px 20px;
         margin: 8px 0;
         display: inline-block;
         border: 1px solid #cf9d71;
         border-radius: 4px;
         box-sizing: border-box;
-        height: 111px;
+        height: 147px;
         position: relative;
-        right: 122px;
+        right: 191px;
         border-style: solid;
         border-color: black;
     }
     .move-left {
-        font-size: 40px;
+        font-size: 57px;
         position: relative;
-        right: 290px;
+        right: 8em;
     }
     .form-group {
-        font-size: 45px;
+        font-size: 66px;
     }
     input.btn.btn-default {
         background-color: #4CAF50;
@@ -448,7 +531,7 @@ and (orientation: portrait)
         border-radius: 4px;
         cursor: pointer;
         position: relative;
-        left: -16%!important;
+        left: -31%!important;
         font-size: 45px;
     }
     button.btn.btn-primary.moves-center-b {
@@ -460,15 +543,15 @@ and (orientation: portrait)
         border-radius: 4px;
         cursor: pointer;
         position: relative;
-        left: 42%;
-        font-size: 40px;
+        left: 39%;
+        font-size: 55px;
     }
     label.col-lg-3.control-label {
         position: relative;
-        right: 100px;
+        right: 170px;
     }
-    input.form-control::placeholder {
-        font-size: 40px;
+    input[type="text"] {
+        font-size: 65px;
     }
     input[type="text"]
 {
@@ -479,24 +562,33 @@ and (orientation: portrait)
 h3.p-info-size {
     font-size: 40px;
 }
+.moves-center {
+   display:block;
+}
 button.btn.btn-primary.moves-center {
-    width: 139%;
+    width: 44%;
     background-color: #0f6898;
     color: white;
-    padding: 14px 20px;
+    padding: 17px 20px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 34px;
+    font-size: 45px;
+    position: relative;
+    left: 11rem!important;
 }
 input.form-control.file-size {
-    width: 431px;
-    height: 69px;
-    font-size: 30px;
+    width: 656px;
+    height: 97px;
+    font-size: 49px;
+    position: relative;
+    right: 2em;
 }
 img.avatar.img-circle {
-    width: 180px;
+    width: 200px;
+    position: relative;
+    left: -7em;
 }
 form.form-horizontal {
     position: relative;
@@ -818,8 +910,10 @@ and (orientation: portrait)
         border-radius: 4px;
         cursor: pointer;
         position: relative;
-        left: -22%;
         width: 26%;
+        font-size: 62px;
+        position: relative;
+       
     }
 
     div#changess-pass {
@@ -898,9 +992,9 @@ and (orientation: portrait)
         border-color: black;
     }
     .move-left {
-        font-size: 40px;
+        font-size: 51px;
         position: relative;
-        right: 239px;
+        right: 402px;
     }
     .form-group {
         font-size: 45px;
@@ -914,8 +1008,8 @@ and (orientation: portrait)
         border-radius: 4px;
         cursor: pointer;
         position: relative;
-        left: -13%;
-        font-size: 45px;
+        left: -23%;
+        font-size: 52px;
         width: 251px;
     }
     button.btn.btn-primary.moves-center-b {
@@ -928,7 +1022,7 @@ and (orientation: portrait)
         cursor: pointer;
         position: relative;
         left: 48%;
-        font-size: 40px;
+        font-size: 52px;
     }
     label.col-lg-3.control-label {
         position: relative;
@@ -947,7 +1041,7 @@ h3.p-info-size {
     font-size: 40px;
 }
 button.btn.btn-primary.moves-center {
-    width: 139%;
+    width: 40%;
     background-color: #0f6898;
     color: white;
     padding: 14px 20px;
@@ -955,15 +1049,20 @@ button.btn.btn-primary.moves-center {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 34px;
+    font-size: 50px;
+    left: 5em;
 }
 input.form-control.file-size {
-    width: 431px;
-    height: 69px;
-    font-size: 30px;
+    width: 700px;
+    height: 106px;
+    font-size: 53px;
+    position: relative;
+    left: -3rem;
 }
 img.avatar.img-circle {
-    width: 180px;
+    width: 210px;
+    position: relative;
+    left: -2rem;
 }
 .footer-desc.footer-gallery {
     display: none;

@@ -45,7 +45,7 @@
 							<input type="hidden" class="cartPrice cart-price{{ $item->cart_id }}" value="{{ $item->price }}">
 						</td>
 						<td>
-						<button type="button" class="reorder">Reorder</button>
+						<button type="button" onclick="addC.addInCart({{$item->product_id}})" class="reorder">Reorder</button>
 						</td>
 					</tr>
 				@endforeach
