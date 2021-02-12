@@ -2,7 +2,8 @@
 @section('page_content')
 <div class="page-container">
 	<div class="page-sub-container">
-		<h1>Cart</h1>
+	
+		<h1>Your Cart</h1>
 		<div class="cartpage-item">
 			<div class="cartpage-title">
 			
@@ -12,10 +13,10 @@
 							<td class="td1"></td>
 							<td class="td2"></td>
 							<td class="td3"></td>
-							<td>Product</td>
-							<td>Price</td>
-							<td>Quantity</td>
-							<td>Subtotal</td>
+							<td class="td04">Product</td>
+							<td class="td05">Price</td>
+							<td class="td06">Quantity</td>
+							<td class="td07">Subtotal</td>
 					</tr>
 					</thead>
 				@if($value[1] == null)

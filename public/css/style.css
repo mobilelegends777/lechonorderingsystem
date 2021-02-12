@@ -256,6 +256,8 @@ span.inputs {
 
 .headmenu .icons .icons2 {
     width: 30px;
+    height: 30px;
+    border-radius: 50%;
     margin-right: 23px;
 }
 

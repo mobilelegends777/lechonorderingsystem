@@ -6,10 +6,10 @@ Author URI: http://templateonweb.com/
 Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152">Website Template Licence</a>
 */
 /*********************cart****************/
-.cart{
+/* .cart{
 padding-top:40px;
 padding-bottom:40px; 
- }
+ } */
 .cart_2{
  margin-top:10px;
  }
@@ -64,6 +64,22 @@ height:110px;
 .cart_3r1 .form-control{
 margin-top:10px; 
  }
+ td.td04 {
+    position: relative;
+    left: -10px;
+}
+td.td05 {
+    position: relative;
+    left: 185px;
+}
+td.td06 {
+    position: relative;
+    left: 115px;
+}
+ td.td07 {
+    position: relative;
+    left: 40px;
+}
 /*********************cart_end****************/
 
 

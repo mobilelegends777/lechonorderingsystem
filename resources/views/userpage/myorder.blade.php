@@ -2,6 +2,11 @@
 @section('page_content')
 <div class="page-container">
 	<div class="page-sub-container">
+			<div class="order-stat">
+				<a id="active-order">Active Orders</a>
+				<a id="past-order">Past Orders</a>
+			</div>
+	<div id="paset-section">
 		<h1>Past Order</h1>
 		<div class="cartpage-item">
 			<div class="cartpage-title">
@@ -12,9 +17,9 @@
 							<td class="td1"></td>
 							<td class="td2">Icon</td>
 							<td class="td3"></td>
-							<td>Product</td>
-							<td>Price</td>
-							<td>Action</td>
+							<td class="td4">Product</td>
+							<td class="td5">Price</td>
+							<td class="td6">Action</td>
 					</tr>
 					</thead>
 				@if($value[1] == null)
@@ -51,51 +56,40 @@
 				@endforeach
 				</tbody>
 				@endif
+
+
+							
+
 						
 				</table>
 		
 				</form>
+
 			</div>
 			
 			
 
 				@include('sweetalert::alert')
-			</div>
+		</div>
+	</div>
+
+
+		<div id="active-section">
+
+				Hello!
+
+
+
+		</div>
+
 		</div>
 	</div>
 </div>
 <script>
 $(document).ready(function(){
-	subTot();
-	addedTotal();
-	function addedTotal(){
-		var total = 0;
-		flat = Number($('.flat-rate').text());
-		subT = Number($('.cart-page-subtotal').text());
-		total = flat + subT;
-		$('.Totals').text(total.toFixed(2));
-	}
-	// $('.cancel-cart').each(function(){
-	// 	$(this).on('click', function(){
-	// 		subTot();
-	// 		addedTotal();
-	// 	});
-	// });
-	$('.qty-inc').on('click',function(){
-		subTot();
-		addedTotal();
-	});
-	$('.qty-dec').on('click',function(){
-		subTot();
-		addedTotal();
-	});
-	function subTot(){
-		var sums = 0;
-	$('.sub-totals').each(function(){
-		sums += Number($(this).text());
-	});
-	$('.cart-page-subtotal').text(sums.toFixed(2));
-	}
+	
+
+		$("#active-section").hide();
 	
 });
 </script>

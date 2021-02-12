@@ -24,7 +24,11 @@
                 <div class="dropdown">
 				<a href="{{asset('/')}}">
 					<span class="des3"><button class="art-btn">GO TO HOME</button></span>
+					
 				</a>
+                <a href="{{asset('/userpage/myorder')}}">
+                <span class="des3"><button class="art-btn">MY ORDER</button></span>
+                </a>
 			    </div>
             <div class="icon-gif">           
             <img src="{{asset('images/rider.gif')}}" class="avatar img-circle" alt="avatar">

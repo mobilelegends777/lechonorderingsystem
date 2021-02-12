@@ -1,0 +1,36 @@
+
+
+td.td4 {
+    position: relative;
+    left: -85px;
+}
+td.td5 {
+    position: relative;
+    left: 20px;
+}
+td.td6 {
+    position: relative;
+    left: 10px;
+}
+td.td2 {
+    position: relative;
+    left: 10px;
+}
+.order-stat {
+    text-align: center;
+    background-color: #2a2c2f;
+    width: 50%;
+    position: relative;
+    left: 25%;
+    height: auto;
+    padding: 10px;
+}
+.order-stat a {
+    text-align: center;
+    font-weight: 600;
+    padding: 15px;
+    color: white;
+}
+.order-stat a:hover {
+    color: #c4a256;
+}

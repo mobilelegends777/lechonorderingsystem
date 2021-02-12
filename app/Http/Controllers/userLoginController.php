@@ -23,44 +23,6 @@ class userLoginController extends Controller
 {
 
 
-    // public function index(){
-
-
-    //     // $value1 = Session::get('user');
-    //         $data = Auth::user();
-    //         $query = DB::select("SELECT * FROM product WHERE type = 'Combo' OR type = 'Lechon'");
-    //         // if($data != null){
-    //         //     $query2 = DB::select("SELECT count(cart_id) FROM cart WHERE customer_id = '.$data->id.'");
-    //         // }
-    //         // else{
-    //         //     $query2 = "no data";
-    //         // }
-    //         $value = [
-    //             '0' => $data,
-    //             '1' => $query,
-    //             // '2' => $query2
-    //         ];
-    //         if($value == null)
-    //         {
-
-    //         $value = [
-    //             "utype" => "notLogin"
-    //         ];
-    //             return view('frontpage.front-page')->with('value', $value);
-    //         }
-    //         else 
-    //         {   
-    //             // dd($value[1]);
-    //             return view('frontpage.front-page')->with('value', $value);
-    //         }
-
-
-
-
-    // }
-
-
-
 
     public function login(Request $request){
 
@@ -119,17 +81,10 @@ public function redirectToProvider()
      */
 
      public function handleProviderCallback(){
-
-
    try{
 
        $user = Socialite::driver('google')->user();
-
-      
-        
         $finduser =User::where('google_id', $user->id)->first();
-
-
 
       if($finduser){
         Auth::login($finduser);
@@ -139,11 +94,8 @@ public function redirectToProvider()
         ];
         
         $data = Session::put('user', $data1);
-        
-        
         $value = Session::get('user'); 
-  
-        
+    
        if($value[0]->utype=='User')
 
        {    
@@ -188,10 +140,7 @@ public function redirectToProvider()
                 ];
                
         $data = Session::put('user', $value1);
-        
-      
         $value = Session::get('user'); 
-       
         Auth::login($newUser);
 
        if($value[0]->utype=='User')
