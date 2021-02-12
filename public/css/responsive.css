@@ -751,8 +751,8 @@
 		display: block;
 		margin: 0;
 		background: #2a2c2f;
-		right: 0;
-		top: 118px;
+		right: 56px;
+    	top: 36px;
 	}
 	.shop-cart-icon i {
 		display: block;
@@ -1290,6 +1290,14 @@
 	}
 	.container .sub-container2 .sc2 {
 		font-size: 26px;
+		margin-left: 1px;
+	}
+	.hr {
+	    width: 39%;
+	    margin-left: 24px;
+	}
+	.centered span {
+		margin-left: 54px;
 	}
 	.quality-cont img {
 		height: 291px;
@@ -1607,6 +1615,9 @@
 	.shop-images img {
 		width: 230px;
 	}
+	.centered span {
+	    margin-left: 26px;
+	}
 	.cart-icon {
 	    width: 54px;
 	    height: 54px;
@@ -1621,6 +1632,12 @@
 	}
 	.shop-item-price {
 		font-synthesis: 18px;
+	}
+}
+@media screen and (max-width: 681px) {
+	.centered span {
+	    margin-left: 22px;
+	    font-size: 38px;
 	}
 }
 @media screen and (max-width: 680px) {
@@ -1693,7 +1710,7 @@
 		font-size: 15px;
 	}
 	.__item {
-		width: 227px;
+		width: 273px;
 	}
 	.__item .box2 {
 		height: 201px;
@@ -1717,6 +1734,12 @@
 		width: 47%;
 		margin-left: 46px;
 	}
+	.cart-icon {
+	    width: 62px;
+	    height: 62px;
+	    top: 84px;
+	    right: 123px;
+	}
 }
 @media screen and (max-width:630px){
 	.company-title {
@@ -1735,7 +1758,7 @@
 		width: 172px;
 	}
 }
-@media screen and (max-width:564px){
+@media screen and (max-width:565px){
 	.orderNow {
 		margin: 13px;
 	}
@@ -1785,7 +1808,7 @@
 		width: 220px;
 	}
 	.__item {
-    	width: 217px;
+    	width: 249px;
 	}
 	.__item .box2 {
     	height: 188px;
@@ -1805,6 +1828,10 @@
 	thead td {
 		padding: 10px 23px;
 	}
+	.centered span {
+	    margin-left: 28px;
+	    font-size: 29px;
+	}
 	
 }
 @media screen and (max-width:540px) {
@@ -1816,17 +1843,17 @@
 		font-size: 26px;
 	}
 	.qual-icon-cont p, .qual-icon-cont span {
-		font-size: 13px;
+		font-size: 15px;
 	}
 	.hr {
 		width: 41%;
 		margin-left: 27px;
 	}
 	.__item {
-		width: 211px;
+		width: 240px;
 	}
 	.__item .box3 span {
-		font-size: 13px;
+		font-size: 15px;
 		line-height: 23px;
 	}
 	.f-icon {
@@ -1844,6 +1871,9 @@
 	}
 	.apply-coupon input {
 		width: 9.4375rem;
+	}
+	.centered span {
+	    margin-left: 15px;
 	}
 }
 
@@ -1919,21 +1949,21 @@
 	    font-size: 16px;
 	}
 	.__item {
-		width: 44%;
+		width: 45%;
 		margin: 17px 11px;
 	}
 	.__item .box2 {
 		height: 155px;
 	}
 	.__item .box3 .box3-details .product-title {
-		font-size: 14px;
+		font-size: 15px;
 	}
 	.__item .box3 .box3-details .items-price {
 		font-size: 13px;
 		display: none;
 	}
 	.__item .box3 .box3-info .box3-item-info {
-		font-size: 14px;
+		font-size: 15px;
 	}
 	.__item .box3 .box3-info .more {
 		font-size: 16px;
@@ -2048,6 +2078,7 @@
 		/*border-color: 1px solid red;*/
 		font-family: "Times New Roman", Times, serif;
 		/* margin-left: 77px; */
+		margin-left: -3px;
 	}
 	button.buttoncat {
 		font-size: 12px;
@@ -2272,6 +2303,10 @@
 	.headmenu .des-logo .logos {
 		margin-left: 34px;
 	}
+	.cart-icon {
+	    top: 52px;
+	    right: 81px;
+	}
 }
 
 @media screen and (max-width: 414px) {
@@ -2316,8 +2351,11 @@
 	.page-sub-container h1 {
 		font-size: 28px;
 	}
-	.product-on-cart {
+	/*.product-on-cart {
 	    width: 93%;
+	}*/
+	table.product-on-cart {
+		width: 96%;
 	}
 	.product-on-cart td {
 		font-size: 16px;
@@ -2340,14 +2378,14 @@
 	    height: 43px;
 	}
 	.apply-coupon input {
-		width: 8.4375rem;
+		width: 9.4375rem;
 		height: 3.125rem;
 		font-size: 18px;
 	}
 	.apply-coupon button, .update-cart button {
 		font-size: 13px;
-		height: 2.5rem;
-		width: 6.6875rem;
+		height: 3rem;
+		width: 6.9rem;
 	}
 	.summary-conts {
 	    width: 93%;
@@ -2539,6 +2577,7 @@
 		font-size: 18px;
 		height: 4.5rem;
 		width: 100%;
+		margin-top: 10px;
 	}
 	.summary-conts {
 	    width: 93%;
