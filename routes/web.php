@@ -85,6 +85,7 @@ Route::get('/frontpage/placedorder','checkoutController@placeorder')->name('orde
 
 
 
+
 Route::get('/','frontpageController@index');
 
 
@@ -98,6 +99,7 @@ Route::post('/checkout-item','checkoutController@checkOutItem');
 
 
 Route::get('/userpage/myorder', 'myorderController@index')->name('myorder');
+//  Route::get('/userpage/myorder', 'myorderController@updateorder')->name('myorderstatus');
 
 
 //Google Login

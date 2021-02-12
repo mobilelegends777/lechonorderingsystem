@@ -48,6 +48,8 @@ class checkoutController extends Controller
                 '1' => $query,
                 '2' =>$raw
             ];
+
+           
         
         return view('frontpage/checkout', compact(['value','value1']));
         

@@ -200,7 +200,7 @@
 			</td>
 			<td class="check-price">
 			<div class="check-dprice">₱
-			{{ $item->price,2 }}
+			{{ number_format($item->price,2) }}
 			</div>
 			</td>
 		</tr>
@@ -227,7 +227,7 @@
 	   <h5 class="normal ship-bot">Shipping</h5>
 	  </div>
 	  <div class="col-sm-6">
-	   <h5 class="mgt move-right move-to-top move-to-free">₱ {{$value1[2][0]->total,2}}</h5>
+	   <h5 class="mgt move-right move-to-top move-to-free">₱ {{number_format($value1[2][0]->total,2)}}</h5>
 	   <h5 class="mgt move-right move-to-top margin-top">Free</h5>
 	  </div>
 	 </div>
@@ -239,7 +239,7 @@
 	   <h5 class="mgt1 normal"><strong>Total</strong></h5>
 	  </div>
 	  <div class="col-sm-6">
-	   <h4 class="mgt2 move-right"><span class="normal ">₱ </span></span>{{$value1[2][0]->total,2}}</h4>
+	   <h4 class="mgt2 move-right"><span class="normal ">₱ </span></span>{{number_format($value1[2][0]->total,2)}}</h4>
 	  </div>
       
 	 </div>
@@ -254,7 +254,7 @@
       <input type="radio" id="myBtn" name="payment1" value="cdc">
       <label class="free-move-debit">Credt / Debit Card <img  class="debit-icon" src="{{asset('images/adddebit.png')}}"></label><br>
 	  <div class="cod-moves">
-      <input type="radio" id="payment" name="payment1" value='cod'>
+      <input type="radio" id="payment" name="payment1" value='cod'checked="checked" >
       <label class="free-move-debit">Cash on Delivery <img  class="cod-icon" src="{{asset('images/cash.png')}}"></label><br>
 	  </div>
 	  </div>
@@ -265,7 +265,13 @@
 
    </div>
    <div class="col-sm-6">
-	  <button id="place-order"class="mgt text-right _center button mgt" type="submit">Place Order</button>
+
+		@if($value1[2][0]->total == null )
+	  <button id="place-order"class="mgt text-right _center button mgt" disabled type="submit">Place Order</button>
+	  	@else
+		  <button id="place-order"class="mgt text-right _center button mgt" type="submit">Place Order</button>
+
+		@endif
 	 </div>
    </div>
   

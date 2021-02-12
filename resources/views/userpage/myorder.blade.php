@@ -7,7 +7,7 @@
 				<a id="past-order">Past Orders</a>
 			</div>
 	<div id="paset-section">
-		<h1>Past Order</h1>
+		<h1>Past Order</h1> 
 		<div class="cartpage-item">
 			<div class="cartpage-title">
 			
@@ -76,10 +76,71 @@
 
 		<div id="active-section">
 
-				Hello!
 
+				<h1>Active Order</h1> 
 
+				<div class="active container">
 
+					<div class="chef-anime">
+
+							<img src="{{asset('images/chef.gif')}}" class="avatar img-circle1" >
+
+						
+
+					</div>
+
+				</div>
+
+				<div class="data-container">
+						<h5 class ="time">Estimated Time</h5>
+						<h1 class="mins-title"> 10-20 Mins</h1>
+
+					<div class="line-loading">
+
+						<img src="{{asset('images/lineloading.gif')}}" class="line">
+
+					</div>
+					<div class="data-p">
+							<table>
+
+								<tr class="tablerow">
+									<td class="margin-toptr pn">Productname</td>
+									<td class="margin-toptr qp">Quantity</td>
+									<td class="margin-toptr pp">Price</td>
+
+								</tr>
+							<tr>
+								@foreach($value[2] as $item)
+									<td class="check-data1">
+								<div class="check-dpname1">
+								{{ $item->name }}
+								</div>
+									</td>
+								<td class="check-quantz1">
+									<div class="check-dquantity1">
+									{{ $item->qty }}
+									</div>
+									</td>
+									<td class="check-price1">
+									<div class="check-dprice1">₱
+									{{ number_format($item->price,2) }}
+									</div>
+									</td>
+								</tr>
+								@endforeach
+							</table>
+
+					</div>
+					<form metho="POST" action ="" class="form-horizontal" role="form">
+						@csrf
+						<div class="order-recieve">
+						
+						<button type="button" class="receive">Order Receive</button>
+						</div>
+					</form>	
+				</div>
+
+				@include('sweetalert::alert')
 		</div>
 
 		</div>
@@ -89,7 +150,20 @@
 $(document).ready(function(){
 	
 
-		$("#active-section").hide();
+		$("#paset-section").hide();
+
+		$("#past-order").click(function(){
+			$("#active-section").hide();
+			$("#paset-section").show();
+
+});
+
+		$("#active-order").click(function(){
+					$("#active-section").show();
+					$("#paset-section").hide();
+
+});
+	
 	
 });
 </script>
