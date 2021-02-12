@@ -31,6 +31,7 @@ class myprofileController extends Controller
         $value = DB::select('SELECT * from users inner join customer_info ON customer_id = users.id 
         inner join customer_address ON customer_address.customer_id = users.id 
         inner join contact_info ON contact_info.customer_id = users.id where users.id = '.$id.'');
+        
             return view('userpage/myprofile', compact('value'));
     }
 

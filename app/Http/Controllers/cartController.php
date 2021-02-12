@@ -70,9 +70,11 @@ class cartController extends Controller
         // dd($request->all());
         $id = $request->id;
         $qty = $request->qty;
-        $len = count($id);
-        for($x = 0;$x < $len;$x++){
-            $query = DB::select('UPDATE cart SET quantity = '.$qty[$x].' WHERE cart_id = '.$id[$x].' AND customer_id = '.$userID.' ');
+        if($id > 0){
+            $len = count($id);
+            for($x = 0;$x < $len;$x++){
+                $query = DB::select('UPDATE cart SET quantity = '.$qty[$x].' WHERE cart_id = '.$id[$x].' AND customer_id = '.$userID.' ');
+            }
         }
         $sumQry = DB::select('SELECT sum(quantity * price) as total FROM cart 
                     INNER JOIN product using (product_id)
@@ -91,9 +93,11 @@ class cartController extends Controller
         $userID = $data->id;
         $qty =  $request->qty;
         $cartID = $request->cartID;
-        $len = count($cartID);
-        for($i = 0;$i<$len;$i++){
-            $query = DB::select('UPDATE cart SET quantity = '.$qty[$i].' WHERE cart_id = '.$cartID[$i].' AND customer_id = '.$userID.' ');
+        if($cartID > 0){
+            $len = count($cartID);
+            for($i = 0;$i<$len;$i++){
+                $query = DB::select('UPDATE cart SET quantity = '.$qty[$i].' WHERE cart_id = '.$cartID[$i].' AND customer_id = '.$userID.' ');
+            }
         }
         return redirect()->back();
     }

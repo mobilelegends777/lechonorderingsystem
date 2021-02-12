@@ -59,15 +59,15 @@
 									<i class="fa fa-bars" aria-hidden="true"></i>
 								</a>
 							</div>
-							<div class="number-show">
+							<div class="number-show" id="count-results">
 								<span>Showing 1–16 of 20 results</span>
 							</div>
 							<div class="sort-items">
-								<select>
+								<select id="sort-items">
 									<option>Default sorting</option>
 									<option>Sort by popularity</option>
-									<option>Sort by price: Low to High</option>
-									<option>Sort by price: High to Low</option>
+									<option data-sort="price:asc">Sort by price: Low to High</option>
+									<option data-sort="price:desc">Sort by price: High to Low</option>
 								</select>
 							</div>
 						</div>
@@ -228,6 +228,7 @@ $(document).ready(function(){
 					
 					$('.shop-items-conts').empty();
 					$('.shop-items-conts-col').empty();
+					
 					// console.log(data);
 					$.each(data, function(i, item){
 							// console.log(item.order_exist);
@@ -244,7 +245,7 @@ $(document).ready(function(){
 									</div>
 									<div class="shop-info-price">
 										<div class="shop-item-name">${item.name}</div>
-										<div class="shop-item-price">₱${item.price}</div>
+										<div class="shop-item-price" data-price="${item.price}">₱${item.price}</div>
 									</div>
 								</div>
 							`);

@@ -530,4 +530,14 @@ window.onclick = function(event) {
 		}
 
 		init();
-	</script>*
+    
+    var pageURL = window.location.href;
+    var lastURLSegment = pageURL.substr(pageURL.lastIndexOf('/') + 1);
+
+    if(lastURLSegment == 'checkout'){
+      $('.toggle-cart-sidenav').css({
+        'display':'none'
+      });
+    }
+
+	</script>

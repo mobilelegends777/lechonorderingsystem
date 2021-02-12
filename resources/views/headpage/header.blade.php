@@ -171,17 +171,18 @@
 <!-- end mobile toggles -->
 	<!-- modals -->
 		
-		
+	<form action="{{route('search')}}" method="GET">
 		<div class="__search" id="my-searches" style="display:none">
 			<div class="search-bar-cont">
 				<div class="search-area">
-						<input type="text" name=""><button>Search</button>
+						<input  type="text" onkeyup="mySearchFunction(this.id)" name="query" id="query"><button>Search</button>
 				</div>
 				<div class="back-search">
 					<i class="fa fa-arrow-left" aria-hidden="true"></i>
 				</div>
 			</div>
 		</div>
+	</form>
 @if(Auth::check())	
 		<div class="toggle-cart-sidenav">
 			<div class="cart">

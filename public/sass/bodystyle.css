@@ -503,7 +503,8 @@ span.close-btn {
 }
 
 button.addcart {
-  width: 50%;
+  /*width: 50%;*/
+  width: 116px;
   height: 56px;
   color: #fff;
   background: #c4a256;
@@ -538,7 +539,7 @@ button.addcart {
 
 input {
   /*padding: 12px 20px;*/
-  margin: 8px 0;
+  /*margin: 8px 0;*/
   display: inline-block;
   border: 1px solid #cf9d71;
   border-radius: 4px;

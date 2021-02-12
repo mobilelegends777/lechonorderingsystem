@@ -29,16 +29,16 @@ class myorderController extends Controller
         $data = Auth::user(); 
       
 
-        $query = DB::select('SELECT * FROM cart
-        INNER JOIN product ON product.product_id = cart.product_id
-        WHERE customer_id = '.$data->id.' AND checkout =true');
+        $query = DB::select('SELECT * FROM order_inventory
+        INNER JOIN product ON product.product_id = order_inventory.product_id
+        WHERE customer_id = '.$data->id.'');
 
             $value = [
                 '0' => $data,
                 '1' => $query
             ];
             
-            
+        // dd($query);
         return view('userpage/myorder', compact('value','data'));
     }
 
