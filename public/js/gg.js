@@ -301,7 +301,12 @@ function filterPrice() {
            },
            success:function(data){
              // console.log(counter);
+             if(data == false){
+                alertify.success("Your Cart is Empty!!")
+             }else{
                 location.href = '/frontpage/checkout';
+             }
+                
            },
            error:function(){
 
@@ -319,7 +324,104 @@ function filterPrice() {
 })(Chck);
 // end checkout item
 
+function sortIng(){
+    var url = window.location.origin;
+    $('#sort-items').on('change',function(){
+        var sorts = $(this).val();
 
+        $.ajax({
+          headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          },
+           url:url+"/sort-items",
+           method:"POST",
+           data:{sort:sorts},
+           beforeSend:function(){
+           },
+           success:function(data){
+                $('.shop-items-conts').empty();
+                    $('.shop-items-conts-col').empty();
+                    
+                    // console.log(data);
+                    $.each(data, function(i, item){
+                            // console.log(item.order_exist);
+                        if(item.order_exist == 0){
+                            $('.shop-items-conts').append(`
+                                <div class="shop-items">
+                                    <div class="shop-item-image">
+                                        <a href="{{asset('frontpage/shop-details')}}" class="shop-images">
+                                            <img src="${item.images}">
+                                        </a>
+                                        <div class="cartIcon${item.product_id} cart-icon">
+                                            <a href="" id="addToCart" class="shop-cart-icon addToCart" data-value="${item.product_id}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a href="">
+                                        </div>
+                                    </div>
+                                    <div class="shop-info-price">
+                                        <div class="shop-item-name">${item.name}</div>
+                                        <div class="shop-item-price" data-price="${item.price}">₱${item.price}</div>
+                                    </div>
+                                </div>
+                            `);
+                        }else if(item.order_exist == 1){
+                            $('.shop-items-conts').append(`
+                                <div class="shop-items">
+                                    <div class="shop-item-image">
+                                        <a href="{{asset('frontpage/shop-details')}}" class="shop-images">
+                                            <img src="${item.images}">
+                                        </a>
+                                        <div class="cartIcon${item.product_id} cart-icon">
+                                            <span class="shop-cart-icon"><i id="cart-icons " class="fas fa-check" aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="shop-info-price">
+                                        <div class="shop-item-name">${item.name}</div>
+                                        <div class="shop-item-price">₱${item.price}</div>
+                                    </div>
+                                </div>
+                            `);
+                        }
+                    });
+                    
+                    
+                    $.each(data, function(i, item){
+                            
+                            $('.shop-items-conts-col').append(`
+                            <div class="shop-items shop-item-col shop-cols">
+                                <div class="shop-item-image">
+                                    <a href="#">
+                                        <img class="shop-imgs" src="${item.images}">
+                                    </a>
+                                </div>
+                                <div class="shop-info-price shop-price-col shop-info-prices">
+                                    <div class="shop-item-name-info shop-items-names">
+                                        <div class="shop-item-name-col shop-name-col shop-itemname-cols">
+                                            <span class="col-item-title col-names">${item.name}</span>
+                                            <div class="parag col-parags">
+                                                <div>${item.description}</div>
+                                            </div>
+                                        </div>
+                                        <div class="shop-item-info shop-carts">
+                                            <div class="col-price carts-price1">
+                                                <div class="shop-item-price prod-price">₱${item.price}</div>
+                                                <div class="shop-left">
+                                                    <button class="addcart cols-cart" onclick="addC.addInCart(${item.product_id})"><i class="fa fa-cart-plus"></i>Add to cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            `);
+    
+                    });
+                    Carting();
+           },
+           error:function(){
+
+           }
+        });
+    });
+}
 
 //Sorting
 // (function($) {

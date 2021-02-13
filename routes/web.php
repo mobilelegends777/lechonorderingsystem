@@ -117,6 +117,7 @@ Route::post('/user-photo','myprofileController@uploadImage')->name('user-update-
 
 Route::post('/filter-foods','shopController@filterProd');
 Route::post('/filter-price','shopController@filterPrice');
+Route::post('/sort-items','shopController@sortItems');
 
 Route::post('/add-to-cart-item','cartController@addCart');
 Route::post('/view-carted','cartController@viewCart');

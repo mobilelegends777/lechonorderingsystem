@@ -210,9 +210,7 @@
 			<!-- </form> -->
 					<div class="__bottons">
 						<div class="check-out-sidbar">
-							<a href="{{asset('frontpage/checkout')}}">
 								<button class="checkout-button" onclick="Chck.checkoutCart()">Checkout</button>
-							</a>
 						</div>
 						<div class="view-cart-sidebar">
 						<a href="{{asset('/frontpage/cartpage')}}">
@@ -352,10 +350,9 @@ $('.filter-by-price').on('click',function(){
 	filterPrice();
 });
 
-	$('.catType').each(function(){
+$('.catType').each(function(){
 		var cat = $(this).data('value');
 		var url = window.location.origin;
-		
 		$(this).on('click', function(e){
 			e.preventDefault();
 			$.ajax({
