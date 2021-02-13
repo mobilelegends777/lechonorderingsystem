@@ -128,8 +128,8 @@ class checkoutController extends Controller
             if($cartData > 0){
                 foreach ($cartData as $items){
                   //dd($items);
-                    DB::select('INSERT INTO order_inventory(product_id,qty,date_ordered,cart_id,customer_id,payment_method,instruction)
-                      VALUES('.$items->product_id.', '.$items->quantity.', \''.$items->checkout_date.'\', '.$items->cart_id.', '.$items->customer_id.',\''.$pm.'\',\''.$instruction.'\') ');
+                    DB::select('INSERT INTO order_inventory(product_id,qty,date_ordered,cart_id,customer_id,payment_method,instruction, order_status)
+                      VALUES('.$items->product_id.', '.$items->quantity.', \''.$items->checkout_date.'\', '.$items->cart_id.', '.$items->customer_id.',\''.$pm.'\',\''.$instruction.'\','."'garnishing'".') ');
 
                 }
                 $upDate = DB::select('DELETE FROM cart WHERE customer_id = '.$userID.'');

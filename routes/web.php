@@ -99,7 +99,7 @@ Route::post('/checkout-item','checkoutController@checkOutItem');
 
 
 Route::get('/userpage/myorder', 'myorderController@index')->name('myorder');
-//  Route::get('/userpage/myorder', 'myorderController@updateorder')->name('myorderstatus');
+ Route::get('/update-order', 'myorderController@updateorder')->name('myorderstatus');
 
 
 //Google Login

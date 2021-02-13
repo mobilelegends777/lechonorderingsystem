@@ -47,20 +47,21 @@ img.avatar.img-circle1 {
     width: 700px;
     height: 250px;
     background-image: linear-gradient(to right, #fdc912 , #feba12);
-    margin-left: 30%;
+    margin-left: 31%;
 }
 
 img.line {
     position: absolute;
     top: 33rem;
-    left: 39rem;
+    left: 40.1rem;
 }
 
 .data-container {
     width: 700px;
-    height: 500px;
+    height: 553px;
+    max-height: fit-content;
     background-color: #f9f9f9;
-    margin-left: 30%;
+    margin-left: 31%;
     margin-top: 1rem;
     border-color: #fdc7125e;
     border-style: solid;
@@ -90,11 +91,11 @@ td.margin-toptr {
 
 td.margin-toptr.pp {
     position: relative;
-    left: 16rem;
+    left: 11rem;
 }
 td.margin-toptr.qp {
     position: relative;
-    left: 6rem;
+    left: 3rem;
 }
 td.check-data1 {
     font-size: 22px;
@@ -104,12 +105,12 @@ td.check-data1 {
 td.check-quantz1 {
     position: relative;
     top: 4rem;
-    left: 8rem;
+    left: 5.5rem;
 }
 td.check-price1 {
     position: relative;
     bottom: -4rem;
-    left: 16rem;
+    left: 11rem;
 }
 button.receive {
     background-color: #fdc512;
@@ -122,5 +123,361 @@ button.receive {
     font-size: 16px;
     position: relative;
     top: 9rem;
-    margin-left: 40%;
+    margin-left: 38%;
 }
+
+@media only screen and (max-width: 1366px) {
+    .active.container {
+        width: 750px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    .data-container {
+        margin: auto;
+        width: 750px;
+    }   
+    .order-stat {
+        width: 55%;
+        position: relative;
+        left: 22.5%;
+        padding: 15px;
+    }
+    img.line {
+        position: absolute;
+        top: 33rem;
+        left: 395px;
+    } 
+}
+
+@media only screen and (max-width: 1024px) {
+    img.d-arrow.dar {
+        position: relative;
+        right: 0em;
+    }
+    .icons2 {
+        margin-left: -15px;
+    }
+    .headmenu .icons .icons2 {
+        width: 2rem;
+        height: 2rem;
+    }
+    .order-stat {
+        padding: 15px;
+        font-size: 22px;
+        width: 750px;
+        position: relative;
+        left: 13.5%;
+    }
+    .data-container {
+        width: 750px;
+        height: 600px;
+    }    
+    img.avatar.img-circle1 {
+        position: relative;
+        width: 400px;
+        margin-left: 24%;
+        margin-right: 24%;
+    }
+    .active.container {
+        height: 300px;
+        width: 750px;
+    }
+    h5.time {
+        font-size: 32px;
+        margin-left: 0;
+        text-align: center;
+    }
+    img.line {
+        position: absolute;
+        top: 40rem;
+        left: 215px;
+    }
+    button.receive {
+        position: relative;
+        top: 14rem;
+        font-size: 40px;
+        left: -4rem;
+    }
+    td.margin-toptr {
+        position: relative;
+        top: 3rem;
+        font-size: 35px;
+    }
+    tr.tablerow {
+        font-size: 26px;
+    }       
+    td.check-data1 {
+        font-size: 24px;
+    }
+    td.check-quantz1 {
+        font-size: 24px;
+        position: relative;
+        left: 6rem;
+    }       
+    td.check-price1 {
+        font-size: 24px;
+        position: relative;
+        left: 9rem; 
+    }
+    td.margin-toptr.pp {
+        position: relative;
+        left: 9rem;
+    }
+             
+}
+
+@media only screen and (max-width: 866px) {
+    .order-stat {
+        padding: 15px;
+        font-size: 22px;
+        width: 750px;
+        position: relative;
+        left: 6.7%;
+    }
+    .footer-section {
+        width: 867px;
+    }
+    .container {
+        width: 867px;
+    }
+    img.line {
+        position: absolute;
+        top: 38rem;
+        left: 140px;
+    }
+}    
+
+@media only screen and (max-width: 812px) {
+    .footer-section {
+        width: 867px;
+    }
+    .order-stat {
+        padding: 15px;
+        font-size: 22px;
+        width: 750px;
+        position: relative;
+        left: 7%;
+    }
+    img.line {
+        position: absolute;
+        top: 38rem;
+        left: 135px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 1440px;
+    }
+    .order-stat {
+        padding: 15px;
+        font-size: 24px;
+        width: 750px;
+        position: relative;
+        left: 24.5%;
+    }
+    .footer-section {
+        width: 1440px;
+    }
+    .headmenu .icons .icons2 {
+        width: 4rem;
+        height: 4rem;
+    }
+    .d-arrow {
+        position: relative;
+        left: 10%;
+    }
+    img.line {
+        position: absolute;
+        top: 53rem;
+        left: 425px;
+    }            
+}    
+
+@media only screen and (max-width: 411px) {
+    .footer-section {
+        width: 1440px;
+    }
+    .order-stat {
+        padding: 20px;
+        font-size: 34px;
+        width: 800px;
+        position: relative;
+        left: 22%;
+    }
+    .active.container {
+        height: 300px;
+        width: 800px;
+    }
+    .data-container {
+        width: 800px;
+        height: 600px;
+    }
+    img.line {
+        position: absolute;
+        top: 57rem;
+        left: 425px;
+    }
+    tr.tablerow {
+        font-size: 34px;
+    }
+    h5.time {
+        font-size: 34px;
+    }    
+    td.check-data1 {
+        font-size: 30px;
+    }
+    td.check-quantz1 {
+        font-size: 30px;
+    }
+    td.check-price1 {
+        font-size: 30px;
+    }    
+    button.menu-toggle {
+        width: 100px;
+        font-size: 40px;
+    }
+    button.receive {
+        position: relative;
+        top: 12rem;
+        margin-left: 42%;
+        font-size: 42px;
+    }
+    td.margin-toptr.pp {
+        position: relative;
+        left: 8rem;
+    }
+    td.margin-toptr.qp {
+        position: relative;
+        left: 2rem;
+    }
+    td.check-price1 {
+        position: relative;
+        left: 8rem;
+    }
+    .copyright {
+        font-size: 32px;
+        width: 50%;
+    }
+    .social-media-icons a img {
+        height: 60px;
+    }
+    .topnav a {
+        width: 300px;
+    }
+    .topnav.responsive .ordinary {
+        font-size: 40px;
+    }
+    .page-container {
+        padding: 44px 0;
+    }    
+}
+
+@media only screen and (max-width: 375px) {
+    .order-stat {
+        padding: 20px;
+        font-size: 34px;
+        width: 850px;
+        position: relative;
+        left: 20.5%;
+    }
+    .active.container {
+        height: 300px;
+        width: 850px;
+    }
+    button.receive {
+        position: relative;
+        top: 12rem;
+        margin-left: 42%;
+        font-size: 42px;
+    }
+    .data-container {
+        width: 850px;
+        height: 650px;
+    }
+    h5.time {
+        font-size: 40px;
+    }
+    img.line {
+        position: absolute;
+        top: 64rem;
+        left: 425px;
+    }
+    tr.tablerow {
+        font-size: 36px;
+    }
+    td.check-data1 {
+        font-size: 34px;
+    }
+    td.check-quantz1 {
+        font-size: 34px;
+        
+    }
+    td.margin-toptr.qp {
+        position: relative;
+        left: 6rem;
+    }
+    td.margin-toptr.pp {
+        position: relative;
+        left: 14rem;
+    }
+    td.check-price1 {
+        position: relative;
+        left: 5rem;
+        font-size: 34px;
+    }
+}    
+
+@media only screen and (max-width: 320px) {
+    .footer-section {
+        width: 1280px;
+    }
+    .container {
+        width: 1280px;
+    }
+    .data-container {
+        width: 850px;
+        height: 650px;
+    }
+    .active.container {
+        height: 300px;
+        width: 850px;
+    }
+    img.line {
+        position: absolute;
+        top: 65.5rem;
+        left: 350px;
+    }
+    .order-stat {
+        padding: 20px;
+        font-size: 36px;
+        width: 850px;
+        position: relative;
+        left: 17%;
+    }
+    h5.time {
+        font-size: 44px;
+    }
+    tr.tablerow {
+        font-size: 36px;
+    }
+    td.check-data1 {
+        font-size: 34px;
+    }
+    td.check-quantz1 {
+        font-size: 34px;
+    }
+    td.margin-toptr.pp {
+        position: relative;
+        left: 6rem;
+    }
+    td.check-price1 {
+        position: relative;
+        left: 6rem;
+        font-size: 34px;
+    }
+    .headmenu .icons .icons2 {
+        width: 6rem;
+        height: 6rem;
+    }
+}    

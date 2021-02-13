@@ -789,6 +789,16 @@ and (orientation: portrait)
     }
 
 }
+/* @media only screen and (max-width: 731px) {
+.container-left {
+    position: relative;
+    left: 12%;
+}
+h1.text-center {
+    position: relative;
+    left: 65%;
+}
+} */
 
 
 

@@ -1,5 +1,6 @@
 @extends('index')
 @section('page_content')
+<link rel="stylesheet" type="text/css" href="{{ asset('css/myorder.css') }}">
 <div class="page-container">
 	<div class="page-sub-container">
 			<div class="order-stat">
@@ -15,11 +16,11 @@
 					<thead class="product-title">
 					<tr class="title-carted">
 							<td class="td1"></td>
-							<td class="td2">Icon</td>
+							<td class="td2"></td>
 							<td class="td3"></td>
-							<td class="td4">Product</td>
-							<td class="td5">Price</td>
-							<td class="td6">Action</td>
+							<td class="td4"></td>
+							<td class="td5"></td>
+							<td class="td6"></td>
 					</tr>
 					</thead>
 				@if($value[1] == null)
@@ -101,7 +102,7 @@
 
 					</div>
 					<div class="data-p">
-							<table>
+							<table class="center">
 
 								<tr class="tablerow">
 									<td class="margin-toptr pn">Productname</td>
@@ -131,18 +132,18 @@
 							</table>
 
 					</div>
-					<form metho="POST" action ="" class="form-horizontal" role="form">
-						@csrf
+					<form metho="POST" action ="{{ route('myorderstatus') }}" class="form-horizontal" role="form">
+					@csrf
 						<div class="order-recieve">
 						
-						<button type="button" class="receive">Order Receive</button>
+						<button type="submit" class="receive">Order Receive</button>
 						</div>
-					</form>	
+					
 				</div>
 
 				@include('sweetalert::alert')
 		</div>
-
+		</form>	
 		</div>
 	</div>
 </div>

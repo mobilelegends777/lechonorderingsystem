@@ -31,49 +31,33 @@ class myorderController extends Controller
         $query = DB::select('SELECT * FROM order_inventory
         INNER JOIN product ON product.product_id = order_inventory.product_id
         WHERE customer_id = '.$data->id.' AND order_status ='."'completed'".' ORDER BY date_ordered DESC LIMIT 10');
-
-         $query2 = DB::select('SELECT * FROM order_inventory
-          INNER JOIN product ON product.product_id = order_inventory.product_id
-          WHERE customer_id = '.$data->id.'  ORDER BY date_ordered DESC LIMIT 10');
-  
+        
+        $query2 = DB::select('SELECT * FROM order_inventory
+        INNER JOIN product ON product.product_id = order_inventory.product_id
+        WHERE customer_id = '.$data->id.' AND order_status ='."'garnishing'".'');
 
             $value = [
                 '0' => $data,
                 '1' => $query,
-                '2' => $query2
+                '2' => $query2,
             ];
             
-            
+                //dd($value[2]);
         return view('userpage/myorder', compact('value','data'));
     }
 
-    // public function updateorder(Request $request){
+     public function updateorder(){
 
-    //     $data = Auth::user();
-    //         $id = $data->id;
+             $data = Auth::user();
+             $id = $data->id;
+             DB::update('UPDATE order_inventory SET pickup_datetime = current_timestamp, order_status = '."'completed'".' WHERE customer_id = '.$id.' AND order_status = '."'garnishing'".'');
+    
 
-    //         $raw = DB::update('UPDATE order_inventory SET pickup_datetime = current_timestamp, order_status = '."'completed'".' WHERE customer_id = '.$id.'');
-    //         $query = DB::select('SELECT * FROM order_inventory
-    //     INNER JOIN product ON product.product_id = order_inventory.product_id
-    //     WHERE customer_id = '.$data->id.' AND order_status ='."'completed'".' ORDER BY date_ordered DESC LIMIT 10');
-
-    //      $query2 = DB::select('SELECT * FROM order_inventory
-    //       INNER JOIN product ON product.product_id = order_inventory.product_id
-    //       WHERE customer_id = '.$data->id.'  ORDER BY date_ordered DESC LIMIT 10');
-  
-
-    //         $value = [
-    //             '0' => $data,
-    //             '1' => $query,
-    //             '2' => $query2
-    //         ];
-            
-
-    //         Alert::success('Success', 'Order Received');
-    //         return view('userpage/myorder', compact('value','data'));
+            Alert::success('Success', 'Order Received');
+             return back();
 
 
-    // }
+    }
 
 
 
