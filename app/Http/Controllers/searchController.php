@@ -19,28 +19,28 @@ class searchController extends Controller
 
         $item = ucfirst($request['query']);
         $data = Auth::user();
-		$category = DB::select("SELECT * FROM category");
-		if($data != null){
-			$id = $data->id;
-			$query = DB::select("SELECT p.*, coalesce((
-				select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id),'0') 
-				as order_exist FROM  product p");
+		    $category = DB::select("SELECT * FROM category");
+      		if($data != null){
+      			$id = $data->id;
+      			$query = DB::select("SELECT p.*, coalesce((
+      				select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id),'0') 
+      				as order_exist FROM  product p");
             $query2 = DB::select("SELECT p.*, coalesce((
-				select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id),'0') 
-				as order_exist FROM  product p
-            WHERE p.name like '%".$item."%' ");
-		}else{
-			$query = DB::select("SELECT * FROM product");
+      				select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id),'0') 
+      				as order_exist FROM  product p
+                  WHERE p.name like '%".$item."%' ");
+      		}else{
+      			$query = DB::select("SELECT * FROM product");
             $query2 = DB::select("SELECT p.*, coalesce((
-				select (select '1') from cart c where c.product_id = p.product_id and customer_id = customer_id),'0') 
-				as order_exist FROM  product p
-            WHERE p.name like '%".$item."%' ");
-		}
+      				select (select '1') from cart c where c.product_id = p.product_id),'0') 
+      				as order_exist FROM  product p
+                  WHERE p.name like '%".$item."%' ");
+      		}
       	$value = [
-			  "0" => $data,
-			  "1" => $query,
-			  "2" => $category,
-              "3" => $query2,
+      			  "0" => $data,
+      			  "1" => $query2,
+		          "2" => $category,
+              "3" => $query,
               "4" => $item
       	];
       	if($value == null)
