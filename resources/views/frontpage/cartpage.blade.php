@@ -43,7 +43,7 @@
 							<a href="">{{ $item->name }}</a>
 						</div>
 						</td>
-						<td>₱ {{ number_format($item->price,2) }}
+						<td class="cart-price">₱ {{ number_format($item->price,2) }}
 							<input type="hidden" name="cartNo_" class="cartNo_ cart-price{{ $item->cart_id }}" value="{{ $item->cart_id }}">
 						</td>
 						<td>
@@ -55,7 +55,7 @@
 						</td>
 						<td>
 							<input type="hidden" class="sub-subtotal{{ $item->price }}">
-							<span class="sub-totals subtotal{{ $item->cart_id }}">{{$item->total}}</span>
+							<span class="sub-totals subtotal{{ $item->cart_id }}">{{number_format($item->total,2)}}</span>
 						</td>
 					</tr>
 				@endforeach

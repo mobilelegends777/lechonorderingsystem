@@ -65,7 +65,7 @@ class shopController extends Controller
 			}else {
 				$query = DB::select("SELECT p.*, coalesce((
 					select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id),'0') 
-					as order_exist FROM  product p WHERE category_type = $category");
+					as order_exist FROM  product p WHERE category_type = ".$category."");
 			}
 		}else{
 			if($category == 9){
@@ -81,12 +81,12 @@ class shopController extends Controller
 		return response()->json($query);
 	}
 	public function filterPrice(Request $request)
-	{
+	{	
 		$user = Auth::user();
-		$id = $user->id;
 		$min = $request->min;
 		$max = $request->max;
 		if($user != null){
+			$id = $user->id;
 			$query = DB::select("SELECT p.*, coalesce((
 				select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id),'0') 
 				as order_exist FROM  product p WHERE price BETWEEN $min AND $max");

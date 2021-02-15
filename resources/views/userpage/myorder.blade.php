@@ -1,6 +1,7 @@
 @extends('index')
 @section('page_content')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/myorder.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/pastorder.css') }}">
 <div class="page-container">
 	<div class="page-sub-container">
 			<div class="order-stat">
@@ -105,9 +106,9 @@
 							<table class="center">
 
 								<tr class="tablerow">
-									<td class="margin-toptr pn">Productname</td>
-									<td class="margin-toptr qp">Quantity</td>
-									<td class="margin-toptr pp">Price</td>
+									<td class="margin-toptr pn"></td>
+									<td class="margin-toptr qp"></td>
+									<td class="margin-toptr pp"></td>
 
 								</tr>
 							<tr>

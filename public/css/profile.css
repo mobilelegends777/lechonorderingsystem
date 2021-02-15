@@ -479,7 +479,33 @@ and (max-width: 640px)
 and (min-width: 360px)
 and (orientation: portrait)
 {
-
+    .footer-contact-info {
+        line-height: 75px;
+        margin-left: 2rem;
+    }
+    .topnav.responsive .ordinary {
+        font-size: 31px;
+    }
+    .topnav.responsive {
+        transition: .2s ease-in;
+        height: 137px;
+    }
+    .footer-contact-us {
+        width: 100%;
+        height: 550px;
+    }
+    .info-contacts {
+        font-size: 53px;
+        width: 29%;
+    }
+    span.sp {
+        width: 65%;
+        font-size: 46px;
+        line-height: 50px;
+    }
+    .image-cont img {
+        width: 341px;
+    }    
     div#edit-profile {
         width: 684px;
         position: relative;
@@ -500,8 +526,69 @@ and (orientation: portrait)
         position: relative;
         left: 90px;
     }
-    .footer-desc.footer-gallery {
-        display: none;
+    .copyright {
+        font-size: 30px;
+    }
+    span.footer-title {
+        font-size: 47px;
+    }
+    .headmenu .des-logo .logos {
+        margin-left: 4px;
+        width: 242px;
+    }
+    .headmenu {
+        display: flex;
+        height: 200px;
+        padding: 22px 0;
+    }
+    .search-icon img {
+        width: 78px;
+        height: 70px;
+        margin-right: 57px;
+    }
+    .headmenu .icons .icons3 {
+        margin-top: 3px;
+        width: 92px;
+        height: 76px;
+    }
+    .headmenu .icons .icons2 {
+        width: 100px;
+        height: 70px;
+    }
+    button.menu-toggle {
+        width: 100%;
+        height: 68px;
+        font-size: 45px;
+        border-radius: 7px;
+        position: relative;
+        
+    }
+    .dropdown-content-account {
+        font-size: 12px;
+        width: 454px;
+        height: 430px;
+        /* right: 15px; */
+        left: -86px;
+        top: 30px;
+        position: fixed;
+        line-height: 31px;
+        position: absolute;
+    }
+    h5.user-name {
+        position: relative;
+        left: 31rem;
+        font-size: 30px;
+    }
+    .dropdown-content-account a {
+        width: 129px;
+        font-size: 34px;
+        line-height: 55px;
+        font-weight: 700;
+    }
+    img.d-arrow.dar {
+        width: 30px;
+        position: relative;
+        left: 1px;
     }
     .rows2 {
         margin-left: 25%;
@@ -518,10 +605,11 @@ and (orientation: portrait)
         box-sizing: border-box;
         height: 147px;
         position: relative;
-        right: 191px;
+        right: 222px;
         border-style: solid;
         border-color: black;
     }
+
     .move-left {
         font-size: 57px;
         position: relative;

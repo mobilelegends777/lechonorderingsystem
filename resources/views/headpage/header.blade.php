@@ -89,7 +89,7 @@
 							
 									
 									<div class="dropdown-content-account">
-									<h5><strong>{{$value[0]->email}}</strong></h5>
+									<h5 class="user-name"><strong>{{$value[0]->email}}</strong></h5>
 									<hr>
 										<a href="{{asset('/userpage/myorder')}}">My Orders</a>
 										<a href="{{asset('userpage/myprofile')}}">Edit Profile</a>
@@ -191,8 +191,6 @@
 			</a>
 				<img src="{{ asset('images/sidenav-cart.png') }}"><span class="cart-title" style="display: none;">Your Cart</span>
 			</div>
-			{{--<form  method="POST" class="updateForm" action="{{ route('cart-update') }}">
-					@csrf--}}
 			<div class="add-to-cart-items">
 				<div class="items-on-cart-container" style="display: none;">
 					<div class="item-on-cart">
@@ -207,7 +205,6 @@
 							<button type="submit" class="cartUpdate">Update</button>
 						</div>
 					</div>
-			<!-- </form> -->
 					<div class="__bottons">
 						<div class="check-out-sidbar">
 
@@ -231,7 +228,9 @@
 
 $(document).ready(function(){
 		// alert(1);
-		
+	$('.filter-by-price').on('click',function(){
+		filterPrice();
+	});	
 	var url = window.location.origin;
 	// var len = $('.cart-id').length;
 	var arrid = [];
@@ -343,13 +342,6 @@ $(document).ready(function(){
 					}
 			});
 		}
-	});
-
-
-$(document).ready(function(){
-$('.filter-by-price').on('click',function(){
-	filterPrice();
-});
 
 $('.catType').each(function(){
 		var cat = $(this).data('value');
@@ -403,6 +395,23 @@ $('.catType').each(function(){
 									</div>
 								</div>
 							`);
+						}else{
+							$('.shop-items-conts').append(`
+								<div class="shop-items">
+									<div class="shop-item-image">
+										<a href="{{asset('frontpage/shop-details')}}" class="shop-images">
+											<img src="${item.images}">
+										</a>
+										<div class="cartIcon${item.product_id} cart-icon">
+											<a href="" id="addToCart" class="shop-cart-icon addToCart" data-value="${item.product_id}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a href="">
+										</div>
+									</div>
+									<div class="shop-info-price">
+										<div class="shop-item-name">${item.name}</div>
+										<div class="shop-item-price">₱${item.price}</div>
+									</div>
+								</div>
+							`);
 						}
 					});
 					
@@ -444,6 +453,7 @@ $('.catType').each(function(){
 			
 		});
 	});
+
 @if(Auth::check())	
 	Carting();
 @endif
@@ -454,5 +464,4 @@ $('.catType').each(function(){
 //   });
 // });
 mySearchFunction(id);
-
 </script>

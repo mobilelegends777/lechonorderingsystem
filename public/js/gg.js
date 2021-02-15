@@ -276,6 +276,26 @@ function filterPrice() {
                   </div>
               </div>
       `);
+          }else {
+            $('.shop-items-conts').append(`
+                
+                    <div class="shop-items">
+                        <div class="shop-item-image">
+                          <a href="{{asset('frontpage/shop-details')}}" class="shop-images">
+                            <img src="${item.images}">
+                          </a>
+                          <div class="cartIcon${item.product_id} cart-icon">
+                            <a href="" id="addToCart" class="shop-cart-icon addToCart" data-value="${item.product_id}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a href="">
+                          </div>
+                        </div>
+                        
+                        <div class="shop-info-price">
+                          <div class="shop-item-name">${item.name}</div>
+                          <div class="shop-item-price">₱${item.price}</div>
+                        </div>
+                    </div>
+              
+              `);
           }
 				});
 				Carting();

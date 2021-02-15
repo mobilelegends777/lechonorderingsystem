@@ -11,7 +11,6 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/loader.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/placeorder.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/cart.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/pastorder.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/verify.css') }}">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css">
