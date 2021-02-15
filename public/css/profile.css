@@ -802,7 +802,16 @@ and (orientation: landscape)
     }    
 
 }
-
+@media only screen 
+and (max-width:731px)
+and (min-width:411px)
+and (orientation: portrait){
+    h5.user-name {
+        position: relative;
+        left: 1rem;
+        font-size: 30px;
+    }
+}
 @media only screen 
 and (max-width: 731px)
 and (min-width: 411px)
@@ -814,6 +823,7 @@ and (orientation: landscape)
         position: relative;
         left: -100px!important;
     }
+
     div#addresses {
         width: 684px;
         position: relative;

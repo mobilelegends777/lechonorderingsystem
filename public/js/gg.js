@@ -27,7 +27,7 @@ var al = (()=> {
                 if($('#badge').text() == 0){
                   $( ".notification-cart" ).hide();
                 }
-
+                subTOTS();
                 
 
              },
@@ -153,10 +153,10 @@ function Carting(){
               <span class="shop-cart-icon"><i id="cart-icons " class="fas fa-check" aria-hidden="true"></i></span>
             `)
           // $( "#badge" ).text( text );
-            
           }
         }
       });
+
   }
 });
 }
@@ -206,7 +206,7 @@ function cartedItems(){
                     <button type="button" class="qty-inc" onclick="inc('qty',${item.cart_id})">+</button>
                   </div>
                   <div class="item-sub">
-                    <span class="substotal${item.cart_id}">Total:<span class="substotals">${item.total}</span></span>
+                    <span class="substotal${item.cart_id}">Total: ₱<span class="substotals">${item.total}</span></span>
                   </div>
                 </div>
               </div>
@@ -310,6 +310,7 @@ function filterPrice() {
   var url = window.location.origin;
   return {
       checkoutCart: ()=>{
+
         $.ajax({
           headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -343,7 +344,7 @@ function filterPrice() {
 
 })(Chck);
 // end checkout item
-
+// sorting 
 function sortIng(){
     var url = window.location.origin;
     $('#sort-items').on('change',function(){
@@ -442,39 +443,13 @@ function sortIng(){
         });
     });
 }
+// end sorting
+function subTotal(){
+        var sum = Number($(this).text());
+    $('.substotals').each(function(){
+        sum += Number($(this).text());
+    });
+    $('.sub_tot').text(sum);
+}
 
-//Sorting
-// (function($) {
-//   "use strict";
 
-//   $.fn.numericFlexboxSorting = function(options) {
-//     const settings = $.extend({
-//       elToSort: ".shop-items-conts"
-//     }, options);
-    
-//     const $select = this;
-//     const ascOrder = (a, b) => a - b;
-//     const descOrder = (a, b) => b - a;
-
-//     $select.on("change", () => {
-//       const selectedOption = $select.find("option:selected").attr("data-sort");
-//       sortColumns(settings.elToSort, selectedOption);
-//     });
-
-//     function sortColumns(el, opt) {
-//       const attr = "data-" + opt.split(":")[0];
-//       const sortMethod = (opt.includes("asc")) ? ascOrder : descOrder;
-//       const sign = (opt.includes("asc")) ? "" : "-";
-
-//       const sortArray = $(el).map((i, el) => $(el).attr(attr)).sort(sortMethod);
-
-//       for (let i = 0; i < sortArray.length; i++) {
-//         $(el).filter(`[${attr}="${sortArray[i]}"]`).css("order", sign + sortArray[i]);
-//       }
-//     }
-
-//     return $select;
-//   };
-// })(jQuery);
-// // call the plugin
-// $("#sort-items").numericFlexboxSorting();

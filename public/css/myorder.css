@@ -154,6 +154,11 @@ and (orientation:portrait){
         font-size: 38px;
         width: 29%;
     }
+    .cartpage-item {
+        font-size: 33px;
+        position: relative;
+        right: 2rem;
+    }
     .footer-contact-info {
         line-height: 99px;
     }
@@ -614,10 +619,10 @@ and (orientation:portrait){
         width: 1440px;
     }
     .image-cont img {
-        width: 210px;
+        width: 203px;
     }
     .image-cont {
-        height: 250px;
+        height: 428px;
     }
     .data-container {
         width: 800px;

@@ -412,10 +412,12 @@ function inc(element, id) {
       var qty = $('.cartQty__'+id).val();
       
       $('.subtotal'+id).empty();
-      $('.subtotal'+id).append(`<span>${ qty * cart_price}</span>`);
+      $('.subtotal'+id).append(`₱ <span class="substotals">${ qty * cart_price}</span>`);
       var cartSub = $('.cart-tot-price'+id).val();
       $('.substotal'+id).empty();
-      $('.substotal'+id).append(`<span>Total: ${ qty * cartSub}</span>`);
+      $('.substotal'+id).append(`Total: ₱<span class="substotals">${ qty * cartSub}</span>`);
+      // alert($('.substotals').text());
+      subTOTS();
 }
 function dec(element, id) {
   var number = $('.cartQty__'+id).val();
@@ -425,14 +427,20 @@ function dec(element, id) {
   var qty = $('.cartQty__'+id).val();
   var cart_price= $('.cart-price'+id).val();
   $('.subtotal'+id).empty();
-  $('.subtotal'+id).append(`<span>${cart_price*qty}</span>`);
+  $('.subtotal'+id).append(`₱ <span class="substotals">${cart_price*qty}</span>`);
   var cartSub = $('.cart-tot-price'+id).val();
   $('.substotal'+id).empty();
-  $('.substotal'+id).append(`<span>Total: ${ qty * cartSub}</span>`);
+  $('.substotal'+id).append(`Total: ₱<span class="substotals">${ qty * cartSub}</span>`);
+  subTOTS();
 }
-
-
-
+function subTOTS(){
+  var sum = 0;
+  $('.substotals').each(function(){
+    var subs = Number($(this).text());
+        sum += subs;
+  });
+  $('.sub_tot').text("₱"+sum);
+}
 </script>
 
 <script>
@@ -541,3 +549,4 @@ window.onclick = function(event) {
     }
 
 	</script>
+    
