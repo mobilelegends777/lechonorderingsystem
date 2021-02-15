@@ -285,10 +285,23 @@ i.fa.fa-star {
   justify-content: space-evenly;
 }
 
+.filter-conts {
+  /*border: 1px solid blue; */
+  display: inline-block;
+}
 .shop-items {
-  padding: 11px 0;
+  /*padding: 11px 0;
   position: relative;
-  margin-left: 18px;
+  margin-left: 18px;*/
+  /*border: 1px solid black; */
+  width: 30%; 
+  height: auto; 
+  float: left; 
+  margin: 20px auto;
+  background-color: #f1f1f1;
+}
+.shop-items img {
+  width: 100%;
 }
 
 .shop-filters {
@@ -318,7 +331,7 @@ i.fa.fa-star {
 
 .shop-info-price {
   font-weight: normal;
-  font-size: 21px;
+  font-size: 19px;
   line-height: 1;
   letter-spacing: 0.01em;
   -webkit-box-align: center;
@@ -326,10 +339,11 @@ i.fa.fa-star {
   align-items: center;
   text-align: center;
   width: 100%;
+  padding: 10px 0px;
 }
 
 .shop-item-name {
-  padding: 10px 0px;
+  padding: 0px 0px 10px 0px;
 }
 
 .shop-item-name:hover {
