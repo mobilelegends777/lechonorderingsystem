@@ -199,15 +199,16 @@
 					</div>
 					<div class="subtotal-cont">
 						<div class="sub-numbers" style="color: #666;display: flex;">
-							<span><h3>Subtotal :</h3></span><span><h3 class="sub_tot"></h3></span>
+							<span><h3>Subtotal : </h3></span><span><h3 class="sub_tot"></h3></span>
 						</div>
-						<div class="updateCart">
+						{{--<div class="updateCart">
 							<button type="submit" class="cartUpdate">Update</button>
-						</div>
+						</div>--}}
 					</div>
 					<div class="__bottons">
 						<div class="check-out-sidbar">
-								<button class="checkout-button" onclick="Chck.checkoutCart()">Checkout</button>
+								{{--<button class="checkout-button" onclick="Chck.checkoutCart()">Checkout</button>--}}
+								<button class="checkout-button">Checkout</button>
 						</div>
 						<div class="view-cart-sidebar">
 						<a href="{{asset('/frontpage/cartpage')}}">
@@ -234,7 +235,7 @@ $(document).ready(function(){
 	// var len = $('.cart-id').length;
 	var arrid = [];
 	var arrQ = [];
-	$('.cartUpdate').on('click', function(){
+	$('.checkout-button').on('click', function(){
 		$('.cart_id').each(function() { arrid.push($(this).val()); });
 		$('.cartQ').each(function() { arrQ.push($(this).val()); });
 		// alert(id);
@@ -254,6 +255,7 @@ $(document).ready(function(){
 					$('.sub_tot').append(`
 						<span>₱ ${data[1][0].total}</span>
 					`);
+					location.href = '/frontpage/checkout';
 					}
 					else{
 					$('.sub_tot').empty();
@@ -263,24 +265,17 @@ $(document).ready(function(){
 					
 				}
 			});
-			subTotal();
+  			subTOTS();
 			cartedItems();
 		}
 	});
-		subTotal();
-		function subTotal(){
-				var sum = Number($(this).text());
-			$('.substotals').each(function(){
-				sum += Number($(this).text());
-			});
-			$('.sub_tot').text(sum);
-		}
+		subTOTS();
 		var url = window.location.origin;
 		cartedItems();
 	$('.cart').click(function(e){
 		e.preventDefault();
-			subTotal();	
 			cartedItems();
+			subTOTS();
 	});
 	function cartedItems(){
 		
@@ -336,9 +331,10 @@ $(document).ready(function(){
 						});
 						$( "#badge" ).text( count_item );
 						$('#badge2').text( count_item );
-						// Carting();
+						
 					}
-					}
+        				subTOTS();
+				}
 			});
 		}
 
@@ -457,10 +453,7 @@ $('.catType').each(function(){
 	Carting();
 @endif
 });
-// $(document).ready(function(){
-//   $('.btn-search').on('click',function(){
-//     alert('search');
-//   });
-// });
+
 mySearchFunction(id);
+
 </script>

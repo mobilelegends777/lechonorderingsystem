@@ -101,14 +101,14 @@ class checkoutController extends Controller
 
     }
 
-        public function checkOutItem(){
-            $userData = Auth::user();
-            // dd($userData);
-            $id = $userData->id;
-            $query = DB::select('UPDATE cart SET checkout_date = current_timestamp WHERE customer_id = '.$id.'');
-            // dd($query);
-            return response()->json($query); 
-        }
+        // public function checkOutItem(){
+        //     $userData = Auth::user();
+        //     // dd($userData);
+        //     $id = $userData->id;
+        //     $query = DB::select('UPDATE cart SET checkout_date = current_timestamp WHERE customer_id = '.$id.'');
+        //     // dd($query);
+        //     return response()->json($query); 
+        // }
 
       public function placeorder(Request $request){
             // dd($request->all());
@@ -121,6 +121,7 @@ class checkoutController extends Controller
             $value = DB::select('SELECT * from users inner join customer_info ON customer_id= users.id
             inner join customer_address ON customer_address.customer_id = users.id
             inner join contact_info ON contact_info.customer_id = users.id where users.id = '.$userID.'');
+            // dd($cartData);
                 if($cartData > 0){
                     foreach ($cartData as $items){
                       // dd($items);
