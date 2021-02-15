@@ -44,7 +44,7 @@
 						</div>
 						</td>
 						<td>₱ {{ number_format($item->price,2) }}
-							<input type="hidden" class="cartPrice cart-price{{ $item->cart_id }}" value="{{ $item->price }}">
+							<input type="hidden" name="cartNo_" class="cartNo_ cart-price{{ $item->cart_id }}" value="{{ $item->cart_id }}">
 						</td>
 						<td>
 							<div  class="cart-input">
@@ -112,9 +112,10 @@
 					</div>
 				</div>	
 				<div class="proceed__">	
-					<div>	<a href="{{asset('frontpage/checkout')}}">
-							<button class="__proceed-to">Proceed to Checkout</button>
-							</a>
+					<div>	
+						<!-- <a href="{{asset('frontpage/checkout')}}"> -->
+								<button class="__proceed-to" onclick="Chck.checkoutCart()">Proceed to Checkout</button>
+						<!-- </a> -->
 					</div>
 				</div>
 

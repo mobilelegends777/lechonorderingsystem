@@ -99,6 +99,22 @@ class shopController extends Controller
 		// dd($query);
 		return response()->json($query);
 	}
+	public function sortItems(Request $request){
+		// dd($request->all());
+		$sort = $request->sort;
+		$user = Auth::user();
+		// dd($user);
+		if($user != null){
+			$id = $user->id;
+				$query = DB::select("SELECT p.*, coalesce((
+					select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id),'0') 
+					as order_exist FROM  product p  ORDER BY p.price $sort");
+		}else{
+			
+				$query = DB::select('SELECT * FROM product  ORDER BY p.price $sort');
+		}
+		return response()->json($query);
+	}
 	
 	 
 }

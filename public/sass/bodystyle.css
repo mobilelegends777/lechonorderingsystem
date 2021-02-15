@@ -29,6 +29,7 @@ span.invalid-feedback {
   /*text-align: center;*/
   /*color: #ffffffbf;*/
   max-width: 1920px;
+  width:1903px!important;
 }
 
 .f-icon img {
@@ -171,7 +172,7 @@ a#cancel_reset {
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  height: 20.25rem;
+  height: 31.25rem;
   -webkit-filter: brightness(0.5);
   filter: brightness(0.5);
 }
@@ -256,7 +257,7 @@ i.fa.fa-star {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  /* width: 111%; */
+  /*width: 85%;*/
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
 }
@@ -288,7 +289,7 @@ i.fa.fa-star {
 .shop-items {
   padding: 11px 0;
   position: relative;
-  margin-left: 18px;
+  margin: 0 16px;
 }
 
 .shop-filters {
@@ -363,11 +364,11 @@ i.fa.fa-star {
     margin: 100px 122px;
     display: none;
 }*/
-/*.shop-item-image:hover .shop-cart-icon i {
+.shop-item-image:hover .shop-cart-icon i {
   display: block;
-}*/
+}
 
-/*.shop-cart-icon i {
+.shop-cart-icon i {
   position: absolute;
   top: 0;
   margin: 74px 113px;
@@ -376,12 +377,12 @@ i.fa.fa-star {
   font-size: 36px;
   padding: 18px;
   border-radius: 50%;
-}*/
+}
 
-/*.shop-cart-icon i:hover {
+.shop-cart-icon i:hover {
   color: #fff;
   background: #c4a265;
-}*/
+}
 
 /*.shop-cart-icon i:hover*/
 .shop-item-image {
@@ -522,6 +523,154 @@ button.addcart {
   width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  span.close-btn {
+    display: block;
+  }
+  .shop-items {
+    width: 31%;
+  }
+  .shop-images-lechon img {
+    height: 100%;
+    width: 100%;
+  }
+  .shop-item-col {
+    width: 100%;
+  }
+  .shop-conts {
+    display: none;
+    border: solid #c4a256;
+  }
+  .showing {
+    display: block;
+    position: fixed;
+    background: #fff;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    width: 29.4375rem;
+    -webkit-transition: 2s;
+    transition: 2s;
+  }
+  .shop-sub-container3 {
+    width: 100%;
+    padding: 31px 32px;
+  }
+  .shop-anchors {
+    width: auto;
+    font-weight: 700;
+    font-size: 26px;
+    padding: 10px 0;
+    padding: 30px 0;
+  }
+  .filter-btn {
+    display: block;
+    font-size: 26px;
+    font-weight: 700;
+  }
+  .shop-anchors-filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 2.5625rem 1.8rem;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: auto;
+  }
+  span.filter-show {
+    font-size: 26px;
+  }
+  button.filter-show-btn {
+    padding: 26px 56px;
+    background: #C4A265;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+  }
+  .shop-sorting {
+    font-size: 25px;
+  }
+  .shop-sorting a {
+    color: #c4a26561;
+    font-size: 34px;
+  }
+  .sort-items select {
+    font-size: 33px;
+    border: unset;
+    width: 23.3125rem;
+  }
+  .shop-images img {
+    height: 18.5625rem;
+  }
+  .shop-info-price {
+    font-size: 30px;
+  }
+  .shop-item-name {
+    padding: 19px 0px;
+  }
+  .paginate {
+    font-size: 35px;
+  }
+  .filter-cat {
+    font-size: 29px;
+  }
+  .shop-sub-container2 {
+    position: absolute;
+    width: 100%;
+    /*background: #2a2c2f;*/
+  }
+  .sort-items select option {
+    font-size: 10px;
+  }
+  /*.shop-filters {
+      padding: 57px;
+      line-height: 73px;
+    }*/
+  .shop-filters {
+    width: unset;
+    padding: 57px;
+    line-height: 73px;
+    background: #fff;
+  }
+  .shop-filters .close-btn {
+    font-size: 69px;
+    float: right;
+  }
+  .title-header {
+    font-size: 26px;
+  }
+  .shop-cart-icon i {
+    margin: 106px 159px;
+    font-size: 48px;
+  }
+  .dropdown-content-account {
+    padding: 9px 16px;
+    z-index: 200;
+  }
+  .sort-items select option {
+    font-size: 10px;
+  }
+  .shop-filters {
+    padding: 57px;
+    line-height: 73px;
+  }
+  .shop-filters .close-btn {
+    font-size: 69px;
+    float: right;
+  }
+  .title-header {
+    font-size: 26px;
+  }
+  .shop-cart-icon i {
+    margin: 106px 159px;
+    font-size: 48px;
+  }
+  .dropdown-content-account {
+    padding: 9px 16px;
+    z-index: 200;
+  }
+}
 
 .signup-inputs {
   width: 130%;
@@ -537,7 +686,7 @@ button.addcart {
 }
 
 input {
-  /*padding: 12px 20px;*/
+  padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #cf9d71;
@@ -547,6 +696,11 @@ input {
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: portrait) {
+
+  .container{
+
+    width: 1440px!important;
+  }
   .login-reg-form {
     width: 800px;
     border: solid #cf9d71;
@@ -581,6 +735,10 @@ input {
 }
 
 @media only screen and (max-width: 1366px) and (min-width: 1024px) and (orientation: portrait) {
+
+  .container{
+    width: 1111px!important;
+  }
   .login-reg-form {
     width: 800px;
     border: solid #cf9d71;
@@ -617,6 +775,30 @@ input {
     text-align: -webkit-center;
     height: 1250px;
   }
+
+  .container{
+
+    width: 1266px!important;
+  }
+  .footer-contact-info {
+    line-height: 53px;
+}
+.info-contacts {
+  font-size: 32px;
+}
+span.sp {
+  font-size: 37px;
+}
+.copyright {
+  font-size: 25px;
+  width: 31%;
+}
+.image-cont img {
+  width: 301px;
+}
+.image-cont {
+  height: 580px;
+}
   .login-reg-form {
     width: 800px;
     border: solid #2a2c2f;
@@ -717,6 +899,26 @@ input {
 }
 
 @media only screen and (max-width: 360px) and (min-width: 320px) and (orientation: portrait) {
+
+  .container{
+    width:1280px!important;
+
+  }
+  .info-contacts {
+    font-size: 33px;
+    width: 29%;
+}
+.footer-contact-info {
+  line-height: 57px;
+}
+span.sp {
+  width: 65%;
+  font-size: 35px;
+  line-height: 28px;
+}
+.copyright {
+  font-size: 23px;
+}
   .login-reg-form {
     width: 950px;
     border: solid #2a2c2f;
@@ -746,9 +948,7 @@ input {
     width: 100% !important;
     font-size: 50px !important;
   }
-  .footer-desc.footer-gallery {
-    display: none;
-  }
+
   .login-body {
     background-image: url(../asset/img/599.jpg);
     padding: 102px 0;
@@ -809,6 +1009,30 @@ input {
 }
 
 @media only screen and (max-width: 540px) and (min-width: 411px) and (orientation: portrait) {
+  .container{
+    
+    width: 1440px!important;
+  
+  }
+  .info-contacts {
+    font-size: 57px;
+}
+span.sp {
+  font-size: 42px;
+}
+.footer-contact-info {
+  line-height: 97px;
+}
+.copyright {
+  font-size: 24px;
+  width: 30%;
+}
+.image-cont {
+  height: 401px;
+}
+.image-cont img {
+  width: 274px;
+}
   .login-reg-form {
     width: 1000px;
     border: solid #2a2c2f;

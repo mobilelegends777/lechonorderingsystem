@@ -28,6 +28,7 @@ class myorderController extends Controller
     {
 
         $data = Auth::user(); 
+
         $query = DB::select('SELECT * FROM order_inventory
         INNER JOIN product ON product.product_id = order_inventory.product_id
         WHERE customer_id = '.$data->id.' AND order_status ='."'completed'".' ORDER BY date_ordered DESC LIMIT 10');
@@ -36,13 +37,18 @@ class myorderController extends Controller
         INNER JOIN product ON product.product_id = order_inventory.product_id
         WHERE customer_id = '.$data->id.' AND order_status ='."'garnishing'".'');
 
+      
+
+
             $value = [
                 '0' => $data,
                 '1' => $query,
                 '2' => $query2,
             ];
             
-                //dd($value[2]);
+
+        // dd($query);
+
         return view('userpage/myorder', compact('value','data'));
     }
 

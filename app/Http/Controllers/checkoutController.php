@@ -108,11 +108,12 @@ class checkoutController extends Controller
             // dd($userData);
             $id = $userData->id;
             $query = DB::select('UPDATE cart SET checkout_date = current_timestamp WHERE customer_id = '.$id.'');
-
+            // dd($query);
             return response()->json($query); 
         }
 
       public function placeorder(Request $request){
+
         // dd($request->all());
         $data = Auth::user();
         $userID = $data->id;
@@ -134,7 +135,7 @@ class checkoutController extends Controller
                 }
                 $upDate = DB::select('DELETE FROM cart WHERE customer_id = '.$userID.'');
             }     
-            return view('frontpage/placedorder', compact('value'));
+       return view('frontpage/placedorder', compact('value'));
     }
 
 }

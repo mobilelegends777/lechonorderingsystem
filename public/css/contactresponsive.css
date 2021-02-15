@@ -66,6 +66,10 @@ and (orientation: portrait)
         position: relative;
         left: 5%;
     }
+    .container {
+        max-width: 1440px;
+        width: 1440px;
+    }
     #contact .container {
         width: 1300px;
     }
@@ -137,6 +141,7 @@ and (orientation: landscape){
         position: relative;
         left: 14%;
     }
+
     
     
 }
@@ -318,6 +323,10 @@ and (orientation: portrait)
         left: 0%;
     }
     
+    .container {
+        max-width: 1440px;
+        width: 1440px;
+    }
 
     /* .col-sm-12 {
         display: table-header-group;
@@ -477,6 +486,10 @@ and (orientation: portrait)
         position: relative;
         left: -27%;
     }
+    .container {
+        max-width: 1920px;
+        width: 100%;
+    }
     .contact_bottom_main_right_top.clearfix {
         display: none;
     }
@@ -526,6 +539,19 @@ and (orientation: portrait)
     .container-left {
         position: relative;
         left: 3%;
+    }
+    span.sp {
+        font-size: 54px;
+    }
+    .info-contacts {
+        font-size: 63px;
+    }
+    .footer-contact-info {
+        line-height: 110px;
+    }
+    .copyright {
+        font-size: 27px;
+        width: 31%;
     }
     .contact_bottom_main_right_top.clearfix {
         display: none;

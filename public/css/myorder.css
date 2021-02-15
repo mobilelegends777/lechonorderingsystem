@@ -1,4 +1,10 @@
-
+.page-container {
+    text-align: center;
+    height: auto;
+    /* padding: 43px 0; */
+    /* margin: 0; */
+    width: 100%;
+}
 
 td.td4 {
     position: relative;
@@ -19,11 +25,12 @@ td.td2 {
 .order-stat {
     text-align: center;
     background-color: #2a2c2f;
-    width: 50%;
+    width: 700px;
     position: relative;
-    left: 25%;
+    /* left: 31%; */
     height: auto;
     padding: 10px;
+    margin: auto;
 }
 .order-stat a {
     text-align: center;
@@ -39,21 +46,25 @@ td.td2 {
 img.avatar.img-circle1 {
     position: relative;
     width: 300px;
-    margin-left: 31%;
-    margin-right: 22%;
+    /* margin-left: 31%;
+    margin-right: 22%; */
 }
 
 .active.container {
     width: 700px;
     height: 250px;
     background-image: linear-gradient(to right, #fdc912 , #feba12);
-    margin-left: 31%;
+    /* margin-left: 31%; */
+    margin: auto;
 }
-
+.line-loading {
+    display: flex;
+    justify-content: center;
+}
 img.line {
     position: absolute;
-    top: 33rem;
-    left: 40.1rem;
+    top: -7rem;
+    /* left: 40.1rem; */
 }
 
 .data-container {
@@ -61,15 +72,18 @@ img.line {
     height: 553px;
     max-height: fit-content;
     background-color: #f9f9f9;
-    margin-left: 31%;
-    margin-top: 1rem;
+    /* margin-left: 31%;
+    margin-top: 1rem; */
     border-color: #fdc7125e;
     border-style: solid;
+    position: relative;
+    top: 1rem;
+    margin: auto;
 }
 
 h5.time {
     font-size: 22px;
-    margin-left: 40%;
+    text-align: center;
 }
 h1.mins-title {
     font-size: 50px;
@@ -83,6 +97,7 @@ tr.tablerow {
 td.margin-toptr {
     position: relative;
     top: 3rem;
+    text-align: left;
 }
 .data-p {
     margin-left: 4rem;
@@ -91,7 +106,7 @@ td.margin-toptr {
 
 td.margin-toptr.pp {
     position: relative;
-    left: 11rem;
+    left: 10rem;
 }
 td.margin-toptr.qp {
     position: relative;
@@ -101,16 +116,18 @@ td.check-data1 {
     font-size: 22px;
     position: relative;
     top: 4rem;
+    text-align: left;
 }
 td.check-quantz1 {
     position: relative;
     top: 4rem;
-    left: 5.5rem;
+    left: 3rem;
 }
 td.check-price1 {
     position: relative;
     bottom: -4rem;
-    left: 11rem;
+    left: 10rem;
+    text-align: left;
 }
 button.receive {
     background-color: #fdc512;
@@ -122,31 +139,85 @@ button.receive {
     display: inline-block;
     font-size: 16px;
     position: relative;
-    top: 9rem;
-    margin-left: 38%;
+    top: 11rem;
 }
 
+@media only screen 
+and (min-width:360px)
+and (max-width:640px)
+and (orientation:portrait){
+
+    span.footer-title {
+        font-size: 55px;
+    }
+    .info-contacts {
+        font-size: 38px;
+        width: 29%;
+    }
+    .footer-contact-info {
+        line-height: 99px;
+    }
+    span.sp {
+        width: 65%;
+        font-size: 37px;
+        line-height: 27px;
+    }
+}
 @media only screen and (max-width: 1366px) {
     .active.container {
-        width: 750px;
+        width: 850px;
         margin: auto;
         margin-bottom: 10px;
     }
+    .container {
+        max-width: 1024px;
+        width: 1464px;
+    }
     .data-container {
         margin: auto;
-        width: 750px;
+        width: 850px;
     }   
-    .order-stat {
-        width: 55%;
-        position: relative;
-        left: 22.5%;
-        padding: 15px;
-    }
     img.line {
         position: absolute;
-        top: 33rem;
-        left: 395px;
+        top: -7rem;
+        /* left: 395px; */
     } 
+    .order-stat {
+        width: 850px;
+        position: relative;
+        /* left: 28.5%; */
+        padding: 15px;
+    }
+    .header-container {
+        width: 1440px;
+    }
+    .footer-section {
+        width: 1440px;
+    }   
+    .page-container {
+        position: relative;
+        left: 13rem;
+    }
+    td.margin-toptr.qp {
+        position: relative;
+        left: 5rem;
+    }
+    td.check-quantz1 {
+        position: relative;
+        top: 4rem;
+        left: 5rem;
+    }
+    td.margin-toptr.pp {
+        position: relative;
+        left: 15rem;
+    }
+    td.check-price1 {
+        position: relative;
+        bottom: -4rem;
+        left: 15.3rem;
+        text-align: left;
+    }
+
 }
 
 @media only screen and (max-width: 1024px) {
@@ -154,6 +225,7 @@ button.receive {
         position: relative;
         right: 0em;
     }
+  
     .icons2 {
         margin-left: -15px;
     }
@@ -164,13 +236,13 @@ button.receive {
     .order-stat {
         padding: 15px;
         font-size: 22px;
-        width: 750px;
+        width: 850px;
         position: relative;
-        left: 13.5%;
+        /* left: 13.5%; */
     }
     .data-container {
-        width: 750px;
-        height: 600px;
+        width: 850px;
+        height: 625px;
     }    
     img.avatar.img-circle1 {
         position: relative;
@@ -180,23 +252,18 @@ button.receive {
     }
     .active.container {
         height: 300px;
-        width: 750px;
+        width: 850px;
     }
     h5.time {
         font-size: 32px;
         margin-left: 0;
         text-align: center;
     }
-    img.line {
-        position: absolute;
-        top: 40rem;
-        left: 215px;
-    }
     button.receive {
         position: relative;
-        top: 14rem;
+        top: 11rem;
         font-size: 40px;
-        left: -4rem;
+        /* left: -4rem; */
     }
     td.margin-toptr {
         position: relative;
@@ -208,60 +275,138 @@ button.receive {
     }       
     td.check-data1 {
         font-size: 24px;
+        text-align: left;
     }
     td.check-quantz1 {
         font-size: 24px;
         position: relative;
-        left: 6rem;
+        left: 5rem;
     }       
     td.check-price1 {
         font-size: 24px;
         position: relative;
-        left: 9rem; 
+        left: 11.5rem; 
     }
     td.margin-toptr.pp {
         position: relative;
-        left: 9rem;
+        left: 11rem;
     }
-             
+    img.line {
+        position: absolute;
+        top: -4rem;
+    }   
+    .headmenu .sub-menu {
+        font-size: 22px;
+    }
+    .page-container {
+        position: relative;
+        left: 13rem;
+    }    
 }
 
 @media only screen and (max-width: 866px) {
+    .footer-2nd-cont {
+        display: block;
+    }   
+    span.sp {
+        width: 650px;
+    }
+    .image-cont {
+        height: auto;
+        gap: .5rem;
+    }
+    span.footer-title {
+        font-weight: 700;
+        font-size: 26px;
+    }
+    .footer-title-gallery {
+        width: 675px;
+    }   
+    .page-container {
+        position: relative;
+        left: 18rem;
+    }             
     .order-stat {
         padding: 15px;
         font-size: 22px;
-        width: 750px;
+        width: 850px;
         position: relative;
-        left: 6.7%;
+        /* left: 6.7%; */
     }
     .footer-section {
-        width: 867px;
+        width: 1440px;
     }
     .container {
         width: 867px;
     }
     img.line {
         position: absolute;
-        top: 38rem;
-        left: 140px;
+        top: -4rem;
+        /* left: 140px; */
+    }
+    .footer-title-contact {
+        width: 50%;
+        height: 45px;
+    }
+    .info-contacts {
+        font-size: 26px;
+        width: 21%;
+    }
+    span.sp {
+        font-size: 26px;
+    }
+    .copyright {
+        font-size: 28px;
+    }
+    .social-media-icons a img {
+        height: 55px;
     }
 }    
 
 @media only screen and (max-width: 812px) {
     .footer-section {
-        width: 867px;
+        width: 1440px;
     }
     .order-stat {
         padding: 15px;
         font-size: 22px;
-        width: 750px;
+        width: 850px;
         position: relative;
-        left: 7%;
+        /* left: 7%; */
     }
     img.line {
         position: absolute;
-        top: 38rem;
-        left: 135px;
+        top: -4rem;
+        /* left: 135px; */
+    }
+    .footer-2nd-cont {
+        display: block;
+    }
+    .image-cont {
+        gap: .5rem;
+        margin-bottom: 10px;
+    }    
+    .image-cont img {
+        height: 103px;
+        gap: .5rem;
+    }
+    span.footer-title {
+
+        font-size: 26px;
+    }
+    .footer-title-gallery {
+        color: #fff;
+        width: 50%;
+        height: 45px;    
+    }
+    span.sp {
+        font-size: 26px;
+        width: 650px;
+        height: 50px;
+    }
+    .page-container {
+        position: relative;
+        left: 18rem;
     }
 }
 
@@ -272,9 +417,13 @@ button.receive {
     .order-stat {
         padding: 15px;
         font-size: 24px;
-        width: 750px;
+        width: 850px;
         position: relative;
-        left: 24.5%;
+        /* left: 24.5%; */
+    }
+    .container {
+        max-width: 1440px;
+        width: 1464px;
     }
     .footer-section {
         width: 1440px;
@@ -289,34 +438,220 @@ button.receive {
     }
     img.line {
         position: absolute;
-        top: 53rem;
-        left: 425px;
+        top: -4rem;
+        /* left: 425px; */
+    }    
+
+    /* navbar css */
+    button.menu-toggle {
+        width: 45%;
+        height: 50px;
+        font-size: 32px;        
+    }   
+    .search-icon img {
+        width: 2.8125rem;
+        margin-right: 15px;
+        height: 2.8125rem;
+        cursor: pointer;
+    }
+    .headmenu .icons .icons3 {
+        width: 3.1875rem;
+    }
+    .headmenu .icons .icons2 {
+        width: 3rem;
+        height: 3rem;
+    }
+    .topnav.responsive .ordinary {
+        width: 1440px;
+    }    
+    .page-container {
+        position: relative;
+        left: 0rem;
+    }
+    .headmenu .des1 {
+        position: unset;
+        font-size: 26px;
+    }
+    .headmenu .des2 {
+        font-size: 20px;
+    }
+    /* .image-cont img {
+        width: 103px;
+    }     */
+    .topnav {
+        font-size: 32px;
+        width: 1440px;
+    }
+    .topnav a {
+        color: #fff;
+        width: 300px;
+        font-size: 32px;
+    }
+    .page-sub-container {
+        margin: 6.75rem 0;
+    }
+    td.check-data1 {
+        font-size: 24px;
+        text-align: left;
+    }
+    span.footer-title {
+        font-size: 32px;
+    }
+    .footer-title-gallery {
+        width: 50%;
+        height: 45px;
+    }
+    .image-cont img {
+        margin: 5px;
+        width: 92px;
+    }
+    .footer-desc {
+        margin-bottom: 50px;
+    }
+}    
+
+@media only screen and (max-width: 424px) {
+    span.footer-title {
+        font-size: 36px;
+    }
+    .info-contacts {
+        font-size: 34px;
+    }
+    .social-media-link {
+        width: 50%;
+    }
+    .footer-contact-info {
+        line-height: 75px;
+    }
+    .footer-title-gallery {
+        height: 50px;
+    }
+    .footer-title-contact {
+        width: 50%;
+        height: 50px;
+    }
+    .social-media-icons a img {
+        height: 75px;
+    }
+    .copyright {
+        font-size: 36px;
+        width: 70%;
+    }
+    span.sp {
+        font-size: 34px;
+        width: 850px;
+        height: 50px;
+        line-height: 100px;
+    }    
+    .image-cont img {
+        margin: 5px;
+        width: 92px;
+    }
+    .des-logo img {
+        width: 250px;
+    }
+    .headmenu .icons .icons2 {
+        width: 4rem;
+        height: 4rem;
+    }
+    .headmenu .icons .icons3 {
+        width: 4.1875rem;
+    }
+    .search-icon img {
+        width: 3.8125rem;
+        margin-right: 15px;
+        height: 3.8125rem;
+        cursor: pointer;
+    }
+    button.menu-toggle {
+        width: 50%;
+        height: 55px;
+        font-size: 35px;
+    }
+    .page-sub-container h1 {
+        font-size: 40px;
+    }
+    .order-stat {
+        padding: 15px;
+        font-size: 32px;
+    }
+    h5.time {
+        font-size: 38px;
+    }
+    img.line {
+        position: absolute;
+        top: -3rem;
+    }
+    td.margin-toptr {
+        position: relative;
+        top: 3rem;
+        font-size: 36px;
+    }
+    td.check-data1 {
+        font-size: 32px;
+        text-align: left;
+    }
+    td.check-quantz1 {
+        font-size: 32px;
+        position: relative;
+        left: 5rem;
+    }
+    td.check-price1 {
+        font-size: 32px;
+        position: relative;
+        left: 11.5rem;
+    }
+    .data-container {
+        width: 850px;
+        height: 675px;
     }            
 }    
 
-@media only screen and (max-width: 411px) {
+
+@media only screen and (max-width: 414px) {
+    
     .footer-section {
         width: 1440px;
+    }
+    .image-cont img {
+        width: 210px;
+    }
+    .image-cont {
+        height: 250px;
+    }
+    .data-container {
+        width: 800px;
+        height: 700px;
+    }
+    .page-container {
+        height: 1500px;
+        /* height: auto; */
+        /* padding: 43px 0; */
+        margin: 0;
+        width: 100%;
+    }
+    .data-container {
+        width: 750px;
+        height: 740px;
+    }
+    img.line {
+        position: absolute;
+        top: -3rem;
     }
     .order-stat {
         padding: 20px;
         font-size: 34px;
-        width: 800px;
+        width: 850px;
         position: relative;
-        left: 22%;
+        /* left: 20.5%; */
     }
     .active.container {
         height: 300px;
-        width: 800px;
+        width: 850px;
     }
     .data-container {
-        width: 800px;
-        height: 600px;
-    }
-    img.line {
-        position: absolute;
-        top: 57rem;
-        left: 425px;
+        width: 850px;
+        height: 700px;
     }
     tr.tablerow {
         font-size: 34px;
@@ -334,14 +669,16 @@ button.receive {
         font-size: 30px;
     }    
     button.menu-toggle {
-        width: 100px;
-        font-size: 40px;
+        width: 50%;
+        height: 60px;
+        font-size: 38px;
     }
     button.receive {
         position: relative;
         top: 12rem;
-        margin-left: 42%;
+        /* margin-left: 42%; */
         font-size: 42px;
+        /* left: -6rem; */
     }
     td.margin-toptr.pp {
         position: relative;
@@ -371,15 +708,79 @@ button.receive {
     .page-container {
         padding: 44px 0;
     }    
+    .topnav {
+        width: 1440px;
+    }
+    span.footer-title {
+        font-size: 38px;
+    }
+    .footer-title-gallery {
+        width: 50%;
+        height: 55px;
+    }.footer-title-contact {
+        width: 50%;
+        height: 55px;
+    }
+    .info-contacts {
+        font-size: 36px;
+        width: 26%;
+    }
+    span.sp {
+        font-size: 36px;
+        width: 950px;
+        height: 50px;
+        line-height: 100px;
+    }
+    .page-sub-container h1 {
+        font-size: 42px;
+    }
+    td.margin-toptr {
+        text-align: left;
+        position: relative;
+        top: 3rem;
+        font-size: 35px;
+    }
+    td.check-quantz1 {
+        font-size: 36px;
+        left: 2rem;
+    }
+    .des-logo img {
+        width: 250px;
+    }
+    .headmenu .icons .icons2 {
+        width: 4rem;
+        height: 4rem;
+    }
+    .headmenu .icons .icons3 {
+        width: 4.1875rem;
+    }
+    .search-icon img {
+        width: 3.8125rem;
+        margin-right: 15px;
+        height: 3.8125rem;
+        cursor: pointer;
+    }
+    .topnav a {
+        font-size: 40px;
+    }
+    .header-container {
+        width: 1440px;
+    }
 }
 
 @media only screen and (max-width: 375px) {
+    .page-sub-container h1 {
+        font-size: 48px;
+    }
+    .topnav a {
+        font-size: 44px;
+    }
     .order-stat {
         padding: 20px;
         font-size: 34px;
         width: 850px;
         position: relative;
-        left: 20.5%;
+        /* left: 20.5%; */
     }
     .active.container {
         height: 300px;
@@ -388,23 +789,21 @@ button.receive {
     button.receive {
         position: relative;
         top: 12rem;
-        margin-left: 42%;
         font-size: 42px;
     }
     .data-container {
         width: 850px;
-        height: 650px;
+        height: 720px;
     }
     h5.time {
-        font-size: 40px;
+        font-size: 44px;
     }
     img.line {
         position: absolute;
-        top: 64rem;
-        left: 425px;
+        top: -1rem;
     }
     tr.tablerow {
-        font-size: 36px;
+        font-size: 38px;
     }
     td.check-data1 {
         font-size: 34px;
@@ -415,11 +814,11 @@ button.receive {
     }
     td.margin-toptr.qp {
         position: relative;
-        left: 6rem;
+        left: 2rem;
     }
     td.margin-toptr.pp {
         position: relative;
-        left: 14rem;
+        left: 5rem;
     }
     td.check-price1 {
         position: relative;
@@ -429,6 +828,25 @@ button.receive {
 }    
 
 @media only screen and (max-width: 320px) {
+    .topnav {
+        width: 1280px;
+    }
+    .headmenu .icons .icons3 {
+        width: 4.1875rem;
+        height: 4.1875rem;
+    }
+    .headmenu .icons .icons2 {
+        width: 5rem;
+        height: 5rem;
+    }
+    button.menu-toggle {
+        width: 50%;
+        height: 85px;
+        font-size: 42px;
+    }
+    .header-container {
+        width: 1280px;
+    }
     .footer-section {
         width: 1280px;
     }
@@ -437,7 +855,7 @@ button.receive {
     }
     .data-container {
         width: 850px;
-        height: 650px;
+        height: 720px;
     }
     .active.container {
         height: 300px;
@@ -445,15 +863,15 @@ button.receive {
     }
     img.line {
         position: absolute;
-        top: 65.5rem;
-        left: 350px;
+        /* top: 65.5rem; */
+        /* left: 350px; */
     }
     .order-stat {
         padding: 20px;
         font-size: 36px;
         width: 850px;
         position: relative;
-        left: 17%;
+        /* left: 17%; */
     }
     h5.time {
         font-size: 44px;
@@ -469,15 +887,20 @@ button.receive {
     }
     td.margin-toptr.pp {
         position: relative;
-        left: 6rem;
+        left: 11rem;
     }
     td.check-price1 {
         position: relative;
-        left: 6rem;
+        left: 11rem;
         font-size: 34px;
     }
     .headmenu .icons .icons2 {
-        width: 6rem;
-        height: 6rem;
+        width: 5rem;
+        height: 5rem;
+        position: relative;
+        top: .5rem;
+    }
+    .headmenu .des-logo .logos {
+        width: 325px;
     }
 }    

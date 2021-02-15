@@ -196,6 +196,10 @@ and (orientation: portrait)
         position: relative;
         left: 82px;
     }
+    .container {
+        max-width: 1440px;
+        width: 1440px;
+    }
     input.btn.btn-default {
         background-color: #4CAF50;
         color: white;
@@ -253,7 +257,7 @@ and (orientation: portrait)
         font-size: 36px;
     }
     input.form-control {
-        width: 105%;
+        width: 129%;
         padding: 12px 20px;
         margin: 8px 0;
         display: inline-block;
@@ -266,7 +270,7 @@ and (orientation: portrait)
     img.avatar.img-circle {
         width: 120px;
         position: relative;
-        right: 6rem;
+        right: 9rem;
     }
 
     div#changess-pass {
@@ -379,7 +383,7 @@ and (orientation:portrait)
         border-radius: 4px;
         cursor: pointer;
         position: relative;
-        left: 54%;
+        left: 50%;
     }
     input.btn.btn-default {
         background-color: #4CAF50;
@@ -390,12 +394,12 @@ and (orientation:portrait)
         border-radius: 4px;
         cursor: pointer;
         position: relative;
-        left: -6%;
+        left: 2%;
     }
     input.form-control.file-size {
         width: 426px;
         position: relative;
-        right: 70px;
+        right: 158px;
     }
 }
 
@@ -480,6 +484,10 @@ and (orientation: portrait)
         width: 684px;
         position: relative;
         left: 82px;
+    }
+    .container {
+        max-width: 1440px;
+        width: 1440px;
     }
 
     div#changess-pass {

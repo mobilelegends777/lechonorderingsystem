@@ -550,7 +550,7 @@ span.product-title {
     text-align: center;
     border-radius: 50%;
     padding: 12px 0;
-    margin: 76px 129px;
+    margin: 76px 121px;
 }
 .cart-icon img {
     transition: transform .6s;
@@ -1523,7 +1523,7 @@ input.btn.btn-default:hover{
 
 #myUL li a {
 	border-top: 1px solid #ddd;
-    margin-top: -1px;
+    margin-top: -7px;
     background-color: #f6f6f6;
     padding: 12px;
     text-decoration: none;

@@ -1,0 +1,6 @@
+tbody.cart-table-conts {
+    display: block;
+    overflow: auto;
+    width: 875px;
+    height: 500px;
+}
