@@ -317,7 +317,7 @@ span.inputs {
 
 .__item .box2 {
     width: 100%;
-    height: 257px;
+    /*height: 257px;*/
 }
 .box3-details {
     margin: 13px 0;
@@ -345,9 +345,12 @@ span.inputs {
 .box3-item-info {
     color: #747070;
 }
+.__item img {
+  width: 100%;
+}
 .__item .box2 img {
-    width: 100%;
-    height: 258px;
+    /*width: 100%;*/
+    /*height: 258px;*/
     border-radius: 5px;
 }
 
@@ -356,22 +359,21 @@ span.inputs {
 }
 
 .__item .box3 .box3-info{
-    font-size: 23px;
+    font-size: 20px;
     line-height: 28px;
 }
 .items-container {
     display: flex;
-    /*width: 100%;*/
+    width: 80%;
     height: auto;
     flex-wrap: wrap;
-    /*flex-direction: row;*/
-    margin: 0 13%;
+    margin: 0 auto;
     padding: 10px 0;
     justify-content: space-evenly;
 }
 .__item {
     margin: 17px 19px;
-    width: 400px;
+    width: 27%;
 }
 
 
@@ -456,7 +458,7 @@ span.product-name {
 }
 span.product-title {
     margin-top: 10px;
-    font-size: 22px;
+    font-size: 19px;
 }
 .mySlides {
     filter: brightness(50%);
@@ -1515,15 +1517,15 @@ input.btn.btn-default:hover{
 #myUL {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 2px 0px 0px 0px;
   position: absolute;
   z-index: 1;
-  width: 14%;
+  width: 268px;
 }
 
 #myUL li a {
 	border-top: 1px solid #ddd;
-    margin-top: -7px;
+    margin-top: -1px;
     background-color: #f6f6f6;
     padding: 12px;
     text-decoration: none;

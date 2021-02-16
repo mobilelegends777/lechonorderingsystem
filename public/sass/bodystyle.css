@@ -286,28 +286,7 @@ i.fa.fa-star {
   justify-content: space-evenly;
 }
 
-.filter-conts {
-  /*border: 1px solid blue; */
-  display: inline-block;
-}
-.shop-items {
-  /*padding: 11px 0;
-  position: relative;
-<<<<<<< HEAD
-  margin: 0 16px;
-=======
-  margin-left: 18px;*/
-  /*border: 1px solid black; */
-  width: 30%; 
-  height: auto; 
-  float: left; 
-  margin: 20px auto;
-  background-color: #f1f1f1;
-}
-.shop-items img {
-  width: 100%;
->>>>>>> 02e42080c4a06ae7bf1fcd4df6d25206602567f8
-}
+
 
 .shop-filters {
   width: 450px;

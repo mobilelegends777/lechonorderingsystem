@@ -50,18 +50,15 @@
 			</div>
 		</div>
 		<div class="icons-inputs">
-		<form action="{{route('search')}}" method="GET">
-			<span class="inputs">
-					<input autocomplete="off" type="text" onkeyup="mySearchFunction(this.id)" name="query" id="query" placeholder="Search products..." class="inpt-search"> 
-					<button class="btn-search">Search</button>
-					<ul id="myUL">
-						
-					</ul>
+			<form action="{{route('search')}}" method="GET">
+				<span class="inputs">
+						<input autocomplete="off" type="text" onkeyup="mySearchFunction(this.id)" name="query" id="query" placeholder="Search products..." class="inpt-search"> 
+						<button class="btn-search">Search</button>
+						<ul id="myUL">
 
-					
-			</span>
-		</form>
-
+						</ul>
+				</span>
+			</form>
 		</div>
 		
 		<div class="icons">
@@ -175,7 +172,11 @@
 		<div class="__search" id="my-searches" style="display:none">
 			<div class="search-bar-cont">
 				<div class="search-area">
-						<input  type="text" onkeyup="mySearchFunction(this.id)" name="query" id="query"><button>Search</button>
+						<input autocomplete="off" type="text" onkeyup="mySearchFunction(this.id)" name="query" id="query" placeholder="Search products...">
+						<button>Search</button>
+						<ul id="myUL">
+
+						</ul>
 				</div>
 				<div class="back-search">
 					<i class="fa fa-arrow-left" aria-hidden="true"></i>

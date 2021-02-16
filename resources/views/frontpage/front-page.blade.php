@@ -96,7 +96,7 @@
 							<span class="items-price">₱77</span>
 						</div>
 						<div class="box3-info">
-							<span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</span>
+							<span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they</span>
 							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
@@ -109,7 +109,7 @@
 							<span class="items-price">₱116</span>
 						</div>
 						<div class="box3-info">
-							<span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</p></span>
+							<span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they</span>
 							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
@@ -122,7 +122,7 @@
 							<span class="items-price">₱129</span>
 						</div>
 						<div class="box3-info">
-							<span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</p></span>
+							<span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they</span>
 							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
@@ -137,7 +137,7 @@
 							<span class="items-price">₱50</span>
 						</div>
 						<div class="box3-info">
-							<span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</p></span>
+							<span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they</span>
 							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
@@ -151,7 +151,7 @@
 							<span class="items-price">₱254</span>
 						</div>
 						<div class="box3-info">
-							<span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</p></span>
+							<span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they</span>
 							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
@@ -164,13 +164,14 @@
 							<span class="items-price">₱254</span>
 						</div>
 						<div class="box3-info">
-							<span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they mention your account number at the checkout get one free delivery!</p></span>
+							<span class="box3-item-info">Get half price delivery this month on shops over or recommend a friend and if they</span>
 							<div class="select-more"><a href="#"><span class="more">MORE</span></a></div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
 		<div class="sub-container3">
 			<div class="quality-cont">
 				<img src="{{asset('images/bg-image-1.jpg')}} " >
