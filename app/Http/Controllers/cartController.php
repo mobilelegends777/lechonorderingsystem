@@ -76,15 +76,22 @@ class cartController extends Controller
                 $query = DB::select('UPDATE cart SET quantity = '.$qty[$x].', checkout_date = current_timestamp WHERE cart_id = '.$id[$x].' AND customer_id = '.$userID.' ');
             }
         }
-        $sumQry = DB::select('SELECT sum(quantity * price) as total FROM cart 
-                    INNER JOIN product using (product_id)
-                    WHERE customer_id = '.$userID.'');
-        $msg = "Update Successful!!!";
-
-        $values = [
-            '1' => $sumQry,
-            '2' => $msg
-        ];
+        // $sumQry = DB::select('SELECT sum(quantity * price) as total FROM cart 
+        //             INNER JOIN product using (product_id)
+        //             WHERE customer_id = '.$userID.'');
+        if($id != null){
+            $msg = "Checkout Successful!!";
+            $values = [
+                '1' => "success",
+                '2' => $msg
+            ];
+        }else{
+            $msg = "Your Cart is Empty";
+            $values = [
+                '1' => "empty",
+                '2' => $msg
+            ];
+        }
         return response()->json($values); 
     }
     public function updateCart(Request $request) {
@@ -96,7 +103,7 @@ class cartController extends Controller
         if($cartID > 0){
             $len = count($cartID);
             for($i = 0;$i<$len;$i++){
-                $query = DB::select('UPDATE cart SET quantity = '.$qty[$i].', checkout_date = current_timestamp WHERE cart_id = '.$cartID[$i].' AND customer_id = '.$userID.' ');
+                $query = DB::select('UPDATE cart SET quantity = '.$qty[$i].' WHERE cart_id = '.$cartID[$i].' AND customer_id = '.$userID.' ');
             }
         }
         return redirect()->back();

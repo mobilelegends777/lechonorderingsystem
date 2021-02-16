@@ -308,6 +308,7 @@ function filterPrice() {
 
   // var api_url = 'http://localhost:8000';
   var url = window.location.origin;
+  
   return {
       checkoutCart: ()=>{
 
@@ -321,11 +322,12 @@ function filterPrice() {
            beforeSend:function(){
            },
            success:function(data){
-             // console.log(counter);
-             if(data == false){
-                alertify.success("Your Cart is Empty!!")
-             }else{
+            var len = $('.librebais').length;
+             console.log(len);
+             if(len > 0){
                 location.href = '/frontpage/checkout';
+             }else if(len == 0){
+                alertify.success("Your Cart is Empty!!")
              }
                 
            },

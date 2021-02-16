@@ -17,7 +17,7 @@ class frontpageController extends Controller
         if($data != null){
 			$id = $data->id;
 			$query = DB::select("SELECT p.*, coalesce((
-				select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id),'0') 
+				select (select '1') from cart c where c.product_id = p.product_id and checkout = false and customer_id = $id),'0') 
 				as order_exist FROM  product p WHERE type = 'Combo' OR type = 'Lechon'");
 		}else{
 			$query = DB::select("SELECT * FROM product WHERE type = 'Combo' OR type = 'Lechon'");

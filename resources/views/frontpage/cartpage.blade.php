@@ -20,7 +20,7 @@
 					</thead>
 				@if($value[1] == null)
 				<tbody class="cart-table-conts">
-					<tr class="librebais">
+					<tr class="cart-empty-msg">
 						<td colspan="7">Your Cart is currently empty!!</td>
 					</tr>
 				</tbody>

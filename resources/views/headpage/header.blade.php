@@ -249,18 +249,9 @@ $(document).ready(function(){
 				success:function(data)
 				{
 					// console.log(data);
-					alertify.success(data[2]);
-					if(data[1][0].total != null){
-					$('.sub_tot').empty();
-					$('.sub_tot').append(`
-						<span>₱ ${data[1][0].total}</span>
-					`);
-					location.href = '/frontpage/checkout';
-					}
-					else{
-					$('.sub_tot').empty();
-					$('.sub_tot').append(`
-						<span>₱ 0</span>	`);
+						alertify.success(data[2]);
+					if(data[1] == "success"){
+						location.href = '/frontpage/checkout';
 					}
 					
 				}
