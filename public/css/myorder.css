@@ -121,13 +121,13 @@ td.check-data1 {
 td.check-quantz1 {
     position: relative;
     top: 4rem;
-    left: 3rem;
+    /* left: 7rem; */
 }
 td.check-price1 {
     position: relative;
     bottom: -4rem;
-    left: 10rem;
-    text-align: left;
+    /* left: 15rem; */
+    text-align: center;
 }
 button.receive {
     background-color: #fdc512;
@@ -140,6 +140,9 @@ button.receive {
     font-size: 16px;
     position: relative;
     top: 11rem;
+}
+.center td {
+    width: 200px;
 }
 
 @media only screen 
@@ -169,6 +172,9 @@ and (orientation:portrait){
     }
 }
 @media only screen and (max-width: 1366px) {
+    .center td {
+        width: 245px;
+    }
     .active.container {
         width: 850px;
         margin: auto;
@@ -210,7 +216,7 @@ and (orientation:portrait){
     td.check-quantz1 {
         position: relative;
         top: 4rem;
-        left: 5rem;
+        /* left: 11rem; */
     }
     td.margin-toptr.pp {
         position: relative;
@@ -219,8 +225,12 @@ and (orientation:portrait){
     td.check-price1 {
         position: relative;
         bottom: -4rem;
-        left: 15.3rem;
-        text-align: left;
+        /* left: 22.3rem; */
+        text-align: center;
+    }
+    /* my profile */
+    .user-name strong {
+        font-size: 16px;
     }
 
 }
@@ -267,7 +277,7 @@ and (orientation:portrait){
     button.receive {
         position: relative;
         top: 11rem;
-        font-size: 40px;
+        font-size: 26px;
         /* left: -4rem; */
     }
     td.margin-toptr {
@@ -285,12 +295,12 @@ and (orientation:portrait){
     td.check-quantz1 {
         font-size: 24px;
         position: relative;
-        left: 5rem;
+        /* left: 10.5rem; */
     }       
     td.check-price1 {
         font-size: 24px;
         position: relative;
-        left: 11.5rem; 
+        /* left: 23.5rem;  */
     }
     td.margin-toptr.pp {
         position: relative;
@@ -413,6 +423,14 @@ and (orientation:portrait){
         position: relative;
         left: 18rem;
     }
+    /* my profile */
+    .user-name strong {
+        font-size: 20px;
+    }
+    .dropdown-content-account a {
+        width: 150px;
+        font-size: 20px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -445,7 +463,13 @@ and (orientation:portrait){
         position: absolute;
         top: -4rem;
         /* left: 425px; */
-    }    
+    }  
+    td.check-quantz1 {
+        font-size: 28px;
+    }
+    td.check-price1 {
+        font-size: 28px;
+    }          
 
     /* navbar css */
     button.menu-toggle {
@@ -496,7 +520,7 @@ and (orientation:portrait){
         margin: 6.75rem 0;
     }
     td.check-data1 {
-        font-size: 24px;
+        font-size: 28px;
         text-align: left;
     }
     span.footer-title {
@@ -512,6 +536,22 @@ and (orientation:portrait){
     }
     .footer-desc {
         margin-bottom: 50px;
+    }
+    /* my profile */
+    h5.user-name {
+        font-size: 22px;
+    }
+    .dropdown-content-account {
+        line-height: 46px;
+        height: 280px;
+    }
+    .dropdown-content-account a {
+        font-size: 28px;
+        line-height: 20px;
+        width: 200px;
+    }
+    .user-name strong {
+        font-size: 28px;
     }
 }    
 
@@ -599,12 +639,12 @@ and (orientation:portrait){
     td.check-quantz1 {
         font-size: 32px;
         position: relative;
-        left: 5rem;
+        /* left: 5rem; */
     }
     td.check-price1 {
         font-size: 32px;
         position: relative;
-        left: 11.5rem;
+        /* left: 11.5rem; */
     }
     .data-container {
         width: 850px;
@@ -614,7 +654,9 @@ and (orientation:portrait){
 
 
 @media only screen and (max-width: 414px) {
-    
+    .user-name strong {
+        font-size: 38px;
+    }
     .footer-section {
         width: 1440px;
     }
@@ -682,7 +724,7 @@ and (orientation:portrait){
         position: relative;
         top: 12rem;
         /* margin-left: 42%; */
-        font-size: 42px;
+        font-size: 34px;
         /* left: -6rem; */
     }
     td.margin-toptr.pp {
@@ -695,7 +737,7 @@ and (orientation:portrait){
     }
     td.check-price1 {
         position: relative;
-        left: 8rem;
+        /* left: 18rem; */
     }
     .copyright {
         font-size: 32px;
@@ -747,7 +789,7 @@ and (orientation:portrait){
     }
     td.check-quantz1 {
         font-size: 36px;
-        left: 2rem;
+        /* left: 8rem; */
     }
     .des-logo img {
         width: 250px;
@@ -771,6 +813,22 @@ and (orientation:portrait){
     .header-container {
         width: 1440px;
     }
+    /* my profile dropdown */
+    .dropdown-content-account {
+        font-size: 47px;
+        width: 430px;
+        height: 400px;
+    }.shower_left h4 b, strong {
+        margin-left: 0;
+    } 
+    .dropdown-content-account a {
+        width: 300px;
+        font-size: 40px;
+        line-height: 40px;
+    }   
+    h5.user-name {
+        font-size: 40px;
+    } 
 }
 
 @media only screen and (max-width: 375px) {
@@ -794,7 +852,7 @@ and (orientation:portrait){
     button.receive {
         position: relative;
         top: 12rem;
-        font-size: 42px;
+        font-size: 34px;
     }
     .data-container {
         width: 850px;
@@ -815,6 +873,7 @@ and (orientation:portrait){
     }
     td.check-quantz1 {
         font-size: 34px;
+        /* left: 6rem; */
         
     }
     td.margin-toptr.qp {
@@ -827,12 +886,28 @@ and (orientation:portrait){
     }
     td.check-price1 {
         position: relative;
-        left: 5rem;
+        /* left: 17rem; */
         font-size: 34px;
+    }
+    /* my profile */
+    h5.user-name {
+        font-size: 40px;
+    }
+    .dropdown-content-account {
+        font-size: 47px;
+        width: 430px;
+        line-height: 50px;
+        height: 420px;
+    }
+    .dropdown-content-account a {
+        line-height: 40px;
     }
 }    
 
 @media only screen and (max-width: 320px) {
+    .center td {
+        width: 475px;
+    }
     .topnav {
         width: 1280px;
     }
@@ -896,7 +971,7 @@ and (orientation:portrait){
     }
     td.check-price1 {
         position: relative;
-        left: 11rem;
+        /* left: 11rem; */
         font-size: 34px;
     }
     .headmenu .icons .icons2 {
@@ -907,5 +982,20 @@ and (orientation:portrait){
     }
     .headmenu .des-logo .logos {
         width: 325px;
+    }
+    .image-cont img {
+        width: 190px;
+    }
+    /* my profile */
+    .shower_left h4 b, strong {
+        margin-left: 0;
+    }    
+    .dropdown-content-account {
+        line-height: 20px;
+        height: 430px;
+        font-size: 47px;
+    }
+    .dropdown-content-account a {
+        line-height: 20px;
     }
 }    

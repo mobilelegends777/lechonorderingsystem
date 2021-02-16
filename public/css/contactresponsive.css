@@ -61,7 +61,64 @@ and (max-width: 1024px)
 and (min-width: 768px)
 and (orientation: portrait)
 {
-
+    .topnav {
+        width: 1440px;
+    }
+    .topnav.responsive .ordinary {
+        font-size: 32px;
+    }
+    .headmenu .icons .icons2 {
+        width: 3.125rem;
+        height: 3.124rem;
+    }
+    .headmenu .icons .icons3 {
+        width: 3.1875rem;
+    }
+    .search-icon img {
+        width: 2.8125rem;
+        height: 2.8125rem;
+    }
+    .headmenu .des1 {
+        font-size: 32px;
+    }
+    .headmenu .des2 {
+        font-size: 24px;
+    }
+    span.footer-title {
+        font-size: 32px;
+    }
+    .footer-title-gallery {
+        height: 45px;
+    }
+    .footer-title-contact {
+        height: 45px;
+    }
+    .info-contacts {
+        font-size: 28px;
+    }
+    span.sp {
+        font-size: 28px;
+    }
+    .copyright {
+        font-size: 28px;
+    }
+    .copyright {
+        font-size: 28px;
+    }
+    .user-name strong {
+        font-size: 28px;
+    }
+    .dropdown-content-account a {
+        font-size: 28px;
+    }    
+    button.menu-toggle {
+        width: 50%;
+        height: 50px;
+        font-size: 32px;
+    }    
+    .topnav a {
+        width: 300px;
+    }    
     .container-left {
         position: relative;
         left: 5%;
@@ -141,8 +198,9 @@ and (orientation: landscape){
         position: relative;
         left: 14%;
     }
-
     
+
+   
     
 }
 
@@ -156,6 +214,9 @@ and (orientation: landscape){
         position: relative;
         left: 14%;
     }
+    strong {
+        font-size: 18px;
+    }
 }
 
 @media only screen 
@@ -164,11 +225,57 @@ and (min-width: 375px)
 and (orientation: portrait)
 {
 
-    /* .container-left {
-        position: relative;
-        left: 13%;
-    } */
-
+    span.footer-title {
+        font-size: 46px;
+    }
+    .footer-title-gallery {
+        height: 70px;
+    }
+    .footer-title-contact {
+        height: 70px;
+    }
+    .copyright {
+        font-size: 32px;
+        width: 60%;
+    }
+    .social-media-icons a img {
+        height: 54px;
+    }
+    .des-logo img {
+        width: 300px;
+    }
+    button.menu-toggle {
+        font-size: 48px;
+        width: 70%;
+        height: 70px;
+    }
+    .headmenu .icons .icons2 {
+        width: 4.125rem;
+        height: 4.125rem;
+    }
+    .headmenu .icons .icons3 {
+        width: 4.1875rem;
+    }
+    .search-icon img {
+        width: 3.8125rem;;
+        height: 3.8125rem;
+    }    
+    .image-cont img {
+        width: 107px;
+    }
+    .copyright {
+        font-size: 38px;
+        width: 60%;
+    }
+    .social-media-icons a img {
+        height: 65px;
+    }
+    .topnav.responsive .ordinary {
+        font-size: 36px;
+    }
+    .topnav a {
+        width: 300px;
+    }
 }
 
 @media only screen 
@@ -397,8 +504,125 @@ and (orientation: portrait)
 @media only screen 
 and (max-width: 731px)
 and (min-width: 411px)
+and (orientation: landscape)
+{
+    .headmenu {
+        width: 1440px;
+    }
+    .topnav {
+        width: 1440px;
+    }    
+    .container {
+        width: 1440px;
+    }
+    .move-to-right {
+        position: relative;
+        left: 565px;
+        bottom: 20%;
+    }
+    .container-left {
+        position: relative;
+        left: 12%;
+    }
+    .image-cont img {
+        width: 103px;
+    }
+    span.footer-title {
+        font-size: 26px;
+    }
+    .info-contacts {
+        font-size: 24px;
+    }
+    span.sp {
+        font-size: 24px;
+    }
+    .copyright {
+        font-size: 24px;
+    }
+    button.menu-toggle {
+        width: 50%;
+        height: 50px;
+    }
+    .headmenu .icons .icons2 {
+        width: 3.125rem;
+        height: 3.125rem;
+    }
+    .headmenu .icons .icons3 {
+        width: 3.1875rem;
+    }
+    .search-icon img {
+        width: 2.8125rem;
+        height: 2.8125rem;
+    }    
+    .user-name strong {
+        font-size: 26px;
+    }
+    .headmenu .des1 {
+        font-size: 28px;
+    }
+    .headmenu .des2 {
+        font-size: 20px;
+    }
+    .topnav a {
+        width: 300px;
+    }    
+    .topnav.responsive .ordinary {
+        font-size: 28px;
+    }
+}
+@media only screen 
+and (max-width: 731px)
+and (min-width: 411px)
 and (orientation: portrait)
 {
+    .headmenu .icons .icons2 {
+        width: 5.125rem;
+        height: 5.125rem;
+    }
+    .headmenu .icons .icons3 {
+        width: 5.1875rem;
+    }
+    .search-icon img {
+        width: 4.8125rem;
+        height: 4.8125rem;
+    }    
+    .topnav {
+        width: 1440px;
+    }
+    .topnav.responsive .ordinary {
+        font-size: 34px;;
+    }
+    .topnav a {
+        width: 300px;
+    }
+    .d-arrow {
+        width: 20px;
+        left: 15%;
+    }
+    span.footer-title {
+        font-size: 46px;
+    }
+    .footer-title-gallery {
+        height: 70px;
+    }
+    .footer-title-contact {
+        height: 70px;
+    }
+    .info-contacts {
+        font-size: 42px;
+    }
+    span.sp {
+        font-size: 42px;
+    }
+    /* .copyright {
+        font-size: 36px;
+        width: 60%;
+    } */
+    button.menu-toggle {
+        width: 60%;
+        height: 70px;
+        font-size: 40px;
+    }
     .des-logo img {
         width: 350px;
     }
@@ -550,8 +774,8 @@ and (orientation: portrait)
         line-height: 110px;
     }
     .copyright {
-        font-size: 27px;
-        width: 31%;
+        font-size: 36px;
+        width: 60%;
     }
     .contact_bottom_main_right_top.clearfix {
         display: none;
