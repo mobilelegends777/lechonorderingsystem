@@ -29,7 +29,7 @@ span.invalid-feedback {
   /*text-align: center;*/
   /*color: #ffffffbf;*/
   max-width: 1920px;
-  width:1903px!important;
+  width: 1903px !important;
 }
 
 .f-icon img {
@@ -285,8 +285,6 @@ i.fa.fa-star {
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
 }
-
-
 
 .shop-filters {
   width: 450px;
@@ -693,10 +691,8 @@ input {
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: portrait) {
-
-  .container{
-
-    width: 1440px!important;
+  .container {
+    width: 1440px !important;
   }
   .login-reg-form {
     width: 800px;
@@ -732,9 +728,8 @@ input {
 }
 
 @media only screen and (max-width: 1366px) and (min-width: 1024px) and (orientation: portrait) {
-
-  .container{
-    width: 1111px!important;
+  .container {
+    width: 1111px !important;
   }
   .login-reg-form {
     width: 800px;
@@ -772,30 +767,61 @@ input {
     text-align: -webkit-center;
     height: 1250px;
   }
-
-  .container{
-
-    width: 1266px!important;
+  .container {
+    width: 1266px !important;
+  }
+  .headmenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 200px;
+    padding: 22px 0;
+  }
+  .des-logo img {
+    width: 240px !important;
+  }
+  .search-icon img {
+    width: 78px;
+    height: 68px;
+    margin-right: 10px;
+  }
+  .headmenu .icons .icons3 {
+    margin-top: 7px;
+    width: 78px;
+    height: 68px;
+  }
+  .headmenu .icons .icons2 {
+    width: 78px;
+    height: 68px;
+  }
+  button.menu-toggle {
+    width: 100%;
+    height: 5.6875rem;
+    font-size: 63px;
+    border-radius: 7px;
+  }
+  .topnav.responsive .ordinary {
+    font-size: 38px;
   }
   .footer-contact-info {
     line-height: 53px;
-}
-.info-contacts {
-  font-size: 32px;
-}
-span.sp {
-  font-size: 37px;
-}
-.copyright {
-  font-size: 25px;
-  width: 31%;
-}
-.image-cont img {
-  width: 301px;
-}
-.image-cont {
-  height: 580px;
-}
+  }
+  .info-contacts {
+    font-size: 32px;
+  }
+  span.sp {
+    font-size: 37px;
+  }
+  .copyright {
+    font-size: 25px;
+    width: 31%;
+  }
+  .image-cont img {
+    width: 301px;
+  }
+  .image-cont {
+    height: 580px;
+  }
   .login-reg-form {
     width: 800px;
     border: solid #2a2c2f;
@@ -896,26 +922,57 @@ span.sp {
 }
 
 @media only screen and (max-width: 360px) and (min-width: 320px) and (orientation: portrait) {
-
-  .container{
-    width:1280px!important;
-
+  .container {
+    width: 1280px !important;
+  }
+  .headmenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 200px;
+    padding: 22px 0;
+  }
+  .des-logo img {
+    width: 240px !important;
+  }
+  .search-icon img {
+    width: 78px;
+    height: 68px;
+    margin-right: 10px;
+  }
+  .headmenu .icons .icons3 {
+    margin-top: 7px;
+    width: 78px;
+    height: 68px;
+  }
+  .headmenu .icons .icons2 {
+    width: 78px;
+    height: 68px;
+  }
+  button.menu-toggle {
+    width: 100%;
+    height: 5.6875rem;
+    font-size: 63px;
+    border-radius: 7px;
+  }
+  .topnav.responsive .ordinary {
+    font-size: 38px;
   }
   .info-contacts {
     font-size: 33px;
     width: 29%;
-}
-.footer-contact-info {
-  line-height: 57px;
-}
-span.sp {
-  width: 65%;
-  font-size: 35px;
-  line-height: 28px;
-}
-.copyright {
-  font-size: 23px;
-}
+  }
+  .footer-contact-info {
+    line-height: 57px;
+  }
+  span.sp {
+    width: 65%;
+    font-size: 35px;
+    line-height: 28px;
+  }
+  .copyright {
+    font-size: 23px;
+  }
   .login-reg-form {
     width: 950px;
     border: solid #2a2c2f;
@@ -945,7 +1002,6 @@ span.sp {
     width: 100% !important;
     font-size: 50px !important;
   }
-
   .login-body {
     background-image: url(../asset/img/599.jpg);
     padding: 102px 0;
@@ -1006,30 +1062,69 @@ span.sp {
 }
 
 @media only screen and (max-width: 540px) and (min-width: 411px) and (orientation: portrait) {
-  .container{
-    
-    width: 1440px!important;
-  
+  .container {
+    width: 1440px !important;
+  }
+  .headmenu {
+    /* height: 100px; */
+    height: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .des-logo img {
+    width: 250px;
+  }
+  .search-icon img {
+    width: 78px;
+    margin-right: 15px;
+    height: 68px;
+    cursor: pointer;
+  }
+  .headmenu .icons .icons3 {
+    width: 78px;
+    height: 68px;
+  }
+  .headmenu .icons .icons2 {
+    width: 78px;
+    height: 68px;
+  }
+  button.menu-toggle {
+    width: 100%;
+    height: 71px;
+    font-size: 22px;
+    color: #fff;
+    background-color: #c4a265;
+    border-radius: 9px;
+    outline: none;
+    font-size: 45px;
+  }
+  .topnav.responsive .ordinary {
+    font-size: 34px;
   }
   .info-contacts {
     font-size: 57px;
-}
-span.sp {
-  font-size: 42px;
-}
-.footer-contact-info {
-  line-height: 97px;
-}
-.copyright {
-  font-size: 24px;
-  width: 30%;
-}
-.image-cont {
-  height: 401px;
-}
-.image-cont img {
-  width: 274px;
-}
+  }
+  span.sp {
+    font-size: 42px;
+  }
+  .footer-contact-info {
+    line-height: 97px;
+  }
+  .copyright {
+    font-size: 24px;
+    width: 30%;
+  }
+  .image-cont {
+    height: 401px;
+  }
+  .image-cont img {
+    width: 274px;
+  }
   .login-reg-form {
     width: 1000px;
     border: solid #2a2c2f;
@@ -1114,6 +1209,25 @@ span.sp {
 }
 
 @media only screen and (max-width: 300px) and (min-width: 280px) {
+  .container {
+    position: relative;
+    width: 950px !important;
+  }
+  .social-media-icons a img {
+    width: 72px;
+    height: 100px;
+  }
+  .headmenu .des-logo .logos {
+    width: 250px;
+  }
+  .headmenu .icons .icons2 {
+    width: 137px;
+    height: 97px;
+  }
+  button.btn.facebook-btn.social-btn, button.btn.google-btn.social-btn {
+    height: 51px;
+    font-size: 22px;
+  }
   .login-reg-form {
     width: 759px;
     border: solid #2a2c2f;

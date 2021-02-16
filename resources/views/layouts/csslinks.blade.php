@@ -3,7 +3,6 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('sass/app.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('sass/header.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/slick.css') }}">
-	<!-- <link rel="stylesheet" type="text/css" href="{{ asset('sass/bodystyle.css') }}"> -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/shop.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/dessert.css') }}">

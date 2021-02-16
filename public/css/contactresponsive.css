@@ -268,8 +268,10 @@ and (orientation: portrait)
         width: 60%;
     }
     .social-media-icons a img {
-        height: 65px;
-    }
+        height: 111px;
+        position: relative;
+        left:0px!important;
+    }    
     .topnav.responsive .ordinary {
         font-size: 36px;
     }
@@ -297,6 +299,17 @@ and (orientation: portrait)
     .container-left {
         position: relative;
         left: 3%;
+    }
+    .topnav.responsive .ordinary {
+        font-size: 45px;
+        position: relative;
+        left: 1.5em;
+    }
+    .headmenu .icons .icons2 {
+        width: 110px;
+        height: 123px;
+        border-radius: 50%;
+        margin-right: 23px;
     }
     .contact_bottom_main_right_top.clearfix {
         display: none;
@@ -429,6 +442,66 @@ and (orientation: portrait)
         position: relative;
         left: 0%;
     }
+    .dropdown-content-account {
+        width: 325px;
+        height: 187px;
+        font-size: 52px;
+        line-height: 83px;
+    }
+    .topnav.responsive .ordinary {
+        font-size: 40px;
+        position: relative;
+        left: 2em;
+    }
+    .headmenu .icons .icons3 {
+        margin-top: 7px;
+        width: 103px;
+        height: 109px;
+    }
+    .search-icon img {
+        width: 73px;
+        height: 109px;
+        margin-right: 10px;
+    }
+    .des-logo img {
+        width: 261px;
+    }
+    button.menu-toggle {
+        width: 100%;
+        height: 5.6875rem;
+        font-size: 63px;
+        border-radius: 7px;
+    }
+    span.footer-title {
+        font-size: 50px;
+    }
+    span.sp {
+        width: 65%;
+        font-size: 45px;
+        line-height: 56px;
+    }
+    .info-contacts {
+        font-size: 45px;
+        width: 29%;
+    }
+    .footer-contact-info {
+        line-height: 67px;
+        position: relative;
+        left: 1em;
+    }
+    .footers-copyright {
+        display: flex;
+        width: 100%;
+        height: 200px;
+    }
+    .copyright {
+        font-size: 40px;
+    }
+    .social-media-icons a img {
+        height: 111px;
+        position: relative;
+        left: 14em;
+    }    
     
     .container {
         max-width: 1440px;
@@ -570,6 +643,8 @@ and (orientation: landscape)
         font-size: 28px;
     }
 }
+
+
 @media only screen 
 and (max-width: 731px)
 and (min-width: 411px)
@@ -577,8 +652,18 @@ and (orientation: portrait)
 {
     .headmenu .icons .icons2 {
         width: 5.125rem;
-        height: 5.125rem;
+        height: 5.125rem!important;
     }
+    .social-media-icons a img {
+        height: 111px;
+        position: relative;
+        left: 0em;
+    }
+    .headmenu .icons .icons3 {
+        margin-top: 7px;
+        width: 103px;
+        height: 71px;
+    }    
     .headmenu .icons .icons3 {
         width: 5.1875rem;
     }
@@ -710,6 +795,38 @@ and (orientation: portrait)
         position: relative;
         left: -27%;
     }
+    span.sp {
+        font-size: 18px;
+    }
+    span.footer-title {
+        font-size: 19px;
+    }
+    .company-title {
+        display: none;
+    }
+    .headmenu .sub-menu {
+        font-size: 20px;
+        padding: 5px;
+        width: 38%;
+        position: relative;
+        right: 2em;
+    }
+    .icons-inputs {
+        height: 48px;
+        margin-top: 17px;
+        position: relative;
+        right: 2em;
+    }
+    .headmenu .icons .icons3 {
+        width: 2.1875rem;
+    }
+    .headmenu .icons .icons2 {
+        width: 2.125rem;
+        height: 2.124rem;
+    }
+    input.form-control {
+        width: 113%;
+    }        
     .container {
         max-width: 1920px;
         width: 100%;
@@ -764,6 +881,18 @@ and (orientation: portrait)
         position: relative;
         left: 3%;
     }
+    .dropdown-content-account {
+        font-size: 45px;
+        height: 177px;
+        width: 332px;
+        line-height: 50px;
+    }    
+    .headmenu .icons .icons2 {
+        width: 110px;
+        height: 103px;
+        border-radius: 50%;
+        margin-right: 23px;
+    }
     span.sp {
         font-size: 54px;
     }
@@ -774,7 +903,7 @@ and (orientation: portrait)
         line-height: 110px;
     }
     .copyright {
-        font-size: 36px;
+        font-size: 43px;
         width: 60%;
     }
     .contact_bottom_main_right_top.clearfix {
@@ -906,6 +1035,12 @@ and (orientation:portrait)
     textarea.form-control.form_1 {
         width: 192%;
         border: solid;
+    }
+    .headmenu .icons .icons2 {
+        width: 110px;
+        height: 77px;
+        border-radius: 50%;
+        margin-right: 23px;
     }
 }
 

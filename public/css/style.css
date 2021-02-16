@@ -1380,7 +1380,7 @@ div#myDropdown {
 }
 .inpt-address {
     height: 45px;
-    /*width: 123%;*/
+    width: 123%;
 }
 .asterisk {
   color: red;
