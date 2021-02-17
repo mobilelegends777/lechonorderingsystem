@@ -4,3 +4,195 @@ tbody.cart-table-conts {
     width: 875px;
     height: 500px;
 }
+
+@media only screen and (max-width: 1024px) {
+    .image-cont img {
+        width: 90px;
+    }
+    .librebais td {
+        font-size: 22px;
+    }
+    tbody.cart-table-conts {
+        width: 950px;
+    }
+    .headmenu .icons .icons3 {
+        width: 40px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .headmenu .icons .icons3 {
+        width: 4.1875rem;
+    }
+    .librebais td {
+        width: 14%;
+        text-align: center;
+        font-size: 24px;
+    }
+    .librebais a {
+        font-size: 28px;
+    }
+    button.reorder {
+        font-size: 18px;
+    }   
+    .carted-item-name {
+        width: 300px;
+        text-align: left;
+    }  
+}    
+
+
+@media only screen and (max-width: 731px) {
+    #myDropdown a {
+        font-size: 24px;
+    }
+}    
+@media only screen and (max-width: 568px) {
+    #myDropdown a {
+        font-size: 28px;
+    }
+    /* .dropdown-content-account {
+        width: 350px;
+    } */
+    div#myDropdown {
+        width: 19.9375rem;
+    }
+    .librebais img {
+        width: 150px;
+    }
+    .librebais a {
+        font-size: 28px;
+    }
+    .librebais td {
+        font-size: 28px;
+    }
+    button.reorder {
+        font-size: 26px;
+    }
+    
+}    
+@media only screen and (max-width: 411px) {
+    .headmenu .icons .icons3 {
+        width: 5.1875rem;
+    }
+    .librebais a {
+        font-size: 30px;
+    }
+    .librebais td {
+        width: 14%;
+        text-align: center;
+        font-size: 32px;
+    }
+    button.reorder {
+        font-size: 28px;
+    }
+    .librebais img {
+        width: 200px;
+    }
+    .cartpage-item {
+        position: relative;
+        right: 0rem;
+    }
+    tbody.cart-table-conts {
+        display: block;
+        overflow: auto;
+        width: 875px;
+        height: 675px;
+    }
+    .carted-item-name {
+        width: 350px;
+    }
+    #myDropdown a {
+        font-size: 34px;
+    }
+    div#myDropdown {
+        line-height: 25px;
+        right: 385px;
+        width: 21.9375rem;
+    }    
+}    
+
+@media only screen and (max-width: 375px) {
+    span.cancel-cart {
+        font-size: 48px;
+    }
+    tbody.cart-table-conts {
+        width: 1050px;
+    }
+    .carted-item-name {
+        width: 450px;
+    }
+    .librebais a {
+        font-size: 38px;
+    }
+    .librebais td {
+        width: 14%;
+        font-size: 36px;
+    }
+    button.reorder {
+        font-size: 34px;
+    }
+    .copyright {
+        font-size: 38px;
+    }
+    .social-media-icons a img {
+        height: 75px;
+    }
+    tbody.cart-table-conts {
+        display: block;
+        overflow: auto;
+        width: 1050px;
+        height: 675px;
+    }
+    div#myDropdown {
+        width: 23.9375rem;
+        height: 235px;
+        right: 375px;
+        line-height: 35px;
+    }
+    #myDropdown a {
+        font-size: 40px;
+    }
+    .dropdown-content-account {
+        width: 455px;
+    }
+}    
+@media only screen and (max-width: 320px) {
+    .librebais img {
+        width: 210px;
+    }
+    .carted-item-name {
+        width: 350px;
+    }
+    tbody.cart-table-conts {
+        display: block;
+        overflow: auto;
+        width: 1050px;
+        height: 700px;
+    }
+    .carted-item-name {
+        width: 450px;
+    }
+    .headmenu .icons .icons2 {
+        width: 5rem;
+        height: 5rem;
+    }
+    .search-icon img {
+        width: 4.8125rem;
+        height: 4.8125rem;
+    }
+    .dropdown-content-account {
+        width: 448px;
+    }
+    div#myDropdown {
+        width: 25.9375rem;
+        height: 240px;
+        right: 285px;
+        line-height: 35px;
+    }
+    #myDropdown a {
+        font-size: 42px;
+    }
+    .headmenu .icons .icons2 {
+        top: 1.5rem;
+    }
+}    

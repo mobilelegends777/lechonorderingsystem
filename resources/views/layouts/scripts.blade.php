@@ -410,12 +410,11 @@ function inc(element, id) {
       var number = $('.cartQty__'+id).val();
       $('.cartQty__'+id).val(parseInt(number)+1);
       var qty = $('.cartQty__'+id).val();
-      
       $('.subtotal'+id).empty();
       $('.subtotal'+id).append(` <span class="substotals">${ qty * cart_price}</span>`);
       var cartSub = $('.cart-tot-price'+id).val();
       $('.substotal'+id).empty();
-      $('.substotal'+id).append(`Total: ₱<span class="substotals">${ qty * cartSub}</span>`);
+      $('.substotal'+id).append(`Total: <span class="substotals">${ qty * cartSub}</span>`);
       // alert($('.substotals').text());
       subTOTS();
 }
@@ -430,7 +429,7 @@ function dec(element, id) {
   $('.subtotal'+id).append(`<span class="substotals">${cart_price*qty}</span>`);
   var cartSub = $('.cart-tot-price'+id).val();
   $('.substotal'+id).empty();
-  $('.substotal'+id).append(`Total: ₱<span class="substotals">${ qty * cartSub}</span>`);
+  $('.substotal'+id).append(`Total: <span class="substotals">${ qty * cartSub}</span>`);
   subTOTS();
 }
 function subTOTS(){
@@ -543,6 +542,10 @@ window.onclick = function(event) {
     var lastURLSegment = pageURL.substr(pageURL.lastIndexOf('/') + 1);
 
     if(lastURLSegment == 'checkout'){
+      $('.toggle-cart-sidenav').css({
+        'display':'none'
+      });
+    }else if(lastURLSegment == 'cartpage'){
       $('.toggle-cart-sidenav').css({
         'display':'none'
       });

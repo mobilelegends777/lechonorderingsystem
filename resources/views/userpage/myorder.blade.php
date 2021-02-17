@@ -105,12 +105,12 @@
 					<div class="data-p">
 							<table class="center">
 
-								<tr class="tablerow">
+								<!-- <tr class="tablerow">
 									<td class="margin-toptr pn"></td>
 									<td class="margin-toptr qp"></td>
 									<td class="margin-toptr pp"></td>
 
-								</tr>
+								</tr> -->
 							<tr>
 								@foreach($value[2] as $item)
 									<td class="check-data1">
