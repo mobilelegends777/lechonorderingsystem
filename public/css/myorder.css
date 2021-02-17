@@ -232,21 +232,46 @@ and (orientation:portrait){
     .user-name strong {
         font-size: 16px;
     }
-
+    .headmenu .icons .icons3 {
+        width: 40px;
+    }
+    .headmenu .icons .icons2 {
+        width: 40px;
+        height: 40px;
+    }
+    span.account-c {
+        position: relative;
+        left: 15px;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
+    .copyright {
+        font-size: 18px;
+    }
+    span.account-c {
+        position: relative;
+        left: 25px;
+    }
     img.d-arrow.dar {
         position: relative;
         right: 0em;
     }
-  
+    .user-name strong {
+        font-size: 18px;
+    }
+    .dropdown-content-account {
+        width: 250px;
+    }
+    .dropdown-content-account a {
+        font-size: 18px;
+    }    
     .icons2 {
         margin-left: -15px;
     }
     .headmenu .icons .icons2 {
-        width: 2rem;
-        height: 2rem;
+        width: 2.5rem;
+        height: 2.5rem;
     }
     .order-stat {
         padding: 15px;
@@ -379,12 +404,19 @@ and (orientation:portrait){
 }    
 
 @media only screen and (max-width: 812px) {
+    .headmenu .icons .icons3 {
+        width: 45px;
+    }
+    .headmenu .icons .icons2 {
+        width: 3rem;
+        height: 3rem;
+    }
     .footer-section {
         width: 1440px;
     }
     .order-stat {
         padding: 15px;
-        font-size: 22px;
+        font-size: 30px;
         width: 850px;
         position: relative;
         /* left: 7%; */
@@ -434,12 +466,18 @@ and (orientation:portrait){
 }
 
 @media only screen and (max-width: 768px) {
+    #myDropdown a {
+        font-size: 24px;
+    }
+    .des-logo img {
+        width: 250px;
+    }
     .container {
         width: 1440px;
     }
     .order-stat {
         padding: 15px;
-        font-size: 24px;
+        font-size: 34px;
         width: 850px;
         position: relative;
         /* left: 24.5%; */
@@ -474,21 +512,21 @@ and (orientation:portrait){
     /* navbar css */
     button.menu-toggle {
         width: 45%;
-        height: 50px;
-        font-size: 32px;        
-    }   
+        height: 60px;
+        font-size: 36px;
+    }  
     .search-icon img {
-        width: 2.8125rem;
+        width: 3.8125rem;
         margin-right: 15px;
-        height: 2.8125rem;
+        height: 3.8125rem;
         cursor: pointer;
     }
     .headmenu .icons .icons3 {
-        width: 3.1875rem;
+        width: 4.1875rem;
     }
     .headmenu .icons .icons2 {
-        width: 3rem;
-        height: 3rem;
+        width: 4rem;
+        height: 4rem;
     }
     .topnav.responsive .ordinary {
         width: 1440px;
@@ -499,10 +537,10 @@ and (orientation:portrait){
     }
     .headmenu .des1 {
         position: unset;
-        font-size: 26px;
+        font-size: 32px;
     }
     .headmenu .des2 {
-        font-size: 20px;
+        font-size: 24px;
     }
     /* .image-cont img {
         width: 103px;
@@ -532,7 +570,7 @@ and (orientation:portrait){
     }
     .image-cont img {
         margin: 5px;
-        width: 92px;
+        width: 95px;
     }
     .footer-desc {
         margin-bottom: 50px;
@@ -544,6 +582,7 @@ and (orientation:portrait){
     .dropdown-content-account {
         line-height: 46px;
         height: 280px;
+        width: 375px;
     }
     .dropdown-content-account a {
         font-size: 28px;
@@ -654,6 +693,16 @@ and (orientation:portrait){
 
 
 @media only screen and (max-width: 414px) {
+    div#myDropdown {
+        line-height: 25px;
+        right: 395px;
+    }
+    #myDropdown a {
+        font-size: 38px;
+    }
+    .center td {
+        width: 300px;
+    }
     .user-name strong {
         font-size: 38px;
     }
@@ -664,7 +713,7 @@ and (orientation:portrait){
         width: 203px;
     }
     .image-cont {
-        height: 428px;
+        height: 200px;
     }
     .data-container {
         width: 800px;
@@ -683,11 +732,11 @@ and (orientation:portrait){
     }
     img.line {
         position: absolute;
-        top: -3rem;
+        top: -1rem;
     }
     .order-stat {
         padding: 20px;
-        font-size: 34px;
+        font-size: 48px;
         width: 850px;
         position: relative;
         /* left: 20.5%; */
@@ -704,20 +753,20 @@ and (orientation:portrait){
         font-size: 34px;
     }
     h5.time {
-        font-size: 34px;
+        font-size: 42px;
     }    
     td.check-data1 {
-        font-size: 30px;
+        font-size: 32px;
     }
     td.check-quantz1 {
         font-size: 30px;
     }
     td.check-price1 {
-        font-size: 30px;
+        font-size: 32px;
     }    
     button.menu-toggle {
         width: 50%;
-        height: 60px;
+        height: 70px;
         font-size: 38px;
     }
     button.receive {
@@ -759,27 +808,27 @@ and (orientation:portrait){
         width: 1440px;
     }
     span.footer-title {
-        font-size: 38px;
+        font-size: 48px;
     }
     .footer-title-gallery {
         width: 50%;
-        height: 55px;
+        height: 60px;
     }.footer-title-contact {
         width: 50%;
         height: 55px;
     }
     .info-contacts {
-        font-size: 36px;
+        font-size: 42px;
         width: 26%;
     }
     span.sp {
-        font-size: 36px;
+        font-size: 42px;
         width: 950px;
         height: 50px;
         line-height: 100px;
     }
     .page-sub-container h1 {
-        font-size: 42px;
+        font-size: 48px;
     }
     td.margin-toptr {
         text-align: left;
@@ -795,16 +844,16 @@ and (orientation:portrait){
         width: 250px;
     }
     .headmenu .icons .icons2 {
-        width: 4rem;
-        height: 4rem;
+        width: 5rem;
+        height: 5rem;
     }
     .headmenu .icons .icons3 {
-        width: 4.1875rem;
+        width: 5.1875rem;
     }
     .search-icon img {
-        width: 3.8125rem;
+        width: 4.8125rem;
         margin-right: 15px;
-        height: 3.8125rem;
+        height: 4.8125rem;
         cursor: pointer;
     }
     .topnav a {
@@ -816,7 +865,7 @@ and (orientation:portrait){
     /* my profile dropdown */
     .dropdown-content-account {
         font-size: 47px;
-        width: 430px;
+        width: 550px;
         height: 400px;
     }.shower_left h4 b, strong {
         margin-left: 0;
@@ -832,6 +881,20 @@ and (orientation:portrait){
 }
 
 @media only screen and (max-width: 375px) {
+    .headmenu .icons .icons3 {
+        width: 5.1875rem;
+    }
+    .headmenu .icons .icons2 {
+        width: 5rem;
+        height: 5rem;
+    }
+    .search-icon img {
+        width: 4.8125rem;
+        height: 4.8125rem;
+    }
+    .center td {
+        width: 450px;
+    }
     .page-sub-container h1 {
         font-size: 48px;
     }
@@ -840,7 +903,7 @@ and (orientation:portrait){
     }
     .order-stat {
         padding: 20px;
-        font-size: 34px;
+        font-size: 48px;
         width: 850px;
         position: relative;
         /* left: 20.5%; */
@@ -852,24 +915,24 @@ and (orientation:portrait){
     button.receive {
         position: relative;
         top: 12rem;
-        font-size: 34px;
+        font-size: 36px;
     }
     .data-container {
         width: 850px;
         height: 720px;
     }
     h5.time {
-        font-size: 44px;
+        font-size: 46px;
     }
     img.line {
         position: absolute;
-        top: -1rem;
+        top: 0rem;
     }
     tr.tablerow {
         font-size: 38px;
     }
     td.check-data1 {
-        font-size: 34px;
+        font-size: 36px;
     }
     td.check-quantz1 {
         font-size: 34px;
@@ -905,6 +968,10 @@ and (orientation:portrait){
 }    
 
 @media only screen and (max-width: 320px) {
+    .search-icon img {
+        width: 4.8125rem;
+        height: 4.8125rem;
+    }
     .center td {
         width: 475px;
     }
@@ -912,16 +979,16 @@ and (orientation:portrait){
         width: 1280px;
     }
     .headmenu .icons .icons3 {
-        width: 4.1875rem;
-        height: 4.1875rem;
+        width: 5.1875rem;
+        height: 5.1875rem;
     }
     .headmenu .icons .icons2 {
         width: 5rem;
         height: 5rem;
     }
     button.menu-toggle {
-        width: 50%;
-        height: 85px;
+        width: 55%;
+        height: 95px;
         font-size: 42px;
     }
     .header-container {
@@ -948,10 +1015,13 @@ and (orientation:portrait){
     }
     .order-stat {
         padding: 20px;
-        font-size: 36px;
+        font-size: 48px;
         width: 850px;
         position: relative;
         /* left: 17%; */
+    }
+    .page-sub-container h1 {
+        font-size: 54px;
     }
     h5.time {
         font-size: 44px;
@@ -975,8 +1045,8 @@ and (orientation:portrait){
         font-size: 34px;
     }
     .headmenu .icons .icons2 {
-        width: 5rem;
-        height: 5rem;
+        width: 6rem;
+        height: 6rem;
         position: relative;
         top: .5rem;
     }
@@ -992,7 +1062,7 @@ and (orientation:portrait){
     }    
     .dropdown-content-account {
         line-height: 20px;
-        height: 430px;
+        height: 455px;
         font-size: 47px;
     }
     .dropdown-content-account a {
