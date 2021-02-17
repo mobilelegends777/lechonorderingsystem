@@ -59,12 +59,13 @@
   
 .filter-conts {
 	display: inline-block;
+	width: 100%;
 }
 .shop-items {
 	width: 30%;
 	height: auto; 
-	float: left; 
-	margin: 20px auto;
+	/*float: left; */
+	margin: 10px;
 	background-color: #f1f1f1;
 }
 .shop-items img {
@@ -114,14 +115,15 @@
   }
   
   .shop-items-conts {
-	display: -webkit-box;
-	display: -ms-flexbox;
+	/*display: -webkit-box;*/
+	/*display: -ms-flexbox;*/
 	display: flex;
-	-ms-flex-wrap: wrap;
+	/*-ms-flex-wrap: wrap;*/
 	flex-wrap: wrap;
 	/*width: 85%;*/
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
+	/*-webkit-box-pack: justify;*/
+	/*-ms-flex-pack: justify;*/
+	/*justify-content: space-around;*/
   }
   
   .shop-sorting {
@@ -227,19 +229,16 @@
   
   .shop-cart-icon i {
     position: absolute;
-    top: -78px;
-    right: -119px;
-    margin: 74px 113px;
     display: none;
     color: #ccc;
-    font-size: 36px;
-    padding: 18px;
+    font-size: 31px;
+    padding: 4px 12px;
     border-radius: 50%;
 }
   
   .shop-cart-icon i:hover {
 	color: #fff;
-	background: #c4a265;
+	/*background: #c4a265;*/
   }
   
   /*.shop-cart-icon i:hover*/
@@ -908,8 +907,8 @@
     	height: 801px;
 	}
 	.sales1 {
-		width: 67%;
-		margin-top: -49px;
+		width: 41%;
+		/*margin-top: -49px;*/
 	}
 	.sales2 {
 		font-size: 44px;
@@ -1122,21 +1121,21 @@
 	}
 	
 	.sales2 {
-		font-size: 27px;
+		font-size: 45px;
 	}
 	.sales3 {
-		font-size: 53px;
+		font-size: 65px;
 	}
 	.sales4 {
-		font-size: 19px;
+		font-size: 26px;
 	}
 	.bttn2 {
-		width: 23%;
-		font-size: 15px;
+		width: 28%;
+		font-size: 18px;
 	}
 	.bttn1 {
-		width: 20%;
-		font-size: 15px;
+		width: 24%;
+		font-size: 18px;
 	}
 	.__item {
 		/* width: 365px; */
@@ -1188,9 +1187,9 @@
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
-		margin: 105px 12%;
+		margin: 14px 10%;
 		width: 100%;
-		line-height: 29px;
+		line-height: 26px;
 	  }
 	  
 	span.product-name {
@@ -1231,6 +1230,10 @@
 	} */
 	img.logos {
 		width: 147px;
+	}
+	.image-cont img {
+		margin: 3px;
+    	width: 117px;
 	}
 }
 @media screen and (max-width: 943px) {
@@ -1622,20 +1625,20 @@
 	}
 	.f-icon {
         height: auto;
-		width: 277px;
+		width: 256px;
         text-align: center;
 	}
 	a.icon1 {
 		display: block;
 	}
 	.f-icon img {
-		width: 52px;
+		width: 47px;
 	}
 	.sub-container4 {
     	height: auto;
 	}
 	.qual-icon-cont p,.qual-icon-cont span{
-		font-size: 18px;
+		font-size: 14px;
     	width: auto;
 	}
 	.prices {
@@ -1647,8 +1650,9 @@
 		font-size: 18px;
 	}
 	button.buttoncat {
-		font-size: 19px;
-		width: 100%;
+		font-size: 13px;
+		width: 61%;
+		padding: 12px 32px;
 	}
 	.__item .box3 span {
 	    /*font-size: 30px;*/

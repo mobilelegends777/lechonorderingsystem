@@ -38,7 +38,7 @@ input {
   font-size: 16px;
 }
 * {
-	font-family: "Blatant", sans-serif;
+  font-family: "Blatant", sans-serif;
 
 }
 *, *::before, *::after {
@@ -54,9 +54,9 @@ a {
 .headmenu {
   display: flex;
   /*width: 100%;*/
-	/*border: 1px solid black;*/
-	padding: 34px 0;
-	background-color: #2a2c2f;
+  /*border: 1px solid black;*/
+  padding: 34px 0;
+  background-color: #2a2c2f;
   height: auto;
   width: 100%;
   justify-content: space-evenly;
@@ -84,17 +84,17 @@ img.logos {
   margin-left: 68px;
 }
 .headmenu .des-logo {
-	/*border: 1px solid red;*/
+  /*border: 1px solid red;*/
   padding-right: 10px;
 }
 
 /*.headmenu .des-logo .logos {
   margin-left: 63px;
-	margin-top: 5px;
+  margin-top: 5px;
 }*/
 
 .headmenu .des1 {
-	color: white;
+  color: white;
   top: 39px;
   font-size: 18px;
 }
@@ -115,25 +115,25 @@ img.logos {
 }
 
 .headmenu .sub-menu {
-	color: white;
+  color: white;
 }
 
 /* .headmenu .sub-menu .des4 {
-	color: white;
-	margin-left: 30px;
+  color: white;
+  margin-left: 30px;
 }
 .headmenu .sub-menu .des5 {
-	color: white;
-	margin-left: 30px;
+  color: white;
+  margin-left: 30px;
 }
 .headmenu .sub-menu .des6 {
-	color: white;
-	margin-left: 30px;
+  color: white;
+  margin-left: 30px;
 } */
 
 /* .headmenu .sub-menu .des7 {
-	color: white;
-	margin-left: 30px;
+  color: white;
+  margin-left: 30px;
 } */
 
 .headmenu .sub-menu .d-arrow {
@@ -141,7 +141,7 @@ img.logos {
 }
 
 .dropdown-content {
-  	display: none;
+    display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 96px;
@@ -187,7 +187,7 @@ img.logos {
 }
 
 .headmenu .inputs {
-	/*position: absolute;*/
+  /*position: absolute;*/
    /* left: 57%;
     top: 24px;*/
 }
@@ -232,6 +232,7 @@ img.logos {
     font-size: 17px;
     padding: 0px 11px;
     outline: none;
+    margin-top: 10px;
 }
 span.inputs {
   height: 100%
@@ -263,7 +264,7 @@ span.inputs {
     width: 30px;
 }
 .container {
-	/*border: 1px solid red;*/
+  /*border: 1px solid red;*/
 }
 
 .container .sub-container .bsp{
@@ -551,7 +552,7 @@ span.product-title {
     font-size: 33px;
     text-align: center;
     border-radius: 50%;
-    padding: 12px 0;
+    padding: 12px 4px;
     margin: 76px 121px;
 }
 .cart-icon img {
@@ -1524,7 +1525,7 @@ input.btn.btn-default:hover{
 }
 
 #myUL li a {
-	border-top: 1px solid #ddd;
+  border-top: 1px solid #ddd;
     margin-top: -1px;
     background-color: #f6f6f6;
     padding: 12px;
@@ -1542,7 +1543,7 @@ input.btn.btn-default:hover{
   
 .cart-product-cont {
   text-align: center;
-  font-size: 18px;
+  font-size: 15px;
   color: #c4a256;
   /* width: 100%; */
   /*width: 51%;*/
@@ -1574,3 +1575,6 @@ button.cartUpdate:hover {
   width: 84%;
   justify-content: center;
 }
+/*.shop-items:nth-child(3n+4) {
+   border: 1px solid red;
+}*/
