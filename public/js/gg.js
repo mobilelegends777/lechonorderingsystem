@@ -368,7 +368,7 @@ function sortIng(){
                     // console.log(data);
                     $.each(data, function(i, item){
                             // console.log(item.order_exist);
-                        if(item.order_exist == 0){
+                      if(item.order_exist == 0){
                             $('.shop-items-conts').append(`
                                 <div class="shop-items">
                                     <div class="shop-item-image">
@@ -399,6 +399,24 @@ function sortIng(){
                                     <div class="shop-info-price">
                                         <div class="shop-item-name">${item.name}</div>
                                         <div class="shop-item-price">₱${item.price}</div>
+                                    </div>
+                                </div>
+                            `);
+                        }
+                        else{
+                          $('.shop-items-conts').append(`
+                                <div class="shop-items">
+                                    <div class="shop-item-image">
+                                        <a href="{{asset('frontpage/shop-details')}}" class="shop-images">
+                                            <img src="${item.images}">
+                                        </a>
+                                        <div class="cartIcon${item.product_id} cart-icon">
+                                            <a href="" id="addToCart" class="shop-cart-icon addToCart" data-value="${item.product_id}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a href="">
+                                        </div>
+                                    </div>
+                                    <div class="shop-info-price">
+                                        <div class="shop-item-name">${item.name}</div>
+                                        <div class="shop-item-price" data-price="${item.price}">₱${item.price}</div>
                                     </div>
                                 </div>
                             `);

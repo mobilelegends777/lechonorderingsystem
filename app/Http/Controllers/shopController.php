@@ -111,7 +111,7 @@ class shopController extends Controller
 					as order_exist FROM  product p  ORDER BY p.price $sort");
 		}else{
 			
-				$query = DB::select('SELECT * FROM product  ORDER BY p.price $sort');
+				$query = DB::select("SELECT * FROM product  ORDER BY price $sort");
 		}
 		return response()->json($query);
 	}
