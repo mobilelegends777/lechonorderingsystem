@@ -412,7 +412,7 @@ function inc(element, id) {
       var qty = $('.cartQty__'+id).val();
       
       $('.subtotal'+id).empty();
-      $('.subtotal'+id).append(`₱ <span class="substotals">${ qty * cart_price}</span>`);
+      $('.subtotal'+id).append(` <span class="substotals">${ qty * cart_price}</span>`);
       var cartSub = $('.cart-tot-price'+id).val();
       $('.substotal'+id).empty();
       $('.substotal'+id).append(`Total: ₱<span class="substotals">${ qty * cartSub}</span>`);
@@ -427,7 +427,7 @@ function dec(element, id) {
   var qty = $('.cartQty__'+id).val();
   var cart_price= $('.cart-price'+id).val();
   $('.subtotal'+id).empty();
-  $('.subtotal'+id).append(`₱ <span class="substotals">${cart_price*qty}</span>`);
+  $('.subtotal'+id).append(`<span class="substotals">${cart_price*qty}</span>`);
   var cartSub = $('.cart-tot-price'+id).val();
   $('.substotal'+id).empty();
   $('.substotal'+id).append(`Total: ₱<span class="substotals">${ qty * cartSub}</span>`);
