@@ -1245,6 +1245,15 @@ table.product-on-cart {
   color:  #c4a256;
   font-size: 22px;
 }
+tr.cart-empty-msg {
+    width: 100%;
+    display: table;
+}
+.cart-empty-msg td{
+     padding: 17px 0px;
+    text-align: center;
+    width: 10%;
+}
 thead td {
   padding: 10px 63px;
 }

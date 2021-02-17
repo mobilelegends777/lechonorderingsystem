@@ -21,7 +21,7 @@
 					</thead>
 				@if($value[1] == null)
 				<tbody class="cart-table-conts">
-					<tr class="librebais">
+					<tr class="cart-empty-msg">
 						<td colspan="7">Your Cart is currently empty!!</td>
 					</tr>
 				</tbody>
@@ -43,8 +43,10 @@
 							<a href="">{{ $item->name }}</a>
 						</div>
 						</td>
-						<td class="cart-price">₱ {{ number_format($item->price,2) }}
-							<input type="hidden" name="cartNo_" class="cartNo_ cart-price{{ $item->cart_id }}" value="{{ $item->cart_id }}">
+
+						<td>₱ {{ number_format($item->price,2) }}
+							<input type="hidden" name="cartNo_" class="cartNo_ cart-price{{ $item->cart_id }}" value="{{ $item->price }}">
+
 						</td>
 						<td>
 							<div  class="cart-input">
@@ -55,7 +57,9 @@
 						</td>
 						<td>
 							<input type="hidden" class="sub-subtotal{{ $item->price }}">
-							<span class="sub-totals subtotal{{ $item->cart_id }}">{{number_format($item->total,2)}}</span>
+
+							₱<span class="sub-totals subtotal{{ $item->cart_id }}">{{$item->total}}</span>
+
 						</td>
 					</tr>
 				@endforeach

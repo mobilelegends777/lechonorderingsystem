@@ -103,14 +103,27 @@ class checkoutController extends Controller
 
     }
 
-        // public function checkOutItem(){
-        //     $userData = Auth::user();
-        //     // dd($userData);
-        //     $id = $userData->id;
-        //     $query = DB::select('UPDATE cart SET checkout_date = current_timestamp WHERE customer_id = '.$id.'');
-        //     // dd($query);
-        //     return response()->json($query); 
-        // }
+        public function checkOutItem(Request $request){
+            $userData = Auth::user();
+            // dd($userData);
+            $id = $userData->id;
+            $query = DB::select('UPDATE cart SET checkout_date = current_timestamp WHERE customer_id = '.$id.'');
+            // dd($query);
+            return response()->json($query); 
+        }
+      // public function placeorder(Request $request){
+      //   $userData = Auth::user();
+      //   $userID = $userData->id;
+      //   $pm =  $request->input('payment1');
+
+      //   $value = DB::select('SELECT * from users inner join customer_info ON customer_id= users.id
+      //       inner join customer_address ON customer_address.customer_id = users.id
+      //       inner join contact_info ON contact_info.customer_id = users.id where users.id = '.$userID.'');
+      //   $updateData = DB::update('UPDATE cart SET  checkout = true WHERE customer_id = '.$userID.'');
+
+      //   Alert::success('Success', 'Thank You for Ordering');
+      //   return view('frontpage/placedorder',compact('value'));
+      // }
 
       public function placeorder(Request $request){
 
