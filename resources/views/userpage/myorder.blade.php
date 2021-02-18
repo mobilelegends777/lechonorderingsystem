@@ -93,7 +93,8 @@
 					</div>
 
 				</div>
-
+			@if($value[2]== null)
+			@else
 			<div class="data-container">
 						<h5 class ="time">Estimated Time</h5>
 						<h1 class="mins-title"> 10-20 Mins</h1>
@@ -103,7 +104,9 @@
 						<img src="{{asset('images/lineloading.gif')}}" class="line">
 
 					</div>
-					<div class="data-p">
+				
+					
+				<div class="data-p">
 							<table class="center">
 
 								<!-- <tr class="tablerow">
@@ -143,8 +146,9 @@
 								</form>
 					</div>
 				
-				</div>
+				</div>	
 
+				@endif
 				@include('sweetalert::alert')
 		</div>
 				
