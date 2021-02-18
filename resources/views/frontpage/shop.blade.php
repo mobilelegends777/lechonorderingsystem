@@ -78,6 +78,12 @@
 									<a class="shop-images">
 										<img src="{{ $item->images }}">
 									</a>
+								</div>
+								<div class="icon-holder">
+										<div class="shop-info-price">
+											<div class="shop-item-name">{{ $item->name }}</div>
+											<div class="shop-item-price">₱{{ number_format($item->price,2)}}</div>
+										</div>
 									@if(Auth::check())
 										@if($item->order_exist == 1)
 										<div class="cartIcon{{ $item->product_id }} cart-icon">
@@ -93,10 +99,6 @@
 											<a href="" id="addToCart" class="shop-cart-icon addToCart" data-value="{{ $item->product_id }}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a>
 										</div>
 									@endif
-								</div>
-								<div class="shop-info-price">
-									<div class="shop-item-name">{{ $item->name }}</div>
-									<div class="shop-item-price">₱{{ number_format($item->price,2)}}</div>
 								</div>
 							</div>
 						@endforeach
