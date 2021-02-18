@@ -45,7 +45,8 @@
 							<a href=""><img src="{{ $item->images }}"></a>
 						</div>
 						<div class="carted-item-name">
-							<a href="">{{ $item->name }}</a>
+							<a href="">{{ $item->name }}</a><br>
+							<a class="mini-size"href="">{{ $item->pickup_datetime }}</a>
 						</div>
 						</td>
 						<td class="pst-price">₱ {{ number_format($item->price,2) }}
@@ -93,7 +94,7 @@
 
 				</div>
 
-				<div class="data-container">
+			<div class="data-container">
 						<h5 class ="time">Estimated Time</h5>
 						<h1 class="mins-title"> 10-20 Mins</h1>
 
@@ -132,19 +133,21 @@
 								@endforeach
 							</table>
 
-					</div>
-					<form metho="POST" action ="{{ route('myorderstatus') }}" class="form-horizontal" role="form">
-					@csrf
-						<div class="order-recieve">
-						
-						<button type="submit" class="receive">Order Receive</button>
-						</div>
 					
+								<form metho="POST" action ="{{ route('myorderstatus') }}" class="form-horizontal" role="form">
+								@csrf
+									<div class="order-recieve">
+									
+											<button type="submit" class="receive">Order Receive</button>
+									</div>
+								</form>
+					</div>
+				
 				</div>
 
 				@include('sweetalert::alert')
 		</div>
-		</form>	
+				
 		</div>
 	</div>
 </div>

@@ -47,7 +47,7 @@ class myorderController extends Controller
             ];
             
 
-        // dd($query);
+        //dd($value);
 
         return view('userpage/myorder', compact('value','data'));
     }

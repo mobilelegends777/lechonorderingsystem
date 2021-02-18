@@ -3,7 +3,13 @@ tbody.cart-table-conts {
     overflow: auto;
     width: 875px;
     height: 500px;
+    position: relative;
+    right: 2rem;
 }
+a.mini-size {
+    font-size: 13px!important;
+}
+
 
 @media only screen and (max-width: 1024px) {
     .image-cont img {
@@ -19,6 +25,11 @@ tbody.cart-table-conts {
         width: 40px;
     }
 }
+@media only screen and (max-width: 768px) {
+    .librebais a {
+        font-size: 22px;
+    }
+}    
 @media only screen and (max-width: 768px) {
     .headmenu .icons .icons3 {
         width: 4.1875rem;
@@ -47,8 +58,34 @@ tbody.cart-table-conts {
     }
 }    
 @media only screen and (max-width: 568px) {
+    .dropdown-content-account a {
+        font-size: 32px;
+        line-height: 25px;
+        width: 250px;
+    }
+    .user-name strong {
+        font-size: 30px;
+    }
+    .dropdown-content-account {
+        line-height: 50px;
+        /* height: 300px; */
+        width: 425px;
+    }
+    span.footer-title {
+        font-size: 38px;
+    }
+    .info-contacts {
+        font-size: 30px;
+    }
+    span.sp {
+        font-size: 30px;
+    }
+}    
+    button.receive {
+        font-size: 30px;
+    }
     #myDropdown a {
-        font-size: 28px;
+        font-size: 32px;
     }
     /* .dropdown-content-account {
         width: 350px;
@@ -60,27 +97,48 @@ tbody.cart-table-conts {
         width: 150px;
     }
     .librebais a {
-        font-size: 28px;
+        font-size: 23px;
     }
     .librebais td {
-        font-size: 28px;
+        font-size: 23px;
     }
     button.reorder {
-        font-size: 26px;
+        font-size: 17px;
+    }
+    .carted-item-name {
+        width: 350px;
+        text-align: left;
     }
     
+  
+@media only screen and (max-width: 411px) {
+    .librebais a {
+        font-size: 42px;
+    }
+    .librebais td {
+        font-size: 42px;
+    }
+    tbody.cart-table-conts {
+        width: 1150px;
+    }
+    .carted-item-name {
+        width: 460px;
+    }
+    .librebais td {
+        width: 16%;
+    }
 }    
 @media only screen and (max-width: 411px) {
     .headmenu .icons .icons3 {
         width: 5.1875rem;
     }
     .librebais a {
-        font-size: 30px;
+        font-size: 38px;
     }
     .librebais td {
-        width: 14%;
+        width: 16%;
         text-align: center;
-        font-size: 32px;
+        font-size: 38px;
     }
     button.reorder {
         font-size: 28px;
@@ -95,11 +153,11 @@ tbody.cart-table-conts {
     tbody.cart-table-conts {
         display: block;
         overflow: auto;
-        width: 875px;
-        height: 675px;
+        width: 1150px;
+        height: 700px;
     }
     .carted-item-name {
-        width: 350px;
+        width: 450px;
     }
     #myDropdown a {
         font-size: 34px;
@@ -108,7 +166,13 @@ tbody.cart-table-conts {
         line-height: 25px;
         right: 385px;
         width: 21.9375rem;
-    }    
+    }   
+    button.menu-toggle {
+        font-size: 45px;
+        width: 85px;
+        height: 80px;
+        border-radius: 0;
+    } 
 }    
 
 @media only screen and (max-width: 375px) {
@@ -122,11 +186,11 @@ tbody.cart-table-conts {
         width: 450px;
     }
     .librebais a {
-        font-size: 38px;
+        font-size: 42px;
     }
     .librebais td {
-        width: 14%;
-        font-size: 36px;
+        width: 16%;
+        font-size: 42px;
     }
     button.reorder {
         font-size: 34px;
@@ -140,8 +204,8 @@ tbody.cart-table-conts {
     tbody.cart-table-conts {
         display: block;
         overflow: auto;
-        width: 1050px;
-        height: 675px;
+        width: 1100px;
+        height: 700px;
     }
     div#myDropdown {
         width: 23.9375rem;
@@ -155,6 +219,9 @@ tbody.cart-table-conts {
     .dropdown-content-account {
         width: 455px;
     }
+    .des-logo img {
+        width: 350px;
+    }
 }    
 @media only screen and (max-width: 320px) {
     .librebais img {
@@ -166,8 +233,8 @@ tbody.cart-table-conts {
     tbody.cart-table-conts {
         display: block;
         overflow: auto;
-        width: 1050px;
-        height: 700px;
+        width: 1150px;
+        height: 750px;
     }
     .carted-item-name {
         width: 450px;
@@ -182,6 +249,7 @@ tbody.cart-table-conts {
     }
     .dropdown-content-account {
         width: 448px;
+        height: 430px;
     }
     div#myDropdown {
         width: 25.9375rem;
@@ -195,4 +263,22 @@ tbody.cart-table-conts {
     .headmenu .icons .icons2 {
         top: 1.5rem;
     }
+    .info-contacts {
+    font-size: 36px;
+    }
+    .info-contacts {
+        font-size: 36px;
+    }
+    span.sp {
+        font-size: 36px;
+    }
+    .search-icon {
+        margin-top: 0;
+    }
+    .headmenu .icons .icons3 {
+        margin-top: 0;
+    }
+    .headmenu .icons .icons2 {
+        top: 0;
+    }        
 }    
