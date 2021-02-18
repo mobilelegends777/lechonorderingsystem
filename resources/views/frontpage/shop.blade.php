@@ -140,13 +140,14 @@
 						@endforeach
 						</div><!-- end item display col-->
 
-						<div class="paginate">
+						
+
+					</div>
+					<div class="paginate">
 							<span class="active"><a href="#">1</a></span>
 							<span><a href="#">2</a></span>
 							<span><a href="#"><i class="fa fa-angle-right"></i></a></span>
 						</div>
-
-					</div>
 				</div>
 				</div>
 			</div>
