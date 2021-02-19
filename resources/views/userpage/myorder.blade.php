@@ -44,7 +44,7 @@
 						<div class="carted-item-image">
 							<a href=""><img src="{{ $item->images }}"></a>
 						</div>
-						<div class="carted-item-name">
+						<div class="carted-item-name" id="more">
 							<a href="">{{ $item->name }}</a><br>
 							<a class="mini-size"href="">{{ $item->pickup_datetime }}</a>
 						</div>

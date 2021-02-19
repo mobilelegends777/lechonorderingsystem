@@ -7,15 +7,16 @@ tbody.cart-table-conts {
     right: 2rem;
 }
 a.mini-size {
-    font-size: 13px!important;
+    font-size: 18px!important;
     color:black;
 }
 
 
 @media only screen and (max-width: 1024px) {
-    .image-cont img {
-        width: 90px;
-    }
+    .dropdown-content {
+        font-size: 18px;
+        width: 210px;
+    }    
     .librebais td {
         font-size: 22px;
     }
@@ -59,35 +60,35 @@ a.mini-size {
     }
 }    
 @media only screen and (max-width: 568px) {
-    .dropdown-content-account a {
+    /* .dropdown-content-account a {
         font-size: 32px;
-        line-height: 25px;
+        line-height: 35px;
         width: 250px;
-    }
+    } */
     .user-name strong {
         font-size: 30px;
     }
-    .dropdown-content-account {
-        line-height: 50px;
-        /* height: 300px; */
+    /* .dropdown-content-account {
+        line-height: 30px;
+        height: 300px;
         width: 425px;
-    }
-    span.footer-title {
+    } */
+    /* span.footer-title {
         font-size: 38px;
-    }
-    .info-contacts {
-        font-size: 50px;
-    }
-        span.sp {
-            font-size: 50px;
+    } */
+    /* .info-contacts {
+        font-size: 32px;
+    } */
+        /* span.sp {
+            font-size: 32px;
             width: 950px;
             height: 50px;
             line-height: 86px;
-        }
+        } */
 }    
-    button.receive {
+    /* button.receive {
         font-size: 30px;
-    }
+    } */
     #myDropdown a {
         font-size: 32px;
     }
@@ -104,7 +105,7 @@ a.mini-size {
         font-size: 23px;
     }
     .librebais td {
-        font-size: 23px;
+        font-size: 20px;
     }
     button.reorder {
         font-size: 17px;
@@ -221,7 +222,7 @@ and (orientation:portrait)
     }
     .librebais td {
         width: 16%;
-        font-size: 45px;
+        font-size: 42px;
     }
     button.reorder {
         font-size: 50px;
@@ -247,9 +248,9 @@ and (orientation:portrait)
     #myDropdown a {
         font-size: 40px;
     }
-    .dropdown-content-account {
+    /* .dropdown-content-account {
         width: 455px;
-    }
+    } */
     .des-logo img {
         width: 350px;
     }
