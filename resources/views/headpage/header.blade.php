@@ -1,19 +1,19 @@
 
 <div class="header-container">
 	<div class="headmenu" id="headers">
-	<div class="company-logo">
-		<span class="des-logo">
-            <a href="/">
-            <img src="{{asset('images/mjlogo.png')}}" class="logos">
-            </a>
-		</span>
-		<div class="company-title">
-		<a href="/">
-			<span class="des1">MJ Lechon House</span>
-			<div class="des2">Tasty, Juicy & Crispy</div>
-			</a>
+		<div class="company-logo">
+			<span class="des-logo">
+	            <a href="/">
+	            <img src="{{asset('images/mjlogo.png')}}" class="logos">
+	            </a>
+			</span>
+			<div class="company-title">
+			<a href="/">
+				<span class="des1">MJ Lechon House</span>
+				<div class="des2">Tasty, Juicy & Crispy</div>
+				</a>
+			</div>
 		</div>
-	</div>
 		<div class="sub-menu">
 			<div class="dropdown">
 				<a href="{{asset('/')}}">
@@ -132,7 +132,7 @@
 		</div>
 	</div>
 </div>
-	<div class="topnav subtop" id="myTopnav">
+<div class="topnav subtop" id="myTopnav">
 		<div class="ordinary">
 			<a href="{{asset('/')}}">Home</a>
 		</div>
