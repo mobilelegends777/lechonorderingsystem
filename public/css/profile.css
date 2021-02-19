@@ -141,7 +141,7 @@ button.btn.btn-primary.moves-center-b {
     border-radius: 4px;
     cursor: pointer;
     position: relative;
-    left: 37%;
+    left: 32%;
 }
 button.btn.btn-primary.moves-center-b:hover {
     background-color: #ec8915;
@@ -196,6 +196,86 @@ and (orientation: portrait)
         position: relative;
         left: 82px;
     }
+    strong.user-n {
+        color: black;
+    }
+    .headmenu .des2 {
+        color: #f3f2f1;
+        left: unset;
+        font-size: 23px;
+        top: 84px;
+        width: 100%;
+        font-weight: bold;
+    }
+    .headmenu .des1 {
+        position: unset;
+        font-size: 35px;
+    }
+    .copyright {
+        font-size: 30px;
+    }
+    .info-contacts {
+        font-size: 27px;
+        width: 21%;
+    }
+    span.sp {
+        width: 63%;
+        font-size: 27px;
+    }
+    .social-media-icons a img {
+        height: 60px;
+        margin: 19px 17px;
+    }
+    form.form-horizontal {
+        position: relative;
+        right: 6rem;
+    }
+    .headmenu .icons .icons2 {
+        width: 80px;
+        height: 70px;
+    }
+    .headmenu .icons .icons3 {
+        width: 80px;
+        height: 70px;
+    }
+    .search-icon img {
+        width: 80px;
+        margin-right: 15px;
+        height: 70px;
+        cursor: pointer;
+    }
+    button.menu-toggle {
+        width: 100px;
+        height: 70px;
+        font-size: 45px;
+        color: #fff;
+        background-color: #c4a265;
+        border-radius: 9px;
+        outline: none;
+    }
+    a#numb-item {
+        position: absolute;
+        background: #c4a256;
+        width: 59px;
+        height: 54px;
+        text-align: center;
+        border-radius: 50%;
+        color: #fff;
+        padding: 4px 0;
+        bottom: 45px;
+        left: 45px;
+        font-size: 40px;
+    }
+    .topnav.responsive a {
+        max-height: 600px;
+        width: 300px;
+    }
+    .topnav.responsive .ordinary {
+        font-size: 28px;
+        padding: 31px 0px;
+        width: 100%;
+        text-align: center;
+    }    
     .container {
         max-width: 1440px;
         width: 1440px;
@@ -352,6 +432,26 @@ and (orientation:portrait)
         color: black;
         right: 9em;
     }
+    .headmenu .des1 {
+        position: unset;
+        font-size: 26px;
+    }
+    .headmenu .des2 {
+        color: #f3f2f1;
+        left: unset;
+        font-size: 15px;
+        top: 84px;
+        width: 100%;
+        font-weight: bold;
+    }
+    .info-contacts {
+        font-size: 27px;
+        width: 36%;
+    }
+    form.form-horizontal {
+        position: relative;
+        right: 0rem;
+    }  
     .move-left {
         position: relative;
         left: -3em;
@@ -383,7 +483,7 @@ and (orientation:portrait)
         border-radius: 4px;
         cursor: pointer;
         position: relative;
-        left: 50%;
+        left: 37%;
     }
     input.btn.btn-default {
         background-color: #4CAF50;
@@ -483,8 +583,21 @@ and (orientation: portrait)
         line-height: 75px;
         margin-left: 2rem;
     }
+    strong.user-n {
+        font-size: 32px!important;
+        position: relative;
+        left: -22px!important;
+        color: black;
+    }
     .topnav.responsive .ordinary {
-        font-size: 31px;
+        font-size: 45px;
+    }
+    .topnav.responsive .ordinary {
+        font-size: 40px;
+    }
+    .topnav.responsive a {
+        max-height: 600px;
+        width: 312px;
     }
     .topnav.responsive {
         transition: .2s ease-in;
@@ -552,8 +665,23 @@ and (orientation: portrait)
         height: 76px;
     }
     .headmenu .icons .icons2 {
-        width: 100px;
-        height: 70px;
+        width: 78px;
+        height: 68px;
+        position: relative;
+        left: 2rem;
+    }
+    a#numb-item {
+        position: absolute;
+        background: #c4a256;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border-radius: 50%;
+        color: #fff;
+        padding: 4px 0;
+        bottom: 50px;
+        left: 63px;
+        font-size: 40px;
     }
     button.menu-toggle {
         width: 100%;
@@ -580,10 +708,13 @@ and (orientation: portrait)
         font-size: 30px;
     }
     .dropdown-content-account a {
-        width: 129px;
+        width: 250px;
         font-size: 34px;
-        line-height: 55px;
+        line-height: 70px;
         font-weight: 700;
+    }
+    .topnav a {
+        width: 276px;
     }
     img.d-arrow.dar {
         width: 30px;
@@ -639,7 +770,7 @@ and (orientation: portrait)
         border-radius: 4px;
         cursor: pointer;
         position: relative;
-        left: 39%;
+        left: 22%;
         font-size: 55px;
     }
     label.col-lg-3.control-label {
@@ -811,6 +942,36 @@ and (orientation: portrait){
         left: 1rem;
         font-size: 30px;
     }
+    strong.user-n {
+        font-size: 32px!important;
+        position: relative;
+        left: -37px!important;
+        color: black;
+    }
+   
+    .social-media-icons a img {
+        height: 70px;
+        position: relative;
+        left: 14rem;
+    }
+    .copyright {
+        font-size: 35px;
+    }    
+    .headmenu {
+        display: flex;
+        height: 200px;
+        padding: 22px 0;
+        width: 1500px;
+    }
+    div#map\ {
+        width: 1500px;
+    }
+    .footer-section {
+        background-color: #2a2c2f;
+        height: auto;
+        width: 1469px;
+    }
+    
 }
 @media only screen 
 and (max-width: 731px)
@@ -1007,6 +1168,24 @@ and (orientation: portrait)
         position: relative;
         left: 82px;
     }
+    .topnav.responsive a {
+        max-height: 600px;
+        width: 312px;
+    }
+    .dropdown-content-account {
+        font-size: 47px;
+        width: 441px;
+        left: -77px;
+        top: 70px;
+        line-height: 52px;
+        border-radius: 27px;
+    }
+    strong.user-n {
+        font-size: 32px;
+        position: relative;
+        left: 470px;
+        color: black;
+    }
     input.btn.btn-default {
         background-color: #4CAF50;
         color: white;
@@ -1020,6 +1199,9 @@ and (orientation: portrait)
         font-size: 62px;
         position: relative;
        
+    }
+    .topnav.responsive .ordinary {
+        font-size: 45px;
     }
 
     div#changess-pass {
@@ -1044,7 +1226,7 @@ and (orientation: portrait)
 
     form.form-horizontal {
         position: relative;
-        right: 5em;
+        right: 9em;
     }
 
     div#edit-profile {
@@ -1127,7 +1309,7 @@ and (orientation: portrait)
         border-radius: 4px;
         cursor: pointer;
         position: relative;
-        left: 48%;
+        left: 32%;
         font-size: 52px;
     }
     label.col-lg-3.control-label {
@@ -1461,8 +1643,52 @@ and (orientation:landscape)
     }   
 
 }
+@media only screen 
+and (max-width: 400px)
+and (min-width: 375px)
+and (orientation:portrait){
 
-
+    strong.user-n {
+        font-size: 31px!important;
+        position: relative;
+        left: -519px!important;
+        color: black;
+    }
+    .headmenu {
+        display: flex;
+        height: 200px;
+        padding: 22px 0;
+        width: 1500px;
+    }
+    .topnav.responsive {
+        transition: .2s ease-in;
+        height: 137px;
+        width: 1500px;
+    }
+    div#map\ {
+        width: 1500px;
+    }
+}
+@media only screen 
+and (max-width:720px)
+and (min-width:540px)
+and (orientation:portrait){
+    strong.user-n {
+        font-size: 32px!important;
+        position: relative;
+        left: -27px!important;
+        color: black;
+    }
+    .headmenu {
+        display: flex;
+        height: 200px;
+        padding: 22px 0;
+        width: 1538px;
+    }
+    div#map\ {
+        width: 1531px;
+    }
+}
 @media only screen 
 and (max-width: 720px)
 and (min-width: 540px)

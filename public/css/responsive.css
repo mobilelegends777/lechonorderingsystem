@@ -3406,6 +3406,17 @@
 		height: 193px;
 		overflow: auto;
 	}
+	strong.user-n {
+		font-size: 12px;
+		position: relative;
+		left: 470px;
+	}
+	.dropdown-content-account h5 {
+		font-size: 37px;
+		margin-top: 37px;
+		font-weight: bold;
+		height: 0px;
+	}
 	.headmenu {
 	    display: flex;
     	height: auto;
@@ -3452,15 +3463,15 @@
     	position: unset;
 	}
 	.dropdown-content-account {
-    	font-size: 12px;
-		width: 98px;
+		font-size: 12px;
+		width: 194px;
 		/* right: 15px; */
-		left: -11px;
+		left: -95px;
 		top: 30px;
 		position: fixed;
 		line-height: 31px;
 		position: absolute;
-	}
+	}	
 	.dropdown-content-account:before {
 		content: "";
 		position: absolute;

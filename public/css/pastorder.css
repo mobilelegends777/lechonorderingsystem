@@ -132,6 +132,14 @@ a.mini-size {
     .librebais td {
         width: 16%;
     }
+    .dropdown-content-account {
+        font-size: 47px!important;
+        width: 468px!important;
+        line-height: 50px!important;
+        height: 475px!important;
+        position: absolute;
+        left: -7rem;
+    }
 
 }   
 @media only screen 
@@ -204,6 +212,8 @@ and (orientation:portrait)
         width: 85px;
         height: 80px;
         border-radius: 0;
+        position: relative;
+        left: 5rem;
     } 
 }    
 
@@ -278,6 +288,8 @@ and (orientation:portrait)
     .search-icon img {
         width: 4.8125rem;
         height: 4.8125rem;
+        position: relative;
+        left: 3rem;
     }
     .dropdown-content-account {
         width: 448px;
@@ -313,4 +325,8 @@ and (orientation:portrait)
     .headmenu .icons .icons2 {
         top: 0;
     }        
+    span.des5 {
+        position: relative;
+        left: 3rem;
+    }
 }    

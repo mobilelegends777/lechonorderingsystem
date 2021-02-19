@@ -86,7 +86,7 @@
 							
 									
 									<div class="dropdown-content-account">
-									<h5 class="user-name"><strong>{{$value[0]->email}}</strong></h5>
+									<h5 class="user-name"><strong class="user-n">{{$value[0]->email}}</strong></h5>
 									<hr>
 										<a href="{{asset('/userpage/myorder')}}">My Orders</a>
 										<a href="{{asset('userpage/myprofile')}}">Edit Profile</a>

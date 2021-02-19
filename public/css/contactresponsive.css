@@ -67,6 +67,19 @@ and (orientation: portrait)
     .topnav.responsive .ordinary {
         font-size: 32px;
     }
+    a#numb-item {
+        position: absolute;
+        background: #c4a256;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border-radius: 50%;
+        color: #fff;
+        padding: 4px 0;
+        bottom: 51px;
+        left: 34px;
+        font-size: 35px;
+    }
     .headmenu .icons .icons2 {
         width: 3.125rem;
         height: 3.124rem;
@@ -300,6 +313,15 @@ and (orientation: portrait)
         position: relative;
         left: 3%;
     }
+    strong.user-n {
+        font-size: 36px;
+        position: relative;
+        left: -10px;
+    }
+    .topnav.responsive a {
+        max-height: 600px;
+        width: 313px;
+    }    
     .dropdown-content-account {
         font-size: 47px;
         width: 506px;
@@ -318,8 +340,8 @@ and (orientation: portrait)
         left: 1.5em;
     }
     .headmenu .icons .icons2 {
-        width: 78px;
-        height: 68px;
+        width: 106px;
+        height: 95px;
         border-radius: 50%;
         margin-right: 23px;
     }
@@ -454,7 +476,28 @@ and (orientation: portrait)
         position: relative;
         left: 0%;
     }
-
+    strong.user-n {
+        font-size: 40px;
+        position: relative;
+        left: -15px;
+    }    
+    a#numb-item {
+        position: absolute;
+        background: #c4a256;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border-radius: 50%;
+        color: #fff;
+        padding: 4px 0;
+        bottom: 53px;
+        left: 39px;
+        font-size: 36px;
+    }
+    .topnav.responsive a {
+        max-height: 600px;
+        width: 282px;
+    }    
     .col-sm-12.move-t0-right {
         position: relative;
         right: 29rem;
@@ -696,6 +739,11 @@ and (orientation: portrait)
         font-size: 45px;
         left: -188px;
     }
+    strong.user-n {
+        font-size: 40px;
+        position: relative;
+        left: -40px;
+    }    
     h5.user-name {
         position: relative;
         left: 1rem;
@@ -845,6 +893,19 @@ and (orientation: portrait)
         position: relative;
         left: -27%;
     }
+    a#numb-item {
+        position: absolute;
+        background: #c4a256;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        border-radius: 50%;
+        color: #fff;
+        padding: 4px 0;
+        bottom: 22px;
+        left: 13px;
+        font-size: 21px;
+    }
     .info-contacts {
         font-size: 16px;
     }
@@ -961,6 +1022,11 @@ and (orientation: portrait)
         width: 550px;
         line-height: 50px;
         font-size: 45px;
+    }
+    strong.user-n {
+        font-size: 40px;
+        position: relative;
+        left: -38px;
     }
     .dropdown-content-account a {
         width: 300px;
@@ -1146,6 +1212,11 @@ and (orientation:portrait)
         border-radius: 50%;
         margin-right: 23px;
     }
+    strong.user-n {
+        font-size: 40px;
+        position: relative;
+        left: -21px;
+    }
 }
 
 @media only screen 
@@ -1158,6 +1229,11 @@ and (orientation: portrait)
         position: relative;
         left: 3%;
     }
+    strong.user-n {
+        font-size: 38px;
+        position: relative;
+        left: 7px;
+    }    
     .headmenu .icons .icons2 {
         width: 106px;
         height: 95px;

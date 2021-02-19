@@ -153,9 +153,6 @@
             <label class="col-md-3 control-label"></label>
             <div class="col-md-8">  
             <button class="btn btn-primary moves-center-b" type="submit">Save Changes</button>
-            
-              <span></span>
-              <input type="reset" class="btn btn-default" value="Cancel">
             </div>
           </div>
         </form>
