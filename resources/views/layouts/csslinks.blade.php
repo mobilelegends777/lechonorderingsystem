@@ -3,7 +3,6 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('sass/app.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('sass/header.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/slick.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/shop.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/dessert.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/signup.css') }}">
@@ -11,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/placeorder.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/cart.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/verify.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css') }}">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css">
 

@@ -551,5 +551,8 @@ window.onclick = function(event) {
       });
     }
 
+    
+    cartI();
+
 	</script>
     

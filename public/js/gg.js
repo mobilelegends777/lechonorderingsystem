@@ -24,9 +24,7 @@ var al = (()=> {
                 var minus_items = $('#badge').text()-1;
                 $('#badge').text(minus_items);
                 // countItem();
-                if($('#badge').text() == 0){
-                  $( ".notification-cart" ).hide();
-                }
+                notif();
                 subTOTS();
                 
 
@@ -119,6 +117,13 @@ function mySearchFunction(id) {
 	
 }
 // end autocomp
+// hide / show notification
+function notif(){
+  if($('#badge').text() == 0){
+    $( ".notification-cart" ).hide();
+  }
+}
+// end
 // add to cart func
 function Carting(){ 
 		
@@ -245,14 +250,16 @@ function filterPrice() {
                           <a href="{{asset('frontpage/shop-details')}}" class="shop-images">
                             <img src="${item.images}">
                           </a>
-                          <div class="cartIcon${item.product_id} cart-icon">
-                            <a href="" id="addToCart" class="shop-cart-icon addToCart" data-value="${item.product_id}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a href="">
-                          </div>
                         </div>
                         
-                        <div class="shop-info-price">
-                          <div class="shop-item-name">${item.name}</div>
-                          <div class="shop-item-price">₱${item.price}</div>
+                        <div class="icon-holder">
+                            <div class="shop-info-price">
+                              <div class="shop-item-name">${item.name}</div>
+                              <div class="shop-item-price">₱${item.price}</div>
+                            </div>
+                            <div class="cartIcon${item.product_id} cart-icon">
+                                <a href="" id="addToCart" class="shop-cart-icon addToCart" data-value="${item.product_id}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a href="">
+                            </div>
                         </div>
                     </div>
               
@@ -265,15 +272,17 @@ function filterPrice() {
                     <a href="{{asset('frontpage/shop-details')}}" class="shop-images">
                       <img src="${item.images}">
                     </a>
+                  </div>
+                  
+                  <div class="icon-holder">
+                    <div class="shop-info-price">
+                      <div class="shop-item-name">${item.name}</div>
+                      <div class="shop-item-price">₱${item.price}</div>
+                    </div>
                     <div class="cartIcon${item.product_id} cart-icon">
                       <span class="shop-cart-icon"><i id="cart-icons " class="fas fa-check" aria-hidden="true"></i></span>
                     </div>
-                  </div>
-                  
-                  <div class="shop-info-price">
-                    <div class="shop-item-name">${item.name}</div>
-                    <div class="shop-item-price">₱${item.price}</div>
-                  </div>
+                </div>
               </div>
       `);
           }else {
@@ -284,14 +293,15 @@ function filterPrice() {
                           <a href="{{asset('frontpage/shop-details')}}" class="shop-images">
                             <img src="${item.images}">
                           </a>
-                          <div class="cartIcon${item.product_id} cart-icon">
-                            <a href="" id="addToCart" class="shop-cart-icon addToCart" data-value="${item.product_id}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a href="">
-                          </div>
                         </div>
-                        
-                        <div class="shop-info-price">
-                          <div class="shop-item-name">${item.name}</div>
-                          <div class="shop-item-price">₱${item.price}</div>
+                        <div class="icon-holder">
+                            <div class="shop-info-price">
+                              <div class="shop-item-name">${item.name}</div>
+                              <div class="shop-item-price">₱${item.price}</div>
+                            </div>
+                            <div class="cartIcon${item.product_id} cart-icon">
+                                <a href="" id="addToCart" class="shop-cart-icon addToCart" data-value="${item.product_id}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a href="">
+                            </div>
                         </div>
                     </div>
               
@@ -299,6 +309,7 @@ function filterPrice() {
           }
 				});
 				Carting();
+        cartI();
 			}
 		});
 	}
@@ -375,13 +386,15 @@ function sortIng(){
                                         <a href="{{asset('frontpage/shop-details')}}" class="shop-images">
                                             <img src="${item.images}">
                                         </a>
+                                    </div>
+                                    <div class="icon-holder">
+                                        <div class="shop-info-price">
+                                          <div class="shop-item-name">${item.name}</div>
+                                          <div class="shop-item-price">₱${item.price}</div>
+                                        </div>
                                         <div class="cartIcon${item.product_id} cart-icon">
                                             <a href="" id="addToCart" class="shop-cart-icon addToCart" data-value="${item.product_id}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a href="">
                                         </div>
-                                    </div>
-                                    <div class="shop-info-price">
-                                        <div class="shop-item-name">${item.name}</div>
-                                        <div class="shop-item-price" data-price="${item.price}">₱${item.price}</div>
                                     </div>
                                 </div>
                             `);
@@ -392,13 +405,15 @@ function sortIng(){
                                         <a href="{{asset('frontpage/shop-details')}}" class="shop-images">
                                             <img src="${item.images}">
                                         </a>
+                                    </div>
+                                    <div class="icon-holder">
+                                        <div class="shop-info-price">
+                                          <div class="shop-item-name">${item.name}</div>
+                                          <div class="shop-item-price">₱${item.price}</div>
+                                        </div>
                                         <div class="cartIcon${item.product_id} cart-icon">
                                             <span class="shop-cart-icon"><i id="cart-icons " class="fas fa-check" aria-hidden="true"></i></span>
                                         </div>
-                                    </div>
-                                    <div class="shop-info-price">
-                                        <div class="shop-item-name">${item.name}</div>
-                                        <div class="shop-item-price">₱${item.price}</div>
                                     </div>
                                 </div>
                             `);
@@ -410,13 +425,15 @@ function sortIng(){
                                         <a href="{{asset('frontpage/shop-details')}}" class="shop-images">
                                             <img src="${item.images}">
                                         </a>
+                                    </div>
+                                    <div class="icon-holder">
+                                        <div class="shop-info-price">
+                                          <div class="shop-item-name">${item.name}</div>
+                                          <div class="shop-item-price">₱${item.price}</div>
+                                        </div>
                                         <div class="cartIcon${item.product_id} cart-icon">
                                             <a href="" id="addToCart" class="shop-cart-icon addToCart" data-value="${item.product_id}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a href="">
                                         </div>
-                                    </div>
-                                    <div class="shop-info-price">
-                                        <div class="shop-item-name">${item.name}</div>
-                                        <div class="shop-item-price" data-price="${item.price}">₱${item.price}</div>
                                     </div>
                                 </div>
                             `);
@@ -456,6 +473,7 @@ function sortIng(){
     
                     });
                     Carting();
+                    cartI();
            },
            error:function(){
 
@@ -473,3 +491,10 @@ function subTotal(){
 }
 
 
+function cartI(){
+    $('.shop-item-image').hover(function(){
+      $('.shop-cart-icon i').css({
+        'display':'block'
+      });
+    });
+}
