@@ -1244,12 +1244,13 @@ button.filter-by-price:hover {
 .cartpage-item {
   text-align: -webkit-center;
 }
-thead{
-  border: 1px solid black;
+thead.product-title{
+  border: 3px solid #ccc;
   border-collapse: unset;;
 }
 table.product-on-cart {
-  border: 1px solid black;
+/*border: 1px solid black;*/
+  border: 3px solid #ccc;
   border-collapse: collapse;
   width: 57%;
 }
@@ -1504,6 +1505,7 @@ input.btn.btn-default:hover{
   tr.librebais {
     display: table;
     width: 100%;
+    border-bottom: solid #ccc;
   }
   tr.title-carted{
     display:block;
@@ -1606,3 +1608,6 @@ button.cartUpdate:hover {
 /*.shop-items:nth-child(3n+4) {
    border: 1px solid red;
 }*/
+.art-mobile-view {
+  display: none;
+}

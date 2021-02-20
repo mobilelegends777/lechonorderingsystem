@@ -21,6 +21,7 @@ var al = (()=> {
                 // console.log(data);
                 $('#cart-item-cont'+item_cart_id).remove();
                 $('#cart-cont-item'+item_cart_id).remove();
+                $('#mobile-cart'+item_cart_id).remove();
                 var minus_items = $('#badge').text()-1;
                 $('#badge').text(minus_items);
                 // countItem();
@@ -65,7 +66,14 @@ var addC = (()=> {
            beforeSend:function(){
            },
            success:function(data){
-            // 
+            // console.log(data[2]);
+                if(data[1] == true){
+                    $('.shop-left'+data[2]).empty();
+                    $('.shop-left'+data[2]).append(`
+                       <button class="addcartcol"><i class="fas fa-check"></i>On cart</button>
+                      `);
+                }
+
            },
            error:function(){
               // _helper.buttonAnimation(2,'deposit_submit');
@@ -148,6 +156,7 @@ function Carting(){
       $.ajax({
       headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
       type:'POST',
+      async: false,
       url: url+'/add-to-cart-item',
       data:{carted:carted},
       success:function(data)
@@ -239,6 +248,7 @@ function filterPrice() {
 			success:function(data)
 			{
 				$('.shop-items-conts').empty();
+        $('.shop-items-conts-col').empty();
 				// console.log(data);
 				$.each(data, function(i, item){
           // console.log(item);
@@ -308,6 +318,37 @@ function filterPrice() {
               `);
           }
 				});
+            $.each(data, function(i, item){
+                            
+                          $('.shop-items-conts-col').append(`
+                          <div class="shop-items shop-item-col shop-cols">
+                              <div class="shop-item-image">
+                                  <a href="#">
+                                      <img class="shop-imgs" src="${item.images}">
+                                  </a>
+                              </div>
+                              <div class="shop-info-price shop-price-col shop-info-prices">
+                                  <div class="shop-item-name-info shop-items-names">
+                                      <div class="shop-item-name-col shop-name-col shop-itemname-cols">
+                                          <span class="col-item-title col-names">${item.name}</span>
+                                          <div class="parag col-parags">
+                                              <div>${item.description}</div>
+                                          </div>
+                                      </div>
+                                      <div class="shop-item-info shop-carts">
+                                          <div class="col-price carts-price1">
+                                              <div class="shop-item-price prod-price">₱${item.price}</div>
+                                              <div class="shop-left">
+                                                  <button class="addcart cols-cart" onclick="addC.addInCart(${item.product_id})"><i class="fa fa-cart-plus"></i>Add to cart</button>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          `);
+  
+                  });
 				Carting();
         cartI();
 			}

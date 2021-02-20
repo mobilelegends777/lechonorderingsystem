@@ -4,6 +4,8 @@
 	<div class="page-sub-container">
 	
 		<h1>Your Cart</h1>
+		<form  method="POST" action="{{ route('cart-update') }}">
+			@csrf
 		<div class="cartpage-item">
 			<div class="cartpage-title">
 			
@@ -27,8 +29,7 @@
 				</tbody>
 				@else
 				<tbody class="cart-table-conts">
-				<form  method="POST" action="{{ route('cart-update') }}">
-					@csrf
+				
 				@foreach($value[1] as $item)
 					<tr class="librebais" id="cart-cont-item{{$item->cart_id}}">
 						<input type="hidden" class="cart-id" name="cartID[]" value="{{$item->cart_id}}">
@@ -65,8 +66,51 @@
 				@endforeach
 				</tbody>
 				@endif
-						
+					
 				</table>
+				<div class="art-mobile-view"><!--start art mobile cart-->
+					@if($value[1] == null)
+								<div colspan="7">Your Cart is currently empty!!</div>
+								
+					@else
+						@foreach($value[1] as $item)
+								<div class="mobile-cart-cont" id="mobile-cart{{$item->cart_id}}">
+									<div class="cancel-cart-m">
+										<span class="cancel-cart" onclick="al.deleteItemCart({{$item->cart_id}})" style="cursor:pointer;">&times;</span>
+									</div>
+									<div class="mobile-cart-image">
+										<img src="{{ $item->images }}">
+									</div>
+									<div class="mobile-carted-details">
+										<div class="mobile-cart-prod">
+											<div class="m-cart-name">
+												<div>Product: </div>
+												<div>{{ $item->name }}</div>
+											</div>
+											<div class="m-cart-price">
+												<div>Price: </div>
+												<div>₱ {{ number_format($item->price,2) }}</div>
+												<input type="hidden" name="cartNo_" class="cartNo_ cart-price{{ $item->cart_id }}" value="{{ $item->price }}">
+											</div>
+										</div>
+										<div class="mobile-cart-qty">
+											<div>Quantity: </div>
+											<div class="cart-input m-cart-inp">
+												<button  type="button" class="qty-dec" onclick="dec('qty',{{$item->cart_id}})">-</button>
+													<input class="cartQ cartQty__{{$item->cart_id}}" type="number" value="{{$item->quantity}}" name="qty[]">
+												<button type="button" class="qty-inc" onclick="inc('qty',{{$item->cart_id}})">+</button>
+											</div>
+										</div>
+										<div class="m-cart-subtotal">
+											<input type="hidden" class="sub-subtotal{{ $item->price }}">
+											<div>Subtotal: </div>
+											<div class="m-cart-subtotal">₱<span class="sub-totals subtotal{{ $item->cart_id }}">{{$item->total}}</span></div>
+										</div>
+									</div>
+								</div>
+						@endforeach
+					@endif
+				</div><!--end art mobile cart-->
 				<div class="coupon-submit">	
 						<div class="apply-coupon">
 							<input type="text" name="" placeholder="Coupon code">

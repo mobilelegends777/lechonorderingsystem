@@ -47,7 +47,10 @@ class cartController extends Controller
         $data = Auth::user(); 
         // dd($data);
         $query = DB::insert('INSERT INTO cart (product_id,customer_id,checkout)values('.$carted.','.$data->id.',false)');
-        
+        // $value = [
+        //     '1' => $query,
+        //     '2' => $request->carted
+        // ];
         return response()->json($query);
     }
     public function viewCart(){

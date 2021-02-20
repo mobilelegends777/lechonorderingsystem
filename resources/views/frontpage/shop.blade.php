@@ -123,10 +123,10 @@
 										<div class="shop-item-info shop-carts">
 											<div class="col-price carts-price1">
 												<div class="shop-item-price prod-price">₱{{ number_format($item->price,2)}}</div>
-												<div class="shop-left">
+												<div class="shop-left{{$item->product_id}}">
 											@if(Auth::check())
 												@if($item->order_exist == 1)
-													<span><i class="fas fa-check"></i>On cart</span>
+													<button class="addcartcol"><i class="fas fa-check"></i>On cart</button>
 												@else
 													<button class="addcart cols-cart{{$item->product_id}}" onclick="addC.addInCart({{$item->product_id}})"><i class="fa fa-cart-plus"></i>Add to cart</button>
 												@endif

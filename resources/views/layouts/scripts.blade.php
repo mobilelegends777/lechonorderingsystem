@@ -36,14 +36,14 @@ function carousel() {
 // end reload every resize;
   var windowWidth = $(window).width();
 
-if(windowWidth < 768 && windowWidth != 360){
+if(windowWidth < 768 && windowWidth != 360 && windowWidth != 320){
 
    $('.slider').slick({
     dots: true,
     infinite: true,
     speed: 1500,
     centerMode: true,
-    autoplay: false,
+    autoplay: true,
     slidesToShow: 2,
     slidesToScroll: 1
 

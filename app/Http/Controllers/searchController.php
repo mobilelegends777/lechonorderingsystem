@@ -26,13 +26,13 @@ class searchController extends Controller
       				select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id),'0') 
       				as order_exist FROM  product p");
             $query2 = DB::select("SELECT p.*, coalesce((
-      				select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id),'0') 
+      				select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id limit 1),'0') 
       				as order_exist FROM  product p
                   WHERE p.name like '%".$item."%' ");
       		}else{
       			$query = DB::select("SELECT * FROM product");
             $query2 = DB::select("SELECT p.*, coalesce((
-      				select (select '1') from cart c where c.product_id = p.product_id),'0') 
+      				select (select '1') from cart c where c.product_id = p.product_id limit 1),'0') 
       				as order_exist FROM  product p
                   WHERE p.name like '%".$item."%' ");
       		}
