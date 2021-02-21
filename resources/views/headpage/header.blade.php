@@ -1,5 +1,5 @@
 
-<div class="header-container">
+<div class="header-container" id="header_scroll">
 	<div class="headmenu" id="headers">
 		<div class="company-logo">
 			<span class="des-logo">
@@ -131,8 +131,7 @@
 				</div>
 		</div>
 	</div>
-</div>
-<div class="topnav subtop" id="myTopnav">
+	<div class="topnav subtop" id="myTopnav">
 		<div class="ordinary">
 			<a href="{{asset('/')}}">Home</a>
 		</div>
@@ -163,8 +162,9 @@
     	</div> -->
 	    <div class="ordinary"><a href="{{asset('frontpage/contact')}}">Contact Us</a>
 	    </div>
-
 	</div>
+</div>
+
 <!-- end mobile toggles -->
 	<!-- modals -->
 		

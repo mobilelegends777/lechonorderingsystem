@@ -198,13 +198,7 @@ var btn = $('#Btop');
         
     // });
     // this function is laggy in IOS
-     var slideHeight = $('.slider-conts').height();
-    $(window).scroll(function() {
-      // alert(slideHeight);
-      var heightChanged = slideHeight - $(document).scrollTop();
-        $(".slider-conts").height(heightChanged);
-        $('.slider-conts img').height(heightChanged);
-    });
+    
 // end image resize on scroll
 var currentMousePos = { x: -1, y: -1 };
   $(document).mousemove(function(event) {
@@ -567,4 +561,53 @@ window.onclick = function(event) {
     cartI();
 
 	</script>
+
+  <script type="text/javascript">
+    
+
+// $(function() {
+
+// var prevScrollpos = window.pageYOffset;
+
+// $(window).scroll(function(){
+
+//     if($(window).width() < 750){
+//       var currentScrollPos = window.pageYOffset;
+//       if (prevScrollpos < currentScrollPos && currentScrollPos > 250) {
+//         document.getElementById("header_scroll").style.display = "none";
+//       } else {
+//         document.getElementById("header_scroll").style.display = "block";
+//       }
+//       prevScrollpos = currentScrollPos;
+//     }
+
+
+//       // alert(slideHeight);
+      
+//     });
+// });
+
+var position = $(window).scrollTop(); 
+
+// should start at 0
+var slideHeight = $('.slider-conts').height();
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if(scroll > position) {
+        console.log('scrollDown');
+         document.getElementById("header_scroll").style.display = "none";
+    } else {
+         console.log('scrollUp');
+         document.getElementById("header_scroll").style.display = "block";
+    }
+    position = scroll;
+
+    var heightChanged = slideHeight - scroll;
+    if (heightChanged > 550 ) {
+      $(".slider-conts").height(heightChanged);
+      $('.slider-conts img').height(heightChanged);
+    }
+      
+});
+  </script>
     

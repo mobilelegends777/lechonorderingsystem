@@ -2136,6 +2136,11 @@
 	.shipping-info {
 		line-height: 2.75rem;
 	}
+	.header-container {
+		position: fixed;
+		z-index: 1;
+		top: 0;
+	}
 }
 @media screen and (max-width: 768px) {
 	/*.shop-images img {
@@ -2434,7 +2439,7 @@
 		margin-top: 36px;
 	}
 	.sales1 {
-		margin-top: -83px;
+		margin-top: 20%;
 		width: 57%;
 	}
 	.centered {
