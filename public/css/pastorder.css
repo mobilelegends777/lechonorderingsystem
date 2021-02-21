@@ -7,12 +7,15 @@ tbody.cart-table-conts {
     right: 2rem;
 }
 a.mini-size {
-    font-size: 18px!important;
+    font-size: 24px!important;
     color:black;
 }
 
 
 @media only screen and (max-width: 1024px) {
+    .librebais a {
+        font-size: 26px;
+    }
     .dropdown-content {
         font-size: 18px;
         width: 210px;
@@ -26,15 +29,13 @@ a.mini-size {
     .headmenu .icons .icons3 {
         width: 40px;
     }
-}
-@media only screen and (max-width: 768px) {
-    .librebais a {
-        font-size: 22px;
-    }
-}    
+}   
 @media only screen and (max-width: 768px) {
     .headmenu .icons .icons3 {
         width: 4.1875rem;
+    }
+    .librebais a {
+        font-size: 22px;
     }
     .librebais td {
         width: 14%;
@@ -65,6 +66,12 @@ a.mini-size {
         line-height: 35px;
         width: 250px;
     } */
+    .librebais a {
+        font-size: 32px;
+    }
+    .librebais td {
+        font-size: 32px;
+    }
     .user-name strong {
         font-size: 30px;
     }
@@ -101,12 +108,12 @@ a.mini-size {
     .librebais img {
         width: 150px;
     }
-    .librebais a {
+    /* .librebais a {
         font-size: 23px;
-    }
-    .librebais td {
+    } */
+    /* .librebais td {
         font-size: 20px;
-    }
+    } */
     button.reorder {
         font-size: 17px;
     }
@@ -116,6 +123,11 @@ a.mini-size {
     }
     
   
+@media only screen and (max-width: 414px) {
+    tbody.cart-table-conts {
+        width: 1150px;
+    }
+}    
 @media only screen and (max-width: 411px) {
     .librebais a {
         font-size: 42px;
@@ -225,7 +237,7 @@ and (orientation:portrait)
         width: 1050px;
     }
     .carted-item-name {
-        width: 450px;
+        width: 500px;
     }
     .librebais a {
         font-size: 45px;
@@ -246,7 +258,7 @@ and (orientation:portrait)
     tbody.cart-table-conts {
         display: block;
         overflow: auto;
-        width: 1100px;
+        width: 1300px;
         height: 700px;
     }
     div#myDropdown {

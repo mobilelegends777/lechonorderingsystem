@@ -113,37 +113,40 @@ td.margin-toptr.qp {
     left: 3rem;
 }
 td.check-data1 {
-    font-size: 22px;
+    font-size: 24px;
     position: relative;
     top: 4rem;
     text-align: left;
+    width: 350px;
 }
 td.check-quantz1 {
     position: relative;
     top: 4rem;
     /* left: 7rem; */
+    font-size: 24px;
 }
 td.check-price1 {
     position: relative;
     bottom: -4rem;
-    /* left: 15rem; */
-    text-align: center;
+    left: 13rem;
+    text-align: left;
+    font-size: 24px;
 }
 button.receive {
     background-color: #fdc512;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
     position: relative;
     top: 11rem;
 }
-.center td {
+/* .center td {
     width: 350px;
-}
+} */
 
 @media only screen 
 and (min-width:360px)
@@ -190,12 +193,7 @@ and (orientation:portrait){
         position: relative;
         left: 6rem;
     }
-    .search-icon img {
-        width: 4.8125rem;
-        height: 4.8125rem;
-        position: relative;
-        left: 5rem;
-    }
+   
     .dropdown-content-account {
         font-size: 47px!important;
         width: 468px!important;
@@ -224,11 +222,114 @@ and (orientation:portrait){
         font-size: 37px;
         line-height: 27px;
     }
+    /* Header */
+.headmenu {
+    display: flex;
+    height: auto;
+    padding: 112px 0;
+    height: 594px;
+  } 
+  .des-logo img {
+    width: 450px;
+  }
+  .search-icon img {
+    width: 115px;
+    height: 100px;
+    margin-right: 10px;
+  }
+  .headmenu .icons .icons3 {
+    margin-top: 7px;
+    width: 115px;
+    height: 100px;
+  } 
+  .headmenu .icons .icons2 {
+    width: 130px;
+    height: 110px;
+    border-radius: 50%;
+    margin-right: 51px;
+    margin-left: 36px;
+  }
+  button.menu-toggle {
+    width: 100%;
+    height: 8.6875rem;
+    font-size: 75px;
+    border-radius: 15px;
+  }
+  a#numb-item {
+    position: absolute;
+    background: #c4a256;
+    width: 91px;
+    height: 89px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    padding: 4px 0;
+    bottom: 1px;
+    left: 71px;
+    font-size: 69px;
+  }
+  .topnav.responsive {
+    transition: .2s ease-in;
+    border-top: solid #ccc 1px;
+    height: 278px;
+  }
+  .topnav.responsive .ordinary {
+    font-size: 71px;
+    position: relative;
+    left: -1em;
+    padding: 43px 0px;
+  }
+  .topnav.responsive a {
+    max-height: 600px;
+    width: 465px;
+  }
+  .topnav a {
+    width: 230px;
+    font-size: 71px;
+  
+  }
+  .d-arrow {
+    width: 53px;
+  }
+  
+  /* End of Header */
+  
+  /* Start of Footer */
+  
+  .footer-contact-info {
+    line-height: 90px;
+  }
+  .info-contacts {
+    font-size: 50px;
+    width: 32%;
+    position: relative;
+    left: 1rem;
+  }
+  span.sp {
+    width: 65%;
+    font-size: 45px;
+    line-height: 75px;
+  }
+  span.footer-title {
+    font-size: 85px;
+  }
+  .image-cont img {
+    width: 200px;
+  }
+  .image-cont {
+    height: 300px;
+    overflow: auto;
+  }
+  .social-media-icons a img {
+    height: 110px;
+  }
+  
+  /* End of Footer */
 }
 @media only screen and (max-width: 1366px) {
-    .center td {
-        width: 245px;
-    }
+    /* .center td {
+        width: 500px;
+    } */
     .active.container {
         width: 850px;
         margin: auto;
@@ -280,8 +381,8 @@ and (orientation:portrait){
     td.check-price1 {
         position: relative;
         bottom: -4rem;
-        /* left: 22.3rem; */
-        text-align: center;
+        left: 13rem;
+        text-align: left;
     }
     /* my profile */
     .user-name strong {
@@ -340,12 +441,12 @@ and (orientation:portrait){
     .order-stat {
         padding: 15px;
         font-size: 32px;
-        width: 850px;
+        width: 950px;
         position: relative;
         /* left: 13.5%; */
     }
     .data-container {
-        width: 850px;
+        width: 950px;
         height: 625px;
     }    
     img.avatar.img-circle1 {
@@ -356,7 +457,7 @@ and (orientation:portrait){
     }
     .active.container {
         height: 300px;
-        width: 850px;
+        width: 950px;
     }
     h5.time {
         font-size: 32px;
@@ -378,18 +479,21 @@ and (orientation:portrait){
         font-size: 26px;
     }       
     td.check-data1 {
-        font-size: 22px;
+        font-size: 26px;
         text-align: left;
+        width: 355px
     }
     td.check-quantz1 {
-        font-size: 22px;
+        font-size: 26px;
         position: relative;
         /* left: 10.5rem; */
+        width: 100px;
     }       
     td.check-price1 {
-        font-size: 22px;
+        font-size: 26px;
         position: relative;
-        /* left: 23.5rem;  */
+        left: 10rem; 
+        text-align: left;
     }
     td.margin-toptr.pp {
         position: relative;
@@ -428,12 +532,12 @@ and (orientation:portrait){
     }   
     .page-container {
         position: relative;
-        left: 18rem;
+        left: 16rem;
     }             
     .order-stat {
-        padding: 15px;
+        padding: 20px;
         font-size: 22px;
-        width: 850px;
+        width: 950px;
         position: relative;
         /* left: 6.7%; */
     }
@@ -484,7 +588,7 @@ and (orientation:portrait){
     .order-stat {
         padding: 15px;
         font-size: 30px;
-        width: 850px;
+        width: 950px;
         position: relative;
         /* left: 7%; */
     }
@@ -519,10 +623,10 @@ and (orientation:portrait){
         width: 650px;
         height: 50px;
     }
-    .page-container {
+    /* .page-container {
         position: relative;
         left: 18rem;
-    }
+    } */
     /* my profile */
     .user-name strong {
         font-size: 20px;
@@ -534,19 +638,26 @@ and (orientation:portrait){
 }
 
 @media only screen and (max-width: 768px) {
+       
+    .active.container {
+        height: 300px;
+        width: 950px;
+    }
+    .data-container {
+        width: 950px;
+        height: 625px;
+    }
     #myDropdown a {
         font-size: 24px;
     }
-    .des-logo img {
-        width: 250px;
-    }
+  
     .container {
         width: 1440px;
     }
     .order-stat {
-        padding: 15px;
+        padding: 25px;
         font-size: 34px;
-        width: 850px;
+        width: 950px;
         position: relative;
         /* left: 24.5%; */
     }
@@ -577,6 +688,9 @@ and (orientation:portrait){
     td.check-price1 {
         font-size: 28px;
         width: 300px;
+        text-align: left;
+        position: relative;
+        left: 185px;
     }          
 
     /* navbar css */
@@ -587,12 +701,7 @@ and (orientation:portrait){
         position: relative;
         left: 7rem;
     }  
-    .search-icon img {
-        width: 3.8125rem;
-        margin-right: 15px;
-        height: 3.8125rem;
-        cursor: pointer;
-    }
+ 
     .headmenu .icons .icons3 {
         width: 4.1875rem;
     }
@@ -651,7 +760,7 @@ and (orientation:portrait){
     td.check-data1 {
         font-size: 28px;
         text-align: left;
-        width: 300px;
+        width: 355px;
     }
     span.footer-title {
         font-size: 32px;
@@ -686,8 +795,7 @@ and (orientation:portrait){
     .user-name strong {
         font-size: 28px;
     }
-}    
-
+}           
 @media only screen and (max-width: 424px) {
     span.footer-title {
         font-size: 36px;
@@ -725,9 +833,7 @@ and (orientation:portrait){
         margin: 5px;
         width: 92px;
     }
-    .des-logo img {
-        width: 250px;
-    }
+ 
     .headmenu .icons .icons2 {
         width: 4rem;
         height: 4rem;
@@ -735,12 +841,7 @@ and (orientation:portrait){
     .headmenu .icons .icons3 {
         width: 4.1875rem;
     }
-    .search-icon img {
-        width: 3.8125rem;
-        margin-right: 15px;
-        height: 3.8125rem;
-        cursor: pointer;
-    }
+
     button.menu-toggle {
         width: 50%;
         height: 55px;
@@ -766,21 +867,22 @@ and (orientation:portrait){
         font-size: 36px;
     }
     td.check-data1 {
-        font-size: 32px;
+        font-size: 40px;
         text-align: left;
+        width: 480px;
     }
     td.check-quantz1 {
-        font-size: 32px;
+        font-size: 40px;
         position: relative;
         /* left: 5rem; */
     }
     td.check-price1 {
-        font-size: 32px;
+        font-size: 40px;
         position: relative;
-        /* left: 11.5rem; */
+        left: 11.5rem;
     }
     .data-container {
-        width: 850px;
+        width: 1200px;
         height: 675px;
     }            
 }    
@@ -822,7 +924,7 @@ and (orientation:portrait){
         height: 700px;
     }
     .page-container {
-        height: 1500px;
+        height: 1550px;
         /* height: auto; */
         /* padding: 43px 0; */
         margin: 0;
@@ -837,18 +939,18 @@ and (orientation:portrait){
         top: -1rem;
     }
     .order-stat {
-        padding: 20px;
+        padding: 30px;
         font-size: 48px;
-        width: 1150px;
+        width: 1300px;
         position: relative;
         /* left: 20.5%; */
     }
     .active.container {
         height: 300px;
-        width: 1150px;
+        width: 1300px;
     }
     .data-container {
-        width: 1050px;
+        width: 1300px;
         height: 700px;
     }
     tr.tablerow {
@@ -858,14 +960,14 @@ and (orientation:portrait){
         font-size: 42px;
     }    
     td.check-data1 {
-        font-size: 32px;
-        width: 750px;
+        font-size: 40px;
+        width: 430px;
     }
     td.check-quantz1 {
         font-size: 30px;
     }
     td.check-price1 {
-        font-size: 38px;
+        font-size: 40px;
     }    
     button.menu-toggle {
         width: 50%;
@@ -905,6 +1007,7 @@ and (orientation:portrait){
     }
     .topnav.responsive .ordinary {
         font-size: 40px;
+        padding: 30px;
     }
     .page-container {
         padding: 44px 0;
@@ -942,12 +1045,10 @@ and (orientation:portrait){
         font-size: 35px;
     }
     td.check-quantz1 {
-        font-size: 38px;
+        font-size: 40px;
         /* left: 8rem; */
     }
-    .des-logo img {
-        width: 250px;
-    }
+
     .headmenu .icons .icons2 {
         width: 5rem;
         height: 5rem;
@@ -955,12 +1056,7 @@ and (orientation:portrait){
     .headmenu .icons .icons3 {
         width: 5.1875rem;
     }
-    .search-icon img {
-        width: 4.8125rem;
-        margin-right: 15px;
-        height: 4.8125rem;
-        cursor: pointer;
-    }
+ 
     .topnav a {
         font-size: 40px;
     }
@@ -1026,13 +1122,10 @@ and (orientation:portrait){
         width: 5rem;
         height: 5rem;
     }
-    .search-icon img {
-        width: 4.8125rem;
-        height: 4.8125rem;
-    }
-    .center td {
+  
+    /* .center td {
         width: 450px;
-    }
+    } */
     .page-sub-container h1 {
         font-size: 48px;
     }
@@ -1053,7 +1146,8 @@ and (orientation:portrait){
     button.receive {
         position: relative;
         top: 12rem;
-        font-size: 42px;
+        font-size: 46px;
+        padding: 20px;
     }
     .data-container {
         width: 1250px;
@@ -1070,13 +1164,12 @@ and (orientation:portrait){
         font-size: 38px;
     }
     td.check-data1 {
-        font-size: 38px;
+        font-size: 42px;
         width: 500px;
     }
     td.check-quantz1 {
-        font-size: 38px;
-        /* left: 6rem; */
-        width: 400px;
+        font-size: 42px;
+        width: 100px;
         
     }
     td.margin-toptr.qp {
@@ -1090,8 +1183,8 @@ and (orientation:portrait){
     td.check-price1 {
         position: relative;
         /* left: 17rem; */
-        font-size: 38px;
-        width: 500px;
+        font-size: 42px;
+        /* width: 500px; */
     }
     /* my profile */
     h5.user-name {
@@ -1111,13 +1204,10 @@ and (orientation:portrait){
 }    
 
 @media only screen and (max-width: 320px) {
-    .search-icon img {
-        width: 4.8125rem;
-        height: 4.8125rem;
-    }
-    .center td {
+  
+    /* .center td {
         width: 475px;
-    }
+    } */
     strong.user-n {
         font-size: 12px;
         position: relative;
@@ -1157,12 +1247,12 @@ and (orientation:portrait){
         width: 1280px;
     }
     .data-container {
-        width: 850px;
-        height: 720px;
+        width: 1200px;
+        height: 750px;
     }
     .active.container {
         height: 300px;
-        width: 850px;
+        width: 1200px;
     }
     img.line {
         position: absolute;
@@ -1170,9 +1260,9 @@ and (orientation:portrait){
         /* left: 350px; */
     }
     .order-stat {
-        padding: 20px;
+        padding: 30px;
         font-size: 48px;
-        width: 850px;
+        width: 1200px;
         position: relative;
         /* left: 17%; */
     }
@@ -1186,10 +1276,11 @@ and (orientation:portrait){
         font-size: 36px;
     }
     td.check-data1 {
-        font-size: 34px;
+        font-size: 42px;
     }
     td.check-quantz1 {
-        font-size: 34px;
+        font-size: 42px;
+        width: 100px;
     }
     td.margin-toptr.pp {
         position: relative;
@@ -1198,7 +1289,7 @@ and (orientation:portrait){
     td.check-price1 {
         position: relative;
         /* left: 11rem; */
-        font-size: 34px;
+        font-size: 42px;
     }
     .headmenu .icons .icons2 {
         width: 6rem;

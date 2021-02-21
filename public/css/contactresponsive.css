@@ -1,6 +1,7 @@
 .container-left {
     position: relative;
-    left: 21%;
+    /* left: 21%; */
+    margin: auto;
 }
 
 .col-sm-12 {
@@ -53,6 +54,34 @@ h1.text-center {
     position: relative;
     right: 55%;
     text-align: center;
+}
+   
+@media only screen 
+and (max-width: 375px){
+    div#myDropdown {
+        width: 25.9375rem;
+        line-height: 35px;
+        right: unset;
+    }
+    #myDropdown a {
+        font-size: 42px;
+    }
+    .topnav.responsive .ordinary {
+        font-size: 42px;
+        position: relative;
+        left: unset;
+        padding: 16px;
+    }
+}    
+@media only screen 
+and (max-width: 768px){
+    #myDropdown a {
+        font-size: 34px;
+    }
+    div#myDropdown {
+        width: 25.9375rem;
+        right: unset;
+    }
 }
 
 /* New update 012821 */
@@ -134,7 +163,7 @@ and (orientation: portrait)
     }    
     .container-left {
         position: relative;
-        left: 5%;
+        /* left: 5%; */
     }
     .container {
         max-width: 1440px;
@@ -209,7 +238,7 @@ and (orientation: landscape){
 
     .container-left {
         position: relative;
-        left: 14%;
+        /* left: 14%; */
     }
     
 
@@ -218,14 +247,14 @@ and (orientation: landscape){
 }
 
 @media only screen
-and (max-width: 1366px)
-and (min-width: 1024px)
-and (orientation: landscape){
+and (max-width: 1366px) {
 
-
+    /* .image-cont img {
+        width: 75px;
+    } */
     .container-left {
         position: relative;
-        left: 14%;
+        /* left: 12%; */
     }
     strong {
         font-size: 18px;
@@ -311,8 +340,9 @@ and (orientation: portrait)
 
     .container-left {
         position: relative;
-        left: 3%;
+        /* left: 3%; */
     }
+  
     strong.user-n {
         font-size: 36px;
         position: relative;
@@ -320,8 +350,8 @@ and (orientation: portrait)
     }
     .topnav.responsive a {
         max-height: 600px;
-        width: 313px;
-    }    
+        width: 416px;
+    }   
     .dropdown-content-account {
         font-size: 47px;
         width: 506px;
@@ -335,16 +365,28 @@ and (orientation: portrait)
         left: 30rem;
     }    
     .topnav.responsive .ordinary {
-        font-size: 45px;
+        font-size: 65px;
         position: relative;
-        left: 1.5em;
+        left: -0.5em;
+    }
+    .d-arrow {
+        width: 53px;
     }
     .headmenu .icons .icons2 {
-        width: 106px;
-        height: 95px;
+        width: 130px;
+        height: 110px;
         border-radius: 50%;
-        margin-right: 23px;
-    }
+        margin-right: 51px;
+        margin-left: 36px;
+    }   
+    button.menu-toggle {
+        width: 90%;
+        height: 8.6875rem;
+        font-size: 89px;
+        border-radius: 18px;
+        position: relative;
+        left: 1rem;
+    } 
     .contact_bottom_main_right_top.clearfix {
         display: none;
     }
@@ -476,6 +518,22 @@ and (orientation: portrait)
         position: relative;
         left: 0%;
     }
+     
+    .d-arrow {
+        width: 45px;
+    }
+    .topnav.responsive {
+        transition: .2s ease-in;
+        border-top: solid #ccc 1px;
+        height: 278px;
+    }
+
+    .headmenu {
+        display: flex;
+        height: auto;
+        padding: 112px 0;
+        height: 594px;
+    }    
     strong.user-n {
         font-size: 40px;
         position: relative;
@@ -484,20 +542,29 @@ and (orientation: portrait)
     a#numb-item {
         position: absolute;
         background: #c4a256;
-        width: 50px;
-        height: 50px;
+        width: 91px;
+        height: 89px;
         text-align: center;
         border-radius: 50%;
         color: #fff;
         padding: 4px 0;
-        bottom: 53px;
-        left: 39px;
-        font-size: 36px;
+        bottom: 1px;
+        left: 71px;
+        font-size: 69px;
+    }
+    #head_contact {
+        min-height: 400px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        height: 400px;
+    }
+    .head_contact h2 {
+        font-size: 100px;
     }
     .topnav.responsive a {
         max-height: 600px;
-        width: 282px;
-    }    
+        width: 465px;
+    }   
     .col-sm-12.move-t0-right {
         position: relative;
         right: 29rem;
@@ -526,28 +593,29 @@ and (orientation: portrait)
         left: 30rem;
     }    
     .topnav.responsive .ordinary {
-        font-size: 40px;
+        font-size: 71px;
         position: relative;
         left: 2em;
+        padding: 43px 0px;
     }
     .headmenu .icons .icons3 {
         margin-top: 7px;
-        width: 78px;
-        height: 68px;
-    }
+        width: 130px;
+        height: 110px;
+    }  
     .search-icon img {
-        width: 78px;
-        height: 68px;
+        width: 115px;
+        height: 100px;
         margin-right: 10px;
     }
     .des-logo img {
-        width: 261px;
+        width: 450px;
     }
     button.menu-toggle {
         width: 100%;
-        height: 5.6875rem;
-        font-size: 63px;
-        border-radius: 7px;
+        height: 8.6875rem;
+        font-size: 75px;
+        border-radius: 15px;
     }
     span.footer-title {
         font-size: 50px;
@@ -585,32 +653,6 @@ and (orientation: portrait)
         width: 1440px;
     }
 
-    /* .col-sm-12 {
-        display: table-header-group;
-    }
-
-    p.text_1 {
-        font-size: 150px;
-    }
-
-    .c-size {
-        font-size: 50px;
-    }
-
-    .contact_1 h3 {
-        padding: 0;
-        margin: 0;
-        padding-top: 15px;
-        font-size: 50px;
-        padding-bottom: 15px;
-        color: #000;
-    }
-
-    .contact_1.text-left.c-size {
-        position: relative;
-        left: 80%;
-        bottom: 150px;
-    } */
 
 }
 
@@ -648,8 +690,35 @@ and (orientation: portrait)
         padding-left: -20px;
         padding-top: 50px;
     }
+    .headmenu {
+        display: flex;
+        /* height: 100%!important; */
+        padding: 112px 0;
+        height: 440px;
+        width: 110%;
+    }
+    #head_contact {
+        min-height: 400px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        height: 400px;
+        width: 110%;
+    }
+    .footer-section {
+        background-color: #2a2c2f;
+        height: auto;
+        /* padding: 1px; */
+        width: 110%;
+    }
+    .contact {
+        background: #f4f4f4;
+        padding-top: 40px;
+        height: 1500px;
+        position: relative;
+        right: 6rem;
+    
 }
-
+}
 
 @media only screen 
 and (max-width: 731px)
@@ -672,7 +741,7 @@ and (orientation: landscape)
     }
     .container-left {
         position: relative;
-        left: 12%;
+        /* left: 12%; */
     }
     .image-cont img {
         width: 103px;
@@ -729,8 +798,27 @@ and (orientation: portrait)
 {
     
     .headmenu .icons .icons2 {
-        width: 5.125rem;
-        height: 5.125rem!important;
+        width: 115px!important;
+        height: 100px!important;
+    }
+    button.menu-toggle {
+        width: 100%;
+        height: 8.6875rem;
+        font-size: 75px;
+        border-radius: 15px;
+        position: relative;
+        left: 0rem;
+    }
+    .topnav.responsive {
+        transition: .2s ease-in;
+        border-top: solid #ccc 1px;
+        height: 170px;
+    }
+    .headmenu {
+        display: flex;
+        height: auto;
+        padding: 112px 0;
+        height: 445px;
     }
     .dropdown-content-account {
         height: 430px;
@@ -759,21 +847,25 @@ and (orientation: portrait)
     }
     .headmenu .icons .icons3 {
         margin-top: 7px;
-        width: 103px;
-        height: 71px;
+        width: 115px;
+        height: 100px;
     }    
-    .headmenu .icons .icons3 {
-        width: 5.1875rem;
+    .headmenu .icons .icons2 {
+        width: 115px;
+        height: 100px;
+        border-radius: 50%;
+        margin-right: 23px;
     }
     .search-icon img {
-        width: 4.8125rem;
-        height: 4.8125rem;
-    }    
+        width: 115px;
+        height: 100px;
+        margin-right: 65px;
+    }   
     .topnav {
         width: 1440px;
     }
     .topnav.responsive .ordinary {
-        font-size: 34px;;
+        font-size: 58px;
     }
     .topnav a {
         width: 300px;
@@ -802,22 +894,23 @@ and (orientation: portrait)
         width: 60%;
     } */
     button.menu-toggle {
-        width: 60%;
-        height: 70px;
-        font-size: 40px;
-    }
+        width: 160px;
+        height: 125px;
+        font-size: 65px;
+    }    
     .des-logo img {
-        width: 350px;
+        width: 490px;
     }
     .headmenu .des-logo .logos {
-        margin-left: 15px;
+        margin-left: 120px;
+        margin-top: -56px;
     }
     #contact .container {
         width: 1245px;
     }
     .container-left {
         position: relative;
-        left: 7%;
+        /* left: 7%; */
     }
     #contact h1 {
         padding: 0;
@@ -1004,9 +1097,9 @@ and (orientation: portrait)
     span.sp {
         width: 300px;
     }
-    .image-cont img {
+    /* .image-cont img {
         width: 137px;
-    }    
+    }     */
     .footer-title-gallery {
         width: 300px;
     }    
@@ -1022,6 +1115,24 @@ and (orientation: portrait)
         width: 550px;
         line-height: 50px;
         font-size: 45px;
+    }
+    .headmenu {
+        display: flex;
+        height: auto;
+        padding: 112px 0;
+        height: 440px;
+    }
+    .headmenu .des-logo .logos {
+        margin-left: 87px;
+        margin-top: -39px;
+    }
+    button.menu-toggle {
+        width: 100%;
+        height: 8.6875rem;
+        font-size: 75px;
+        border-radius: 15px;
+        position: relative;
+        left: -1rem;
     }
     strong.user-n {
         font-size: 40px;
@@ -1049,7 +1160,7 @@ and (orientation: portrait)
     }
     .container-left {
         position: relative;
-        left: 3%;
+        /* left: 3%; */
     }
     /* .dropdown-content-account {
         font-size: 45px;
@@ -1058,8 +1169,8 @@ and (orientation: portrait)
         
     }     */
     .headmenu .icons .icons2 {
-        width: 78px;
-        height: 68px;
+        width: 115px;
+        height: 100px;
         border-radius: 50%;
         margin-right: 23px;
     }

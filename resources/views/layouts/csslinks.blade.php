@@ -5,7 +5,6 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/slick.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/shop.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/dessert.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/signup.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/loader.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/placeorder.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/cart.css') }}">

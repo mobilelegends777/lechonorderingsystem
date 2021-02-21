@@ -1538,7 +1538,7 @@
 		background-color: #2a2c2f;
 		/*width: 100%;*/
 		display: flex;
-		position: fixed;
+		/* position: fixed; */
 		/*margin-top: 159px;*/
 	    /* overflow: auto; */
 	}
@@ -1827,10 +1827,10 @@
 	.icons {
     	 align-items: unset; 
 	}
-	.login-reg-form input {
+	/* .login-reg-form input {
 		 height: 96px;
  		font-size: 29px;
-	}
+	} */
 	.account-log {
 	    width: 100%;
 	}
@@ -2772,7 +2772,7 @@
 	}
 
 	.login-container {
-		width: 335px;
+		width: 355px;
 	}
 	form.form-signin {
 		width: 100%;
