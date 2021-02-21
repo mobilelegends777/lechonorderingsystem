@@ -363,7 +363,6 @@ function filterPrice() {
   
   return {
       checkoutCart: ()=>{
-
         $.ajax({
           headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -375,7 +374,7 @@ function filterPrice() {
            },
            success:function(data){
             var len = $('.librebais').length;
-             console.log(len);
+             // console.log(len);
              if(len > 0){
                 location.href = '/frontpage/checkout';
              }else if(len == 0){

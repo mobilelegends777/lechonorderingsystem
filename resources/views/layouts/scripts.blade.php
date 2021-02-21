@@ -25,7 +25,14 @@ function carousel() {
   setTimeout(carousel, 5000);
 
 }
-
+// $('.slider-conts').slick({
+//   dots: false,
+//   autoplay: true,
+//   infinite: true,
+//   speed: 500,
+//   fade: true,
+//   cssEase: 'linear'
+// });
 </script>
 <script>
 
@@ -44,6 +51,7 @@ if(windowWidth < 768 && windowWidth != 360 && windowWidth != 320){
     speed: 1500,
     centerMode: true,
     autoplay: true,
+    lazyLoad: 'ondemand',
     slidesToShow: 2,
     slidesToScroll: 1
 
@@ -56,6 +64,7 @@ else if (windowWidth == 768){
     speed: 1500,
     centerMode: true,
     autoplay: true,
+    lazyLoad: 'ondemand',
     slidesToShow: 3,
     slidesToScroll: 1
 
@@ -68,6 +77,7 @@ else if(windowWidth <= 360){
     speed: 1500,
     centerMode: true,
     autoplay: true,
+    lazyLoad: 'ondemand',
     slidesToShow: 1,
     slidesToScroll: 1
 
@@ -81,6 +91,7 @@ else {
     speed: 1500,
     centerMode: true,
     autoplay: true,
+    lazyLoad: 'ondemand',
     slidesToShow: 4,
     slidesToScroll: 1
 
@@ -178,21 +189,22 @@ var btn = $('#Btop');
 // end back to top
 
 // image resize on scroll
-// $(window).scroll(function() {
-//   var onScrollmargin = $(document).scrollTop();
-//   var heightChanged = 850 - $(document).scrollTop();
-//     $(".slider-conts").css( { marginLeft : onScrollmargin, marginRight : onScrollmargin } );
-//     $('.slider-conts').height(heightChanged);
-//     $('.slider-conts img').height(heightChanged);
-    
-// });
- var slideHeight = $('.slider-conts').height();
-$(window).scroll(function() {
-  // alert(slideHeight);
-  var heightChanged = slideHeight - $(document).scrollTop();
-    $(".slider-conts").height(heightChanged);
-    $('.slider-conts img').height(heightChanged);
-});
+    // $(window).scroll(function() {
+    //   var onScrollmargin = $(document).scrollTop();
+    //   var heightChanged = 850 - $(document).scrollTop();
+    //     $(".slider-conts").css( { marginLeft : onScrollmargin, marginRight : onScrollmargin } );
+    //     $('.slider-conts').height(heightChanged);
+    //     $('.slider-conts img').height(heightChanged);
+        
+    // });
+    // this function is laggy in IOS
+     var slideHeight = $('.slider-conts').height();
+    $(window).scroll(function() {
+      // alert(slideHeight);
+      var heightChanged = slideHeight - $(document).scrollTop();
+        $(".slider-conts").height(heightChanged);
+        $('.slider-conts img').height(heightChanged);
+    });
 // end image resize on scroll
 var currentMousePos = { x: -1, y: -1 };
   $(document).mousemove(function(event) {

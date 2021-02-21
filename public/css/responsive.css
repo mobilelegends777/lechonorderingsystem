@@ -4,7 +4,8 @@
 .topnav  a { display: block; }
 .topnav:not(responsive)  a {max-height: 0;}
 .topnav.responsive  a {max-height: 600px;}
-.topnav.responsive {transition: .2s ease-in;border-top: solid #ccc 1px;
+.topnav.responsive {transition: .2s ease-in;border-top: solid #ccc 1px;border-bottom: solid #ccc 1px;
+
 }
 
 .topnav {
@@ -1098,8 +1099,8 @@
 		top: 0;
 		right: 0;
 		width: 21.4375rem;
-		-webkit-transition: 2s;
-		transition: 2s;
+		/*-webkit-transition: 2s;
+		transition: 2s;*/
 	}
 	.shop-filters .close-btn {
 	    font-size: 47px;
@@ -1368,8 +1369,8 @@
 		top: 0;
 		right: 0;
 		width: 27.4375rem;
-		-webkit-transition: 2s;
-		transition: 2s;
+		-webkit-transition: .5s;
+		transition: .5s;
 	}
 	/*cart*/
 	td.td05, td.td06, td.td07 {
@@ -2488,7 +2489,7 @@
 	}
 	.sales1 {
 		width: 79%;
-	    margin-top: 0px;
+	    /*margin-top: 0px;*/
 	}
 	.sales2 {
 		font-size: 31px;
@@ -3086,11 +3087,11 @@
 		top: -76%;
 	}
 	#myDropdown a {
-    	font-size: 34px;
+	    font-size: 16px;
 	}
 	div#myDropdown {
-        line-height: 4px;
-        width: 19.9375rem;
+        line-height: 0px;
+    	width: 11.9375rem;
     }
 	.dropdown-account {
     	width: 30%;
@@ -3202,6 +3203,7 @@
 	}
 	.company-logo {
 	     padding: 0; 
+         width: 50%;
 	}
 	.topnav a {
 	    width: 131px;
@@ -3247,7 +3249,7 @@
 		width: 120px;
 	}
 	.headmenu .icons {
-		padding: 25px 1px 22px 10px;
+	    padding: 25px 9px 22px 0px;
 	}
 	.shop-sorting {
 		font-size: 13px;
@@ -3320,6 +3322,7 @@
 	/*end*/
 	div#myDropdown {
 	    position: fixed;
+        z-index: 999999;
 	}
 	.box3-info p {
     	font-size: 31px;
@@ -3367,10 +3370,10 @@
 	    min-height: 30px;
 	}
 	span.product-name {
-		font-size: 18px;
+	    font-size: 13px;
 	}
 	.prices {
-		font-size: 18px;
+	    font-size: 14px;
 	}
 	.slider-conts {
     	height: 889px;
@@ -3384,10 +3387,10 @@
 	    top: 24%
 	}
 	.dropdown-content-account {
-	    font-size: 35px;
+        font-size: 16px;
 	}
 	.dropdown-content-account a {
-    	width: 215px;
+	    width: 120px;
 	}
 	.mobile-menu {
     	width: 20%;
@@ -3475,6 +3478,7 @@
 	}
 	.cart-icon {
 	    font-size: 22px;
+        padding: 8px 4px;
 	}
 	.shop-cart-icon i {
 	    font-size: 19px;
@@ -3489,6 +3493,17 @@
 	}
 	.centered span {
 	    font-size: 22px;
+	}
+	.search-icon img {
+	    width: 24px;
+	    height: 24px;
+	}
+	.headmenu .icons .icons2 {
+	    height: 27px;
+	    width: 30px;
+	}
+	.headmenu .icons .icons3 {
+	    width: 30px;
 	}
 }
 @media screen and (max-width: 360px) {
@@ -3594,23 +3609,23 @@
 		border-radius: 7px;
 	}
 	.search-icon img {
-		width: 27px;
-		height: 27px;
+		width: 22px;
+		height: 22px;
 		margin-right: 10px;
 	}
 	.headmenu .icons .icons3 {
 		margin-top: 7px;
-		width: 31px;
-		height: 27px;
+		width: 27px;
+		height: 24px;
 	}
 	.headmenu .icons .icons2 {
-	    width: 2.1375rem;
-    	height: 2.1375rem;
+	    width: 30px;
+    	height: 29px;
 	}
 	a#numb-item {
-   		left: -6px;
+   		left: 18px;
     	z-index: 1;
-	    top: -6px;
+	    top: -5px;
 	}
 	.toggle-cart-sidenav img {
 		width: 3.4375rem;
@@ -4033,6 +4048,9 @@
 	    width: 86%;
 	    border-radius: 10px 10px 0px 0px;
     	margin: 0px 0px 23px 0px;
+	}
+	.shop-info-price {
+	    font-size: 16px;
 	}
 	
 }

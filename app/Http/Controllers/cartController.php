@@ -57,8 +57,7 @@ class cartController extends Controller
         $data = Auth::user(); 
         $query = DB::select('SELECT *,quantity * price as total FROM cart 
         INNER JOIN product using (product_id)
-        WHERE customer_id = '.$data->id.' AND checkout = false');
-       
+            WHERE customer_id = '.$data->id.' AND checkout = false');   
         return response()->json($query);
     }
 

@@ -161,9 +161,7 @@
 				</div>	
 				<div class="proceed__">	
 					<div>	
-						<!-- <a href="{{asset('frontpage/checkout')}}"> -->
-								<button class="__proceed-to" onclick="Chck.checkoutCart()">Proceed to Checkout</button>
-						<!-- </a> -->
+						<button type="button" class="__proceed-to" onclick="Chck.checkoutCart()">Proceed to Checkout</button>
 					</div>
 				</div>
 

@@ -125,7 +125,7 @@
 		@endif
 		<!-- mobile nav -->
 				<div class="mobile-menu">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="true" onclick="myFunction()">
+					<button class="menu-toggle" aria-expanded="true" onclick="myFunction()">
 						<span>&#9776;</span>
 					</button>
 				</div>
