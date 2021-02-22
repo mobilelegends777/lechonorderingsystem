@@ -3,7 +3,7 @@
 
 		<div class="slider-conts">
 			<div id="slide-container">
-			  <img class="slide-image mySlides " src="asset/home/8.jpg" style="display: none;">
+			  <img class="slide-image mySlides " src="asset/home/8.jpg">
 			  <div class="sales1 trans1">
 			  	<span class="sales2">MEAT & SEAFOOD</span>
 					<div class="sales3">FROM BAGSAKAN</div>
@@ -18,7 +18,7 @@
 			</div>
 
 			<div id="slide-container">
-			  <img class="slide-image mySlides" src="asset/home/2.jpg" style="display: none;">
+			  <img class="slide-image mySlides" src="asset/home/2.jpg">
 			  <div class="sales1 trans2">
 			  	<span class="sales2">CUTTING & DELIVERY</span>
 					<div class="sales3">QUALITY MONITORING</div>
@@ -31,7 +31,7 @@
 			</div>
 
 			<div id="slide-container">
-			  <img class="slide-image mySlides" src="asset/home/1.jpg" style="display: none;">
+			  <img class="slide-image mySlides" src="asset/home/10.jpg">
 			  <div class="sales1 trans3">
 			  	<span class="sales2">WILD SALMON</span>
 					<div class="sales3">CUTTING & DELIVERY</div>
@@ -51,7 +51,7 @@
 						<div class="box slide">
 							<div class="item-image">
 								<div class="prod-image">
-									<img src="{{$item->images}}">
+									<img data-lazy="{{$item->images}}">
 								</div>
 								@if(Auth::check())
 									@if($item->order_exist == 1)

@@ -38,9 +38,9 @@ class userLoginController extends Controller
 			$id = $user->id;
 			$query = DB::select("SELECT p.*, coalesce((
 				select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id),'0') 
-				as order_exist FROM  product p WHERE type = 'Combo' OR type = 'Lechon'");
+				as order_exist FROM  product p where type = 'cart' limit 6");
 		}else{
-			$query = DB::select("SELECT * FROM product WHERE type = 'Combo' OR type = 'Lechon'");
+			$query = DB::select("SELECT * FROM product where type = 'cart' limit 6");
 		}
       	$value = [
 			  "0" => $user,

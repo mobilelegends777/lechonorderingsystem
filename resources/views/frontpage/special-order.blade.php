@@ -73,7 +73,7 @@
 							</div>
 						</div>
 						<div class="shop-items-conts">
-						@for($i = 7;$i <= 22; $i++)
+						{{--@for($i = 7;$i <= 22; $i++)
 							<div class="shop-items">
 								<div class="shop-item-image">
 
@@ -93,28 +93,49 @@
 									<div class="shop-item-price">{{$i}}000.00</div>
 								</div>
 							</div>
-						@endfor
+						@endfor--}}
+						@foreach($product as $item)
+							<div class="shop-items">
+								<div class="shop-item-image">
+
+									@if($value[0] == 'Input Address')
+										<input type="hidden" name="" class="add-ress" value="{{$value[0]}}">
+									@else
+										<input type="hidden" name="" class="add-ress" value="{{$value[1][0]->purok_zone}}&nbsp;{{$value[1][0]->street}}&nbsp;{{$value[1][0]->barangay}}&nbsp;{{$value[1][0]->city}}">
+									@endif
+
+									<a href="#" class="shop-images-lechon" data-value="{{$item->product_id}}">
+										<img src="{{$item->images}}">
+									</a>
+									<a href="#" class="orderNow" data-value="{{$item->product_id}}">Order now</a>
+								</div>
+								<div class="shop-info-price">
+									<div class="shop-item-name">{{$item->name}}</div>
+									<div class="shop-item-price">{{$item->price}}</div>
+								</div>
+							</div>
+						@endforeach
 						</div><!-- end items show -->
 
 						<div class="shop-items-conts-col" style="display: none;">
-						@for($x = 7;$x <= 22; $x++)
+						@foreach($product as $item)
 							<div class="shop-items shop-item-col shop-cols">
 								<div class="shop-item-image">
-									<a href="#" class="shop-images-lechon" data-value="{{$x}}">
-										<img class="shop-imgs" src="{{ asset('images/lechon'.$x.'.png') }}">
+									<a href="#" class="shop-images-lechon" data-value="{{$item->product_id}}">
+										<img class="shop-imgs" src="{{$item->images}}">
 									</a>
 								</div>
 								<div class="shop-info-price shop-price-col shop-info-prices">
 									<div class="shop-item-name-info shop-items-names">
 										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
-											<span class="col-item-title col-names">Lechon {{$x}}kg</span>
+											<span class="col-item-title col-names">{{$item->name}}</span>
 											<div class="parag col-parags">
-													<span>Lechon Baboy (De Leche for {{$x-6}}0 pax)</span>
+													<span>{{$item->description}}</span>
 											</div>
 										</div>
 										<div class="shop-item-info shop-carts">
 											<div class="col-price carts-price1">
-												<div class="shop-item-price prod-price">{{$x}}000.00</div>
+												<div class="shop-item-price prod-price">{{$item->price}}</div>
 												<div class="cart-shop-button"><button class="addcart cols-cart"></i>Order Now</button></div>
 											</div>
 										</div>
@@ -122,7 +143,7 @@
 
 								</div>
 							</div>
-						@endfor
+						@endforeach
 						</div>
 							<!-- end item display col-->
 						<div class="paginate">
@@ -186,205 +207,47 @@
 
      var address = $('.add-ress').val();
 
+
+orderNow();
+function orderNow(){
 $('.orderNow').each(function(){
   $(this).on('click',function(e){
     e.preventDefault();
-      var lechVal = $(this).data('value');
-      // alert(lechVal);
-      $('.shop-sub-container3').empty();
-      $('.shop-sub-container3').append(`
-      		<div class="form-container">
-				<div class="order-conts">
-							<div class="lechon-info">
-								<div class="lechon-img">
-									<img src="{{ asset('images/lechon${lechVal}.png') }}">
-								</div>
-
-								<div class="lechon-details">
-									 <span><h4>Lechon Baboy ${lechVal}kg(Good for ${lechVal-6}0 pax)</h4></span>
-						                <span><h3>₱ ${lechVal},000.00</h3></span> 
-						              <div>
-						                <ul>
-						                	<li>Approximate No. of Person : ${lechVal-6}0</li>
-						                	<li>Approximate Live Weight : ${lechVal} Kilos</li>
-						                </ul>
-						              </div>
-					              </div>
-							</div>
-							<div class="payment-mehods">
-								<div class="pay-conts">
-									<div>
-						                <span><span class="asterisk">*</span><b>Minimum Partial Payment is 50% per item</b></span>
-					              	</div>
-					               	<div class="radio-buttons">
-						                <div class="radio1">
-						                  <input type="radio" name="pay-amount"><b> 50% Partial Payment</b>
-						                </div>
-						                <div class="radio2">
-						                  <input type="radio" name="pay-amount"><b> Full Amount </b>
-					                	</div>
-					                </div>
-				                </div>
-				                <div class="pay-conts">
-									<div>
-										<span><span class="asterisk">*</span> How do you want your order?</span>
-									</div>
-									<div class="radio-buttons">
-										<div class="radio1">
-											<input type="radio" name="orderType"> Pick-up
-										</div>
-										<div class="radio2">
-											<input type="radio" name="orderType"> Delivery
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="delivery-details">
-							<div class="date-time">
-								<div>
-									<span><span class="asterisk">*</span> Date/Time</span>
-								</div>
-								<div class="date-when">
-									<input type="datetime-local" data-date="" data-date-format="DD MMMM YYYY" value="2015-08-09" class="datestime">
-								</div>
-							</div>
-							<div class="pick-up-add">
-								<div>
-									<span><span class="asterisk">*</span>Address</span>
-								</div>
-								<div class="pickup-deliv">
-									<input type="addresses" name="" class="inpt-address" value="${address}">
-								</div>
-								
-							</div>
-						</div>
-						<div class="qty-proceed-to">
-							<div class="quantities">
-								<input type="number" name="" class="inpt-qty" value="1" min="1">
-							</div>
-							<div class="proceed-to">
-								<button><i class="fa fa-arrow-right"></i><span>PROCEED</span></button>
-							</div>
-						</div>
-				</div>
-			</div>
-      	
-      `);
+	var lechVal = $(this).data('value');
+	// alert(lechVal);
   });
 });
+}
 
-$('.shop-images-lechon').each(function(){
-  $(this).on('click',function(e){
-    e.preventDefault();
-      var lechVal = $(this).data('value');
-      // alert(lechVal);
-      $('.shop-sub-container3').empty();
-      $('.shop-sub-container3').append(`
-      		<div class="form-container">
-				<div class="order-conts">
-							<div class="lechon-info">
-								<div class="lechon-img">
-									<img src="{{ asset('images/lechon${lechVal}.png') }}">
-								</div>
+// $(function() {
 
-								<div class="lechon-details">
-									 <span><h4>Lechon Baboy ${lechVal}kg(Good for ${lechVal-6}0 pax)</h4></span>
-						                <span><h3>₱ ${lechVal},000.00</h3></span> 
-						              <div>
-						                <ul>
-						                	<li>Approximate No. of Person : ${lechVal-6}0</li>
-						                	<li>Approximate Live Weight : ${lechVal} Kilos</li>
-						                </ul>
-						              </div>
-					              </div>
-							</div>
-							<div class="payment-mehods">
-								<div class="pay-conts">
-									<div>
-						                <span><span class="asterisk">*</span><b>Minimum Partial Payment is 50% per item</b></span>
-					              	</div>
-					               	<div class="radio-buttons">
-						                <div class="radio1">
-						                  <input type="radio" name="pay-amount"><b> 50% Partial Payment</b>
-						                </div>
-						                <div class="radio2">
-						                  <input type="radio" name="pay-amount"><b> Full Amount </b>
-					                	</div>
-					                </div>
-				                </div>
-				                <div class="pay-conts">
-									<div>
-										<span><span class="asterisk">*</span> How do you want your order?</span>
-									</div>
-									<div class="radio-buttons">
-										<div class="radio1">
-											<input type="radio" name="orderType"> Pick-up
-										</div>
-										<div class="radio2">
-											<input type="radio" name="orderType"> Delivery
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="delivery-details">
-							<div class="date-time">
-								<div>
-									<span><span class="asterisk">*</span> Date/Time</span>
-								</div>
-								<div class="date-when">
-									<input type="datetime-local" data-date="" data-date-format="DD MMMM YYYY" value="2015-08-09" class="datestime">
-								</div>
-							</div>
-							<div class="pick-up-add">
-								<div>
-									<span><span class="asterisk">*</span>Address</span>
-								</div>
-								<div class="pickup-deliv">
-									<input type="addresses" name="" class="inpt-address" value="${address}">
-								</div>
-								
-							</div>
-						</div>
-
-						<div class="qty-proceed-to">
-							<div class="quantities">
-								<input type="number" name="" class="inpt-qty" value="1">
-							</div>
-							<div class="proceed-to">
-								<button><i class="fa fa-arrow-right"></i><span>PROCEED</span></button>
-							</div>
-						</div>
-				</div>
-			</div>
-      	
-      `);
-  });
-});
-$(function() {
-
-$(window).scroll(function() {
-		  if ($(window).scrollTop() > 600) {
-		    $('.shop-filters').css({
-		    	'position':'fixed',
-		    	'top':0,
-		    	'background':'#fff',
-		    });
-		  }
-		  else if($(window).width() <= 900){
-		  	$('.shop-filters').css({
-		    	'position':'relative',
-		    	'top':'initial',
-		    	'width':'450px'
-		    });
-		  } 
-		  else {
-		    $('.shop-filters').css({
-		    	'position':'relative',
-		    	'top':'initial'
-		    });
-		  }
-		});
-});
-
+// $(window).scroll(function() {
+// 		  if ($(window).scrollTop() > 600) {
+// 		    $('.shop-filters').css({
+// 		    	'position':'fixed',
+// 		    	'top':0,
+// 		    	'background':'#fff',
+// 		    });
+// 		  }
+// 		  else if($(window).width() <= 900){
+// 		  	$('.shop-filters').css({
+// 		    	'position':'relative',
+// 		    	'top':'initial',
+// 		    	'width':'450px'
+// 		    });
+// 		  } 
+// 		  else {
+// 		    $('.shop-filters').css({
+// 		    	'position':'relative',
+// 		    	'top':'initial'
+// 		    });
+// 		  }
+// 		});
+// });
+function cancelForm(){
+	$('.cancel-form').on('click',function(){
+		// $('.orderNow').toggle();
+	});
+}
 	</script>
 	@endsection	

@@ -51,6 +51,11 @@ a {
 .menu-toggle, .search-icon {
     display: none;
 }
+/*#header_scroll{
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}*/
 .headmenu {
   display: flex;
   /*width: 100%;*/
@@ -276,6 +281,15 @@ span.inputs {
 
 .headmenu .icons .icons3 {
     width: 30px;
+}
+
+i.icons2.fas.fa-user {
+    font-size: 30px;
+    color: grey;
+}
+i.icons3.fas.fa-shopping-cart {
+    font-size: 29px;
+    color: grey;
 }
 .container {
   /*border: 1px solid red;*/
@@ -1244,12 +1258,13 @@ button.filter-by-price:hover {
 .cartpage-item {
   text-align: -webkit-center;
 }
-thead{
-  border: 1px solid black;
+thead.product-title{
+  border: 3px solid #ccc;
   border-collapse: unset;;
 }
 table.product-on-cart {
-  border: 1px solid black;
+/*border: 1px solid black;*/
+  border: 3px solid #ccc;
   border-collapse: collapse;
   width: 57%;
 }
@@ -1383,7 +1398,7 @@ div#myDropdown {
 }*/
 .order-conts {
     /*border: solid 1px;*/
-    width: 68%;
+    width: 100%;
     height: auto;
     /* align-content: flex-end; */
     text-align: left;
@@ -1500,10 +1515,12 @@ input.btn.btn-default:hover{
     display: block;
     overflow:auto;
     height: 500px;
+    /*height: auto;*/
   }
   tr.librebais {
     display: table;
     width: 100%;
+    border-bottom: solid #ccc;
   }
   tr.title-carted{
     display:block;
@@ -1606,3 +1623,11 @@ button.cartUpdate:hover {
 /*.shop-items:nth-child(3n+4) {
    border: 1px solid red;
 }*/
+.art-mobile-view {
+  display: none;
+}
+.cancel-form {
+    float: right;
+    font-size: 29px;
+    cursor: pointer;
+}

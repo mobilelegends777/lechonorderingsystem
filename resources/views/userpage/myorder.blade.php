@@ -35,11 +35,7 @@
 				<form  method="POST" action="{{ route('cart-update') }}">
 					@csrf
 				@foreach($value[1] as $item)
-					<tr class="librebais" id="cart-cont-item{{$item->cart_id}}">
-						<input type="hidden" class="cart-id" name="cartID[]" value="{{$item->cart_id}}">
-						<td>
-							<span class="cancel-cart" onclick="al.deleteItemCart({{$item->cart_id}})" style="cursor:pointer;">&times;</span>
-						</td>
+					<tr class="librebais" id="cart-cont-item">
 						<td class="carted-items" colspan="2">
 						<div class="carted-item-image">
 							<a href=""><img src="{{ $item->images }}"></a>
@@ -50,7 +46,6 @@
 						</div>
 						</td>
 						<td class="pst-price">₱ {{ number_format($item->price,2) }}
-							<input type="hidden" class="cartPrice cart-price{{ $item->cart_id }}" value="{{ $item->price }}">
 						</td>
 						<td>
 						<button type="button" onclick="addC.addInCart({{$item->product_id}})" class="reorder">Reorder</button>

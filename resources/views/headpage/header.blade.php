@@ -1,5 +1,5 @@
 
-<div class="header-container">
+<div class="header-container" id="header_scroll">
 	<div class="headmenu" id="headers">
 		<div class="company-logo">
 			<span class="des-logo">
@@ -21,12 +21,12 @@
 				</a>
 			</div>
 			<div class="dropdown">
-				<span class="des5">Special Order <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
-				<div class="dropdown-content">
+				<a href="{{asset('frontpage/special-order')}}" class="des5">Special Order</a>
+				{{--<div class="dropdown-content">
 				  <a href="{{asset('frontpage/special-order')}}">Whole Lechon</a>
 				  <a href="{{asset('frontpage/special-order')}}">Lechon Belly</a>
 				  <a href="{{asset('frontpage/special-order')}}">Available per Kilo</a>
-				</div>
+				</div>--}}
 			</div>
 			<div class="dropdown">
 				<a href="{{asset('frontpage/shop')}}">
@@ -63,11 +63,13 @@
 		
 		<div class="icons">
 			<span class="search-icon" >
-				<img src="{{asset('images/search-icon.png')}}">
+				<!-- <img src="{{asset('images/search-icon.png')}}"> -->
+				<i class="fa fa-search" aria-hidden="true"></i>
 			</span>
 			<div class="add-to" >
 				<a href="{{asset('frontpage/cartpage')}}" >
-					<img src="{{asset('images/cart.png')}}" class="icons3" title="Your Cart">
+					<!-- <img src="{{asset('images/cart.png')}}" class="icons3" title="Your Cart"> -->
+					<i class="icons3 fas fa-shopping-cart"></i>
 					<a href="{{asset('frontpage/cartpage')}}" class="notification-cart" id="numb-item">
 						<span class="badge2" id="badge2">0</span>
 					</a>
@@ -100,7 +102,8 @@
 				
 
 						@else
-							<img src="{{asset('images/user.png')}}" class="icons2 d-arrow">					
+							<!-- <img src="{{asset('images/user.png')}}" class="icons2 d-arrow"> -->
+							<i class="fas fa-user"></i>
 								<div class="dropdown-content-account">
 
 									<a href="{{asset('/u-login')}}">Login</a>
@@ -114,7 +117,8 @@
 			@else
 			<div class="dropdown-account">
 					<span class="account-c ">
-							<img src="{{asset('images/user.png')}}" class="icons2 d-arrow">					
+							<!-- <img src="{{asset('images/user.png')}}" class="icons2 d-arrow">	 -->
+							<i class="icons2 fas fa-user"></i>				
 									<div class="dropdown-content-account">
 
 										<a href="{{asset('/u-login')}}">Login</a>
@@ -125,14 +129,13 @@
 		@endif
 		<!-- mobile nav -->
 				<div class="mobile-menu">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="true" onclick="myFunction()">
+					<button class="menu-toggle" aria-expanded="true" onclick="myFunction()">
 						<span>&#9776;</span>
 					</button>
 				</div>
 		</div>
 	</div>
-</div>
-<div class="topnav subtop" id="myTopnav">
+	<div class="topnav subtop" id="myTopnav">
 		<div class="ordinary">
 			<a href="{{asset('/')}}">Home</a>
 		</div>
@@ -140,12 +143,12 @@
     		<a href="{{asset('frontpage/shop')}}">Menu</a>
     	</div>
     	<div class="ordinary dropbtn2">
-			  <a href="#">Special Order <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></a>
-			  <div id="myDropdown" class="drpdwn meatDrp" style="display:none;">
+			  <a href="{{asset('frontpage/special-order')}}">Special Order</a>
+			  {{--<div id="myDropdown" class="drpdwn meatDrp" style="display:none;">
 					  <a href="{{asset('frontpage/special-order')}}">Whole Lechon</a>
 					  <a href="{{asset('frontpage/special-order')}}">Lechon Belly</a>
 					  <a href="{{asset('frontpage/special-order')}}">Available per Kilo</a>
-				</div>
+				</div>--}}
 	 	</div>
     	<!-- <div class="ordinary dropbtn2">
     		<a href="#">Menu <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></a>
@@ -163,8 +166,9 @@
     	</div> -->
 	    <div class="ordinary"><a href="{{asset('frontpage/contact')}}">Contact Us</a>
 	    </div>
-
 	</div>
+</div>
+
 <!-- end mobile toggles -->
 	<!-- modals -->
 		
@@ -316,7 +320,7 @@ $(document).ready(function(){
 											</div>
 										</div>
 									</div>
-									<span class="delete-item" onclick="al.deleteItemCart(${item.cart_id})">&times</span>
+									<span class="delete-item" onclick="al.deleteItemCart(${item.cart_id},${item.product_id})">&times</span>
 								</div>
 								`);
 						});
@@ -367,6 +371,33 @@ $('.catType').each(function(){
 									</div>
 								</div>
 							`);
+							$('.shop-items-conts-col').append(`
+							<div class="shop-items shop-item-col shop-cols">
+								<div class="shop-item-image">
+									<a href="#">
+										<img class="shop-imgs" src="${item.images}">
+									</a>
+								</div>
+								<div class="shop-info-price shop-price-col shop-info-prices">
+									<div class="shop-item-name-info shop-items-names">
+										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
+											<span class="col-item-title col-names">${item.name}</span>
+											<div class="parag col-parags">
+												<div>${item.description}</div>
+											</div>
+										</div>
+										<div class="shop-item-info shop-carts">
+											<div class="col-price carts-price1">
+												<div class="shop-item-price prod-price">₱${item.price}</div>
+												<div class="shop-left${item.product_id}">
+													<button class="addcart cols-cart${item.product_id}" onclick="addC.addInCart(${item.product_id})"><i class="fa fa-cart-plus"></i>Add to cart</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							`);
 						}else if(item.order_exist == 1){
 							$('.shop-items-conts').append(`
 								<div class="shop-items">
@@ -385,6 +416,33 @@ $('.catType').each(function(){
 										</div>
 									</div>
 								</div>
+							`);
+							$('.shop-items-conts-col').append(`
+							<div class="shop-items shop-item-col shop-cols">
+								<div class="shop-item-image">
+									<a href="#">
+										<img class="shop-imgs" src="${item.images}">
+									</a>
+								</div>
+								<div class="shop-info-price shop-price-col shop-info-prices">
+									<div class="shop-item-name-info shop-items-names">
+										<div class="shop-item-name-col shop-name-col shop-itemname-cols">
+											<span class="col-item-title col-names">${item.name}</span>
+											<div class="parag col-parags">
+												<div>${item.description}</div>
+											</div>
+										</div>
+										<div class="shop-item-info shop-carts">
+											<div class="col-price carts-price1">
+												<div class="shop-item-price prod-price">₱${item.price}</div>
+												<div class="shop-left${item.product_id}">
+													<button class="addcartcol"><i class="fas fa-check"></i>On cart</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 							`);
 						}else{
 							$('.shop-items-conts').append(`
@@ -405,11 +463,6 @@ $('.catType').each(function(){
 									</div>
 								</div>
 							`);
-						}
-					});
-					
-					$.each(data, function(i, item){
-					
 							$('.shop-items-conts-col').append(`
 							<div class="shop-items shop-item-col shop-cols">
 								<div class="shop-item-image">
@@ -428,8 +481,8 @@ $('.catType').each(function(){
 										<div class="shop-item-info shop-carts">
 											<div class="col-price carts-price1">
 												<div class="shop-item-price prod-price">₱${item.price}</div>
-												<div class="shop-left">
-													<button class="addcart cols-cart"><i class="fa fa-cart-plus"></i>Add to cart</button>
+												<div class="shop-left${item.product_id}">
+													<button class="addcart cols-cart${item.product_id}" onclick="addC.addInCart(${item.product_id})"><i class="fa fa-cart-plus"></i>Add to cart</button>
 												</div>
 											</div>
 										</div>
@@ -437,8 +490,18 @@ $('.catType').each(function(){
 								</div>
 							</div>
 							`);
-						
+						}
 					});
+					
+					// $.each(data, function(i, item){
+					// 	if(item.order_exist == 0){
+							
+					// 	}else if(item.order_exist == 1){
+							
+					// 	}else{
+							
+					// 	}
+					// });
 					Carting();
 					cartI();
 				}

@@ -17,13 +17,13 @@ class shopController extends Controller
     {
         // $data = Session::get('user');
 		$data = Auth::user();
-		$category = DB::select("SELECT * FROM category");
+		$category = DB::select("SELECT * FROM category WHERE id != 10");
 		// dd($data->id);
 		if($data != null){
 			$id = $data->id;
 			$query = DB::select("SELECT p.*, coalesce((
-				select (select '1') from cart c where c.product_id = p.product_id and checkout = false and customer_id = $id),'0') 
-				as order_exist FROM  product p");
+				select (select '1') from cart c where c.product_id = p.product_id and checkout = false  and customer_id = $id),'0') 
+				as order_exist FROM  product p where type = 'cart'");
 		}else{
 			$query = DB::select("SELECT * FROM product");
 		}
@@ -61,17 +61,17 @@ class shopController extends Controller
 			if($category == 9){
 				$query = DB::select("SELECT p.*, coalesce((
 					select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id),'0') 
-					as order_exist FROM  product p WHERE category_type != 8");
+					as order_exist FROM  product p WHERE category_type != 8 AND type = 'cart'");
 			}else {
 				$query = DB::select("SELECT p.*, coalesce((
 					select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id),'0') 
-					as order_exist FROM  product p WHERE category_type = ".$category."");
+					as order_exist FROM  product p WHERE category_type = ".$category." AND type = 'cart'");
 			}
 		}else{
 			if($category == 9){
-				$query = DB::select('SELECT * FROM product WHERE category_type != 8');
+				$query = DB::select('SELECT * FROM product WHERE category_type != 8 AND type = "cart"');
 			}else {
-				$query = DB::select('SELECT * FROM product WHERE category_type = '.$category.'');
+				$query = DB::select('SELECT * FROM product WHERE category_type = '.$category.' AND type = "cart"');
 			}
 		}
 		// $data = [
@@ -89,9 +89,9 @@ class shopController extends Controller
 			$id = $user->id;
 			$query = DB::select("SELECT p.*, coalesce((
 				select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id),'0') 
-				as order_exist FROM  product p WHERE price BETWEEN $min AND $max");
+				as order_exist FROM  product p WHERE price BETWEEN $min AND $max AND type = 'cart'");
 		}else{
-			$query = DB::select('SELECT * FROM product WHERE price BETWEEN '.$min.' AND '.$max.'');
+			$query = DB::select('SELECT * FROM product WHERE price BETWEEN '.$min.' AND '.$max.' AND type = "cart"');
 		}
 		// $data = [
 		// 	'data' => $query
@@ -108,10 +108,10 @@ class shopController extends Controller
 			$id = $user->id;
 				$query = DB::select("SELECT p.*, coalesce((
 					select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id),'0') 
-					as order_exist FROM  product p  ORDER BY p.price $sort");
+					as order_exist FROM  product p WHERE type = 'cart' ORDER BY p.price $sort");
 		}else{
 			
-				$query = DB::select("SELECT * FROM product  ORDER BY price $sort");
+				$query = DB::select("SELECT * FROM product WHERE type = 'cart' ORDER BY price $sort ");
 		}
 		return response()->json($query);
 	}
