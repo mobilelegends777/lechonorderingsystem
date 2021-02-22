@@ -46,18 +46,18 @@ class cartController extends Controller
         $carted = $request->carted;
         $data = Auth::user(); 
         // dd($data);
-        $query = DB::insert('INSERT INTO cart (product_id,customer_id,checkout)values('.$carted.','.$data->id.',false)');
-        // $value = [
-        //     '1' => $query,
-        //     '2' => $request->carted
-        // ];
+        $datas = DB::insert('INSERT INTO cart (product_id,customer_id,checkout)values('.$carted.','.$data->id.',false)');
+        $query = [
+            '1' => $datas,
+            '2' => $request->carted
+        ];
         return response()->json($query);
     }
     public function viewCart(){
         $data = Auth::user(); 
         $query = DB::select('SELECT *,quantity * price as total FROM cart 
-        INNER JOIN product using (product_id)
-            WHERE customer_id = '.$data->id.' AND checkout = false');   
+            INNER JOIN product using (product_id)
+            WHERE customer_id = '.$data->id.' AND checkout = false'); 
         return response()->json($query);
     }
 

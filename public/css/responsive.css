@@ -51,11 +51,12 @@
 
 .shop-company {
 	position: absolute;
-	top: 0;
+	/*top: 0;*/
+    top: 178px;
 	width: 100%;
 	text-align: center;
 	font-size: 54px;
-	margin: 100px 0;
+	/*margin: 100px 0;*/
 	color: #b89352;
 }
   
@@ -463,13 +464,15 @@
 	font-family: Blatant, sans-serif;
   }
 #my-searches{
-    position: absolute;
+    /*position: absolute;*/
+    position: fixed;
     background-color: #2a2c2f;
     z-index: 100;
     text-align: center;
 	height: 136px;
     padding: 36px 0;
     width: 100%;
+    top: 0;
 }
 .search-bar-cont {
     display: inline-flex;
@@ -709,13 +712,13 @@
 		display: flex;
 		width: 100%;
 	}
-	.headmenu .icons .icons3 {
+	/*.headmenu .icons .icons3 {
     	width: 46px;
-	}
-	.headmenu .icons .icons2 {
+	}*/
+	/*.headmenu .icons .icons2 {
 	    width: 47px;
 	    height: 47px;
-	}
+	}*/
 	.headmenu .sub-menu {
 	    font-size: 20px;
 		padding: 14px;
@@ -918,9 +921,9 @@
 		left: 118%;
 	    top: 42px;
 	}
-	.icons2 {
+	/*.icons2 {
 		margin-left: -4px;
-	}
+	}*/
 	.__item {
 		/*width: 409px;*/
 	}
@@ -993,11 +996,11 @@
 	    height: 15px;
     	width: 15px;
 	}
-	.headmenu .icons .icons2 {
+	/*.headmenu .icons .icons2 {
 		width: 45px;
 	    height: 45px;
 		margin-right: 0;
-	}
+	}*/
 	.shop-sub-container3 {
 		width: 85%;
 	}
@@ -1319,6 +1322,11 @@
 	}
 }
 @media screen and (max-width: 800px){
+	.header-container {
+		position: fixed;
+		z-index: 1;
+		top: 0;
+	}
 	.icon-holder {
     	padding: 6px 5px;
 	}
@@ -1526,13 +1534,16 @@
 	}
 	.search-icon {
 		display: flex;
+		font-size: 28px;
+    	color: grey;
+	    padding: 0 12px;
 	}
-	.search-icon img {
+	/*.search-icon img {
 		width: 1.8125rem;
 		margin-right: 15px;
 		height: 1.8125rem;
 		cursor: pointer;
-	}
+	}*/
 	span.account-c {
     	left: 23px;
 	}
@@ -1567,7 +1578,8 @@
 	}
 	.topnav.responsive .ordinary {
 		font-size: 19px;
-	    padding: 31px 0px;
+	    /*adding: 31px 0px;*/
+        padding: 17px 0px;
 	    width: 100%;
 	    text-align: center;
 	}
@@ -1652,6 +1664,9 @@
 	    max-width: 1920px;
 	    height: 2484px;
         height: auto;
+	}
+	button.addcartcol {
+		width: 100%;
 	}
 	.shower_right .panel-title {
 		font-size: 30px;
@@ -1799,7 +1814,7 @@
 	}
 	.footer-contact-info {
 	    /*line-height: 48px;*/
-        line-height: 55px;
+        line-height: 41px;
 	}
 	span.sp {
 	    width: 63%;
@@ -2023,7 +2038,8 @@
 		font-size: 31px;
 	}
 	.shop-img img {
-		height: 17.25rem;
+		/*height: 17.25rem;*/
+	    height: 22.25rem;
 	}
 	#slider-range {
     	height: 7px;
@@ -2107,7 +2123,8 @@
 		width: 45%;
 	}
 	.page-sub-container {
-		margin: 2.75rem 0;
+		/*margin: 2.75rem 0;*/
+	    margin: 11.75rem 0;
 	}
 	.order-conts {
 		width: 100%;
@@ -2136,11 +2153,7 @@
 	.shipping-info {
 		line-height: 2.75rem;
 	}
-	.header-container {
-		position: fixed;
-		z-index: 1;
-		top: 0;
-	}
+	
 }
 @media screen and (max-width: 768px) {
 	/*.shop-images img {
@@ -2433,6 +2446,7 @@
 	.__item .box3 span {
 		font-size: 15px;
 		line-height: 23px;
+	    height: 2.8125rem;
 	}
 	.f-icon {
 		width: 268px;
@@ -2453,6 +2467,13 @@
 	}
 	.centered span {
 	    margin-left: 15px;
+	}
+	.topnav.responsive .ordinary {
+	    font-size: 17px;
+	}
+	.company-logo {
+    	width: 24%;
+    	justify-content: center; 
 	}
 }
 
@@ -3170,6 +3191,9 @@
 	.shop-info-price {
 	    font-size: 13px;
 	}
+	.shop-img img {
+    	height: 18.25rem;
+	}
 	.cart-icon {
 		width: 42px;
 		height: 42px;
@@ -3177,8 +3201,9 @@
 		left: 66px;
 	}
 	.shop-company {
-		font-size: 28px;
-		margin: 52px 0;
+	    /*font-size: 22px;*/
+        font-size: 18px;
+		/*margin: 52px 0;*/
 	}
 	.shop-cart-icon i {
     	font-size: 22px;
@@ -3239,7 +3264,7 @@
 	    font-size: 26px;
 	}
 	.shop-img img {
-		height: 12.25rem;
+	    height: 17.25rem;
 	}
 	.product-on-cart {
 	    width: 93%;
@@ -3401,7 +3426,7 @@
     	width: 20%;
 	}
 	.headmenu .des-logo .logos {
-	    margin-left: 16px;
+	    /*margin-left: 16px;*/
 	    margin-top: 0;
 	}
 	

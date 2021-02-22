@@ -51,6 +51,11 @@ a {
 .menu-toggle, .search-icon {
     display: none;
 }
+/*#header_scroll{
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}*/
 .headmenu {
   display: flex;
   /*width: 100%;*/
@@ -276,6 +281,15 @@ span.inputs {
 
 .headmenu .icons .icons3 {
     width: 30px;
+}
+
+i.icons2.fas.fa-user {
+    font-size: 30px;
+    color: grey;
+}
+i.icons3.fas.fa-shopping-cart {
+    font-size: 29px;
+    color: grey;
 }
 .container {
   /*border: 1px solid red;*/
@@ -1384,7 +1398,7 @@ div#myDropdown {
 }*/
 .order-conts {
     /*border: solid 1px;*/
-    width: 68%;
+    width: 100%;
     height: auto;
     /* align-content: flex-end; */
     text-align: left;
@@ -1501,6 +1515,7 @@ input.btn.btn-default:hover{
     display: block;
     overflow:auto;
     height: 500px;
+    /*height: auto;*/
   }
   tr.librebais {
     display: table;
@@ -1610,4 +1625,9 @@ button.cartUpdate:hover {
 }*/
 .art-mobile-view {
   display: none;
+}
+.cancel-form {
+    float: right;
+    font-size: 29px;
+    cursor: pointer;
 }

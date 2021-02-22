@@ -8,6 +8,7 @@ use Auth;
 use Session;
 use App\Login;
 use AuthenticatesUsers;
+use DB;
 
 class lechonController extends Controller
 {
@@ -15,19 +16,24 @@ class lechonController extends Controller
     {
 
         $data = Auth::user(); 
+        $userInfo = DB::select('SELECT * FROM customer_info  ci
+                    INNER JOIN customer_address ca ON ca.customer_id = ci.customer_id
+                    WHERE ci.customer_id = 1 ');
+        $product = DB::select('SELECT * FROM product WHERE category_type = 10');
         $value = [
-            '0' => $data
+            '0' => $data,
+            '1' => $userInfo
         ];
-
+        // dd($product);
         if($value[0] == null){
             $value = [
                 '0' => 'Input Address',
                 'usertype' => 'notLogin'
             ];
-            return view('frontpage/special-order', compact('value'));
+            return view('frontpage/special-order', compact('value'))->with('product',$product);
         }
         else{
-        return view('frontpage/special-order', compact('value'));
+        return view('frontpage/special-order', compact('value'))->with('product',$product);
         }   
 
     }

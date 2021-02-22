@@ -28,12 +28,12 @@ class myorderController extends Controller
     {
 
         $data = Auth::user(); 
-        $query = DB::select('SELECT distinct(order_inventory.product_id),product.name,images, price FROM order_inventory
-        INNER JOIN product ON product.product_id = order_inventory.product_id
+        $query = DB::select('SELECT distinct(checkout_inventory.product_id),product.name,images, price FROM checkout_inventory
+        INNER JOIN product ON product.product_id = checkout_inventory.product_id
         WHERE customer_id = '.$data->id.' AND order_status ='."'completed'".'');
         
-        $query2 = DB::select('SELECT * FROM order_inventory
-        INNER JOIN product ON product.product_id = order_inventory.product_id
+        $query2 = DB::select('SELECT * FROM checkout_inventory
+        INNER JOIN product ON product.product_id = checkout_inventory.product_id
         WHERE customer_id = '.$data->id.' AND order_status ='."'garnishing'".'');
 
       
@@ -55,7 +55,7 @@ class myorderController extends Controller
 
              $data = Auth::user();
              $id = $data->id;
-             DB::update('UPDATE order_inventory SET pickup_datetime = current_timestamp, order_status = '."'completed'".' WHERE customer_id = '.$id.' AND order_status = '."'garnishing'".'');
+             DB::update('UPDATE checkout_inventory SET pickup_datetime = current_timestamp, order_status = '."'completed'".' WHERE customer_id = '.$id.' AND order_status = '."'garnishing'".'');
     
 
             Alert::success('Success', 'Order Received');

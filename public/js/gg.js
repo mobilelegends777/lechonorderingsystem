@@ -10,7 +10,7 @@ var al = (()=> {
     var api_url = 'http://localhost:8000'; 
     var url = window.location.origin;
     return {
-        deleteItemCart: (item_cart_id)=>{
+        deleteItemCart: (item_cart_id,product_id)=>{
           $.ajax({
              url:url+"/delete-items-cart",
              method:"POST",
@@ -18,31 +18,39 @@ var al = (()=> {
              beforeSend:function(){
              },
              success:function(data){
-                // console.log(data);
+                // console.log(product_id);
                 $('#cart-item-cont'+item_cart_id).remove();
                 $('#cart-cont-item'+item_cart_id).remove();
                 $('#mobile-cart'+item_cart_id).remove();
                 var minus_items = $('#badge').text()-1;
                 $('#badge').text(minus_items);
                 // countItem();
-                notif();
+                    $('.shop-left'+product_id).empty();
+                    $('.shop-left'+product_id).append(`
+                       <button class="addcart cols-cart{{$item->product_id}}" onclick="addC.addInCart(${product_id})"><i class="fa fa-cart-plus"></i>Add to cart</button>
+                      `);
+                    // $('.cartIcon'+product_id).empty();
+                    // $('.cartIcon'+product_id).append(`
+                    //   <a href="" id="addToCart" class="shop-cart-icon addToCart" data-value="${product_id}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a>
+                    // `)
+                // notif();
                 subTOTS();
+                // Carting();
                 
-
              },
              error:function(){
                 // _helper.buttonAnimation(2,'deposit_submit');
              }
           })
-          cartedItems();
+          // cartedItems();
         },
         
         init: function() {
             // alert('dsdsdd');
           // al.getMarkers();
         }
-    }
 
+    }
 })(al);
 
 $(function() {
@@ -67,11 +75,17 @@ var addC = (()=> {
            },
            success:function(data){
             // console.log(data[2]);
+                var minus_items = Number($('#badge').text())+1;
+                $('#badge').text(minus_items);
                 if(data[1] == true){
                     $('.shop-left'+data[2]).empty();
                     $('.shop-left'+data[2]).append(`
                        <button class="addcartcol"><i class="fas fa-check"></i>On cart</button>
                       `);
+                    $('.cartIcon'+data[2]).empty();
+                    $('.cartIcon'+data[2]).append(`
+                      <span class="shop-cart-icon"><i id="cart-icons " class="fas fa-check" aria-hidden="true"></i></span>
+                    `)
                 }
 
            },
@@ -161,11 +175,16 @@ function Carting(){
       data:{carted:carted},
       success:function(data)
         {	
-          if(data == true){
-            $('.cartIcon'+carted).empty();
-            $('.cartIcon'+carted).append(`
+          // console.log(data);
+          if(data[1] == true){
+            $('.cartIcon'+data[2]).empty();
+            $('.cartIcon'+data[2]).append(`
               <span class="shop-cart-icon"><i id="cart-icons " class="fas fa-check" aria-hidden="true"></i></span>
             `)
+            $('.shop-left'+data[2]).empty();
+            $('.shop-left'+data[2]).append(`
+               <button class="addcartcol"><i class="fas fa-check"></i>On cart</button>
+              `);
           // $( "#badge" ).text( text );
           }
         }
@@ -176,65 +195,65 @@ function Carting(){
 }
 // end add to cart
 // sidenav cart view
-function cartedItems(){
+// function cartedItems(){
 		
-  $.ajax({
-    headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
-    type:'POST',
-    url: url+'/view-carted',
-    data:{data:''},
-    success:function(data)
-      {
-        // console.log(data);
-        if(data == false){
-          $('.item-on-cart').empty();
-          $('.item-on-cart').append(`
-            <div class="cart-empty">
-              <h3>Your Cart is empty!!</h3>
-            </div>
-          `);
-        }else{
+//   $.ajax({
+//     headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+//     type:'POST',
+//     url: url+'/view-carted',
+//     data:{data:''},
+//     success:function(data)
+//       {
+//         // console.log(data);
+//         if(data == false){
+//           $('.item-on-cart').empty();
+//           $('.item-on-cart').append(`
+//             <div class="cart-empty">
+//               <h3>Your Cart is empty!!</h3>
+//             </div>
+//           `);
+//         }else{
 
         
-        $('.item-on-cart').empty();
-        var count_item=0;
-        $.each(data, function(i, item){
-        count_item++
-          var numb = parseFloat(item.price).toFixed(2);
-            $('.item-on-cart').append(`
-            <div class="carted-item-cont" id="cart-item-cont${item.cart_id}">
-              <div class="cart-product-cont">
-                <img src="${item.images}">
-                <span class="item-name"><p style="margin: 0;padding:0;">${item.name}</p></span>
-              </div>
-              <div class="carted-item">
-                <div class="item-subtotal">
-                  <div class="sub-price">
-                    <input type="hidden" class="cart_id cart-id${item.cart_id}" name="cartID[]" value="${item.cart_id}">
-                    <input type="hidden" class="cart-tot-price${item.cart_id}" value="${item.price}">
-                    ₱ <span class="cart-sub-price${item.cart_id}">${numb}</span>
-                  </div>
-                  <div  class="cart-input">
-                    <button  type="button" class="qty-dec" onclick="dec('qty',${item.cart_id})">-</button>
-                      <input class="cartQ cartQty__${item.cart_id}" type="number" value="${item.quantity}" name="qty[]">
-                    <button type="button" class="qty-inc" onclick="inc('qty',${item.cart_id})">+</button>
-                  </div>
-                  <div class="item-sub">
-                    <span class="substotal${item.cart_id}">Total: ₱<span class="substotals">${item.total}</span></span>
-                  </div>
-                </div>
-              </div>
-              <span class="delete-item" onclick="al.deleteItemCart(${item.cart_id})">&times</span>
-            </div>
-            `);
-        });
-        $( "#badge" ).text( count_item );
-        $('#badge2').text( count_item );
-        // Carting();
-      }
-      }
-  });
-}
+//         $('.item-on-cart').empty();
+//         var count_item=0;
+//         $.each(data, function(i, item){
+//         count_item++
+//           var numb = parseFloat(item.price).toFixed(2);
+//             $('.item-on-cart').append(`
+//             <div class="carted-item-cont" id="cart-item-cont${item.cart_id}">
+//               <div class="cart-product-cont">
+//                 <img src="${item.images}">
+//                 <span class="item-name"><p style="margin: 0;padding:0;">${item.name}</p></span>
+//               </div>
+//               <div class="carted-item">
+//                 <div class="item-subtotal">
+//                   <div class="sub-price">
+//                     <input type="hidden" class="cart_id cart-id${item.cart_id}" name="cartID[]" value="${item.cart_id}">
+//                     <input type="hidden" class="cart-tot-price${item.cart_id}" value="${item.price}">
+//                     ₱ <span class="cart-sub-price${item.cart_id}">${numb}</span>
+//                   </div>
+//                   <div  class="cart-input">
+//                     <button  type="button" class="qty-dec" onclick="dec('qty',${item.cart_id})">-</button>
+//                       <input class="cartQ cartQty__${item.cart_id}" type="number" value="${item.quantity}" name="qty[]">
+//                     <button type="button" class="qty-inc" onclick="inc('qty',${item.cart_id})">+</button>
+//                   </div>
+//                   <div class="item-sub">
+//                     <span class="substotal${item.cart_id}">Total: ₱<span class="substotals">${item.total}</span></span>
+//                   </div>
+//                 </div>
+//               </div>
+//               <span class="delete-item" onclick="al.deleteItemCart(${item.product_id})">&times</span>
+//             </div>
+//             `);
+//         });
+//         $( "#badge" ).text( count_item );
+//         $('#badge2').text( count_item );
+//         // Carting();
+//       }
+//       }
+//   });
+// }
 // end sidenav cart view
 // filter price
 function filterPrice() {

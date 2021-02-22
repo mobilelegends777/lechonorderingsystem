@@ -266,9 +266,9 @@ and (orientation:portrait){
     .dropdown-content-account a {
         font-size: 18px;
     }    
-    .icons2 {
+    /*.icons2 {
         margin-left: -15px;
-    }
+    }*/
     .headmenu .icons .icons2 {
         width: 2.5rem;
         height: 2.5rem;
