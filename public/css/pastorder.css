@@ -26,14 +26,8 @@ a.mini-size {
     tbody.cart-table-conts {
         width: 950px;
     }
-    .headmenu .icons .icons3 {
-        width: 40px;
-    }
 }   
 @media only screen and (max-width: 768px) {
-    .headmenu .icons .icons3 {
-        width: 4.1875rem;
-    }
     .librebais a {
         font-size: 22px;
     }
@@ -176,10 +170,7 @@ and (orientation:portrait)
 
 } 
 @media only screen and (max-width: 411px) {
-    .headmenu .icons .icons3 {
-        width: 78px;
-        height: 68px;
-    }
+
     .librebais a {
         font-size: 38px;
     }
@@ -219,14 +210,7 @@ and (orientation:portrait)
         right: 385px;
         width: 21.9375rem;
     }   
-    button.menu-toggle {
-        font-size: 45px;
-        width: 85px;
-        height: 80px;
-        border-radius: 0;
-        position: relative;
-        left: 5rem;
-    } 
+
 }    
 
 @media only screen and (max-width: 375px) {
@@ -273,9 +257,6 @@ and (orientation:portrait)
     /* .dropdown-content-account {
         width: 455px;
     } */
-    .des-logo img {
-        width: 350px;
-    }
 }    
 @media only screen and (max-width: 320px) {
     .librebais img {
