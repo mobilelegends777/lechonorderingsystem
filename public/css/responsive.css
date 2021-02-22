@@ -1462,6 +1462,7 @@
 	    font-size: 26px;
 		padding: 29px;
 		width: 346px;
+		outline: none;
 	}
 	#my-searches button {
 		height: 100%;
@@ -1481,7 +1482,7 @@
 	.headmenu .icons {
 	    position: unset; 
 		width: 50%;
-        padding: 25px 39px 22px 10px;
+        padding: 25px 8px 22px 10px;
         display: flex;
         justify-content: flex-end;
         /*margin-top: 56px;
@@ -1549,7 +1550,7 @@
 	}
 	button.menu-toggle {
    	 /* width: 13%; */
-	    width: 100%;
+	    width: 72%;
 		height: 39px;
 		font-size: 22px;
 	    color: #fff;
@@ -1577,9 +1578,9 @@
 		width: 167px;
 	}
 	.topnav.responsive .ordinary {
-		font-size: 19px;
+		font-size: 14px;
 	    /*adding: 31px 0px;*/
-        padding: 17px 0px;
+        padding: 14px 0px;
 	    width: 100%;
 	    text-align: center;
 	}
@@ -2275,7 +2276,7 @@
 
 	}
 	.topnav a {
-		width: 150px;
+		width: 149px;
 	}
 	.shop-cart-icon i {
 		padding: 0px 4px
@@ -2334,12 +2335,12 @@
     	line-height: 33px;
 	}
 	.centered span {
-    	font-size: 34px;
+    	font-size: 31px;
 	}
 }
 @media screen and (max-width:630px){
 	.company-title {
-		display: none;
+		/*display: none;*/
 	}
 	.summary-sub-cont {
 		width: 100%;
@@ -2352,6 +2353,22 @@
 	}
 	.sort-items select {
 		width: 172px;
+	}
+}
+@media screen and (max-width: 580px) {
+	.topnav a {
+	    width: 120px;
+	}
+}
+@media screen and (max-width: 575px) {
+	.headmenu .icons {
+		width: 46%;
+	}
+	.headmenu .des1 {
+	    font-size: 16px;
+	}
+	.headmenu .des2 {
+		font-size: 12px;
 	}
 }
 @media screen and (max-width:565px){
@@ -2469,10 +2486,10 @@
 	    margin-left: 15px;
 	}
 	.topnav.responsive .ordinary {
-	    font-size: 17px;
+	    font-size: 14px;
 	}
 	.company-logo {
-    	width: 24%;
+    	width: 58%;
     	justify-content: center; 
 	}
 }
@@ -2559,8 +2576,9 @@
 		font-size: 15px;
 	}
 	.__item .box3 .box3-details .items-price {
-		font-size: 13px;
-		display: none;
+		font-size: 18px;
+		/*display: none;*/
+		padding: 8px 4px;
 	}
 	.__item .box3 .box3-info .box3-item-info {
 		font-size: 15px;
@@ -2574,7 +2592,7 @@
 	}
 	.topnav.responsive .ordinary {
 		font-size: 14px;
-		padding: 21px 0px;
+		padding: 13px 0px;
 	}
 	.drpdwn {
 		font-size: 34px;
@@ -2952,6 +2970,15 @@
     	font-size: 17px;
 	}
 }
+@media screen and (max-width: 480px) {
+	.topnav.responsive .ordinary {
+	    font-size: 13px;
+	    padding: 11px 0px;
+	}
+	.topnav a {
+	    width: 97px;
+	}
+}
 @media screen and (max-width: 450px) {
 	.__item {
 	    width: 40%;
@@ -3095,7 +3122,9 @@
 	    left: 1px;
 	    font-size: 23px;
 	}
-	
+	.topnav a {
+	    width: 95px;
+	}
 }
 @media screen and (max-width: 411px) {
 	.shop-items {
@@ -3172,8 +3201,8 @@
 		width: 150px;
 	}
 	.topnav.responsive .ordinary {
-		font-size: 15px;
-	    padding: 16px 0px;
+		font-size: 12px;
+	    padding: 14px 0px;
 	}
 	.td2 {
 		display: none;
@@ -3236,7 +3265,7 @@
          width: 50%;
 	}
 	.topnav a {
-	    width: 131px;
+	    width: 96px;
 	}
 	/*.topnav a {
 		width: 307px;
@@ -3256,6 +3285,12 @@
 @media screen and (max-width: 379px) {
 	.__item {
 	    width: 90%;
+	}
+	.topnav.responsive .ordinary {
+	    font-size: 12px;
+	}
+	.topnav a {
+	    width: 89px;
 	}
 }
 @media screen and (max-width: 385px) {
@@ -3433,6 +3468,7 @@
 	button.menu-toggle {
 		font-size: 20px;
 	    /*margin-top: 75px;	*/
+	    width: 89%;
 	}
 	.col-sm-4 {
 		width: 50%;
@@ -3537,6 +3573,9 @@
 	}
 }
 @media screen and (max-width: 360px) {
+	.topnav a {
+	    width: 75px;
+	}
 	.image-cont {
 		height: 193px;
 		overflow: auto;
@@ -3626,7 +3665,7 @@
     	display: none;
 	}
 	.topnav.responsive .ordinary {
-	    font-size: 15px;
+	    font-size: 12px;
 	}
 	span.des-logo {
 	    width: 70%;
@@ -3711,7 +3750,7 @@
 		font-size: 18px;
 	}
 	.__item .box3 .box3-details .items-price {
-	    font-size: 88px;
+	    font-size: 17px;
 	}
 	.__item .box3 .box3-info .more {
 		font-size: 20px;
