@@ -34,7 +34,7 @@ class searchController extends Controller
             $query2 = DB::select("SELECT p.*, coalesce((
       				select (select '1') from cart c where c.product_id = p.product_id limit 1),'0') 
       				as order_exist FROM  product p
-                  WHERE p.name like '%".$item."%' WHERE type = 'cart' ");
+                  WHERE p.name like '%".$item."%' AND type = 'cart' ");
       		}
       	$value = [
       			  "0" => $data,

@@ -49,58 +49,10 @@ class checkoutController extends Controller
                 '2' =>$raw
             ];
 
-           //dd($value1[2]);
+        //dd($value);
         
         return view('frontpage/checkout', compact(['value','value1']));
         
-    }
-
-
-    function update(Request $request,$id)
-
-    {
-       //dd($request->all());
-       $fname = $request->input("fname");
-       $mname = $request->input("mname");
-       $lname = $request->input("lname");
-       $phone = $request->input("phone");
-       $tel = $request->input("tel");
-       $house = $request->input("house");
-       $zone = $request->input("zone");
-       $street = $request->input("street");
-       $brngy = $request->input("brngy");
-       $coordinate = $request->input("coordinate");
-       $city = $request->input("city");
-       $land = $request->input("land");
-       $email = $request->input("email");
-
-       DB::update('UPDATE customer_info SET
-           middlename = \''.$mname.'\',
-           firstname = \''.$fname.'\',
-           lastname = \''.$lname.'\'
-           WHERE customer_info.customer_id = '.$id.'
-           ');
-       DB::update('UPDATE customer_address SET
-           house_number = \''.$house.'\',
-           purok_zone=\''.$zone.'\',
-           street =\''.$street.'\',
-           barangay=\''.$brngy.'\',
-           city=\''.$city.'\',
-           coordinate=\''.$coordinate.'\',
-           landmark=\''.$land.'\'
-           WHERE customer_address.customer_id = '.$id.'
-           ');
-       DB::update('UPDATE contact_info SET
-           phone = \''.$phone.'\'
-           WHERE contact_info.customer_id = '.$id.'
-       ');
-       DB::update('UPDATE users SET email = \''.$email.'\'
-           WHERE users.id = '.$id.'');
-       
-      
-           Alert::success('Success', 'Record Updated');
-           return back();
-
     }
 
         public function checkOutItem(Request $request){
@@ -130,7 +82,7 @@ class checkoutController extends Controller
         // dd($request->all());
         $data = Auth::user();
         $userID = $data->id;
-        $pm =  $request->input('payment1');
+        $pm =  $request->input('payment-method');
         $instruction =  $request->input('instruction');
 
         // dd($pm);

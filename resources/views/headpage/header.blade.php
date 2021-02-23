@@ -366,7 +366,7 @@ $('.catType').each(function(){
 											<div class="shop-item-price">₱${item.price}</div>
 										</div>
 										<div class="cartIcon${item.product_id} cart-icon">
-												<a href="" id="addToCart" class="shop-cart-icon addToCart" data-value="${item.product_id}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a href="">
+												<span id="addToCart" class="shop-cart-icon addToCart" onclick="addC.addInCart(${item.product_id} )" data-value="${item.product_id}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></span>
 										</div>
 									</div>
 								</div>
@@ -458,7 +458,7 @@ $('.catType').each(function(){
 											<div class="shop-item-price">₱${item.price}</div>
 										</div>
 										<div class="cartIcon${item.product_id} cart-icon">
-												<a href="" id="addToCart" class="shop-cart-icon addToCart" data-value="${item.product_id}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a href="">
+												<span id="addToCart" class="shop-cart-icon addToCart" onclick="addC.addInCart(${item.product_id} )" data-value="${item.product_id}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></span>
 										</div>
 									</div>
 								</div>
@@ -502,7 +502,7 @@ $('.catType').each(function(){
 							
 					// 	}
 					// });
-					Carting();
+					// Carting();
 					cartI();
 				}
 			});
@@ -511,7 +511,7 @@ $('.catType').each(function(){
 	});
 
 @if(Auth::check())	
-	Carting();
+	cartedItems();
 @endif
 });
 

@@ -1,6 +1,5 @@
 @extends('index')
 @section('page_content')
-
 <div class="login-body">
     <div class="login-reg-form">
         <div class="login-container">

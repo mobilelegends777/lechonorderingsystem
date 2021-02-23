@@ -60,12 +60,12 @@
 										</div>
 									@else
 										<div class="cartIcon{{ $item->product_id }} cart-icon">
-											<a href="" class="addToCart" data-value="{{$item->product_id}}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a>
+											<span class="addToCart" onclick="addC.addInCart({{ $item->product_id }} )" data-value="{{$item->product_id}}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></span>
 										</div>
 									@endif
 								@else
 								<div class="cartIcon{{ $item->product_id }} cart-icon">
-									<a href="" class="addToCart" data-value="{{$item->product_id}}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></a>
+									<span class="addToCart" onclick="addC.addInCart({{ $item->product_id }} )" data-value="{{$item->product_id}}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></span>
 								</div>
 								@endif
 							</div>

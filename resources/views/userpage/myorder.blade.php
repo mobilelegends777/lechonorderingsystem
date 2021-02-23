@@ -1,5 +1,6 @@
 @extends('index')
 @section('page_content')
+<<<<<<< HEAD
 <link rel="stylesheet" type="text/css" href="{{ asset('css/myorder.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/pastorder.css') }}">
 <div class="page-container">
@@ -63,28 +64,27 @@
 		
 				</form>
 
-			</div>
-			
-			
-
-				@include('sweetalert::alert')
+=======
+<!-- <link rel="stylesheet" type="text/css" href="{{ asset('css/myorder.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/pastorder.css') }}"> -->
+<div class="myorder-container">
+	<div class="order-sub-conts">
+		<h1>Active Order</h1> 
+		<div class="order-stat">
+				<span id="active-order">Active Orders</span>
+				<span id="past-order">Past Orders</span>
 		</div>
-	</div>
-
-
-		<div id="active-section">
-
-
-				<h1>Active Order</h1> 
-
-				<div class="active container">
-
-					<div class="chef-anime">
-
-							<img src="{{asset('images/chef.gif')}}" class="avatar img-circle1" >
-
+		<div class="active-order-container">
+			<div class="chef-anime">
+				<img src="{{asset('images/chef.gif')}}" class="avatar img-circle1" >
+>>>>>>> 6e792223ae34d97e1af9e36e8acedc568e34033b
+			</div>
+		</div>
+		
+		<div class="data-container">
 						
 
+<<<<<<< HEAD
 					</div>
 
 				</div>
@@ -94,11 +94,17 @@
 						<h5 class ="time">Estimated Time</h5>
 						<h1 class="mins-title"> 10-20 Mins</h1>
 
+=======
+>>>>>>> 6e792223ae34d97e1af9e36e8acedc568e34033b
 					<div class="line-loading">
-
-						<img src="{{asset('images/lineloading.gif')}}" class="line">
+						<div class="prepare-time">
+							<h5 class ="time">Estimated Time</h5>
+							<h1 class="mins-title"> 10-20 Mins</h1>
+						</div>
+						<!-- <img src="{{asset('images/lineloading.gif')}}" class="line"> -->
 
 					</div>
+<<<<<<< HEAD
 				
 					
 				<div class="data-p">
@@ -111,10 +117,15 @@
 
 								</tr> -->
 							<tr>
+=======
+					<div class="data-p">
+							<table class="order-table">
+								<tr>
+>>>>>>> 6e792223ae34d97e1af9e36e8acedc568e34033b
 								@foreach($value[2] as $item)
 									<td class="check-data1">
 								<div class="check-dpname1">
-								{{ $item->name }}
+									{{ $item->name }}
 								</div>
 									</td>
 								<td class="check-quantz1">
@@ -124,29 +135,20 @@
 									</td>
 									<td class="check-price1">
 									<div class="check-dprice1">₱
-									{{ number_format($item->price,2) }}
+										{{ number_format($item->price,2) }}
 									</div>
 									</td>
 								</tr>
 								@endforeach
 							</table>
 
-					
-								<form metho="POST" action ="{{ route('myorderstatus') }}" class="form-horizontal" role="form">
-								@csrf
-									<div class="order-recieve">
-									
-											<button type="submit" class="receive">Order Receive</button>
-									</div>
-								</form>
-					</div>
-				
-				</div>	
 
-				@endif
-				@include('sweetalert::alert')
-		</div>
-				
+					</div>
+					<form metho="POST" action ="{{ route('myorderstatus') }}" class="" role="form">
+					@csrf
+						<div class="order-recieve">
+							<button type="submit" class="receive">Order Receive</button>
+						</div>
 		</div>
 	</div>
 </div>
