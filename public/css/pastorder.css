@@ -3,5 +3,12 @@ tbody.cart-table-conts {
     overflow: auto;
     width: 875px;
     height: 500px;
+    position: relative;
+    right: 2rem;
 }
+a.mini-size {
+    font-size: 24px!important;
+    color:black;
+}
+
 

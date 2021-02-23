@@ -1,5 +1,6 @@
 @extends('index')
 @section('page_content')
+<<<<<<< HEAD
 <!-- <link rel="stylesheet" type="text/css" href="{{ asset('css/myorder.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/pastorder.css') }}"> -->
 <div class="myorder-container">
@@ -12,12 +13,89 @@
 		<div class="active-order-container">
 			<div class="chef-anime">
 				<img src="{{asset('images/chef.gif')}}" class="avatar img-circle1" >
+=======
+<link rel="stylesheet" type="text/css" href="{{ asset('css/myorder.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/pastorder.css') }}">
+<div class="page-container">
+	<div class="page-sub-container">
+			<div class="order-stat">
+				<a id="active-order">Active Orders</a>
+				<a id="past-order">Past Orders</a>
+			</div>
+	<div id="paset-section">
+		<h1>Past Order</h1> 
+		<div class="cartpage-item">
+			<div class="cartpage-title">
+			
+				<table >
+					<thead class="product-title">
+					<tr class="title-carted">
+							<td class="td1"></td>
+							<td class="td2"></td>
+							<td class="td3"></td>
+							<td class="td4"></td>
+							<td class="td5"></td>
+							<td class="td6"></td>
+					</tr>
+					</thead>
+				@if($value[1] == null)
+				<tbody class="cart-table-conts">
+					<tr class="librebais">
+						<td colspan="7">Your Cart is currently empty!!</td>
+					</tr>
+				</tbody>
+				@else
+				<tbody class="cart-table-conts">
+				<form  method="POST" action="{{ route('cart-update') }}">
+					@csrf
+				@foreach($value[1] as $item)
+					<tr class="librebais" id="cart-cont-item">
+						<td class="carted-items" colspan="2">
+						<div class="carted-item-image">
+							<a href=""><img src="{{ $item->images }}"></a>
+						</div>
+						<div class="carted-item-name" id="more">
+							<a href="">{{ $item->name }}</a><br>
+							<a class="mini-size"href="">{{ $item->pickup_datetime }}</a>
+						</div>
+						</td>
+						<td class="pst-price">₱ {{ number_format($item->price,2) }}
+						</td>
+						<td>
+						<button type="button" onclick="addC.addInCart({{$item->product_id}})" class="reorder">Reorder</button>
+						</td>
+					</tr>
+				@endforeach
+				</tbody>
+				@endif
+
+
+							
+
+						
+				</table>
+		
+				</form>
+
+>>>>>>> 4e1e499603991e3d9883f61b02cb535e2d8cd203
 			</div>
 		</div>
 		
 		<div class="data-container">
 						
 
+<<<<<<< HEAD
+=======
+					</div>
+
+				</div>
+			@if($value[2]== null)
+			@else
+			<div class="data-container">
+						<h5 class ="time">Estimated Time</h5>
+						<h1 class="mins-title"> 10-20 Mins</h1>
+
+>>>>>>> 4e1e499603991e3d9883f61b02cb535e2d8cd203
 					<div class="line-loading">
 						<div class="prepare-time">
 							<h5 class ="time">Estimated Time</h5>
@@ -26,9 +104,24 @@
 						<!-- <img src="{{asset('images/lineloading.gif')}}" class="line"> -->
 
 					</div>
+<<<<<<< HEAD
 					<div class="data-p">
 							<table class="order-table">
 								<tr>
+=======
+				
+					
+				<div class="data-p">
+							<table class="center">
+
+								<!-- <tr class="tablerow">
+									<td class="margin-toptr pn"></td>
+									<td class="margin-toptr qp"></td>
+									<td class="margin-toptr pp"></td>
+
+								</tr> -->
+							<tr>
+>>>>>>> 4e1e499603991e3d9883f61b02cb535e2d8cd203
 								@foreach($value[2] as $item)
 									<td class="check-data1">
 								<div class="check-dpname1">
@@ -49,12 +142,31 @@
 								@endforeach
 							</table>
 
+<<<<<<< HEAD
 					</div>
 					<form metho="POST" action ="{{ route('myorderstatus') }}" class="" role="form">
 					@csrf
 						<div class="order-recieve">
 							<button type="submit" class="receive">Order Receive</button>
 						</div>
+=======
+					
+								<form metho="POST" action ="{{ route('myorderstatus') }}" class="form-horizontal" role="form">
+								@csrf
+									<div class="order-recieve">
+									
+											<button type="submit" class="receive">Order Receive</button>
+									</div>
+								</form>
+					</div>
+				
+				</div>	
+
+				@endif
+				@include('sweetalert::alert')
+		</div>
+				
+>>>>>>> 4e1e499603991e3d9883f61b02cb535e2d8cd203
 		</div>
 	</div>
 </div>

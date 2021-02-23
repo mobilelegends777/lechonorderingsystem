@@ -25,7 +25,7 @@ td.td2 {
 .order-stat {
     text-align: center;
     background-color: #2a2c2f;
-    width: 700px;
+    width: 850px;
     position: relative;
     /* left: 31%; */
     height: auto;
@@ -51,7 +51,7 @@ img.avatar.img-circle1 {
 }
 
 .active.container {
-    width: 700px;
+    width: 850px;
     height: 250px;
     background-image: linear-gradient(to right, #fdc912 , #feba12);
     /* margin-left: 31%; */
@@ -68,9 +68,9 @@ img.line {
 }
 
 .data-container {
-    width: 700px;
-    height: 553px;
-    max-height: fit-content;
+    width: 850px;
+    height: 550px;
+    max-height: 1000px;
     background-color: #f9f9f9;
     /* margin-left: 31%;
     margin-top: 1rem; */
@@ -113,35 +113,38 @@ td.margin-toptr.qp {
     left: 3rem;
 }
 td.check-data1 {
-    font-size: 22px;
+    font-size: 24px;
     position: relative;
     top: 4rem;
     text-align: left;
+    width: 350px;
 }
 td.check-quantz1 {
     position: relative;
     top: 4rem;
     /* left: 7rem; */
+    font-size: 24px;
 }
 td.check-price1 {
     position: relative;
     bottom: -4rem;
-    /* left: 15rem; */
-    text-align: center;
+    left: 13rem;
+    text-align: left;
+    font-size: 24px;
 }
 button.receive {
     background-color: #fdc512;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
     position: relative;
     top: 11rem;
 }
-.center td {
-    width: 200px;
-}
+/* .center td {
+    width: 350px;
+} */
 

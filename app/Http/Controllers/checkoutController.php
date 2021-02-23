@@ -49,7 +49,7 @@ class checkoutController extends Controller
                 '2' =>$raw
             ];
 
-           
+           //dd($value1[2]);
         
         return view('frontpage/checkout', compact(['value','value1']));
         

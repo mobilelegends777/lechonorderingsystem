@@ -13,15 +13,15 @@
 	
   </head>
   
-    <link href="{{asset('asset/css/style_asset.css')}}" rel="stylesheet">
-	<link href="{{asset('css/contactresponsive.css')}}" rel="stylesheet">
+    <!-- <link href="{{asset('asset/css/style_asset.css')}}" rel="stylesheet">
+	<link href="{{asset('css/contactresponsive.css')}}" rel="stylesheet"> -->
 
 <body>
 <section id="head_contact" class="clearfix">
   <div class="container">
   <div class="row">
    <div class="head_contact clearfix">
-   <h2>Contact Us</h2>
+   <!-- <h2>Contact Us</h2> -->
    </div>
   </div>
  </div>
@@ -31,8 +31,9 @@
     <div class="container container-left">
 	  <div class="row">
 	  <div class="contact clearfix">
+	  <h1 class="text-center">Contact Us</h1>
 	    <div class="col-sm-12 move-t0-right">
-		   <h1 class="text-center">Contact Us</h1>
+		   
 		   <div class="col-sm-4">
 		    <div class="contact_1 text-left c-size">
 			  <p class="text_1"><i class="fa fa-map-marker"></i></p>
@@ -57,10 +58,11 @@
 		</div>
 		
 		<div class="col-sm-12 contact_bottom clearfix">
+		<h3 class="text-center touch">Get In Connect With Our Company</h3>
 		 <div class="contact_bottom_main clearfix">
 		  <div class="col-sm-6 contact_bottom_main_left clearfix">
 		   <div class="contact_bottom_main_left_top clearfix">
-		    <h3 class="text-center touch">Get In Connect With Our Company</h3>
+		    
 		   <div class="">
 		   <div class="contact_2">
 		    <input class="form-control place-font" type="text" placeholder="Name">

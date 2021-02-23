@@ -1,13 +1,17 @@
 @extends('index')
 @section('page_content')
+<<<<<<< HEAD
 <!-- <link rel="stylesheet" type="text/css" href="{{ asset('sass/bodystyle.css') }}"> -->
+=======
+
+>>>>>>> 4e1e499603991e3d9883f61b02cb535e2d8cd203
 <div class="login-body">
     <div class="login-reg-form">
         <div class="login-container">
         <form class="form-signin" method="POST" action="{{ route('test222') }}">
         @csrf
             <h1 class="h3 mb-3 font-weight-normal" style="text-align: center;color:#c4a265;"> Sign in</h1>
-            <div class="social-log ">
+            <div class="social-log social-login ">
                 <button class="btn facebook-btn social-btn" type="button"><a href="{{asset('login/facebook')}}"><span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span> </button> </a>
             
                 <button class="btn google-btn social-btn" type="button">  <a href="{{asset('login/google')}}"><span><i class="fab fa-google-plus-g"></i> Sign in with Google+</span> </button>

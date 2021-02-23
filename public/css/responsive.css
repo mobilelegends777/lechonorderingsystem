@@ -1573,7 +1573,6 @@
 		background-color: #2a2c2f;
 		/*width: 100%;*/
 		display: flex;
-		/*position: fixed;*/
 		/*margin-top: 159px;*/
 	    /* overflow: auto; */
 	}
@@ -1866,10 +1865,10 @@
 	.icons {
     	 align-items: unset; 
 	}
-	.login-reg-form input {
+	/* .login-reg-form input {
 		 height: 96px;
  		font-size: 29px;
-	}
+	} */
 	.account-log {
 	    width: 100%;
 	}
@@ -2860,7 +2859,8 @@
 	}
 
 	.login-container {
-	    width: 308px;
+	    /*width: 308px;*/
+		width: 355px;
 	}
 	form.form-signin {
 		width: 100%;
@@ -3590,6 +3590,17 @@
 		height: 193px;
 		overflow: auto;
 	}
+	strong.user-n {
+		font-size: 12px;
+		position: relative;
+		left: 470px;
+	}
+	.dropdown-content-account h5 {
+		font-size: 37px;
+		margin-top: 37px;
+		font-weight: bold;
+		height: 0px;
+	}
 	.headmenu {
 	    display: flex;
     	height: auto;
@@ -3636,15 +3647,15 @@
     	position: unset;
 	}
 	.dropdown-content-account {
-    	font-size: 12px;
-		width: 98px;
+		font-size: 12px;
+		width: 194px;
 		/* right: 15px; */
-		left: -11px;
+		left: -95px;
 		top: 30px;
 		position: fixed;
 		line-height: 31px;
 		position: absolute;
-	}
+	}	
 	.dropdown-content-account:before {
 		content: "";
 		position: absolute;
