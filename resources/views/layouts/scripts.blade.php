@@ -611,3 +611,11 @@ $(window).scroll(function(){
 // });
   </script>
     
+    <script>
+    $(document).ready(function(){
+        $("input[type='radio']").click(function(){
+            var radioValue = $("input[name='payment1']:checked").val();
+			//alert(radioValue);
+        });
+    });
+</script>

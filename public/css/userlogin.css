@@ -1,0 +1,172 @@
+
+.for-flex {
+    display: inline-flex;
+    gap: 3px;
+}
+.signup-inputs {
+    margin-top: 1rem;
+}
+button.btn.btn-primary.btn-block.sign-up {
+    background-color: #ff8800fc;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+}
+@media only screen and (max-width: 768px){
+    .login-reg-form {
+        width: 600px;
+        border: solid #2a2c2f;
+        background: #2a2c2fc7;
+        border-radius: 5px;
+        position: relative;
+        top: 5rem;
+    }
+    button.btn.google-btn.social-btn {
+        height: 63px;
+        font-size: 20px;
+    }
+    button.btn.facebook-btn.social-btn {
+        height: 60px;
+        font-size: 20px;
+    }
+    .scl-reg {
+        position: relative;
+        right: 0rem;
+        width: 108%;
+    }
+    button.btn.btn-primary.btn-block.sign-up {
+        background-color: #ff8800fc;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        width: 107%;
+    }
+    button.btn.btn-success.btn-block {
+        height: 70px;
+        width: 100%;
+        font-size: 33px;
+    }
+    .btn-primary#btn-signup {
+        height: 70px;
+        /* width: 90%; */
+        font-size: 31px;
+    }       
+}
+
+@media only screen and (max-width: 568px){
+    .login-reg-form {
+        width: 550px;
+        border: solid #2a2c2f;
+        background: #2a2c2fc7;
+        border-radius: 5px;
+        position: relative;
+        top: 5rem;
+    }
+    .login-container {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+    form.form-signin {
+        width: 100%;
+        position: relative;
+        left: unset;
+    }
+}    
+@media only screen and (max-width: 414px){
+    .login-reg-form {
+        width: 365px;
+        border: solid #2a2c2f;
+        background: #2a2c2fc7;
+        border-radius: 5px;
+        position: relative;
+        top: 6rem;
+    }
+    .signup-inputs {
+        width: 97%;
+    }
+    .scl-reg {
+        position: relative;
+        right: 0rem;
+    }
+    .login-container {
+        width: 90%;
+        height: auto;
+        margin: 0;
+    }
+    button.btn.btn-primary.btn-block.sign-up {
+        background-color: #ff8800fc;
+        border: none;
+        color: white;
+        padding: 14px 31px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        width: 97%;
+        height: 42px;
+    }
+    .social-log {
+        display: flex;
+        width: 98%;
+        justify-content: space-between;
+    }
+    form.form-signup {
+        margin-top: 1rem;
+    }    
+}
+
+@media only screen and (max-width: 320px){
+    .login-reg-form {
+        width: 310px;
+        border: solid #2a2c2f;
+        background: #2a2c2fc7;
+        border-radius: 5px;
+        position: relative;
+        top: 5rem;
+    }
+    .login-container {
+        width: 300px;
+    }
+}
+
+@media only screen 
+and (max-width: 720px)
+and (min-width:540px)
+and (orientation:portrait){
+
+    .for-flex {
+        display: inline-flex;
+        gap: 3px;
+        width: 100%;
+    }
+    .scl-reg {
+        position: relative;
+        right: 0rem;
+        width: 100%;
+    }
+    .signup-inputs {
+        width: 100%;
+    }
+    button.btn.btn-primary.btn-block.sign-up {
+        background-color: #ff8800fc;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        width: 100%;
+        height: 53px;
+    }                
+}

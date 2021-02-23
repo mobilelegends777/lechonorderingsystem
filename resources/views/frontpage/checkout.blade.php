@@ -1,339 +1,234 @@
 @extends('index')
 @section('page_content')
 
+<section>
+	<div class= "del-details">
+		<div class="2-head">
+			<h3 class="num-font">1</h3>
+			<h3 class= "d-title">Delivery Details</h3>
 
-	<link href="{{asset('css/global.css')}}" rel="stylesheet">
-	<link href="{{asset('css/checkout.css')}}" rel="stylesheet">
-	
-
-<body>
-
-	
-<section id="center" class="clearfix checkout">
- <div class="container1">
-  <div class="row">
-
-  <div class="checkout_1 clearfix">
-   <div class="col-sm-6">
-    <div class="check_lm clearfix">
-    <div class="check_lm1 clearfix">
-	 <ul class="mgt">
-	  <li><a href="#">Cart</a> <i class="fa fa-chevron-right"></i></li> 
-	  <li>Information <i class="fa fa-chevron-right"></i></li>
-	  <li>Shipping <i class="fa fa-chevron-right"></i></li>
-	  <li>Payment</li>
-	 </ul>
-	</div><br>
-	<div class="check_lm2 clearfix">
-	 <div class="col-sm-6 space_left">
-	  <h4 class="check-title">Contact information  <span id="show"class="glyphicon glyphicon-edit"><img src="{{asset('images/edit-icon.png')}}"><h6 class="size-color1">Edit</span></h4></h6>
-      <hr>
-      <div id="contacts"class="bg-w clearfix">
-	  <div class="col-sm-6">
-	   <h5 class="mgt normal"><img class="check-icon" src="{{asset('images/n.png')}}">Firstname</h5>
-	   <h5 class="normal"><img class="check-icon" src="{{asset('images/n.png')}}">Middlename</h5>
-	   <h5 class="normal"><img class="check-icon" src="{{asset('images/n.png')}}">Lastname</h5>
-       <h5 class="normal"><img class="check-icon" src="{{asset('images/e.png')}}">Email</h5>
-	   <h5 class="normal"><img class="check-icon" src="{{asset('images/p.png')}}">Contact #</h5>
-	  
-	
-	
-	  </div>
-	  <div class="size-height">
-
-	  <h5 class="mgt"></h5>
-	   <h5 class="move-free-data">{{$value['0']->firstname}}</h5>
-	   <h5 class="move-free-data">{{$value['0']->middlename}}</h5>
-	   <h5 class="move-free-data">{{$value['0']->lastname}}</h5>
-	   <h5 class="move-free-data">{{$value['0']->email}}</h5>
-	   <h5 class="move-free-data">{{$value['0']->phone}}</h5>
-	  </div>
-	
-	 </div>
-    
-	
-   
-	 
-	 <form metho="POST" action ="{{ route('profupdated',$value['0']->id) }}" class="form-horizontal" role="form">
-        {{ csrf_field() }}
-        {{ method_field('PATCH') }}
-    <div id="myDIV">
-	<input class="form-control" type="hidden" name="id" value="{{$value['0']->id}}">
-     <div class="check_lm3 clearfix">
-	 <input class="form-control" placeholder="Firstname" name="fname"type="text" value="{{$value[0]->firstname}}">
-
-     </div>
-	 <div class="check_lm3 clearfix">
-	 <input class="form-control" placeholder="Middlename" name="mname"type="text" value="{{$value[0]->middlename}}">
-
-     </div>
-	 <div class="check_lm3 clearfix">
-	 <input class="form-control" placeholder="Lastname" name="lname"type="text" value="{{$value[0]->lastname}}">
-
-     </div>
-     <div class="check_lm3 clearfix">
-	 <input class="form-control" placeholder="Email" name="email"type="text"value="{{$value[0]->email}}">
-
-     </div>
-     <div class="check_lm3 clearfix">
-	 <input class="form-control" placeholder="Contact Number" name="phone"type="text"value="{{$value[0]->phone}}">
-
-     </div>
-     <div class="col-sm-6">
-	  <button class="mgt text-right _sbtn button mgt" type="submit">Save Changes</button>
-            
-	 </div>
-    </div>
-	</div>
-
-
-	</div>
-	
-	<div class="move-to-top-rem">
-    <h4 class="check-title">Shipping address  <span id="show2"class="glyphicon glyphicon-edit"><img src="{{asset('images/edit-icon.png')}}"><h6 class="size-color">Edit</span></h4></h6>
-  
-	
-	<div id ="MyAdd"class="check_lm4 clearfix">
-	 <input class="form-control" placeholder="House #" name ="house"type="text" value="{{$value[0]->house_number}}">
-	 <input class="form-control" placeholder="Zone" name ="zone"type="text"value="{{$value[0]->purok_zone}}">
-     <div class="check_lm4 clearfix">
-	 <div class="col-sm-4 space_left">
-	 <input class="form-control" placeholder="Street" name="street"type="text"value="{{$value[0]->street}}">
-	 <input class="form-control" placeholder="Barangay" name="brngy" type="text"value="{{$value[0]->barangay}}">
-	 </div>
-	 <div class="col-sm-4 space_left">
-	 <input class="form-control" placeholder="City" name="city" type="text"value="{{$value[0]->city}}">
-	 <input class="form-control" placeholder="Coordinate" name="coordinate"type="text"value="{{$value[0]->coordinate}}">
-	 </div>
-     <div class="col-sm-4 space_all">
-     <input class="form-control" placeholder="Land Mark" name="land"type="text"value="{{$value[0]->landmark}}">
-	 </div>
-     <div class="col-sm-6">
-	 <button class="mgt text-right _sbtn button mgt" type="submit">Save Changes</button>
-	 </div>
-	
-	</div>
-	</div>
-	</form>
-	<div class="check_lm5 clearfix">
-	 
-	</div >
-	<div class="checkout_1l3 clearfix">
-	 <hr>
-     <div id="adds"class="bg-w clearfix">
-	  <div class="col-sm-6 move-to-bot">
-	   <h5 class="mgt normal"><img class="check-icon" src="{{asset('images/a.png')}}">House #</h5>
-       <h5 class="normal"><img class="check-icon" src="{{asset('images/h.png')}}">Zone/Prk.</h5>
-	   <h5 class="normal"><img class="check-icon" src="{{asset('images/city.png')}}">Street</h5>
-       <h5 class="normal"><img class="check-icon" src="{{asset('images/zp.png')}}">Barangay</h5>
-	   <h5 class="normal"><img class="check-icon" src="{{asset('images/land.png')}}">City</h5>
-	   <h5 class="normal"><img class="check-icon" src="{{asset('images/land.png')}}">Coordinate</h5>
-	   <h5 class="normal"><img class="check-icon" src="{{asset('images/land.png')}}">Landmark</h5>
-	   
-		
-	
-	   
-	  </div>
-	  <div class="size-height move-to-top-d2">
-	  <h5 class="move-free-data1">{{$value['0']->house_number}}</h5> 
-       <h5 class="move-free-data1">{{$value['0']->purok_zone}}</h5>
-	   <h5 class="move-free-data1">{{$value[0]->street}}</h5>
-       <h5 class="move-free-data1">{{$value[0]->barangay}}</h5>
-	   <h5 class="move-free-data1">{{$value[0]->city}}</h5>
-	   <h5 class="move-free-data1">{{$value[0]->coordinate}}</h5>
-	   <h5 class="move-free-data1">{{$value[0]->landmark}}</h5>
-	  </div>
-
-	 </div>
-	 </div>
-	 
-	
-	 
-
-	</div>
-	</div>
-	<div class="col-sm-6 move-top">
-     <h5 class="mgt"><a class="return-c"href="{{asset('frontpage/cartpage')}}"><i class="fa fa-chevron-left"></i> Return to cart</a></h5>
-	 </div>
-   </div >
-   <div class="move-flex">
-   <div class="check_rm clearfix">
-    <div class="checkout_1r clearfix">
-	  <div class="checkout_1l2 mgt clearfix">
-	 <div class="move-to-center">
-		 <h4 class="check-title-size">Order Summary</h4>
-	  </div>
-	  <div class="onscroll pname">
-		  <table>
-		
-		<tr>
-			<th class="checkoutv">
-		<div class="check-pname">
-			Product Name
 		</div>
-		</th>
-		<th class="checkoutv">
-		<div class="check-dquantity">
-			Quantity
-		</th>
-			<th class="checkoutv">
-		<div class="check-price">
-			Price
-		</th>
 
-		</div>	
-		</tr>
-
+			
+		<div class="Del-time">
 		
-
-		<tr>
-		@foreach($value1[1] as $item)
-			<td class="check-data">
-		<div class="check-dpname">
-		{{ $item->name }}
-		</div>
-			</td>
-		<td class="check-quantz">
-			<div class="check-dquantity">
-			{{ $item->quantity }}
+			<h5 class ="d-time"> Delivery time:</h5>
+		
+		<div class="for-flex">
+			<div class="custom-select">
+				<select class="select-date">
+					<option value="0">Tue, Feb 23</option>
+					<option value="1">Wed, Feb 24</option>
+					<option value="2">Thur, Feb 25</option>
+					
+				</select>
 			</div>
-			</td>
-			<td class="check-price">
-			<div class="check-dprice">₱
-			{{ number_format($item->price,2) }}
+			<div class="custom-select">
+				<select class="select-time">
+					<option value="0">6:00 AM</option>
+					<option value="1">6:15 AM</option>
+					<option value="2">6:30 AM</option>
+					
+				</select>
 			</div>
-			</td>
-		</tr>
-		@endforeach
-		</table>
-	</div>
-
-
-
-	
-
-	<div class="checkout_1r1 clearfix">
-    <hr>
-	<form metho="POST" action ="{{ route('order') }}" class="form-horizontal" role="form">
-    {{ csrf_field() }}
-        {{ method_field('PATCH') }}
-	   <h6 class="c-size">Special Instruction <br></h6><br>
-	   <textarea class="form-control txt-size" name="instruction" value=""placeholder="e.g no mayo" ></textarea>
-	 <hr>
-    
-	 <div class="checkout_1r1i clearfix">
-	  <div class="ship col-sm-6">
-	   <h5 class="mgt normal">Subtotal</h5>
-	   <h5 class="normal ship-bot">Shipping</h5>
-	  </div>
-	  <div class="col-sm-6">
-	   <h5 class="mgt move-right move-to-top move-to-free">₱ {{number_format($value1[2][0]->total,2)}}</h5>
-	   <h5 class="mgt move-right move-to-top margin-top">Free</h5>
-	  </div>
-	 </div>
-	</div>
-	<div class="checkout_1r1 clearfix">
-	 <hr>
-	 <div class="checkout_1r1i clearfix">
-	  <div class="col-sm-6">
-	   <h5 class="mgt1 normal"><strong>Total</strong></h5>
-	  </div>
-	  <div class="col-sm-6">
-	   <h4 class="mgt2 move-right"><span class="normal ">₱ </span></span>{{number_format($value1[2][0]->total,2)}}</h4>
-	  </div>
-      
-	 </div>
-
-     <hr>
-	 <div class="checkout_1r1i clearfix">
-	  <div class="col-sm-6 method" >
-	   <h5 class="mgt normal"><strong class="p-method">Payment Method</strong</h5>
-	  </div>
-
-	  <div class="col-sm-6 move-free-pay">
-      <input type="radio" id="myBtn" name="payment1" value="cdc">
-      <label class="free-move-debit">Credt / Debit Card <img  class="debit-icon" src="{{asset('images/adddebit.png')}}"></label><br>
-	  <div class="cod-moves">
-      <input type="radio" id="payment" name="payment1" value='cod'checked="checked" >
-      <label class="free-move-debit">Cash on Delivery <img  class="cod-icon" src="{{asset('images/cash.png')}}"></label><br>
-	  </div>
-	  </div>
-      
-	 </div>
-  
+		</div>
+			
 		</div>
 
-   </div>
-   <div class="col-sm-6">
+		<div class="del-add">
+		
+		<h5 class ="d-time"> Delivery address</h5>
 
-		@if($value1[2][0]->total == null )
-	  <button id="place-order"class="mgt text-right _center button mgt" disabled type="submit">Place Order</button>
-	  	@else
-		  <button id="place-order"class="mgt text-right _center button mgt" type="submit">Place Order</button>
+			<div role="button" class="del-info">
 
-		@endif
-	 </div>
-   </div>
-  
-  </div>
-  </form>
-  </div>
- </div>	 
+			<div class="d-info-details">
+				<div class="check-top">
+						<div class="address-line">4 Del Pilar</div>
+						<div class="address-line">Iligan City</div>
+						<div class="address-line">Floor/Unit/Room #: 2nd floor
+		Note to rider: ICI Building Public plaza kilid sa SBG contact#</div>
+			
+				</div>	
+			</div>
+			
+			
+			</div>
+		
+		</div>
+
+	</div>
+
+
+
+
+
 </section>
- 
 
 
 
 
- <!-- The Modal -->
-<div id="myModal" class="modal">
+<section>
 
-<!-- Modal content -->
-<div class="modal-content">
-  <div class="modal-header">
-    <span class="close">&times;</span>
-    <h2><img class="modal-payment" src="{{asset('images/payment-method.png')}}"></h2>
-  </div>
-  <div class="modal-body">
-  <div class="check_lm4 clearfix">
-	 <input class="form-control" placeholder="Account Name" type="text">
-	 <input class="form-control" placeholder="Account No. or Card No." type="text">
-	 <input class="form-control" placeholder="Amount" type="text" readonly>
-     <div class="check_lm4 clearfix">
-	 <div class="col-sm-4 space_left">
-     <input class="form-control" placeholder="MM" type="text">
-	 </div>
-	 <div class="col-sm-4 space_all">
-     <input class="form-control" placeholder="YY" type="text">
-	 </div>
-	 <div class="col-sm-4 space_right">
-	   <input class="form-control" placeholder="CVC" type="text">
-	 </div>
+	<div class="p-details">
+		<div class="2-head">
+			<h3 class="num-font">2</h3>
+			<h3 class= "d-title">Personal Details</h3>
+
+		</div>
+
+		<div class="per-info">
+			<div class="inform-details">
+				<div class=personal-line1>Al Erickson</div>
+				<div class=personal-line>eltechnical.sprt@gmail.com</div>
+				<div class=personal-line>+63 9275075515</div>
+			</div>
+
+
 	</div>
-  </div>
 
-</div>
-<div class="modal-footer">
-<h5><img title="We partner with BPI to ensure that your credit card details are kept safe and secure. 
-MJ will not have access to your credit card info."class="info"src="{{asset('images/info.png')}}"></h5>
-  <h5 class="mgt text-right modal_btn"><a class="button mgt">Place Order</a></h5>
-  </div>
+	</div>
 
-</div>
+	
 
-</div>
+</section>
+
+<section>
+	<div class="payment-details">
+
+		<div class="2-head">
+				<h3 class="num-font">3</h3>
+				<h3 class= "d-title">Payment</h3>
+
+		</div>
+
+		<div class="credit">
+			<div class="cc-details">
+				<label	class="pay-wrapper">
+					<div class="pay-image"> <img class="pay-img" src="{{asset('images/payment-method.png')}}"> </div>
+
+					<div class="pay-button">
+
+					<input class="py-btn"type = "radio" name="payment-method" value="cdc">
+					<i class="c-title">Credit / Debit Card</i>
+					</div>
+
+				</label>
+
+			</div>
+
+		</div>
+
+		<div class="cash">
+			<div class="cc-details">
+				<label	class="pay-wrapper">
+					<div class="pay-image"> <img class="pay-img1" src="{{asset('images/cod.svg')}}"> </div>
+
+					<div class="pay-button">
+
+					<input class="py-btn"type = "radio" name="payment-method" value='cod'checked="checked">
+					<i class="c-title">Cash on Delivery</i>
+					</div>
+
+				</label>
+
+			</div>
+
+		
+
+		</div>
+		<div class= "title-place-order">
+
+			<button type = "submit" class="place-btn"> Place Order</button>
+
+
+		</div>
+
+		<div class="terms">I agree that placing the order places me under an obligation to make a payment in accordance with the General Terms and Conditions.</div>
+	</div>
+
+</section>
+
+<section class="order-sum">
+
+	<div class="summary">
+		<div class="2-head">
+				<h3 class= "o-title">Your order from MJ Lechon- Iligan City</h3>
+
+		</div>
+			<div class="onscroll pname">
+				<table>
+				
+				<tr>
+					<th class="checkoutv">
+				<div class="check-pname">
+				
+				</div>
+				</th>
+				<th class="checkoutv">
+				<div class="check-dquantity">
+				
+				</th>
+					<th class="checkoutv">
+				<div class="check-price">
+				
+				</th>
+
+				</div>	
+				</tr>
+
+				
+				<div class="data-row">
+				<tr>
+				
+				@foreach($value1[1] as $item)
+				<td class="check-quantz">
+					<div class="check-dquantity">
+					<strong>{{ $item->quantity }}</strong> x
+					</div>
+				</td>
+			
+				<td class="check-data" >
+				<div class="check-dpname">
+				{{ $item->name }}
+				</div>
+				</td>
+		
+					<td class="check-price check-data">
+					<div class="check-dprice">PHP
+					{{ number_format($item->price,2) }}
+					</div>
+					</td>
+				
+				</tr>
+				@endforeach
+			</div>
+			
+		</table>
+		<hr class="line">
+		<div class="sub-total1">
+			<span>Subtotal</span>
+			<span class="total-spacing">PHP {{ number_format($value1[2][0]->total,2) }}</span>
+
+		</div>
+		<div class="sub-total1">
+			<spa>Delivery fee</span>
+			<span class="total-spacing1">PHP 0.00</span>
+
+		</div>
+		<div class="sub-total1">
+			
+			<span class="total">Total</span><i class="vat-title">(Incl. VAT)</i>
+			<span class="total-spacing2 total">PHP {{ number_format($value1[2][0]->total,2) }}</span>
+		</div>
+	</div>
+	
+
+	</div>
+</section>
+
 
 @include('sweetalert::alert')
-</body>
+
  
 @endsection
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $("input[type='radio']").click(function(){
-            var radioValue = $("input[name='payment1']:checked").val();
-			//alert(radioValue);
-        });
-    });
-</script>

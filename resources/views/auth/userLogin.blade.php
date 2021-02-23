@@ -1,6 +1,6 @@
 @extends('index')
 @section('page_content')
-<link rel="stylesheet" type="text/css" href="{{ asset('sass/bodystyle.css') }}">
+
 <div class="login-body">
     <div class="login-reg-form">
         <div class="login-container">
