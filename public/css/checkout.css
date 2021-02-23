@@ -1,8 +1,8 @@
 .del-details {
-  margin-right: 30%;
+  margin-right: 25%;
   margin-left: 30%;
   margin-top: 3%;
-  width: 30%;
+  width: 40%;
   height: auto;
   background-color: white;
   box-shadow: -2px 2px 19px 0px #888888;
@@ -229,9 +229,11 @@ section.order-sum {
 }
 
 .summary {
-  width: 60%;
+  width: 20%;
   height: auto;
- 
+  position: relative;
+  bottom: -4rem;
+  right: 31rem;
 }
 .onscroll.pname {
   position: relative;
@@ -277,4 +279,14 @@ i.vat-title {
 span.total-spacing2 {
   position: relative;
   left: 34px;
+}
+
+section.flex {
+  display: flex;
+}
+
+.for-flex-form {
+  display: inline-flex;
+  gap: 3px;
+  width: 100%;
 }
