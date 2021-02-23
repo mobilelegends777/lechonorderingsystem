@@ -51,15 +51,16 @@ button.btn.btn-primary.btn-block.sign-up {
         width: 107%;
     }
     button.btn.btn-success.btn-block {
-        height: 70px;
+        height: 45px;
         width: 100%;
-        font-size: 33px;
+        font-size: 25px;
     }
     .btn-primary#btn-signup {
-        height: 70px;
-        /* width: 90%; */
-        font-size: 31px;
-    }       
+        height: 48px;
+        width: 100%;
+        font-size: 19px;
+        text-align: center;
+    }      
 }
 
 @media only screen and (max-width: 568px){
@@ -148,6 +149,10 @@ and (orientation:portrait){
         display: inline-flex;
         gap: 3px;
         width: 100%;
+    }
+    form.form-signup {
+        position: relative;
+        top: 3rem;
     }
     .scl-reg {
         position: relative;

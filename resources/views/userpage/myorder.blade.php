@@ -1,75 +1,11 @@
 @extends('index')
 @section('page_content')
-<<<<<<< HEAD
-<link rel="stylesheet" type="text/css" href="{{ asset('css/myorder.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/pastorder.css') }}">
-<div class="page-container">
-	<div class="page-sub-container">
-			<div class="order-stat">
-				<a id="active-order">Active Orders</a>
-				<a id="past-order">Past Orders</a>
-			</div>
-	<div id="paset-section">
-		<h1>Past Order</h1> 
-		<div class="cartpage-item">
-			<div class="cartpage-title">
-			
-				<table >
-					<thead class="product-title">
-					<tr class="title-carted">
-							<td class="td1"></td>
-							<td class="td2"></td>
-							<td class="td3"></td>
-							<td class="td4"></td>
-							<td class="td5"></td>
-							<td class="td6"></td>
-					</tr>
-					</thead>
-				@if($value[1] == null)
-				<tbody class="cart-table-conts">
-					<tr class="librebais">
-						<td colspan="7">Your Cart is currently empty!!</td>
-					</tr>
-				</tbody>
-				@else
-				<tbody class="cart-table-conts">
-				<form  method="POST" action="{{ route('cart-update') }}">
-					@csrf
-				@foreach($value[1] as $item)
-					<tr class="librebais" id="cart-cont-item">
-						<td class="carted-items" colspan="2">
-						<div class="carted-item-image">
-							<a href=""><img src="{{ $item->images }}"></a>
-						</div>
-						<div class="carted-item-name" id="more">
-							<a href="">{{ $item->name }}</a><br>
-							<a class="mini-size"href="">{{ $item->pickup_datetime }}</a>
-						</div>
-						</td>
-						<td class="pst-price">₱ {{ number_format($item->price,2) }}
-						</td>
-						<td>
-						<button type="button" onclick="addC.addInCart({{$item->product_id}})" class="reorder">Reorder</button>
-						</td>
-					</tr>
-				@endforeach
-				</tbody>
-				@endif
-
-
-							
-
-						
-				</table>
-		
-				</form>
-
-=======
 <!-- <link rel="stylesheet" type="text/css" href="{{ asset('css/myorder.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/pastorder.css') }}"> -->
 <div class="myorder-container">
 	<div class="order-sub-conts">
 		<h1>Active Order</h1> 
+	@if($value[2] != null)	
 		<div class="order-stat">
 				<span id="active-order">Active Orders</span>
 				<span id="past-order">Past Orders</span>
@@ -77,25 +13,11 @@
 		<div class="active-order-container">
 			<div class="chef-anime">
 				<img src="{{asset('images/chef.gif')}}" class="avatar img-circle1" >
->>>>>>> 6e792223ae34d97e1af9e36e8acedc568e34033b
 			</div>
 		</div>
-		
 		<div class="data-container">
 						
 
-<<<<<<< HEAD
-					</div>
-
-				</div>
-			@if($value[2]== null)
-			@else
-			<div class="data-container">
-						<h5 class ="time">Estimated Time</h5>
-						<h1 class="mins-title"> 10-20 Mins</h1>
-
-=======
->>>>>>> 6e792223ae34d97e1af9e36e8acedc568e34033b
 					<div class="line-loading">
 						<div class="prepare-time">
 							<h5 class ="time">Estimated Time</h5>
@@ -104,24 +26,10 @@
 						<!-- <img src="{{asset('images/lineloading.gif')}}" class="line"> -->
 
 					</div>
-<<<<<<< HEAD
-				
-					
-				<div class="data-p">
-							<table class="center">
-
-								<!-- <tr class="tablerow">
-									<td class="margin-toptr pn"></td>
-									<td class="margin-toptr qp"></td>
-									<td class="margin-toptr pp"></td>
-
-								</tr> -->
-							<tr>
-=======
 					<div class="data-p">
+						
 							<table class="order-table">
 								<tr>
->>>>>>> 6e792223ae34d97e1af9e36e8acedc568e34033b
 								@foreach($value[2] as $item)
 									<td class="check-data1">
 								<div class="check-dpname1">
@@ -138,11 +46,10 @@
 										{{ number_format($item->price,2) }}
 									</div>
 									</td>
-								</tr>
 								@endforeach
+								</tr>
 							</table>
-
-
+						
 					</div>
 					<form metho="POST" action ="{{ route('myorderstatus') }}" class="" role="form">
 					@csrf
@@ -150,24 +57,39 @@
 							<button type="submit" class="receive">Order Receive</button>
 						</div>
 		</div>
+	@else
+		<div class="my-order-cont">
+		@foreach($value[1] as $item)
+			<div class="my-order-sub">
+				<div class="my-order-image">
+					<a href=""><img src="{{ $item->images }}"></a>
+				</div>
+				<div class="my-order-name">
+					<span>{{ $item->name }}</span>
+				</div>
+				<div class="carted-price">
+					<span>₱ {{ number_format($item->price,2) }}</span>
+				</div>
+				<div class="reorder-btn">
+					<button type="button" onclick="addC.addInCart({{$item->product_id}})" class="reorder">Reorder</button>
+				</div>
+			</div>
+		@endforeach
+		</div>
+	@endif
 	</div>
 </div>
 <script>
 $(document).ready(function(){
 	
-
 		$("#paset-section").hide();
-
 		$("#past-order").click(function(){
 			$("#active-section").hide();
 			$("#paset-section").show();
-
 });
-
 		$("#active-order").click(function(){
 					$("#active-section").show();
 					$("#paset-section").hide();
-
 });
 	
 	
