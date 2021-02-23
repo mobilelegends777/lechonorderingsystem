@@ -1,116 +1,38 @@
 @extends('index')
 @section('page_content')
-<link rel="stylesheet" type="text/css" href="{{ asset('css/myorder.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/pastorder.css') }}">
-<div class="page-container">
-	<div class="page-sub-container">
-			<div class="order-stat">
-				<a id="active-order">Active Orders</a>
-				<a id="past-order">Past Orders</a>
-			</div>
-	<div id="paset-section">
-		<h1>Past Order</h1> 
-		<div class="cartpage-item">
-			<div class="cartpage-title">
-			
-				<table >
-					<thead class="product-title">
-					<tr class="title-carted">
-							<td class="td1"></td>
-							<td class="td2"></td>
-							<td class="td3"></td>
-							<td class="td4"></td>
-							<td class="td5"></td>
-							<td class="td6"></td>
-					</tr>
-					</thead>
-				@if($value[1] == null)
-				<tbody class="cart-table-conts">
-					<tr class="librebais">
-						<td colspan="7">Your Cart is currently empty!!</td>
-					</tr>
-				</tbody>
-				@else
-				<tbody class="cart-table-conts">
-				<form  method="POST" action="{{ route('cart-update') }}">
-					@csrf
-				@foreach($value[1] as $item)
-					<tr class="librebais" id="cart-cont-item">
-						<td class="carted-items" colspan="2">
-						<div class="carted-item-image">
-							<a href=""><img src="{{ $item->images }}"></a>
-						</div>
-						<div class="carted-item-name">
-							<a href="">{{ $item->name }}</a>
-						</div>
-						</td>
-						<td class="pst-price">₱ {{ number_format($item->price,2) }}
-						</td>
-						<td>
-						<button type="button" onclick="addC.addInCart({{$item->product_id}})" class="reorder">Reorder</button>
-						</td>
-					</tr>
-				@endforeach
-				</tbody>
-				@endif
-
-
-							
-
-						
-				</table>
-		
-				</form>
-
-			</div>
-			
-			
-
-				@include('sweetalert::alert')
+<!-- <link rel="stylesheet" type="text/css" href="{{ asset('css/myorder.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/pastorder.css') }}"> -->
+<div class="myorder-container">
+	<div class="order-sub-conts">
+		<h1>Active Order</h1> 
+		<div class="order-stat">
+				<span id="active-order">Active Orders</span>
+				<span id="past-order">Past Orders</span>
 		</div>
-	</div>
-
-
-		<div id="active-section">
-
-
-				<h1>Active Order</h1> 
-
-				<div class="active container">
-
-					<div class="chef-anime">
-
-							<img src="{{asset('images/chef.gif')}}" class="avatar img-circle1" >
-
+		<div class="active-order-container">
+			<div class="chef-anime">
+				<img src="{{asset('images/chef.gif')}}" class="avatar img-circle1" >
+			</div>
+		</div>
+		
+		<div class="data-container">
 						
-
-					</div>
-
-				</div>
-
-				<div class="data-container">
-						<h5 class ="time">Estimated Time</h5>
-						<h1 class="mins-title"> 10-20 Mins</h1>
 
 					<div class="line-loading">
-
-						<img src="{{asset('images/lineloading.gif')}}" class="line">
+						<div class="prepare-time">
+							<h5 class ="time">Estimated Time</h5>
+							<h1 class="mins-title"> 10-20 Mins</h1>
+						</div>
+						<!-- <img src="{{asset('images/lineloading.gif')}}" class="line"> -->
 
 					</div>
 					<div class="data-p">
-							<table class="center">
-
-								<!-- <tr class="tablerow">
-									<td class="margin-toptr pn"></td>
-									<td class="margin-toptr qp"></td>
-									<td class="margin-toptr pp"></td>
-
-								</tr> -->
-							<tr>
+							<table class="order-table">
+								<tr>
 								@foreach($value[2] as $item)
 									<td class="check-data1">
 								<div class="check-dpname1">
-								{{ $item->name }}
+									{{ $item->name }}
 								</div>
 									</td>
 								<td class="check-quantz1">
@@ -120,7 +42,7 @@
 									</td>
 									<td class="check-price1">
 									<div class="check-dprice1">₱
-									{{ number_format($item->price,2) }}
+										{{ number_format($item->price,2) }}
 									</div>
 									</td>
 								</tr>
@@ -128,18 +50,11 @@
 							</table>
 
 					</div>
-					<form metho="POST" action ="{{ route('myorderstatus') }}" class="form-horizontal" role="form">
+					<form metho="POST" action ="{{ route('myorderstatus') }}" class="" role="form">
 					@csrf
 						<div class="order-recieve">
-						
-						<button type="submit" class="receive">Order Receive</button>
+							<button type="submit" class="receive">Order Receive</button>
 						</div>
-					
-				</div>
-
-				@include('sweetalert::alert')
-		</div>
-		</form>	
 		</div>
 	</div>
 </div>

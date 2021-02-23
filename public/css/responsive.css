@@ -607,11 +607,12 @@
 		max-width: 1366px;
 	}*/
 	.slider-conts {
-	    height: 1200px;
+        height: 766px;
 	}
 	.slide-image {
 	    /*height: 500px;*/
-        height: 1200px;
+        height: 727px;
+
 	}
 	.sales1 {
 	    width: 46%;
@@ -1533,9 +1534,13 @@
 	.headmenu .icons .icons3 {
 		width: 2.1875rem;
 	}
+	i.icons3.fas.fa-shopping-cart {
+	    font-size: 32px;
+	}
+
 	.search-icon {
 		display: flex;
-		font-size: 28px;
+	    font-size: 32px;
     	color: grey;
 	    padding: 0 12px;
 	}
@@ -1594,10 +1599,10 @@
 	    justify-content: center;
 	}
 	.slide-image {
-    	height: 1033px;
+	    height: 746px;
 	}
 	.slider-conts {
-    	height: 1033px;
+	    height: 764px;
 	}
 	.bttn1 {
 		width: 36%;
@@ -2528,7 +2533,8 @@
 	    /*display: none;*/
 	}
 	.slide-image {
-		height: 878px;
+		/*height: 878px;*/
+	    height: 720px;
 	}
 	.sales1 {
 		width: 79%;
@@ -2554,7 +2560,7 @@
 		font-size: 16px;
 	}
 	.slider-conts {
-	    height: 996px;
+        height: 717px;
 	}
 	.items.slider.slick-initialized.slick-slider {
 	    width: 100%;
@@ -2854,7 +2860,7 @@
 	}
 
 	.login-container {
-		width: 335px;
+	    width: 308px;
 	}
 	form.form-signin {
 		width: 100%;
@@ -3124,6 +3130,10 @@
 	}
 	.topnav a {
 	    width: 95px;
+	}
+	.login-reg-form {
+	    width: 100%;
+        margin-top: 72px;
 	}
 }
 @media screen and (max-width: 411px) {
@@ -3658,8 +3668,8 @@
 		padding: 0px 0px;
 	}
 	#my-searches {
-		height: 83px;
-		padding: 16px 0;
+	    height: auto;
+    	padding: 40px 0;
 	}
 	.company-title {
     	display: none;
@@ -3849,7 +3859,8 @@
         overflow: auto;
 	}
 	.slide-image {
-        height: 1179px;
+        /*height: 1179px;*/
+        height: 593px;
 	}
 	.slider-conts {
 	    height: 1145px;
@@ -3883,7 +3894,7 @@
     	font-weight: 700;
 	}
 	.slider-conts {
-	    height: 1179px;
+        height: 574px;
 	}
 	#slide-container {
     	height: auto;

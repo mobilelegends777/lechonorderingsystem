@@ -1631,3 +1631,73 @@ button.cartUpdate:hover {
     font-size: 29px;
     cursor: pointer;
 }
+/*myorder page*/
+.myorder-container {
+    display: flex;
+    justify-content: center;
+}
+img.avatar.img-circle1 {
+    width: 238px;
+}
+.chef-anime {
+    display: flex;
+    justify-content: center;
+}
+.active-order-container {
+    background: #feb913;
+}
+.order-stat {
+    text-align: center;
+    background: #c4a256;
+    color: #fff;
+    padding: 10px 0;
+}
+.order-stat span{
+  padding: 0 10px;
+}
+.data-container {
+    background: rgb(242 242 242);
+    padding: 15px 0;
+    height: auto;
+}
+.line-loading {
+    position: relative;
+}
+.prepare-time {
+    text-align: center;
+}
+.order-sub-conts {
+    width: 37%;
+    margin: 86px 0;
+}
+
+.myorder-container {
+    width: 100%;
+}
+.order-recieve {
+    text-align: center;
+}
+button.receive {
+    height: 45px;
+    background: #c4a256;
+    border: unset;
+    color: #fff;
+    font-size: 18px;
+    width: 163px;
+    border-radius: 5px;
+}
+.order-sub-conts h1 {
+  text-align: center;
+}
+table.order-table {
+    width: 51%;
+    background: #fff;
+    padding: 17px;
+}
+.data-p {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    line-height: 30px;
+}
+/*end orderpage*/

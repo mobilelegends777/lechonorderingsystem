@@ -69,9 +69,9 @@ class shopController extends Controller
 			}
 		}else{
 			if($category == 9){
-				$query = DB::select('SELECT * FROM product WHERE category_type != 8 AND type = "cart"');
+				$query = DB::select("SELECT * FROM product WHERE category_type != 8 AND type = 'cart'");
 			}else {
-				$query = DB::select('SELECT * FROM product WHERE category_type = '.$category.' AND type = "cart"');
+				$query = DB::select("SELECT * FROM product WHERE category_type = '$category' AND type = 'cart'");
 			}
 		}
 		// $data = [
@@ -91,7 +91,7 @@ class shopController extends Controller
 				select (select '1') from cart c where c.product_id = p.product_id and customer_id = $id),'0') 
 				as order_exist FROM  product p WHERE price BETWEEN $min AND $max AND type = 'cart'");
 		}else{
-			$query = DB::select('SELECT * FROM product WHERE price BETWEEN '.$min.' AND '.$max.' AND type = "cart"');
+			$query = DB::select("SELECT * FROM product WHERE price BETWEEN '$min' AND '$max' AND type = 'cart'");
 		}
 		// $data = [
 		// 	'data' => $query
