@@ -38,10 +38,12 @@ class myprofileController extends Controller
 
 
 
-    function update(Request $request,$id)
+    function update(Request $request)
 
      {
-        //dd($request->all());
+        // dd($request->all());
+        $data = Auth::user();
+        $id = $data->id;
         $fname = $request->input("fname");
         $mname = $request->input("mname");
         $lname = $request->input("lname");

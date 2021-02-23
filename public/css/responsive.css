@@ -1128,7 +1128,9 @@
 		height: 52px;
 		margin-top: 28px;
 	}
-	
+	.order-sub-conts {
+    	width: 52%;
+	}
 }
 @media screen and (max-width: 1000px){
 	.headmenu .icons .icons3 {
@@ -2158,7 +2160,14 @@
 	.shipping-info {
 		line-height: 2.75rem;
 	}
-	
+	.order-sub-conts {
+		width: 80%;
+	    margin: 157px 0;
+	}
+	.order-stat span {
+    	padding: 0 22px;
+    	font-size: 19px;
+	}
 }
 @media screen and (max-width: 768px) {
 	/*.shop-images img {
@@ -2721,7 +2730,8 @@
 		line-height: 18px;
 	}
 	#my-searches input {
-	    height: auto;
+	    /*height: auto;*/
+	    height: 100%;
 		padding: 0 11px;
 	}
 	.shop-items-conts {
@@ -2975,6 +2985,14 @@
 	.cartpage-item {
     	font-size: 17px;
 	}
+	/*orderpage*/
+	.order-sub-conts {
+	    width: 100%;
+	}
+	table.order-table {
+	    width: 91%;
+	}
+	/*orderpage*/
 }
 @media screen and (max-width: 480px) {
 	.topnav.responsive .ordinary {
@@ -3575,8 +3593,8 @@
 	    height: 24px;
 	}
 	.headmenu .icons .icons2 {
-	    height: 27px;
-	    width: 30px;
+	    height: 33px;
+    	width: 34px;
 	}
 	.headmenu .icons .icons3 {
 	    width: 30px;
@@ -4157,5 +4175,11 @@
 	}
 	thead td {
     	padding: 10px 15px;
+	}
+	i.icons3.fas.fa-shopping-cart {
+    	font-size: 26px;
+	}
+	.search-icon {
+	    font-size: 26px;
 	}
 }
