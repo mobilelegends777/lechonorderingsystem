@@ -1694,6 +1694,8 @@ table.order-table {
     width: 51%;
     background: #fff;
     padding: 17px;
+    height: 189px;
+    overflow: auto;
 }
 .data-p {
     display: flex;

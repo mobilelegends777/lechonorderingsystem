@@ -1479,6 +1479,7 @@
 	    display: flex;
         width: 100%;
         justify-content: space-between;
+        padding: 4px 0;
         /*z-index: 1;
     	position: fixed;*/
 	}
@@ -2007,6 +2008,7 @@
 	}
 	.shop-item-info {
 		justify-content: space-between;
+		width: 50%;
 		/* margin-top: 117px; */
 	}
 	.col-price {
@@ -2019,6 +2021,7 @@
 	}
 	.shop-item-price {
 		width: 100%;
+		margin: 0 auto;
 	}
 	button.addcart {
 		width: 100%;
@@ -2349,6 +2352,10 @@
 	}
 	.centered span {
     	font-size: 31px;
+	}
+	.shop-item-col {
+		width: 100%;
+		height: 146px;
 	}
 }
 @media screen and (max-width:630px){
@@ -2785,14 +2792,14 @@
         width: 17.4375rem;
 	}
 	.shop-cols {
-		/*width: 46%;*/
-	    display: contents;
-	    margin: 9px 24px;
+		width: 92%;
+	    /*display: contents;*/
+	    margin: 9px 19px;
+	    height: 134px;
 	}
 	.shop-imgs {
 		width: 70%;
-		border-radius: 28px;
-    	margin-top: 22px
+		border-radius: 6px;
 	}
 	span.des-logo {
         width: 73%;
@@ -2803,8 +2810,6 @@
 	.col-price {
 		width: 100%;
 		position: relative;
-		left: -49%;
-		top: -94%;
 	}
 	button.addcart {
 		width: 100%;
@@ -2814,24 +2819,20 @@
 	}
 	.prod-price {
 	    color: #c4a265;
-	    font-size: 74px;
+	    font-size: 15px;
 		position: relative;
-		left: 73%;
-		top: -76%;
 	    text-decoration: underline;
 	}
 	.col-names {
-		font-size: 18px;
-	}
-	.prod-price {
-		font-size: 20px;
+		font-size: 15px;
 	}
 	.parag span {
 		font-size: 16px;
 		line-height: 25px;
 	}
 	.shop-name-col {
-		width: 221%;
+		width: 100%;
+		padding: 1px 11px;
 	}
 	.sort-items select {
 		font-size: 16px;
@@ -3011,6 +3012,13 @@
 	.shop-items {
 	    width: 44%;
 	}
+	.shop-item-col {
+	    width: 92%	;
+	}
+	.shop-info-price {
+	    font-size: 14px;
+	}
+
 }
 
 @media screen and (max-width: 414px) {
@@ -3021,7 +3029,9 @@
 	    position: relative;
 	}
 	button.addcart {
-		width: 218%;
+		width: 87%;
+		height: 41px;
+    	font-size: 12px;
 	}
 	/* .col-price {
 	    position: relative;
@@ -3120,7 +3130,7 @@
 	}
 	/*end*/
 	.shop-info-price {
-		font-size: 15px;
+		font-size: 14px;
 		padding: 5px 0px;
 	}
 	.cart-icon {
@@ -3130,7 +3140,7 @@
 	    height: 44px;
 	}
 	.shop-items {
-	    width: 44%;
+	    /*width: 44%;*/
 	}
 	.shop-items-conts {
 		margin: 10px auto;
@@ -3153,6 +3163,16 @@
 	.login-reg-form {
 	    width: 100%;
         margin-top: 72px;
+	}
+	.parag {
+	    padding: 14px 0;
+	    line-height: 18px;
+	}
+	.shop-name-col {
+	    padding: 1px 9px;
+	}
+	.prod-price {
+		text-decoration: unset;
 	}
 }
 @media screen and (max-width: 411px) {
