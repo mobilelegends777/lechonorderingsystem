@@ -61,43 +61,55 @@
 		</div>
 	@else
 		<div class="my-order-cont">
-		@foreach($value[1] as $item)
+		@if($value[1] != null)	
+			@foreach($value[1] as $item)
+				<div class="my-order-sub">
+					<div class="my-order-image">
+						<a href=""><img src="{{ $item->images }}"></a>
+					</div>
+					<div class="my-order-name">
+						<span>{{ $item->name }}</span>
+					</div>
+					<div class="my-order-price ">
+						<span>₱ {{ number_format($item->price,2) }}</span>
+					</div>
+					<div class="reorder-btn past-order{{$item->product_id}}">
+						<button type="button" onclick="addC.addInCart({{$item->product_id}})" class="reorder">Reorder</button>
+					</div>
+				</div>
+			@endforeach
+		@else
 			<div class="my-order-sub">
-				<div class="my-order-image">
-					<a href=""><img src="{{ $item->images }}"></a>
-				</div>
-				<div class="my-order-name">
-					<span>{{ $item->name }}</span>
-				</div>
-				<div class="my-order-price">
-					<span>₱ {{ number_format($item->price,2) }}</span>
-				</div>
-				<div class="reorder-btn past-order{{$item->product_id}}">
-					<button type="button" onclick="addC.addInCart({{$item->product_id}})" class="reorder">Reorder</button>
-				</div>
+				<span>PLease Start SHopping!!!!</span>
 			</div>
-		@endforeach
+		@endif
 		</div>
 	@endif
 
 	<div class="my-order-cont1">
-		@foreach($value[1] as $item)
+		@if($value[1] != null)	
+			@foreach($value[1] as $item)
+				<div class="my-order-sub">
+					<div class="my-order-image">
+						<a href=""><img src="{{ $item->images }}"></a>
+					</div>
+					<div class="my-order-name">
+						<span>{{ $item->name }}</span>
+					</div>
+					<div class="my-order-price ">
+						<span>₱ {{ number_format($item->price,2) }}</span>
+					</div>
+					<div class="reorder-btn past-order{{$item->product_id}}">
+						<button type="button" onclick="addC.addInCart({{$item->product_id}})" class="reorder">Reorder</button>
+					</div>
+				</div>
+			@endforeach
+		@else
 			<div class="my-order-sub">
-				<div class="my-order-image">
-					<a href=""><img src="{{ $item->images }}"></a>
-				</div>
-				<div class="my-order-name">
-					<span>{{ $item->name }}</span>
-				</div>
-				<div class="carted-price">
-					<span>₱ {{ number_format($item->price,2) }}</span>
-				</div>
-				<div class="reorder-btn">
-					<button type="button" onclick="addC.addInCart({{$item->product_id}})" class="reorder">Reorder</button>
-				</div>
+				<span>Wala pa nahuman imo order!!!</span>
 			</div>
-		@endforeach
-		</div>
+		@endif
+	</div>
 	</div>
 </div>
 <script>

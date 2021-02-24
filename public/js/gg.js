@@ -98,7 +98,7 @@ var addC = (()=> {
                     `)
                     $('.past-order'+data[2]).empty();
                     $('.past-order'+data[2]).append(`
-                       <button  class="reorder"><i class="fas fa-check"></i>On cart</button>
+                       <button  class="reorder">On cart</button>
                       `);
                     cartI();
                 }
