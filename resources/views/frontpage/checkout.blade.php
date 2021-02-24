@@ -1,6 +1,7 @@
 @extends('index')
 @section('page_content')
 @include('layouts.csslinks')
+<link rel="stylesheet" type="text/css" href="{{ asset('css/modal.css') }}">
 <section class="flex">
 	<div class= "del-details">
 		<div class="2-head">
@@ -12,24 +13,22 @@
 			
 		<div class="Del-time">
 		
-			<h5 class ="d-time"> Delivery time:</h5>
+			<h5 class ="d-time"> Special Delivery time:</h5>
+
+			<div id=special-time>
+
+				<label class="switch">
+				<input type="checkbox" id="myFunctionss" >
+				<span class="slider round"></span>
+				</label>
+			</div>
 		
 		<div class="for-flex-time">
 			<div class="custom-select">
-				<select class="select-date">
-					<option value="0">Tue, Feb 23</option>
-					<option value="1">Wed, Feb 24</option>
-					<option value="2">Thur, Feb 25</option>
-					
-				</select>
+			<input class="select-date"type="date" id="myCheck" disabled name="select-date"data-date-start-date="d" value = "{{date('Y-m-d', strtotime('+1 day'))}}">
 			</div>
 			<div class="custom-select">
-				<select class="select-time">
-					<option value="0">6:00 AM</option>
-					<option value="1">6:15 AM</option>
-					<option value="2">6:30 AM</option>
-					
-				</select>
+			<input class="select-time"type="time" id="myCheck2" disabled name="select-time" value = "12:00:00">
 			</div>
 		</div>
 			
@@ -224,19 +223,33 @@
 		</div>
 		<div class= "title-place-order">
 
-			<button type = "submit" class="place-btn"> Place Order</button>
+			<button type = "button" id="myBtn" class="place-btn"> Place Order</button>
 
 
 		</div>
 
 		<div class="terms">I agree that placing the order places me under an obligation to make a payment in accordance with the General Terms and Conditions.</div>
 	</div>
-</form>
+
 </section>
 
-<section class="order-sum">
+<section class="Modal">
+<!-- Trigger/Open The Modal -->
 
-	
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p class="qstn">Are You Sure You Want To Proceed ?</p>
+	<button type = "submit" class="Yes1"> Yes</button>
+	<button type = "button"  class="close1">No</button>
+  </div>
+
+</div>
+	</form>
 </section>
 
 
@@ -287,6 +300,54 @@ $("#cdc-show").hide();
 			//alert(radioValue);
         });
     });
+</script>
+
+<script>
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+var span2 = document.getElementsByClassName("close1")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+span2.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+</script>
+<script>
+$('#myFunctionss').click(function(){
+ 
+	$("#myCheck").attr('disabled', !$("#myCheck").attr('disabled'));
+	$("#myCheck2").attr('disabled', !$("#myCheck2").attr('disabled'));
+
+});
+
+
+
 </script>
 @endsection
 
