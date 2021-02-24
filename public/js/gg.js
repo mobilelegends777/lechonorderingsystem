@@ -335,16 +335,20 @@ function filterPrice() {
 
   // var api_url = 'http://localhost:8000';
   var url = window.location.origin;
-  
+  var arrayID = [];
+  var arrayQty = [];
   return {
       checkoutCart: ()=>{
+        $('.d-cart_id').each(function() { arrayID.push($(this).val()); });
+        $('.d-cartQ').each(function() { arrayQty.push($(this).val()); });
+        // alert(arrayID);
         $.ajax({
           headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
           },
-           url:url+"/checkout-item",
+           url:url+'/update-cart-nav',
            method:"POST",
-           data:{data:''},
+           data:{id:arrayID,qty:arrayQty},
            beforeSend:function(){
            },
            success:function(data){

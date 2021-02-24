@@ -2708,7 +2708,7 @@
 		margin-left: 18px;
 	}
 	.centered {
-		width: 65%;
+	    width: 83%;
 		font-size: 28px;
 		text-align: center;
 	}
@@ -3001,6 +3001,9 @@
 	}
 	.my-order-cont {
     	margin: 0 12px;
+	}
+	.headmenu .icons .icons2 {
+	     margin-right: unset; 
 	}
 }
 @media screen and (max-width: 480px) {

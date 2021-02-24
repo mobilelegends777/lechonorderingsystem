@@ -28,7 +28,7 @@ class myorderController extends Controller
     {
 
         $data = Auth::user(); 
-        $query = DB::select('SELECT distinct(checkout_inventory.product_id),product.name,images, price , pickup_datetime FROM checkout_inventory
+        $query = DB::select('SELECT distinct(checkout_inventory.product_id),product.name,images, price FROM checkout_inventory
         INNER JOIN product ON product.product_id = checkout_inventory.product_id
         WHERE customer_id = '.$data->id.' AND order_status ='."'completed'".' limit 5');
         
@@ -47,7 +47,7 @@ class myorderController extends Controller
             
 
        
-         dd($value);
+         // dd($value);
         return view('userpage/myorder', compact('value','data'));
     }
 

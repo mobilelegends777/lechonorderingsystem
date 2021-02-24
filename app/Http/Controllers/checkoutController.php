@@ -55,14 +55,14 @@ class checkoutController extends Controller
         
     }
 
-        public function checkOutItem(Request $request){
-            $userData = Auth::user();
-            // dd($userData);
-            $id = $userData->id;
-            $query = DB::select('UPDATE cart SET checkout_date = current_timestamp WHERE customer_id = '.$id.'');
-            // dd($query);
-            return response()->json($query); 
-        }
+    public function checkOutItem(Request $request){
+        $userData = Auth::user();
+        dd($userData);
+        $id = $userData->id;
+        $query = DB::select('UPDATE cart SET checkout_date = current_timestamp WHERE customer_id = '.$id.'');
+        // dd($query);
+        return response()->json($query); 
+    }
       // public function placeorder(Request $request){
       //   $userData = Auth::user();
       //   $userID = $userData->id;
