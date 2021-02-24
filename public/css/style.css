@@ -1399,7 +1399,8 @@ div#myDropdown {
 }*/
 .order-conts {
     /*border: solid 1px;*/
-    width: 100%;
+    /*width: 100%;*/
+    width: 67%;
     height: auto;
     /* align-content: flex-end; */
     text-align: left;
@@ -1415,6 +1416,7 @@ div#myDropdown {
 .form-container {
     height: 100%;
     display: flex;
+    justify-content: center;
 }
 
 .datestime {

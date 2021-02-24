@@ -64,6 +64,13 @@ class myorderController extends Controller
 
     }
 
+    public function specialOrder(Request $request){
+        // dd($request->all());
+        $userData = Auth::user();
+        $prodData = DB::select('SELECT name, price, images FROM product WHERE product_id = '."$request->id".'');
+        // dd($prodData);
+        return response()->json($prodData); 
+    }
 
 
 

@@ -21,10 +21,10 @@
 				</div>
 			</div>
 		<div class="shop-sub-conts">
-			<div class="shop-conts">
+			<div class="shop-conts" style="display:none;">
 				<div class="shop-sub-container2">
 					<div class="shop-filters">
-						<span class="close-btn">&times;</span>
+						<span class="close-btn-order">&times;</span>
 						<span class="title-header"><h3>Categories</h3></span>
 						<div class="filter-cat">
 							<span><h4>Lechon</h4></span>
@@ -107,9 +107,10 @@
 									<a href="#" class="shop-images-lechon" data-value="{{$item->product_id}}">
 										<img src="{{$item->images}}">
 									</a>
-									<a href="#" class="orderNow" data-value="{{$item->product_id}}">Order now</a>
+									<a href="#" class="orderNow" onclick="orderNow({{$item->product_id}},event)" data-value="{{$item->product_id}}">Order now</a>
 								</div>
 								<div class="shop-info-price">
+									<input type="hidden" name="" class="prod-name" value="{{$item->name}}">
 									<div class="shop-item-name">{{$item->name}}</div>
 									<div class="shop-item-price">{{$item->price}}</div>
 								</div>
@@ -146,11 +147,14 @@
 						@endforeach
 						</div>
 							<!-- end item display col-->
-						<div class="paginate">
+			<div class="form-container">
+				<!-- append form here -->
+			</div>
+						{{--<div class="paginate">
 							<span class="active"><a href="#">1</a></span>
 							<span><a href="#">2</a></span>
 							<span><a href="#"><i class="fa fa-angle-right"></i></a></span>
-						</div>
+						</div>--}}
 
 					</div>
 				</div>
@@ -203,21 +207,97 @@
 				</div>
 			</div>
 	</div>--}}
+
+	
 	<script type="text/javascript">
 
-     var address = $('.add-ress').val();
-
-
-orderNow();
-function orderNow(){
-$('.orderNow').each(function(){
-  $(this).on('click',function(e){
-    e.preventDefault();
-	var lechVal = $(this).data('value');
-	// alert(lechVal);
-  });
-});
+    var address = $('.add-ress').val();
+function orderNow(product_id,event){
+	event.preventDefault();
+    var url = window.location.origin;
+    $.ajax({
+    	headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+		type:'POST',
+		url: url+'/special-order-form',
+		data:{id:product_id},
+		success:function(data)
+		{
+			// console.log(add);
+			$.each(data, function(i, item){
+			    $('.form-container').empty();
+				$('.form-container').append(`
+					<div class="order-conts">
+							<span class="cancel-form">&times;</span>
+										<div class="lechon-info">
+								<div class="lechon-details">
+									 <span><h3>${item.name}</h3></span>
+					              </div>
+							</div>
+							<div class="payment-mehods">
+								<div class="pay-conts">
+									<div>
+						                <span><span class="asterisk">*</span><b>Minimum Partial Payment is 50% per item</b></span>
+					              	</div>
+					               	<div class="radio-buttons">
+						                <div class="radio1">
+						                  <input type="radio" name="pay-amount"><b> 50% Partial Payment</b>
+						                </div>
+						                <div class="radio2">
+						                  <input type="radio" name="pay-amount"><b> Full Amount </b>
+					                	</div>
+					                </div>
+				                </div>
+				                <div class="pay-conts">
+									<div>
+										<span><span class="asterisk">*</span> How do you want your order?</span>
+									</div>
+									<div class="radio-buttons">
+										<div class="radio1">
+											<input type="radio" name="orderType"> Pick-up
+										</div>
+										<div class="radio2">
+											<input type="radio" name="orderType"> Delivery
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="delivery-details">
+							<div class="date-time">
+								<div>
+									<span><span class="asterisk">*</span> Date/Time</span>
+								</div>
+								<div class="date-when">
+									<input type="datetime-local" data-date="" data-date-format="DD MMMM YYYY" value="2015-08-09" class="datestime">
+								</div>
+							</div>
+							<div class="pick-up-add">
+								<div>
+									<span><span class="asterisk">*</span>Address</span>
+								</div>
+								<div class="pickup-deliv">
+									<input type="addresses" name="" class="inpt-address" value="">
+								</div>
+								
+							</div>
+						</div>
+						<div class="qty-proceed-to">
+							<div class="quantities">
+								<input type="number" name="" class="inpt-qty" value="1" min="1">
+							</div>
+							<div class="proceed-to">
+								<button><i class="fa fa-arrow-right"></i><span>PROCEED</span></button>
+							</div>
+							</div>
+					</div>`);
+					$('.cancel-form').on('click', function(){
+						$('.order-conts').remove();
+					});
+				});
+		}
+    });
+	
 }
+
 
 // $(function() {
 
@@ -244,10 +324,10 @@ $('.orderNow').each(function(){
 // 		  }
 // 		});
 // });
-function cancelForm(){
-	$('.cancel-form').on('click',function(){
-		// $('.orderNow').toggle();
-	});
-}
+// function cancelForm(){
+// 	$('.cancel-form').on('click',function(){
+// 		// $('.orderNow').toggle();
+// 	});
+// }
 	</script>
 	@endsection	
