@@ -13,7 +13,7 @@
 }
 
 button.btn.btn-link.p-0.m-0.align-baseline {
-    background-color: #4CAF50;
+    background-color: #333131;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -26,5 +26,5 @@ button.btn.btn-link.p-0.m-0.align-baseline {
     bottom: 2rem;
 }
 button.btn.btn-link.p-0.m-0.align-baseline:hover {
-    background-color: green;
+    background-color: rgb(23, 24, 23);
 }

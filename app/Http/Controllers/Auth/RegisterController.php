@@ -11,6 +11,7 @@ use App\Contact;
 use Auth;
 use Session;
 use Request;
+use Alert;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -37,11 +38,8 @@ class RegisterController extends Controller
      */
     protected function redirectTo()
 {
-    // if (auth()->user()->role_id == 1) {
-
-    //     return '/u-login';
-    // }
-    return Request::session()->get('url.intended') ?? '/';
+    Alert::warning('Verify Email', 'Please Verify your Email @ https://accounts.google.com/ '); 
+    return Request::session()->get('url.intended') ?? '/userpage/myprofile';
 }
 
     /**
@@ -100,7 +98,7 @@ class RegisterController extends Controller
         'customer_id' => $newUser->id,
         'phone' => $data['contact'],
     ]);
-        
+     
     return $newUser;
             
     }

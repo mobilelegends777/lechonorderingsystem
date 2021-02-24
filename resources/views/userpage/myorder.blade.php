@@ -5,8 +5,9 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/pastorder.css') }}"> -->
 <div class="myorder-container">
 	<div class="order-sub-conts">
-		<h1>Active Order</h1> 
-	@if($value[2] != null)	
+		
+	@if($value[2] != null)
+	<h1>Active Order</h1> 	
 		<div class="order-stat">
 				<span id="active-order">Active Orders</span>
 				<span id="past-order">Past Orders</span>
@@ -60,22 +61,22 @@
 					</form>
 		</div>
 	@else
+		<h1>Past Order</h1> 
 		<div class="my-order-cont">
-		@if($value[1] != null)	
-			@foreach($value[1] as $item)
-				<div class="my-order-sub">
-					<div class="my-order-image">
-						<a href=""><img src="{{ $item->images }}"></a>
-					</div>
-					<div class="my-order-name">
-						<span>{{ $item->name }}</span>
-					</div>
-					<div class="my-order-price ">
-						<span>₱ {{ number_format($item->price,2) }}</span>
-					</div>
-					<div class="reorder-btn past-order{{$item->product_id}}">
-						<button type="button" onclick="addC.addInCart({{$item->product_id}})" class="reorder">Reorder</button>
-					</div>
+		@foreach($value[1] as $item)
+			<div class="my-order-sub">
+				<div class="my-order-image">
+					<a href=""><img src="{{ $item->images }}"></a>
+				</div>
+				<div class="my-order-name">
+					<span>{{ $item->name }}</span><br>
+					<span class="time-history">{{ $item->pickup_datetime }}</span>
+				</div>
+				<div class="my-order-price">
+					<span>₱ {{ number_format($item->price,2) }}</span>
+				</div>
+				<div class="reorder-btn past-order{{$item->product_id}}">
+					<button type="button" onclick="addC.addInCart({{$item->product_id}})" class="reorder">Reorder</button>
 				</div>
 			@endforeach
 		@else
