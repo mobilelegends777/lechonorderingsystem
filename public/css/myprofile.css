@@ -45,7 +45,7 @@ button.btn.btn-primary.moves-center-b:hover {
 }    
 div#edit-profile {
     width: 100%;
-    width: 50%;
+    width: 30%;
     margin: 20px;
     padding: 20px;
     margin-left: auto;
@@ -54,8 +54,9 @@ div#edit-profile {
     background-color: #2a2c2f;
 }
 div#changess-pass {
+
     width: 100%;
-    width: 50%;
+    width: 30%;
     margin: 20px;
     padding: 20px;
     margin-left: auto;
@@ -64,8 +65,9 @@ div#changess-pass {
     background-color: #2a2c2f;
 }
 div#addresses {
+
     width: 100%;
-    width: 50%;
+    width: 30%;
     margin: 20px;
     padding: 20px;
     margin-left: auto;
@@ -89,7 +91,7 @@ div#addresses {
 .edt {
     text-align: center;
 }
-.edit-profile input {
+input.form-control {
     font-size: 16px;
     width: 100%;
     height: 40px;
@@ -152,9 +154,11 @@ input.form-control.file-size {
         border-radius: 4px;
     }
     div#addresses {
+     
         width: 100%;
         width: 85%;
         border-radius: 4px;
+      
     }
     .move-left a {
         text-align: center;
@@ -188,5 +192,81 @@ input.form-control.file-size {
         margin-right: 10px;
         margin-left: 10px;
         font-size: 12px;
+    }
+}
+
+@media only screen 
+and (max-width:1024px)
+and (min-width: 768px)
+and (orientation: portrait)
+{
+    div#edit-profile {
+        width: 100%;
+        width: 50%;
+        margin: 20px;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+        background-color: #2a2c2f;
+    }
+    div#changess-pass {
+        width: 100%;
+        width: 50%;
+        margin: 20px;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+        background-color: #2a2c2f;
+    }
+
+    div#addresses {
+        width: 100%;
+        width: 50%;
+        margin: 20px;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+        background-color: #2a2c2f;
+    }
+}
+
+@media only screen 
+and (max-width:720px)
+and (min-width: 540px)
+and (orientation: portrait)
+{
+    div#edit-profile {
+        width: 100%;
+        width: 50%;
+        margin: 20px;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+        background-color: #2a2c2f;
+    }
+    div#changess-pass {
+        width: 100%;
+        width: 50%;
+        margin: 20px;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+        background-color: #2a2c2f;
+    }
+
+    div#addresses {
+        width: 100%;
+        width: 50%;
+        margin: 20px;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+        background-color: #2a2c2f;
     }
 }

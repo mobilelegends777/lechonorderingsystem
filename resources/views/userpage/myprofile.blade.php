@@ -1,7 +1,6 @@
 @extends('index')
 @section('page_content')
-    <!-- <link href="{{asset('asset/css/style_asset.css')}}" rel="stylesheet">
-    <link href="{{asset('css/profile.css')}}" rel="stylesheet"> -->
+<link rel="stylesheet" type="text/css" href="{{ asset('css/myprofile.css') }}">
 	
 	<script type="text/javascript" src="{{asset('asset/js/jquery.aniview.js')}}"></script>
 
