@@ -111,6 +111,7 @@
 		@endif
 	</div>
 	</div>
+	@include('sweetalert::alert')
 </div>
 <script>
 $(document).ready(function(){

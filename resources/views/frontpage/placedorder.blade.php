@@ -13,14 +13,7 @@
                     <i class="fas fa-check"></i>
                     <h6>Congratulations.</h6>
                     <h6>Your Order was Completed Successfully.</h6>
-                </div>
-                <div class="success-msg">
-                    <h6 class="art1"><strong>Hi {{$value[0]->firstname}},</strong></h6>
-                    <h6 class="art2">We have receive your order.</h6>
-                    <h6 class="art2">We will send you an Email or SMS the moment your order items are dispatched to your address.</h6>
-                    
-                </div>
-                               
+                </div>                           
                 <div class="dropdown">
 				<a href="{{asset('/')}}">
 					<span class="des3"><button class="art-btn">GO TO HOME</button></span>

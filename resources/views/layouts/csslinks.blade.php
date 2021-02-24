@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/contactus.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/userlogin.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/myprofile.css') }}">
+	
 	
 	<link type="text/css" href="{{asset('css/checkout.css')}}" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">

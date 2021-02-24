@@ -100,7 +100,7 @@ class checkoutController extends Controller
                 }
                 $upDate = DB::select('DELETE FROM cart WHERE customer_id = '.$userID.'');
             }     
-       return view('frontpage/placedorder', compact('value'));
+            return redirect()->route('myorder');
     }
 
 }
