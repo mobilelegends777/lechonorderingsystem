@@ -69,10 +69,10 @@
 				<div class="my-order-name">
 					<span>{{ $item->name }}</span>
 				</div>
-				<div class="carted-price">
+				<div class="my-order-price">
 					<span>₱ {{ number_format($item->price,2) }}</span>
 				</div>
-				<div class="reorder-btn">
+				<div class="reorder-btn past-order{{$item->product_id}}">
 					<button type="button" onclick="addC.addInCart({{$item->product_id}})" class="reorder">Reorder</button>
 				</div>
 			</div>

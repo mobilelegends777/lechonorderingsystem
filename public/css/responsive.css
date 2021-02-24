@@ -394,7 +394,6 @@
     right: 13px;
     top: 58px;
 }
-  
   .shop-item-name-info {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -2994,6 +2993,15 @@
 	    width: 91%;
 	}
 	/*orderpage*/
+	.my-order-image {
+    	display: none;
+	}
+	.my-order-name {
+    	width: 45%;
+	}
+	.my-order-cont {
+    	margin: 0 12px;
+	}
 }
 @media screen and (max-width: 480px) {
 	.topnav.responsive .ordinary {

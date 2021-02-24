@@ -13,6 +13,7 @@ var al = (()=> {
         deleteItemCart: (item_cart_id,product_id)=>{
           $.ajax({
              url:url+"/delete-items-cart",
+             async:false,
              method:"POST",
              data:{item_cart_id:item_cart_id},
              beforeSend:function(){
@@ -35,6 +36,10 @@ var al = (()=> {
                     $('.cartIcon'+product_id).append(`
                       <span id="addToCart" class="shop-cart-icon addToCart" onclick="addC.addInCart(${product_id})" data-value="${product_id}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></span>
                     `)
+                    $('.past-order'+product_id).empty();
+                    $('.past-order'+product_id).append(`
+                       <button type="button" onclick="addC.addInCart(${product_id})" class="reorder">Reorder</button>
+                      `);
                 // notif();
                 subTOTS();
                 // Carting();
@@ -71,6 +76,7 @@ var addC = (()=> {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
           },
            url:url+"/add-to-cart-item",
+           async:false,
            method:"POST",
            data:{carted:product_id},
            beforeSend:function(){
@@ -90,6 +96,10 @@ var addC = (()=> {
                     $('.cartIcon'+data[2]).append(`
                       <span class="shop-cart-icon"><i id="cart-icons " class="fas fa-check" aria-hidden="true"></i></span>
                     `)
+                    $('.past-order'+data[2]).empty();
+                    $('.past-order'+data[2]).append(`
+                       <button  class="reorder"><i class="fas fa-check"></i>On cart</button>
+                      `);
                     cartI();
                 }
 
