@@ -59,7 +59,9 @@
 	/*margin: 100px 0;*/
 	color: #b89352;
 }
-  
+span.time-history {
+    color: #808080bf;
+}
 .filter-conts {
 	display: inline-block;
 	width: 100%;

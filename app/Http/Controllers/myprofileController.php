@@ -103,7 +103,7 @@ class myprofileController extends Controller
                 'images' => $img
             ]);
 
-            Alert::success('Success', 'File Uploaded');
+        Alert::success('Success', 'File Uploaded');
         return back();
     }
 
