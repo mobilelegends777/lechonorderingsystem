@@ -41,7 +41,6 @@ class myprofileController extends Controller
     function update(Request $request)
 
      {
-     
         $data = Auth::user();
         $id = $data->id;
         $fname = $request->input("fname");

@@ -1,7 +1,7 @@
 @extends('index')
 @section('page_content')
-    <link href="{{asset('asset/css/style_asset.css')}}" rel="stylesheet">
-    <link href="{{asset('css/profile.css')}}" rel="stylesheet">
+    <!-- <link href="{{asset('asset/css/style_asset.css')}}" rel="stylesheet">
+    <link href="{{asset('css/profile.css')}}" rel="stylesheet"> -->
 	
 	<script type="text/javascript" src="{{asset('asset/js/jquery.aniview.js')}}"></script>
 
@@ -26,22 +26,24 @@
       </div>
     </form>
       <!-- edit form column -->
-      <div class="col-md-9 personal-info move-lefts">
+      <div class="col-md-9 personal-info move-left">
       
         <h3 class="p-info-size">Personal info</h3> 
         <div class="prof">
+          <div class="edt">
           <div class="move-left">
         <a id="show-prof"class="col-lg-3">Edit Profile</a>
         <a id="show-pass"class="">Change Password</a>
         <a id="show-address"class="">Addressess</a>
         
         </div>
-
+        </div>
         <hr class="hr-pr">
         
         <form metho="POST" action ="{{ route('profileupdated',$value[0]->id) }}" class="form-horizontal" role="form">
         {{ csrf_field() }}
         {{ method_field('PATCH') }}
+        <div class="prof-con">
         <div id="edit-profile">
         <input class="form-control" type="hidden" name="id" value="{{$value[0]->id}}">
           <div class="form-group">
@@ -79,6 +81,7 @@
           </div>
     
 
+          </div>
           </div>
           <div id="changess-pass">
           <div class="form-group">

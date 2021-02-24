@@ -1,6 +1,6 @@
 @extends('index')
 @section('page_content')
-
+@include('layouts.csslinks')
 <section class="flex">
 	<div class= "del-details">
 		<div class="2-head">
@@ -14,7 +14,7 @@
 		
 			<h5 class ="d-time"> Delivery time:</h5>
 		
-		<div class="for-flex">
+		<div class="for-flex-time">
 			<div class="custom-select">
 				<select class="select-date">
 					<option value="0">Tue, Feb 23</option>
