@@ -53,6 +53,26 @@ div#edit-profile {
     color: white;
     background-color: #2a2c2f;
 }
+div#changess-pass {
+    width: 100%;
+    width: 50%;
+    margin: 20px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background-color: #2a2c2f;
+}
+div#addresses {
+    width: 100%;
+    width: 50%;
+    margin: 20px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background-color: #2a2c2f;
+}
 .prof-con {
     width: 100%;
     display: block;
@@ -122,6 +142,16 @@ input.form-control.file-size {
         width: 100%;
     }
     div#edit-profile {
+        width: 100%;
+        width: 85%;
+        border-radius: 4px;
+    }
+    div#changess-pass {
+        width: 100%;
+        width: 85%;
+        border-radius: 4px;
+    }
+    div#addresses {
         width: 100%;
         width: 85%;
         border-radius: 4px;

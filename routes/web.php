@@ -80,7 +80,7 @@ Route::get('/frontpage/cartpage', 'cartController@index')->name('cartpage');
 
 
 Route::get('/frontpage/checkout', 'checkoutController@index')->name('checkout');
-Route::get('/frontpage/placedorder','checkoutController@placeorder')->name('order');
+Route::get('/placedorder','checkoutController@placeorder')->name('order');
 
 
 

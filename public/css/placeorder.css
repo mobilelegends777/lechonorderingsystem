@@ -17,17 +17,10 @@
 
 .container-form {
     width: 800px;
-    /* height: 655px; */
-    background-color: #f8f7f7;
-    /* margin: 0; */
-    /* transform: translateY(-51%); */
-    /* position: absolute; */
-    /* top: 90%; */
-    /* left: 50%; */
-    /* transform: translate(-50%, -90%); */
-    border: 1px solid #00000075;
+    background-color: #f7f7f7;
     margin: auto;
     margin-top: 40px;
+    box-shadow: -2px 2px 19px 0px #888888;
 }
 .Order.Title {
     text-align: center;
