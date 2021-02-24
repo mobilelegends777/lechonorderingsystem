@@ -1694,6 +1694,8 @@ table.order-table {
     width: 51%;
     background: #fff;
     padding: 17px;
+    height: 189px;
+    overflow: auto;
 }
 .data-p {
     display: flex;
@@ -1709,10 +1711,12 @@ table.reorder-table {
 }
 .my-order-sub {
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     align-items: center;
     padding: 26px 0px;
     border-top: solid 1px #ccc;
+    width: 100%;
+
 }
 .my-order-cont {
     height: 500px;
@@ -1720,5 +1724,13 @@ table.reorder-table {
 }
 .my-order-name {
     color: #c4a256;
+    width: 30%;
+}
+.my-order-image {
+    width: 24%;
+}
+.my-order-price {
+    width: 25%;
+    text-align: center;
 }
 /*end orderpage*/

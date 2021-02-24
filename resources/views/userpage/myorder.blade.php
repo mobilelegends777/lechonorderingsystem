@@ -30,8 +30,8 @@
 					<div class="data-p">
 						
 							<table class="order-table">
-								<tr>
 								@foreach($value[2] as $item)
+								<tr>
 									<td class="check-data1">
 								<div class="check-dpname1">
 									{{ $item->name }}
@@ -47,8 +47,8 @@
 										{{ number_format($item->price,2) }}
 									</div>
 									</td>
-								@endforeach
 								</tr>
+								@endforeach
 							</table>
 						
 					</div>
@@ -57,9 +57,30 @@
 						<div class="order-recieve">
 							<button type="submit" class="receive">Order Receive</button>
 						</div>
+					</form>
 		</div>
 	@else
 		<div class="my-order-cont">
+		@foreach($value[1] as $item)
+			<div class="my-order-sub">
+				<div class="my-order-image">
+					<a href=""><img src="{{ $item->images }}"></a>
+				</div>
+				<div class="my-order-name">
+					<span>{{ $item->name }}</span>
+				</div>
+				<div class="my-order-price">
+					<span>₱ {{ number_format($item->price,2) }}</span>
+				</div>
+				<div class="reorder-btn past-order{{$item->product_id}}">
+					<button type="button" onclick="addC.addInCart({{$item->product_id}})" class="reorder">Reorder</button>
+				</div>
+			</div>
+		@endforeach
+		</div>
+	@endif
+
+	<div class="my-order-cont1">
 		@foreach($value[1] as $item)
 			<div class="my-order-sub">
 				<div class="my-order-image">
@@ -77,21 +98,23 @@
 			</div>
 		@endforeach
 		</div>
-	@endif
 	</div>
 	@include('sweetalert::alert')
 </div>
 <script>
 $(document).ready(function(){
 	
-		$("#paset-section").hide();
+		$(".my-order-cont1").hide();
 		$("#past-order").click(function(){
-			$("#active-section").hide();
-			$("#paset-section").show();
+			$('.active-order-container').hide();
+			$(".data-container").hide();
+			$(".my-order-cont1").show();
 });
 		$("#active-order").click(function(){
-					$("#active-section").show();
-					$("#paset-section").hide();
+			$(".my-order-cont1").hide();
+				$(".active-order-container").show();
+				$(".data-container").show();
+				$("#paset-section").hide();
 });
 	
 	
