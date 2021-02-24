@@ -114,7 +114,7 @@ img.avatar.img-circle {
         margin-top: 50px;
     }
 }    
-
+       
 @media screen and (max-width : 823px){
     .Order.Title .success-msg h6 {
         font-size: 24px;
@@ -125,7 +125,26 @@ img.avatar.img-circle {
     .art-btn {
         font-size: 20px;
     }
-}    
+}  
+
+@media screen and (max-width : 800px){
+    .container-form {
+        margin-top: 180px;
+    }
+    .Order.Title h5 {
+        font-size: 38px;
+    }
+    .Order.Title .order-success h6 {
+        font-size: 20px;
+    }
+    .Order.Title .success-msg h6 {
+        font-size: 16px;
+    }
+    .art-btn {
+        font-size: 14px;
+    }    
+} 
+
 @media screen and (max-width : 768px){
     .Order.Title .success-msg h6 {
         font-size: 18px;
@@ -361,25 +380,25 @@ img.avatar.img-circle {
         line-height: 50px;
     }
     .art-btn {
-        font-size: 36px;
-        padding: 10px;
+        font-size: 12px;
+        padding: 5px;
     }
     .order-container {
-        height: 975px;
+        height: 650px;
     }
     .Order.Title h5 {
-        font-size: 94px;
+        font-size: 34px;
         margin-top: 50px;
     }
     .container-form {
-        height: 950px;
-        width: 1000px;
+        height: 615px;
+        width: 100%;
     }
     .Order.Title .order-success h6 {
-        font-size: 44px;
+        font-size: 20px;
     }
     .Order.Title .success-msg h6 {
-        font-size: 38px;
+        font-size: 16px;
     }
 
     /* navbar change */

@@ -74,7 +74,8 @@ class myprofileController extends Controller
             WHERE customer_address.customer_id = '.$id.'
             ');
         DB::update('UPDATE contact_info SET
-            phone = \''.$phone.'\'
+            phone = \''.$phone.'\',
+            tel = \''.$tel.'\'
             WHERE contact_info.customer_id = '.$id.'
         ');
         DB::update('UPDATE users SET email = \''.$email.'\'
