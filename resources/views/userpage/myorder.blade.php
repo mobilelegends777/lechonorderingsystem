@@ -1,8 +1,6 @@
 @extends('index')
 @section('page_content')
 
-<!-- <link rel="stylesheet" type="text/css" href="{{ asset('css/myorder.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/pastorder.css') }}"> -->
 <div class="myorder-container">
 	<div class="order-sub-conts">
 		

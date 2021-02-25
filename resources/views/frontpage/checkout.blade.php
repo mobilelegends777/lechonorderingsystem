@@ -12,7 +12,7 @@
 
 			
 		<div class="Del-time">
-		
+			<div class="st-con">
 			<h5 class ="d-time"> Special Delivery time:</h5>
 
 			<div id=special-time>
@@ -22,7 +22,7 @@
 				<span class="slider round"></span>
 				</label>
 			</div>
-		
+			</div>
 		<div class="for-flex-time">
 			<div class="custom-select">
 			<input class="select-date"type="date" id="myCheck" disabled name="select-date"data-date-start-date="d" value = "{{date('Y-m-d', strtotime('+1 day'))}}">
@@ -244,8 +244,12 @@
   <div class="modal-content">
     <span class="close">&times;</span>
     <p class="qstn">Are You Sure You Want To Proceed ?</p>
+	<div class="btn-yn-con">
+	<div class="btn-yesno">	
 	<button type = "submit" class="Yes1"> Yes</button>
 	<button type = "button"  class="close1">No</button>
+	</div>
+	</div>
   </div>
 
 </div>
