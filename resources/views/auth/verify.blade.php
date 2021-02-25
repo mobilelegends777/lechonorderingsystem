@@ -9,7 +9,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="move-to left-verify">{{ __('Verify Your Email Address') }}</div>
-
+            <div class="verify-con">
                 <div class=" move-to-center-verify">
                     @if (session('resent'))
                         <div class="alert alert-success" role="alert">
@@ -24,6 +24,7 @@
                         <button type="submit" class="btn btn-link p-0 m-0 align-baseline">{{ __('click here to request another') }}</button>
                     </form>
                 </div>
+            </div>
             </div>
         </div>
     </div>
