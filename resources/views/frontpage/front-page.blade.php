@@ -46,40 +46,40 @@
 		</div>
 		<div class="sub-container">
 			<div class="bsp">Best Selling Products</div>
-					<div class="items slider">
-					@foreach($value[1] as $item)
-						<div class="box slide">
-							<div class="item-image">
-								<div class="prod-image">
-									<img data-lazy="{{$item->images}}">
-								</div>
-								@if(Auth::check())
-									@if($item->order_exist == 1)
-										<div class="cartIcon{{ $item->product_id }} cart-icon">
-											<span class="shop-cart-icon"><i id="cart-icons " class="fas fa-check" aria-hidden="true"></i></span>
-										</div>
-									@else
-										<div class="cartIcon{{ $item->product_id }} cart-icon">
-											<span class="addToCart" onclick="addC.addInCart({{ $item->product_id }} )" data-value="{{$item->product_id}}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></span>
-										</div>
-									@endif
-								@else
-								<div class="cartIcon{{ $item->product_id }} cart-icon">
-									<span class="addToCart" onclick="addC.addInCart({{ $item->product_id }} )" data-value="{{$item->product_id}}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></span>
-								</div>
-								@endif
+				<div class="items slider">
+				@foreach($value[1] as $item)
+					<div class="box slide">
+						<div class="item-image">
+							<div class="prod-image">
+								<img data-lazy="{{$item->images}}">
 							</div>
-							<div class="item-details">
-								<div class="item-name">
-									<a href="#"><span class="product-name">{{$item->name}}</span></a>
-								</div>
-								<div class="price-tag">
-									<span class="prices">₱{{ number_format($item->price,2)}}</span>
-								</div>
+							@if(Auth::check())
+								@if($item->order_exist == 1)
+									<div class="cartIcon{{ $item->product_id }} cart-icon">
+										<span class="shop-cart-icon"><i id="cart-icons " class="fas fa-check" aria-hidden="true"></i></span>
+									</div>
+								@else
+									<div class="cartIcon{{ $item->product_id }} cart-icon">
+										<span class="addToCart" onclick="addC.addInCart({{ $item->product_id }} )" data-value="{{$item->product_id}}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></span>
+									</div>
+								@endif
+							@else
+							<div class="cartIcon{{ $item->product_id }} cart-icon">
+								<span class="addToCart" onclick="addC.addInCart({{ $item->product_id }} )" data-value="{{$item->product_id}}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></span>
+							</div>
+							@endif
+						</div>
+						<div class="item-details">
+							<div class="item-name">
+								<a href="#"><span class="product-name">{{$item->name}}</span></a>
+							</div>
+							<div class="price-tag">
+								<span class="prices">₱{{ number_format($item->price,2)}}</span>
 							</div>
 						</div>
-						@endforeach
 					</div>
+					@endforeach
+				</div>
 		</div>
 
 		<div class="sub-container2">

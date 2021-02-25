@@ -1233,6 +1233,7 @@ button.filter-by-price:hover {
   width: 29px;
   height: 30px;
   padding: 12px 0px;
+  text-align: center;
 }
 
 .cart-input button{

@@ -25,7 +25,7 @@ class shopController extends Controller
 				select (select '1') from cart c where c.product_id = p.product_id and checkout = false  and customer_id = $id),'0') 
 				as order_exist FROM  product p where type = 'cart'");
 		}else{
-			$query = DB::select("SELECT * FROM product");
+			$query = DB::select("SELECT * FROM product where type = 'cart'");
 		}
       	$value = [
 			  "0" => $data,

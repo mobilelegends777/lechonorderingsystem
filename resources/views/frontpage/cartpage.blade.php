@@ -97,9 +97,9 @@
 										<div class="mobile-cart-qty">
 											<div>Quantity: </div>
 											<div class="cart-input m-cart-inp">
-												<button  type="button" class="qty-dec" onclick="dec('qty',{{$item->cart_id}})">-</button>
+												<button type="button" class="qty-dec" onclick="dec('qty', {{$item->cart_id}}) ">-</button>
 													<input class="cartQ cartQty__{{$item->cart_id}}" type="number" value="{{$item->quantity}}" name="qty[]">
-												<button type="button" class="qty-inc" onclick="inc('qty',{{$item->cart_id}})">+</button>
+												<button type="button" class="qty-inc" onclick="inc('qty', {{$item->cart_id}}) ">+</button>
 											</div>
 										</div>
 										<div class="m-cart-subtotal">

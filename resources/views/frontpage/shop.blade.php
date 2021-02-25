@@ -156,6 +156,8 @@
 <script>
 $(document).ready(function(){
 	sortIng();
+
+	$('#count-results').length
 });
 </script>
 @endsection
