@@ -1,8 +1,6 @@
 @extends('index')
 @section('page_content')
 
-<!-- <link rel="stylesheet" type="text/css" href="{{ asset('css/myorder.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/pastorder.css') }}"> -->
 <div class="myorder-container">
 	<div class="order-sub-conts">
 		
@@ -40,7 +38,7 @@
 									</td>
 								<td class="check-quantz1">
 									<div class="check-dquantity1">
-									{{ $item->qty }}
+									{{ $item->qty }}x
 									</div>
 									</td>
 									<td class="check-price1">
@@ -53,6 +51,7 @@
 							</table>
 						
 					</div>
+					<div class="total-fonts"><h5>Total: ₱ {{number_format($value[3][0]->total,2)}} </h5></div>
 					<form metho="POST" action ="{{ route('myorderstatus') }}" class="" role="form">
 					@csrf
 						<div class="order-recieve">

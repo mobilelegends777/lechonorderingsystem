@@ -36,7 +36,7 @@
     cursor: pointer;
   }
 
-  button.close1 {
+  /* button.close1 {
     background-color: #ea0808;
     border: none;
     color: white;
@@ -50,22 +50,30 @@
     height: 39px;
     position: relative;
     left: 8rem;
+} */
+
+button.close1 {
+  background-color: #ea0808;
+  border: none;
+  color: white;
+  padding: 13px 32px;
+  text-align: center;
+  text-decoration: none;
+  width: 45%;
+  border-radius: 4px;
+  height: 39px;
 }
 
 button.Yes1 {
-    background-color: #0867ea;
-    border: none;
-    color: white;
-    padding: 13px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    width: 19%;
-    border-radius: 4px;
-    height: 39px;
-    position: relative;
-    left: 8rem;
+  background-color: #ea0808;
+  border: none;
+  color: white;
+  padding: 13px 32px;
+  text-align: center;
+  text-decoration: none;
+  width: 45%;
+  border-radius: 4px;
+  height: 39px;
 }
 
 p.qstn {
@@ -137,3 +145,148 @@ p.qstn {
   .slider.round:before {
     border-radius: 50%;
   }
+
+  @media only screen and (max-width: 1366px){
+    .switch {
+    top: 14.4em;
+    left: 26rem;
+}
+}
+@media only screen and (max-width: 1220px){
+  .switch {
+    top: 16em;
+    left: 26rem;
+}
+}
+@media only screen and (max-width: 1024px){
+  .switch {
+    top: 14em;
+    left: 26rem;
+}
+} 
+
+  @media only screen and (max-width: 1000px){
+    .switch {
+      top: 14.5em;
+      left: 26rem;
+  }
+}
+  @media only screen and (max-width: 800px){
+    .modal-content {
+      width: 46%;
+  }
+  .switch {
+    top: 5em;
+    left: 15rem;
+    /* font-size: 10px; */
+}
+}
+
+@media only screen and (max-width: 731px){
+  .modal-content {
+    width: 50%;
+}
+}
+@media only screen and (max-width: 662px){
+  .modal-content {
+    width: 55%;  
+}
+}  
+@media only screen and (max-width: 602px){
+  .modal-content {
+    width: 60%;
+}
+}
+@media only screen and (max-width: 568px){
+  .modal-content {
+    width: 60%;
+    font-size: 14px;
+  }
+}  
+@media only screen and (max-width: 497px){
+  .modal-content {
+    width: 80%;
+    font-size: 14px;
+  }
+}  
+@media only screen and (max-width: 335px){
+  .modal-content {
+    width: 90%;
+  }
+}    
+@media only screen and (max-width: 320px){
+  .modal-content {
+    width: 95%;
+  }
+}      
+
+  @media only screen 
+  and (max-width:640px)
+  and (min-width:360px)
+  and (orientation:portrait){
+
+    .switch {
+      position: absolute;
+      display: inline-block;
+      width: 60px;
+      height: 27px;
+      top: 5em;
+      left: 14rem;
+  }
+    input.select-date {
+      width: 101%;
+      overflow: hidden;
+      border: 1px solid #000;
+      position: relative;
+      padding: 3px 5px;
+      bottom: 10px;
+      z-index: 99;
+  }
+  input.select-time {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #000;
+    position: relative;
+    padding: 15px 10px;
+    bottom: 10px;
+    z-index: 99;
+}
+.btn-yn-con {
+  width: 100%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+.btn-yesno {
+  text-align: center;
+}
+}
+
+@media only screen and (max-width: 320px){
+  .modal-content {
+    width: 85%;
+    font-size: 12px;
+}
+button.Yes1 {
+  background-color: #ea0808;
+  border: none;
+  color: white;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  width: 45%;
+  border-radius: 4px;
+  height: 30px;
+}
+button.close1 {
+  background-color: #ea0808;
+  border: none;
+  color: white;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  width: 45%;
+  border-radius: 4px;
+  height: 30px;
+}
+}

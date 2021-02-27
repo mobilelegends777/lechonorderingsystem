@@ -1,9 +1,27 @@
+/* reset password css */
+button.btn.reset-btn {
+    padding: 10px;
+    margin: 5px;
+    font-weight: bold;
+    background-color: gold;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+}
+a#cancel_reset {
+    color: white;
+}
+    
+    
+
 input.form-control {
     font-size: 16px;
     width: 100%;
-    height: 40px;
+    height: 45px;
     margin-top: 10px;
 }
+/* end of reset password css */
+
+
 
 .signup-button {
     margin-top: 1rem;
@@ -30,9 +48,102 @@ button.btn.btn-primary.btn-block.sign-up {
     font-size: 16px;
     width: 100%;
 }
+
+/* media for reset password */
+@media only screen and (max-width: 1366px){
+    input.form-control {
+        height: 45px;
+    }
+    button.btn.reset-btn {
+        margin-top: 15px;
+        font-size: 14px;
+    }    
+}   
+@media only screen and (max-width: 1024px){
+    input.form-control {
+        font-size: 20px;
+        height: 55px;
+    }
+    button.btn.reset-btn {
+        padding: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        height: 50px;
+        background-color: #FBAB7E;
+        background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    }
+    a#cancel_reset {
+        font-size: 20px;
+    }
+} 
+@media only screen and (max-width: 800px){
+    button.btn.reset-btn {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+    .login-reg-form {
+        width: 450px;
+        margin-top: 50px;
+    }
+    .login-container {
+        width: 300px;
+    }
+    #resetEmail {
+        height: 40px;
+        font-size: 14px;
+    }
+    button.btn.reset-btn {
+        font-size: 14px;
+        height: 40px;
+    }    
+    a#cancel_reset {
+        font-size: 16px;
+    }    
+}
+
+
+/* end of media for reset password */
+
+
+
 @media only screen and (max-width: 1024px){
     input {
     height: 45px;
+    }
+}    
+@media only screen and (max-width: 800px){
+    button.btn.facebook-btn.social-btn {
+        height: 50px;
+        font-size: 16px;
+        width: 50%;
+        margin-right: 5px;
+    }
+    button.btn.google-btn.social-btn {
+        height: 50px;
+        width: 50%;
+        font-size: 16px;
+    }
+    form.form-signin {
+        width: 100%;
+        left: unset;
+    }
+    .login-container {
+        width: 90%;
+        margin: 0;
+    }
+    button.btn.btn-success.btn-block {
+        height: 50px;
+        width: 100%;
+        font-size: 20px;
+    }
+    .btn-primary#btn-signup {
+        height: 50px;
+        font-size: 20px;
+    }
+    .forgot-pass a {
+        font-size: 20px;
     }
 }    
 @media only screen and (max-width: 768px){
@@ -40,7 +151,7 @@ button.btn.btn-primary.btn-block.sign-up {
         height: 50px;
     }    
     .login-reg-form {
-        width: 600px;
+        width: 70%;
         border: solid #2a2c2f;
         background: #2a2c2fc7;
         border-radius: 5px;
@@ -48,17 +159,18 @@ button.btn.btn-primary.btn-block.sign-up {
         top: 5rem;
     }
     button.btn.google-btn.social-btn {
-        height: 63px;
-        font-size: 20px;
+        height: 60px;
+        font-size: 16px;       
     }
     button.btn.facebook-btn.social-btn {
         height: 60px;
-        font-size: 20px;
+        font-size: 16px;
+        margin-right: 5px;
     }
     .scl-reg {
         position: relative;
         right: 0rem;
-        width: 108%;
+        width: 100%;
     }
     button.btn.btn-primary.btn-block.sign-up {
         background-color: #ff8800fc;
@@ -69,7 +181,7 @@ button.btn.btn-primary.btn-block.sign-up {
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
-        width: 107%;
+        width: 100%;
     }
     button.btn.btn-success.btn-block {
         height: 50px;
@@ -84,9 +196,14 @@ button.btn.btn-primary.btn-block.sign-up {
     }      
 }
 
+@media only screen and (max-width: 600px){  
+    .login-reg-form {
+        width: 80%;
+    }
+}    
 @media only screen and (max-width: 568px){
     .login-reg-form {
-        width: 550px;
+        width: 95%;
         border: solid #2a2c2f;
         background: #2a2c2fc7;
         border-radius: 5px;
@@ -99,14 +216,28 @@ button.btn.btn-primary.btn-block.sign-up {
         margin: 0;
     }
     form.form-signin {
-        width: 100%;
+        width: 90%;
         position: relative;
         left: unset;
     }
+    button.btn.google-btn.social-btn {
+        height: 50px;
+        font-size: 16px;
+    }
+    button.btn.facebook-btn.social-btn {
+        height: 50px;
+        font-size: 16px;
+        margin-right: 5px;
+    }
 }    
+@media only screen and (max-width: 424px){
+    .login-reg-form {
+        width: 95%;
+    }
+}        
 @media only screen and (max-width: 414px){
     .login-reg-form {
-        width: 365px;
+        width: 95%;
         border: solid #2a2c2f;
         background: #2a2c2fc7;
         border-radius: 5px;
@@ -149,7 +280,7 @@ button.btn.btn-primary.btn-block.sign-up {
 
 @media only screen and (max-width: 360px){
     .login-reg-form {
-        width: 350px;
+        width: 95%;
     }
 }        
 @media only screen and (max-width: 320px){
@@ -200,4 +331,35 @@ and (orientation:portrait){
         width: 100%;
         height: 53px;
     }                
+}
+
+/* signup css */
+@media only screen and (max-width: 800px){
+    form.form-signup {
+        margin-top: 20px;
+    }
+    .scl-reg {
+        position: relative;
+        right: unset;
+    }
+    .signup-inputs {
+        width: 100%;
+    }
+    .sign-up {
+        height: 50px;
+    }
+    .for-flex {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 320px){
+    input.form-control {
+        font-size: 14px;
+    }
+    button.btn.facebook-btn.social-btn {
+        font-size: 14px;
+    }
+    button.btn.google-btn.social-btn {
+        font-size: 14px;
+    }
 }

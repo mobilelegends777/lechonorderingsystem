@@ -2,6 +2,7 @@
   /* margin-right: 25%;
   margin-left: 30%; */
   margin-top: 3%;
+  left: -5%;
   width: 35%;
   height: auto;
   background-color: white;
@@ -376,6 +377,10 @@ section.flex {
 }
 
 @media only screen and (max-width: 1366px){
+  .switch {
+    top: 14.4em;
+    left: 26rem;
+}
   .del-details {
     width: 50%;
 }  
@@ -383,24 +388,71 @@ section.flex {
   width: 25%;
 }
 .p-details {
-  width: 50%;
-  margin-left: 12.5%;
+  width: 45%;
+  margin-left: 11.2%;
 }
 .payment-details {
-width: 50%;
-margin-left: 12.5%;
+width: 45%;
+margin-left: 11%;
 }
 input.py-btn {
-  right: 18.5rem;
+  right: 16.5rem;
 }
+ 
 @media only screen and (max-width: 1024px){
+  input {
+    height: 55px;
+}
+}
+@media only screen and (max-width: 800px){
+  input.py-btn {
+    right: 7.5rem;
+}
+.del-info {
+  width: 90%;
+}  
+.onscroll.pname {
+  position: relative;
+  left: 3rem;
+  font-size: 16px;
+  width: 100%;
+}
+.p-details {
+  width: 45%;
+  margin-left: 4.5%;
+}
+.payment-details {
+  width: 45%;
+  margin-left: 4.5%;
+}
+.pay-image {
+  position: relative;
+  left: 5rem;
+  top: 0rem;
+}
+.summary {
+  width: 47%;
+}
+.del-details {
+  margin-top: 25%;
+  left: 3.5%;
+  position: relative;
+}
+.summary {
+  bottom: -11rem;
+}
 
+}
+section.flex {
+    display: flex;
+    width: 90%;
+    justify-content: center;
 }
 }  
 @media only screen and (max-width: 768px){
 .p-details {
   /* margin-right: 30%; */
-  margin-left: 5.5%;
+  margin-left: 5.1%;
   margin-top: 20%;
   width: 90%;
   height: auto;
@@ -417,13 +469,15 @@ section.flex {
   /* margin-top: 3%; */
   width: 90%;
   margin: auto;
+  left: unset;
 }
 .summary {
   width: 90%;
+  bottom: -5rem;
 }  
 .payment-details {
   /* margin-right: 30%; */
-  margin-left: 5.5%;
+  margin-left: 5.1%;
   margin-top: 2%;
   width: 90%;
   height: auto;
@@ -434,6 +488,7 @@ section.flex {
 .pay-image {
   margin-left: 60%;
   left: unset;
+  top: 3rem;
 }
 input.py-btn {
   position: relative;
@@ -447,7 +502,7 @@ section.flex {
   display: block;
   width: 100%;
   justify-content: center;
-  padding-top: 15rem;
+  padding-top: 12rem;
 }
 }
 
@@ -460,9 +515,9 @@ section.flex {
   input.py-btn {
     right: 14rem;
 }
-  .del-info {
-    width: 60%;
-}  
+.del-info {
+  width: 90%;
+} 
 button.place-btn {
   width: 94%;
 }  
@@ -492,7 +547,7 @@ input.py-btn {
     left: 2rem;
   }
   .del-info {
-    width: 90%;
+    width: 95%;
 }
   button.place-btn {
     width: 90%;
@@ -506,7 +561,19 @@ img.pay-img1 {
   left: 10rem;
   top: 3rem;
 }
-}  
+.summary {
+  width: 90%;
+  bottom: -2rem;
+} 
+.del-add {
+  margin-left: 1rem;
+}
+h3.o-title {
+  position: relative;
+  left: 1rem;
+  font-size: 17px;
+}
+}
 
 @media only screen and (max-width: 375px){
   .onscroll.pname {
@@ -534,6 +601,7 @@ h3.o-title {
   left: unset;
   font-size: 15px;
 }
+
 section.flex {
   padding-top: 11rem;
 }
@@ -555,7 +623,7 @@ input.py-btn {
   left: unset;
 }
 .del-info {
-  width: 90%;
+  width: 95%;
 }
 .check-dprice {
   position: relative;
@@ -579,6 +647,9 @@ button.place-btn {
 i.c-title {
   left: 3rem;
 }
+.d-info-details {
+  height: 175px;
+}
 }
 
 @media only screen and (max-width: 320px){
@@ -586,4 +657,10 @@ i.c-title {
     height: 20px;
     right: 6rem;
   } 
+  .del-add {
+    margin-left: 1rem;
+}
+.del-info {
+  width: 95%;
+}
 }  
