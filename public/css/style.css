@@ -1657,7 +1657,7 @@ img.avatar.img-circle1 {
   padding: 0 10px;
 }
 .data-container {
-    background: rgb(242 242 242);
+    background: white);
     padding: 15px 0;
     height: auto;
 }
@@ -1696,6 +1696,11 @@ table.order-table {
     padding: 17px;
     height: 189px;
     overflow: auto;
+   box-shadow: -2px 2px 19px 0px #888888;
+}
+.total-fonts {
+    text-align: center;
+    font-size: 30px;
 }
 .data-p {
     display: flex;
