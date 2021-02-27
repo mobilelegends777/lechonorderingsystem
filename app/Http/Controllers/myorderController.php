@@ -38,7 +38,7 @@ class myorderController extends Controller
 
         $total=DB::select('SELECT SUM ( (qty) * (price)) as total
          FROM checkout_inventory INNER JOIN product ON product.product_id = checkout_inventory.product_id
-           WHERE customer_id = '.$data->id.' AND order_status = '."'garnishing'".'');
+           WHERE customer_id = '.$data->id.' AND order_status = '."'1'".'');
 
 
             $value = [
