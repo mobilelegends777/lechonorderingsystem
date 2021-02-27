@@ -26,7 +26,7 @@ class frontpageController extends Controller
 			  "0" => $data,
 			  "1" => $query,
       	];
-        // dd($value);
+        // dd(session()->token());
         return view('frontpage/front-page')->with('value', $value);
     }
 }

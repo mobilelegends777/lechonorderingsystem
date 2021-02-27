@@ -46,7 +46,7 @@
 						</td>
 
 						<td>₱ {{ number_format($item->price,2) }}
-							<input type="hidden" name="" class="d-cart_id cart-price{{ $item->cart_id }}" value="{{ $item->cart_id }}">
+							<input type="hidden" name="" class="d-cart_id cart-price{{ $item->cart_id }}" value="{{ $item->price }}">
 							<input type="hidden" name="cartNo_" class="cartNo_ cart-price{{ $item->cart_id }}" value="{{ $item->price }}">
 
 						</td>
@@ -105,7 +105,7 @@
 										<div class="m-cart-subtotal">
 											<input type="hidden" class="sub-subtotal{{ $item->price }}">
 											<div>Subtotal: </div>
-											<div class="m-cart-subtotal">₱<span class="sub-totals subtotal{{ $item->cart_id }}">{{$item->total}}</span></div>
+											<div class="m-cart-subtotal">₱<span class="m-sub-totals subtotal{{ $item->cart_id }}">{{$item->total}}</span></div>
 										</div>
 									</div>
 								</div>
@@ -190,10 +190,12 @@ $(document).ready(function(){
 	// });
 	$('.qty-inc').on('click',function(){
 		subTot();
+		mSubTot();
 		addedTotal();
 	});
 	$('.qty-dec').on('click',function(){
 		subTot();
+		mSubTot();
 		addedTotal();
 	});
 	function subTot(){
@@ -203,7 +205,13 @@ $(document).ready(function(){
 	});
 	$('.cart-page-subtotal').text(sums.toFixed(2));
 	}
-	
+	function mSubTot(){
+		var sums = 0;
+	$('.m-sub-totals').each(function(){
+		sums += Number($(this).text());
+	});
+	$('.cart-page-subtotal').text(sums.toFixed(2));
+	}
 });
 </script>
 @endsection

@@ -416,6 +416,7 @@ function inc(element, id) {
       var number = $('.cartQty__'+id).val();
       $('.cartQty__'+id).val(parseInt(number)+1);
       var qty = $('.cartQty__'+id).val();
+      // alert(qty * cart_price);
       $('.subtotal'+id).empty();
       $('.subtotal'+id).append(` <span class="substotals">${ qty * cart_price}</span>`);
       var cartSub = $('.cart-tot-price'+id).val();

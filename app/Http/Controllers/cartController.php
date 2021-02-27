@@ -94,6 +94,7 @@ class cartController extends Controller
                 '2' => $msg
             ];
         }
+        // dd(session()->token());
         return response()->json($values); 
     }
     public function updateCart(Request $request) {

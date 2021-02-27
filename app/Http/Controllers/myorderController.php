@@ -30,11 +30,11 @@ class myorderController extends Controller
 
         $data = Auth::user();  
         $query = DB::select('SELECT name,images,price,product.product_id, max(pickup_datetime) as pickup_datetime FROM checkout_inventory INNER JOIN product ON product.product_id = checkout_inventory.product_id
-        WHERE customer_id = '.$data->id.' AND order_status ='."'completed'".' GROUP BY name, images, price, customer_id, product.product_id' );
+        WHERE customer_id = '.$data->id.' AND order_status ='."'3'".' GROUP BY name, images, price, customer_id, product.product_id' );
         
         $query2 = DB::select('SELECT * FROM checkout_inventory
         INNER JOIN product ON product.product_id = checkout_inventory.product_id
-        WHERE customer_id = '.$data->id.' AND order_status ='."'garnishing'".'');
+        WHERE customer_id = '.$data->id.' AND order_status ='."'1'".'');
 
       
 
@@ -56,7 +56,7 @@ class myorderController extends Controller
 
              $data = Auth::user();
              $id = $data->id;
-             DB::update('UPDATE checkout_inventory SET pickup_datetime = current_timestamp, order_status = '."'completed'".' WHERE customer_id = '.$id.' AND order_status = '."'garnishing'".'');
+             DB::update('UPDATE checkout_inventory SET pickup_datetime = current_timestamp, delivered = current_timestamp, recieved = current_timestamp, order_status = '."'3'".' WHERE customer_id = '.$id.' AND order_status = '."'1'".'');
     
 
             Alert::success('Success', 'Order Received');

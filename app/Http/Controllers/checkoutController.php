@@ -57,7 +57,7 @@ class checkoutController extends Controller
 
     public function checkOutItem(Request $request){
         $userData = Auth::user();
-        dd($userData);
+        // dd($userData);
         $id = $userData->id;
         $query = DB::select('UPDATE cart SET checkout_date = current_timestamp WHERE customer_id = '.$id.'');
         // dd($query);
@@ -94,8 +94,8 @@ class checkoutController extends Controller
             if($cartData > 0){
                 foreach ($cartData as $items){
                   //dd($items);
-                    DB::select('INSERT INTO checkout_inventory(product_id,qty,date_ordered,cart_id,customer_id,payment_method,instruction, order_status)
-                      VALUES('.$items->product_id.', '.$items->quantity.', \''.$items->checkout_date.'\', '.$items->cart_id.', '.$items->customer_id.',\''.$pm.'\',\''.$instruction.'\','."'garnishing'".') ');
+                    DB::select('INSERT INTO checkout_inventory(product_id,qty,date_ordered,cart_id,customer_id,payment_method,instruction,for_delivery,order_status)
+                      VALUES('.$items->product_id.', '.$items->quantity.', \''.$items->checkout_date.'\', '.$items->cart_id.', '.$items->customer_id.',\''.$pm.'\',\''.$instruction.'\',current_timestamp,'."'1'".') ');
 
                 }
                 $upDate = DB::select('DELETE FROM cart WHERE customer_id = '.$userID.'');
