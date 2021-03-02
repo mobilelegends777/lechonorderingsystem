@@ -182,7 +182,8 @@ span.text_1 {
 }    
 @media only screen and (max-width: 600px){
     .contact_bottom_main.clearfix {
-        display: flex;
+        /*display: flex;*/
+        display: block;
         justify-content: center;
         margin-bottom: 30px;
         margin-left: 15px;
@@ -200,10 +201,10 @@ span.text_1 {
     }
     .col-sm-4 {
         margin: 7px;
-        font-size: 14px;
+        font-size: 20px;
     }
     span.text_1 {
-        font-size: 11px;
+        font-size: 18px;
     }
     .col-sm-6.contact_bottom_main_left.clearfix {
         width: 100%;

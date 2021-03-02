@@ -15,6 +15,7 @@
 			</div>
 		</div>
 		<div class="sub-menu">
+			
 			<div class="dropdown">
 				<a href="{{asset('/')}}">
 					<span class="des3">Home</span>
@@ -34,7 +35,7 @@
 				</a>
 			</div>
 			{{--<div class="dropdown">
-				<span class="des6">Menu<img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
+				<span class="des6 active">Menu<img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></span>
 				<div class="dropdown-content">
 				  <a href="{{asset('frontpage/newproduct')}}">New Products</a>
 				  <a href="{{asset('frontpage/combomeal')}}">Combo Meals</a>
@@ -137,13 +138,13 @@
 	</div>
 	<div class="topnav subtop" id="myTopnav">
 		<div class="ordinary">
-			<a href="{{asset('/')}}">Home</a>
+			<a href="{{asset('/')}}" class="{{ '/' == request()->path() ? 'active' : '' }}">Home</a>
 		</div>
     	<div class="ordinary dropbtn1">
-    		<a href="{{asset('frontpage/shop')}}">Menu</a>
+    		<a href="{{asset('frontpage/shop')}}" class="{{ 'frontpage/shop' == request()->path() ? 'active' : '' }}">Menu</a>
     	</div>
     	<div class="ordinary dropbtn2">
-			  <a href="{{asset('frontpage/special-order')}}">Special Order</a>
+			  <a href="{{asset('frontpage/special-order')}}" class="{{ 'frontpage/special-order' == request()->path() ? 'active' : '' }}">Special Order</a>
 			  {{--<div id="myDropdown" class="drpdwn meatDrp" style="display:none;">
 					  <a href="{{asset('frontpage/special-order')}}">Whole Lechon</a>
 					  <a href="{{asset('frontpage/special-order')}}">Lechon Belly</a>
@@ -164,7 +165,7 @@
     		<a href="#">About Us <img src="{{asset('images/down-arrow.png')}}" class="d-arrow"></a>
 
     	</div> -->
-	    <div class="ordinary"><a href="{{asset('frontpage/contact')}}">Contact Us</a>
+	    <div class="ordinary"><a href="{{asset('frontpage/contact')}}" class="{{ 'frontpage/contact' == request()->path() ? 'active' : '' }}">Contact Us</a>
 	    </div>
 	</div>
 </div>

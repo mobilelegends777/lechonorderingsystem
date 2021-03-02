@@ -92,10 +92,13 @@ class checkoutController extends Controller
         inner join customer_address ON customer_address.customer_id = users.id
         inner join contact_info ON contact_info.customer_id = users.id where users.id = '.$userID.'');
             if($cartData > 0){
+              $datas2 = DB::select('INSERT INTO cart_transaction(customer_id)VALUES('.$userID.')');
+              $id = DB::getPdo()->lastInsertId();
+              // dd($id);
                 foreach ($cartData as $items){
                   //dd($items);
-                    DB::select('INSERT INTO checkout_inventory(product_id,qty,date_ordered,cart_id,customer_id,payment_method,instruction,for_delivery,order_status)
-                      VALUES('.$items->product_id.', '.$items->quantity.', \''.$items->checkout_date.'\', '.$items->cart_id.', '.$items->customer_id.',\''.$pm.'\',\''.$instruction.'\',current_timestamp,'."'1'".') ');
+                    DB::select('INSERT INTO checkout_inventory(product_id,qty,date_ordered,cart_id,customer_id,payment_method,instruction,for_delivery,order_status,cart_trans_id)
+                      VALUES('.$items->product_id.', '.$items->quantity.', \''.$items->checkout_date.'\', '.$items->cart_id.', '.$items->customer_id.',\''.$pm.'\',\''.$instruction.'\',current_timestamp,'."'1'".', '.$id.') ');
 
                 }
                 $upDate = DB::select('DELETE FROM cart WHERE customer_id = '.$userID.'');

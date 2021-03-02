@@ -20,6 +20,10 @@ h3.num-font {
   color: white;
   text-align: center;
 }
+.num-font span {
+  position: relative;
+  top: 5px;
+}
 h3.d-title {
   margin-left: 2rem;
   font-size: 24px;
@@ -400,9 +404,29 @@ input.py-btn {
 }
  
 @media only screen and (max-width: 1024px){
-  input {
+input {
     height: 55px;
 }
+.summary {
+  width: 41%;
+}
+.p-details {
+    margin-left: 4%;
+}
+.payment-details {
+    width: 45%;
+    margin-left: 4%;
+}
+input.py-btn {
+    right: 10.5rem;
+}
+i.c-title {
+    font-size: 14px;
+}
+.pay-image {
+    left: 12rem;
+}
+
 }
 @media only screen and (max-width: 800px){
   input.py-btn {

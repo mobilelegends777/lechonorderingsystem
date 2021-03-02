@@ -1,11 +1,34 @@
 
   
-.topnav{ height : auto; transition: .2s ease-in;}
-.topnav  a { display: block; }
-.topnav:not(responsive)  a {max-height: 0;}
-.topnav.responsive  a {max-height: 600px;}
-.topnav.responsive {transition: .2s ease-in;border-top: solid #ccc 1px;border-bottom: solid #ccc 1px;
-
+.topnav { 
+	height : 
+	auto; 
+	transition: .2s ease-in;
+}
+.topnav  a { 
+	display: 
+	block; 
+}
+.topnav:not(responsive)  a {
+	max-height: 0;
+}
+.topnav.responsive  a {
+	max-height: 600px;
+	padding: 14px 0px;
+}
+.topnav.responsive  a:focus {
+	background-color: #212121;
+}
+/*.topnav.responsive  a:focus {
+	background-color: #212121;
+}*/
+.active {
+	background-color: #212121;
+}
+.topnav.responsive {
+	transition: .2s ease-in;
+	border-top: solid #ccc 1px;
+	border-bottom: solid #ccc 1px;
 }
 
 .topnav {
@@ -334,7 +357,7 @@ span.time-history {
 	border-radius: 50%;
   }
   
-  .shop-anchors span.active {
+  .shop-anchors span.actives {
 	color: #c4a265;
   }
   
@@ -869,10 +892,13 @@ span.time-history {
 		margin: 2px 0;
 	}
 	.__item .box3 span {
-	    font-size: 21px;
+	    font-size: 16px;
 	}
 }
 @media screen and (max-width: 1024px) {
+	.summary {
+	    width: 41%;
+	}
 	span.account-c {
 		left: 30px;
 		top: 0;
@@ -963,7 +989,7 @@ span.time-history {
     	height: 801px;
 	}
 	.sales1 {
-		width: 41%;
+		width: 55%;
 		/*margin-top: -49px;*/
 	}
 	.sales2 {
@@ -971,28 +997,28 @@ span.time-history {
 	}
 	.sales3 {
 		/*font-size: 82px;*/
-	    font-size: 110px;
+	    font-size: 68px;
 	}
 	.sales4 {
 		/*font-size: 24px;*/
-	    font-size: 35px;
+	    font-size: 28px;
 	}
 	.bttn1 {
 		padding: 14px;
-    	width: 33%;
-   		font-size: 26px;
+	    width: 30%;
+	    font-size: 19px;
 	}
 	.bttn2 {
 		margin-left: 5px;
-		padding: 14px;
-        width: 33%;
-   		font-size: 26px;
+		padding: 13px;
+        width: 32%;
+   		font-size: 20px;
 	}
 	.hr {
 		width: 28%;
 	}
 	.__item .box3 span {
-	    font-size: 21px;
+	    font-size: 18px;
 	    font-weight: bold;
 	}
 	.box3-info p {
@@ -1156,6 +1182,13 @@ span.time-history {
 	}
 }
 @media screen and (max-width: 1000px){
+	.col-sm-4 {
+	    margin: 34px!important;
+	    font-size: 25px!important;
+	}
+	.col-sm-6.contact_bottom_main_left.clearfix {
+		width: 43%;
+	}
 	span.account-c {
 	    left: 11px;
 	}
@@ -1540,7 +1573,7 @@ span.time-history {
 		right: 11px;
 	}
 	.dropdown-content-account a {
-	    width: 88px;
+	    width: 115px;
 	}
 	ul.slick-dots {
     	width: 100%;
@@ -1687,7 +1720,7 @@ span.time-history {
 	.topnav.responsive .ordinary {
 		font-size: 14px;
 	    /*adding: 31px 0px;*/
-        padding: 14px 0px;
+        /*padding: 14px 0px;*/
 	    width: 100%;
 	    text-align: center;
 	}
@@ -2747,7 +2780,7 @@ span.time-history {
 	}
 	.topnav.responsive .ordinary {
 		font-size: 14px;
-		padding: 13px 0px;
+		/*padding: 13px 0px;*/
 	}
 	.drpdwn {
 		font-size: 34px;
@@ -3172,7 +3205,7 @@ span.time-history {
 @media screen and (max-width: 480px) {
 	.topnav.responsive .ordinary {
 	    font-size: 13px;
-	    padding: 11px 0px;
+	    /*padding: 11px 0px;*/
 	}
 	.topnav a {
 	    width: 97px;
@@ -3427,7 +3460,7 @@ span.time-history {
 	}
 	.topnav.responsive .ordinary {
 		font-size: 12px;
-	    padding: 14px 0px;
+	    /*padding: 14px 0px;*/
 	}
 	.td2 {
 		display: none;

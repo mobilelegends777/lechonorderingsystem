@@ -14,7 +14,7 @@
 			</div>
 			<div class="shop-anchors-filter">
 				<div class="shop-anchors">
-					<a href="#"><span class="active">Home</span></a>&nbsp;/&nbsp;<a href="#"><span>Menu</span></a>
+					<a href="#"><span class="actives">Home</span></a>&nbsp;/&nbsp;<a href="#"><span>Menu</span></a>
 				</div>
 				<div class="filter-btn">
 					<button class="filter-show-btn"><span class="filter-show">Filters</span></button>

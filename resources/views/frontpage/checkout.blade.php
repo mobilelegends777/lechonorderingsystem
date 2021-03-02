@@ -5,7 +5,7 @@
 <section class="flex">
 	<div class= "del-details">
 		<div class="2-head">
-			<h3 class="num-font">1</h3>
+			<h3 class="num-font"><span>1</span></h3>
 			<h3 class= "d-title">Delivery Details</h3>
 
 		</div>
@@ -141,7 +141,7 @@
 
 	<div class="p-details">
 		<div class="2-head">
-			<h3 class="num-font">2</h3>
+			<h3 class="num-font"><span>2</span></h3>
 			<h3 class= "d-title">Personal Details</h3>
 
 		</div>
@@ -167,7 +167,7 @@
 	<div class="payment-details">
 
 		<div class="2-head">
-				<h3 class="num-font">3</h3>
+				<h3 class="num-font"><span>3</span></h3>
 				<h3 class= "d-title">Payment</h3>
 
 		</div>
