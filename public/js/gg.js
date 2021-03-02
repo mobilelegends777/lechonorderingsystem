@@ -82,7 +82,7 @@ var addC = (()=> {
            beforeSend:function(){
            },
            success:function(data){
-            // console.log(data[2]);
+            // console.log(Auth::check());
                 var minus_items = Number($('#badge').text())+1;
                 $('#badge').text(minus_items);
                 var minus_items = Number($('#badge2').text())+1;

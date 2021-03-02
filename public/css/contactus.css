@@ -247,10 +247,11 @@ span.text_1 {
     .col-sm-4 {
         margin: auto;
         width: 100%;
+        all: revert;
     }
     .col-sm-12.move-t0-right {
         display: block;
-        height: 400px;
+        height: auto;
     }
     h3.text-center.touch {
         text-align: center;

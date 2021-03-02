@@ -46,7 +46,7 @@
 						</td>
 
 						<td>₱ {{ number_format($item->price,2) }}
-							<input type="hidden" name="" class="d-cart_id cart-price{{ $item->cart_id }}" value="{{ $item->price }}">
+							<input type="hidden" name="" class="d-cart_id cart-id{{ $item->cart_id }}" value="{{ $item->cart_id }}">
 							<input type="hidden" name="cartNo_" class="cartNo_ cart-price{{ $item->cart_id }}" value="{{ $item->price }}">
 
 						</td>

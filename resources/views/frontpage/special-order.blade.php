@@ -73,27 +73,6 @@
 							</div>
 						</div>
 						<div class="shop-items-conts">
-						{{--@for($i = 7;$i <= 22; $i++)
-							<div class="shop-items">
-								<div class="shop-item-image">
-
-									@if($value[0] == 'Input Address')
-										<input type="hidden" name="" class="add-ress" value="{{$value[0]}}">
-									@else
-										<input type="hidden" name="" class="add-ress" value="{{$value[0]->address}}&nbsp;{{$value[0]->city}}">
-									@endif
-
-									<a href="#" class="shop-images-lechon" data-value="{{$i}}">
-										<img src="{{asset('images/lechon'.$i.'.png')}}">
-									</a>
-									<a href="#" class="orderNow" data-value="{{$i}}">Order now</a>
-								</div>
-								<div class="shop-info-price">
-									<div class="shop-item-name">Lechon {{$i}}kg</div>
-									<div class="shop-item-price">{{$i}}000.00</div>
-								</div>
-							</div>
-						@endfor--}}
 						@foreach($product as $item)
 							<div class="shop-items">
 								<div class="shop-item-image">

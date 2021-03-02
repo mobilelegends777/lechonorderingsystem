@@ -53,6 +53,7 @@ class cartController extends Controller
             '1' => $datas,
             '2' => $request->carted
         ];
+        // dd($query);
         return response()->json($query);
     }
     public function viewCart(){
@@ -76,8 +77,10 @@ class cartController extends Controller
         $qty = $request->qty;
         if($id > 0){
             $len = count($id);
+            // dd($len);
             for($x = 0;$x < $len;$x++){
                 $query = DB::select('UPDATE cart SET quantity = '.$qty[$x].', checkout_date = current_timestamp WHERE cart_id = '.$id[$x].' AND customer_id = '.$userID.' ');
+                // dd($qty);
             }
         }
         // $sumQry = DB::select('SELECT sum(quantity * price) as total FROM cart 
