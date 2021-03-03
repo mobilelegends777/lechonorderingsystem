@@ -207,11 +207,11 @@ function orderNow(product_id,event){
 				$('.form-container').append(`
 					<div class="order-conts">
 							<span class="cancel-form">&times;</span>
-										<div class="lechon-info">
-								<div class="lechon-details">
-									 <span><h3>${item.name}</h3></span>
-					              </div>
-							</div>
+								<div class="lechon-info">
+									<div class="lechon-details">
+										<span><h3>${item.name}</h3></span>
+						            </div>
+								</div>
 							<div class="payment-mehods">
 								<div class="pay-conts">
 									<div>

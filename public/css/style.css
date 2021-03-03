@@ -1428,7 +1428,7 @@ div#myDropdown {
 }
 .inpt-address {
     height: 45px;
-    width: 123%;
+    width: 100%;
 }
 .asterisk {
   color: red;
@@ -1463,29 +1463,46 @@ div#myDropdown {
 }
 .lechon-info {
   display: flex;
+  width: 100%;
+  font-size: 18px;
 }
 .lechon-info div {
   margin: 10px;
 }
 .payment-mehods {
     display: flex;
+    width: 100%;
+    font-size: 16px;
 }
 .pay-conts {
     margin: 16px;
 }
 .delivery-details {
     display: flex;
+    width: 100%;
+    font-size: 16px;
 }
 .delivery-details div{
   margin: 8px;
 }
 .qty-proceed-to {
-    display: flex;
-    justify-content: space-between;
-    margin: 0px 17px;
+    display: block;
+    /*justify-content: space-between;*/
+    margin: 0px 16px;
+    width: 100%;
+    font-size: 16px;
+}
+.quantities {
+    height: 35px;
+    margin: 0px 0px 15px 16px;
+}
+.proceed-to {
+    margin: 0px 0px 15px 16px;
 }
 input.inpt-qty {
     height: 100%;
+    width: 9%;
+    text-align: center;
 }
 
 input.btn.btn-default {

@@ -15,9 +15,11 @@
 .topnav.responsive  a {
 	max-height: 600px;
 	padding: 14px 0px;
+	outline: none;
 }
-.topnav.responsive  a:focus {
+.topnav.responsive  a:hover {
 	background-color: #212121;
+	outline: none;
 }
 /*.topnav.responsive  a:focus {
 	background-color: #212121;
@@ -1018,7 +1020,7 @@ span.time-history {
 		width: 28%;
 	}
 	.__item .box3 span {
-	    font-size: 18px;
+	    font-size: 15px;
 	    font-weight: bold;
 	}
 	.box3-info p {
@@ -2538,6 +2540,9 @@ span.time-history {
 	.headmenu .des2 {
 		font-size: 12px;
 	}
+	.delivery-details {
+		display: block;
+	}
 }
 @media screen and (max-width:565px){
 	.orderNow {
@@ -2734,12 +2739,12 @@ span.time-history {
 	.bttn1 {
 		padding: 9px;
 		width: 32%;
-    	font-size: 16px;
+    	font-size: 14px;
 	}
 	.bttn2 {
 		padding: 9px;
 		width: 36%;
-		font-size: 16px;
+		font-size: 14px;
 	}
 	.slider-conts {
         height: 717px;
