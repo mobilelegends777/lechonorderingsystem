@@ -71,11 +71,28 @@ class myorderController extends Controller
     public function specialOrder(Request $request){
         // dd($request->all());
         $userData = Auth::user();
+        $userAdd = DB::select('SELECT * FROM customer_address WHERE customer_id = '.$userData->id.'');
         $prodData = DB::select('SELECT name, price, images FROM product WHERE product_id = '."$request->id".'');
         // dd($prodData);
-        return response()->json($prodData); 
+        $addresses = [
+            '1' => $userAdd,
+            '2' => $prodData
+        ];
+       
+        // dd($value);
+        return response()->json($addresses); 
     }
 
+    public function orderProd(Request $req)
+    {
+        // dd($req->all());
+        $userData = Auth::user();
+        $dDate = $req->deliv_date;
+        // dd($userData);
+        DB::insert('INSERT INTO order_inventory(product_id,pref_weight,date_ordered,pickup_date,qty,order_type,order_status,delivery_address)VALUES('.$req->prod_id.','.$req->pref_weight.',current_timestamp,\''.$dDate.'\','.$req->special_qty.',\''.$req->orderType.'\',1,\''.$req->myAddress.'\')');
 
+        return back();
+
+    }
 
 }

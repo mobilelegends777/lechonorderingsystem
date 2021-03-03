@@ -14,7 +14,7 @@
 			</div>
 			<div class="shop-anchors-filter">
 				<div class="shop-anchors">
-					<a href="#"><span class="active">Home</span></a>&nbsp;/&nbsp;<a href="#"><span>Menu</span></a>
+					<a href="#"><span class="">Home</span></a>&nbsp;/&nbsp;<a href="#"><span>Menu</span></a>
 				</div>
 				<div class="filter-btn">
 					<button class="filter-show-btn"><span class="filter-show">Filters</span></button>
@@ -91,7 +91,7 @@
 								<div class="shop-info-price">
 									<input type="hidden" name="" class="prod-name" value="{{$item->name}}">
 									<div class="shop-item-name">{{$item->name}}</div>
-									<div class="shop-item-price">{{$item->price}}</div>
+									<div class="shop-item-price">₱{{ number_format($item->price,2)}}</div>
 								</div>
 							</div>
 						@endforeach
@@ -115,7 +115,7 @@
 										</div>
 										<div class="shop-item-info shop-carts">
 											<div class="col-price carts-price1">
-												<div class="shop-item-price prod-price">{{$item->price}}</div>
+												<div class="shop-item-price prod-price">₱{{ number_format($item->price,2)}}</div>
 												<div class="cart-shop-button"><button class="addcart cols-cart"></i>Order Now</button></div>
 											</div>
 										</div>
@@ -201,19 +201,24 @@ function orderNow(product_id,event){
 		data:{id:product_id},
 		success:function(data)
 		{
-			// console.log(add);
+			// console.log(data[1][0].id);
 			$.each(data, function(i, item){
+				// console.log(item[0].purok_zone);
 			    $('.form-container').empty();
 				$('.form-container').append(`
+					
 					<div class="order-conts">
 							<span class="cancel-form">&times;</span>
 								<div class="lechon-info">
 									<div class="lechon-details">
-										<span><h3>${item.name}</h3></span>
+										<span><h4>${item[0].name}</h4></span>
 						            </div>
 								</div>
+						<form method="POST" action="{{ route('order') }}">
+                    		@csrf
 							<div class="payment-mehods">
 								<div class="pay-conts">
+								<input type="hidden" name="prod_id" value="${product_id}">
 									<div>
 						                <span><span class="asterisk">*</span><b>Minimum Partial Payment is 50% per item</b></span>
 					              	</div>
@@ -232,10 +237,10 @@ function orderNow(product_id,event){
 									</div>
 									<div class="radio-buttons">
 										<div class="radio1">
-											<input type="radio" name="orderType"> Pick-up
+											<input type="radio" name="orderType" value="pickup"> Pick-up
 										</div>
 										<div class="radio2">
-											<input type="radio" name="orderType"> Delivery
+											<input type="radio" name="orderType" value="delivery"> Delivery
 										</div>
 									</div>
 								</div>
@@ -243,10 +248,10 @@ function orderNow(product_id,event){
 							<div class="delivery-details">
 							<div class="date-time">
 								<div>
-									<span><span class="asterisk">*</span> Date/Time</span>
+									<span><span class="asterisk">*</span> Pick-up/Delivery Date</span>
 								</div>
 								<div class="date-when">
-									<input type="datetime-local" data-date="" data-date-format="DD MMMM YYYY" value="2015-08-09" class="datestime">
+									<input type="datetime-local" name="deliv_date" data-date-format="DD MMMM YYYY" value="2015-08-09" class="datestime" required>
 								</div>
 							</div>
 							<div class="pick-up-add">
@@ -254,24 +259,35 @@ function orderNow(product_id,event){
 									<span><span class="asterisk">*</span>Address</span>
 								</div>
 								<div class="pickup-deliv">
-									<input type="addresses" name="" class="inpt-address" value="">
+									
 								</div>
 								
 							</div>
 						</div>
 						<div class="qty-proceed-to">
 							<div class="quantities">
-								<input type="number" name="" class="inpt-qty" value="1" min="1">
+								<input type="number" name="pref_weight" class="inpt-wgt" value="5" min="5">
+								Kgs.
+							</div>
+							<div class="quantities">
+								<input type="number" name="special_qty" class="inpt-wgt" value="1" min="1">
+								Quantity
 							</div>
 							<div class="proceed-to">
-								<button><i class="fa fa-arrow-right"></i><span>PROCEED</span></button>
+								<button type="submit"><i class="fa fa-arrow-right"></i><span>PROCEED</span></button>
 							</div>
 							</div>
-					</div>`);
+					</div>
+						</form>
+					`);
+
 					$('.cancel-form').on('click', function(){
 						$('.order-conts').remove();
 					});
 				});
+				$('.pickup-deliv').append(`
+						<input type="addresses" name="myAddress" class="inpt-address" value="${data[1][0].purok_zone} ${data[1][0].street} ${data[1][0].barangay}">
+					`);
 		}
     });
 	
