@@ -1494,7 +1494,7 @@ div#myDropdown {
 }
 .quantities {
     height: 35px;
-    margin: 0px 0px 15px 16px;
+    margin: 0px 0px 7px 0px;
 }
 .proceed-to {
     margin: 0px 0px 15px 16px;
@@ -1518,15 +1518,17 @@ input.btn.btn-default:hover{
 }
 .orderNow {
     position: absolute;
-    top: 0;
-    margin: 77px 70px;
+    top: 37%;
+    left: 24%;
+    /*margin: 77px 70px;*/
     display: none;
     color: #fff;
     background: red;
-    font-size: 27px;
-    padding: 18px;
+    font-size: 20px;
+    padding: 15px;
     /* border-radius: 50%; */
-    width: 163px;
+    width: 50%;
+    text-align: center;
     border-radius: 5px;
   }
   .shop-item-image:hover .orderNow {
@@ -1711,7 +1713,8 @@ button.receive {
   text-align: center;
 }
 table.order-table {
-    width: 51%;
+    /*width: 51%;*/
+    width: 80%;
     background: #fff;
     padding: 17px;
     height: 189px;

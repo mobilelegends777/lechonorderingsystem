@@ -39,20 +39,21 @@ class myorderController extends Controller
         $total=DB::select('SELECT SUM ( (qty) * (price)) as total
          FROM checkout_inventory INNER JOIN product ON product.product_id = checkout_inventory.product_id
            WHERE customer_id = '.$data->id.' AND order_status = '."'1'".'');
+        $specOrder = DB::select("SELECT * FROM order_inventory INNER JOIN product ON product.product_id = order_inventory.product_id WHERE customer_id = ".$data->id."");
 
 
             $value = [
                 '0' => $data,
                 '1' => $query,
                 '2' => $query2,
-                '3' =>$total,
+                '3' => $total
             ];
             
 
        
          // dd($value);
 
-        return view('userpage/myorder', compact('value','data'));
+        return view('userpage/myorder', compact('value','data'))->with('order',$specOrder);
     }
 
      public function updateorder(){

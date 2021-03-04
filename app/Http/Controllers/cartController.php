@@ -53,7 +53,7 @@ class cartController extends Controller
             '1' => $datas,
             '2' => $request->carted
         ];
-        // dd($query);
+        // dd($data);
         return response()->json($query);
     }
     public function viewCart(){

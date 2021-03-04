@@ -623,12 +623,12 @@ span.time-history {
 	    margin-right: 11px;
 	    height: 47px;
 	}
-	.shop-images-lechon img {
+	/*.shop-images-lechon img {
 		height: 337px;
 		width: 337px;
-	}
+	}*/
 	.orderNow {
-		margin: 88px;
+		/*margin: 88px;*/
 	}
 	/*.headmenu {
 		max-width: 1366px;
@@ -857,7 +857,7 @@ span.time-history {
 		padding: 10px 51px;
 	}
 	.orderNow {
-		margin: 14px;
+		/*margin: 14px;*/
 	}
 	.container .sub-container .bsp {
 		font-size: 34px;

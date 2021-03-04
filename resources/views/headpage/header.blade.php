@@ -352,7 +352,56 @@ $('.catType').each(function(){
 					// console.log(data);
 					$.each(data, function(i, item){
 							
-						if(item.order_exist == 0){
+						if(item.availability == 0){
+                            $('.shop-items-conts').append(`
+                            
+                                <div class="shop-items">
+                                    <div class="shop-item-image">
+                                      <a href="{{asset('frontpage/shop-details')}}" class="shop-images">
+                                        <img src="${item.images}">
+                                      </a>
+                                    </div>
+                                    
+                                    <div class="icon-holder">
+                                        <div class="shop-info-price">
+                                          <div class="shop-item-name">${item.name}</div>
+                                          <div class="shop-item-price">₱${item.price}</div>
+                                        </div>
+                                        <div class="cartIcon${item.product_id} cart-icon" title="Out of Stock">
+                                            <span class="shop-cart-icon"><i id="cart-icons " class="fas fa-ban" aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                          
+                          `);
+                          $('.shop-items-conts-col').append(`
+                          <div class="shop-items shop-item-col shop-cols">
+                            <div class="shop-item-image">
+                              <a href="#">
+                                <img class="shop-imgs" src="${item.images}">
+                              </a>
+                            </div>
+                            <div class="shop-info-price shop-price-col shop-info-prices">
+                              <div class="shop-item-name-info shop-items-names">
+                                <div class="shop-item-name-col shop-name-col shop-itemname-cols">
+                                  <span class="col-item-title col-names">${item.name}</span>
+                                  <div class="parag col-parags">
+                                    <div>${item.description}</div>
+                                  </div>
+                                </div>
+                                <div class="shop-item-info shop-carts">
+                                  <div class="col-price carts-price1">
+                                    <div class="shop-item-price prod-price">₱${item.price}</div>
+                                    <div class="shop-left${item.product_id}">
+                                      <button class="addcartcol"><i id="cart-icons " class="fas fa-ban" aria-hidden="true" ></i>Out of Stock</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          `);
+                }else if(item.order_exist == 0){
 							$('.shop-items-conts').append(`
 								<div class="shop-items">
 									<div class="shop-item-image">

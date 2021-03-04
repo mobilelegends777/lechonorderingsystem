@@ -83,7 +83,7 @@
 										<input type="hidden" name="" class="add-ress" value="{{$value[1][0]->purok_zone}}&nbsp;{{$value[1][0]->street}}&nbsp;{{$value[1][0]->barangay}}&nbsp;{{$value[1][0]->city}}">
 									@endif
 
-									<a href="#" class="shop-images-lechon" data-value="{{$item->product_id}}">
+									<a href="" class="shop-images-lechon" data-value="{{$item->product_id}}">
 										<img src="{{$item->images}}">
 									</a>
 									<a href="#" class="orderNow" onclick="orderNow({{$item->product_id}},event)" data-value="{{$item->product_id}}">Order now</a>
@@ -214,7 +214,7 @@ function orderNow(product_id,event){
 										<span><h4>${item[0].name}</h4></span>
 						            </div>
 								</div>
-						<form method="POST" action="{{ route('order') }}">
+						<form method="POST" action="{{ route('spec-order') }}">
                     		@csrf
 							<div class="payment-mehods">
 								<div class="pay-conts">

@@ -133,4 +133,4 @@ Route::get('/search','searchController@searchData')->name('search');
 Route::post('/search-products','searchController@searchProduct');
 
 Route::post('/special-order-form','myorderController@specialOrder');
-Route::post('/order-item','myorderController@orderProd')->name('order');
+Route::post('/order-item','myorderController@orderProd')->name('spec-order');

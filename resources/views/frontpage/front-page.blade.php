@@ -54,7 +54,11 @@
 								<img data-lazy="{{$item->images}}">
 							</div>
 							@if(Auth::check())
-								@if($item->order_exist == 1)
+								@if($item->availability == 0)
+									<div class="cartIcon{{ $item->product_id }} cart-icon" title="Out of Stock!">
+										<span class="shop-cart-icon"><i id="cart-icons " class="fas fa-ban" aria-hidden="true"></i></span>
+									</div>
+								@elseif($item->order_exist == 1)
 									<div class="cartIcon{{ $item->product_id }} cart-icon">
 										<span class="shop-cart-icon"><i id="cart-icons " class="fas fa-check" aria-hidden="true"></i></span>
 									</div>

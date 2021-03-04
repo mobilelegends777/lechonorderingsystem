@@ -4,7 +4,7 @@
 <div class="myorder-container">
 	<div class="order-sub-conts">
 		
-	@if($value[2] != null)	
+	@if($value[2] != null || $order != null)	
 		<h1>Active Order</h1> 
 		<div class="order-stat">
 				<span id="active-order">Active Orders</span>
@@ -15,8 +15,9 @@
 				<img src="{{asset('images/chef.gif')}}" class="avatar img-circle1" >
 			</div>
 		</div>
+
 		<div class="data-container">
-						
+			@if($value[2] != null)			
 
 					<div class="line-loading">
 						<div class="prepare-time">
@@ -58,6 +59,32 @@
 							<button type="submit" class="receive">Order Receive</button>
 						</div>
 					</form>
+				@endif
+					@if($order != null)
+					<div class="data-p">
+							<table class="order-table">
+								@foreach($order as $item)
+								<tr>
+									<td class="check-data1">
+								<div class="check-dpname1">
+									{{ $item->name }}
+								</div>
+									</td>
+								<td class="check-quantz1">
+									<div class="check-dquantity1">
+										{{$item->pickup_date}}
+									</div>
+									</td>
+									<td class="check-price1">
+									<div class="check-dprice1">
+										<button>Cancel</button>
+									</div>
+									</td>
+								</tr>
+								@endforeach
+							</table>
+						</div>
+					@endif
 		</div>
 	@else
 		<h1>Past Order</h1> 
@@ -113,6 +140,7 @@
 			</div>
 		@endif
 	</div>
+	
 	</div>
 </div>
 <script>
