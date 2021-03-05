@@ -1392,7 +1392,7 @@ div#myDropdown {
   box-shadow: 0px 8px 16px 0px #c4a265;
 }
 .radio-buttons {
-  display: flex;
+  /*display: flex;*/
 }
 /*.form-container {
     width: 100%;
@@ -1476,6 +1476,7 @@ div#myDropdown {
 }
 .pay-conts {
     margin: 16px;
+    width: 50%;
 }
 .delivery-details {
     display: flex;
@@ -1496,8 +1497,12 @@ div#myDropdown {
     height: 35px;
     margin: 0px 0px 7px 0px;
 }
+.quantities input {
+    width: 7%;
+    text-align: center;
+}
 .proceed-to {
-    margin: 0px 0px 15px 16px;
+    margin: 23px 0px 0px 0px;
 }
 input.inpt-qty {
     height: 100%;
@@ -1762,3 +1767,25 @@ table.reorder-table {
     text-align: center;
 }
 /*end orderpage*/
+
+.radio1 {
+    /*display: flex;*/
+    position: relative;
+}
+.radio1 b {
+    position: absolute;
+    top: 31%;
+    left: 11%;
+}
+.radio2 {
+    display: flex;
+    position: relative;
+}
+.radio2 b, p {
+    position: absolute;
+    top: 31%;
+    left: 11%;
+}
+.sub-payconts {
+  height: 44px;
+}

@@ -232,15 +232,15 @@ function orderNow(product_id,event){
 					                </div>
 				                </div>
 				                <div class="pay-conts">
-									<div>
+									<div class="sub-payconts">
 										<span><span class="asterisk">*</span> How do you want your order?</span>
 									</div>
 									<div class="radio-buttons">
 										<div class="radio1">
-											<input type="radio" name="orderType" value="pickup"> Pick-up
+											<input type="radio" name="orderType" value="pickup"> <b> Pick-up </b>
 										</div>
 										<div class="radio2">
-											<input type="radio" name="orderType" value="delivery"> Delivery
+											<input type="radio" name="orderType" value="delivery"> <b> Delivery </b>
 										</div>
 									</div>
 								</div>
@@ -267,11 +267,11 @@ function orderNow(product_id,event){
 						<div class="qty-proceed-to">
 							<div class="quantities">
 								<input type="number" name="pref_weight" class="inpt-wgt" value="5" min="5">
-								Kgs.
+								<span class="kgs-quant">Kgs.</span>
 							</div>
 							<div class="quantities">
 								<input type="number" name="special_qty" class="inpt-wgt" value="1" min="1">
-								Quantity
+								<span clas="kgs-quant">Quantity</span>
 							</div>
 							<div class="proceed-to">
 								<button type="submit"><i class="fa fa-arrow-right"></i><span>PROCEED</span></button>

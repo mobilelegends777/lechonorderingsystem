@@ -898,6 +898,13 @@ span.time-history {
 	}
 }
 @media screen and (max-width: 1024px) {
+	.order-conts {
+		padding: 13px 18px;
+		line-height: 22px;
+	}
+	.pay-conts {
+		font-size: 15px;
+	}
 	.summary {
 	    width: 41%;
 	}
@@ -1473,8 +1480,8 @@ span.time-history {
 	    font-size: 20px;
 	}
 	.shop-images-lechon img {
-		height: 189px;
-		width: 189px;
+		/*height: 189px;*/
+		width: 213px;
 	}
 	.shop-anchors-filter {
 		margin: 2.5625rem 1rem;
@@ -2296,7 +2303,11 @@ span.time-history {
 		border-radius: 50%;
 	}
 	.orderNow {
-		margin: 14px;
+		/*margin: 14px;*/
+		font-size: 16px;
+	}
+	.sub-payconts {
+		height: unset;
 	}
 	.apply-coupon button, .update-cart button {
 		height: 3.5rem;
@@ -2428,7 +2439,7 @@ span.time-history {
     	width: 169px;
 	}
 	.orderNow {
-		margin: 10px;
+		/*margin: 10px;*/
 	}
 	/* .company-title {
 		display: none;
@@ -2516,7 +2527,7 @@ span.time-history {
 		width: 100%;
 	}
 	.orderNow {
-		margin: 3px;
+		/*margin: 3px;*/
 	}
 	.sort-items select {
 		width: 172px;
@@ -2546,7 +2557,7 @@ span.time-history {
 }
 @media screen and (max-width:565px){
 	.orderNow {
-		margin: 13px;
+		/*margin: 13px;*/
 	}
 	.coupon-submit {
 		width: 100%;
@@ -3099,7 +3110,7 @@ span.time-history {
 		width: 100%;
 	}
 	.orderNow {
-		margin: 29px;
+		/*margin: 29px;*/
 	}
 	.image-cont {
 		height: 195px;
@@ -3387,6 +3398,38 @@ span.time-history {
 	}
 	.prod-price {
 		text-decoration: unset;
+	}
+	.shop-images-lechon img {
+		height: 136px;
+	}
+	.orderNow {
+		font-size: 14px;
+		padding: 9px;
+	}
+	.order-conts {
+	    width: 91%;
+	}
+	.lechon-info {
+		font-size: 16px;
+		display: block;
+	}
+	.pay-conts {
+	    font-size: 14px;
+	}
+	.radio1 b, .radio2 b {
+	    position: absolute;
+	    top: 30%;
+	    left: 17%;
+	}
+	.sub-payconts {
+	    height: 66px;
+	}
+	.quantities {
+		margin: 0px 0px 12px 0px;
+	}
+	.quantities input {
+		height: 39px;
+		width: 10%;
 	}
 }
 @media screen and (max-width: 411px) {
@@ -3800,10 +3843,12 @@ span.time-history {
 	    font-size: 13px;
 	    line-height: 7px;
 	}
-	/*.shop-items {
-		width: 300px;
-		margin: 0 auto;
-	}*/
+	.shop-items {
+    	width: 44%;
+	}
+	.shop-images-lechon img {
+	    height: 122px;
+	}
 	.shop-images img {
 		/*height: 13.5625rem;*/
 	}
@@ -3845,8 +3890,42 @@ span.time-history {
 	.headmenu .icons .icons3 {
 	    width: 30px;
 	}
+	.order-conts {
+	    width: 92%;
+	}
+	.orderNow {
+		font-size: 14px;
+		padding: 5px;
+	}
+	.lechon-info {
+		display: block;
+		font-size: 15px;
+	}
+	.pay-conts {
+	    font-size: 14px;
+	}
+	.radio1 b, .radio2 b {
+		left: 22%;
+		/*top: 23%;*/
+	}
+	.sub-payconts {
+	    height: 66px;
+	}
+	.quantities {
+	    margin: 0px 0px 10px 0px;
+	}
+	.quantities input {
+	    width: 12%;
+	    height: 35px;
+	}
+	.kgs-quant {
+		height: 36px;
+	}
 }
 @media screen and (max-width: 360px) {
+	.lechon-info div {
+	    margin: 13px;
+	}
 	.shop-company {
 		font-size: 20px;
 	}
@@ -4416,7 +4495,10 @@ span.time-history {
 	.shop-info-price {
 	    font-size: 16px;
 	}
-	
+	.orderNow {
+	    font-size: 17px;
+	    padding: 11px;
+	}
 }
 @media screen and (max-width: 320px){
 	span.des-logo {
@@ -4437,6 +4519,12 @@ span.time-history {
 	.search-icon {
 	    font-size: 26px;
 	}
-
+	.sub-payconts {
+	    height: 88px;
+	}
+	.orderNow {
+	    font-size: 16px;
+	    padding: 10px;
+	}
 }
 
