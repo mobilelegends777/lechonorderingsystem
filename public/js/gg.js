@@ -406,7 +406,7 @@ function filterPrice() {
              if(len > 0){
                 location.href = '/frontpage/checkout';
              }else if(len == 0){
-                alertify.success("Your Cart is Empty!!")
+                alertify.success("Your Cart is Empty!!");
              }
               
            },

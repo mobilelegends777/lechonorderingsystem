@@ -86,20 +86,20 @@
 										</div>
 									@if(Auth::check())
 										@if($item->availability == 0)
-										<div class="cartIcon{{ $item->product_id }} cart-icon">
+										<div class="cartIcon{{ $item->product_id }} cart-icon cart-icon-fix">
 											<span class="shop-cart-icon" title="Out of stock"><i id="cart-icons " class="fas fa-ban" aria-hidden="true" ></i></span>
 										</div>
 										@elseif($item->order_exist == 1)
-										<div class="cartIcon{{ $item->product_id }} cart-icon">
+										<div class="cartIcon{{ $item->product_id }} cart-icon cart-icon-fix">
 											<span class="shop-cart-icon" title="Already added!"><i id="cart-icons " class="fas fa-check" aria-hidden="true" ></i></span>
 										</div>
 										@else
-										<div class="cartIcon{{ $item->product_id }} cart-icon">
+										<div class="cartIcon{{ $item->product_id }} cart-icon cart-icon-fix">
 											<span id="addToCart" class="shop-cart-icon addToCart" onclick="addC.addInCart({{ $item->product_id }} )" data-value="{{ $item->product_id }}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></span>
 										</div>
 										@endif
 									@else
-										<div class="cartIcon{{ $item->product_id }} cart-icon">
+										<div class="cartIcon{{ $item->product_id }} cart-icon cart-icon-fix">
 											<span id="addToCart" class="shop-cart-icon addToCart" onclick="addC.addInCart({{ $item->product_id }} )" data-value="{{ $item->product_id }}"><i id="cart-icons" class="fa fa-cart-plus" aria-hidden="true"></i></span>
 										</div>
 									@endif

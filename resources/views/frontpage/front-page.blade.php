@@ -96,7 +96,7 @@
 					</div>
 					<div class="box3">
 						<div class="box3-details">
-							<span class="product-title">A1. 2Pcs Pork BBQ & Rice</span>
+							<span class="product-title">2Pcs Pork BBQ & Rice</span>
 							<span class="items-price">₱77</span>
 						</div>
 						<div class="box3-info">
@@ -109,7 +109,7 @@
 					<div class="box2"><img src="asset/Combo/A2.jpg"></div>
 					<div class="box3">
 						<div class="box3-details">
-							<span class="product-title">A2. Chicken BBQ Paa & Rice</span>
+							<span class="product-title">Chicken BBQ Paa & Rice</span>
 							<span class="items-price">₱116</span>
 						</div>
 						<div class="box3-info">
@@ -122,7 +122,7 @@
 					<div class="box2"><img src="asset/Combo/A3.jpg"></div>
 					<div class="box3">
 						<div class="box3-details">
-							<span class="product-title">A3. Chicken BBQ Breast & Rice</span>
+							<span class="product-title">Chicken BBQ Breast & Rice</span>
 							<span class="items-price">₱129</span>
 						</div>
 						<div class="box3-info">

@@ -898,6 +898,12 @@ span.time-history {
 	}
 }
 @media screen and (max-width: 1024px) {
+	/*.cart-icon {
+        margin: 43px 70px;
+	}*/
+	.cart-icon {
+    	margin: 66px 101px;
+	}	
 	.order-conts {
 		padding: 13px 18px;
 		line-height: 22px;
@@ -4525,6 +4531,12 @@ span.time-history {
 	.orderNow {
 	    font-size: 16px;
 	    padding: 10px;
+	}
+	button.reorder {
+	    padding: 8px 11px;
+	}
+	.my-order-sub {
+	    justify-content: space-between;
 	}
 }
 

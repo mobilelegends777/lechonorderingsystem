@@ -92,7 +92,7 @@ class checkoutController extends Controller
         inner join customer_address ON customer_address.customer_id = users.id
         inner join contact_info ON contact_info.customer_id = users.id where users.id = '.$userID.'');
             if($cartData > 0){
-              $datas2 = DB::select('INSERT INTO cart_transaction(customer_id)VALUES('.$userID.')');
+              $datas2 = DB::select('INSERT INTO cart_transaction(customer_id,checkout_date,amount)VALUES('.$userID.',current_timestamp,'.$request->_total.')');
               $id = DB::getPdo()->lastInsertId();
               // dd($id);
                 foreach ($cartData as $items){

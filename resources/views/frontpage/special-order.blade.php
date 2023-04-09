@@ -201,9 +201,10 @@ function orderNow(product_id,event){
 		data:{id:product_id},
 		success:function(data)
 		{
-			// console.log(data[1][0].id);
-			$.each(data, function(i, item){
-				// console.log(item[0].purok_zone);
+			// console.log(data);
+			if(data[1][3] == '' && data[1][3][0].order_status != 1 || data[1][3] != '' && data[1][3][0].order_status != 1){
+				$.each(data, function(i, item){
+				// console.log(item);
 			    $('.form-container').empty();
 				$('.form-container').append(`
 					
@@ -211,7 +212,7 @@ function orderNow(product_id,event){
 							<span class="cancel-form">&times;</span>
 								<div class="lechon-info">
 									<div class="lechon-details">
-										<span><h4>${item[0].name}</h4></span>
+										<span><h4>${item[2][0].name}</h4></span>
 						            </div>
 								</div>
 						<form method="POST" action="{{ route('spec-order') }}">
@@ -259,7 +260,7 @@ function orderNow(product_id,event){
 									<span><span class="asterisk">*</span>Address</span>
 								</div>
 								<div class="pickup-deliv">
-									
+									<input type="addresses" name="myAddress" class="inpt-address" value="${item[1][0].purok_zone} ${item[1][0].street} ${item[1][0].barangay}">
 								</div>
 								
 							</div>
@@ -278,17 +279,20 @@ function orderNow(product_id,event){
 							</div>
 							</div>
 					</div>
-						</form>
-					`);
+							</form>
+						`);
 
-					$('.cancel-form').on('click', function(){
-						$('.order-conts').remove();
+						$('.cancel-form').on('click', function(){
+							$('.order-conts').remove();
+						});
 					});
-				});
-				$('.pickup-deliv').append(`
-						<input type="addresses" name="myAddress" class="inpt-address" value="${data[1][0].purok_zone} ${data[1][0].street} ${data[1][0].barangay}">
-					`);
-		}
+				}
+				else{
+
+					alertify.success("You Still have Pending Order!!");
+				
+				}
+			}
     });
 	
 }

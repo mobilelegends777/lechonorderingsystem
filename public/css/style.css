@@ -1781,7 +1781,7 @@ table.reorder-table {
     display: flex;
     position: relative;
 }
-.radio2 b, p {
+.radio2 b, .radio2 p {
     position: absolute;
     top: 31%;
     left: 11%;

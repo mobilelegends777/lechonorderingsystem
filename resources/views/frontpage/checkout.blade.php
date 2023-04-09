@@ -174,6 +174,7 @@
 		<form metho="POST" action ="{{ route('order') }}" class="form-horizontal" role="form">
     {{ csrf_field() }}
         {{ method_field('PATCH') }}
+			<input type="hidden" name="_total" value="{{ $value1[2][0]->total }}">
 		<div class="credit">
 			<div class="cc-details">
 				<label	id="cdc-hide"class="pay-wrapper">

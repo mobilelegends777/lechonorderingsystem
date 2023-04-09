@@ -39,7 +39,7 @@ class myorderController extends Controller
         $total=DB::select('SELECT SUM ( (qty) * (price)) as total
          FROM checkout_inventory INNER JOIN product ON product.product_id = checkout_inventory.product_id
            WHERE customer_id = '.$data->id.' AND order_status = '."'1'".'');
-        $specOrder = DB::select("SELECT * FROM order_inventory INNER JOIN product ON product.product_id = order_inventory.product_id WHERE customer_id = ".$data->id."");
+        $specOrder = DB::select("SELECT * FROM order_inventory INNER JOIN product ON product.product_id = order_inventory.product_id WHERE customer_id = ".$data->id." AND order_status = '".'1'."' ");
 
 
             $value = [
@@ -74,13 +74,17 @@ class myorderController extends Controller
         $userData = Auth::user();
         $userAdd = DB::select('SELECT * FROM customer_address WHERE customer_id = '.$userData->id.'');
         $prodData = DB::select('SELECT name, price, images FROM product WHERE product_id = '."$request->id".'');
+        $check_trans = DB::select("SELECT * FROM order_inventory WHERE customer_id = ".$userData->id." ");
+
         // dd($prodData);
         $addresses = [
-            '1' => $userAdd,
-            '2' => $prodData
+            '1' => [ 
+                    '1' => $userAdd,
+                    '2' => $prodData,
+                    '3' => $check_trans
+                ],
         ];
-       
-        // dd($value);
+        // dd($addresses);
         return response()->json($addresses); 
     }
 
@@ -90,7 +94,7 @@ class myorderController extends Controller
         $userData = Auth::user();
         $dDate = $req->deliv_date;
         // dd($userData);
-        DB::insert('INSERT INTO order_inventory(product_id,pref_weight,date_ordered,pickup_date,qty,order_type,order_status,delivery_address)VALUES('.$req->prod_id.','.$req->pref_weight.',current_timestamp,\''.$dDate.'\','.$req->special_qty.',\''.$req->orderType.'\',1,\''.$req->myAddress.'\')');
+        DB::insert('INSERT INTO order_inventory(product_id,pref_weight,date_ordered,pickup_date,qty,order_type,order_status,delivery_address,customer_id)VALUES('.$req->prod_id.','.$req->pref_weight.',current_timestamp,\''.$dDate.'\','.$req->special_qty.',\''.$req->orderType.'\',1,\''.$req->myAddress.'\','.$userData->id.')');
 
         return back();
 
